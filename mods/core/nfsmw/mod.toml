@@ -1,0 +1,23 @@
+# The game's own settings that the original PC release fixed in code: the
+# engine's simulation rate and the rendering resolution. What the community
+# widescreen fix (ThirteenAG, MIT) did with binary patches, done here with
+# hooks and data writes, because patched code bytes mean nothing to a
+# recompiled game. See NOTICE and docs/analysis.md.
+id = "core.nfsmw"
+name = "Most Wanted engine and widescreen"
+version = "1.0.0"
+api = 1
+game = "80774c2e5d619b4f120b48d4462896fd504c263399d203a238769cffde1d253c"
+requires = ["core.hooks >= 1.0.0"]
+affects_simulation = true
+
+[plugin]
+path = "nfsmw.dylib"
+
+[settings]
+sim_rate = { type = "int", default = 120, min = 30, max = 480, label = "Simulation and frame rate (Hz)" }
+widescreen = { type = "bool", default = true, label = "Widescreen view and HUD" }
+width = { type = "int", default = 0, min = 0, max = 16384, label = "Game width (0: the screen's shape)" }
+height = { type = "int", default = 0, min = 0, max = 16384, label = "Game height (0: the screen's shape)" }
+fov_scaling = { type = "int", default = 1, min = 0, max = 2, label = "Field of view (0 original, 1 Xbox 360, 2 exact)" }
+fe_scale = { type = "int", default = 100, min = 50, max = 150, label = "Front end size (%)" }
