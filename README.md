@@ -1,4 +1,4 @@
-# Need for Speed: Most Wanted Recomp
+# Need for Speed: Most Wanted Android port
 
 A work-in-progress recompilation project for **Need for Speed: Most Wanted (2005 PC Black Edition)**, targeting Android and Linux.
 
