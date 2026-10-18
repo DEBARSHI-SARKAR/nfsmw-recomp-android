@@ -1,0 +1,18 @@
+# globals.toml - the curated globals the kit's code reads. Every entry the kit
+# compiles against must exist; none of these has been identified for this
+# game yet, so they are sentinels in the zero-filled padding after .rsrc
+# (see game.toml). Sizes are the smallest the kit accepts.
+
+[globals.simulation_turn]
+addr = 0x00a37f60
+size = 4
+
+[globals.command_frame]
+addr = 0x00a37f64
+size = 4
+
+[globals.entity_base]
+addr = 0x00a37f70
+size = 4
+stride = 4
+count = 1

@@ -1,0 +1,936 @@
+# game.toml - everything the kit needs to know about Need for Speed: Most
+# Wanted (Black Edition, PC) that is not derivable from the binary. Addresses
+# are guest addresses in the pinned executable. Values marked "sentinel" are
+# not identified yet: they point into the zero-filled section padding after
+# .rsrc (0x00a37700-0x00a37fff), which the game never references, so the
+# kit's Populous-shaped hooks compile and never fire. Replace each one with a
+# real address as the bring-up finds it (see docs/analysis.md).
+
+[game]
+id = "nfsmw"
+name = "Need for Speed: Most Wanted"
+app_name = "SpeedRecomp"
+bundle_id = "dev.recompkit.nfsmw"
+executable = "speed.exe"
+sha256 = "80774c2e5d619b4f120b48d4462896fd504c263399d203a238769cffde1d253c"
+image_base = 0x00400000
+entry_point = 0x007c4040
+guest_root = 'C:\Program Files\EA GAMES\Need for Speed Most Wanted'
+# Where a developer checkout finds the game, relative to the repository root.
+developer_exe = "original/retail/speed.exe"
+
+[translate]
+# Ghidra listing directory holding functions.tsv and functions/*.asm,
+# relative to the repository root. tools/analyze.py exports them.
+listings = "analysis/decompiled/speed.exe"
+# Curated symbols, relative to this directory.
+globals = "globals.toml"
+# The kit's translator wants a visual-phase counter; this game has none that
+# has been audited. Sentinel, and no reads are rewritten.
+animation_counter = 0x00a37f00
+volatile_reads = []
+# Function entries the Ghidra listing lacks. The CRT stores pointers to its
+# own helpers in .data and jumps through them (007f0e13 jumps through the slot
+# at 00907fac); Ghidra lists neither target, and the translator's pointer scan
+# only accepts a 16-byte-aligned destination, which these are not. Relaxing
+# that rule is not the answer: 8,344 dwords in this image point into .text at
+# 4-byte alignment and decode, nearly all of them noise. The two real entries
+# are named here instead.
+#
+# 007f008e and 00825957 came from running the game: a vtable slot call
+# (007ee9fe `call dword ptr [edi + 0x14]`) and a function-pointer call
+# (00823380 `call dword ptr [eax]`) each named a .text address the runtime
+# had no block for, and reported it as a call to an unknown target. Both are
+# real code; neither is 16-byte aligned.
+# The four above, plus pointer-referenced helpers found by scanning the image
+# (2026-09-17, docs/analysis.md).
+# Native replacements for the renderer's hottest x87 routines (native/).
+native = { header = "native/overrides.h", sources = ["native/culling.c"] }
+# The engine's frame time, 1/60, is one pooled .rdata float with 17 readers.
+# The three that set the simulation rate read a slot in the section padding
+# instead, which the core.nfsmw mod fills (mods/core/nfsmw/nfsmw.c).
+operand_redirects = [
+    { at = 0x006612ea, from = 0x008970f0, to = 0x00a37800 },  # FMUL: the real timestep
+    { at = 0x0065c78d, from = 0x008970f0, to = 0x00a37800 },  # FLD: GetDebugRealTime
+    { at = 0x0065c7d7, from = 0x008970f0, to = 0x00a37800 },  # FLD: GetDebugRealTime
+    # Widescreen field of view (core.nfsmw fills these per view).
+    { at = 0x006cf566, from = 0x0089096c, to = 0x00a37804 },  # FDIVR 1.0: horizontal scale
+    { at = 0x006cf578, from = 0x008933d4, to = 0x00a37808 },  # FMUL 0.5: vertical half-angle
+    { at = 0x006cf5dc, from = 0x0089096c, to = 0x00a3780c },  # FDIVR 1.0: vertical scale
+    { at = 0x006e46b0, from = 0x0089096c, to = 0x00a37818 },  # shadow camera, horizontal
+    { at = 0x006e4830, from = 0x0089096c, to = 0x00a37818 },  # shadow camera, horizontal
+    { at = 0x006c9653, from = 0x008910c4, to = 0x00a3781c },  # shadow distance multiplier
+]
+# What the widescreen fix patched in the code bytes. The slots they read are
+# seeded below and filled by core.nfsmw; see mods/core/nfsmw/nfsmw.c.
+instruction_patches = [
+    # Projection: the aspect term is a slot (1.0, or 0.4 for the mirror).
+    { at = 0x006cf4f0, text = "FLD float ptr [0x00a37810]" },
+    { at = 0x006cf4f3, text = "FDIV float ptr [0x00a37814]" },
+    { at = 0x006e4656, text = "FLD float ptr [0x00a37814]" },
+    { at = 0x006e4668, text = "NOP" },
+    { at = 0x006e47e4, text = "FLD float ptr [0x00a37814]" },
+    { at = 0x006e47ec, text = "NOP" },
+    # The game's own widescreen HUD layout, always on.
+    { at = 0x0057cb82, text = "CMP DL,0x1" },
+    { at = 0x005696cb, text = "MOV AL,0x1" },
+    { at = 0x0058d883, text = "MOV AL,0x1" },
+    { at = 0x0056885a, text = "CMP CL,0x1" },
+    # HUD origins: 320.0 becomes the HUD's centre, 0x00894b40.
+    { at = 0x0056fecd, text = "MOV dword ptr [ESP + 0x19c],dword ptr [0x00894b40]" },
+    { at = 0x00584eef, text = "MOV dword ptr [ESP + 0x90],dword ptr [0x00894b40]" },
+    { at = 0x00599e79, text = "MOV dword ptr [ESP + 0x84],dword ptr [0x00894b40]" },
+    { at = 0x0059a120, text = "MOV dword ptr [ESP + 0xc4],dword ptr [0x00894b40]" },
+    { at = 0x0059a5ab, text = "MOV dword ptr [ESP + 0x94],dword ptr [0x00894b40]" },
+    { at = 0x0059a83e, text = "MOV dword ptr [ESP + 0x94],dword ptr [0x00894b40]" },
+    { at = 0x005a44c8, text = "MOV dword ptr [ESP + 0x64],dword ptr [0x00894b40]" },
+    # Rear-view mirror position.
+    { at = 0x006e70bc, text = "MOV dword ptr [ESP + 0x70],dword ptr [0x00a37824]" },
+    { at = 0x006e70f8, text = "MOV dword ptr [ESP + 0xa0],dword ptr [0x00a37824]" },
+    { at = 0x006e70cc, text = "MOV dword ptr [ESP + 0x80],dword ptr [0x00a37828]" },
+    { at = 0x006e70e2, text = "MOV dword ptr [ESP + 0x90],dword ptr [0x00a37828]" },
+    # The widescreen splash, its "press Enter" string and the HD logo.
+    { at = 0x005a3080, text = "NOP" },
+    { at = 0x005a3141, text = "PUSH 0xc4df3ff2" },
+    { at = 0x005a30b1, text = "CALL 0x00514cc0" },
+    # The cinematic quad's half height and half width (bottom, right, top,
+    # left), from slots core.nfsmw sizes so the picture fits the screen.
+    { at = 0x0059a029, text = "PUSH dword ptr [0x00a37b40]" },
+    { at = 0x0059a02e, text = "PUSH dword ptr [0x00a37b44]" },
+    { at = 0x0059a033, text = "PUSH dword ptr [0x00a37b48]" },
+    { at = 0x0059a038, text = "PUSH dword ptr [0x00a37b4c]" },
+    # The resolution option's tables (supported, refresh rate, label hash)
+    # and its wrap-around move to slots core.nfsmw fills with a longer list.
+    { at = 0x0050f99c, text = "MOV EAX,dword ptr [0x00a37830]" },
+    { at = 0x0050f9a8, text = "CMP EAX,dword ptr [0x00a37834]" },
+    { at = 0x0050f9af, text = "MOV EBX,dword ptr [EAX*0x4 + 0xa37840]" },
+    { at = 0x006c1959, text = "MOV ECX,dword ptr [EAX*0x4 + 0xa37840]" },
+    { at = 0x006c1970, text = "MOV ECX,dword ptr [EAX*0x4 + 0xa37840]" },
+    { at = 0x006db1b4, text = "MOV EAX,dword ptr [EDX*0x4 + 0xa37940]" },
+    { at = 0x006db21b, text = "MOV ECX,dword ptr [EDI*0x4 + 0xa37940]" },
+    { at = 0x006db2ec, text = "MOV EAX,dword ptr [EDX*0x4 + 0xa37940]" },
+    { at = 0x006e6bc4, text = "MOV EBP,dword ptr [ECX*0x4 + 0xa37940]" },
+    { at = 0x006e72a7, text = "MOV EAX,dword ptr [EDX*0x4 + 0xa37940]" },
+    { at = 0x0051b7e2, text = "MOV EAX,dword ptr [ECX*0x4 + 0xa37a40]" },
+    { at = 0x0051b7e4, text = "CMP ECX,0x3f" },
+    { at = 0x0051b7e9, text = "JMP 0x0051b818" },
+    # The registry keeps the size packed (core.nfsmw), not the list index.
+    { at = 0x006c1e24, text = "PUSH 0xa37838" },
+    { at = 0x006c20a0, text = "PUSH 0xa37838" },
+]
+data_seeds = [
+    { addr = 0x00a37810, float = 1.0 },
+    { addr = 0x00a37814, float = 1.0 },
+    { addr = 0x00a37824, float = 450.0 },
+    { addr = 0x00a37828, float = 190.0 },
+    # The cinematic quad as the original draws it (4:3).
+    { addr = 0x00a37b40, float = 0.5 },
+    { addr = 0x00a37b44, float = 0.5 },
+    { addr = 0x00a37b48, float = -0.5 },
+    { addr = 0x00a37b4c, float = -0.5 },
+    # The original six resolutions, for a run without core.nfsmw.
+    { addr = 0x00a37830, value = 5 },
+    { addr = 0x00a37834, value = 6 },
+    { addr = 0x00a37840, value = 1 },
+    { addr = 0x00a37844, value = 1 },
+    { addr = 0x00a37848, value = 1 },
+    { addr = 0x00a3784c, value = 1 },
+    { addr = 0x00a37850, value = 1 },
+    { addr = 0x00a37854, value = 1 },
+    { addr = 0x00a37a40, value = 0xdccbd59e },
+    { addr = 0x00a37a44, value = 0x6d6bb416 },
+    { addr = 0x00a37a48, value = 0xa7470774 },
+    { addr = 0x00a37a4c, value = 0x4ef21b32 },
+    { addr = 0x00a37a50, value = 0x2d31055a },
+    { addr = 0x00a37a54, value = 0x76667b12 },
+]
+entry_points = [
+    # 00439cd0 -> 00439bb0 calls this method during race setup. The old
+    # parity seed 00410c00 bisected MOV [ESP+0x24],0 at 00410bfc, which
+    # withdrew both callers and left two arguments on the guest stack.
+    0x00410b00,
+    # Device crash at 0067f00e: JMP [EDX+0x70] reads vtable slot 008abca0.
+    # The method spans 00690100..0069022f. The old parity seed 00690200
+    # starts inside MOV [ECX+0xf4],EDX at 006901fc and blocks its recovery.
+    0x00690100,
+    # Additional vtable methods blocked by parity seeds inside instructions.
+    0x004497b0,  # vtable slot 008f7df0
+    0x00498dc0,  # vtable slot 00895964
+    0x004dd6f0,  # vtable slot 00899754
+    0x004e8690,  # vtable slot 0089936c
+    0x00510050,  # vtable slot 0089be6c
+    0x00534bd0,  # vtable slot 0089e824
+    0x00545310,  # vtable slot 0089e530
+    0x0054ff10,  # vtable slot 0089e5a4
+    0x00558af0,  # vtable slot 0089f044
+    0x006851d0,  # vtable slot 008aa948
+    0x006a0070,  # vtable slot 008abe5c
+    0x006a02f0,  # vtable slot 008ab6bc
+    0x006a04e0,  # vtable slot 008ab784
+    0x006a1170,  # vtable slot 008ab7dc
+    0x006a1270,  # vtable slot 008ab810
+    0x006a1430,  # vtable slot 008ab840
+    0x006a1ac0,  # vtable slot 008ab850
+    0x006a4c40,  # vtable slot 008abab0
+    0x006ac300,  # vtable slot 008abc50
+    0x007684e0,  # vtable slot 008b5b6c
+    0x007c1490,  # vtable slot 008b7e30
+    0x006a8870,  # the unlisted function 0x006a8e70 jumps to; it holds the switch at 0x006a8a14
+    0x006a8e70,  # a vtable thunk right after that switch's byte table; Ghidra read it as data
+    0x0081a7a6,  # a vtable method in the codec region, missing from the listing
+    0x00808f3e,  # table-referenced codec routine
+    0x0080a1e5,  # table-referenced codec routine
+    0x0080b6be,  # table-referenced codec routine
+    0x0080c664,  # table-referenced codec routine
+    0x0080f460,  # table-referenced codec routine
+    0x0080f536,  # table-referenced codec routine
+    0x0080f6e2,  # table-referenced codec routine
+    0x00810107,  # table-referenced codec routine
+    0x00810b38,  # table-referenced codec routine
+    0x0081189a,  # table-referenced codec routine
+    0x0081271f,  # table-referenced codec routine
+    0x008129f2,  # table-referenced codec routine
+    0x00812c5f,  # table-referenced codec routine
+    0x00812dbf,  # table-referenced codec routine
+    0x0081312d,  # table-referenced codec routine
+    0x00813b0f,  # table-referenced codec routine
+    0x00813f59,  # table-referenced codec routine
+    0x00814256,  # table-referenced codec routine
+    0x008148f7,  # table-referenced codec routine
+    0x0081523d,  # table-referenced codec routine
+    0x0081594e,  # table-referenced codec routine
+    0x0081681d,  # table-referenced codec routine
+    0x0081aa84,  # table-referenced codec routine
+    0x0081ab18,  # table-referenced codec routine
+    0x0081bce6,  # table-referenced codec routine
+    0x0081c199,  # table-referenced codec routine
+    0x0081c1b9,  # table-referenced codec routine
+    0x0081c7b4,  # table-referenced codec routine
+    0x0081c90d,  # table-referenced codec routine
+    0x0081d738,  # table-referenced codec routine
+    0x0081d73d,  # table-referenced codec routine
+    0x0081d77b,  # table-referenced codec routine
+    0x0081d780,  # table-referenced codec routine
+    0x0081f98a,  # table-referenced codec routine
+    0x00820bd7,  # table-referenced codec routine
+    0x00822356,  # table-referenced codec routine
+    0x00822b36,  # table-referenced codec routine
+    0x00822b3b,  # table-referenced codec routine
+    0x00823681,  # table-referenced codec routine
+    0x00823763,  # table-referenced codec routine
+    0x00824786,  # table-referenced codec routine
+    0x0082484b,  # table-referenced codec routine
+    0x008258ab,  # table-referenced codec routine
+    0x00826873,  # table-referenced codec routine
+    0x00826914,  # table-referenced codec routine
+    0x00826b3c,  # table-referenced codec routine
+    0x00826bbd,  # table-referenced codec routine
+    0x00826c15,  # table-referenced codec routine
+    0x00826ded,  # table-referenced codec routine
+    0x00827002,  # table-referenced codec routine
+    0x0082700a,  # table-referenced codec routine
+    0x00827107,  # table-referenced codec routine
+    0x0082710f,  # table-referenced codec routine
+    0x008272ff,  # table-referenced codec routine
+    0x008273c4,  # table-referenced codec routine
+    0x00828ce9,  # table-referenced codec routine
+    0x0082b9b0,  # table-referenced codec routine
+    0x0082bb80,  # table-referenced codec routine
+    0x0082e7e0,  # table-referenced codec routine
+    0x00835d80,  # table-referenced codec routine
+    0x00835e00,  # table-referenced codec routine
+    0x00836be0,  # table-referenced codec routine
+    0x0083cfb0,  # table-referenced codec routine
+    0x0083d1c0,  # table-referenced codec routine
+    0x0083d3d0,  # table-referenced codec routine
+    0x0083d780,  # table-referenced codec routine
+    0x0083e120,  # table-referenced codec routine
+    0x0083f3a0,  # table-referenced codec routine
+    0x0081603f,
+  0x00410881,
+  0x00454449,
+  0x0046415a,
+  0x00485041,
+  0x00490045,
+  0x00504c45,
+  0x00530053,
+  0x00535245,
+  0x00540054,
+  0x0073752d,
+  0x007c4201,
+  0x007c904f,
+  0x007ccea6,
+  0x007ccf26,
+  0x007ce2a2,
+  0x007ce2cd,
+  0x007ce2f7,
+  0x007ce336,
+  0x007ce6be,
+  0x007cf3a1,
+  0x007cfd35,
+  0x007cff7a,
+  0x007d03ad,
+  0x007d0439,
+  0x007d0929,
+  0x007d09a6,
+  0x007d0a6f,
+  0x007d0afb,
+  0x007d4221,
+  0x007d43d2,
+  0x007d6d08,
+  0x007d8852,
+  0x007d8dea,
+  0x007d8df5,
+  0x007d8e06,
+  0x007d8e0c,
+  0x007d8e12,
+  0x007d8e2e,
+  0x007d8e49,
+  0x007d8e6a,
+  0x007d8e7a,
+  0x007d8e8e,
+  0x007d8e9e,
+  0x007d8ebe,
+  0x007d8edd,
+  0x007d8f02,
+  0x007d8f16,
+  0x007d8f2e,
+  0x007d8f42,
+  0x007d8f62,
+  0x007d8f81,
+  0x007d8fa6,
+  0x007d8fba,
+  0x007d8fd2,
+  0x007d8fe6,
+  0x007d9006,
+  0x007d9025,
+  0x007d904a,
+  0x007d905e,
+  0x007d9076,
+  0x007d908a,
+  0x007d90aa,
+  0x007d90c9,
+  0x007d90ee,
+  0x007d9102,
+  0x007d911a,
+  0x007d912e,
+  0x007d914e,
+  0x007d916d,
+  0x007d9192,
+  0x007d91a6,
+  0x007d91be,
+  0x007d91d2,
+  0x007d91f2,
+  0x007d9211,
+  0x007d9236,
+  0x007d924a,
+  0x007d9262,
+  0x007dad0d,
+  0x007db1ed,
+  0x007db2b9,
+  0x007ddcec,
+  0x007e0708,
+  0x007e2738,
+  0x007e3908,
+  0x007e3d51,
+  0x007e719b,
+  0x007e737d,
+  0x007ee2e4,
+  0x007ee2ea,
+  0x007ee2ed,
+  0x007ee2f2,
+  0x007ee2f9,
+  0x007ee7f2,
+  0x007ee8d8,
+  0x007ee8df,
+  0x007ee8e2,
+  0x007ee962,
+  0x007eea93,
+  0x007eec49,
+  0x007eec9e,
+  0x007eecb4,
+  0x007f008e,
+  0x007f10e8,
+  0x007f11e3,
+  0x007f18c4,
+  0x007f18c7,
+  0x007f18ca,
+  0x007f18cb,
+  0x007f18ce,
+  0x007f18d1,
+  0x007f18d4,
+  0x007f1be2,
+  0x007f1be9,
+  0x007f1d2f,
+  0x007f1d36,
+  0x007f1d98,
+  0x007f20a9,
+  0x007f20b5,
+  0x007f20b8,
+  0x007f2b4b,
+  0x007f2c0b,
+  0x007f3203,
+  0x007f323b,
+  0x007f323e,
+  0x007f34ca,
+  0x007f34db,
+  0x007f34dc,
+  0x007f3502,
+  0x007f3599,
+  0x007f359c,
+  0x007f35d5,
+  0x007f35d6,
+  0x007f35d7,
+  0x007f35da,
+  0x007f35dd,
+  0x007f7201,
+  0x007f7653,
+  0x007f76c3,
+  0x007f76c6,
+  0x007f76c9,
+  0x007f76cc,
+  0x007f76cf,
+  0x007f76d2,
+  0x007f76d5,
+  0x007f76d8,
+  0x007f76db,
+  0x007f76de,
+  0x007f76e1,
+  0x007f76e4,
+  0x007f76e7,
+  0x007f76ea,
+  0x007f76ed,
+  0x007f76f3,
+  0x007f76f6,
+  0x007f76f9,
+  0x007f7719,
+  0x007f771c,
+  0x007f771f,
+  0x007f7722,
+  0x007f7727,
+  0x007f9d7e,
+  0x007f9d82,
+  0x007fa44d,
+  0x007fa451,
+  0x007fefff,
+  0x008167d4,
+  0x0081680e,
+  0x008196c2,
+  0x008196ce,
+  0x008196d6,
+  0x008196de,
+  0x008199d1,
+  0x00819b13,
+  0x00819b49,
+  0x00819bbe,
+  0x00819e57,
+  0x00819e71,
+  0x00819e9f,
+  0x00819ec5,
+  0x00819ed5,
+  0x00819efb,
+  0x00819f57,
+  0x00819f73,
+  0x00819f7d,
+  0x00819f87,
+  0x00819f92,
+  0x00819fa6,
+  0x00819fbc,
+  0x00819ff6,
+  0x0081a0ac,
+  0x0081a0d3,
+  0x0081a166,
+  0x0081a18a,
+  0x0081a218,
+  0x0081a238,
+  0x0081a259,
+  0x0081a27a,
+  0x0081a288,
+  0x0081a2ab,
+  0x0081a2cd,
+  0x0081a2ed,
+  0x0081a30d,
+  0x0081a32f,
+  0x0081a394,
+  0x0081a3a2,
+  0x0081a52c,
+  0x0081a7cd,
+  0x0081a7e0,
+  0x0081a7f4,
+  0x0081a801,
+  0x0081a80f,
+  0x0081a81b,
+  0x0081a841,
+  0x0081a86b,
+  0x00825957,
+  0x00831549,
+  0x0083155d,
+  0x008315d2,
+  0x0085d7c3,
+  0x0085e2d5,
+  0x00867315,
+  0x0088dad6,
+  0x0088dafb,
+  0x0088db11,
+  0x0088db36,
+  0x0088db5b,
+  0x0088dba5,
+  0x0088dbca,
+  0x0088dbef,
+  0x0088dc14,
+  0x0088dc39,
+  0x0088dc5e,
+  0x0088dc83,
+  0x0088dca8,
+  0x0088dccd,
+  0x0088dcf2,
+  0x0088dd17,
+  0x0088dd3c,
+  0x0088dd61,
+  0x0088dd86,
+  0x0088ddab,
+  0x0088ddf5,
+  0x0088de1a,
+  0x0088de3f,
+  0x0088de64,
+  0x0088de89,
+  0x0088deae,
+  0x0088ded3,
+  0x0088dedf,
+  0x0088deeb,
+  0x0088def6,
+  # Proven by a run: tools/discover.py recorded these as calls the
+  # translation could not deliver. The withdraw pass had dropped each as a
+  # guess whose own dispatch went nowhere, and 0x006db6c0 is a thread start
+  # routine, so the thread it belongs to did nothing at all.
+  0x006db6c0,
+  0x00883c80,
+  0x00887d80,
+  0x00889f60,
+  0x007cd5e4,  # an SEH handler; without it a fault the game handles itself
+               # reached the dispatcher as ExceptionContinueExecution
+  0x00693be0,  # both called from ordinary code with a heap object in ECX,
+  0x006a0430,  # and undeliverable in every run of 2026-09-19
+  0x00685810,  # and this one behind them, once they could be delivered
+
+  # The blocks main's recovery does not reach that the translator this port
+  # was built on did. None is named by the listing: every one is recovered
+  # from the PE, and main rejects them at three gates the older translator did
+  # not have (a wide-string test, a withdrawn-span test, and "decoded into
+  # something this compiler never emits"). Carrying them keeps the translation
+  # at parity - originally 36,698 functions against 36,718 - while the recovery
+  # gates were sorted out upstream. That diff included false entries inside
+  # real instructions, which blocked methods reached on device. Verify each
+  # entry against original instruction boundaries and its callers or pointer
+  # tables; matching the older function count is not evidence that it is code.
+  0x00404c24,
+  0x00410800,
+  0x00410885,
+  0x004108ad,
+  0x00414780,
+  0x00414808,
+  0x00414812,
+  0x00414881,
+  0x0041493f,
+  0x00414940,
+  0x00414941,
+  0x00422050,
+  0x004314c0,
+  0x00431580,
+  0x00431582,
+  0x00431600,
+  0x00431800,
+  0x00431900,
+  0x0043ef00,
+  0x00440000,
+  0x00440d00,
+  0x004414e0,
+  0x00441578,
+  0x00441600,
+  0x00441670,
+  0x00443300,
+  0x00443420,
+  0x00443540,
+  0x00443555,
+  0x00443895,
+  0x00443b80,
+  0x00443b8b,
+  0x00443b8c,
+  0x00443ba0,
+  0x00443c81,
+  0x00443c9d,
+  0x00443ca5,
+  0x00444000,
+  0x00444100,
+  0x004441c6,
+  0x00444300,
+  0x00444400,
+  0x004446c7,
+  0x00444700,
+  0x004447c7,
+  0x00444800,
+  0x00444891,
+  0x00448d00,
+  0x00448d0e,
+  0x00449000,
+  0x00449044,
+  0x00454880,
+  0x00454881,
+  0x00459d00,
+  0x0045d770,
+  0x0045d81b,
+  0x0045d848,
+  0x004661f0,
+  0x0046620a,
+  0x00466c00,
+  0x00466c02,
+  0x00467000,
+  0x004682e8,
+  0x0046e900,
+  0x00498d00,
+  0x00498d01,
+  0x00498d02,
+  0x00498d07,
+  0x00498d0b,
+  0x00498d0c,
+  0x00498d0e,
+  0x00498d10,
+  0x00498d11,
+  0x00498d12,
+  0x00498d14,
+  0x00498d20,
+  0x004a9550,
+  0x004aec84,
+  0x004aecd4,
+  0x004d2ee8,
+  0x004d5100,
+  0x004d5652,
+  0x004d8000,
+  0x004d8b00,
+  0x004d8b10,
+  0x004d8b11,
+  0x004dd840,
+  0x004e8b20,
+  0x004e8bd0,
+  0x004e9b30,
+  0x004e9b60,
+  0x004e9c11,
+  0x004e9c34,
+  0x004e9c72,
+  0x004e9ca5,
+  0x004e9ccd,
+  0x004e9cf4,
+  0x004e9d1c,
+  0x004e9d38,
+  0x004e9d62,
+  0x004e9d76,
+  0x004e9dbd,
+  0x004e9dc1,
+  0x004e9dc8,
+  0x004e9dcd,
+  0x004e9e24,
+  0x004ea600,
+  0x004f18e0,
+  0x004f18e5,
+  0x004f3fc0,
+  0x004f4270,
+  0x004f4300,
+  0x004f6ea0,
+  0x0050001f,
+  0x00500038,
+  0x0050008c,
+  0x00504341,
+  0x0050ede0,
+  0x005121f0,
+  0x00512249,
+  0x0051e000,
+  0x0051e0aa,
+  0x00522cd6,
+  0x005241a0,
+  0x00524c80,
+  0x00531d40,
+  0x00533030,
+  0x00550b80,
+  0x00552570,
+  0x005534f0,
+  0x00553980,
+  0x00553b09,
+  0x00559fa0,
+  0x0055af90,
+  0x0055bd10,
+  0x0055be00,
+  0x0055bed2,
+  0x0055bf0f,
+  0x0055bf12,
+  0x005625c0,
+  0x005670e8,
+  0x0056e440,
+  0x0056e460,
+  0x00577000,
+  0x005775d6,
+  0x005775e8,
+  0x00593f00,
+  0x005cb690,
+  0x005dd9c9,
+  0x005e008c,
+  0x00630063,
+  0x0063533d,
+  0x006393e0,
+  0x00643090,
+  0x006430c0,
+  0x0064bf5d,
+  0x0068587e,
+  0x00687240,
+  0x00693c00,
+  0x006a0445,
+  0x006a0447,
+  0x006a0448,
+  0x006a044a,
+  0x006a044d,
+  0x006a0459,
+  0x006a0bf0,
+  0x006a0c00,
+  0x006a0c42,
+  0x006a0c47,
+  0x006a0c49,
+  0x006a0c4e,
+  0x006a0c50,
+  0x006a0c52,
+  0x006a0c55,
+  0x006a0c5e,
+  0x006a0c7f,
+  0x006a0cc4,
+  0x006a0cec,
+  0x006a1e70,
+  0x006a2a74,
+  0x006a2c70,
+  0x006a2c71,
+  0x006a5016,
+  0x006a50c0,
+  0x006a50c2,
+  0x006a50c6,
+  0x006a50c9,
+  0x006a50cc,
+  0x006a50ce,
+  0x006a50cf,
+  0x006a50f0,
+  0x006a50f4,
+  0x006a50f6,
+  0x006a50f8,
+  0x006a50fb,
+  0x006a50fc,
+  0x006a50fd,
+  0x006a50ff,
+  0x006a5100,
+  0x006a5101,
+  0x006a5102,
+  0x006a5103,
+  0x006a5108,
+  0x006a51e0,
+  0x006a95f0,
+  0x006ae430,
+  0x006db70f,
+  0x006db8c3,
+  0x006f0eb0,
+  0x006f0f60,
+  0x00704a9e,
+  0x0071d080,
+  0x0071d112,
+  0x0071d192,
+  0x0071eb06,
+  0x0071eb19,
+  0x00721560,
+  0x0072bd00,
+  0x0072bd02,
+  0x007365f0,
+  0x0073ab80,
+  0x00740000,
+  0x00740006,
+  0x00740008,
+  0x0074000a,
+  0x00740016,
+  0x00740019,
+  0x0074001e,
+  0x0074002a,
+  0x0075748d,
+  0x00757495,
+  0x00758b14,
+  0x00768300,
+  0x00783820,
+  0x007847a0,
+  0x00784803,
+  0x00784acb,
+  0x00784ad9,
+  0x00784af0,
+  0x0078b450,
+  0x0078b490,
+  0x0078b6e0,
+  0x0078ce40,
+  0x00792a00,
+  0x0079c9c0,
+  0x0079e3a0,
+  0x007a01c0,
+  0x007a3af0,
+  0x007a3b04,
+  0x007ae680,
+  0x007af060,
+  0x007af10a,
+  0x007b008b,
+  0x007b0090,
+  0x007b42b0,
+  0x007b44df,
+  0x007b4580,
+  0x007b5750,
+  0x007bff00,
+  0x007c1770,
+  0x007c2500,
+  0x007c3b10,
+  0x007c3d00,
+  0x007ce294,
+  0x007d44f0,
+  0x007d4506,
+  0x007ddce8,
+  0x007e0d56,
+  0x007f4100,
+  0x007f4107,
+  0x00806730,
+  0x00806740,
+  0x00835ac0,
+  0x00835b70,
+  0x00835bb0,
+  0x008361f0,
+  0x00836590,
+  0x00836ea0,
+  0x00836fa0,
+  0x00839eb0,
+  0x0083a020,
+  0x0083a080,
+  0x00840003,
+  0x00840007,
+  0x00840020,
+  0x0084002f,
+  0x00840031,
+  0x00840032,
+  0x00840035,
+  0x008476e0,
+  0x008477b0,
+  0x008477d0,
+  0x00848540,
+  0x008487f0,
+  0x00848810,
+  0x00848830,
+  0x00848bff,
+  0x008504c0,
+  0x008504d9,
+  0x00852977,
+  0x00852986,
+  0x00852995,
+  0x008529a4,
+  0x00868288,
+  0x008687f8,
+  0x008688b8,
+  0x008688f8,
+  0x00868938,
+  0x00868958,
+  0x008689b8,
+  0x008689f8,
+  0x00868b88,
+  0x0086e8f8,
+  0x0086fff8,
+  0x00872818,
+  0x00878908,
+  0x00878a08,
+  0x00878b07,
+  0x0087b688,
+  0x0087e8fe,
+  0x0088000f,
+  0x0088002f,
+  0x00883588,
+  0x00883c83,
+  0x00887d83,
+  0x0088908a,
+  0x00889f67,
+  0x0088b983,
+  0x0088b9c0,
+  0x0088bb8b,
+  0x0088bbd8,
+  0x0088be83,
+  0x0088bf83,
+]
+
+[hooks]
+# runtime/kernel32.cpp native_frame_clock: GetTickCount return addresses of
+# the draw-loop waits. Not identified; sentinels (never a return address).
+frame_clock_begin = 0x00a37f10
+frame_clock_wait = 0x00a37f14
+frame_clock_wait_clamp = 0x00a37f18
+frame_clock_clamp_deadline = 0x00a37f20
+frame_clock_wait_deadline = 0x00a37f24
+# dx/ddraw.cpp: mouse-pointer surface globals. This game draws with Direct3D 9
+# and never creates DirectDraw surfaces; sentinels.
+cursor_surface_ptrs = [0x00a37f30, 0x00a37f34]
+# host/input_gate.cpp: the game's mouse device object and its vtable.
+# Not identified (the game uses DirectInput8Create); sentinels.
+mouse_vtable = 0x00a37f40
+mouse_device_ptr = 0x00a37f44
+mouse_device_right = 0x00a37f48
+# host/smoke_main.cpp: the camera record the smoke script inspects. Sentinel.
+camera = 0x00a37f50
+# mods/game_view.cpp: Populous's seven sprite routines. This game has none.
+sprites = []
+
+[mods]
+# The mod runtime's Populous integrations hook Populous routines by address;
+# this game has none of them.
+builtin = "none"
+
+[settings]
+# Renderer settings are supplied by this game's core mod. The shared page
+# also exposes touch layout selection and button remapping on the iPad.
+rows = ["window", "performance_overlay", "controls"]
+
+[controls]
+pad = "mapped"
+
+[controls.mapped]
+# Racing preset over the game's default PC keys. The 2005 executable reads
+# DirectInput, not XInput; generic native joystick defaults are not this layout.
+# Triangle confirms menus; Start pauses/goes back; dpad navigates menus.
+left_stick = "horizontal_arrows"
+right_stick = "cursor"
+dpad = "arrows"
+cross = "key:Up"
+square = "key:Down"
+circle = "key:Space"
+triangle = "key:Return"
+l1 = "key:Tab"
+r1 = "key:LShift"
+l2 = "key:Down"
+r2 = "key:Up"
+l3 = "none"
+r3 = "mouse_left"
+select = "key:C"
+start = "key:Escape"
+
+[launcher]
+# Opens when the executable is missing or wrong, with --launcher,
+# RECOMP_LAUNCHER=1, or Shift/Alt held at start. No store sells this game
+# (checked 2026-09-17): GOG only lists it on its Dreamlist, and Steam's "Most
+# Wanted" (app 1262560) is Criterion's 2012 game, a different executable. So
+# store, gog_ids and steam_ids stay empty; detection goes by install_names.
+title = "Need for Speed: Most Wanted"
+install_names = ["Need for Speed Most Wanted", "NFS Most Wanted", "Most Wanted"]
+min_free_mb = 300
+
+[setup]
+# tools/setup.py: what a supported installation must contain. No annotation
+# metadata exists for this executable; tools/analyze.py runs Ghidra's own
+# analysis instead of importing one.
+required_dirs = ["CARS", "FRONTEND", "GLOBAL", "SOUND", "TRACKS"]
+
+[bundle]
+# Left out of the iOS bundle: the uninstaller, the manual, the Windows-only
+# ASI loader and widescreen fix, LAN server, installer helpers and the
+# repack's saves. The VP6 cinematics stay: the game decodes them itself.
+exclude = ["Uninstall", "Support", "scripts", "SAVE", "foobar",
+           "*.dll", "*_inst.exe", "*.txt", "server.cfg"]
