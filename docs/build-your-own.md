@@ -18,8 +18,8 @@ It does **not** contain the game. Game data goes onto the phone separately
 ## 1. Get the code
 
 ```sh
-git clone fixxx
-cd fixxxx
+git clone https://github.com/DEBARSHI-SARKAR/nfsmw-recomp-android.git
+cd nfsmw-recomp-android
 ```
 
 ## 2. Install the toolchain
