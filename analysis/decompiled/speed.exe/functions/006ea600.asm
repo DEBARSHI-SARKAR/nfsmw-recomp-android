@@ -1,0 +1,8 @@
+006ea600  PUSH ESI
+006ea601  MOV ESI,ECX
+006ea603  CMP dword ptr [ESI + 0x2f4],0x5
+006ea60a  JNZ 0x006ea61b
+006ea60c  CALL 0x006ea5a0
+006ea611  MOV dword ptr [ESI + 0x2f4],0x1
+006ea61b  POP ESI
+006ea61c  RET

@@ -1,0 +1,39 @@
+/* speed.exe 0051c5f0 FUN_0051c5f0; analysis pseudocode, not buildable source.
+ */
+
+void __fastcall FUN_0051c5f0(int param_1)
+
+{
+  char cVar1;
+  int iVar2;
+  undefined4 uVar3;
+  
+  iVar2 = *(int *)(param_1 + 0x2c);
+  if (iVar2 != 0) {
+    *(uint *)(iVar2 + 0x1c) = *(uint *)(iVar2 + 0x1c) | 0x400000;
+    *(undefined4 *)(iVar2 + 0x60) = 0xd31407e7;
+    if (DAT_0091dd08 != (undefined4 *)0x0) {
+      (**(code **)*DAT_0091dd08)(iVar2);
+    }
+    *(uint *)(iVar2 + 0x1c) = *(uint *)(iVar2 + 0x1c) & 0xfffffffd | 0x400000;
+  }
+  cVar1 = *(char *)(*(int *)(DAT_0091cf90 + 0x10) + 0x91 + DAT_0091ca24 * 0x14);
+  uVar3 = 0;
+  if (cVar1 == '\0') {
+    uVar3 = 0x8cd532a0;
+  }
+  else if (cVar1 == '\x01') {
+    uVar3 = 0x317d3005;
+  }
+  iVar2 = *(int *)(param_1 + 0x30);
+  if (iVar2 != 0) {
+    *(uint *)(iVar2 + 0x1c) = *(uint *)(iVar2 + 0x1c) | 0x400000;
+    *(undefined4 *)(iVar2 + 0x60) = uVar3;
+    if (DAT_0091dd08 != (undefined4 *)0x0) {
+      (**(code **)*DAT_0091dd08)(iVar2);
+    }
+    *(uint *)(iVar2 + 0x1c) = *(uint *)(iVar2 + 0x1c) & 0xfffffffd | 0x400000;
+  }
+  return;
+}
+

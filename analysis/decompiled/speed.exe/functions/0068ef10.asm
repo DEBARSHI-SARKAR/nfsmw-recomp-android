@@ -1,0 +1,38 @@
+0068ef10  FLD float ptr [ESP + 0x14]
+0068ef14  FABS
+0068ef16  FADD float ptr [0x0089096c]
+0068ef1c  FLD float ptr [ESP + 0x4]
+0068ef20  FABS
+0068ef22  FLD float ptr [ESP + 0x8]
+0068ef26  FCOMP float ptr [0x008f8d44]
+0068ef2c  FNSTSW AX
+0068ef2e  TEST AH,0x41
+0068ef31  JNZ 0x0068ef4d
+0068ef33  FLD float ptr [0x008f8d48]
+0068ef39  FMUL float ptr [0x0089551c]
+0068ef3f  FLD ST1
+0068ef41  FCOMPP
+0068ef43  FNSTSW AX
+0068ef45  TEST AH,0x5
+0068ef48  JP 0x0068ef4d
+0068ef4a  FSTP ST0
+0068ef4c  RET
+0068ef4d  FLD float ptr [ESP + 0xc]
+0068ef51  FSUB float ptr [0x009377f4]
+0068ef57  FLD float ptr [0x008f8d38]
+0068ef5d  FSUB float ptr [0x009377f4]
+0068ef63  FDIVP
+0068ef65  FLD float ptr [0x008f8d40]
+0068ef6b  FSUB float ptr [0x009377f8]
+0068ef71  FMULP
+0068ef73  FADD float ptr [0x009377f8]
+0068ef79  FMULP
+0068ef7b  FMUL float ptr [ESP + 0x10]
+0068ef7f  FCOM float ptr [0x008f8d3c]
+0068ef85  FNSTSW AX
+0068ef87  TEST AH,0x41
+0068ef8a  JNZ 0x0068ef94
+0068ef8c  FSTP ST0
+0068ef8e  FLD float ptr [0x008f8d3c]
+0068ef94  FADDP
+0068ef96  RET

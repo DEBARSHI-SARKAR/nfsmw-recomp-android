@@ -1,0 +1,61 @@
+00696250  PUSH ESI
+00696251  XOR EAX,EAX
+00696253  MOV ESI,ECX
+00696255  MOV dword ptr [ESI],EAX
+00696257  MOV dword ptr [ESI + 0x4],EAX
+0069625a  MOV dword ptr [ESI + 0x8],EAX
+0069625d  PUSH EDI
+0069625e  MOV EDI,dword ptr [ESP + 0xc]
+00696262  FLD float ptr [EDI + 0x8]
+00696265  FLD float ptr [EDI + 0x4]
+00696268  FLD float ptr [EDI]
+0069626a  FLD ST0
+0069626c  FMUL ST1
+0069626e  FLD ST2
+00696270  FMUL ST3
+00696272  FADDP
+00696274  FLD ST3
+00696276  FMUL ST4
+00696278  FADDP
+0069627a  FSTP float ptr [ESP + 0xc]
+0069627e  MOV EAX,dword ptr [ESP + 0xc]
+00696282  FSTP ST0
+00696284  PUSH EAX
+00696285  FSTP ST0
+00696287  FSTP ST0
+00696289  CALL 0x005c5e80
+0069628e  FLD float ptr [EDI]
+00696290  MOV EAX,dword ptr [ESP + 0x18]
+00696294  FMUL float ptr [EAX]
+00696296  ADD ESP,0x4
+00696299  FSTP float ptr [ESI]
+0069629b  FLD float ptr [EAX + 0x4]
+0069629e  FMUL float ptr [EDI + 0x4]
+006962a1  FSTP float ptr [ESI + 0x4]
+006962a4  FLD float ptr [EAX + 0x8]
+006962a7  MOV EAX,dword ptr [ESP + 0x10]
+006962ab  FMUL float ptr [EDI + 0x8]
+006962ae  POP EDI
+006962af  FSTP float ptr [ESI + 0x8]
+006962b2  FLD float ptr [EAX]
+006962b4  FMUL float ptr [ESI]
+006962b6  FSTP float ptr [ESI]
+006962b8  FLD float ptr [EAX + 0x4]
+006962bb  FMUL float ptr [ESI + 0x4]
+006962be  FSTP float ptr [ESI + 0x4]
+006962c1  FLD float ptr [EAX + 0x8]
+006962c4  MOV EAX,ESI
+006962c6  FMUL float ptr [ESI + 0x8]
+006962c9  FSTP float ptr [ESI + 0x8]
+006962cc  FMUL float ptr [ESP + 0x14]
+006962d0  FMUL float ptr [0x00891068]
+006962d6  FLD ST0
+006962d8  FMUL float ptr [ESI]
+006962da  FSTP float ptr [ESI]
+006962dc  FLD ST0
+006962de  FMUL float ptr [ESI + 0x4]
+006962e1  FSTP float ptr [ESI + 0x4]
+006962e4  FMUL float ptr [ESI + 0x8]
+006962e7  FSTP float ptr [ESI + 0x8]
+006962ea  POP ESI
+006962eb  RET 0x10

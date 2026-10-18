@@ -1,0 +1,15 @@
+007ec90a  PUSH EBP
+007ec90b  MOV EBP,ESP
+007ec90d  PUSH EBX
+007ec90e  PUSH ESI
+007ec90f  MOV EAX,dword ptr [EBP + 0xc]
+007ec912  CPUID
+007ec914  MOV ESI,dword ptr [EBP + 0x8]
+007ec917  MOV dword ptr [ESI],EAX
+007ec919  MOV dword ptr [ESI + 0x4],EBX
+007ec91c  MOV dword ptr [ESI + 0x8],EDX
+007ec91f  MOV dword ptr [ESI + 0xc],ECX
+007ec922  POP ESI
+007ec923  POP EBX
+007ec924  POP EBP
+007ec925  RET

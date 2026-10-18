@@ -1,0 +1,6 @@
+004363a2  MOV EDX,dword ptr [EBP + 0x10]
+004363a5  MOV EAX,dword ptr [EBP + 0xc]
+004363a8  MOV ECX,dword ptr [EBP + -0x18]
+004363ab  PUSH EDX
+004363ac  PUSH EAX
+004363ad  CALL 0x0040c730

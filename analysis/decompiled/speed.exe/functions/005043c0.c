@@ -1,0 +1,29 @@
+/* speed.exe 005043c0 FUN_005043c0; analysis pseudocode, not buildable source.
+ * calls 00466410 FUN_00466410
+ */
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_005043c0(int *param_1,int param_2)
+
+{
+  int iVar1;
+  int *piVar2;
+  
+  piVar2 = (int *)FUN_00466410();
+  if (piVar2 != (int *)0x0) {
+    piVar2[2] = param_2;
+    iVar1 = *param_1;
+    *param_1 = (int)piVar2;
+    *(int **)(iVar1 + 4) = piVar2;
+    piVar2[1] = (int)param_1;
+    *piVar2 = iVar1;
+    return;
+  }
+  _DAT_00000000 = *param_1;
+  *param_1 = 0;
+  *(undefined4 *)(_DAT_00000000 + 4) = 0;
+  _DAT_00000004 = param_1;
+  return;
+}
+

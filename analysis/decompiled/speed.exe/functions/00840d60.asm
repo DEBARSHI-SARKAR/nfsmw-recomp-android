@@ -1,0 +1,22 @@
+00840d60  MOV ECX,dword ptr [ESP + 0x8]
+00840d64  XOR EAX,EAX
+00840d66  CMP ECX,0x646f626a
+00840d6c  JNZ 0x00840d7a
+00840d6e  MOV ECX,dword ptr [ESP + 0xc]
+00840d72  MOV EDX,dword ptr [ESP + 0x4]
+00840d76  MOV dword ptr [EDX + 0x10],ECX
+00840d79  RET
+00840d7a  CMP ECX,0x6974696d
+00840d80  JNZ 0x00840d91
+00840d82  MOV ECX,dword ptr [ESP + 0x4]
+00840d86  MOV EDX,dword ptr [ESP + 0xc]
+00840d8a  MOV EAX,dword ptr [ECX + 0x30]
+00840d8d  MOV dword ptr [ECX + 0x30],EDX
+00840d90  RET
+00840d91  CMP ECX,0x7274696d
+00840d97  JNZ 0x00840da7
+00840d99  MOV ECX,dword ptr [ESP + 0x4]
+00840d9d  MOV EDX,dword ptr [ESP + 0xc]
+00840da1  MOV EAX,dword ptr [ECX + 0x34]
+00840da4  MOV dword ptr [ECX + 0x34],EDX
+00840da7  RET

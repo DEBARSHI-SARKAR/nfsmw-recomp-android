@@ -1,0 +1,75 @@
+007627b0  SUB ESP,0x20
+007627b3  MOV EDX,dword ptr [ECX + 0x8]
+007627b6  FLD float ptr [ECX + 0x1c]
+007627b9  MOV EAX,dword ptr [ECX]
+007627bb  MOV dword ptr [ESP + 0x4],EDX
+007627bf  MOV EDX,dword ptr [ECX + 0x18]
+007627c2  MOV dword ptr [ESP],EAX
+007627c5  MOV EAX,dword ptr [ECX + 0x10]
+007627c8  MOV dword ptr [ESP + 0x10],EDX
+007627cc  FLD float ptr [ESP + 0x10]
+007627d0  MOV dword ptr [ESP + 0x14],EAX
+007627d4  FSUB float ptr [ESP + 0x4]
+007627d8  MOV EAX,dword ptr [ESP + 0x24]
+007627dc  MOV EDX,dword ptr [EAX]
+007627de  MOV EAX,dword ptr [EAX + 0x8]
+007627e1  FSTP float ptr [ESP + 0x1c]
+007627e5  MOV dword ptr [ESP + 0xc],EDX
+007627e9  FLD float ptr [ESP + 0x14]
+007627ed  MOV dword ptr [ESP + 0x8],EAX
+007627f1  FSUB float ptr [ESP]
+007627f4  FSTP float ptr [ESP + 0x18]
+007627f8  FLD float ptr [ESP + 0xc]
+007627fc  FSUB float ptr [ESP]
+007627ff  FMUL float ptr [ESP + 0x18]
+00762803  FLD float ptr [ESP + 0x8]
+00762807  FSUB float ptr [ESP + 0x4]
+0076280b  FMUL float ptr [ESP + 0x1c]
+0076280f  FADDP
+00762811  FMUL ST1
+00762813  FMUL ST1
+00762815  FSTP float ptr [ESP + 0x24]
+00762819  FSTP ST0
+0076281b  FLD float ptr [ESP + 0x24]
+0076281f  FCOMP float ptr [0x00890968]
+00762825  FNSTSW AX
+00762827  TEST AH,0x5
+0076282a  JP 0x0076284f
+0076282c  FLD float ptr [ESP + 0x4]
+00762830  FSUB float ptr [ESP + 0x8]
+00762834  FLD float ptr [ESP]
+00762837  FSUB float ptr [ESP + 0xc]
+0076283b  FLD ST0
+0076283d  FMUL ST1
+0076283f  FLD ST2
+00762841  FMUL ST3
+00762843  FADDP
+00762845  FSTP ST2
+00762847  FSTP ST0
+00762849  ADD ESP,0x20
+0076284c  RET 0x4
+0076284f  FLD float ptr [ESP + 0x24]
+00762853  FCOMP float ptr [0x0089096c]
+00762859  FNSTSW AX
+0076285b  TEST AH,0x41
+0076285e  JNZ 0x0076286e
+00762860  FLD float ptr [ESP + 0x10]
+00762864  FSUB float ptr [ESP + 0x8]
+00762868  FLD float ptr [ESP + 0x14]
+0076286c  JMP 0x00762837
+0076286e  FLD float ptr [ESP + 0x18]
+00762872  FMUL float ptr [ESP + 0x24]
+00762876  FADD float ptr [ESP]
+00762879  FLD float ptr [ESP + 0x1c]
+0076287d  FMUL float ptr [ESP + 0x24]
+00762881  FADD float ptr [ESP + 0x4]
+00762885  FSUB float ptr [ESP + 0x8]
+00762889  FSTP float ptr [ESP + 0x24]
+0076288d  FSUB float ptr [ESP + 0xc]
+00762891  FLD ST0
+00762893  FMULP
+00762895  FLD float ptr [ESP + 0x24]
+00762899  FMUL float ptr [ESP + 0x24]
+0076289d  FADDP
+0076289f  ADD ESP,0x20
+007628a2  RET 0x4

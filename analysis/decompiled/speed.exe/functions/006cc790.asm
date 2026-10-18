@@ -1,0 +1,2 @@
+006cc790  MOV EAX,0x8fb7cc
+006cc795  RET

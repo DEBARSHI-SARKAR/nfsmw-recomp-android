@@ -1,0 +1,123 @@
+004c5580  PUSH EBP
+004c5581  MOV EBP,ESP
+004c5583  AND ESP,0xfffffff0
+004c5586  PUSH -0x1
+004c5588  PUSH 0x86bccc
+004c558d  MOV EAX,FS:[0x0]
+004c5593  PUSH EAX
+004c5594  MOV dword ptr FS:[0x0],ESP
+004c559b  SUB ESP,0x18
+004c559e  PUSH EBX
+004c559f  PUSH ESI
+004c55a0  MOV ESI,ECX
+004c55a2  PUSH EDI
+004c55a3  MOV dword ptr [ESP + 0x18],ESI
+004c55a7  CALL 0x004d61d0
+004c55ac  XOR EBX,EBX
+004c55ae  MOV dword ptr [ESI + 0x24],EBX
+004c55b1  PUSH 0x3
+004c55b3  LEA ECX,[ESI + 0x50]
+004c55b6  MOV dword ptr [ESP + 0x30],EBX
+004c55ba  MOV dword ptr [ESI],0x896bf0
+004c55c0  CALL 0x0065c540
+004c55c5  LEA ECX,[ESI + 0x78]
+004c55c8  MOV byte ptr [ESP + 0x2c],0x1
+004c55cd  CALL 0x006539a0
+004c55d2  PUSH 0x2
+004c55d4  LEA ECX,[ESI + 0xa0]
+004c55da  MOV byte ptr [ESP + 0x30],0x2
+004c55df  CALL 0x0065c540
+004c55e4  MOV dword ptr [ESI + 0xec],EBX
+004c55ea  MOV dword ptr [ESI + 0xd8],EBX
+004c55f0  MOV dword ptr [ESI + 0xe0],EBX
+004c55f6  MOV dword ptr [ESI + 0xe4],EBX
+004c55fc  MOV dword ptr [ESI + 0xdc],EBX
+004c5602  MOV dword ptr [ESI + 0xe8],EBX
+004c5608  MOV byte ptr [ESI + 0xf0],0x1
+004c560f  MOV dword ptr [ESI + 0x108],EBX
+004c5615  MOV dword ptr [ESI + 0xf4],EBX
+004c561b  MOV dword ptr [ESI + 0xfc],EBX
+004c5621  MOV dword ptr [ESI + 0x100],EBX
+004c5627  MOV dword ptr [ESI + 0xf8],EBX
+004c562d  MOV dword ptr [ESI + 0x104],EBX
+004c5633  MOV byte ptr [ESI + 0x10c],0x1
+004c563a  LEA EDI,[ESI + 0x150]
+004c5640  MOV dword ptr [ESI + 0x120],EBX
+004c5646  MOV dword ptr [ESI + 0x128],EBX
+004c564c  MOV byte ptr [ESP + 0x2c],0x3
+004c5651  MOV dword ptr [EDI + 0x74],EBX
+004c5654  MOV dword ptr [EDI],EBX
+004c5656  MOV dword ptr [EDI + 0x70],EBX
+004c5659  MOV dword ptr [EDI + 0x6c],EBX
+004c565c  XOR ECX,ECX
+004c565e  LEA EAX,[EDI + 0x34]
+004c5661  MOV dword ptr [EAX + -0x18],EBX
+004c5664  MOV dword ptr [EAX],EBX
+004c5666  MOV dword ptr [EAX + -0x30],EBX
+004c5669  MOV byte ptr [EDI + ECX*0x1 + 0x4c],BL
+004c566d  MOV dword ptr [EAX + 0x20],EBX
+004c5670  INC ECX
+004c5671  ADD EAX,0x4
+004c5674  CMP ECX,0x6
+004c5677  JL 0x004c5661
+004c5679  PUSH EBX
+004c567a  PUSH ECX
+004c567b  MOV EAX,ESP
+004c567d  MOV dword ptr [ESP + 0x24],ESP
+004c5681  PUSH 0x4b3bd0
+004c5686  MOV byte ptr [EDI + 0x78],0x1
+004c568a  PUSH ESI
+004c568b  MOV dword ptr [EAX],0x20d60dbf
+004c5691  CALL 0x004c0d70
+004c5696  ADD ESP,0x10
+004c5699  PUSH EBX
+004c569a  PUSH ECX
+004c569b  MOV dword ptr [ESI + 0x1cc],EAX
+004c56a1  MOV EAX,ESP
+004c56a3  MOV dword ptr [ESP + 0x24],ESP
+004c56a7  PUSH 0x4b3cb0
+004c56ac  PUSH ESI
+004c56ad  MOV dword ptr [EAX],0x20d60dbf
+004c56b3  CALL 0x004c0ce0
+004c56b8  MOV dword ptr [ESI + 0x1d0],EAX
+004c56be  MOV dword ptr [ESI + 0x2c],EBX
+004c56c1  MOV dword ptr [ESI + 0x28],EBX
+004c56c4  MOV dword ptr [ESI + 0x30],EBX
+004c56c7  MOV byte ptr [ESI + 0x138],BL
+004c56cd  MOV byte ptr [ESI + 0xd4],BL
+004c56d3  MOV dword ptr [ESI + 0x104],EBX
+004c56d9  MOV byte ptr [ESI + 0x10c],BL
+004c56df  MOV dword ptr [ESI + 0xf4],EBX
+004c56e5  ADD ESP,0x10
+004c56e8  MOV EAX,0x3f800000
+004c56ed  MOV dword ptr [ESI + 0x100],EAX
+004c56f3  MOV dword ptr [ESI + 0xfc],EAX
+004c56f9  MOV dword ptr [ESI + 0x108],EAX
+004c56ff  MOV ECX,0x3a83126f
+004c5704  MOV dword ptr [ESI + 0xf8],ECX
+004c570a  PUSH 0x1
+004c570c  MOV dword ptr [ESI + 0xdc],ECX
+004c5712  PUSH EBX
+004c5713  MOV dword ptr [ESI + 0xe4],EBX
+004c5719  MOV dword ptr [ESI + 0xe0],EBX
+004c571f  MOV dword ptr [ESI + 0xe8],EBX
+004c5725  MOV byte ptr [ESI + 0xf0],BL
+004c572b  MOV dword ptr [ESI + 0xec],EBX
+004c5731  MOV dword ptr [ESI + 0xd8],EBX
+004c5737  PUSH EBX
+004c5738  MOV ECX,EDI
+004c573a  MOV byte ptr [ESI + 0x14e],0x1
+004c5741  CALL 0x004ba2c0
+004c5746  MOV ECX,dword ptr [ESP + 0x24]
+004c574a  MOV dword ptr [ESI + 0x40],EBX
+004c574d  MOV dword ptr [ESI + 0x44],EBX
+004c5750  MOV dword ptr [ESI + 0x48],EBX
+004c5753  MOV byte ptr [ESI + 0xd5],BL
+004c5759  POP EDI
+004c575a  MOV EAX,ESI
+004c575c  POP ESI
+004c575d  MOV dword ptr FS:[0x0],ECX
+004c5764  POP EBX
+004c5765  MOV ESP,EBP
+004c5767  POP EBP
+004c5768  RET

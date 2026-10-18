@@ -1,0 +1,44 @@
+004067a0  PUSH ESI
+004067a1  MOV ESI,ECX
+004067a3  MOV ECX,dword ptr [ESI + 0x4c]
+004067a6  MOV EAX,dword ptr [ECX]
+004067a8  PUSH 0x0
+004067aa  CALL dword ptr [EAX + 0x18]
+004067ad  MOV ECX,dword ptr [ESI + 0x4c]
+004067b0  MOV EDX,dword ptr [ECX]
+004067b2  PUSH 0x0
+004067b4  CALL dword ptr [EDX + 0x1c]
+004067b7  MOV ECX,dword ptr [ESI + 0x4c]
+004067ba  MOV EAX,dword ptr [ECX]
+004067bc  PUSH 0x0
+004067be  CALL dword ptr [EAX + 0x14]
+004067c1  MOV ECX,dword ptr [ESI + 0x4c]
+004067c4  MOV EDX,dword ptr [ECX]
+004067c6  PUSH 0x0
+004067c8  CALL dword ptr [EDX + 0x2c]
+004067cb  MOV ECX,dword ptr [ESI + 0x4c]
+004067ce  MOV EAX,dword ptr [ECX]
+004067d0  PUSH 0x0
+004067d2  CALL dword ptr [EAX + 0x24]
+004067d5  MOV ECX,dword ptr [ESI + 0x48]
+004067d8  MOV EDX,dword ptr [ECX]
+004067da  CALL dword ptr [EDX + 0x78]
+004067dd  TEST AL,AL
+004067df  JNZ 0x0040680e
+004067e1  MOV ECX,dword ptr [ESI + 0x30]
+004067e4  MOV EAX,dword ptr [ECX]
+004067e6  CALL dword ptr [EAX + 0x54]
+004067e9  MOV EDX,dword ptr [EAX]
+004067eb  MOV ECX,EAX
+004067ed  CALL dword ptr [EDX + 0x30]
+004067f0  FCOMP float ptr [0x00890d34]
+004067f6  FNSTSW AX
+004067f8  TEST AH,0x1
+004067fb  JNZ 0x0040680e
+004067fd  MOV ECX,dword ptr [ESI + 0x4c]
+00406800  MOV EAX,dword ptr [ECX]
+00406802  POP ESI
+00406803  MOV dword ptr [ESP + 0x4],0x3e800000
+0040680b  JMP dword ptr [EAX + 0x1c]
+0040680e  POP ESI
+0040680f  RET 0x4

@@ -1,0 +1,10 @@
+0051a0a0  FLD float ptr [ESP + 0x4]
+0051a0a4  PUSH ESI
+0051a0a5  FMUL float ptr [0x00893718]
+0051a0ab  MOV ESI,ECX
+0051a0ad  FADD float ptr [0x008933d4]
+0051a0b3  CALL 0x007c4b80
+0051a0b8  MOV dword ptr [ESI],EAX
+0051a0ba  MOV EAX,ESI
+0051a0bc  POP ESI
+0051a0bd  RET 0x4

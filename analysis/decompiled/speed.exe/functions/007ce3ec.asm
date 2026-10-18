@@ -1,0 +1,7 @@
+007ce3ec  TEST EAX,0x80000
+007ce3f1  JZ 0x007ce3f9
+007ce3f3  MOV EAX,0x7
+007ce3f8  RET
+007ce3f9  FADD double ptr [0x008b91d0]
+007ce3ff  MOV EAX,0x1
+007ce404  RET

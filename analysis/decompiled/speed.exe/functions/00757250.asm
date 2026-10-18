@@ -1,0 +1,37 @@
+00757250  MOV EAX,ECX
+00757252  LEA ECX,[EAX + 0x28]
+00757255  MOV dword ptr [ECX],ECX
+00757257  MOV dword ptr [ECX + 0x4],ECX
+0075725a  LEA ECX,[EAX + 0x30]
+0075725d  MOV dword ptr [ECX],ECX
+0075725f  MOV dword ptr [ECX + 0x4],ECX
+00757262  LEA ECX,[EAX + 0x38]
+00757265  MOV dword ptr [ECX],ECX
+00757267  MOV dword ptr [ECX + 0x4],ECX
+0075726a  LEA ECX,[EAX + 0x40]
+0075726d  MOV dword ptr [ECX],ECX
+0075726f  MOV dword ptr [ECX + 0x4],ECX
+00757272  LEA ECX,[EAX + 0x48]
+00757275  MOV dword ptr [ECX],ECX
+00757277  MOV dword ptr [ECX + 0x4],ECX
+0075727a  LEA ECX,[EAX + 0x50]
+0075727d  MOV dword ptr [ECX],ECX
+0075727f  MOV dword ptr [ECX + 0x4],ECX
+00757282  LEA ECX,[EAX + 0x58]
+00757285  MOV dword ptr [ECX],ECX
+00757287  MOV dword ptr [ECX + 0x4],ECX
+0075728a  XOR ECX,ECX
+0075728c  MOV dword ptr [EAX + 0x14],ECX
+0075728f  MOV dword ptr [EAX + 0x8],ECX
+00757292  MOV dword ptr [EAX + 0xc],ECX
+00757295  MOV dword ptr [EAX + 0x10],ECX
+00757298  MOV dword ptr [EAX + 0x18],ECX
+0075729b  MOV dword ptr [EAX + 0x1c],ECX
+0075729e  MOV dword ptr [EAX + 0x20],ECX
+007572a1  MOV dword ptr [EAX + 0x24],ECX
+007572a4  MOV dword ptr [EAX],ECX
+007572a6  MOV dword ptr [EAX + 0x60],ECX
+007572a9  MOV dword ptr [EAX + 0x64],ECX
+007572ac  MOV dword ptr [EAX + 0x68],ECX
+007572af  MOV dword ptr [EAX + 0xac],ECX
+007572b5  RET

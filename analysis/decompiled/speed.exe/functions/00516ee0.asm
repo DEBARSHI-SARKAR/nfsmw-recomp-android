@@ -1,0 +1,6 @@
+00516ee0  MOV EAX,[0x0091cae4]
+00516ee5  MOV ECX,dword ptr [ESP + 0x4]
+00516ee9  MOV dword ptr [EAX*0x4 + 0x91cae8],ECX
+00516ef0  INC EAX
+00516ef1  MOV [0x0091cae4],EAX
+00516ef6  RET

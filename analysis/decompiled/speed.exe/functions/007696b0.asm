@@ -1,0 +1,4 @@
+007696b0  FLD float ptr [ESP + 0x4]
+007696b4  MOV EAX,[0x009b392c]
+007696b9  FSTP float ptr [EAX + 0x8]
+007696bc  RET

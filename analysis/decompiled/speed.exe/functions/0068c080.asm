@@ -1,0 +1,75 @@
+0068c080  SUB ESP,0x64
+0068c083  PUSH ESI
+0068c084  MOV ESI,ECX
+0068c086  MOV EAX,dword ptr [ESI + 0x10]
+0068c089  TEST EAX,EAX
+0068c08b  JZ 0x0068c15c
+0068c091  MOV AL,byte ptr [ESI + 0x1c]
+0068c094  TEST AL,AL
+0068c096  JZ 0x0068c15c
+0068c09c  MOV EAX,dword ptr [ESI + 0xfffffeb4]
+0068c0a2  PUSH EDI
+0068c0a3  LEA ECX,[ESP + 0x20]
+0068c0a7  LEA EDI,[ESI + 0xfffffeb4]
+0068c0ad  PUSH ECX
+0068c0ae  MOV ECX,EDI
+0068c0b0  MOV dword ptr [ESI + 0x38],0x0
+0068c0b7  CALL dword ptr [EAX + 0x34]
+0068c0ba  MOV EDX,dword ptr [EDI]
+0068c0bc  LEA EAX,[ESP + 0x2c]
+0068c0c0  PUSH EAX
+0068c0c1  MOV ECX,EDI
+0068c0c3  CALL dword ptr [EDX + 0x40]
+0068c0c6  FLD float ptr [ESI + 0x20]
+0068c0c9  FLD float ptr [ESI + 0x24]
+0068c0cc  MOV ECX,dword ptr [ESI + 0x28]
+0068c0cf  FXCH
+0068c0d1  MOV dword ptr [ESP + 0x10],ECX
+0068c0d5  FSUB float ptr [ESI + 0x2c]
+0068c0d8  LEA EDX,[ESP + 0x14]
+0068c0dc  PUSH EDX
+0068c0dd  LEA EAX,[ESP + 0x30]
+0068c0e1  FSTP float ptr [ESP + 0xc]
+0068c0e5  PUSH EAX
+0068c0e6  LEA ECX,[ESP + 0x10]
+0068c0ea  FSUB float ptr [ESI + 0x30]
+0068c0ed  PUSH ECX
+0068c0ee  FSTP float ptr [ESP + 0x18]
+0068c0f2  FLD float ptr [ESP + 0x1c]
+0068c0f6  FSUB float ptr [ESI + 0x34]
+0068c0f9  FSTP float ptr [ESP + 0x1c]
+0068c0fd  CALL 0x00401670
+0068c102  MOV EDX,dword ptr [ESP + 0x20]
+0068c106  MOV ECX,dword ptr [ESP + 0x28]
+0068c10a  MOV EAX,dword ptr [ESP + 0x24]
+0068c10e  MOV dword ptr [ESP + 0x14],EDX
+0068c112  MOV EDX,dword ptr [EDI]
+0068c114  MOV dword ptr [ESP + 0x1c],ECX
+0068c118  ADD ESP,0xc
+0068c11b  MOV ECX,EDI
+0068c11d  MOV dword ptr [ESP + 0xc],EAX
+0068c121  CALL dword ptr [EDX + 0x20]
+0068c124  FLD float ptr [ESP + 0x8]
+0068c128  FADD float ptr [EAX]
+0068c12a  MOV ECX,dword ptr [ESI + 0x10]
+0068c12d  LEA EDX,[ESP + 0x20]
+0068c131  PUSH EDX
+0068c132  FSTP float ptr [ESP + 0xc]
+0068c136  LEA EDX,[ESP + 0xc]
+0068c13a  FLD float ptr [ESP + 0x10]
+0068c13e  PUSH EDX
+0068c13f  FADD float ptr [EAX + 0x4]
+0068c142  FSTP float ptr [ESP + 0x14]
+0068c146  FLD float ptr [ESP + 0x18]
+0068c14a  FADD float ptr [EAX + 0x8]
+0068c14d  FSTP float ptr [ESP + 0x18]
+0068c151  MOV EAX,dword ptr [ECX]
+0068c153  CALL dword ptr [EAX + 0x68]
+0068c156  POP EDI
+0068c157  POP ESI
+0068c158  ADD ESP,0x64
+0068c15b  RET
+0068c15c  XOR AL,AL
+0068c15e  POP ESI
+0068c15f  ADD ESP,0x64
+0068c162  RET

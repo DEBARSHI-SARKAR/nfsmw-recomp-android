@@ -1,0 +1,13 @@
+00567510  MOV EAX,dword ptr [ESP + 0xc]
+00567514  MOV ECX,dword ptr [ESP + 0x4]
+00567518  FLD float ptr [ECX]
+0056751a  MOV EDX,dword ptr [ESP + 0x8]
+0056751e  FSUB float ptr [EAX + 0xac]
+00567524  FDIV float ptr [EAX + 0xb4]
+0056752a  FSTP float ptr [EDX]
+0056752c  FLD float ptr [EAX + 0xb0]
+00567532  FSUB float ptr [ECX + 0x4]
+00567535  FDIV float ptr [EAX + 0xb4]
+0056753b  FADD float ptr [0x0089096c]
+00567541  FSTP float ptr [EDX + 0x4]
+00567544  RET

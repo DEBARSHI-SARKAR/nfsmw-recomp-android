@@ -1,0 +1,41 @@
+00579840  SUB ESP,0xc
+00579843  PUSH ESI
+00579844  MOV ESI,dword ptr [ESP + 0x1c]
+00579848  MOV EAX,dword ptr [ESI]
+0057984a  MOV ECX,ESI
+0057984c  CALL dword ptr [EAX + 0x60]
+0057984f  MOV ECX,dword ptr [EAX]
+00579851  MOV EDX,dword ptr [EAX + 0x4]
+00579854  MOV EAX,dword ptr [EAX + 0x8]
+00579857  MOV dword ptr [ESP + 0x4],ECX
+0057985b  FLD float ptr [ESP + 0x4]
+0057985f  MOV dword ptr [ESP + 0xc],EAX
+00579863  FCHS
+00579865  MOV EAX,dword ptr [ESP + 0x14]
+00579869  MOV ECX,dword ptr [ESP + 0xc]
+0057986d  FSTP float ptr [EAX + 0x4]
+00579870  MOV dword ptr [EAX],ECX
+00579872  MOV ECX,dword ptr [ESI + 0x4]
+00579875  PUSH 0x4039c0
+0057987a  MOV dword ptr [ESP + 0xc],EDX
+0057987e  CALL 0x005d59f0
+00579883  TEST EAX,EAX
+00579885  POP ESI
+00579886  JZ 0x005798b7
+00579888  MOV EDX,dword ptr [EAX]
+0057988a  MOV ECX,EAX
+0057988c  CALL dword ptr [EDX + 0x98]
+00579892  MOV ECX,dword ptr [EAX]
+00579894  MOV EDX,dword ptr [EAX + 0x4]
+00579897  MOV EAX,dword ptr [EAX + 0x8]
+0057989a  MOV dword ptr [ESP],ECX
+0057989d  FLD float ptr [ESP]
+005798a0  MOV dword ptr [ESP + 0x8],EAX
+005798a4  FCHS
+005798a6  MOV EAX,dword ptr [ESP + 0x14]
+005798aa  MOV ECX,dword ptr [ESP + 0x8]
+005798ae  FSTP float ptr [EAX + 0x4]
+005798b1  MOV dword ptr [ESP + 0x4],EDX
+005798b5  MOV dword ptr [EAX],ECX
+005798b7  ADD ESP,0xc
+005798ba  RET

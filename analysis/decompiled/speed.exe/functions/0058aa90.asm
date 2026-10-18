@@ -1,0 +1,7 @@
+0058aa90  MOV ECX,dword ptr [ESP + 0x4]
+0058aa94  XOR AL,AL
+0058aa96  TEST CL,0x2
+0058aa99  JZ 0x0058aaa4
+0058aa9b  MOV dword ptr [ESP + 0x4],ECX
+0058aa9f  JMP 0x0058a680
+0058aaa4  RET

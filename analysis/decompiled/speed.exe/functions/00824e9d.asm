@@ -1,0 +1,22 @@
+00824e9d  PUSH EBP
+00824e9e  MOV EBP,ESP
+00824ea0  MOV EAX,dword ptr [EBP + 0xc]
+00824ea3  MOV ECX,dword ptr [EAX]
+00824ea5  MOV EAX,dword ptr [EAX + 0x4]
+00824ea8  SAR ECX,0x8
+00824eab  MOV dword ptr [EBP + 0xc],ECX
+00824eae  FILD dword ptr [EBP + 0xc]
+00824eb1  SAR EAX,0x8
+00824eb4  MOV dword ptr [EBP + 0xc],EAX
+00824eb7  MOV EAX,dword ptr [EBP + 0x8]
+00824eba  FADD ST0,ST0
+00824ebc  ADD EAX,0x1c
+00824ebf  PUSH 0x2
+00824ec1  PUSH EAX
+00824ec2  FIDIV dword ptr [EBP + 0xc]
+00824ec5  FSTP float ptr [EAX + 0x38]
+00824ec8  CALL 0x008264f7
+00824ecd  POP ECX
+00824ece  POP ECX
+00824ecf  POP EBP
+00824ed0  RET

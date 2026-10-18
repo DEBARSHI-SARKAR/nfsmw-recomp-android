@@ -1,0 +1,26 @@
+00737b60  MOV EAX,dword ptr [ECX + 0x318]
+00737b66  SUB ESP,0x10
+00737b69  TEST EAX,EAX
+00737b6b  JZ 0x00737ba9
+00737b6d  MOV EAX,dword ptr [EAX + 0x17b4]
+00737b73  MOV ECX,dword ptr [ESP + 0x14]
+00737b77  INC ECX
+00737b78  SHL ECX,0x4
+00737b7b  ADD ECX,EAX
+00737b7d  MOV EDX,dword ptr [ECX]
+00737b7f  MOV EAX,dword ptr [ECX + 0x4]
+00737b82  MOV dword ptr [ESP],EDX
+00737b85  MOV EDX,dword ptr [ECX + 0x8]
+00737b88  MOV dword ptr [ESP + 0x4],EAX
+00737b8c  MOV EAX,dword ptr [ECX + 0xc]
+00737b8f  MOV ECX,dword ptr [ESP + 0x18]
+00737b93  MOV dword ptr [ESP + 0xc],EAX
+00737b97  FLD float ptr [ESP + 0xc]
+00737b9b  FSTP float ptr [ECX]
+00737b9d  MOV dword ptr [ESP + 0x8],EDX
+00737ba1  MOV AL,0x1
+00737ba3  ADD ESP,0x10
+00737ba6  RET 0x8
+00737ba9  XOR AL,AL
+00737bab  ADD ESP,0x10
+00737bae  RET 0x8

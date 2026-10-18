@@ -1,0 +1,11 @@
+004afa50  PUSH ESI
+004afa51  MOV ESI,ECX
+004afa53  MOV EAX,dword ptr [ESI + 0x34]
+004afa56  TEST EAX,EAX
+004afa58  JZ 0x004afa6b
+004afa5a  MOV EAX,dword ptr [ESP + 0x8]
+004afa5e  PUSH EAX
+004afa5f  CALL 0x004e52a0
+004afa64  MOV byte ptr [ESI + 0x124],0x0
+004afa6b  POP ESI
+004afa6c  RET 0x4

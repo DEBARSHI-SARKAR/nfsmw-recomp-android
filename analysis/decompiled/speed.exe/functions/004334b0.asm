@@ -1,0 +1,6 @@
+004334b0  MOV dword ptr [ECX],0x892560
+004334b6  MOV dword ptr [ECX + 0x8],0x892558
+004334bd  MOV dword ptr [ECX + 0x4c],0x892480
+004334c4  MOV dword ptr [ECX + 0x54],0x892478
+004334cb  MOV dword ptr [ECX + 0x758],0x8923e8
+004334d5  JMP 0x00432240

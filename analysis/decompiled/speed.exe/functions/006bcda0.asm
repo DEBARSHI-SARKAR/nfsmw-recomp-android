@@ -1,0 +1,2 @@
+006bcda0  MOV EAX,[0x00982be4]
+006bcda5  RET

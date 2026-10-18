@@ -1,0 +1,20 @@
+007d897b  PUSH EBP
+007d897c  MOV EBP,ESP
+007d897e  ADD ESP,0xfffffd30
+007d8984  PUSH EBX
+007d8985  PUSH dword ptr [EBP + 0xc]
+007d8988  PUSH dword ptr [EBP + 0x8]
+007d898b  CALL 0x007d8b44
+007d8990  ADD ESP,0x8
+007d8993  PUSH dword ptr [EBP + 0x14]
+007d8996  PUSH dword ptr [EBP + 0x10]
+007d8999  CALL 0x007d8b44
+007d899e  ADD ESP,0x8
+007d89a1  FSTCW word ptr [EBP + 0xffffff5c]
+007d89a8  OR byte ptr [EBP + 0xfffffd38],0x2
+007d89af  MOV byte ptr [EBP + 0xffffff71],0x1
+007d89b6  CALL 0x007ce1f7
+007d89bb  CALL 0x007d89c3
+007d89c0  POP EBX
+007d89c1  LEAVE
+007d89c2  RET

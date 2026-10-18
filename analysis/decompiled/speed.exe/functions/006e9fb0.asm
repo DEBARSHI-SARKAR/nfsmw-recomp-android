@@ -1,0 +1,5 @@
+006e9fb0  MOV EDX,dword ptr [ECX + 0x4c]
+006e9fb3  XOR EAX,EAX
+006e9fb5  TEST EDX,EDX
+006e9fb7  SETZ AL
+006e9fba  RET

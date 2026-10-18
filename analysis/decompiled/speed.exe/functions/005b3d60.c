@@ -1,0 +1,21 @@
+/* speed.exe 005b3d60 FUN_005b3d60; analysis pseudocode, not buildable source.
+ */
+
+void __fastcall FUN_005b3d60(undefined4 *param_1)
+
+{
+  param_1[1] = 0xabadcafe;
+  param_1[2] = 0xabadcafe;
+  *param_1 = &PTR_FUN_008a2cec;
+  param_1[9] = 0;
+  param_1[10] = 0;
+  param_1[0xb] = 0;
+  param_1[0xc] = 0;
+  param_1[3] = 0;
+  param_1[5] = 0;
+  param_1[6] = 0;
+  param_1[7] = 0;
+  param_1[8] = 0;
+  return;
+}
+

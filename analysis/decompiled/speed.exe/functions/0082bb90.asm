@@ -1,0 +1,16 @@
+0082bb90  PUSH ESI
+0082bb91  MOV ESI,ECX
+0082bb93  CALL 0x0082bee0
+0082bb98  PUSH 0x0
+0082bb9a  PUSH 0x64
+0082bb9c  PUSH 0x5
+0082bb9e  PUSH 0x82b9b0
+0082bba3  MOV dword ptr [ESI],0x8c5fd8
+0082bba9  MOV dword ptr [ESI + 0x4],0x862d36
+0082bbb0  MOV dword ptr [ESI + 0x8],0x7c5e60
+0082bbb7  MOV dword ptr [ESI + 0xc],0x0
+0082bbbe  CALL 0x007ec4d2
+0082bbc3  ADD ESP,0x10
+0082bbc6  MOV EAX,ESI
+0082bbc8  POP ESI
+0082bbc9  RET

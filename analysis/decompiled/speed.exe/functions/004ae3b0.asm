@@ -1,0 +1,10 @@
+004ae3b0  MOV EAX,dword ptr [ESP + 0x4]
+004ae3b4  TEST EAX,EAX
+004ae3b6  JZ 0x004ae3ca
+004ae3b8  MOV ECX,dword ptr [ESP + 0x8]
+004ae3bc  PUSH 0x0
+004ae3be  PUSH ECX
+004ae3bf  PUSH EAX
+004ae3c0  MOV ECX,0x925b30
+004ae3c5  CALL 0x005d0370
+004ae3ca  RET

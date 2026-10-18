@@ -1,0 +1,22 @@
+006ca380  MOV EAX,dword ptr [ESP + 0x4]
+006ca384  PUSH ESI
+006ca385  LEA EDX,[EAX + EAX*0x2]
+006ca388  MOV ESI,dword ptr [ECX + EDX*0x4 + 0x4fb8]
+006ca38f  PUSH EDI
+006ca390  MOV EDI,dword ptr [ESP + 0x10]
+006ca394  LEA EDX,[ECX + EDX*0x4]
+006ca397  CMP ESI,EDI
+006ca399  POP EDI
+006ca39a  POP ESI
+006ca39b  JNZ 0x006ca3c1
+006ca39d  LEA EAX,[EAX + EAX*0x2 + 0x13ef]
+006ca3a4  MOV ECX,dword ptr [ECX + EAX*0x4]
+006ca3a7  CMP ECX,dword ptr [ESP + 0xc]
+006ca3ab  JNZ 0x006ca3c1
+006ca3ad  MOV EDX,dword ptr [EDX + 0x4fc0]
+006ca3b3  CMP EDX,dword ptr [ESP + 0x10]
+006ca3b7  JNZ 0x006ca3c1
+006ca3b9  MOV EAX,0x1
+006ca3be  RET 0x10
+006ca3c1  XOR EAX,EAX
+006ca3c3  RET 0x10

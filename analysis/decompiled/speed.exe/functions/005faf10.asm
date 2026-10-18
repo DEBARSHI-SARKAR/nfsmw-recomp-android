@@ -1,0 +1,34 @@
+005faf10  PUSH ESI
+005faf11  MOV ESI,ECX
+005faf13  MOV EAX,dword ptr [ESI + 0xc]
+005faf16  TEST EAX,EAX
+005faf18  JZ 0x005faf2b
+005faf1a  CMP dword ptr [EAX],0x0
+005faf1d  JNZ 0x005faf2b
+005faf1f  MOV ECX,dword ptr [0x0091e00c]
+005faf25  PUSH EAX
+005faf26  CALL 0x005fa780
+005faf2b  MOV EAX,dword ptr [ESI + 0x10]
+005faf2e  TEST EAX,EAX
+005faf30  JZ 0x005faf43
+005faf32  CMP dword ptr [EAX],0x0
+005faf35  JNZ 0x005faf43
+005faf37  MOV ECX,dword ptr [0x0091e00c]
+005faf3d  PUSH EAX
+005faf3e  CALL 0x005fa780
+005faf43  MOV ECX,dword ptr [ESI + 0x8]
+005faf46  PUSH 0x0
+005faf48  PUSH 0xb0a24adc
+005faf4d  CALL 0x00454810
+005faf52  TEST EAX,EAX
+005faf54  POP ESI
+005faf55  JNZ 0x005faf61
+005faf57  PUSH 0x4
+005faf59  CALL 0x006269b0
+005faf5e  ADD ESP,0x4
+005faf61  MOV EDX,dword ptr [EAX]
+005faf63  XOR ECX,ECX
+005faf65  TEST EDX,EDX
+005faf67  SETNZ CL
+005faf6a  MOV AL,CL
+005faf6c  RET

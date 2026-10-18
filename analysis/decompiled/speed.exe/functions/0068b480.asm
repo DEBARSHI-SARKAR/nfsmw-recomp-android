@@ -1,0 +1,6 @@
+0068b480  MOV dword ptr [ECX + 0x8],0x8ab070
+0068b487  MOV dword ptr [ECX],0x890970
+0068b48d  PUSH ECX
+0068b48e  MOV ECX,dword ptr [ECX + 0x4]
+0068b491  CALL 0x005d5a50
+0068b496  RET

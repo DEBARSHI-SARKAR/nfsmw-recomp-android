@@ -1,0 +1,3 @@
+00575b30  MOV AL,byte ptr [ESP + 0x4]
+00575b34  MOV [0x0091d3d1],AL
+00575b39  RET

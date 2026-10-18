@@ -1,0 +1,12 @@
+/* speed.exe 0071dbe0 FUN_0071dbe0; analysis pseudocode, not buildable source.
+ * calls 00713b20 FUN_00713b20
+ */
+
+void __fastcall FUN_0071dbe0(undefined4 param_1)
+
+{
+  FUN_00713b20(1,&stack0xffffffff,&PTR_s_ExtraCops_SwarmingReplyFollow_00901f7c,&DAT_0099243c,0,
+               param_1);
+  return;
+}
+

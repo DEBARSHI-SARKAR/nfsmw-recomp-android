@@ -1,0 +1,29 @@
+00650ec0  MOV EDX,dword ptr [ESP + 0x4]
+00650ec4  FLD float ptr [EDX]
+00650ec6  FSUB float ptr [ECX]
+00650ec8  FABS
+00650eca  FADD float ptr [EDX + 0x10]
+00650ecd  FCOMP float ptr [ECX + 0x10]
+00650ed0  FNSTSW AX
+00650ed2  TEST AH,0x1
+00650ed5  JZ 0x00650f09
+00650ed7  FLD float ptr [EDX + 0x4]
+00650eda  FSUB float ptr [ECX + 0x4]
+00650edd  FABS
+00650edf  FADD float ptr [EDX + 0x14]
+00650ee2  FCOMP float ptr [ECX + 0x14]
+00650ee5  FNSTSW AX
+00650ee7  TEST AH,0x1
+00650eea  JZ 0x00650f09
+00650eec  FLD float ptr [EDX + 0x8]
+00650eef  FSUB float ptr [ECX + 0x8]
+00650ef2  FABS
+00650ef4  FADD float ptr [EDX + 0x18]
+00650ef7  FCOMP float ptr [ECX + 0x18]
+00650efa  FNSTSW AX
+00650efc  TEST AH,0x1
+00650eff  JZ 0x00650f09
+00650f01  MOV EAX,0x1
+00650f06  RET 0x4
+00650f09  XOR EAX,EAX
+00650f0b  RET 0x4

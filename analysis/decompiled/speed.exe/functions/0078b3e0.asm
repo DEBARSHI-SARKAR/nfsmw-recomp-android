@@ -1,0 +1,2 @@
+0078b3e0  LEA EAX,[ECX + 0x4]
+0078b3e3  RET

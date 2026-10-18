@@ -1,0 +1,11 @@
+006e9c40  PUSH ESI
+006e9c41  MOV ESI,ECX
+006e9c43  MOV ECX,dword ptr [ESI + 0x44]
+006e9c46  TEST ECX,ECX
+006e9c48  JZ 0x006e9c57
+006e9c4a  MOV EAX,dword ptr [ECX]
+006e9c4c  PUSH 0x1
+006e9c4e  CALL dword ptr [EAX]
+006e9c50  MOV dword ptr [ESI + 0x44],0x0
+006e9c57  POP ESI
+006e9c58  RET

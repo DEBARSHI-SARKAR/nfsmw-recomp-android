@@ -1,0 +1,17 @@
+005dc9d0  PUSH EBX
+005dc9d1  PUSH ESI
+005dc9d2  MOV ESI,ECX
+005dc9d4  MOV EAX,dword ptr [ESI + 0x2c]
+005dc9d7  XOR EBX,EBX
+005dc9d9  CMP EAX,EBX
+005dc9db  JZ 0x005dc9ea
+005dc9dd  CMP byte ptr [EAX + 0x1d],BL
+005dc9e0  JZ 0x005dc9ea
+005dc9e2  PUSH EAX
+005dc9e3  MOV ECX,ESI
+005dc9e5  CALL 0x005dc970
+005dc9ea  MOV dword ptr [ESI + 0x2c],EBX
+005dc9ed  MOV dword ptr [ESI + 0x30],EBX
+005dc9f0  POP ESI
+005dc9f1  POP EBX
+005dc9f2  RET

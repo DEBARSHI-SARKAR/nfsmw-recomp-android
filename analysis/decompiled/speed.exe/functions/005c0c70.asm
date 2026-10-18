@@ -1,0 +1,43 @@
+005c0c70  PUSH -0x1
+005c0c72  PUSH 0x87448b
+005c0c77  MOV EAX,FS:[0x0]
+005c0c7d  PUSH EAX
+005c0c7e  MOV dword ptr FS:[0x0],ESP
+005c0c85  PUSH ECX
+005c0c86  PUSH EBX
+005c0c87  PUSH ESI
+005c0c88  MOV ESI,ECX
+005c0c8a  MOV dword ptr [ESP + 0x8],ESI
+005c0c8e  MOV EAX,dword ptr [ESI + 0x24]
+005c0c91  XOR EBX,EBX
+005c0c93  CMP EAX,EBX
+005c0c95  MOV dword ptr [ESP + 0x14],EBX
+005c0c99  JZ 0x005c0cba
+005c0c9b  MOV ECX,dword ptr [EAX + -0x4]
+005c0c9e  PUSH EDI
+005c0c9f  LEA EDI,[EAX + -0x4]
+005c0ca2  PUSH 0x5ba980
+005c0ca7  PUSH ECX
+005c0ca8  PUSH 0x1c
+005c0caa  PUSH EAX
+005c0cab  CALL 0x007c8f50
+005c0cb0  PUSH EDI
+005c0cb1  CALL 0x00652b10
+005c0cb6  ADD ESP,0x4
+005c0cb9  POP EDI
+005c0cba  LEA ECX,[ESI + 0x4]
+005c0cbd  MOV dword ptr [ESI + 0x24],EBX
+005c0cc0  MOV dword ptr [ESI],EBX
+005c0cc2  MOV byte ptr [ESI + 0x14],0x1
+005c0cc6  MOV dword ptr [ESI + 0x1c],EBX
+005c0cc9  MOV dword ptr [ESI + 0x18],EBX
+005c0ccc  MOV byte ptr [ESI + 0x20],BL
+005c0ccf  MOV dword ptr [ESP + 0x14],0xffffffff
+005c0cd7  MOV dword ptr [ECX],0x8a2c18
+005c0cdd  CALL 0x005b3b20
+005c0ce2  MOV ECX,dword ptr [ESP + 0xc]
+005c0ce6  POP ESI
+005c0ce7  POP EBX
+005c0ce8  MOV dword ptr FS:[0x0],ECX
+005c0cef  ADD ESP,0x10
+005c0cf2  RET

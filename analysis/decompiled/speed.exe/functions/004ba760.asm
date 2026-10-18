@@ -1,0 +1,7 @@
+004ba760  MOV EAX,dword ptr [ESP + 0x8]
+004ba764  MOV EDX,dword ptr [ESP + 0x4]
+004ba768  PUSH EAX
+004ba769  LEA ECX,[ECX + EDX*0x8 + 0x4]
+004ba76d  CALL 0x0045d380
+004ba772  MOV EAX,dword ptr [EAX + 0x8]
+004ba775  RET 0x8

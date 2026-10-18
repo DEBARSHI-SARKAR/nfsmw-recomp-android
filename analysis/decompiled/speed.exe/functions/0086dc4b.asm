@@ -1,0 +1,2 @@
+0086dc4b  LEA ECX,[EBP + -0x48]
+0086dc4e  JMP 0x004f4540

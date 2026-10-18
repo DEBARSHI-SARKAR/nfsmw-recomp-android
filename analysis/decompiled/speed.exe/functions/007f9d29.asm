@@ -1,0 +1,4 @@
+007f9d29  PUSH EBP
+007f9d2a  MOV EBP,ESP
+007f9d2c  POP EBP
+007f9d2d  JMP dword ptr [0x00909e58]

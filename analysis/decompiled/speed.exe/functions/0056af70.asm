@@ -1,0 +1,20 @@
+0056af70  PUSH ESI
+0056af71  MOV ESI,ECX
+0056af73  MOV AL,byte ptr [ESI + 0x38]
+0056af76  TEST AL,AL
+0056af78  JNZ 0x0056afad
+0056af7a  PUSH 0x0
+0056af7c  PUSH 0x0
+0056af7e  MOV byte ptr [ESI + 0x38],0x1
+0056af82  MOV ECX,dword ptr [0x0091cadc]
+0056af88  PUSH 0x9938a38f
+0056af8d  CALL 0x00516c90
+0056af92  CALL 0x00516e10
+0056af97  MOV byte ptr [EAX + 0x1],0x1
+0056af9b  CALL 0x00516e10
+0056afa0  MOV AL,byte ptr [EAX]
+0056afa2  MOV byte ptr [ESI + 0x39],AL
+0056afa5  CALL 0x00516e10
+0056afaa  MOV byte ptr [EAX],0x0
+0056afad  POP ESI
+0056afae  RET

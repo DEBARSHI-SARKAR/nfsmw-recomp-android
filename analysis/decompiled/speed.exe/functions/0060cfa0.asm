@@ -1,0 +1,13 @@
+0060cfa0  MOV ECX,dword ptr [ESP + 0x4]
+0060cfa4  MOV EAX,dword ptr [ESP + 0x8]
+0060cfa8  SUB EAX,ECX
+0060cfaa  SAR EAX,0x2
+0060cfad  SHL EAX,0x2
+0060cfb0  PUSH EAX
+0060cfb1  PUSH ECX
+0060cfb2  MOV ECX,dword ptr [ESP + 0x14]
+0060cfb6  SUB ECX,EAX
+0060cfb8  PUSH ECX
+0060cfb9  CALL 0x007c4840
+0060cfbe  ADD ESP,0xc
+0060cfc1  RET

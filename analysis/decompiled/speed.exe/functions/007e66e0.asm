@@ -1,0 +1,67 @@
+007e66e0  PUSH EBP
+007e66e1  MOV EBP,ESP
+007e66e3  SUB ESP,0x14
+007e66e6  CALL 0x007cd100
+007e66eb  MOV EAX,dword ptr [EAX + 0x64]
+007e66ee  MOV dword ptr [EBP + -0x4],EAX
+007e66f1  MOV ECX,dword ptr [EBP + -0x4]
+007e66f4  CMP ECX,dword ptr [0x00906b3c]
+007e66fa  JZ 0x007e6704
+007e66fc  CALL 0x007d2f80
+007e6701  MOV dword ptr [EBP + -0x4],EAX
+007e6704  CMP dword ptr [EBP + 0x10],0x0
+007e6708  JZ 0x007e6798
+007e670e  MOV EDX,dword ptr [EBP + -0x4]
+007e6711  CMP dword ptr [EDX + 0x14],0x0
+007e6715  JNZ 0x007e672d
+007e6717  MOV EAX,dword ptr [EBP + 0x10]
+007e671a  PUSH EAX
+007e671b  MOV ECX,dword ptr [EBP + 0xc]
+007e671e  PUSH ECX
+007e671f  MOV EDX,dword ptr [EBP + 0x8]
+007e6722  PUSH EDX
+007e6723  CALL 0x007e7460
+007e6728  ADD ESP,0xc
+007e672b  JMP 0x007e679a
+007e672d  MOV EAX,dword ptr [EBP + 0x8]
+007e6730  MOVZX ECX,byte ptr [EAX]
+007e6733  MOV dword ptr [EBP + -0x10],ECX
+007e6736  MOV EDX,dword ptr [EBP + -0x10]
+007e6739  PUSH EDX
+007e673a  MOV EAX,dword ptr [EBP + -0x4]
+007e673d  PUSH EAX
+007e673e  CALL 0x007c5fc0
+007e6743  ADD ESP,0x8
+007e6746  MOV dword ptr [EBP + -0x8],EAX
+007e6749  MOV ECX,dword ptr [EBP + 0x8]
+007e674c  ADD ECX,0x1
+007e674f  MOV dword ptr [EBP + 0x8],ECX
+007e6752  MOV EDX,dword ptr [EBP + 0xc]
+007e6755  MOVZX EAX,byte ptr [EDX]
+007e6758  MOV dword ptr [EBP + -0x14],EAX
+007e675b  MOV ECX,dword ptr [EBP + -0x14]
+007e675e  PUSH ECX
+007e675f  MOV EDX,dword ptr [EBP + -0x4]
+007e6762  PUSH EDX
+007e6763  CALL 0x007c5fc0
+007e6768  ADD ESP,0x8
+007e676b  MOV dword ptr [EBP + -0xc],EAX
+007e676e  MOV EAX,dword ptr [EBP + 0xc]
+007e6771  ADD EAX,0x1
+007e6774  MOV dword ptr [EBP + 0xc],EAX
+007e6777  MOV ECX,dword ptr [EBP + 0x10]
+007e677a  SUB ECX,0x1
+007e677d  MOV dword ptr [EBP + 0x10],ECX
+007e6780  JZ 0x007e6790
+007e6782  CMP dword ptr [EBP + -0x8],0x0
+007e6786  JZ 0x007e6790
+007e6788  MOV EDX,dword ptr [EBP + -0x8]
+007e678b  CMP EDX,dword ptr [EBP + -0xc]
+007e678e  JZ 0x007e672d
+007e6790  MOV EAX,dword ptr [EBP + -0x8]
+007e6793  SUB EAX,dword ptr [EBP + -0xc]
+007e6796  JMP 0x007e679a
+007e6798  XOR EAX,EAX
+007e679a  MOV ESP,EBP
+007e679c  POP EBP
+007e679d  RET

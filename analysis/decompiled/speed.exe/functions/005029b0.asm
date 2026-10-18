@@ -1,0 +1,17 @@
+005029b0  MOV EAX,dword ptr [ESP + 0x4]
+005029b4  TEST EAX,EAX
+005029b6  JZ 0x005029ce
+005029b8  MOV ECX,dword ptr [EAX + 0x4]
+005029bb  ADD EAX,0x4
+005029be  MOV EAX,dword ptr [EAX + 0x4]
+005029c1  MOV dword ptr [EAX],ECX
+005029c3  MOV dword ptr [ECX + 0x4],EAX
+005029c6  CALL 0x006cfa10
+005029cb  RET 0x4
+005029ce  XOR EAX,EAX
+005029d0  MOV ECX,dword ptr [EAX]
+005029d2  MOV EAX,dword ptr [EAX + 0x4]
+005029d5  MOV dword ptr [EAX],ECX
+005029d7  MOV dword ptr [ECX + 0x4],EAX
+005029da  CALL 0x006cfa10
+005029df  RET 0x4

@@ -1,0 +1,10 @@
+00627320  INC dword ptr [ECX + 0xc]
+00627323  MOV EAX,dword ptr [ECX + 0x8]
+00627326  IMUL EAX,dword ptr [ECX]
+00627329  MOV dword ptr [ECX + 0x4],EAX
+0062732c  AND EAX,0xffff
+00627331  MOV dword ptr [ECX],EAX
+00627333  MOV EAX,dword ptr [ECX + 0x4]
+00627336  SHR EAX,0x8
+00627339  AND EAX,0xffff
+0062733e  RET

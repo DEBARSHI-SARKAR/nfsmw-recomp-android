@@ -1,0 +1,9 @@
+0057e8a0  MOV EAX,dword ptr [ESP + 0xc]
+0057e8a4  MOV ECX,dword ptr [ESP + 0x8]
+0057e8a8  MOV EDX,dword ptr [ESP + 0x4]
+0057e8ac  PUSH EAX
+0057e8ad  PUSH ECX
+0057e8ae  MOV ECX,dword ptr [0x0091cf84]
+0057e8b4  PUSH EDX
+0057e8b5  CALL 0x0056be80
+0057e8ba  RET

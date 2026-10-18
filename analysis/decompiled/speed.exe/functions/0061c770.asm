@@ -1,0 +1,16 @@
+0061c770  PUSH ESI
+0061c771  MOV ESI,ECX
+0061c773  MOV EAX,dword ptr [ESI + 0x4]
+0061c776  MOV ECX,dword ptr [EAX + 0x4]
+0061c779  PUSH ECX
+0061c77a  MOV ECX,ESI
+0061c77c  CALL 0x00619cb0
+0061c781  MOV EAX,dword ptr [ESI + 0x4]
+0061c784  MOV dword ptr [EAX + 0x4],EAX
+0061c787  MOV EAX,dword ptr [ESI + 0x4]
+0061c78a  MOV dword ptr [ESI + 0x8],0x0
+0061c791  MOV dword ptr [EAX],EAX
+0061c793  MOV ESI,dword ptr [ESI + 0x4]
+0061c796  MOV dword ptr [ESI + 0x8],ESI
+0061c799  POP ESI
+0061c79a  RET

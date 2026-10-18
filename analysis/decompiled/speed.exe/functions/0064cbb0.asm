@@ -1,0 +1,7 @@
+0064cbb0  MOV EAX,dword ptr [ESP + 0x4]
+0064cbb4  MOV ECX,dword ptr [0x00925900]
+0064cbba  PUSH EAX
+0064cbbb  PUSH ECX
+0064cbbc  CALL 0x00463ca0
+0064cbc1  ADD ESP,0x8
+0064cbc4  RET

@@ -1,0 +1,13 @@
+0085ac40  MOV EAX,dword ptr [ESP + 0x4]
+0085ac44  CMP dword ptr [EAX],0x0
+0085ac47  JZ 0x0085ac5d
+0085ac49  MOV ECX,dword ptr [EAX + 0x4]
+0085ac4c  TEST ECX,ECX
+0085ac4e  MOV EAX,dword ptr [ESP + 0x8]
+0085ac52  JZ 0x0085ac61
+0085ac54  CMP EAX,0x8
+0085ac57  JL 0x0085ac61
+0085ac59  SUB EAX,0x8
+0085ac5c  RET
+0085ac5d  MOV EAX,dword ptr [ESP + 0x8]
+0085ac61  RET

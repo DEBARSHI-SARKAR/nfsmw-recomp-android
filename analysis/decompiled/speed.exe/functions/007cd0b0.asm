@@ -1,0 +1,11 @@
+007cd0b0  PUSH EBP
+007cd0b1  MOV EBP,ESP
+007cd0b3  CMP dword ptr [0x0090682c],-0x1
+007cd0ba  JZ 0x007cd0d2
+007cd0bc  MOV EAX,[0x0090682c]
+007cd0c1  PUSH EAX
+007cd0c2  CALL dword ptr [0x009bac10]
+007cd0c8  MOV dword ptr [0x0090682c],0xffffffff
+007cd0d2  CALL 0x007d0df0
+007cd0d7  POP EBP
+007cd0d8  RET

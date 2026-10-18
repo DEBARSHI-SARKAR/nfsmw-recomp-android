@@ -1,0 +1,9 @@
+007f4c98  PUSH EBP
+007f4c99  MOV EBP,ESP
+007f4c9b  PUSH dword ptr [EBP + 0xc]
+007f4c9e  PUSH dword ptr [EBP + 0x8]
+007f4ca1  CALL 0x007f73e1
+007f4ca6  POP ECX
+007f4ca7  POP ECX
+007f4ca8  POP EBP
+007f4ca9  RET 0x8

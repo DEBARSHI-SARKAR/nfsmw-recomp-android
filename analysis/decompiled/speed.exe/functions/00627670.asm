@@ -1,0 +1,15 @@
+00627670  XOR EDX,EDX
+00627672  MOV dword ptr [ECX + 0x30],EDX
+00627675  MOV dword ptr [ECX + 0x34],EDX
+00627678  MOV dword ptr [ECX + 0x38],EDX
+0062767b  MOV dword ptr [ECX + 0x3c],EDX
+0062767e  MOV EAX,dword ptr [ECX + 0x24]
+00627681  MOV dword ptr [ECX + 0x28],EAX
+00627684  MOV EAX,dword ptr [ECX + 0xc]
+00627687  CMP EAX,EDX
+00627689  JZ 0x00627692
+0062768b  MOV EDX,dword ptr [EAX + 0xc]
+0062768e  MOV dword ptr [ECX + 0x2c],EDX
+00627691  RET
+00627692  MOV dword ptr [ECX + 0x2c],0x0
+00627699  RET

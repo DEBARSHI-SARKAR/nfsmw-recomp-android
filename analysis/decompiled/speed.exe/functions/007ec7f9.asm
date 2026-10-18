@@ -1,0 +1,12 @@
+007ec7f9  PUSH EBP
+007ec7fa  MOV EBP,ESP
+007ec7fc  PUSH ECX
+007ec7fd  PUSH ECX
+007ec7fe  AND dword ptr [EBP + -0x8],0x0
+007ec802  LEA EAX,[EBP + -0x8]
+007ec805  PUSH EAX
+007ec806  CALL dword ptr [0x0089017c]
+007ec80c  MOV EAX,dword ptr [EBP + -0x8]
+007ec80f  MOV EDX,dword ptr [EBP + -0x4]
+007ec812  LEAVE
+007ec813  RET

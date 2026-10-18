@@ -1,0 +1,3 @@
+00821a8a  PUSH dword ptr [0x009c230c]
+00821a90  CALL dword ptr [0x00890154]
+00821a96  RET

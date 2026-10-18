@@ -1,0 +1,8 @@
+006253f0  MOV AL,byte ptr [ECX + 0xc]
+006253f3  MOV EDX,dword ptr [ECX + 0x8]
+006253f6  NEG AL
+006253f8  SBB EAX,EAX
+006253fa  AND EAX,0x7fff
+006253ff  MOV dword ptr [EDX*0x4 + 0x911ee4],EAX
+00625406  MOV dword ptr [ECX],0x8a66f8
+0062540c  RET

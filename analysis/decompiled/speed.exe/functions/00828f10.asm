@@ -1,0 +1,33 @@
+00828f10  PUSH EBP
+00828f11  MOV EBP,ESP
+00828f13  PUSHAD
+00828f14  MOV ECX,dword ptr [EBP + 0x8]
+00828f17  MOV ESI,dword ptr [EBP + 0xc]
+00828f1a  MOV EDI,dword ptr [EBP + 0x10]
+00828f1d  XOR EAX,EAX
+00828f1f  XOR EDX,EDX
+00828f21  TEST ECX,0x3
+00828f27  JZ 0x00828f3f
+00828f29  MOV AL,byte ptr [ECX + ESI*0x1 + -0x1]
+00828f2d  MOV EBX,dword ptr [EAX*0x4 + 0x9c2550]
+00828f34  MOV dword ptr [EDI + ECX*0x4 + -0x4],EBX
+00828f38  SUB ECX,0x1
+00828f3b  JZ 0x00828f80
+00828f3d  JMP 0x00828f21
+00828f3f  MOV AL,byte ptr [ECX + ESI*0x1 + -0x4]
+00828f43  MOV DL,byte ptr [ECX + ESI*0x1 + -0x3]
+00828f47  MOV EBX,dword ptr [EAX*0x4 + 0x9c2550]
+00828f4e  MOV EBP,dword ptr [EDX*0x4 + 0x9c2550]
+00828f55  MOV AL,byte ptr [ECX + ESI*0x1 + -0x2]
+00828f59  MOV DL,byte ptr [ECX + ESI*0x1 + -0x1]
+00828f5d  MOV dword ptr [EDI + ECX*0x4 + -0x10],EBX
+00828f61  MOV dword ptr [EDI + ECX*0x4 + -0xc],EBP
+00828f65  MOV EBX,dword ptr [EAX*0x4 + 0x9c2550]
+00828f6c  MOV EBP,dword ptr [EDX*0x4 + 0x9c2550]
+00828f73  MOV dword ptr [EDI + ECX*0x4 + -0x8],EBX
+00828f77  MOV dword ptr [EDI + ECX*0x4 + -0x4],EBP
+00828f7b  SUB ECX,0x4
+00828f7e  JG 0x00828f3f
+00828f80  POPAD
+00828f81  LEAVE
+00828f82  RET

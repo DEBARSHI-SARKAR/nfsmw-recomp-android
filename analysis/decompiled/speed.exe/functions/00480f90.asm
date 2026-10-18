@@ -1,0 +1,31 @@
+00480f90  PUSH ESI
+00480f91  MOV ESI,dword ptr [0x00911050]
+00480f97  MOV ECX,dword ptr [ESI + 0x4]
+00480f9a  MOV EAX,dword ptr [ECX]
+00480f9c  CMP EAX,ECX
+00480f9e  JZ 0x00480faf
+00480fa0  MOV EDX,dword ptr [ESP + 0x8]
+00480fa4  CMP dword ptr [EAX + 0x8],EDX
+00480fa7  JZ 0x00480faf
+00480fa9  MOV EAX,dword ptr [EAX]
+00480fab  CMP EAX,ECX
+00480fad  JNZ 0x00480fa4
+00480faf  MOV ECX,dword ptr [ESI + 0x4]
+00480fb2  CMP EAX,ECX
+00480fb4  JZ 0x00480fdb
+00480fb6  CMP EAX,ECX
+00480fb8  JZ 0x00480fdb
+00480fba  MOV ECX,dword ptr [EAX + 0x4]
+00480fbd  MOV EDX,dword ptr [EAX]
+00480fbf  MOV dword ptr [ECX],EDX
+00480fc1  MOV ECX,dword ptr [EAX]
+00480fc3  MOV EDX,dword ptr [EAX + 0x4]
+00480fc6  PUSH 0x0
+00480fc8  PUSH 0xc
+00480fca  MOV dword ptr [ECX + 0x4],EDX
+00480fcd  PUSH EAX
+00480fce  MOV ECX,0x925b30
+00480fd3  CALL 0x005d0370
+00480fd8  DEC dword ptr [ESI + 0x8]
+00480fdb  POP ESI
+00480fdc  RET

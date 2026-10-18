@@ -1,0 +1,28 @@
+007299e0  PUSH EDI
+007299e1  MOV EDI,dword ptr [ESP + 0x8]
+007299e5  MOV EAX,dword ptr [ECX + EDI*0x4 + 0x60]
+007299e9  TEST EAX,EAX
+007299eb  JNZ 0x00729a28
+007299ed  MOV EDX,dword ptr [ECX + 0x2c20]
+007299f3  MOV EAX,dword ptr [ECX + 0x6424]
+007299f9  INC EDX
+007299fa  MOV dword ptr [ECX + 0x2c20],EDX
+00729a00  MOV EDX,dword ptr [EAX]
+00729a02  PUSH ESI
+00729a03  MOV ESI,dword ptr [EAX + 0x4]
+00729a06  MOV dword ptr [ESI],EDX
+00729a08  MOV dword ptr [EDX + 0x4],ESI
+00729a0b  XOR EDX,EDX
+00729a0d  MOV ESI,EAX
+00729a0f  MOV dword ptr [ESI],EDX
+00729a11  MOV dword ptr [ESI + 0x4],EDX
+00729a14  MOV dword ptr [ESI + 0x8],EDX
+00729a17  MOV dword ptr [ESI + 0xc],EDX
+00729a1a  MOV dword ptr [ESI + 0x10],EDX
+00729a1d  MOV dword ptr [ESI + 0x14],EDX
+00729a20  MOV dword ptr [ESI + 0x18],EDX
+00729a23  MOV dword ptr [ECX + EDI*0x4 + 0x60],EAX
+00729a27  POP ESI
+00729a28  INC dword ptr [EAX]
+00729a2a  POP EDI
+00729a2b  RET 0x4

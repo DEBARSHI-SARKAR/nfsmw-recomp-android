@@ -1,0 +1,18 @@
+0082e820  PUSH EBP
+0082e821  MOV EBP,ESP
+0082e823  MOV EAX,dword ptr [EBP + 0x8]
+0082e826  MOVZX ECX,byte ptr [EAX + 0xf]
+0082e82a  LEA ECX,[ECX + ECX*0x2]
+0082e82d  LEA EDX,[EAX + ECX*0x4 + 0x14]
+0082e831  MOV ECX,dword ptr [EBP + 0xc]
+0082e834  PUSH ESI
+0082e835  MOV ESI,dword ptr [ECX]
+0082e837  MOV dword ptr [EDX],ESI
+0082e839  MOV ESI,dword ptr [ECX + 0x4]
+0082e83c  MOV dword ptr [EDX + 0x4],ESI
+0082e83f  MOV ECX,dword ptr [ECX + 0x8]
+0082e842  MOV dword ptr [EDX + 0x8],ECX
+0082e845  INC byte ptr [EAX + 0xf]
+0082e848  POP ESI
+0082e849  POP EBP
+0082e84a  RET

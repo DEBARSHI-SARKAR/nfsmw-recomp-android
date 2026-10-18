@@ -1,0 +1,24 @@
+00768980  MOV EAX,dword ptr [ESP + 0x8]
+00768984  FLD float ptr [ESP + 0x4]
+00768988  FMUL float ptr [EAX + 0xc]
+0076898b  FADD float ptr [EAX + 0x8]
+0076898e  FMUL float ptr [ESP + 0x4]
+00768992  FADD float ptr [EAX + 0x4]
+00768995  FMUL float ptr [ESP + 0x4]
+00768999  FADD float ptr [EAX]
+0076899b  FST float ptr [ESP + 0x4]
+0076899f  FCOMP float ptr [0x0089096c]
+007689a5  FNSTSW AX
+007689a7  TEST AH,0x5
+007689aa  JP 0x007689ca
+007689ac  FLD float ptr [ESP + 0x4]
+007689b0  FLD float ptr [0x00890968]
+007689b6  FCOMP float ptr [ESP + 0x4]
+007689ba  FNSTSW AX
+007689bc  TEST AH,0x41
+007689bf  JNZ 0x007689c9
+007689c1  FSTP ST0
+007689c3  FLD float ptr [0x00890968]
+007689c9  RET
+007689ca  FLD float ptr [0x0089096c]
+007689d0  RET

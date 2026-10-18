@@ -1,0 +1,72 @@
+0073e3e0  MOV EDX,dword ptr [ECX + 0x1c8]
+0073e3e6  MOV EAX,dword ptr [EDX]
+0073e3e8  MOV EAX,dword ptr [EAX + 0x8]
+0073e3eb  FLD float ptr [EAX + 0x44]
+0073e3ee  PUSH EBX
+0073e3ef  FLD float ptr [0x00890968]
+0073e3f5  MOV BL,0x1
+0073e3f7  FLD ST1
+0073e3f9  FUCOMPP
+0073e3fb  FNSTSW AX
+0073e3fd  TEST AH,0x44
+0073e400  JP 0x0073e41d
+0073e402  MOV EAX,dword ptr [EDX]
+0073e404  FSTP ST0
+0073e406  MOV EAX,dword ptr [EAX + 0x8]
+0073e409  FLD float ptr [EAX + 0x44]
+0073e40c  FLD float ptr [0x00890968]
+0073e412  FLD ST1
+0073e414  FUCOMPP
+0073e416  FNSTSW AX
+0073e418  TEST AH,0x44
+0073e41b  JNP 0x0073e43b
+0073e41d  FILD dword ptr [0x00925ae8]
+0073e423  MOV byte ptr [EDX + 0xc],BL
+0073e426  MOV byte ptr [EDX + 0xd],BL
+0073e429  MOV byte ptr [EDX + 0xe],0x0
+0073e42d  FMUL float ptr [0x00890984]
+0073e433  FSTP float ptr [EDX + 0x4]
+0073e436  FSTP float ptr [EDX + 0x8]
+0073e439  JMP 0x0073e43d
+0073e43b  FSTP ST0
+0073e43d  MOV EDX,dword ptr [ECX + 0x1c4]
+0073e443  MOV EAX,dword ptr [EDX]
+0073e445  MOV EAX,dword ptr [EAX + 0x8]
+0073e448  FLD float ptr [EAX + 0x44]
+0073e44b  FLD float ptr [0x00890968]
+0073e451  FLD ST1
+0073e453  FUCOMPP
+0073e455  FNSTSW AX
+0073e457  TEST AH,0x44
+0073e45a  JNP 0x0073e47a
+0073e45c  FILD dword ptr [0x00925ae8]
+0073e462  MOV byte ptr [EDX + 0xc],BL
+0073e465  MOV byte ptr [EDX + 0xd],BL
+0073e468  MOV byte ptr [EDX + 0xe],0x0
+0073e46c  FMUL float ptr [0x00890984]
+0073e472  FSTP float ptr [EDX + 0x4]
+0073e475  FSTP float ptr [EDX + 0x8]
+0073e478  JMP 0x0073e47c
+0073e47a  FSTP ST0
+0073e47c  MOV ECX,dword ptr [ECX + 0x1c0]
+0073e482  MOV EDX,dword ptr [ECX]
+0073e484  MOV EAX,dword ptr [EDX + 0x8]
+0073e487  FLD float ptr [EAX + 0x44]
+0073e48a  FLD float ptr [0x00890968]
+0073e490  FLD ST1
+0073e492  FUCOMPP
+0073e494  FNSTSW AX
+0073e496  TEST AH,0x44
+0073e499  JNP 0x0073e4ba
+0073e49b  FILD dword ptr [0x00925b14]
+0073e4a1  MOV byte ptr [ECX + 0xd],BL
+0073e4a4  MOV byte ptr [ECX + 0xc],0x0
+0073e4a8  MOV byte ptr [ECX + 0xe],0x0
+0073e4ac  FMUL float ptr [0x00890984]
+0073e4b2  POP EBX
+0073e4b3  FSTP float ptr [ECX + 0x4]
+0073e4b6  FSTP float ptr [ECX + 0x8]
+0073e4b9  RET
+0073e4ba  FSTP ST0
+0073e4bc  POP EBX
+0073e4bd  RET

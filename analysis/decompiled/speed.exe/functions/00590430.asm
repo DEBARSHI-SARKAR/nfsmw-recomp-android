@@ -1,0 +1,40 @@
+00590430  MOV EAX,FS:[0x0]
+00590436  PUSH -0x1
+00590438  PUSH 0x872818
+0059043d  PUSH EAX
+0059043e  MOV AL,byte ptr [ESP + 0x10]
+00590442  MOV dword ptr FS:[0x0],ESP
+00590449  SUB ESP,0x8
+0059044c  TEST AL,AL
+0059044e  PUSH ESI
+0059044f  JZ 0x0059048b
+00590451  MOV SI,word ptr [ECX + 0x8cb6]
+00590458  ADD SI,word ptr [ECX + 0x8cb4]
+0059045f  ADD SI,word ptr [ECX + 0x8cb2]
+00590466  ADD SI,word ptr [ECX + 0x8cb0]
+0059046d  ADD SI,word ptr [ECX + 0x8cae]
+00590474  ADD SI,word ptr [ECX + 0x8cac]
+0059047b  ADD SI,word ptr [ECX + 0x8caa]
+00590482  ADD SI,word ptr [ECX + 0x8ca8]
+00590489  JMP 0x005904c3
+0059048b  MOV SI,word ptr [ECX + 0x8cc6]
+00590492  ADD SI,word ptr [ECX + 0x8cc4]
+00590499  ADD SI,word ptr [ECX + 0x8cc2]
+005904a0  ADD SI,word ptr [ECX + 0x8cc0]
+005904a7  ADD SI,word ptr [ECX + 0x8cbe]
+005904ae  ADD SI,word ptr [ECX + 0x8cbc]
+005904b5  ADD SI,word ptr [ECX + 0x8cba]
+005904bc  ADD SI,word ptr [ECX + 0x8cb8]
+005904c3  MOV dword ptr [ESP + 0x4],0x8a0720
+005904cb  MOV byte ptr [ESP + 0x8],AL
+005904cf  LEA EAX,[ESP + 0x4]
+005904d3  PUSH EAX
+005904d4  MOV dword ptr [ESP + 0x18],0x0
+005904dc  CALL 0x00580f40
+005904e1  MOVZX ECX,SI
+005904e4  ADD EAX,ECX
+005904e6  MOV ECX,dword ptr [ESP + 0xc]
+005904ea  POP ESI
+005904eb  MOV dword ptr FS:[0x0],ECX
+005904f2  ADD ESP,0x14
+005904f5  RET 0x4

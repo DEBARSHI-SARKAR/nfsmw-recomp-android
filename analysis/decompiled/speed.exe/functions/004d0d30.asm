@@ -1,0 +1,13 @@
+004d0d30  PUSH ESI
+004d0d31  MOV ESI,ECX
+004d0d33  LEA ECX,[ESI + 0xa4]
+004d0d39  CALL 0x004d0c40
+004d0d3e  MOV EAX,dword ptr [ESI + 0xb4]
+004d0d44  MOV dword ptr [ESI + 0xb0],EAX
+004d0d4a  XOR ECX,ECX
+004d0d4c  MOV dword ptr [0x00911ed4],ECX
+004d0d52  MOV dword ptr [0x00911ed8],ECX
+004d0d58  MOV dword ptr [0x00911edc],ECX
+004d0d5e  MOV dword ptr [0x00911ee0],ECX
+004d0d64  POP ESI
+004d0d65  RET 0x4

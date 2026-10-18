@@ -1,0 +1,8 @@
+00700ed0  MOV EAX,dword ptr [ECX + 0x3c]
+00700ed3  CMP EAX,0x5
+00700ed6  JL 0x00700edd
+00700ed8  CMP EAX,0x7
+00700edb  JLE 0x00700ee2
+00700edd  MOV EAX,dword ptr [ECX]
+00700edf  JMP dword ptr [EAX + 0x14]
+00700ee2  RET

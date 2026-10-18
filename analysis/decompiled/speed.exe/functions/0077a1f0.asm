@@ -1,0 +1,16 @@
+0077a1f0  PUSH ESI
+0077a1f1  MOV ESI,ECX
+0077a1f3  MOV EAX,dword ptr [ESI + 0x4]
+0077a1f6  MOV ECX,dword ptr [EAX + 0x4]
+0077a1f9  PUSH ECX
+0077a1fa  MOV ECX,ESI
+0077a1fc  CALL 0x00772240
+0077a201  MOV EAX,dword ptr [ESI + 0x4]
+0077a204  MOV dword ptr [EAX + 0x4],EAX
+0077a207  MOV EAX,dword ptr [ESI + 0x4]
+0077a20a  MOV dword ptr [ESI + 0x8],0x0
+0077a211  MOV dword ptr [EAX],EAX
+0077a213  MOV ESI,dword ptr [ESI + 0x4]
+0077a216  MOV dword ptr [ESI + 0x8],ESI
+0077a219  POP ESI
+0077a21a  RET

@@ -1,0 +1,25 @@
+00679da0  PUSH ESI
+00679da1  MOV ESI,ECX
+00679da3  MOV EAX,dword ptr [ESI + 0xc]
+00679da6  TEST EAX,EAX
+00679da8  JLE 0x00679db7
+00679daa  MOV ECX,EAX
+00679dac  LEA ESP,[ESP]
+00679db0  DEC ECX
+00679db1  DEC EAX
+00679db2  JNZ 0x00679db0
+00679db4  MOV dword ptr [ESI + 0xc],ECX
+00679db7  MOV EAX,dword ptr [ESI + 0x4]
+00679dba  TEST EAX,EAX
+00679dbc  JZ 0x00679ddf
+00679dbe  MOV ECX,dword ptr [ESI + 0x8]
+00679dc1  MOV EDX,dword ptr [ESI]
+00679dc3  PUSH ECX
+00679dc4  PUSH EAX
+00679dc5  MOV ECX,ESI
+00679dc7  CALL dword ptr [EDX + 0x8]
+00679dca  MOV dword ptr [ESI + 0x4],0x0
+00679dd1  MOV dword ptr [ESI + 0x8],0x0
+00679dd8  MOV dword ptr [ESI + 0xc],0x0
+00679ddf  POP ESI
+00679de0  RET

@@ -1,0 +1,29 @@
+006ddc50  PUSH ESI
+006ddc51  MOV ESI,dword ptr [0x009877e8]
+006ddc57  PUSH EDI
+006ddc58  XOR EDI,EDI
+006ddc5a  CMP ESI,0x9877e8
+006ddc60  JZ 0x006ddc94
+006ddc62  CMP EDI,0x3
+006ddc65  JGE 0x006ddc94
+006ddc67  MOV EAX,dword ptr [ESI + 0x8]
+006ddc6a  TEST EAX,EAX
+006ddc6c  JZ 0x006ddc74
+006ddc6e  MOV ECX,dword ptr [EAX]
+006ddc70  PUSH EAX
+006ddc71  CALL dword ptr [ECX + 0x8]
+006ddc74  MOV EAX,ESI
+006ddc76  MOV ECX,dword ptr [EAX]
+006ddc78  MOV EDX,dword ptr [EAX + 0x4]
+006ddc7b  MOV ESI,dword ptr [ESI]
+006ddc7d  MOV dword ptr [EDX],ECX
+006ddc7f  PUSH EAX
+006ddc80  MOV dword ptr [ECX + 0x4],EDX
+006ddc83  CALL 0x00466440
+006ddc88  ADD ESP,0x4
+006ddc8b  INC EDI
+006ddc8c  CMP ESI,0x9877e8
+006ddc92  JNZ 0x006ddc62
+006ddc94  POP EDI
+006ddc95  POP ESI
+006ddc96  RET

@@ -1,0 +1,9 @@
+0087f05d  CMP dword ptr [EBP + -0x10],0x0
+0087f061  JZ 0x0087f075
+0087f067  MOV EAX,dword ptr [EBP + -0x10]
+0087f06a  ADD EAX,0x60
+0087f06d  MOV dword ptr [EBP + -0x24],EAX
+0087f070  JMP 0x0087f07c
+0087f075  MOV dword ptr [EBP + -0x24],0x0
+0087f07c  MOV ECX,dword ptr [EBP + -0x24]
+0087f07f  JMP 0x006edc00

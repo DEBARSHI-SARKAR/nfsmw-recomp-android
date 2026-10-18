@@ -1,0 +1,18 @@
+006ca130  MOV EAX,dword ptr [ESP + 0x8]
+006ca134  SUB EAX,0x0
+006ca137  JZ 0x006ca160
+006ca139  DEC EAX
+006ca13a  JZ 0x006ca152
+006ca13c  DEC EAX
+006ca13d  JZ 0x006ca144
+006ca13f  XOR EAX,EAX
+006ca141  RET 0x8
+006ca144  MOV EAX,dword ptr [ESP + 0x4]
+006ca148  MOV EAX,dword ptr [ECX + EAX*0x4 + 0x4458]
+006ca14f  RET 0x8
+006ca152  MOV EDX,dword ptr [ESP + 0x4]
+006ca156  MOV EAX,dword ptr [ECX + EDX*0x4 + 0x4448]
+006ca15d  RET 0x8
+006ca160  MOV EAX,dword ptr [ESP + 0x4]
+006ca164  MOV EAX,dword ptr [ECX + EAX*0x4 + 0x4450]
+006ca16b  RET 0x8

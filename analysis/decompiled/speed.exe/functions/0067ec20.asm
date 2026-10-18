@@ -1,0 +1,16 @@
+0067ec20  PUSH ESI
+0067ec21  PUSH EDI
+0067ec22  MOV EDI,ECX
+0067ec24  MOV EAX,dword ptr [EDI + 0xa0]
+0067ec2a  MOV ESI,dword ptr [EAX]
+0067ec2c  CMP ESI,EAX
+0067ec2e  JZ 0x0067ec42
+0067ec30  MOV ECX,dword ptr [ESI + 0x8]
+0067ec33  MOV EAX,dword ptr [ECX]
+0067ec35  CALL dword ptr [EAX + 0x8]
+0067ec38  MOV ESI,dword ptr [ESI]
+0067ec3a  CMP ESI,dword ptr [EDI + 0xa0]
+0067ec40  JNZ 0x0067ec30
+0067ec42  POP EDI
+0067ec43  POP ESI
+0067ec44  RET

@@ -1,0 +1,44 @@
+0045fed0  PUSH ESI
+0045fed1  MOV ESI,dword ptr [ESP + 0x10]
+0045fed5  FLD float ptr [ESI]
+0045fed7  PUSH EDI
+0045fed8  MOV EDI,dword ptr [ESP + 0x10]
+0045fedc  FCOMP float ptr [EDI]
+0045fede  FNSTSW AX
+0045fee0  TEST AH,0x5
+0045fee3  JP 0x0045ff34
+0045fee5  MOV ECX,dword ptr [ESP + 0x18]
+0045fee9  FLD float ptr [ECX]
+0045feeb  MOV EDX,dword ptr [ESP + 0xc]
+0045feef  FCOMP float ptr [EDX]
+0045fef1  FNSTSW AX
+0045fef3  TEST AH,0x41
+0045fef6  JNZ 0x0045ff34
+0045fef8  FLD float ptr [ESI + 0x4]
+0045fefb  FCOMP float ptr [EDI + 0x4]
+0045fefe  FNSTSW AX
+0045ff00  TEST AH,0x5
+0045ff03  JP 0x0045ff34
+0045ff05  FLD float ptr [ECX + 0x4]
+0045ff08  FCOMP float ptr [EDX + 0x4]
+0045ff0b  FNSTSW AX
+0045ff0d  TEST AH,0x41
+0045ff10  JNZ 0x0045ff34
+0045ff12  FLD float ptr [ESI + 0x8]
+0045ff15  FCOMP float ptr [EDI + 0x8]
+0045ff18  FNSTSW AX
+0045ff1a  TEST AH,0x5
+0045ff1d  JP 0x0045ff34
+0045ff1f  FLD float ptr [ECX + 0x8]
+0045ff22  FCOMP float ptr [EDX + 0x8]
+0045ff25  FNSTSW AX
+0045ff27  TEST AH,0x41
+0045ff2a  JNZ 0x0045ff34
+0045ff2c  POP EDI
+0045ff2d  MOV EAX,0x1
+0045ff32  POP ESI
+0045ff33  RET
+0045ff34  POP EDI
+0045ff35  XOR EAX,EAX
+0045ff37  POP ESI
+0045ff38  RET

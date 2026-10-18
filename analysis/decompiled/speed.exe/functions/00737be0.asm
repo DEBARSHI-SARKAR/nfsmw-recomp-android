@@ -1,0 +1,10 @@
+00737be0  PUSH ESI
+00737be1  MOV ESI,ECX
+00737be3  MOV ECX,dword ptr [ESI + 0x40]
+00737be6  TEST ECX,ECX
+00737be8  JZ 0x00737bef
+00737bea  MOV EAX,dword ptr [ECX]
+00737bec  CALL dword ptr [EAX + 0x4]
+00737bef  MOV dword ptr [ESI + 0x17c8],0x0
+00737bf9  POP ESI
+00737bfa  RET

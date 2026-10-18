@@ -1,0 +1,77 @@
+006519e0  MOV ECX,dword ptr [ESP + 0x4]
+006519e4  MOVSX EAX,word ptr [ECX + 0x28]
+006519e8  DEC EAX
+006519e9  JZ 0x00651a72
+006519ef  DEC EAX
+006519f0  JNZ 0x00651ad4
+006519f6  CMP word ptr [ECX + 0x2a],0x0
+006519fb  MOV dword ptr [ECX + 0x20],0x0
+00651a02  JNZ 0x00651a0a
+00651a04  MOV word ptr [ECX + 0x28],0x1
+00651a0a  FLD float ptr [ESP + 0xc]
+00651a0e  FCOMP float ptr [0x00890968]
+00651a14  FNSTSW AX
+00651a16  TEST AH,0x41
+00651a19  JNZ 0x00651a25
+00651a1b  MOV EAX,dword ptr [ESP + 0xc]
+00651a1f  PUSH EAX
+00651a20  CALL 0x006512a0
+00651a25  FLD float ptr [ECX + 0x8]
+00651a28  MOV EAX,dword ptr [ECX]
+00651a2a  FSUB float ptr [ECX]
+00651a2c  MOV EDX,dword ptr [ECX + 0x4]
+00651a2f  FLD float ptr [ECX + 0xc]
+00651a32  MOV dword ptr [ECX + 0x1c],EAX
+00651a35  FADD float ptr [ECX + 0x4]
+00651a38  MOV dword ptr [ECX + 0x18],EDX
+00651a3b  FLD ST1
+00651a3d  FADD ST0,ST0
+00651a3f  FSUBP
+00651a41  FSTP float ptr [ECX + 0x10]
+00651a44  FMUL float ptr [0x008959e4]
+00651a4a  FSUB float ptr [ECX + 0xc]
+00651a4d  FLD float ptr [ECX + 0x4]
+00651a50  FADD ST0,ST0
+00651a52  FSUBP
+00651a54  FSTP float ptr [ECX + 0x14]
+00651a57  FLD float ptr [ESP + 0x10]
+00651a5b  FCOMP float ptr [0x00890968]
+00651a61  FNSTSW AX
+00651a63  TEST AH,0x41
+00651a66  JNZ 0x00651a72
+00651a68  MOV EDX,dword ptr [ESP + 0x10]
+00651a6c  PUSH EDX
+00651a6d  CALL 0x006512f0
+00651a72  FLD float ptr [ESP + 0x8]
+00651a76  FDIV float ptr [ECX + 0x24]
+00651a79  FADD float ptr [ECX + 0x20]
+00651a7c  FST float ptr [ECX + 0x20]
+00651a7f  FCOMP float ptr [0x0089096c]
+00651a85  FNSTSW AX
+00651a87  TEST AH,0x41
+00651a8a  JNZ 0x00651aa4
+00651a8c  MOV EAX,dword ptr [ECX + 0x8]
+00651a8f  MOV EDX,dword ptr [ECX + 0xc]
+00651a92  MOV dword ptr [ECX + 0x20],0x3f800000
+00651a99  MOV dword ptr [ECX],EAX
+00651a9b  MOV dword ptr [ECX + 0x4],EDX
+00651a9e  MOV word ptr [ECX + 0x28],0x0
+00651aa4  FLD float ptr [ECX + 0x20]
+00651aa7  FLD ST0
+00651aa9  FMUL float ptr [ECX + 0x10]
+00651aac  FLD ST0
+00651aae  FADD float ptr [ECX + 0x14]
+00651ab1  FMUL ST2
+00651ab3  FADD float ptr [ECX + 0x18]
+00651ab6  FMUL ST2
+00651ab8  FADD float ptr [ECX + 0x1c]
+00651abb  FSTP float ptr [ECX]
+00651abd  FMUL float ptr [0x008959e4]
+00651ac3  FLD float ptr [ECX + 0x14]
+00651ac6  FADD ST0,ST0
+00651ac8  FADDP
+00651aca  FMUL ST1
+00651acc  FADD float ptr [ECX + 0x18]
+00651acf  FSTP float ptr [ECX + 0x4]
+00651ad2  FSTP ST0
+00651ad4  RET

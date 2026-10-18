@@ -1,0 +1,13 @@
+006cc1d0  MOV EAX,dword ptr [ECX + 0x4]
+006cc1d3  TEST EAX,EAX
+006cc1d5  JNZ 0x006cc1d8
+006cc1d7  RET
+006cc1d8  MOV ECX,dword ptr [ECX + 0x8]
+006cc1db  SUB ECX,EAX
+006cc1dd  MOV EAX,0x2aaaaaab
+006cc1e2  IMUL ECX
+006cc1e4  SAR EDX,0x1
+006cc1e6  MOV EAX,EDX
+006cc1e8  SHR EAX,0x1f
+006cc1eb  ADD EAX,EDX
+006cc1ed  RET

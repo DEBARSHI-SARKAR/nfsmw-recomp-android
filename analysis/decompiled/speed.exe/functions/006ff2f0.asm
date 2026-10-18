@@ -1,0 +1,11 @@
+006ff2f0  MOV EAX,dword ptr [ESP + 0x4]
+006ff2f4  MOV EAX,dword ptr [EAX*0x4 + 0x99222c]
+006ff2fb  TEST EAX,EAX
+006ff2fd  JZ 0x006ff30e
+006ff2ff  MOV EAX,dword ptr [EAX + 0x2c]
+006ff302  TEST EAX,EAX
+006ff304  JZ 0x006ff30e
+006ff306  LEA ECX,[EAX + 0x4]
+006ff309  JMP 0x004b21b0
+006ff30e  XOR AL,AL
+006ff310  RET

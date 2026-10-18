@@ -1,0 +1,77 @@
+005fa300  PUSH EBX
+005fa301  MOV EBX,dword ptr [ESP + 0x10]
+005fa305  PUSH ESI
+005fa306  MOV ESI,dword ptr [ESP + 0x10]
+005fa30a  PUSH EDI
+005fa30b  MOV EDI,ECX
+005fa30d  MOV EAX,dword ptr [EDI + 0x4]
+005fa310  CMP ESI,dword ptr [EAX]
+005fa312  JNZ 0x005fa34c
+005fa314  CMP EBX,EAX
+005fa316  JNZ 0x005fa34c
+005fa318  MOV EAX,dword ptr [EAX + 0x4]
+005fa31b  PUSH EAX
+005fa31c  MOV ECX,EDI
+005fa31e  CALL 0x005f9b50
+005fa323  MOV EAX,dword ptr [EDI + 0x4]
+005fa326  MOV dword ptr [EAX + 0x4],EAX
+005fa329  MOV EAX,dword ptr [EDI + 0x4]
+005fa32c  MOV dword ptr [EDI + 0x8],0x0
+005fa333  MOV dword ptr [EAX],EAX
+005fa335  MOV EAX,dword ptr [EDI + 0x4]
+005fa338  MOV dword ptr [EAX + 0x8],EAX
+005fa33b  MOV ECX,dword ptr [EDI + 0x4]
+005fa33e  MOV EDX,dword ptr [ECX]
+005fa340  MOV EAX,dword ptr [ESP + 0x10]
+005fa344  POP EDI
+005fa345  POP ESI
+005fa346  MOV dword ptr [EAX],EDX
+005fa348  POP EBX
+005fa349  RET 0xc
+005fa34c  CMP ESI,EBX
+005fa34e  JZ 0x005fa3ab
+005fa350  MOV AL,byte ptr [ESI + 0x1d]
+005fa353  TEST AL,AL
+005fa355  MOV ECX,ESI
+005fa357  JNZ 0x005fa39a
+005fa359  MOV EAX,dword ptr [ESI + 0x8]
+005fa35c  MOV DL,byte ptr [EAX + 0x1d]
+005fa35f  TEST DL,DL
+005fa361  JNZ 0x005fa37d
+005fa363  MOV ESI,EAX
+005fa365  MOV EAX,dword ptr [ESI]
+005fa367  MOV DL,byte ptr [EAX + 0x1d]
+005fa36a  TEST DL,DL
+005fa36c  JNZ 0x005fa39a
+005fa36e  MOV EDI,EDI
+005fa370  MOV ESI,EAX
+005fa372  MOV EAX,dword ptr [ESI]
+005fa374  MOV DL,byte ptr [EAX + 0x1d]
+005fa377  TEST DL,DL
+005fa379  JZ 0x005fa370
+005fa37b  JMP 0x005fa39a
+005fa37d  MOV EAX,dword ptr [ESI + 0x4]
+005fa380  MOV DL,byte ptr [EAX + 0x1d]
+005fa383  TEST DL,DL
+005fa385  JNZ 0x005fa398
+005fa387  CMP ESI,dword ptr [EAX + 0x8]
+005fa38a  JNZ 0x005fa398
+005fa38c  MOV ESI,EAX
+005fa38e  MOV EAX,dword ptr [EAX + 0x4]
+005fa391  MOV DL,byte ptr [EAX + 0x1d]
+005fa394  TEST DL,DL
+005fa396  JZ 0x005fa387
+005fa398  MOV ESI,EAX
+005fa39a  PUSH ECX
+005fa39b  LEA EAX,[ESP + 0x18]
+005fa39f  PUSH EAX
+005fa3a0  MOV ECX,EDI
+005fa3a2  CALL 0x005f9850
+005fa3a7  CMP ESI,EBX
+005fa3a9  JNZ 0x005fa350
+005fa3ab  MOV EAX,dword ptr [ESP + 0x10]
+005fa3af  POP EDI
+005fa3b0  MOV dword ptr [EAX],ESI
+005fa3b2  POP ESI
+005fa3b3  POP EBX
+005fa3b4  RET 0xc

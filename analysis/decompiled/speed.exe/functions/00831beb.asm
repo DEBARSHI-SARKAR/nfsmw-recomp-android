@@ -1,0 +1,11 @@
+00831beb  MOV ECX,dword ptr [ESP + 0x4]
+00831bef  MOVZX EAX,byte ptr [ECX + 0x7]
+00831bf3  MOVZX EDX,byte ptr [ECX + 0x6]
+00831bf7  INC EAX
+00831bf8  LEA EAX,[EAX + EAX*0x2]
+00831bfb  AND EAX,0xfffffffc
+00831bfe  LEA EDX,[EDX + EDX*0x1 + 0x3]
+00831c02  AND EDX,0xfffffffc
+00831c05  ADD EAX,ECX
+00831c07  LEA EAX,[EDX + EAX*0x1 + 0xc]
+00831c0b  RET

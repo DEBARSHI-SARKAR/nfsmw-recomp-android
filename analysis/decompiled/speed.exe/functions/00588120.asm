@@ -1,0 +1,6 @@
+00588120  MOV EAX,ECX
+00588122  MOV ECX,dword ptr [ESP + 0x4]
+00588126  MOV dword ptr [EAX + 0xc],ECX
+00588129  MOV dword ptr [EAX + 0x10],0x0
+00588130  MOV dword ptr [EAX],0x8a1348
+00588136  RET 0x4

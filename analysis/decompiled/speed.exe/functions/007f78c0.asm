@@ -1,0 +1,15 @@
+007f78c0  PUSH EBP
+007f78c1  MOV EBP,ESP
+007f78c3  SUB ESP,0x48
+007f78c6  LEA EAX,[EBP + -0x48]
+007f78c9  PUSH EAX
+007f78ca  MOV dword ptr [EBP + -0x48],0x48
+007f78d1  CALL 0x007ecddf
+007f78d6  POP ECX
+007f78d7  MOV ECX,dword ptr [EBP + -0x44]
+007f78da  MOV EAX,dword ptr [ECX]
+007f78dc  PUSH 0x0
+007f78de  PUSH dword ptr [EBP + 0x8]
+007f78e1  CALL dword ptr [EAX + 0x4]
+007f78e4  LEAVE
+007f78e5  RET

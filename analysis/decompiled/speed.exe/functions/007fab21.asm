@@ -1,0 +1,169 @@
+007fab21  PUSH EBP
+007fab22  MOV EBP,ESP
+007fab24  PUSH ECX
+007fab25  PUSH ECX
+007fab26  MOV ECX,0xffffff00
+007fab2b  CMP ECX,-0x80
+007fab2e  MOV EAX,ECX
+007fab30  JGE 0x007fab36
+007fab32  PUSH -0x80
+007fab34  JMP 0x007fab3d
+007fab36  CMP ECX,0x7f
+007fab39  JLE 0x007fab3e
+007fab3b  PUSH 0x7f
+007fab3d  POP EAX
+007fab3e  MOV EDX,ECX
+007fab40  ADD AL,0x80
+007fab42  AND EDX,0x1ff
+007fab48  INC ECX
+007fab49  CMP ECX,0xff
+007fab4f  MOV byte ptr [EDX + 0x9c1640],AL
+007fab55  JL 0x007fab2b
+007fab57  PUSH EBX
+007fab58  PUSH ESI
+007fab59  PUSH EDI
+007fab5a  PUSH 0x7
+007fab5c  POP ECX
+007fab5d  PUSH 0x1f
+007fab5f  POP EAX
+007fab60  PUSH 0x8
+007fab62  MOV dword ptr [0x009c0a38],0xf
+007fab6c  MOV EDI,0x9c0a3c
+007fab71  STOSD.REP ES:EDI
+007fab73  POP ECX
+007fab74  PUSH 0x2f
+007fab76  POP EAX
+007fab77  MOV EDI,0x9c0a58
+007fab7c  STOSD.REP ES:EDI
+007fab7e  PUSH 0x3f
+007fab80  POP EAX
+007fab81  MOV ECX,0x80
+007fab86  MOV EDI,0x9c0e38
+007fab8b  STOSD.REP ES:EDI
+007fab8d  MOV EAX,0x8c296c
+007fab92  MOV dword ptr [EBP + -0x8],EAX
+007fab95  MOV ESI,0xfc00
+007fab9a  JMP 0x007fab9f
+007fab9c  MOV EAX,dword ptr [EBP + -0x8]
+007fab9f  MOV EBX,dword ptr [EAX + -0x4]
+007faba2  MOV EDX,dword ptr [EAX]
+007faba4  MOV EAX,dword ptr [EAX + 0x8]
+007faba7  XOR EDI,EDI
+007faba9  INC EDI
+007fabaa  TEST ESI,EAX
+007fabac  JZ 0x007fabd9
+007fabae  SAR EAX,0x7
+007fabb1  MOV dword ptr [EBP + -0x4],EAX
+007fabb4  PUSH 0x9
+007fabb6  MOV EAX,EDX
+007fabb8  AND EAX,ESI
+007fabba  POP ECX
+007fabbb  SUB ECX,EBX
+007fabbd  SHL EDX,0x10
+007fabc0  OR EAX,EDX
+007fabc2  SHL EDI,CL
+007fabc4  SHL EAX,0x6
+007fabc7  OR EAX,EBX
+007fabc9  TEST EDI,EDI
+007fabcb  JLE 0x007fac0b
+007fabcd  MOV EDX,dword ptr [EBP + -0x4]
+007fabd0  LEA EDX,[EDX*0x4 + 0x9c0a38]
+007fabd7  JMP 0x007fac05
+007fabd9  SAR EAX,0x2
+007fabdc  MOV dword ptr [EBP + -0x4],EAX
+007fabdf  PUSH 0xe
+007fabe1  MOV EAX,EDX
+007fabe3  AND EAX,ESI
+007fabe5  POP ECX
+007fabe6  SUB ECX,EBX
+007fabe8  SHL EDX,0x10
+007fabeb  OR EAX,EDX
+007fabed  SHL EDI,CL
+007fabef  SHL EAX,0x6
+007fabf2  ADD EBX,-0x6
+007fabf5  OR EAX,EBX
+007fabf7  TEST EDI,EDI
+007fabf9  JLE 0x007fac0b
+007fabfb  MOV EDX,dword ptr [EBP + -0x4]
+007fabfe  LEA EDX,[EDX*0x4 + 0x9c1240]
+007fac05  MOV ECX,EDI
+007fac07  MOV EDI,EDX
+007fac09  STOSD.REP ES:EDI
+007fac0b  ADD dword ptr [EBP + -0x8],0x10
+007fac0f  CMP dword ptr [EBP + -0x8],0x8c2f4c
+007fac16  JL 0x007fab9c
+007fac18  MOV EAX,0x8c2f4c
+007fac1d  MOV dword ptr [EBP + -0x8],EAX
+007fac20  JMP 0x007fac25
+007fac22  MOV EAX,dword ptr [EBP + -0x8]
+007fac25  MOV EDI,dword ptr [EAX + -0x4]
+007fac28  MOV EDX,dword ptr [EAX]
+007fac2a  MOV EAX,dword ptr [EAX + 0x8]
+007fac2d  XOR EBX,EBX
+007fac2f  ADD EDI,0x8
+007fac32  INC EBX
+007fac33  TEST AH,AH
+007fac35  JS 0x007fac65
+007fac37  SAR EAX,0x7
+007fac3a  MOV dword ptr [EBP + -0x4],EAX
+007fac3d  PUSH 0x11
+007fac3f  MOV EAX,EDX
+007fac41  AND EAX,ESI
+007fac43  POP ECX
+007fac44  SUB ECX,EDI
+007fac46  SHL EDX,0x10
+007fac49  OR EAX,EDX
+007fac4b  SHL EBX,CL
+007fac4d  SHL EAX,0x6
+007fac50  ADD EDI,-0x9
+007fac53  OR EAX,EDI
+007fac55  TEST EBX,EBX
+007fac57  JLE 0x007fac95
+007fac59  MOV EDI,dword ptr [EBP + -0x4]
+007fac5c  LEA EDI,[EDI*0x4 + 0x9c0530]
+007fac63  JMP 0x007fac91
+007fac65  SAR EAX,0xa
+007fac68  MOV dword ptr [EBP + -0x4],EAX
+007fac6b  PUSH 0xe
+007fac6d  MOV EAX,EDX
+007fac6f  AND EAX,ESI
+007fac71  POP ECX
+007fac72  SUB ECX,EDI
+007fac74  SHL EDX,0x10
+007fac77  OR EAX,EDX
+007fac79  SHL EBX,CL
+007fac7b  SHL EAX,0x6
+007fac7e  ADD EDI,-0x6
+007fac81  OR EAX,EDI
+007fac83  TEST EBX,EBX
+007fac85  JLE 0x007fac95
+007fac87  MOV EDI,dword ptr [EBP + -0x4]
+007fac8a  LEA EDI,[EDI*0x4 + 0x9c1240]
+007fac91  MOV ECX,EBX
+007fac93  STOSD.REP ES:EDI
+007fac95  ADD dword ptr [EBP + -0x8],0x10
+007fac99  CMP dword ptr [EBP + -0x8],0x8c374c
+007faca0  JL 0x007fac22
+007faca2  POP EDI
+007faca3  POP ESI
+007faca4  MOV EAX,0x9c0930
+007faca9  POP EBX
+007facaa  MOV dword ptr [EAX],0x1
+007facb0  ADD EAX,0x4
+007facb3  CMP EAX,0x9c09b0
+007facb8  JL 0x007facaa
+007facba  MOV EAX,0x9c09f0
+007facbf  MOV ECX,0xfc000000
+007facc4  LEA EDX,[ECX + 0x4400000]
+007facca  OR EDX,0x6
+007faccd  MOV dword ptr [EAX + -0x40],EDX
+007facd0  MOV EDX,ECX
+007facd2  OR EDX,0x6
+007facd5  MOV dword ptr [EAX],EDX
+007facd7  ADD ECX,0x400000
+007facdd  ADD EAX,0x4
+007face0  TEST ECX,ECX
+007face2  JL 0x007facc4
+007face4  MOV dword ptr [0x009c1238],0x1
+007facee  LEAVE
+007facef  RET

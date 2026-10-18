@@ -1,0 +1,37 @@
+0047af20  PUSH -0x1
+0047af22  PUSH 0x86a488
+0047af27  MOV EAX,FS:[0x0]
+0047af2d  PUSH EAX
+0047af2e  MOV dword ptr FS:[0x0],ESP
+0047af35  PUSH ECX
+0047af36  MOV EAX,dword ptr [ESP + 0x14]
+0047af3a  PUSH ESI
+0047af3b  PUSH 0x12
+0047af3d  MOV ESI,ECX
+0047af3f  PUSH EAX
+0047af40  MOV dword ptr [ESP + 0xc],ESI
+0047af44  CALL 0x00470890
+0047af49  MOV ECX,dword ptr [ESP + 0x1c]
+0047af4d  MOV EAX,dword ptr [ESI + 0x1c]
+0047af50  MOV dword ptr [ESI + 0x80],ECX
+0047af56  MOV dword ptr [ESI],0x894ee0
+0047af5c  MOV byte ptr [EAX + 0x2a0],0x1
+0047af63  MOV EDX,dword ptr [0x008f82f4]
+0047af69  MOV ECX,ESI
+0047af6b  MOV dword ptr [ESP + 0x10],0x0
+0047af73  MOV dword ptr [EAX + 0x2ac],EDX
+0047af79  CALL 0x0046ba20
+0047af7e  MOV AL,byte ptr [ESP + 0x20]
+0047af82  TEST AL,AL
+0047af84  JZ 0x0047af94
+0047af86  FLD float ptr [ESI + 0x84]
+0047af8c  FCHS
+0047af8e  FSTP float ptr [ESI + 0x84]
+0047af94  MOV ECX,ESI
+0047af96  CALL 0x00477250
+0047af9b  MOV ECX,dword ptr [ESP + 0x8]
+0047af9f  MOV EAX,ESI
+0047afa1  POP ESI
+0047afa2  MOV dword ptr FS:[0x0],ECX
+0047afa9  ADD ESP,0x10
+0047afac  RET 0xc

@@ -1,0 +1,44 @@
+0083ea90  MOV EAX,dword ptr [ESP + 0x8]
+0083ea94  CMP EAX,0x686f7374
+0083ea99  JNZ 0x0083eaad
+0083ea9b  MOV ECX,dword ptr [ESP + 0x4]
+0083ea9f  MOV EDX,dword ptr [ECX + 0xac]
+0083eaa5  XOR EAX,EAX
+0083eaa7  TEST EDX,EDX
+0083eaa9  SETZ AL
+0083eaac  RET
+0083eaad  CMP EAX,0x6a6f696e
+0083eab2  JNZ 0x0083eac7
+0083eab4  MOV EDX,dword ptr [ESP + 0x4]
+0083eab8  MOV ECX,dword ptr [EDX + 0xac]
+0083eabe  XOR EAX,EAX
+0083eac0  CMP ECX,0x1
+0083eac3  SETZ AL
+0083eac6  RET
+0083eac7  CMP EAX,0x686f6970
+0083eacc  JNZ 0x0083ead9
+0083eace  MOV EAX,dword ptr [ESP + 0x4]
+0083ead2  MOV EAX,dword ptr [EAX + 0xb0]
+0083ead8  RET
+0083ead9  CMP EAX,0x68707274
+0083eade  JNZ 0x0083eaeb
+0083eae0  MOV ECX,dword ptr [ESP + 0x4]
+0083eae4  MOV EAX,dword ptr [ECX + 0xb4]
+0083eaea  RET
+0083eaeb  CMP EAX,0x70656970
+0083eaf0  JNZ 0x0083eafd
+0083eaf2  MOV EDX,dword ptr [ESP + 0x4]
+0083eaf6  MOV EAX,dword ptr [EDX + 0xb8]
+0083eafc  RET
+0083eafd  CMP EAX,0x70707274
+0083eb02  JNZ 0x0083eb0f
+0083eb04  MOV EAX,dword ptr [ESP + 0x4]
+0083eb08  MOV EAX,dword ptr [EAX + 0xbc]
+0083eb0e  RET
+0083eb0f  CMP EAX,0x736f636b
+0083eb14  JNZ 0x0083eb21
+0083eb16  MOV ECX,dword ptr [ESP + 0x4]
+0083eb1a  MOV EAX,dword ptr [ECX + 0xc0]
+0083eb20  RET
+0083eb21  XOR EAX,EAX
+0083eb23  RET

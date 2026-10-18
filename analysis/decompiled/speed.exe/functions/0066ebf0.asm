@@ -1,0 +1,12 @@
+0066ebf0  PUSH ESI
+0066ebf1  MOV ESI,ECX
+0066ebf3  PUSH ESI
+0066ebf4  CALL 0x006685d0
+0066ebf9  MOV EAX,dword ptr [ESP + 0xc]
+0066ebfd  MOV ECX,dword ptr [ESP + 0x10]
+0066ec01  MOV dword ptr [ESI + 0x4],EAX
+0066ec04  ADD ESP,0x4
+0066ec07  MOV dword ptr [ESI + 0x8],ECX
+0066ec0a  MOV EAX,ESI
+0066ec0c  POP ESI
+0066ec0d  RET 0x8

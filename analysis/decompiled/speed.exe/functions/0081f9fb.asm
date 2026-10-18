@@ -1,0 +1,94 @@
+0081f9fb  PUSH EBP
+0081f9fc  MOV EBP,ESP
+0081f9fe  PUSH ECX
+0081f9ff  PUSH ECX
+0081fa00  PUSH EBX
+0081fa01  PUSH ESI
+0081fa02  MOV ESI,dword ptr [EBP + 0x8]
+0081fa05  PUSH EDI
+0081fa06  XOR EDI,EDI
+0081fa08  CMP ESI,EDI
+0081fa0a  MOV dword ptr [EBP + -0x4],ESI
+0081fa0d  MOV dword ptr [EBP + -0x8],EDI
+0081fa10  JZ 0x0081fa1c
+0081fa12  CMP dword ptr [EBP + 0xc],0x40
+0081fa16  JL 0x0081fb0e
+0081fa1c  LEA EAX,[EBP + -0x4]
+0081fa1f  PUSH 0x894304
+0081fa24  PUSH EAX
+0081fa25  CALL 0x0081f9c2
+0081fa2a  SUB dword ptr [EBP + 0xc],EAX
+0081fa2d  LEA EAX,[EBP + -0x4]
+0081fa30  PUSH 0x8c5c74
+0081fa35  PUSH EAX
+0081fa36  CALL 0x0081f9c2
+0081fa3b  SUB dword ptr [EBP + 0xc],EAX
+0081fa3e  LEA EAX,[EBP + -0x4]
+0081fa41  PUSH 0x8c5c54
+0081fa46  PUSH EAX
+0081fa47  CALL 0x0081f9c2
+0081fa4c  SUB dword ptr [EBP + 0xc],EAX
+0081fa4f  ADD ESP,0x18
+0081fa52  XOR EBX,EBX
+0081fa54  CMP ESI,EDI
+0081fa56  JZ 0x0081fa64
+0081fa58  CALL 0x0081bccb
+0081fa5d  MOV dword ptr [EBP + -0x8],0x1
+0081fa64  MOV EAX,[0x009c21fc]
+0081fa69  CMP dword ptr [EAX + 0x14],0x0
+0081fa6d  JGE 0x0081faca
+0081fa6f  CMP dword ptr [EBP + 0x8],0x0
+0081fa73  JNZ 0x0081fa81
+0081fa75  CALL 0x0081bccb
+0081fa7a  MOV dword ptr [EBP + -0x8],0x1
+0081fa81  MOV EAX,[0x009c21fc]
+0081fa86  MOV EAX,dword ptr [EAX + 0x4]
+0081fa89  LEA ESI,[EAX + EDI*0x8]
+0081fa8c  ADD EBX,dword ptr [ESI + 0x4]
+0081fa8f  CMP dword ptr [EBP + 0x8],0x0
+0081fa93  JNZ 0x0081faa0
+0081fa95  CALL 0x0081bcd9
+0081fa9a  AND dword ptr [EBP + -0x8],0x0
+0081fa9e  JMP 0x0081faa6
+0081faa0  CMP dword ptr [EBP + 0xc],0x1e
+0081faa4  JL 0x0081fb03
+0081faa6  PUSH dword ptr [ESI + 0x4]
+0081faa9  LEA EAX,[EBP + -0x4]
+0081faac  PUSH dword ptr [ESI]
+0081faae  PUSH 0x8c5c3c
+0081fab3  PUSH EAX
+0081fab4  CALL 0x0081f9c2
+0081fab9  SUB dword ptr [EBP + 0xc],EAX
+0081fabc  MOV EAX,[0x009c21fc]
+0081fac1  ADD ESP,0x10
+0081fac4  DEC EDI
+0081fac5  CMP EDI,dword ptr [EAX + 0x14]
+0081fac8  JG 0x0081fa6f
+0081faca  CMP dword ptr [EBP + 0x8],0x0
+0081face  JZ 0x0081fadf
+0081fad0  CALL 0x0081bcd9
+0081fad5  AND dword ptr [EBP + -0x8],0x0
+0081fad9  CMP dword ptr [EBP + 0xc],0x20
+0081fadd  JL 0x0081fb0e
+0081fadf  PUSH EBX
+0081fae0  LEA EAX,[EBP + -0x4]
+0081fae3  PUSH 0x8c5c1c
+0081fae8  PUSH EAX
+0081fae9  CALL 0x0081f9c2
+0081faee  SUB dword ptr [EBP + 0xc],EAX
+0081faf1  PUSH dword ptr [EBP + 0xc]
+0081faf4  PUSH dword ptr [EBP + -0x4]
+0081faf7  CALL 0x0081ef5e
+0081fafc  ADD ESP,0x14
+0081faff  TEST EAX,EAX
+0081fb01  JZ 0x0081fb11
+0081fb03  CMP dword ptr [EBP + -0x8],0x0
+0081fb07  JZ 0x0081fb0e
+0081fb09  CALL 0x0081bcd9
+0081fb0e  PUSH -0x6
+0081fb10  POP EAX
+0081fb11  POP EDI
+0081fb12  POP ESI
+0081fb13  POP EBX
+0081fb14  LEAVE
+0081fb15  RET

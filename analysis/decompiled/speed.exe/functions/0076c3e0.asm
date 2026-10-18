@@ -1,0 +1,76 @@
+0076c3e0  SUB ESP,0xc
+0076c3e3  MOV EDX,dword ptr [ESP + 0x14]
+0076c3e7  PUSH ESI
+0076c3e8  MOV ESI,ECX
+0076c3ea  MOV ECX,dword ptr [ESP + 0x14]
+0076c3ee  FLD float ptr [ECX + 0x8]
+0076c3f1  FMUL float ptr [EDX + 0x8]
+0076c3f4  FLD float ptr [ECX + 0x4]
+0076c3f7  FMUL float ptr [EDX + 0x4]
+0076c3fa  FADDP
+0076c3fc  FLD float ptr [ECX]
+0076c3fe  FMUL float ptr [EDX]
+0076c400  FADDP
+0076c402  FST float ptr [ESP + 0x14]
+0076c406  FCOMP float ptr [0x008955a0]
+0076c40c  FNSTSW AX
+0076c40e  TEST AH,0x41
+0076c411  JNZ 0x0076c43b
+0076c413  MOV EAX,[0x008a2fd0]
+0076c418  MOV dword ptr [ESI],EAX
+0076c41a  MOV ECX,dword ptr [0x008a2fd4]
+0076c420  MOV dword ptr [ESI + 0x4],ECX
+0076c423  MOV EDX,dword ptr [0x008a2fd8]
+0076c429  MOV dword ptr [ESI + 0x8],EDX
+0076c42c  MOV EAX,[0x008a2fdc]
+0076c431  MOV dword ptr [ESI + 0xc],EAX
+0076c434  POP ESI
+0076c435  ADD ESP,0xc
+0076c438  RET 0x8
+0076c43b  LEA EAX,[ESP + 0x4]
+0076c43f  PUSH EAX
+0076c440  PUSH EDX
+0076c441  PUSH ECX
+0076c442  CALL 0x00401870
+0076c447  FLD float ptr [ESP + 0x20]
+0076c44b  FCOMP float ptr [0x00895400]
+0076c451  ADD ESP,0xc
+0076c454  FNSTSW AX
+0076c456  TEST AH,0x5
+0076c459  JP 0x0076c488
+0076c45b  MOV ECX,dword ptr [ESP + 0x4]
+0076c45f  MOV EDX,dword ptr [ESP + 0x8]
+0076c463  MOV EAX,dword ptr [ESP + 0xc]
+0076c467  PUSH ESI
+0076c468  MOV dword ptr [ESI],ECX
+0076c46a  MOV dword ptr [ESI + 0x4],EDX
+0076c46d  MOV dword ptr [ESI + 0x8],EAX
+0076c470  MOV dword ptr [ESI + 0xc],0x0
+0076c477  CALL 0x004885d0
+0076c47c  FSTP ST0
+0076c47e  ADD ESP,0x4
+0076c481  POP ESI
+0076c482  ADD ESP,0xc
+0076c485  RET 0x8
+0076c488  FLD float ptr [ESP + 0x14]
+0076c48c  PUSH ECX
+0076c48d  FADD float ptr [0x0089096c]
+0076c493  FADD ST0,ST0
+0076c495  FSTP float ptr [ESP]
+0076c498  CALL 0x005c5e80
+0076c49d  FLD float ptr [0x0089096c]
+0076c4a3  ADD ESP,0x4
+0076c4a6  FDIV ST0,ST1
+0076c4a8  FLD float ptr [ESP + 0x4]
+0076c4ac  FMUL ST1
+0076c4ae  FSTP float ptr [ESI]
+0076c4b0  FLD float ptr [ESP + 0x8]
+0076c4b4  FMUL ST1
+0076c4b6  FSTP float ptr [ESI + 0x4]
+0076c4b9  FMUL float ptr [ESP + 0xc]
+0076c4bd  FSTP float ptr [ESI + 0x8]
+0076c4c0  FMUL float ptr [0x008933d4]
+0076c4c6  FSTP float ptr [ESI + 0xc]
+0076c4c9  POP ESI
+0076c4ca  ADD ESP,0xc
+0076c4cd  RET 0x8

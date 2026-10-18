@@ -1,0 +1,3 @@
+00825b08  MOV EAX,dword ptr [ESP + 0x4]
+00825b0c  MOV [0x009c253c],EAX
+00825b11  RET

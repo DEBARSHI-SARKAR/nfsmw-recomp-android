@@ -1,0 +1,7 @@
+0086efa4  PUSH 0x0
+0086efa6  PUSH 0x89c294
+0086efab  MOV EAX,dword ptr [EBP + -0x10]
+0086efae  PUSH EAX
+0086efaf  CALL 0x00652b40
+0086efb4  ADD ESP,0xc
+0086efb7  RET

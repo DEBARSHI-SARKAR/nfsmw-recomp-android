@@ -1,0 +1,38 @@
+005d5aa0  SUB ESP,0x8
+005d5aa3  PUSH EBX
+005d5aa4  MOV EBX,dword ptr [ESP + 0x14]
+005d5aa8  TEST byte ptr [EBX + 0x4],0x1
+005d5aac  PUSH ESI
+005d5aad  MOV ESI,dword ptr [EBX]
+005d5aaf  JZ 0x005d5abd
+005d5ab1  AND ESI,0xffff2020
+005d5ab7  OR ESI,0x2020
+005d5abd  MOV ECX,dword ptr [0x0091ddc4]
+005d5ac3  PUSH EDI
+005d5ac4  MOV EDI,dword ptr [0x0091ddc8]
+005d5aca  PUSH 0x0
+005d5acc  LEA EAX,[ESP + 0x10]
+005d5ad0  PUSH EAX
+005d5ad1  PUSH EDI
+005d5ad2  PUSH ECX
+005d5ad3  LEA EDX,[ESP + 0x2c]
+005d5ad7  PUSH EDX
+005d5ad8  MOV dword ptr [ESP + 0x20],ESI
+005d5adc  MOV dword ptr [ESP + 0x24],0x0
+005d5ae4  CALL 0x005d4a40
+005d5ae9  MOV EAX,dword ptr [ESP + 0x30]
+005d5aed  ADD ESP,0x14
+005d5af0  CMP EAX,EDI
+005d5af2  POP EDI
+005d5af3  JZ 0x005d5b05
+005d5af5  CMP dword ptr [EAX],ESI
+005d5af7  JNZ 0x005d5b05
+005d5af9  MOV ECX,dword ptr [ESP + 0x14]
+005d5afd  PUSH ECX
+005d5afe  PUSH EBX
+005d5aff  CALL dword ptr [EAX + 0x4]
+005d5b02  ADD ESP,0x8
+005d5b05  POP ESI
+005d5b06  POP EBX
+005d5b07  ADD ESP,0x8
+005d5b0a  RET

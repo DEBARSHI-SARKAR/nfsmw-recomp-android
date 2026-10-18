@@ -1,0 +1,22 @@
+00452380  MOV EAX,ECX
+00452382  MOV ECX,dword ptr [ESP + 0xc]
+00452386  XOR EDX,EDX
+00452388  MOV dword ptr [EAX],ECX
+0045238a  MOV ECX,dword ptr [ESP + 0x4]
+0045238e  CMP ECX,EDX
+00452390  PUSH ESI
+00452391  MOV ESI,dword ptr [ESP + 0xc]
+00452395  MOV dword ptr [EAX + 0x4],ECX
+00452398  MOV dword ptr [EAX + 0x8],EDX
+0045239b  MOV dword ptr [EAX + 0xc],ESI
+0045239e  MOV word ptr [EAX + 0x10],DX
+004523a2  MOV word ptr [EAX + 0x12],DX
+004523a6  JZ 0x004523bc
+004523a8  CMP dword ptr [ECX + 0x24],EDX
+004523ab  JNZ 0x004523b3
+004523ad  MOV word ptr [EAX + 0x10],0x1
+004523b3  MOV EDX,dword ptr [ECX + 0x18]
+004523b6  MOV dword ptr [EAX + 0x8],EDX
+004523b9  INC dword ptr [ECX + 0x1c]
+004523bc  POP ESI
+004523bd  RET 0xc

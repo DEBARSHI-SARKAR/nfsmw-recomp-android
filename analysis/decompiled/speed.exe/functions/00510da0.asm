@@ -1,0 +1,29 @@
+00510da0  SUB ESP,0x18
+00510da3  PUSH ESI
+00510da4  MOV ESI,ECX
+00510da6  LEA EAX,[ESP + 0x4]
+00510daa  PUSH EAX
+00510dab  LEA ECX,[ESP + 0x10]
+00510daf  PUSH ECX
+00510db0  MOV ECX,ESI
+00510db2  MOV byte ptr [ESI + 0xcc],0x1
+00510db9  MOV dword ptr [ESP + 0x14],0x0
+00510dc1  MOV dword ptr [ESP + 0x18],0x0
+00510dc9  MOV dword ptr [ESP + 0xc],0x3f800000
+00510dd1  MOV dword ptr [ESP + 0x10],0x3f800000
+00510dd9  CALL 0x00510c10
+00510dde  FLD float ptr [ESP + 0x4]
+00510de2  FADD float ptr [ESP + 0xc]
+00510de6  LEA EDX,[ESP + 0x14]
+00510dea  PUSH EDX
+00510deb  LEA ECX,[ESI + 0x74]
+00510dee  FMUL float ptr [0x008933d4]
+00510df4  FSTP float ptr [ESP + 0x18]
+00510df8  FLD float ptr [ESP + 0xc]
+00510dfc  FADD float ptr [ESP + 0x14]
+00510e00  FMUL float ptr [0x008933d4]
+00510e06  FSTP float ptr [ESP + 0x1c]
+00510e0a  CALL 0x00651550
+00510e0f  POP ESI
+00510e10  ADD ESP,0x18
+00510e13  RET

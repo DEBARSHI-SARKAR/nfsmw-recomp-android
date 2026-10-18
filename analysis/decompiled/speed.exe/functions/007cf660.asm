@@ -1,0 +1,44 @@
+007cf660  PUSH EBP
+007cf661  MOV EBP,ESP
+007cf663  SUB ESP,0x8
+007cf666  FLD double ptr [EBP + 0x8]
+007cf669  SUB ESP,0x8
+007cf66c  FSTP double ptr [ESP]
+007cf66f  CALL 0x007ca1f0
+007cf674  ADD ESP,0x8
+007cf677  AND EAX,0x90
+007cf67c  JZ 0x007cf682
+007cf67e  XOR EAX,EAX
+007cf680  JMP 0x007cf6de
+007cf682  FLD double ptr [EBP + 0x8]
+007cf685  SUB ESP,0x8
+007cf688  FSTP double ptr [ESP]
+007cf68b  CALL 0x007def40
+007cf690  ADD ESP,0x8
+007cf693  FSTP double ptr [EBP + -0x8]
+007cf696  FLD double ptr [EBP + 0x8]
+007cf699  FLD double ptr [EBP + -0x8]
+007cf69c  FUCOMPP
+007cf69e  FNSTSW AX
+007cf6a0  TEST AH,0x44
+007cf6a3  JP 0x007cf6dc
+007cf6a5  FLD double ptr [EBP + 0x8]
+007cf6a8  FDIV double ptr [0x008bcb70]
+007cf6ae  SUB ESP,0x8
+007cf6b1  FSTP double ptr [ESP]
+007cf6b4  CALL 0x007def40
+007cf6b9  ADD ESP,0x8
+007cf6bc  FLD double ptr [EBP + 0x8]
+007cf6bf  FDIV double ptr [0x008bcb70]
+007cf6c5  FUCOMPP
+007cf6c7  FNSTSW AX
+007cf6c9  TEST AH,0x44
+007cf6cc  JP 0x007cf6d5
+007cf6ce  MOV EAX,0x2
+007cf6d3  JMP 0x007cf6de
+007cf6d5  MOV EAX,0x1
+007cf6da  JMP 0x007cf6de
+007cf6dc  XOR EAX,EAX
+007cf6de  MOV ESP,EBP
+007cf6e0  POP EBP
+007cf6e1  RET

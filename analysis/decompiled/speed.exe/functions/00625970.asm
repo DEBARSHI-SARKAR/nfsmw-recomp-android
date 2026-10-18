@@ -1,0 +1,6 @@
+00625970  MOV EAX,ECX
+00625972  MOV ECX,dword ptr [ESP + 0x4]
+00625976  MOV dword ptr [EAX + 0x4],0x10
+0062597d  MOV dword ptr [EAX],0x8a76d0
+00625983  MOV dword ptr [EAX + 0x8],ECX
+00625986  RET 0x4

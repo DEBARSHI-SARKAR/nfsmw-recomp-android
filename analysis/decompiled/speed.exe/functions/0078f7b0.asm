@@ -1,0 +1,12 @@
+0078f7b0  MOV EAX,dword ptr [ESP + 0x4]
+0078f7b4  MOV ECX,dword ptr [EAX]
+0078f7b6  MOV DL,byte ptr [ECX + 0x15]
+0078f7b9  TEST DL,DL
+0078f7bb  JNZ 0x0078f7cb
+0078f7bd  LEA ECX,[ECX]
+0078f7c0  MOV EAX,ECX
+0078f7c2  MOV ECX,dword ptr [EAX]
+0078f7c4  MOV DL,byte ptr [ECX + 0x15]
+0078f7c7  TEST DL,DL
+0078f7c9  JZ 0x0078f7c0
+0078f7cb  RET

@@ -1,0 +1,15 @@
+0085ab60  PUSH ESI
+0085ab61  MOV ESI,dword ptr [ESP + 0x8]
+0085ab65  CMP dword ptr [ESI],0x0
+0085ab68  JZ 0x0085ab87
+0085ab6a  MOV EAX,dword ptr [ESP + 0x10]
+0085ab6e  MOV ECX,dword ptr [ESP + 0xc]
+0085ab72  PUSH EAX
+0085ab73  PUSH ECX
+0085ab74  LEA EDX,[ESI + 0x8]
+0085ab77  PUSH EDX
+0085ab78  CALL 0x0085aeb0
+0085ab7d  ADD ESP,0xc
+0085ab80  MOV dword ptr [ESI + 0x4],0x1
+0085ab87  POP ESI
+0085ab88  RET

@@ -1,0 +1,81 @@
+006e5f80  PUSH EBP
+006e5f81  MOV EBP,ESP
+006e5f83  SUB ESP,0xc8
+006e5f89  PUSH EAX
+006e5f8a  MOV EAX,0xcfcecdcc
+006e5f8f  MOV EAX,0x6e5f8f
+006e5f94  MOV EAX,0x1
+006e5f99  MOV EAX,0x0
+006e5f9e  MOV EAX,0xcfcecdcc
+006e5fa3  POP EAX
+006e5fa4  MOV dword ptr [EBP + -0xc],0x0
+006e5fab  CALL 0x006cc7b0
+006e5fb0  MOV dword ptr [EBP + -0x4],EAX
+006e5fb3  MOV EAX,dword ptr [EBP + 0x8]
+006e5fb6  PUSH EAX
+006e5fb7  MOV ECX,dword ptr [EBP + -0x4]
+006e5fba  PUSH ECX
+006e5fbb  CALL 0x006ce660
+006e5fc0  ADD ESP,0x8
+006e5fc3  MOV dword ptr [EBP + -0x8],EAX
+006e5fc6  MOV EDX,dword ptr [EBP + 0xc]
+006e5fc9  PUSH EDX
+006e5fca  MOV EAX,dword ptr [EBP + -0x4]
+006e5fcd  PUSH EAX
+006e5fce  CALL 0x006ce660
+006e5fd3  ADD ESP,0x8
+006e5fd6  MOV dword ptr [EBP + -0x14],EAX
+006e5fd9  XOR ECX,ECX
+006e5fdb  MOV byte ptr [EBP + -0x15],CL
+006e5fde  MOV EDX,dword ptr [EBP + -0x14]
+006e5fe1  PUSH EDX
+006e5fe2  MOV EAX,dword ptr [EBP + -0x8]
+006e5fe5  PUSH EAX
+006e5fe6  LEA ECX,[EBP + -0x15]
+006e5fe9  CALL 0x006ce4d0
+006e5fee  MOV dword ptr [EBP + -0x10],EAX
+006e5ff1  MOV ECX,dword ptr [EBP + -0x10]
+006e5ff4  PUSH ECX
+006e5ff5  MOV EDX,dword ptr [EBP + -0x14]
+006e5ff8  PUSH EDX
+006e5ff9  MOV EAX,dword ptr [EBP + -0x8]
+006e5ffc  PUSH EAX
+006e5ffd  PUSH 0xd
+006e5fff  PUSH 0x6
+006e6001  CALL 0x005ac310
+006e6006  ADD ESP,0x14
+006e6009  MOV dword ptr [EBP + -0x10],EAX
+006e600c  XOR ECX,ECX
+006e600e  JZ 0x006e6020
+006e6010  CMP dword ptr [EBP + -0x8],0x1
+006e6014  JNZ 0x006e6020
+006e6016  MOV EDX,dword ptr [EBP + -0x4]
+006e6019  MOV dword ptr [EDX + 0x18],0x0
+006e6020  XOR EAX,EAX
+006e6022  JZ 0x006e602a
+006e6024  MOV ECX,dword ptr [EBP + 0xc]
+006e6027  MOV dword ptr [EBP + -0x10],ECX
+006e602a  MOV EDX,0x1
+006e602f  TEST EDX,EDX
+006e6031  JZ 0x006e603b
+006e6033  MOV EAX,dword ptr [EBP + -0x8]
+006e6036  MOV dword ptr [EBP + -0xc],EAX
+006e6039  JMP 0x006e604e
+006e603b  MOV ECX,dword ptr [EBP + -0x10]
+006e603e  PUSH ECX
+006e603f  MOV EDX,dword ptr [EBP + -0x4]
+006e6042  PUSH EDX
+006e6043  CALL 0x006ce4e0
+006e6048  ADD ESP,0x8
+006e604b  MOV dword ptr [EBP + -0xc],EAX
+006e604e  PUSH EAX
+006e604f  MOV EAX,0xcfcecdcc
+006e6054  MOV EAX,0x6e5f8f
+006e6059  MOV EAX,0x0
+006e605e  MOV EAX,0x0
+006e6063  MOV EAX,0xcecdcccb
+006e6068  POP EAX
+006e6069  MOV EAX,dword ptr [EBP + -0xc]
+006e606c  MOV ESP,EBP
+006e606e  POP EBP
+006e606f  RET

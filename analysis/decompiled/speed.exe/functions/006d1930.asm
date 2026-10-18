@@ -1,0 +1,86 @@
+006d1930  MOV ECX,dword ptr [0x00982c80]
+006d1936  TEST ECX,ECX
+006d1938  MOV EAX,dword ptr [ESP + 0xc]
+006d193c  PUSH ESI
+006d193d  PUSH EDI
+006d193e  MOV [0x00982bc8],EAX
+006d1943  MOV EDI,ECX
+006d1945  JZ 0x006d195a
+006d1947  MOV EDX,dword ptr [ECX]
+006d1949  MOV ESI,ECX
+006d194b  CALL dword ptr [EDX + 0x8]
+006d194e  MOV EAX,dword ptr [ESI + 0x48]
+006d1951  MOV ECX,dword ptr [EAX]
+006d1953  PUSH EAX
+006d1954  CALL dword ptr [ECX + 0x10c]
+006d195a  MOV ECX,dword ptr [0x0093dea0]
+006d1960  MOV dword ptr [0x00982c80],ECX
+006d1966  MOV EDX,dword ptr [ECX]
+006d1968  MOV ESI,ECX
+006d196a  CALL dword ptr [EDX + 0x4]
+006d196d  MOV EDX,dword ptr [ESI + 0x4c]
+006d1970  MOV EAX,[0x00982bdc]
+006d1975  MOV ECX,dword ptr [EAX]
+006d1977  PUSH EDX
+006d1978  PUSH EAX
+006d1979  CALL dword ptr [ECX + 0x15c]
+006d197f  MOV ESI,dword ptr [ESI + 0x48]
+006d1982  MOV EAX,dword ptr [ESI]
+006d1984  PUSH 0x0
+006d1986  LEA ECX,[ESP + 0x18]
+006d198a  PUSH ECX
+006d198b  PUSH ESI
+006d198c  CALL dword ptr [EAX + 0xfc]
+006d1992  MOV ECX,dword ptr [0x00982c80]
+006d1998  MOV EAX,dword ptr [ECX + 0x48]
+006d199b  MOV ESI,dword ptr [0x00982bc8]
+006d19a1  MOV ESI,dword ptr [ESI]
+006d19a3  MOV ESI,dword ptr [ESI + 0x18]
+006d19a6  MOV ECX,dword ptr [ECX + 0x44]
+006d19a9  MOV ECX,dword ptr [ECX + 0x4ac]
+006d19af  MOV EDX,dword ptr [EAX]
+006d19b1  PUSH ESI
+006d19b2  PUSH ECX
+006d19b3  PUSH EAX
+006d19b4  CALL dword ptr [EDX + 0xd0]
+006d19ba  MOV EDX,dword ptr [ESP + 0x18]
+006d19be  MOV EAX,dword ptr [ESP + 0x10]
+006d19c2  PUSH EDX
+006d19c3  PUSH EAX
+006d19c4  MOV byte ptr [EAX + 0x56],0x1
+006d19c8  MOV EAX,dword ptr [ESP + 0x14]
+006d19cc  PUSH EAX
+006d19cd  CALL 0x006d1260
+006d19d2  MOV ECX,dword ptr [0x0093dea0]
+006d19d8  MOV EDX,dword ptr [ECX]
+006d19da  ADD ESP,0xc
+006d19dd  MOV ESI,ECX
+006d19df  CALL dword ptr [EDX + 0x8]
+006d19e2  MOV EAX,dword ptr [ESI + 0x48]
+006d19e5  MOV ECX,dword ptr [EAX]
+006d19e7  PUSH EAX
+006d19e8  CALL dword ptr [ECX + 0x10c]
+006d19ee  TEST EDI,EDI
+006d19f0  MOV dword ptr [0x00982c80],0x0
+006d19fa  JZ 0x006d1a2e
+006d19fc  MOV dword ptr [0x00982c80],EDI
+006d1a02  MOV EDX,dword ptr [EDI]
+006d1a04  MOV ECX,EDI
+006d1a06  CALL dword ptr [EDX + 0x4]
+006d1a09  MOV EDX,dword ptr [EDI + 0x4c]
+006d1a0c  MOV EAX,[0x00982bdc]
+006d1a11  MOV ECX,dword ptr [EAX]
+006d1a13  PUSH EDX
+006d1a14  PUSH EAX
+006d1a15  CALL dword ptr [ECX + 0x15c]
+006d1a1b  MOV EDI,dword ptr [EDI + 0x48]
+006d1a1e  MOV EAX,dword ptr [EDI]
+006d1a20  PUSH 0x0
+006d1a22  LEA ECX,[ESP + 0x18]
+006d1a26  PUSH ECX
+006d1a27  PUSH EDI
+006d1a28  CALL dword ptr [EAX + 0xfc]
+006d1a2e  POP EDI
+006d1a2f  MOV dword ptr [0x00982bc8],0x0
+006d1a39  POP ESI
+006d1a3a  RET

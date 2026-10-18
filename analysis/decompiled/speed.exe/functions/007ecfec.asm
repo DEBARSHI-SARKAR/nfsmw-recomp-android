@@ -1,0 +1,16 @@
+007ecfec  PUSH EBP
+007ecfed  MOV EBP,ESP
+007ecfef  MOV EAX,ECX
+007ecff1  MOV ECX,dword ptr [EBP + 0x8]
+007ecff4  PUSH ESI
+007ecff5  LEA ESI,[EAX + 0x4]
+007ecff8  MOV dword ptr [EAX],0x8a894c
+007ecffe  SUB ESI,ECX
+007ed000  MOV DL,byte ptr [ECX]
+007ed002  MOV byte ptr [ESI + ECX*0x1],DL
+007ed005  INC ECX
+007ed006  TEST DL,DL
+007ed008  JNZ 0x007ed000
+007ed00a  POP ESI
+007ed00b  POP EBP
+007ed00c  RET 0x4

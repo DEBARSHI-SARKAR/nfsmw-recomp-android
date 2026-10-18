@@ -1,0 +1,10 @@
+0046a150  FLD float ptr [ECX + 0x8]
+0046a153  MOV EAX,dword ptr [ESP + 0x4]
+0046a157  FLD float ptr [ESP + 0x4]
+0046a15b  MOV dword ptr [ECX],EAX
+0046a15d  FUCOMPP
+0046a15f  FNSTSW AX
+0046a161  TEST AH,0x44
+0046a164  JNP 0x0046a16c
+0046a166  MOV word ptr [ECX + 0x28],0x2
+0046a16c  RET 0x4

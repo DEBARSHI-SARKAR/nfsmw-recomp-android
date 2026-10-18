@@ -1,0 +1,11 @@
+/* speed.exe 0086c5b8 Unwind@0086c5b8; analysis pseudocode, not buildable source.
+ * calls 004cd370 FUN_004cd370
+ */
+
+void Unwind_0086c5b8(void)
+
+{
+  FUN_004cd370();
+  return;
+}
+

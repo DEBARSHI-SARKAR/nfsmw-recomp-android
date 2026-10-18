@@ -1,0 +1,3 @@
+00627970  MOV AL,byte ptr [ESP + 0x4]
+00627974  MOV byte ptr [ECX],AL
+00627976  RET 0x4

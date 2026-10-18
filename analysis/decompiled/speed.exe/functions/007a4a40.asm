@@ -1,0 +1,14 @@
+007a4a40  MOV EAX,dword ptr [ESP + 0x4]
+007a4a44  MOV CL,byte ptr [EAX + 0x1c]
+007a4a47  TEST CL,CL
+007a4a49  JNZ 0x007a4a64
+007a4a4b  MOV EAX,dword ptr [EAX + 0x10]
+007a4a4e  ADD EAX,-0x4c
+007a4a51  CMP EAX,0x3b
+007a4a54  JA 0x007a4a69
+007a4a56  MOVZX EAX,byte ptr [EAX + 0x7a4a78]
+007a4a5d  JMP dword ptr [EAX*0x4 + 0x7a4a70]
+007a4a64  XOR AL,AL
+007a4a66  RET 0x4
+007a4a69  MOV AL,0x1
+007a4a6b  RET 0x4

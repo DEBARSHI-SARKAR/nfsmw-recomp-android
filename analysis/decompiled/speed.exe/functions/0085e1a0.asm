@@ -1,0 +1,41 @@
+0085e1a0  PUSH EBP
+0085e1a1  MOV EBP,ESP
+0085e1a3  SUB ESP,0x8
+0085e1a6  CMP dword ptr [EBP + 0x8],0x0
+0085e1aa  JNZ 0x0085e1b5
+0085e1ac  MOV dword ptr [EBP + -0x8],0x0
+0085e1b3  JMP 0x0085e1de
+0085e1b5  CMP dword ptr [EBP + 0x8],0x1a
+0085e1b9  JBE 0x0085e1c2
+0085e1bb  MOV EAX,0x57
+0085e1c0  JMP 0x0085e20f
+0085e1c2  LEA EAX,[EBP + -0x4]
+0085e1c5  MOV dword ptr [EBP + -0x8],EAX
+0085e1c8  MOVSX ECX,byte ptr [EBP + 0x8]
+0085e1cc  ADD ECX,0x40
+0085e1cf  MOV byte ptr [EBP + -0x4],CL
+0085e1d2  MOV byte ptr [EBP + -0x3],0x3a
+0085e1d6  MOV byte ptr [EBP + -0x2],0x5c
+0085e1da  MOV byte ptr [EBP + -0x1],0x0
+0085e1de  MOV EDX,dword ptr [EBP + 0xc]
+0085e1e1  PUSH EDX
+0085e1e2  MOV EAX,dword ptr [EBP + 0xc]
+0085e1e5  ADD EAX,0x4
+0085e1e8  PUSH EAX
+0085e1e9  MOV ECX,dword ptr [EBP + 0xc]
+0085e1ec  ADD ECX,0xc
+0085e1ef  PUSH ECX
+0085e1f0  MOV EDX,dword ptr [EBP + 0xc]
+0085e1f3  ADD EDX,0x8
+0085e1f6  PUSH EDX
+0085e1f7  MOV EAX,dword ptr [EBP + -0x8]
+0085e1fa  PUSH EAX
+0085e1fb  CALL dword ptr [0x008900b8]
+0085e201  TEST EAX,EAX
+0085e203  JNZ 0x0085e20d
+0085e205  CALL dword ptr [0x00890188]
+0085e20b  JMP 0x0085e20f
+0085e20d  XOR EAX,EAX
+0085e20f  MOV ESP,EBP
+0085e211  POP EBP
+0085e212  RET

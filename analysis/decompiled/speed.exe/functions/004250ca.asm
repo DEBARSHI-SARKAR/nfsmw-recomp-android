@@ -1,0 +1,11 @@
+004250ca  MOV EAX,dword ptr [EBP + 0x8]
+004250cd  MOV ECX,dword ptr [EBP + -0x14]
+004250d0  MOV dword ptr [EBP + -0x18],EAX
+004250d3  INC EAX
+004250d4  MOV dword ptr [EBP + -0x10],ESP
+004250d7  PUSH EAX
+004250d8  MOV byte ptr [EBP + -0x4],0x2
+004250dc  CALL 0x0040dcd0
+004250e1  MOV dword ptr [EBP + 0x8],EAX
+004250e4  MOV EAX,0x4250ea
+004250e9  RET

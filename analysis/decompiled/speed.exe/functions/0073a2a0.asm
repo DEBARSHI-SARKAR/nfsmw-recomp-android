@@ -1,0 +1,13 @@
+0073a2a0  MOV DL,byte ptr [ECX + 0xc]
+0073a2a3  MOV AL,0x2
+0073a2a5  CMP DL,AL
+0073a2a7  JNZ 0x0073a2bb
+0073a2a9  CMP byte ptr [ECX + 0xd],AL
+0073a2ac  JNZ 0x0073a2bb
+0073a2ae  MOV AL,byte ptr [ECX + 0xe]
+0073a2b1  TEST AL,AL
+0073a2b3  JZ 0x0073a2bb
+0073a2b5  MOV EAX,0x1
+0073a2ba  RET
+0073a2bb  XOR EAX,EAX
+0073a2bd  RET

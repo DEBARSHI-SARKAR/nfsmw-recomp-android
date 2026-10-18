@@ -1,0 +1,33 @@
+0066b150  PUSH ESI
+0066b151  MOV ESI,ECX
+0066b153  MOV EAX,dword ptr [ESI]
+0066b155  CALL dword ptr [EAX + 0x20]
+0066b158  TEST EAX,EAX
+0066b15a  JZ 0x0066b189
+0066b15c  MOV EDX,dword ptr [ESI]
+0066b15e  MOV ECX,ESI
+0066b160  CALL dword ptr [EDX + 0x20]
+0066b163  MOV EDX,dword ptr [EAX]
+0066b165  MOV ECX,EAX
+0066b167  CALL dword ptr [EDX + 0x54]
+0066b16a  MOV EDX,dword ptr [EAX]
+0066b16c  MOV ECX,EAX
+0066b16e  CALL dword ptr [EDX + 0x28]
+0066b171  MOV EDX,dword ptr [EAX]
+0066b173  MOV ECX,dword ptr [ESP + 0x8]
+0066b177  MOV dword ptr [ECX],EDX
+0066b179  MOV EDX,dword ptr [EAX + 0x4]
+0066b17c  MOV dword ptr [ECX + 0x4],EDX
+0066b17f  MOV EAX,dword ptr [EAX + 0x8]
+0066b182  MOV dword ptr [ECX + 0x8],EAX
+0066b185  POP ESI
+0066b186  RET 0x4
+0066b189  MOV EDX,dword ptr [0x008a2fb4]
+0066b18f  MOV ECX,dword ptr [ESP + 0x8]
+0066b193  MOV dword ptr [ECX],EDX
+0066b195  MOV EAX,[0x008a2fb8]
+0066b19a  MOV dword ptr [ECX + 0x4],EAX
+0066b19d  MOV EDX,dword ptr [0x008a2fbc]
+0066b1a3  MOV dword ptr [ECX + 0x8],EDX
+0066b1a6  POP ESI
+0066b1a7  RET 0x4

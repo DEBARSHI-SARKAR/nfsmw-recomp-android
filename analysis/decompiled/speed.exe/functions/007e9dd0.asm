@@ -1,0 +1,2 @@
+007e9dd0  MOV EAX,0x20
+007e9dd5  RET

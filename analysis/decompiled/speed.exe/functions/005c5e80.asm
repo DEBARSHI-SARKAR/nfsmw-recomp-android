@@ -1,0 +1,3 @@
+005c5e80  FLD float ptr [ESP + 0x4]
+005c5e84  FSQRT
+005c5e86  RET

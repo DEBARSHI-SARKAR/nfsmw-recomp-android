@@ -1,0 +1,2 @@
+00620450  MOV dword ptr [ECX],0x8967e4
+00620456  RET

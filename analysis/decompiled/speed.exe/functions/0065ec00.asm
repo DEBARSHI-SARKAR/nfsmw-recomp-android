@@ -1,0 +1,46 @@
+0065ec00  PUSH ECX
+0065ec01  MOV EDX,dword ptr [ECX + 0x4]
+0065ec04  MOV EAX,dword ptr [EDX + 0x4]
+0065ec07  PUSH EBX
+0065ec08  MOV BL,byte ptr [EAX + 0x15]
+0065ec0b  TEST BL,BL
+0065ec0d  PUSH ESI
+0065ec0e  PUSH EDI
+0065ec0f  MOV EDI,dword ptr [ESP + 0x18]
+0065ec13  JNZ 0x0065ec2c
+0065ec15  MOV ESI,dword ptr [EDI]
+0065ec17  CMP dword ptr [EAX + 0xc],ESI
+0065ec1a  JNC 0x0065ec21
+0065ec1c  MOV EAX,dword ptr [EAX + 0x8]
+0065ec1f  JMP 0x0065ec25
+0065ec21  MOV EDX,EAX
+0065ec23  MOV EAX,dword ptr [EAX]
+0065ec25  MOV BL,byte ptr [EAX + 0x15]
+0065ec28  TEST BL,BL
+0065ec2a  JZ 0x0065ec17
+0065ec2c  MOV EAX,dword ptr [ECX + 0x4]
+0065ec2f  CMP EDX,EAX
+0065ec31  MOV dword ptr [ESP + 0x18],EDX
+0065ec35  JZ 0x0065ec51
+0065ec37  MOV ECX,dword ptr [EDI]
+0065ec39  CMP ECX,dword ptr [EDX + 0xc]
+0065ec3c  JC 0x0065ec51
+0065ec3e  LEA EAX,[ESP + 0x18]
+0065ec42  MOV EDX,dword ptr [EAX]
+0065ec44  MOV EAX,dword ptr [ESP + 0x14]
+0065ec48  POP EDI
+0065ec49  POP ESI
+0065ec4a  MOV dword ptr [EAX],EDX
+0065ec4c  POP EBX
+0065ec4d  POP ECX
+0065ec4e  RET 0x8
+0065ec51  MOV dword ptr [ESP + 0xc],EAX
+0065ec55  LEA EAX,[ESP + 0xc]
+0065ec59  MOV EDX,dword ptr [EAX]
+0065ec5b  MOV EAX,dword ptr [ESP + 0x14]
+0065ec5f  POP EDI
+0065ec60  POP ESI
+0065ec61  MOV dword ptr [EAX],EDX
+0065ec63  POP EBX
+0065ec64  POP ECX
+0065ec65  RET 0x8

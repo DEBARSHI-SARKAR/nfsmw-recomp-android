@@ -1,0 +1,11 @@
+004d76d0  MOV EAX,dword ptr [ESP + 0x4]
+004d76d4  CMP EAX,-0x64
+004d76d7  JGE 0x004d76e4
+004d76d9  MOV EAX,0xffffff9c
+004d76de  MOV dword ptr [ECX + 0x1c],EAX
+004d76e1  RET 0x4
+004d76e4  CMP EAX,0x64
+004d76e7  JLE 0x004d76ee
+004d76e9  MOV EAX,0x64
+004d76ee  MOV dword ptr [ECX + 0x1c],EAX
+004d76f1  RET 0x4

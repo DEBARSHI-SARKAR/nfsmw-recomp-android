@@ -1,0 +1,13 @@
+00510ce0  PUSH ESI
+00510ce1  MOV ESI,dword ptr [ESP + 0x8]
+00510ce5  PUSH ESI
+00510ce6  ADD ECX,0x74
+00510ce9  CALL 0x006515d0
+00510cee  FLD float ptr [ESI]
+00510cf0  FSUB float ptr [0x008933d4]
+00510cf6  FSTP float ptr [ESI]
+00510cf8  FLD float ptr [ESI + 0x4]
+00510cfb  FSUB float ptr [0x008933d4]
+00510d01  FSTP float ptr [ESI + 0x4]
+00510d04  POP ESI
+00510d05  RET 0x4

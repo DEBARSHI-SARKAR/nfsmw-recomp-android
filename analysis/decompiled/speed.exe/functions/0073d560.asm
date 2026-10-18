@@ -1,0 +1,75 @@
+0073d560  SUB ESP,0x14
+0073d563  MOV EAX,dword ptr [ECX + 0x8]
+0073d566  FLD float ptr [ESP + 0x18]
+0073d56a  MOV EDX,dword ptr [EAX + 0x4]
+0073d56d  MOV dword ptr [ESP + 0xc],EDX
+0073d571  MOV EDX,dword ptr [EAX + 0x8]
+0073d574  FCOMP float ptr [ESP + 0xc]
+0073d578  MOV dword ptr [ESP + 0x10],EDX
+0073d57c  MOV EDX,dword ptr [EAX + 0xc]
+0073d57f  MOV EAX,dword ptr [EAX + 0x10]
+0073d582  MOV dword ptr [ESP + 0x8],EAX
+0073d586  FNSTSW AX
+0073d588  MOV dword ptr [ESP + 0x4],EDX
+0073d58c  XOR EDX,EDX
+0073d58e  TEST AH,0x5
+0073d591  JP 0x0073d5c8
+0073d593  FLD float ptr [ESP + 0x18]
+0073d597  FCOMP float ptr [ESP + 0x4]
+0073d59b  FNSTSW AX
+0073d59d  TEST AH,0x41
+0073d5a0  JNZ 0x0073d5c8
+0073d5a2  FLD float ptr [ESP + 0x1c]
+0073d5a6  FCOMP float ptr [ESP + 0x10]
+0073d5aa  FNSTSW AX
+0073d5ac  TEST AH,0x5
+0073d5af  JP 0x0073d5c8
+0073d5b1  FLD float ptr [ESP + 0x1c]
+0073d5b5  FCOMP float ptr [ESP + 0x8]
+0073d5b9  FNSTSW AX
+0073d5bb  TEST AH,0x41
+0073d5be  JNZ 0x0073d5c8
+0073d5c0  XOR EAX,EAX
+0073d5c2  ADD ESP,0x14
+0073d5c5  RET 0x8
+0073d5c8  MOV ECX,dword ptr [ECX + 0x18]
+0073d5cb  CMP byte ptr [ECX],0x0
+0073d5ce  JZ 0x0073d648
+0073d5d0  FLD float ptr [ESP + 0x4]
+0073d5d4  FADD float ptr [ESP + 0xc]
+0073d5d8  FMUL float ptr [0x008933d4]
+0073d5de  FLD float ptr [ESP + 0x8]
+0073d5e2  FADD float ptr [ESP + 0x10]
+0073d5e6  FMUL float ptr [0x008933d4]
+0073d5ec  FSTP float ptr [ESP]
+0073d5ef  FLD float ptr [ESP + 0x18]
+0073d5f3  FCOMP
+0073d5f5  FLD float ptr [ESP + 0x1c]
+0073d5f9  FNSTSW AX
+0073d5fb  FCOMP float ptr [ESP]
+0073d5fe  TEST AH,0x5
+0073d601  FNSTSW AX
+0073d603  JP 0x0073d622
+0073d605  TEST AH,0x5
+0073d608  FSTP float ptr [ESP + 0x4]
+0073d60c  MOV EAX,dword ptr [ESP]
+0073d60f  JP 0x0073d61b
+0073d611  MOVZX EDX,byte ptr [ECX + EDX*0x4]
+0073d615  MOV dword ptr [ESP + 0x8],EAX
+0073d619  JMP 0x0073d642
+0073d61b  MOVZX EDX,byte ptr [ECX + EDX*0x4 + 0x1]
+0073d620  JMP 0x0073d63e
+0073d622  TEST AH,0x5
+0073d625  FSTP float ptr [ESP + 0xc]
+0073d629  MOV EAX,dword ptr [ESP]
+0073d62c  JP 0x0073d639
+0073d62e  MOVZX EDX,byte ptr [ECX + EDX*0x4 + 0x2]
+0073d633  MOV dword ptr [ESP + 0x8],EAX
+0073d637  JMP 0x0073d642
+0073d639  MOVZX EDX,byte ptr [ECX + EDX*0x4 + 0x3]
+0073d63e  MOV dword ptr [ESP + 0x10],EAX
+0073d642  CMP byte ptr [ECX + EDX*0x4],0x0
+0073d646  JNZ 0x0073d5d0
+0073d648  MOVZX EAX,byte ptr [ECX + EDX*0x4 + 0x1]
+0073d64d  ADD ESP,0x14
+0073d650  RET 0x8

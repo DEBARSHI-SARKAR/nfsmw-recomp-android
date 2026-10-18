@@ -1,0 +1,21 @@
+00663c00  PUSH ESI
+00663c01  MOV ESI,ECX
+00663c03  TEST byte ptr [ESI + 0xc],0x1
+00663c07  JNZ 0x00663c2d
+00663c09  MOV EDX,dword ptr [ESI + 0x4]
+00663c0c  MOV ECX,dword ptr [0x008f7ea8]
+00663c12  MOV EAX,dword ptr [ECX]
+00663c14  PUSH 0x0
+00663c16  SHL EDX,0x4
+00663c19  PUSH EDX
+00663c1a  MOV EDX,dword ptr [ESI]
+00663c1c  PUSH EDX
+00663c1d  CALL dword ptr [EAX + 0x4]
+00663c20  MOV dword ptr [ESI],0x0
+00663c26  MOV dword ptr [ESI + 0x4],0x0
+00663c2d  MOV EAX,dword ptr [ESI + 0xc]
+00663c30  AND EAX,0x1
+00663c33  MOV dword ptr [ESI + 0x8],0x0
+00663c3a  MOV dword ptr [ESI + 0xc],EAX
+00663c3d  POP ESI
+00663c3e  RET

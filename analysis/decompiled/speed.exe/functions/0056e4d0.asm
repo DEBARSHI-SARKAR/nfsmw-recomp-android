@@ -1,0 +1,2 @@
+0056e4d0  LEA EAX,[ECX + 0xe9]
+0056e4d6  RET

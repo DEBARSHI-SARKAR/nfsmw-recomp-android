@@ -1,0 +1,5 @@
+00667da0  MOV dword ptr [ECX],0x890970
+00667da6  PUSH ECX
+00667da7  MOV ECX,dword ptr [ECX + 0x4]
+00667daa  CALL 0x005d5a50
+00667daf  RET

@@ -1,0 +1,2 @@
+005dff70  MOV EAX,0x8fbf60
+005dff75  RET

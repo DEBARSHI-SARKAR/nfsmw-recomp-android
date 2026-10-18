@@ -1,0 +1,10 @@
+007fa317  PUSH ESI
+007fa318  MOV ESI,ECX
+007fa31a  DEC dword ptr [ESI + 0x4]
+007fa31d  JNZ 0x007fa326
+007fa31f  MOV EAX,dword ptr [ESI]
+007fa321  PUSH 0x1
+007fa323  CALL dword ptr [EAX + 0x10]
+007fa326  MOV EAX,dword ptr [ESI + 0x4]
+007fa329  POP ESI
+007fa32a  RET

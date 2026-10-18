@@ -1,0 +1,9 @@
+005e39e0  MOV EAX,dword ptr [ESP + 0x4]
+005e39e4  TEST EAX,EAX
+005e39e6  JZ 0x005e39f1
+005e39e8  CMP EAX,dword ptr [ECX + 0x2c]
+005e39eb  JNZ 0x005e39f4
+005e39ed  MOV byte ptr [EAX + 0x1d],0x1
+005e39f1  RET 0x4
+005e39f4  MOV dword ptr [ESP + 0x4],EAX
+005e39f8  JMP 0x005dc970

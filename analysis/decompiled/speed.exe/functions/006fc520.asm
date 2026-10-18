@@ -1,0 +1,20 @@
+006fc520  MOV EAX,dword ptr [ECX + 0x18]
+006fc523  TEST EAX,EAX
+006fc525  MOV EDX,dword ptr [ESP + 0x4]
+006fc529  JZ 0x006fc54f
+006fc52b  TEST EDX,EDX
+006fc52d  JZ 0x006fc543
+006fc52f  MOV EAX,dword ptr [EAX + 0x4]
+006fc532  CMP EAX,dword ptr [EDX + 0x4]
+006fc535  SETZ AL
+006fc538  TEST AL,AL
+006fc53a  JZ 0x006fc543
+006fc53c  MOV dword ptr [ECX + 0x18],0x0
+006fc543  MOV dword ptr [ESP + 0x4],EDX
+006fc547  MOV ECX,dword ptr [ECX + 0x1c]
+006fc54a  JMP 0x006fc060
+006fc54f  TEST EDX,EDX
+006fc551  JZ 0x006fc53c
+006fc553  MOV dword ptr [ESP + 0x4],EDX
+006fc557  MOV ECX,dword ptr [ECX + 0x1c]
+006fc55a  JMP 0x006fc060

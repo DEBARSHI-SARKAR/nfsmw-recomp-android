@@ -1,0 +1,7 @@
+00834d9e  PUSH EBP
+00834d9f  MOV EBP,ESP
+00834da1  MOV EAX,dword ptr [EBP + 0x8]
+00834da4  XADD.LOCK dword ptr [ECX],EAX
+00834da8  ADD EAX,dword ptr [EBP + 0x8]
+00834dab  POP EBP
+00834dac  RET 0x4

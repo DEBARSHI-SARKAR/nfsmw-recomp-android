@@ -1,0 +1,10 @@
+005dcec0  PUSH 0x0
+005dcec2  PUSH 0x1d33241a
+005dcec7  CALL 0x00454810
+005dcecc  TEST EAX,EAX
+005dcece  JNZ 0x005dceda
+005dced0  PUSH 0x4
+005dced2  CALL 0x006269b0
+005dced7  ADD ESP,0x4
+005dceda  MOV EAX,dword ptr [EAX]
+005dcedc  RET

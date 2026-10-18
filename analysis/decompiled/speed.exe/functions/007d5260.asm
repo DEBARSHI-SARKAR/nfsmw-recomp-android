@@ -1,0 +1,29 @@
+007d5260  PUSH EBP
+007d5261  MOV EBP,ESP
+007d5263  SUB ESP,0xc
+007d5266  MOV EAX,dword ptr [EBP + 0x8]
+007d5269  MOV ECX,dword ptr [EBP + 0xc]
+007d526c  SUB ECX,dword ptr [EAX + 0xc]
+007d526f  MOV dword ptr [EBP + -0x8],ECX
+007d5272  MOV EDX,dword ptr [EBP + -0x8]
+007d5275  SHR EDX,0xf
+007d5278  MOV dword ptr [EBP + -0x4],EDX
+007d527b  MOV EAX,0x80000000
+007d5280  MOV ECX,dword ptr [EBP + -0x4]
+007d5283  SHR EAX,CL
+007d5285  MOV ECX,dword ptr [EBP + 0x8]
+007d5288  AND EAX,dword ptr [ECX + 0x8]
+007d528b  JNZ 0x007d52a8
+007d528d  MOV EDX,dword ptr [EBP + -0x8]
+007d5290  AND EDX,0xf
+007d5293  JNZ 0x007d52a8
+007d5295  MOV EAX,dword ptr [EBP + -0x8]
+007d5298  AND EAX,0xfff
+007d529d  JZ 0x007d52a8
+007d529f  MOV dword ptr [EBP + -0xc],0x1
+007d52a6  JMP 0x007d52af
+007d52a8  MOV dword ptr [EBP + -0xc],0x0
+007d52af  MOV EAX,dword ptr [EBP + -0xc]
+007d52b2  MOV ESP,EBP
+007d52b4  POP EBP
+007d52b5  RET

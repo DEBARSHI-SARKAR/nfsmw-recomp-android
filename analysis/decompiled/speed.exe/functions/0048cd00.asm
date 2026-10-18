@@ -1,0 +1,4 @@
+0048cd00  MOV EAX,ECX
+0048cd02  MOV dword ptr [EAX],EAX
+0048cd04  MOV dword ptr [EAX + 0x4],EAX
+0048cd07  RET

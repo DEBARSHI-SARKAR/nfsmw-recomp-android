@@ -1,0 +1,16 @@
+007f621a  PUSH EBP
+007f621b  MOV EBP,ESP
+007f621d  MOV EAX,dword ptr [EBP + 0x8]
+007f6220  MOV EDX,dword ptr [EBP + 0x10]
+007f6223  MOV dword ptr [ECX + 0x4],EAX
+007f6226  CMP EAX,0x1
+007f6229  MOV EAX,dword ptr [EBP + 0xc]
+007f622c  MOV dword ptr [ECX],0x20
+007f6232  MOV dword ptr [ECX + 0x10],EDX
+007f6235  JNZ 0x007f623e
+007f6237  MOV EAX,dword ptr [EAX]
+007f6239  MOV dword ptr [ECX + 0x8],EAX
+007f623c  JMP 0x007f6241
+007f623e  MOV dword ptr [ECX + 0xc],EAX
+007f6241  POP EBP
+007f6242  RET 0xc

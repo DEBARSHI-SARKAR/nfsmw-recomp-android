@@ -1,0 +1,35 @@
+005de4b0  MOV EAX,FS:[0x0]
+005de4b6  PUSH -0x1
+005de4b8  PUSH 0x874eff
+005de4bd  PUSH EAX
+005de4be  MOV dword ptr FS:[0x0],ESP
+005de4c5  PUSH ESI
+005de4c6  MOV ESI,ECX
+005de4c8  CMP byte ptr [ESI + 0x8],0x2
+005de4cc  JNZ 0x005de515
+005de4ce  MOV AL,byte ptr [ESI + 0x9]
+005de4d1  FLD float ptr [ESI + 0xc]
+005de4d4  TEST AL,0x1
+005de4d6  FSUB float ptr [ESP + 0x14]
+005de4da  JNZ 0x005de4e2
+005de4dc  FMUL float ptr [0x00890da8]
+005de4e2  FCOMP float ptr [0x00890968]
+005de4e8  FNSTSW AX
+005de4ea  TEST AH,0x41
+005de4ed  JP 0x005de515
+005de4ef  PUSH 0xc
+005de4f1  CALL 0x00627400
+005de4f6  ADD ESP,0x4
+005de4f9  MOV dword ptr [ESP + 0x14],EAX
+005de4fd  TEST EAX,EAX
+005de4ff  MOV dword ptr [ESP + 0xc],0x0
+005de507  JZ 0x005de511
+005de509  PUSH ESI
+005de50a  MOV ECX,EAX
+005de50c  CALL 0x00641c20
+005de511  MOV byte ptr [ESI + 0x8],0x3
+005de515  MOV ECX,dword ptr [ESP + 0x4]
+005de519  MOV dword ptr FS:[0x0],ECX
+005de520  POP ESI
+005de521  ADD ESP,0xc
+005de524  RET 0x4

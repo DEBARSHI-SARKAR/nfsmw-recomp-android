@@ -1,0 +1,37 @@
+005fdff0  PUSH ECX
+005fdff1  PUSH ESI
+005fdff2  MOV ESI,ECX
+005fdff4  MOV ECX,dword ptr [ESI + 0x1968]
+005fdffa  TEST ECX,ECX
+005fdffc  JZ 0x005fe009
+005fdffe  CALL 0x005fcd20
+005fe003  FSTP float ptr [ESP + 0x4]
+005fe007  JMP 0x005fe011
+005fe009  MOV dword ptr [ESP + 0x4],0x0
+005fe011  MOV ECX,0x9b0fa0
+005fe016  CALL 0x00735620
+005fe01b  TEST AL,AL
+005fe01d  JZ 0x005fe032
+005fe01f  CALL 0x006e8de0
+005fe024  FSUB float ptr [0x009b0fdc]
+005fe02a  FSUB float ptr [0x008959e4]
+005fe030  JMP 0x005fe036
+005fe032  FLD float ptr [ESP + 0x4]
+005fe036  FSTP float ptr [ESI + 0x1974]
+005fe03c  CALL 0x006e8de0
+005fe041  FSTP float ptr [ESI + 0x1970]
+005fe047  MOV AL,byte ptr [ESI + 0x1978]
+005fe04d  TEST AL,AL
+005fe04f  JZ 0x005fe064
+005fe051  CALL 0x006e8de0
+005fe056  FSUB float ptr [ESI + 0x1970]
+005fe05c  FADD float ptr [ESI + 0x1974]
+005fe062  JMP 0x005fe06a
+005fe064  FLD float ptr [ESI + 0x1974]
+005fe06a  FSTP float ptr [ESI + 0x1974]
+005fe070  CALL 0x006e8de0
+005fe075  FSTP float ptr [ESI + 0x1970]
+005fe07b  MOV byte ptr [ESI + 0x1978],0x1
+005fe082  POP ESI
+005fe083  POP ECX
+005fe084  RET

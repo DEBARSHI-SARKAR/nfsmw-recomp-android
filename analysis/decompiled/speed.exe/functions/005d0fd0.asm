@@ -1,0 +1,16 @@
+005d0fd0  MOV ECX,dword ptr [ESP + 0x4]
+005d0fd4  TEST ECX,ECX
+005d0fd6  JZ 0x005d1001
+005d0fd8  MOV EAX,dword ptr [ESP + 0x8]
+005d0fdc  CMP EAX,0x400
+005d0fe1  JBE 0x005d0fed
+005d0fe3  PUSH ECX
+005d0fe4  CALL 0x004655f0
+005d0fe9  ADD ESP,0x4
+005d0fec  RET
+005d0fed  DEC EAX
+005d0fee  SHR EAX,0x4
+005d0ff1  MOV EDX,dword ptr [EAX*0x4 + 0x925b30]
+005d0ff8  MOV dword ptr [ECX],EDX
+005d0ffa  MOV dword ptr [EAX*0x4 + 0x925b30],ECX
+005d1001  RET

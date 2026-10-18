@@ -1,0 +1,20 @@
+004dacf0  MOV EAX,dword ptr [ESP + 0x4]
+004dacf4  CMP EAX,0x8
+004dacf7  JA 0x004dad38
+004dacf9  JMP dword ptr [EAX*0x4 + 0x4dad40]
+004dad00  MOV EAX,0x5
+004dad05  RET 0x4
+004dad08  MOV EAX,0x6
+004dad0d  RET 0x4
+004dad10  MOV EAX,0x7
+004dad15  RET 0x4
+004dad18  MOV EAX,0x8
+004dad1d  RET 0x4
+004dad20  MOV EAX,0x9
+004dad25  RET 0x4
+004dad28  MOV EAX,0xb
+004dad2d  RET 0x4
+004dad30  MOV EAX,0xc
+004dad35  RET 0x4
+004dad38  MOV EAX,0xa
+004dad3d  RET 0x4

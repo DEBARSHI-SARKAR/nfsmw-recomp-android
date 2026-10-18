@@ -1,0 +1,26 @@
+0040ad80  PUSH ESI
+0040ad81  MOV ESI,ECX
+0040ad83  MOV EAX,dword ptr [ESI]
+0040ad85  CALL dword ptr [EAX + 0x8]
+0040ad88  TEST EAX,EAX
+0040ad8a  JZ 0x0040adb4
+0040ad8c  MOV EDX,dword ptr [ESI]
+0040ad8e  MOV ECX,ESI
+0040ad90  CALL dword ptr [EDX + 0x8]
+0040ad93  MOV ECX,dword ptr [EAX + 0x1c]
+0040ad96  TEST ECX,ECX
+0040ad98  JZ 0x0040adb4
+0040ad9a  MOV EAX,dword ptr [ESI]
+0040ad9c  MOV ECX,ESI
+0040ad9e  CALL dword ptr [EAX + 0x8]
+0040ada1  MOV ECX,dword ptr [EAX + 0x1c]
+0040ada4  MOV EDX,dword ptr [ECX]
+0040ada6  CALL dword ptr [EDX + 0x20]
+0040ada9  TEST EAX,EAX
+0040adab  JZ 0x0040adb4
+0040adad  MOV EAX,0x1
+0040adb2  POP ESI
+0040adb3  RET
+0040adb4  XOR EAX,EAX
+0040adb6  POP ESI
+0040adb7  RET

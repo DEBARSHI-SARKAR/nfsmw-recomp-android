@@ -1,0 +1,12 @@
+0085c0f0  MOV EAX,dword ptr [ESI + 0xa8]
+0085c0f6  TEST EAX,EAX
+0085c0f8  JL 0x0085c115
+0085c0fa  PUSH EAX
+0085c0fb  MOV EAX,dword ptr [ESP + 0x8]
+0085c0ff  MOV ECX,dword ptr [EAX + 0x6c]
+0085c102  PUSH ECX
+0085c103  CALL 0x00864b80
+0085c108  ADD ESP,0x8
+0085c10b  MOV dword ptr [ESI + 0xa8],0xffffffff
+0085c115  MOV dword ptr [ESI + 0x90],0x5
+0085c11f  RET

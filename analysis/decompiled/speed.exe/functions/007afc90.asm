@@ -1,0 +1,98 @@
+007afc90  SUB ESP,0x38
+007afc93  PUSH EDI
+007afc94  MOV EDI,ECX
+007afc96  CALL 0x007aeeb0
+007afc9b  TEST AL,AL
+007afc9d  MOV ECX,dword ptr [0x0091cf90]
+007afca3  JZ 0x007afd78
+007afca9  TEST byte ptr [ECX + 0x12c],0x1
+007afcb0  JNZ 0x007afcbf
+007afcb2  MOV AL,[0x009b9e8d]
+007afcb7  TEST AL,AL
+007afcb9  JZ 0x007afd78
+007afcbf  XOR EAX,EAX
+007afcc1  XOR EDX,EDX
+007afcc3  MOV dword ptr [ESP + 0x1c],EAX
+007afcc7  MOV dword ptr [ESP + 0x2c],EDX
+007afccb  MOV dword ptr [ESP + 0x20],EAX
+007afccf  MOV dword ptr [ESP + 0x30],EDX
+007afcd3  MOV dword ptr [ESP + 0x24],EAX
+007afcd7  MOV dword ptr [ESP + 0x34],EDX
+007afcdb  MOV dword ptr [ESP + 0x28],EAX
+007afcdf  MOV EAX,dword ptr [EDI + 0x4]
+007afce2  MOV dword ptr [ESP + 0x38],EDX
+007afce6  MOV ECX,dword ptr [ECX + 0x10]
+007afce9  XOR EDX,EDX
+007afceb  MOV DL,byte ptr [EAX + 0x11]
+007afcee  ADD ECX,0x414
+007afcf4  PUSH EDX
+007afcf5  CALL 0x0056f120
+007afcfa  TEST EAX,EAX
+007afcfc  JNZ 0x007afd09
+007afcfe  FLD float ptr [0x00890da8]
+007afd04  POP EDI
+007afd05  ADD ESP,0x38
+007afd08  RET
+007afd09  PUSH EBX
+007afd0a  PUSH ESI
+007afd0b  MOV ECX,EAX
+007afd0d  CALL 0x0056f7b0
+007afd12  PUSH ECX
+007afd13  LEA ECX,[ESP + 0x10]
+007afd17  FSTP float ptr [ESP]
+007afd1a  CALL 0x0056f7a0
+007afd1f  MOV EAX,dword ptr [EDI + 0x1b4]
+007afd25  TEST EAX,EAX
+007afd27  LEA EBX,[EDI + 0x1b4]
+007afd2d  JZ 0x007afd34
+007afd2f  LEA ESI,[EAX + -0x4]
+007afd32  JMP 0x007afd36
+007afd34  XOR ESI,ESI
+007afd36  TEST EBX,EBX
+007afd38  JZ 0x007afd3f
+007afd3a  LEA EAX,[EBX + -0x4]
+007afd3d  JMP 0x007afd41
+007afd3f  XOR EAX,EAX
+007afd41  CMP ESI,EAX
+007afd43  JZ 0x007afd68
+007afd45  MOV AL,byte ptr [ESI + 0x14]
+007afd48  TEST AL,AL
+007afd4a  JZ 0x007afd5c
+007afd4c  MOV ECX,dword ptr [ESI + 0xc]
+007afd4f  LEA EAX,[ESP + 0xc]
+007afd53  PUSH EAX
+007afd54  PUSH ECX
+007afd55  MOV ECX,EDI
+007afd57  CALL 0x007af330
+007afd5c  MOV ESI,dword ptr [ESI + 0x4]
+007afd5f  TEST ESI,ESI
+007afd61  JZ 0x007afd34
+007afd63  ADD ESI,-0x4
+007afd66  JMP 0x007afd36
+007afd68  LEA ECX,[ESP + 0xc]
+007afd6c  CALL 0x0056f7b0
+007afd71  POP ESI
+007afd72  POP EBX
+007afd73  POP EDI
+007afd74  ADD ESP,0x38
+007afd77  RET
+007afd78  MOV EAX,dword ptr [EDI + 0x4]
+007afd7b  TEST EAX,EAX
+007afd7d  JZ 0x007afda3
+007afd7f  MOV ECX,dword ptr [ECX + 0x10]
+007afd82  XOR EDX,EDX
+007afd84  MOV DL,byte ptr [EAX + 0x11]
+007afd87  ADD ECX,0x414
+007afd8d  PUSH EDX
+007afd8e  CALL 0x0056f120
+007afd93  TEST EAX,EAX
+007afd95  JZ 0x007afda3
+007afd97  MOV ECX,EAX
+007afd99  CALL 0x0056f7b0
+007afd9e  POP EDI
+007afd9f  ADD ESP,0x38
+007afda2  RET
+007afda3  FLD float ptr [0x00890da8]
+007afda9  POP EDI
+007afdaa  ADD ESP,0x38
+007afdad  RET

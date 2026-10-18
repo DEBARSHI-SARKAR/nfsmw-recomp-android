@@ -1,0 +1,21 @@
+0047a9c0  PUSH ESI
+0047a9c1  MOV ESI,ECX
+0047a9c3  CALL 0x0047a8b0
+0047a9c8  MOV EAX,dword ptr [ESI + 0x34]
+0047a9cb  TEST EAX,EAX
+0047a9cd  JZ 0x0047a9f4
+0047a9cf  MOV EAX,dword ptr [ESI + 0x2c]
+0047a9d2  MOV ECX,dword ptr [ESI + 0x30]
+0047a9d5  MOV dword ptr [EAX + 0x94],ECX
+0047a9db  MOV EDX,dword ptr [ESI + 0x3c]
+0047a9de  MOV EAX,dword ptr [ESI + 0x38]
+0047a9e1  MOV ECX,dword ptr [ESI + 0x34]
+0047a9e4  PUSH EDX
+0047a9e5  MOV EDX,dword ptr [ESP + 0xc]
+0047a9e9  PUSH EAX
+0047a9ea  PUSH ECX
+0047a9eb  MOV ECX,dword ptr [ESI + 0x2c]
+0047a9ee  PUSH EDX
+0047a9ef  CALL 0x00468fa0
+0047a9f4  POP ESI
+0047a9f5  RET 0x4

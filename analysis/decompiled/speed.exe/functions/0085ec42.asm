@@ -1,0 +1,9 @@
+0085ec42  MOV EAX,dword ptr [EBP + -0x20]
+0085ec45  MOV ECX,dword ptr [EBP + -0x10]
+0085ec48  MOV dword ptr FS:[0x0],ECX
+0085ec4f  POP EDI
+0085ec50  POP ESI
+0085ec51  POP EBX
+0085ec52  MOV ESP,EBP
+0085ec54  POP EBP
+0085ec55  RET

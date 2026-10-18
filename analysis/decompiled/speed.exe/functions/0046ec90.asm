@@ -1,0 +1,75 @@
+0046ec90  PUSH ECX
+0046ec91  MOV ECX,dword ptr [ESP + 0x8]
+0046ec95  FLD float ptr [0x00890968]
+0046ec9b  MOV EAX,dword ptr [ECX + 0x70]
+0046ec9e  MOV dword ptr [ESP + 0x8],EAX
+0046eca2  FLD float ptr [ESP + 0x8]
+0046eca6  FCOMP float ptr [0x00894b68]
+0046ecac  FNSTSW AX
+0046ecae  TEST AH,0x41
+0046ecb1  JNZ 0x0046ed83
+0046ecb7  FLD float ptr [ESP + 0x8]
+0046ecbb  FLD float ptr [0x00894b64]
+0046ecc1  FCOMP float ptr [ESP + 0x8]
+0046ecc5  FNSTSW AX
+0046ecc7  TEST AH,0x5
+0046ecca  JP 0x0046ecd4
+0046eccc  FSTP ST0
+0046ecce  FLD float ptr [0x00894b64]
+0046ecd4  FLD float ptr [ESP + 0x8]
+0046ecd8  FUCOMPP
+0046ecda  FNSTSW AX
+0046ecdc  TEST AH,0x44
+0046ecdf  JP 0x0046ed81
+0046ece5  FSTP ST0
+0046ece7  FLD float ptr [ECX + 0x80]
+0046eced  FMUL float ptr [0x00890cd4]
+0046ecf3  FSUB float ptr [0x0089096c]
+0046ecf9  FST float ptr [ESP]
+0046ecfc  FCOMP float ptr [0x00890968]
+0046ed02  FNSTSW AX
+0046ed04  TEST AH,0x41
+0046ed07  JNZ 0x0046ed8e
+0046ed0d  FLD float ptr [ESP]
+0046ed10  FLD float ptr [0x0089096c]
+0046ed16  FCOMP float ptr [ESP]
+0046ed19  FNSTSW AX
+0046ed1b  TEST AH,0x5
+0046ed1e  JP 0x0046ed28
+0046ed20  FSTP ST0
+0046ed22  FLD float ptr [0x0089096c]
+0046ed28  FST float ptr [ESP]
+0046ed2b  FLD float ptr [ESP + 0x8]
+0046ed2f  FCOMP float ptr [0x00890da8]
+0046ed35  FNSTSW AX
+0046ed37  TEST AH,0x41
+0046ed3a  JNZ 0x0046ed96
+0046ed3c  FLD float ptr [ESP + 0x8]
+0046ed40  FLD float ptr [0x0089096c]
+0046ed46  FCOMP float ptr [ESP + 0x8]
+0046ed4a  FNSTSW AX
+0046ed4c  TEST AH,0x5
+0046ed4f  JP 0x0046ed59
+0046ed51  FSTP ST0
+0046ed53  FLD float ptr [0x0089096c]
+0046ed59  FLD float ptr [ESP + 0x8]
+0046ed5d  FUCOMPP
+0046ed5f  FNSTSW AX
+0046ed61  TEST AH,0x44
+0046ed64  JP 0x0046ed81
+0046ed66  FLD float ptr [ECX + 0x78]
+0046ed69  FCOMP float ptr [0x00894b60]
+0046ed6f  FNSTSW AX
+0046ed71  TEST AH,0x41
+0046ed74  JNZ 0x0046ed81
+0046ed76  FSTP ST0
+0046ed78  FLD float ptr [ESP]
+0046ed7b  FADD float ptr [0x00894b5c]
+0046ed81  POP ECX
+0046ed82  RET
+0046ed83  FLD float ptr [0x00894b68]
+0046ed89  JMP 0x0046ecd4
+0046ed8e  FLD float ptr [0x00890968]
+0046ed94  JMP 0x0046ed28
+0046ed96  FLD float ptr [0x00890da8]
+0046ed9c  JMP 0x0046ed59

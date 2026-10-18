@@ -1,0 +1,14 @@
+007cd480  PUSH EBP
+007cd481  MOV EBP,ESP
+007cd483  PUSH ECX
+007cd484  MOV dword ptr [EBP + -0x4],0x0
+007cd48b  CMP dword ptr [0x009baa20],0x2
+007cd492  JNZ 0x007cd4a4
+007cd494  CMP dword ptr [0x009baa2c],0x5
+007cd49b  JC 0x007cd4a4
+007cd49d  MOV EAX,0x1
+007cd4a2  JMP 0x007cd4a9
+007cd4a4  MOV EAX,0x3
+007cd4a9  MOV ESP,EBP
+007cd4ab  POP EBP
+007cd4ac  RET

@@ -1,0 +1,32 @@
+0041fce0  PUSH -0x1
+0041fce2  PUSH 0x867d28
+0041fce7  MOV EAX,FS:[0x0]
+0041fced  PUSH EAX
+0041fcee  MOV dword ptr FS:[0x0],ESP
+0041fcf5  PUSH ECX
+0041fcf6  MOV EAX,dword ptr [ESP + 0x18]
+0041fcfa  PUSH ESI
+0041fcfb  PUSH EDI
+0041fcfc  MOV EDI,dword ptr [ESP + 0x1c]
+0041fd00  PUSH EAX
+0041fd01  MOV ESI,ECX
+0041fd03  PUSH EDI
+0041fd04  MOV dword ptr [ESP + 0x10],ESI
+0041fd08  CALL 0x00418d90
+0041fd0d  XOR EAX,EAX
+0041fd0f  MOV dword ptr [ESI],0x8912c0
+0041fd15  MOV dword ptr [ESI + 0x8],0x8912b8
+0041fd1c  MOV dword ptr [ESI + 0x54],EAX
+0041fd1f  MOV EDI,dword ptr [EDI]
+0041fd21  MOV ECX,dword ptr [EDI + 0x4]
+0041fd24  PUSH 0x403f90
+0041fd29  MOV dword ptr [ESP + 0x18],EAX
+0041fd2d  CALL 0x005d59f0
+0041fd32  MOV ECX,dword ptr [ESP + 0xc]
+0041fd36  MOV dword ptr [ESI + 0x58],EAX
+0041fd39  POP EDI
+0041fd3a  MOV EAX,ESI
+0041fd3c  POP ESI
+0041fd3d  MOV dword ptr FS:[0x0],ECX
+0041fd44  ADD ESP,0x10
+0041fd47  RET 0x8

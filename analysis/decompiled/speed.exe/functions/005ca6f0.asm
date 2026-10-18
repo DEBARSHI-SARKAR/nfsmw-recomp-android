@@ -1,0 +1,35 @@
+005ca6f0  MOV EAX,dword ptr [ESP + 0x4]
+005ca6f4  FLD float ptr [EAX]
+005ca6f6  FMUL float ptr [EAX + 0x4]
+005ca6f9  FADD ST0,ST0
+005ca6fb  FLD float ptr [EAX]
+005ca6fd  FMUL float ptr [EAX + 0x8]
+005ca700  FADD ST0,ST0
+005ca702  FLD float ptr [EAX + 0xc]
+005ca705  FMUL float ptr [EAX + 0x4]
+005ca708  FADD ST0,ST0
+005ca70a  FLD float ptr [EAX + 0xc]
+005ca70d  FMUL float ptr [EAX + 0x8]
+005ca710  FADD ST0,ST0
+005ca712  FLD float ptr [EAX + 0x8]
+005ca715  FLD float ptr [EAX + 0x4]
+005ca718  MOV EAX,dword ptr [ESP + 0x8]
+005ca71c  FLD ST1
+005ca71e  FMUL ST2
+005ca720  FADD ST0,ST0
+005ca722  FLD ST1
+005ca724  FMUL ST2
+005ca726  FADD ST0,ST0
+005ca728  FADDP
+005ca72a  FSUBR float ptr [0x0089096c]
+005ca730  FSTP float ptr [EAX]
+005ca732  FSTP ST0
+005ca734  FSTP ST0
+005ca736  FADD ST0,ST3
+005ca738  FSTP float ptr [EAX + 0x4]
+005ca73b  FXCH
+005ca73d  FSUB ST0,ST1
+005ca73f  FSTP float ptr [EAX + 0x8]
+005ca742  FSTP ST0
+005ca744  FSTP ST0
+005ca746  RET

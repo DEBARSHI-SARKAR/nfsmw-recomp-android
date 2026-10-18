@@ -1,0 +1,2 @@
+00725560  MOV dword ptr [0x009a3abc],0x0
+0072556a  RET

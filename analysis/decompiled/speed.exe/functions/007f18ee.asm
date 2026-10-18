@@ -1,0 +1,8 @@
+007f18ee  PUSH EBP
+007f18ef  MOV EBP,ESP
+007f18f1  CALL 0x007f18d7
+007f18f6  MOV ECX,dword ptr [EBP + 0x8]
+007f18f9  MOV dword ptr [0x009bb414],ECX
+007f18ff  MOV EAX,dword ptr [ECX]
+007f1901  POP EBP
+007f1902  JMP dword ptr [EAX + 0x8]

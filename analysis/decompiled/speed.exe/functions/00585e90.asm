@@ -1,0 +1,44 @@
+00585e90  PUSH ECX
+00585e91  MOV EDX,dword ptr [ESP + 0x1c]
+00585e95  PUSH ESI
+00585e96  MOV ESI,dword ptr [ESP + 0xc]
+00585e9a  MOVSX EAX,word ptr [ESI + 0x44]
+00585e9e  MOVSX ECX,word ptr [ESI + 0x46]
+00585ea2  MOV dword ptr [ESP + 0xc],EAX
+00585ea6  MOV EAX,dword ptr [ESP + 0x18]
+00585eaa  PUSH EDX
+00585eab  FILD dword ptr [ESP + 0x10]
+00585eaf  MOV dword ptr [ESP + 0x8],ECX
+00585eb3  PUSH EAX
+00585eb4  MOV EDX,dword ptr [ESP + 0x18]
+00585eb8  FSTP float ptr [ESP + 0x14]
+00585ebc  PUSH 0x3f800000
+00585ec1  FILD dword ptr [ESP + 0x10]
+00585ec5  PUSH 0x3f800000
+00585eca  FLD float ptr [0x008933d4]
+00585ed0  PUSH 0x0
+00585ed2  PUSH 0x0
+00585ed4  FMUL ST1
+00585ed6  PUSH 0x3f800000
+00585edb  SUB ESP,0x8
+00585ede  FCHS
+00585ee0  FSTP float ptr [ESP + 0x28]
+00585ee4  FLD float ptr [ESP + 0x28]
+00585ee8  MOV ECX,dword ptr [ESP + 0x28]
+00585eec  FADD ST0,ST1
+00585eee  FSTP float ptr [ESP + 0x4]
+00585ef2  FSTP ST0
+00585ef4  FLD float ptr [ESP + 0x30]
+00585ef8  FADD float ptr [ESP + 0x34]
+00585efc  FSTP float ptr [ESP]
+00585eff  PUSH ECX
+00585f00  MOV ECX,dword ptr [ESP + 0x44]
+00585f04  PUSH EDX
+00585f05  CALL 0x00582660
+00585f0a  FLD float ptr [ESP + 0xc]
+00585f0e  TEST EAX,EAX
+00585f10  JZ 0x00585f18
+00585f12  MOV dword ptr [EAX + 0xb0],ESI
+00585f18  POP ESI
+00585f19  POP ECX
+00585f1a  RET 0x18

@@ -1,0 +1,36 @@
+0069afd0  PUSH ESI
+0069afd1  MOV ESI,ECX
+0069afd3  MOV EAX,dword ptr [ESI + 0x30]
+0069afd6  MOV ECX,dword ptr [EAX]
+0069afd8  TEST byte ptr [ECX + 0x1c],0x1
+0069afdc  JNZ 0x0069afeb
+0069afde  MOV EDX,dword ptr [ESI + 0x8]
+0069afe1  LEA ECX,[ESI + 0x8]
+0069afe4  CALL dword ptr [EDX + 0x34]
+0069afe7  TEST AL,AL
+0069afe9  JZ 0x0069afef
+0069afeb  XOR EAX,EAX
+0069afed  POP ESI
+0069afee  RET
+0069afef  MOV EAX,dword ptr [ESI]
+0069aff1  PUSH EDI
+0069aff2  MOV ECX,ESI
+0069aff4  CALL dword ptr [EAX + 0x4]
+0069aff7  MOV EDX,dword ptr [EAX]
+0069aff9  MOV ECX,EAX
+0069affb  CALL dword ptr [EDX + 0x24]
+0069affe  MOV ECX,dword ptr [ESI + 0xf0]
+0069b004  NEG AL
+0069b006  SBB EAX,EAX
+0069b008  AND EAX,0xfffffffc
+0069b00b  ADD EAX,0x68
+0069b00e  MOV EDI,EAX
+0069b010  MOV EAX,dword ptr [ECX]
+0069b012  CALL dword ptr [EAX + 0x58]
+0069b015  CMP EAX,0x2
+0069b018  JNZ 0x0069b020
+0069b01a  OR EDI,0x20000
+0069b020  MOV EAX,EDI
+0069b022  POP EDI
+0069b023  POP ESI
+0069b024  RET

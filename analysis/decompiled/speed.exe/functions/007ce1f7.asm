@@ -1,0 +1,43 @@
+007ce1f7  CMP byte ptr [EDX + 0xe],0x5
+007ce1fb  JNZ 0x007ce20e
+007ce1fd  MOV BX,word ptr [EBP + 0xffffff5c]
+007ce204  OR BH,0x2
+007ce207  AND BH,0xfe
+007ce20a  MOV BL,0x3f
+007ce20c  JMP 0x007ce212
+007ce20e  MOV BX,0x133f
+007ce212  MOV word ptr [EBP + 0xffffff5e],BX
+007ce219  FLDCW word ptr [EBP + 0xffffff5e]
+007ce21f  MOV EBX,0x90690c
+007ce224  FXAM
+007ce226  MOV dword ptr [EBP + 0xffffff6c],EDX
+007ce22c  FSTSW word ptr [EBP + 0xffffff60]
+007ce233  MOV byte ptr [EBP + 0xffffff70],0x0
+007ce23a  FXCH
+007ce23c  MOV CL,byte ptr [EBP + 0xffffff61]
+007ce242  FXAM
+007ce244  FSTSW word ptr [EBP + 0xffffff60]
+007ce24b  FXCH
+007ce24d  MOV CH,byte ptr [EBP + 0xffffff61]
+007ce253  SHL CH,0x1
+007ce255  SAR CH,0x1
+007ce257  ROL CH,0x1
+007ce259  MOV AL,CH
+007ce25b  AND AL,0xf
+007ce25d  XLAT EBX
+007ce25e  MOV AH,AL
+007ce260  SHL CL,0x1
+007ce262  SAR CL,0x1
+007ce264  ROL CL,0x1
+007ce266  MOV AL,CL
+007ce268  AND AL,0xf
+007ce26a  XLAT EBX
+007ce26b  SHL AH,0x1
+007ce26d  SHL AH,0x1
+007ce26f  OR AL,AH
+007ce271  MOVSX EAX,AL
+007ce274  AND ECX,0x404
+007ce27a  MOV EBX,EDX
+007ce27c  ADD EBX,EAX
+007ce27e  ADD EBX,0x10
+007ce281  JMP dword ptr [EBX]

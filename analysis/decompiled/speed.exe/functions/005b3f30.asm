@@ -1,0 +1,13 @@
+005b3f30  PUSH ESI
+005b3f31  MOV ESI,ECX
+005b3f33  MOV ECX,dword ptr [ESP + 0x8]
+005b3f37  CALL 0x005b2d80
+005b3f3c  MOV ECX,dword ptr [ESI + 0x8c]
+005b3f42  IMUL ECX,dword ptr [ESI + 0x60]
+005b3f46  ADD ECX,dword ptr [ESI + 0x88]
+005b3f4c  MOV EDX,dword ptr [ESI + 0x90]
+005b3f52  LEA ECX,[ECX + ECX*0x2]
+005b3f55  SHL ECX,0x4
+005b3f58  MOV dword ptr [ECX + EDX*0x1],EAX
+005b3f5b  POP ESI
+005b3f5c  RET 0x4

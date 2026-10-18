@@ -1,0 +1,3 @@
+0056c760  MOV EAX,dword ptr [ESP + 0x4]
+0056c764  MOV [0x008f535c],EAX
+0056c769  RET

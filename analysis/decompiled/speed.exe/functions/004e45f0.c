@@ -1,0 +1,10 @@
+/* speed.exe 004e45f0 FUN_004e45f0; analysis pseudocode, not buildable source.
+ */
+
+void __fastcall FUN_004e45f0(undefined4 *param_1)
+
+{
+  *param_1 = &PTR_LAB_00898bf8;
+  return;
+}
+

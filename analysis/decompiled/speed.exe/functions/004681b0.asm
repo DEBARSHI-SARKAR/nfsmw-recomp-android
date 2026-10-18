@@ -1,0 +1,5 @@
+004681b0  MOV EAX,dword ptr [ESP + 0x4]
+004681b4  MOV EDX,dword ptr [EAX + 0x4]
+004681b7  MOV dword ptr [ESP + 0x4],EDX
+004681bb  ADD ECX,0x98
+004681c1  JMP 0x0045a760

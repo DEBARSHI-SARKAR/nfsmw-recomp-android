@@ -1,0 +1,37 @@
+0066e410  MOV EDX,dword ptr [ESP + 0x4]
+0066e414  MOV EAX,dword ptr [EDX]
+0066e416  PUSH EBX
+0066e417  PUSH ESI
+0066e418  MOV ESI,dword ptr [EAX + 0x8]
+0066e41b  MOV dword ptr [EDX],ESI
+0066e41d  MOV ESI,dword ptr [EAX + 0x8]
+0066e420  MOV BL,byte ptr [ESI + 0x15]
+0066e423  TEST BL,BL
+0066e425  JNZ 0x0066e42a
+0066e427  MOV dword ptr [ESI + 0x4],EDX
+0066e42a  MOV ESI,dword ptr [EDX + 0x4]
+0066e42d  MOV dword ptr [EAX + 0x4],ESI
+0066e430  MOV ECX,dword ptr [ECX + 0x4]
+0066e433  CMP EDX,dword ptr [ECX + 0x4]
+0066e436  JNZ 0x0066e446
+0066e438  MOV dword ptr [ECX + 0x4],EAX
+0066e43b  POP ESI
+0066e43c  MOV dword ptr [EAX + 0x8],EDX
+0066e43f  MOV dword ptr [EDX + 0x4],EAX
+0066e442  POP EBX
+0066e443  RET 0x4
+0066e446  MOV ECX,dword ptr [EDX + 0x4]
+0066e449  CMP EDX,dword ptr [ECX + 0x8]
+0066e44c  JNZ 0x0066e45c
+0066e44e  MOV dword ptr [ECX + 0x8],EAX
+0066e451  POP ESI
+0066e452  MOV dword ptr [EAX + 0x8],EDX
+0066e455  MOV dword ptr [EDX + 0x4],EAX
+0066e458  POP EBX
+0066e459  RET 0x4
+0066e45c  MOV dword ptr [ECX],EAX
+0066e45e  POP ESI
+0066e45f  MOV dword ptr [EAX + 0x8],EDX
+0066e462  MOV dword ptr [EDX + 0x4],EAX
+0066e465  POP EBX
+0066e466  RET 0x4

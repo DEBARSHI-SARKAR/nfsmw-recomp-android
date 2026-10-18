@@ -1,0 +1,4 @@
+006274a0  MOV EAX,dword ptr [ESP + 0x4]
+006274a4  MOV [0x009203a8],EAX
+006274a9  MOV dword ptr [0x009203a4],0x0
+006274b3  RET

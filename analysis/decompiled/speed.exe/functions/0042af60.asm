@@ -1,0 +1,68 @@
+0042af60  MOV EAX,[0x0090d664]
+0042af65  MOV ECX,dword ptr [0x0090d66c]
+0042af6b  PUSH EBX
+0042af6c  PUSH ESI
+0042af6d  MOV ESI,dword ptr [ESP + 0xc]
+0042af71  LEA ECX,[EAX + ECX*0x4]
+0042af74  CMP EAX,ECX
+0042af76  PUSH EDI
+0042af77  JZ 0x0042af8b
+0042af79  LEA ESP,[ESP]
+0042af80  CMP dword ptr [EAX],ESI
+0042af82  JZ 0x0042af8b
+0042af84  ADD EAX,0x4
+0042af87  CMP EAX,ECX
+0042af89  JNZ 0x0042af80
+0042af8b  LEA EDX,[EAX + 0x4]
+0042af8e  PUSH EDX
+0042af8f  PUSH EAX
+0042af90  MOV ECX,0x90d660
+0042af95  CALL 0x0041bd10
+0042af9a  MOV EAX,[0x0090d878]
+0042af9f  XOR ECX,ECX
+0042afa1  CMP EAX,ECX
+0042afa3  JZ 0x0042afaa
+0042afa5  ADD EAX,-0x4
+0042afa8  JMP 0x0042afac
+0042afaa  XOR EAX,EAX
+0042afac  MOV EDX,0x90d878
+0042afb1  SUB EDX,0x4
+0042afb4  CMP EAX,EDX
+0042afb6  JZ 0x0042b02d
+0042afb8  CMP dword ptr [EAX + 0x1c],ESI
+0042afbb  JNZ 0x0042b01d
+0042afbd  MOV byte ptr [EAX + 0x2c],CL
+0042afc0  MOV dword ptr [EAX + 0x1c],ECX
+0042afc3  MOV EBX,dword ptr [0x008a2fb4]
+0042afc9  LEA EDI,[EAX + 0x10]
+0042afcc  MOV dword ptr [EDI],EBX
+0042afce  MOV EBX,dword ptr [0x008a2fb8]
+0042afd4  MOV dword ptr [EDI + 0x4],EBX
+0042afd7  MOV EBX,dword ptr [0x008a2fbc]
+0042afdd  MOV dword ptr [EDI + 0x8],EBX
+0042afe0  MOV EBX,dword ptr [0x008a2fb4]
+0042afe6  LEA EDI,[EAX + 0x20]
+0042afe9  MOV dword ptr [EDI],EBX
+0042afeb  MOV EBX,dword ptr [0x008a2fb8]
+0042aff1  MOV dword ptr [EDI + 0x4],EBX
+0042aff4  MOV EBX,dword ptr [0x008a2fbc]
+0042affa  MOV dword ptr [EDI + 0x8],EBX
+0042affd  MOV dword ptr [EAX + 0x3c],ECX
+0042b000  MOV EBX,dword ptr [0x008a2fb4]
+0042b006  LEA EDI,[EAX + 0x30]
+0042b009  MOV dword ptr [EDI],EBX
+0042b00b  MOV EBX,dword ptr [0x008a2fb8]
+0042b011  MOV dword ptr [EDI + 0x4],EBX
+0042b014  MOV EBX,dword ptr [0x008a2fbc]
+0042b01a  MOV dword ptr [EDI + 0x8],EBX
+0042b01d  MOV EAX,dword ptr [EAX + 0x4]
+0042b020  CMP EAX,ECX
+0042b022  JZ 0x0042b029
+0042b024  ADD EAX,-0x4
+0042b027  JMP 0x0042afb4
+0042b029  XOR EAX,EAX
+0042b02b  JMP 0x0042afb4
+0042b02d  POP EDI
+0042b02e  POP ESI
+0042b02f  POP EBX
+0042b030  RET

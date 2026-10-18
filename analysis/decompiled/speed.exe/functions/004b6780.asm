@@ -1,0 +1,16 @@
+004b6780  PUSH ESI
+004b6781  MOV ESI,ECX
+004b6783  CALL 0x004d61d0
+004b6788  XOR EAX,EAX
+004b678a  MOV dword ptr [ESI + 0x24],EAX
+004b678d  MOV dword ptr [ESI + 0x28],EAX
+004b6790  MOV dword ptr [ESI],0x896ea0
+004b6796  MOV dword ptr [ESI + 0x30],EAX
+004b6799  MOV dword ptr [ESI + 0x34],EAX
+004b679c  MOV dword ptr [ESI + 0x38],EAX
+004b679f  MOV dword ptr [ESI + 0x40],EAX
+004b67a2  MOV dword ptr [ESI + 0x44],EAX
+004b67a5  MOV dword ptr [ESI + 0x48],EAX
+004b67a8  MOV EAX,ESI
+004b67aa  POP ESI
+004b67ab  RET

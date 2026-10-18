@@ -1,0 +1,2 @@
+007ecc44  MOV EAX,0x9bb0c8
+007ecc49  RET

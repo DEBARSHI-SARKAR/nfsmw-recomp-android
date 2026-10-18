@@ -1,0 +1,38 @@
+004c7ea0  SUB ESP,0x10
+004c7ea3  PUSH EDI
+004c7ea4  MOV EDI,ECX
+004c7ea6  MOV ECX,dword ptr [0x009b2c14]
+004c7eac  XOR AL,AL
+004c7eae  TEST ECX,ECX
+004c7eb0  MOV byte ptr [ESP + 0x4],AL
+004c7eb4  JNZ 0x004c7ec0
+004c7eb6  MOV ECX,dword ptr [0x009aab58]
+004c7ebc  TEST ECX,ECX
+004c7ebe  JZ 0x004c7ec6
+004c7ec0  MOV AL,0x1
+004c7ec2  MOV byte ptr [ESP + 0x4],AL
+004c7ec6  CMP AL,byte ptr [EDI + 0x11]
+004c7ec9  MOV byte ptr [EDI + 0x10],AL
+004c7ecc  JZ 0x004c7eda
+004c7ece  MOV EAX,dword ptr [ESP + 0x4]
+004c7ed2  PUSH EAX
+004c7ed3  MOV ECX,EDI
+004c7ed5  CALL 0x004b1ee0
+004c7eda  MOV AL,byte ptr [EDI + 0x10]
+004c7edd  TEST AL,AL
+004c7edf  JZ 0x004c7f05
+004c7ee1  MOV ESI,dword ptr [EDI + 0x14]
+004c7ee4  TEST ESI,ESI
+004c7ee6  JZ 0x004c7ee1
+004c7ee8  CALL 0x0081bccb
+004c7eed  MOV EDX,dword ptr [ESI + 0x18]
+004c7ef0  LEA ECX,[ESP + 0x8]
+004c7ef4  PUSH ECX
+004c7ef5  PUSH EDX
+004c7ef6  CALL 0x0081ccaa
+004c7efb  ADD ESP,0x8
+004c7efe  CALL 0x0081bcd9
+004c7f03  JMP 0x004c7ee1
+004c7f05  POP EDI
+004c7f06  ADD ESP,0x10
+004c7f09  RET

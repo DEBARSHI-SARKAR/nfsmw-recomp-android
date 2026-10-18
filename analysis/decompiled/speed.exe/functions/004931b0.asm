@@ -1,0 +1,137 @@
+004931b0  SUB ESP,0x10
+004931b3  PUSH EDI
+004931b4  MOV EDI,dword ptr [ESP + 0x18]
+004931b8  TEST EDI,EDI
+004931ba  JZ 0x00493328
+004931c0  MOV EDX,dword ptr [ESP + 0x20]
+004931c4  PUSH EBX
+004931c5  MOV EBX,dword ptr [ESP + 0x20]
+004931c9  CMP EBX,EDX
+004931cb  PUSH ESI
+004931cc  LEA EAX,[EBX + 0x8]
+004931cf  JNZ 0x0049328f
+004931d5  FLD float ptr [ECX + 0x30]
+004931d8  MOV ESI,EDX
+004931da  FMUL float ptr [EAX + 0x4]
+004931dd  ADD EAX,0x10
+004931e0  FLD float ptr [ECX + 0x10]
+004931e3  ADD EDX,0x10
+004931e6  DEC EDI
+004931e7  FMUL float ptr [EAX + -0x14]
+004931ea  FADDP
+004931ec  FLD float ptr [ECX]
+004931ee  FMUL float ptr [EAX + -0x18]
+004931f1  FADDP
+004931f3  FLD float ptr [ECX + 0x20]
+004931f6  FMUL float ptr [EAX + -0x10]
+004931f9  FADDP
+004931fb  FSTP float ptr [ESP + 0xc]
+004931ff  MOV EBX,dword ptr [ESP + 0xc]
+00493203  FLD float ptr [ECX + 0x34]
+00493206  FMUL float ptr [EAX + -0xc]
+00493209  FLD float ptr [ECX + 0x24]
+0049320c  FMUL float ptr [EAX + -0x10]
+0049320f  FADDP
+00493211  FLD float ptr [ECX + 0x4]
+00493214  FMUL float ptr [EAX + -0x18]
+00493217  FADDP
+00493219  FLD float ptr [EAX + -0x14]
+0049321c  FMUL float ptr [ECX + 0x14]
+0049321f  FADDP
+00493221  FSTP float ptr [ESP + 0x10]
+00493225  FLD float ptr [ECX + 0x18]
+00493228  FMUL float ptr [EAX + -0x14]
+0049322b  FLD float ptr [ECX + 0x38]
+0049322e  FMUL float ptr [EAX + -0xc]
+00493231  FADDP
+00493233  FLD float ptr [ECX + 0x28]
+00493236  FMUL float ptr [EAX + -0x10]
+00493239  FADDP
+0049323b  FLD float ptr [ECX + 0x8]
+0049323e  FMUL float ptr [EAX + -0x18]
+00493241  FADDP
+00493243  FSTP float ptr [ESP + 0x14]
+00493247  FLD float ptr [EAX + -0x10]
+0049324a  FMUL float ptr [ECX + 0x2c]
+0049324d  FLD float ptr [ECX + 0xc]
+00493250  FMUL float ptr [EAX + -0x18]
+00493253  FADDP
+00493255  FLD float ptr [ECX + 0x1c]
+00493258  FMUL float ptr [EAX + -0x14]
+0049325b  FADDP
+0049325d  FLD float ptr [ECX + 0x3c]
+00493260  FMUL float ptr [EAX + -0xc]
+00493263  MOV dword ptr [ESI],EBX
+00493265  MOV EBX,dword ptr [ESP + 0x10]
+00493269  MOV dword ptr [ESI + 0x4],EBX
+0049326c  MOV EBX,dword ptr [ESP + 0x14]
+00493270  FADDP
+00493272  MOV dword ptr [ESI + 0x8],EBX
+00493275  FSTP float ptr [ESP + 0x18]
+00493279  MOV EBX,dword ptr [ESP + 0x18]
+0049327d  MOV dword ptr [ESI + 0xc],EBX
+00493280  JNZ 0x004931d5
+00493286  POP ESI
+00493287  POP EBX
+00493288  POP EDI
+00493289  ADD ESP,0x10
+0049328c  RET 0xc
+0049328f  MOV ESI,EDX
+00493291  SUB EDX,EBX
+00493293  FLD float ptr [EAX + -0x8]
+00493296  ADD EAX,0x10
+00493299  FMUL float ptr [ECX]
+0049329b  ADD ESI,0x10
+0049329e  DEC EDI
+0049329f  FLD float ptr [ECX + 0x30]
+004932a2  FMUL float ptr [EAX + -0xc]
+004932a5  FADDP
+004932a7  FLD float ptr [ECX + 0x20]
+004932aa  FMUL float ptr [EAX + -0x10]
+004932ad  FADDP
+004932af  FLD float ptr [ECX + 0x10]
+004932b2  FMUL float ptr [EAX + -0x14]
+004932b5  FADDP
+004932b7  FSTP float ptr [ESI + -0x10]
+004932ba  FLD float ptr [ECX + 0x4]
+004932bd  FMUL float ptr [EAX + -0x18]
+004932c0  FLD float ptr [ECX + 0x34]
+004932c3  FMUL float ptr [EAX + -0xc]
+004932c6  FADDP
+004932c8  FLD float ptr [ECX + 0x24]
+004932cb  FMUL float ptr [EAX + -0x10]
+004932ce  FADDP
+004932d0  FLD float ptr [EAX + -0x14]
+004932d3  FMUL float ptr [ECX + 0x14]
+004932d6  FADDP
+004932d8  FSTP float ptr [EAX + EDX*0x1 + -0x14]
+004932dc  FLD float ptr [ECX + 0x18]
+004932df  FMUL float ptr [EAX + -0x14]
+004932e2  FLD float ptr [EAX + -0x18]
+004932e5  FMUL float ptr [ECX + 0x8]
+004932e8  FADDP
+004932ea  FLD float ptr [ECX + 0x38]
+004932ed  FMUL float ptr [EAX + -0xc]
+004932f0  FADDP
+004932f2  FLD float ptr [ECX + 0x28]
+004932f5  FMUL float ptr [EAX + -0x10]
+004932f8  FADDP
+004932fa  FSTP float ptr [EAX + EDX*0x1 + -0x10]
+004932fe  FLD float ptr [EAX + -0xc]
+00493301  FMUL float ptr [ECX + 0x3c]
+00493304  FLD float ptr [EAX + -0x10]
+00493307  FMUL float ptr [ECX + 0x2c]
+0049330a  FADDP
+0049330c  FLD float ptr [ECX + 0xc]
+0049330f  FMUL float ptr [EAX + -0x18]
+00493312  FADDP
+00493314  FLD float ptr [ECX + 0x1c]
+00493317  FMUL float ptr [EAX + -0x14]
+0049331a  FADDP
+0049331c  FSTP float ptr [EAX + EDX*0x1 + -0xc]
+00493320  JNZ 0x00493293
+00493326  POP ESI
+00493327  POP EBX
+00493328  POP EDI
+00493329  ADD ESP,0x10
+0049332c  RET 0xc

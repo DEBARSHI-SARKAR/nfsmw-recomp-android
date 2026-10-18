@@ -1,0 +1,29 @@
+005d5ed0  PUSH EBX
+005d5ed1  MOV EBX,ECX
+005d5ed3  PUSH ESI
+005d5ed4  LEA ESI,[EBX + 0x64]
+005d5ed7  PUSH EDI
+005d5ed8  MOV ECX,ESI
+005d5eda  CALL 0x005d47c0
+005d5edf  MOV dword ptr [ESI + 0x4],EAX
+005d5ee2  XOR EAX,EAX
+005d5ee4  MOV dword ptr [ESI + 0x8],EAX
+005d5ee7  MOV dword ptr [EBX + 0x60],0x2
+005d5eee  MOV EDI,EBX
+005d5ef0  MOV ECX,0x10
+005d5ef5  MOV ESI,0x8a3028
+005d5efa  MOVSD.REP ES:EDI,ESI
+005d5efc  MOV dword ptr [EBX + 0x48],EAX
+005d5eff  MOV dword ptr [EBX + 0x44],EAX
+005d5f02  MOV dword ptr [EBX + 0x40],EAX
+005d5f05  MOV ECX,0x3f800000
+005d5f0a  MOV dword ptr [EBX + 0x4c],ECX
+005d5f0d  POP EDI
+005d5f0e  MOV dword ptr [EBX + 0x58],EAX
+005d5f11  MOV dword ptr [EBX + 0x54],EAX
+005d5f14  MOV dword ptr [EBX + 0x50],EAX
+005d5f17  POP ESI
+005d5f18  MOV dword ptr [EBX + 0x5c],ECX
+005d5f1b  MOV EAX,EBX
+005d5f1d  POP EBX
+005d5f1e  RET

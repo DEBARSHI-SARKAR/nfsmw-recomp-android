@@ -1,0 +1,2 @@
+006caf50  MOV EAX,0x2
+006caf55  RET

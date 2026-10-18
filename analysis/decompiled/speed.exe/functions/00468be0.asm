@@ -1,0 +1,35 @@
+00468be0  PUSH ECX
+00468be1  MOV EAX,dword ptr [ECX + 0x1c]
+00468be4  MOVZX ECX,word ptr [EAX + 0x284]
+00468beb  MOVZX EDX,word ptr [EAX + 0xc4]
+00468bf2  MOV dword ptr [ESP],ECX
+00468bf5  MOV ECX,dword ptr [ESP + 0x8]
+00468bf9  FILD dword ptr [ESP]
+00468bfc  MOV dword ptr [ESP],EDX
+00468bff  MOV EDX,0x2
+00468c04  FILD dword ptr [ESP]
+00468c07  FLD ST1
+00468c09  FMUL float ptr [0x008934e0]
+00468c0f  FADDP
+00468c11  FXCH
+00468c13  FMUL float ptr [ECX + 0x24]
+00468c16  FSTP float ptr [ESP + 0x8]
+00468c1a  FST float ptr [ECX]
+00468c1c  FLD float ptr [ECX + 0x8]
+00468c1f  FXCH
+00468c21  FUCOMPP
+00468c23  FNSTSW AX
+00468c25  TEST AH,0x44
+00468c28  JNP 0x00468c2e
+00468c2a  MOV word ptr [ECX + 0x28],DX
+00468c2e  FLD float ptr [ECX + 0xc]
+00468c31  MOV EAX,dword ptr [ESP + 0x8]
+00468c35  FLD float ptr [ESP + 0x8]
+00468c39  MOV dword ptr [ECX + 0x4],EAX
+00468c3c  FUCOMPP
+00468c3e  FNSTSW AX
+00468c40  TEST AH,0x44
+00468c43  JNP 0x00468c49
+00468c45  MOV word ptr [ECX + 0x28],DX
+00468c49  POP ECX
+00468c4a  RET 0x4

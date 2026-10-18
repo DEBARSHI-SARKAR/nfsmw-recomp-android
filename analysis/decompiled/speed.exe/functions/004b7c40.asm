@@ -1,0 +1,13 @@
+004b7c40  MOV EAX,dword ptr [ESP + 0x4]
+004b7c44  MOV ECX,dword ptr [ESP + 0x8]
+004b7c48  CMP EAX,ECX
+004b7c4a  JZ 0x004b7c5d
+004b7c4c  MOV EDX,dword ptr [ESP + 0xc]
+004b7c50  PUSH ESI
+004b7c51  MOV ESI,dword ptr [EDX]
+004b7c53  MOV dword ptr [EAX],ESI
+004b7c55  ADD EAX,0x4
+004b7c58  CMP EAX,ECX
+004b7c5a  JNZ 0x004b7c51
+004b7c5c  POP ESI
+004b7c5d  RET

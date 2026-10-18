@@ -1,0 +1,14 @@
+004d1a10  CMP dword ptr [0x008f86f8],0x1
+004d1a17  JNZ 0x004d1a2f
+004d1a19  MOV EAX,dword ptr [ESP + 0x8]
+004d1a1d  MOV ECX,dword ptr [ESP + 0x4]
+004d1a21  PUSH EAX
+004d1a22  PUSH ECX
+004d1a23  MOV ECX,dword ptr [0x00911fa8]
+004d1a29  CALL 0x004d1630
+004d1a2e  RET
+004d1a2f  MOV EDX,dword ptr [ESP + 0x8]
+004d1a33  PUSH EDX
+004d1a34  CALL dword ptr [ESP + 0x8]
+004d1a38  POP ECX
+004d1a39  RET

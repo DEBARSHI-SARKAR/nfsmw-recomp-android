@@ -1,0 +1,21 @@
+00824f3a  MOV ECX,dword ptr [ESP + 0x8]
+00824f3e  FILD dword ptr [ECX]
+00824f40  MOV EAX,dword ptr [ESP + 0x4]
+00824f44  FADD ST0,ST0
+00824f46  FIDIV dword ptr [ECX + 0x4]
+00824f49  FST float ptr [EAX + 0x24]
+00824f4c  FLD1
+00824f4e  FSUB ST0,ST1
+00824f50  FSTP float ptr [EAX + 0x20]
+00824f53  FSTP ST0
+00824f55  FLD float ptr [0x008ae820]
+00824f5b  FILD dword ptr [ECX + 0x8]
+00824f5e  FMUL float ptr [EAX + 0x24]
+00824f61  FMUL ST1
+00824f63  FSTP float ptr [EAX + 0x24]
+00824f66  FILD dword ptr [ECX + 0x8]
+00824f69  FMUL float ptr [EAX + 0x20]
+00824f6c  FMUL ST1
+00824f6e  FSTP float ptr [EAX + 0x20]
+00824f71  FSTP ST0
+00824f73  RET

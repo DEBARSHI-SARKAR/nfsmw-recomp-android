@@ -1,0 +1,7 @@
+004fc6c0  PUSH EDI
+004fc6c1  MOV EDI,dword ptr [ESP + 0x8]
+004fc6c5  MOV ECX,0x4c
+004fc6ca  XOR EAX,EAX
+004fc6cc  STOSD.REP ES:EDI
+004fc6ce  POP EDI
+004fc6cf  RET

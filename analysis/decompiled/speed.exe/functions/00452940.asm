@@ -1,0 +1,2 @@
+00452940  MOVZX EAX,word ptr [ECX + 0x2]
+00452944  RET

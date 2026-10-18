@@ -1,0 +1,8 @@
+0081eb3d  XOR EAX,EAX
+0081eb3f  MOV ECX,dword ptr [EAX + 0x90bd1c]
+0081eb45  ADD ECX,dword ptr [ESP + 0x4]
+0081eb49  ADD EAX,0x4
+0081eb4c  CMP EAX,0x18
+0081eb4f  MOV dword ptr [EAX + 0x9c1fe4],ECX
+0081eb55  JL 0x0081eb3f
+0081eb57  RET

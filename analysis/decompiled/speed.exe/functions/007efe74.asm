@@ -1,0 +1,7 @@
+007efe74  PUSH EBP
+007efe75  MOV EBP,ESP
+007efe77  MOV EAX,ECX
+007efe79  MOV ECX,dword ptr [EBP + 0x8]
+007efe7c  MOV dword ptr [EAX],ECX
+007efe7e  POP EBP
+007efe7f  RET 0x4

@@ -1,0 +1,7 @@
+004afb40  PUSH ESI
+004afb41  MOV ESI,ECX
+004afb43  CALL 0x004f4af0
+004afb48  MOV dword ptr [ESI + 0x34],0x0
+004afb4f  MOV AL,0x1
+004afb51  POP ESI
+004afb52  RET

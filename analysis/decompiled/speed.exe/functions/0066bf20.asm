@@ -1,0 +1,37 @@
+0066bf20  MOV ECX,dword ptr [ESP + 0x4]
+0066bf24  SUB ESP,0x1c
+0066bf27  PUSH 0x0
+0066bf29  PUSH 0xbd38d1ca
+0066bf2e  CALL 0x00454810
+0066bf33  TEST EAX,EAX
+0066bf35  JNZ 0x0066bf41
+0066bf37  PUSH 0xc
+0066bf39  CALL 0x006269b0
+0066bf3e  ADD ESP,0x4
+0066bf41  PUSH 0x0
+0066bf43  PUSH 0x0
+0066bf45  PUSH EAX
+0066bf46  LEA ECX,[ESP + 0x14]
+0066bf4a  CALL 0x00407510
+0066bf4f  MOV DL,byte ptr [ESP + 0x24]
+0066bf53  MOV EAX,dword ptr [EAX + 0x8]
+0066bf56  XOR ECX,ECX
+0066bf58  TEST DL,DL
+0066bf5a  SETZ CL
+0066bf5d  FLD float ptr [EAX + ECX*0x4 + 0x30]
+0066bf61  FSTP float ptr [ESP + 0x4]
+0066bf65  FLD float ptr [EAX + ECX*0x4 + 0x40]
+0066bf69  FSTP float ptr [ESP]
+0066bf6c  FLD float ptr [EAX + ECX*0x4 + 0x28]
+0066bf70  LEA ECX,[ESP + 0x8]
+0066bf74  FSTP float ptr [ESP + 0x24]
+0066bf78  CALL 0x0045a430
+0066bf7d  FLD float ptr [ESP + 0x24]
+0066bf81  FMUL float ptr [0x00890dc4]
+0066bf87  FMUL float ptr [ESP]
+0066bf8a  FMUL float ptr [0x00897188]
+0066bf90  FLD float ptr [ESP + 0x4]
+0066bf94  FMUL float ptr [0x008a9388]
+0066bf9a  FADDP
+0066bf9c  ADD ESP,0x1c
+0066bf9f  RET

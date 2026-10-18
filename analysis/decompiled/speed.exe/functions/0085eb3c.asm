@@ -1,0 +1,19 @@
+0085eb3c  PUSH 0x7cd5e4
+0085eb41  MOV EAX,FS:[0x0]
+0085eb47  PUSH EAX
+0085eb48  MOV EAX,dword ptr [ESP + 0x10]
+0085eb4c  MOV dword ptr [ESP + 0x10],EBP
+0085eb50  LEA EBP,[ESP + 0x10]
+0085eb54  SUB ESP,EAX
+0085eb56  PUSH EBX
+0085eb57  PUSH ESI
+0085eb58  PUSH EDI
+0085eb59  MOV EAX,dword ptr [EBP + -0x8]
+0085eb5c  MOV dword ptr [EBP + -0x18],ESP
+0085eb5f  PUSH EAX
+0085eb60  MOV EAX,dword ptr [EBP + -0x4]
+0085eb63  MOV dword ptr [EBP + -0x4],0xffffffff
+0085eb6a  MOV dword ptr [EBP + -0x8],EAX
+0085eb6d  LEA EAX,[EBP + -0x10]
+0085eb70  MOV FS:[0x0],EAX
+0085eb76  RET

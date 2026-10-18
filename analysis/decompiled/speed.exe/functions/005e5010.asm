@@ -1,0 +1,17 @@
+005e5010  PUSH ESI
+005e5011  MOV ESI,ECX
+005e5013  MOV AL,byte ptr [ESI + 0x8]
+005e5016  TEST AL,AL
+005e5018  JZ 0x005e502d
+005e501a  CALL 0x006e8de0
+005e501f  FSUB float ptr [ESI]
+005e5021  MOV byte ptr [ESI + 0x8],0x0
+005e5025  FADD float ptr [ESI + 0x4]
+005e5028  FSTP float ptr [ESI + 0x4]
+005e502b  POP ESI
+005e502c  RET
+005e502d  FLD float ptr [ESI + 0x4]
+005e5030  MOV byte ptr [ESI + 0x8],0x0
+005e5034  FSTP float ptr [ESI + 0x4]
+005e5037  POP ESI
+005e5038  RET

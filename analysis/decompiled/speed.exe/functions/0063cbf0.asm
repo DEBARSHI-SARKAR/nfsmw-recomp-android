@@ -1,0 +1,94 @@
+0063cbf0  PUSH ESI
+0063cbf1  PUSH EDI
+0063cbf2  MOV ESI,ECX
+0063cbf4  PUSH 0x8a7d3c
+0063cbf9  MOV dword ptr [ESI + 0x48],0x0
+0063cc00  CALL 0x005cc240
+0063cc05  MOV ECX,dword ptr [0x00920464]
+0063cc0b  ADD ESP,0x4
+0063cc0e  TEST ECX,ECX
+0063cc10  JZ 0x0063cc1d
+0063cc12  CMP dword ptr [ECX],EAX
+0063cc14  JZ 0x0063cc5d
+0063cc16  MOV ECX,dword ptr [ECX + 0x8]
+0063cc19  TEST ECX,ECX
+0063cc1b  JNZ 0x0063cc12
+0063cc1d  MOV EDX,dword ptr [ESI + 0x4]
+0063cc20  MOV dword ptr [ESI + EDX*0x4 + 0x8],0x0
+0063cc28  INC dword ptr [ESI + 0x4]
+0063cc2b  CALL 0x00628d30
+0063cc30  PUSH 0x8a7d30
+0063cc35  CALL 0x005cc240
+0063cc3a  MOV ECX,dword ptr [0x00920464]
+0063cc40  MOV EDX,dword ptr [ESI + 0x4]
+0063cc43  ADD ESP,0x4
+0063cc46  TEST ECX,ECX
+0063cc48  JZ 0x0063cca7
+0063cc4a  LEA EBX,[EBX]
+0063cc50  CMP dword ptr [ECX],EAX
+0063cc52  JZ 0x0063cc7f
+0063cc54  MOV ECX,dword ptr [ECX + 0x8]
+0063cc57  TEST ECX,ECX
+0063cc59  JNZ 0x0063cc50
+0063cc5b  JMP 0x0063cca7
+0063cc5d  PUSH 0x0
+0063cc5f  CALL dword ptr [ECX + 0x4]
+0063cc62  MOV EDI,EAX
+0063cc64  ADD ESP,0x4
+0063cc67  TEST EDI,EDI
+0063cc69  JZ 0x0063cc1d
+0063cc6b  MOV EAX,dword ptr [EDI]
+0063cc6d  MOV ECX,EDI
+0063cc6f  CALL dword ptr [EAX + 0xc]
+0063cc72  MOV ECX,dword ptr [ESI + 0x4]
+0063cc75  MOV dword ptr [ESI + ECX*0x4 + 0x8],EDI
+0063cc79  OR dword ptr [ESI + 0x48],0x1
+0063cc7d  JMP 0x0063cc28
+0063cc7f  PUSH EDX
+0063cc80  CALL dword ptr [ECX + 0x4]
+0063cc83  ADD ESP,0x4
+0063cc86  TEST EAX,EAX
+0063cc88  JZ 0x0063cca7
+0063cc8a  MOV ECX,dword ptr [ESI + 0x4]
+0063cc8d  MOV dword ptr [ESI + ECX*0x4 + 0x8],EAX
+0063cc91  MOV ECX,dword ptr [ESI + 0x4]
+0063cc94  MOV EAX,dword ptr [ESI + 0x48]
+0063cc97  MOV EDX,0x1
+0063cc9c  SHL EDX,CL
+0063cc9e  OR EAX,EDX
+0063cca0  INC ECX
+0063cca1  MOV dword ptr [ESI + 0x48],EAX
+0063cca4  MOV dword ptr [ESI + 0x4],ECX
+0063cca7  PUSH 0x8a7d20
+0063ccac  CALL 0x005cc240
+0063ccb1  MOV ECX,dword ptr [0x00920464]
+0063ccb7  MOV EDX,dword ptr [ESI + 0x4]
+0063ccba  ADD ESP,0x4
+0063ccbd  TEST ECX,ECX
+0063ccbf  JZ 0x0063ccf7
+0063ccc1  CMP dword ptr [ECX],EAX
+0063ccc3  JZ 0x0063cccf
+0063ccc5  MOV ECX,dword ptr [ECX + 0x8]
+0063ccc8  TEST ECX,ECX
+0063ccca  JNZ 0x0063ccc1
+0063cccc  POP EDI
+0063cccd  POP ESI
+0063ccce  RET
+0063cccf  PUSH EDX
+0063ccd0  CALL dword ptr [ECX + 0x4]
+0063ccd3  ADD ESP,0x4
+0063ccd6  TEST EAX,EAX
+0063ccd8  JZ 0x0063ccf7
+0063ccda  MOV ECX,dword ptr [ESI + 0x4]
+0063ccdd  MOV dword ptr [ESI + ECX*0x4 + 0x8],EAX
+0063cce1  MOV ECX,dword ptr [ESI + 0x4]
+0063cce4  MOV EAX,dword ptr [ESI + 0x48]
+0063cce7  MOV EDX,0x1
+0063ccec  SHL EDX,CL
+0063ccee  OR EAX,EDX
+0063ccf0  INC ECX
+0063ccf1  MOV dword ptr [ESI + 0x48],EAX
+0063ccf4  MOV dword ptr [ESI + 0x4],ECX
+0063ccf7  POP EDI
+0063ccf8  POP ESI
+0063ccf9  RET

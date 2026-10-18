@@ -1,0 +1,17 @@
+00732e40  SUB ESP,0x8
+00732e43  MOV EAX,dword ptr [ECX + 0x400]
+00732e49  SUB EAX,dword ptr [ECX + 0x404]
+00732e4f  MOV dword ptr [ESP],EAX
+00732e52  FILD dword ptr [ESP]
+00732e55  FIDIV dword ptr [0x008b5e88]
+00732e5b  FST float ptr [ESP]
+00732e5e  CALL 0x007c4b80
+00732e63  MOV dword ptr [ESP + 0x4],EAX
+00732e67  FILD dword ptr [ESP + 0x4]
+00732e6b  FCOM float ptr [ESP]
+00732e6e  FNSTSW AX
+00732e70  TEST AH,0x5
+00732e73  JP 0x00732e7b
+00732e75  FADD float ptr [0x0089096c]
+00732e7b  ADD ESP,0x8
+00732e7e  JMP 0x007c4b80

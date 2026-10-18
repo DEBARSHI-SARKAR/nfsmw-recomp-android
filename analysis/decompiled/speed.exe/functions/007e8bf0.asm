@@ -1,0 +1,12 @@
+007e8bf0  PUSH EBP
+007e8bf1  MOV EBP,ESP
+007e8bf3  MOV EAX,dword ptr [EBP + 0x8]
+007e8bf6  TEST EAX,EAX
+007e8bf8  JNZ 0x007e8c01
+007e8bfa  MOV dword ptr [ECX + 0x4],EAX
+007e8bfd  POP EBP
+007e8bfe  RET 0x4
+007e8c01  SUB EAX,ECX
+007e8c03  MOV dword ptr [ECX + 0x4],EAX
+007e8c06  POP EBP
+007e8c07  RET 0x4

@@ -1,0 +1,68 @@
+0082fa40  PUSH EBP
+0082fa41  MOV EBP,ESP
+0082fa43  SUB ESP,0x38
+0082fa46  PUSH EDI
+0082fa47  MOV EDI,dword ptr [EBP + 0x8]
+0082fa4a  MOV AX,word ptr [EDI + 0x4]
+0082fa4e  TEST AX,AX
+0082fa51  JGE 0x0082fa5d
+0082fa53  MOV EAX,0xffffffff
+0082fa58  POP EDI
+0082fa59  MOV ESP,EBP
+0082fa5b  POP EBP
+0082fa5c  RET
+0082fa5d  MOVSX EAX,AX
+0082fa60  TEST EAX,EAX
+0082fa62  PUSH ESI
+0082fa63  JL 0x0082fa82
+0082fa65  MOV EDX,dword ptr [0x009c2964]
+0082fa6b  MOV ECX,dword ptr [EDX + 0x18]
+0082fa6e  MOVZX ESI,word ptr [ECX + 0x12]
+0082fa72  CMP EAX,ESI
+0082fa74  JG 0x0082fa82
+0082fa76  MOV EDX,dword ptr [EDX + 0x1c]
+0082fa79  MOVZX EAX,word ptr [EDX + EAX*0x2]
+0082fa7d  LEA ESI,[ECX + EAX*0x4]
+0082fa80  JMP 0x0082fa84
+0082fa82  XOR ESI,ESI
+0082fa84  LEA ECX,[EBP + -0x38]
+0082fa87  PUSH ECX
+0082fa88  PUSH EDI
+0082fa89  CALL 0x00829230
+0082fa8e  MOV ECX,dword ptr [EBP + 0xc]
+0082fa91  MOV EAX,dword ptr [EBP + -0x30]
+0082fa94  ADD ESP,0x8
+0082fa97  TEST ECX,ECX
+0082fa99  JZ 0x0082fae7
+0082fa9b  MOV EDX,dword ptr [ESI + 0x4]
+0082fa9e  MOV EDI,dword ptr [ECX]
+0082faa0  SHR EDX,0x14
+0082faa3  XOR EDX,EDI
+0082faa5  AND EDX,0xf
+0082faa8  XOR EDI,EDX
+0082faaa  MOV dword ptr [ECX],EDI
+0082faac  MOV ESI,dword ptr [ESI + 0x8]
+0082faaf  MOV EDX,EDI
+0082fab1  SHR ESI,0x14
+0082fab4  XOR ESI,EDX
+0082fab6  AND ESI,0xf0
+0082fabc  XOR ESI,EDX
+0082fabe  MOV EDX,dword ptr [EBP + -0x18]
+0082fac1  MOV dword ptr [ECX + 0x4],EDX
+0082fac4  MOV EDX,dword ptr [EBP + -0x1c]
+0082fac7  MOV dword ptr [ECX + 0x8],EDX
+0082faca  MOV EDX,dword ptr [EBP + -0x20]
+0082facd  MOV dword ptr [ECX + 0xc],EDX
+0082fad0  MOV EDX,dword ptr [EBP + -0x10]
+0082fad3  MOV dword ptr [ECX + 0x14],EDX
+0082fad6  MOV EDX,dword ptr [EBP + -0xc]
+0082fad9  MOV dword ptr [ECX + 0x10],EDX
+0082fadc  MOV EDX,dword ptr [EBP + -0x14]
+0082fadf  MOV dword ptr [ECX],ESI
+0082fae1  MOV byte ptr [ECX + 0x1],AL
+0082fae4  MOV dword ptr [ECX + 0x18],EDX
+0082fae7  POP ESI
+0082fae8  POP EDI
+0082fae9  MOV ESP,EBP
+0082faeb  POP EBP
+0082faec  RET

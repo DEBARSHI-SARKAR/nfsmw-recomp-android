@@ -1,0 +1,25 @@
+004995d0  SUB ESP,0xc
+004995d3  MOV EAX,dword ptr [ESP + 0x10]
+004995d7  MOV ECX,dword ptr [EAX]
+004995d9  FLD float ptr [ECX]
+004995db  ADD ECX,0x4
+004995de  FMUL float ptr [0x0089551c]
+004995e4  MOV dword ptr [EAX],ECX
+004995e6  ADD ECX,0x4
+004995e9  FSTP float ptr [ESP]
+004995ec  FLD float ptr [ECX + -0x4]
+004995ef  MOV dword ptr [EAX],ECX
+004995f1  FMUL float ptr [0x0089551c]
+004995f7  ADD ECX,0x4
+004995fa  FSTP float ptr [ESP + 0x4]
+004995fe  FLD float ptr [ECX + -0x4]
+00499601  MOV dword ptr [EAX],ECX
+00499603  FMUL float ptr [0x0089551c]
+00499609  MOV EAX,dword ptr [ESP + 0x14]
+0049960d  PUSH EAX
+0049960e  LEA ECX,[ESP + 0x4]
+00499612  FSTP float ptr [ESP + 0xc]
+00499616  PUSH ECX
+00499617  CALL 0x0048d8e0
+0049961c  ADD ESP,0x14
+0049961f  RET

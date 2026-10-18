@@ -1,0 +1,2 @@
+00451770  MOV dword ptr [ECX],0x893c3c
+00451776  RET

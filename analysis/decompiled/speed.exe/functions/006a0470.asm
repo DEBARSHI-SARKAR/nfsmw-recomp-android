@@ -1,0 +1,28 @@
+006a0470  PUSH ESI
+006a0471  MOV ESI,ECX
+006a0473  MOV EAX,dword ptr [ESI]
+006a0475  CALL dword ptr [EAX + 0x2c]
+006a0478  TEST AL,AL
+006a047a  JZ 0x006a04ba
+006a047c  FLD float ptr [ESP + 0x8]
+006a0480  FADD float ptr [ESI + 0xa4]
+006a0486  FST float ptr [ESP + 0x8]
+006a048a  FCOMP float ptr [0x0089096c]
+006a0490  FNSTSW AX
+006a0492  TEST AH,0x5
+006a0495  JP 0x006a04be
+006a0497  FLD float ptr [ESP + 0x8]
+006a049b  FLD float ptr [0x00890968]
+006a04a1  FCOMP float ptr [ESP + 0x8]
+006a04a5  FNSTSW AX
+006a04a7  TEST AH,0x41
+006a04aa  JNZ 0x006a04b4
+006a04ac  FSTP ST0
+006a04ae  FLD float ptr [0x00890968]
+006a04b4  FSTP float ptr [ESI + 0xa4]
+006a04ba  POP ESI
+006a04bb  RET 0x4
+006a04be  FLD float ptr [0x0089096c]
+006a04c4  FSTP float ptr [ESI + 0xa4]
+006a04ca  POP ESI
+006a04cb  RET 0x4

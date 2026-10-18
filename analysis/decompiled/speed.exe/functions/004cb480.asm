@@ -1,0 +1,11 @@
+004cb480  MOV EAX,dword ptr [ESP + 0x8]
+004cb484  PUSH EAX
+004cb485  CALL 0x004cb3f0
+004cb48a  TEST EAX,EAX
+004cb48c  JNZ 0x004cb496
+004cb48e  MOV dword ptr [ESP + 0x8],EAX
+004cb492  LEA EAX,[ESP + 0x8]
+004cb496  MOV ECX,dword ptr [EAX]
+004cb498  MOV EAX,dword ptr [ESP + 0x4]
+004cb49c  MOV dword ptr [EAX],ECX
+004cb49e  RET 0x8

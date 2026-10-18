@@ -1,0 +1,21 @@
+0082ab80  PUSH ESI
+0082ab81  PUSH EDI
+0082ab82  MOV ESI,ECX
+0082ab84  CALL 0x0081bccb
+0082ab89  MOV EAX,dword ptr [ESI + 0x114]
+0082ab8f  PUSH EAX
+0082ab90  CALL 0x0081f39d
+0082ab95  ADD ESP,0x4
+0082ab98  MOV EDI,EAX
+0082ab9a  CALL 0x0081bcd9
+0082ab9f  MOV EDX,dword ptr [ESI]
+0082aba1  OR EAX,0xffffffff
+0082aba4  MOV ECX,ESI
+0082aba6  MOV dword ptr [ESI + 0x3c],0x1
+0082abad  MOV dword ptr [ESI + 0x114],EAX
+0082abb3  MOV dword ptr [ESI + 0x4],EAX
+0082abb6  CALL dword ptr [EDX + 0x8]
+0082abb9  MOV EAX,EDI
+0082abbb  POP EDI
+0082abbc  POP ESI
+0082abbd  RET

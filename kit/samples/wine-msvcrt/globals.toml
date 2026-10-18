@@ -1,0 +1,15 @@
+# globals.toml - sentinels in sample.exe's zero-filled .data (see game.toml).
+
+[globals.simulation_turn]
+addr = 0x00404200
+size = 4
+
+[globals.command_frame]
+addr = 0x00404210
+size = 4
+
+[globals.entity_base]
+addr = 0x00404220
+size = 4
+stride = 4
+count = 1

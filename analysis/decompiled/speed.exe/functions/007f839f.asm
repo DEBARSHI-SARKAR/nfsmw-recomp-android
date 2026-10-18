@@ -1,0 +1,13 @@
+007f839f  PUSH ESI
+007f83a0  MOV ESI,ECX
+007f83a2  CMP dword ptr [ESI + 0x4],0x0
+007f83a6  JZ 0x007f83bf
+007f83a8  PUSH dword ptr [ESI + 0xc]
+007f83ab  CALL 0x0081c886
+007f83b0  PUSH dword ptr [ESI + 0x4]
+007f83b3  CALL dword ptr [0x00909e58]
+007f83b9  AND dword ptr [ESI + 0x4],0x0
+007f83bd  POP ECX
+007f83be  POP ECX
+007f83bf  POP ESI
+007f83c0  RET

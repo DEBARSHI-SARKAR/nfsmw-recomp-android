@@ -1,0 +1,75 @@
+006fc060  MOV EAX,dword ptr [ESP + 0x4]
+006fc064  PUSH ESI
+006fc065  PUSH EDI
+006fc066  MOV EDI,ECX
+006fc068  MOV ECX,dword ptr [EAX + 0x4]
+006fc06b  PUSH 0x402820
+006fc070  CALL 0x005d59f0
+006fc075  MOV ESI,EAX
+006fc077  TEST ESI,ESI
+006fc079  MOV dword ptr [ESP + 0xc],ESI
+006fc07d  JZ 0x006fc098
+006fc07f  MOV ECX,dword ptr [EDI + 0x8]
+006fc082  MOV EAX,dword ptr [ECX]
+006fc084  CMP EAX,ECX
+006fc086  JZ 0x006fc093
+006fc088  CMP dword ptr [EAX + 0x8],ESI
+006fc08b  JZ 0x006fc093
+006fc08d  MOV EAX,dword ptr [EAX]
+006fc08f  CMP EAX,ECX
+006fc091  JNZ 0x006fc088
+006fc093  CMP EAX,dword ptr [EDI + 0x8]
+006fc096  JNZ 0x006fc09f
+006fc098  POP EDI
+006fc099  XOR AL,AL
+006fc09b  POP ESI
+006fc09c  RET 0x4
+006fc09f  MOV ECX,dword ptr [EDI + 0x8]
+006fc0a2  CMP EAX,ECX
+006fc0a4  PUSH EBX
+006fc0a5  LEA EBX,[EDI + 0x4]
+006fc0a8  JZ 0x006fc0cb
+006fc0aa  MOV ECX,dword ptr [EAX + 0x4]
+006fc0ad  MOV EDX,dword ptr [EAX]
+006fc0af  MOV dword ptr [ECX],EDX
+006fc0b1  MOV ECX,dword ptr [EAX]
+006fc0b3  MOV EDX,dword ptr [EAX + 0x4]
+006fc0b6  PUSH 0x0
+006fc0b8  PUSH 0xc
+006fc0ba  MOV dword ptr [ECX + 0x4],EDX
+006fc0bd  PUSH EAX
+006fc0be  MOV ECX,0x925b30
+006fc0c3  CALL 0x005d0370
+006fc0c8  DEC dword ptr [EBX + 0x8]
+006fc0cb  MOV ECX,dword ptr [EDI + 0x10]
+006fc0ce  MOV EAX,dword ptr [ESI]
+006fc0d0  PUSH ECX
+006fc0d1  MOV ECX,ESI
+006fc0d3  CALL dword ptr [EAX + 0xc]
+006fc0d6  TEST AL,AL
+006fc0d8  JZ 0x006fc0fd
+006fc0da  MOV EAX,dword ptr [EDI + 0x10]
+006fc0dd  MOV EDX,dword ptr [ESI]
+006fc0df  PUSH EAX
+006fc0e0  MOV ECX,ESI
+006fc0e2  CALL dword ptr [EDX + 0x8]
+006fc0e5  TEST AL,AL
+006fc0e7  JNZ 0x006fc0fd
+006fc0e9  LEA ECX,[ESP + 0x10]
+006fc0ed  PUSH ECX
+006fc0ee  MOV ECX,EBX
+006fc0f0  CALL 0x006fb9d0
+006fc0f5  POP EBX
+006fc0f6  POP EDI
+006fc0f7  XOR AL,AL
+006fc0f9  POP ESI
+006fc0fa  RET 0x4
+006fc0fd  MOV ECX,dword ptr [EDI + 0x10]
+006fc100  MOV EDX,dword ptr [ECX]
+006fc102  PUSH ESI
+006fc103  CALL dword ptr [EDX + 0x14]
+006fc106  POP EBX
+006fc107  POP EDI
+006fc108  MOV AL,0x1
+006fc10a  POP ESI
+006fc10b  RET 0x4

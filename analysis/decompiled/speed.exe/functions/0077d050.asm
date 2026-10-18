@@ -1,0 +1,15 @@
+0077d050  PUSH ESI
+0077d051  MOV ESI,ECX
+0077d053  CALL 0x00771f50
+0077d058  MOV dword ptr [ESI + 0x4],EAX
+0077d05b  MOV byte ptr [EAX + 0xf],0x1
+0077d05f  MOV EAX,dword ptr [ESI + 0x4]
+0077d062  MOV dword ptr [EAX + 0x4],EAX
+0077d065  MOV EAX,dword ptr [ESI + 0x4]
+0077d068  MOV dword ptr [EAX],EAX
+0077d06a  MOV EAX,dword ptr [ESI + 0x4]
+0077d06d  MOV dword ptr [EAX + 0x8],EAX
+0077d070  MOV dword ptr [ESI + 0x8],0x0
+0077d077  MOV EAX,ESI
+0077d079  POP ESI
+0077d07a  RET 0x8

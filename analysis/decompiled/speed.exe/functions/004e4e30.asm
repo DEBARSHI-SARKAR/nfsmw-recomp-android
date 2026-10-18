@@ -1,0 +1,24 @@
+004e4e30  PUSH EBP
+004e4e31  MOV EBP,ESP
+004e4e33  AND ESP,0xfffffff0
+004e4e36  SUB ESP,0x10
+004e4e39  MOV EAX,dword ptr [EBP + 0x14]
+004e4e3c  MOV ECX,dword ptr [EBP + 0x10]
+004e4e3f  MOV EDX,dword ptr [EBP + 0xc]
+004e4e42  PUSH EAX
+004e4e43  PUSH ECX
+004e4e44  PUSH EDX
+004e4e45  LEA EAX,[ESP + 0xc]
+004e4e49  PUSH EAX
+004e4e4a  CALL 0x0045f640
+004e4e4f  FLD float ptr [ESP + 0x10]
+004e4e53  MOV EAX,dword ptr [EBP + 0x8]
+004e4e56  MOV ECX,dword ptr [ESP + 0x14]
+004e4e5a  FSTP float ptr [EAX]
+004e4e5c  MOV EDX,dword ptr [ESP + 0x18]
+004e4e60  ADD ESP,0x10
+004e4e63  MOV dword ptr [EAX + 0x4],ECX
+004e4e66  MOV dword ptr [EAX + 0x8],EDX
+004e4e69  MOV ESP,EBP
+004e4e6b  POP EBP
+004e4e6c  RET

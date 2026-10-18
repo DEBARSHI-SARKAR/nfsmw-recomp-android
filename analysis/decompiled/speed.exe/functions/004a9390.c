@@ -1,0 +1,54 @@
+/* speed.exe 004a9390 FUN_004a9390; analysis pseudocode, not buildable source.
+ * calls 00494380 FUN_00494380
+ */
+
+void __thiscall
+FUN_004a9390(undefined4 *param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  undefined4 local_90;
+  undefined4 local_8c;
+  undefined4 local_88;
+  undefined4 local_84;
+  undefined4 local_80;
+  undefined4 local_7c;
+  undefined4 local_78;
+  undefined4 local_74;
+  undefined4 local_70;
+  undefined4 local_6c;
+  undefined4 local_68;
+  undefined4 local_64;
+  undefined4 local_60;
+  undefined4 local_5c;
+  undefined4 local_58;
+  undefined4 local_54;
+  undefined4 local_50 [19];
+  
+  local_60 = param_2;
+  local_5c = param_3;
+  local_90 = 0x3f800000;
+  local_8c = 0;
+  local_88 = 0;
+  local_84 = 0;
+  local_80 = 0;
+  local_7c = 0x3f800000;
+  local_78 = 0;
+  local_74 = 0;
+  local_70 = 0;
+  local_6c = 0;
+  local_68 = 0x3f800000;
+  local_64 = 0;
+  local_58 = param_4;
+  local_54 = 0x3f800000;
+  FUN_00494380(&local_90,param_1,local_50);
+  puVar2 = local_50;
+  for (iVar1 = 0x10; iVar1 != 0; iVar1 = iVar1 + -1) {
+    *param_1 = *puVar2;
+    puVar2 = puVar2 + 1;
+    param_1 = param_1 + 1;
+  }
+  return;
+}
+

@@ -1,0 +1,86 @@
+007ebb40  PUSH EBX
+007ebb41  PUSH ESI
+007ebb42  PUSH EDI
+007ebb43  MOV EDI,ECX
+007ebb45  XOR EBX,EBX
+007ebb47  XOR ESI,ESI
+007ebb49  TEST EDI,EDI
+007ebb4b  JZ 0x007ebc0b
+007ebb51  MOV ECX,EDI
+007ebb53  CALL 0x007e8ca0
+007ebb58  CMP EAX,0x10
+007ebb5b  JG 0x007ebbae
+007ebb5d  JZ 0x007ebb9b
+007ebb5f  DEC EAX
+007ebb60  JZ 0x007ebbfa
+007ebb66  DEC EAX
+007ebb67  JZ 0x007ebb85
+007ebb69  SUB EAX,0x2
+007ebb6c  JNZ 0x007ebc11
+007ebb72  TEST EBX,EBX
+007ebb74  JZ 0x007ebb7c
+007ebb76  ADD ESI,0xf
+007ebb79  AND ESI,0xfffffff0
+007ebb7c  MOV EAX,dword ptr [EDI + 0xc]
+007ebb7f  LEA ESI,[ESI + EAX*0x1 + 0x20]
+007ebb83  JMP 0x007ebbfa
+007ebb85  TEST EBX,EBX
+007ebb87  JZ 0x007ebb92
+007ebb89  ADD ESI,0x7f
+007ebb8c  AND ESI,0xffffff80
+007ebb8f  SUB ESI,0x20
+007ebb92  MOV ECX,dword ptr [EDI + 0xc]
+007ebb95  LEA ESI,[ESI + ECX*0x1 + 0x20]
+007ebb99  JMP 0x007ebbfa
+007ebb9b  TEST EBX,EBX
+007ebb9d  JZ 0x007ebba5
+007ebb9f  ADD ESI,0xf
+007ebba2  AND ESI,0xfffffff0
+007ebba5  MOV EDX,dword ptr [EDI + 0xc]
+007ebba8  LEA ESI,[ESI + EDX*0x1 + 0x20]
+007ebbac  JMP 0x007ebbfa
+007ebbae  SUB EAX,0x20
+007ebbb1  JZ 0x007ebbe8
+007ebbb3  SUB EAX,0x60
+007ebbb6  JZ 0x007ebbd4
+007ebbb8  SUB EAX,0x80
+007ebbbd  JNZ 0x007ebc11
+007ebbbf  TEST EBX,EBX
+007ebbc1  JZ 0x007ebbc9
+007ebbc3  ADD ESI,0xf
+007ebbc6  AND ESI,0xfffffff0
+007ebbc9  MOV ECX,EDI
+007ebbcb  CALL 0x007ebab0
+007ebbd0  ADD ESI,EAX
+007ebbd2  JMP 0x007ebbfa
+007ebbd4  TEST EBX,EBX
+007ebbd6  JZ 0x007ebbdf
+007ebbd8  DEC ESI
+007ebbd9  AND ESI,0xfffffff0
+007ebbdc  ADD ESI,0x10
+007ebbdf  MOV EAX,dword ptr [EDI + 0xc]
+007ebbe2  LEA ESI,[ESI + EAX*0x1 + 0x10]
+007ebbe6  JMP 0x007ebbfa
+007ebbe8  TEST EBX,EBX
+007ebbea  JZ 0x007ebbf3
+007ebbec  DEC ESI
+007ebbed  AND ESI,0xfffffff0
+007ebbf0  ADD ESI,0x10
+007ebbf3  MOV ECX,dword ptr [EDI + 0xc]
+007ebbf6  LEA ESI,[ESI + ECX*0x1 + 0x10]
+007ebbfa  MOV EAX,dword ptr [EDI + 0x4]
+007ebbfd  TEST EAX,EAX
+007ebbff  MOV EBX,EDI
+007ebc01  JZ 0x007ebc0b
+007ebc03  ADD EDI,EAX
+007ebc05  JNZ 0x007ebb51
+007ebc0b  POP EDI
+007ebc0c  MOV EAX,ESI
+007ebc0e  POP ESI
+007ebc0f  POP EBX
+007ebc10  RET
+007ebc11  POP EDI
+007ebc12  POP ESI
+007ebc13  XOR EAX,EAX
+007ebc15  POP EBX
+007ebc16  RET

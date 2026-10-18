@@ -1,0 +1,2 @@
+0040e720  MOV dword ptr [0x0090d8e4],0x0
+0040e72a  RET

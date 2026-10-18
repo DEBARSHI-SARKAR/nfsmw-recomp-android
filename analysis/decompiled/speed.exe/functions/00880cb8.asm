@@ -1,0 +1,3 @@
+00880cb8  MOV ECX,dword ptr [EBP + -0x10]
+00880cbb  ADD ECX,0x18
+00880cbe  JMP 0x007831e0

@@ -1,0 +1,17 @@
+00470080  PUSH EBP
+00470081  MOV EBP,ESP
+00470083  FLD float ptr [EBP + 0xc]
+00470086  MOV EAX,dword ptr [EBP + 0x8]
+00470089  FMUL float ptr [ECX]
+0047008b  AND ESP,0xfffffff0
+0047008e  FLD float ptr [EBP + 0xc]
+00470091  FMUL float ptr [ECX + 0x4]
+00470094  FLD float ptr [EBP + 0xc]
+00470097  FMUL float ptr [ECX + 0x8]
+0047009a  FXCH ST2
+0047009c  FSTP float ptr [EAX]
+0047009e  FSTP float ptr [EAX + 0x4]
+004700a1  FSTP float ptr [EAX + 0x8]
+004700a4  MOV ESP,EBP
+004700a6  POP EBP
+004700a7  RET 0x8

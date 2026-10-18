@@ -1,0 +1,27 @@
+004ba9e0  MOV EAX,dword ptr [ECX + 0xc]
+004ba9e3  PUSH ESI
+004ba9e4  MOV ESI,dword ptr [ECX + 0x4]
+004ba9e7  LEA EAX,[EAX + EAX*0x2]
+004ba9ea  LEA EDX,[ESI + EAX*0x4]
+004ba9ed  CMP ESI,EDX
+004ba9ef  JZ 0x004baa22
+004ba9f1  PUSH EBX
+004ba9f2  PUSH EDI
+004ba9f3  LEA EAX,[ESI + 0xa]
+004ba9f6  XOR EDI,EDI
+004ba9f8  JMP 0x004baa00
+004baa00  MOV word ptr [EAX + -0x2],DI
+004baa04  MOV dword ptr [EAX + -0x6],EDI
+004baa07  MOV word ptr [EAX],DI
+004baa0a  MOV EDX,dword ptr [ECX + 0xc]
+004baa0d  MOV EBX,dword ptr [ECX + 0x4]
+004baa10  LEA EDX,[EDX + EDX*0x2]
+004baa13  ADD ESI,0xc
+004baa16  LEA EDX,[EBX + EDX*0x4]
+004baa19  ADD EAX,0xc
+004baa1c  CMP ESI,EDX
+004baa1e  JNZ 0x004baa00
+004baa20  POP EDI
+004baa21  POP EBX
+004baa22  POP ESI
+004baa23  RET

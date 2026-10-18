@@ -1,0 +1,35 @@
+005fe090  PUSH ECX
+005fe091  PUSH ESI
+005fe092  MOV ESI,ECX
+005fe094  MOV ECX,dword ptr [ESI + 0x1968]
+005fe09a  TEST ECX,ECX
+005fe09c  JZ 0x005fe0f9
+005fe09e  CALL 0x005fc260
+005fe0a3  FADD float ptr [ESI + 0x1980]
+005fe0a9  FST float ptr [ESP + 0x4]
+005fe0ad  FCOMP float ptr [0x00890968]
+005fe0b3  FNSTSW AX
+005fe0b5  TEST AH,0x41
+005fe0b8  JNZ 0x005fe0f9
+005fe0ba  MOV AL,byte ptr [ESI + 0x1978]
+005fe0c0  TEST AL,AL
+005fe0c2  JZ 0x005fe0d7
+005fe0c4  CALL 0x006e8de0
+005fe0c9  FSUB float ptr [ESI + 0x1970]
+005fe0cf  FADD float ptr [ESI + 0x1974]
+005fe0d5  JMP 0x005fe0dd
+005fe0d7  FLD float ptr [ESI + 0x1974]
+005fe0dd  FSUBR float ptr [ESP + 0x4]
+005fe0e1  FCOM float ptr [0x00890968]
+005fe0e7  FNSTSW AX
+005fe0e9  TEST AH,0x5
+005fe0ec  JP 0x005fe0ff
+005fe0ee  FSTP ST0
+005fe0f0  POP ESI
+005fe0f1  FLD float ptr [0x00890968]
+005fe0f7  POP ECX
+005fe0f8  RET
+005fe0f9  FLD float ptr [0x00890968]
+005fe0ff  POP ESI
+005fe100  POP ECX
+005fe101  RET

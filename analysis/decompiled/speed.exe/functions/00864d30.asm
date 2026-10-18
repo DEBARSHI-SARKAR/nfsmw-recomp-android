@@ -1,0 +1,36 @@
+00864d30  SUB ESP,0x20
+00864d33  MOV EAX,[0x00906980]
+00864d38  MOV ECX,dword ptr [0x0090d4f8]
+00864d3e  MOV dword ptr [ESP],ECX
+00864d41  MOV dword ptr [ESP + 0x1c],EAX
+00864d45  MOV EAX,dword ptr [ESP + 0x24]
+00864d49  MOV DL,byte ptr [EAX + 0x44]
+00864d4c  MOV byte ptr [ESP + 0x3],DL
+00864d50  LEA ECX,[EAX + 0x28]
+00864d53  MOV EDX,dword ptr [ECX]
+00864d55  MOV dword ptr [ESP + 0x4],EDX
+00864d59  MOV EDX,dword ptr [ECX + 0x4]
+00864d5c  MOV dword ptr [ESP + 0x8],EDX
+00864d60  MOV EDX,dword ptr [ECX + 0x8]
+00864d63  MOV dword ptr [ESP + 0xc],EDX
+00864d67  MOV EDX,dword ptr [ECX + 0xc]
+00864d6a  MOV ECX,dword ptr [ECX + 0x10]
+00864d6d  MOV dword ptr [ESP + 0x10],EDX
+00864d71  MOV EDX,dword ptr [ESI + 0x450]
+00864d77  TEST EDX,EDX
+00864d79  MOV dword ptr [ESP + 0x14],ECX
+00864d7d  PUSH 0x19
+00864d7f  SETG DL
+00864d82  LEA ECX,[ESP + 0x4]
+00864d86  PUSH ECX
+00864d87  MOV byte ptr [ESP + 0x20],DL
+00864d8b  MOV EDX,dword ptr [EAX]
+00864d8d  PUSH ESI
+00864d8e  PUSH EDX
+00864d8f  CALL 0x00866b50
+00864d94  MOV EAX,dword ptr [ESP + 0x38]
+00864d98  MOV ECX,dword ptr [ESP + 0x2c]
+00864d9c  MOV dword ptr [ESI + 0x440],EAX
+00864da2  CALL 0x007d6cb0
+00864da7  ADD ESP,0x30
+00864daa  RET

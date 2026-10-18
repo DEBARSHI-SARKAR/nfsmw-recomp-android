@@ -1,0 +1,99 @@
+00726d20  PUSH EBP
+00726d21  MOV EBP,ESP
+00726d23  AND ESP,0xfffffff0
+00726d26  SUB ESP,0x2c
+00726d29  MOV EDX,dword ptr [EBP + 0xc]
+00726d2c  PUSH ESI
+00726d2d  MOV ESI,ECX
+00726d2f  MOV ECX,dword ptr [EBP + 0x8]
+00726d32  FLD float ptr [ECX]
+00726d34  FSUB float ptr [ESI + 0x30]
+00726d37  FLD float ptr [ECX + 0x4]
+00726d3a  FSUB float ptr [ESI + 0x34]
+00726d3d  FLD float ptr [ECX + 0x8]
+00726d40  FSUB float ptr [ESI + 0x38]
+00726d43  FLD float ptr [EDX]
+00726d45  FSUB float ptr [ESI + 0x30]
+00726d48  FSTP float ptr [ESP + 0x10]
+00726d4c  FLD float ptr [EDX + 0x4]
+00726d4f  FSUB float ptr [ESI + 0x34]
+00726d52  FSTP float ptr [ESP + 0x14]
+00726d56  FLD float ptr [EDX + 0x8]
+00726d59  FSUB float ptr [ESI + 0x38]
+00726d5c  FSTP float ptr [ESP + 0x18]
+00726d60  FXCH
+00726d62  FMUL float ptr [ESI + 0x74]
+00726d65  FXCH
+00726d67  FMUL float ptr [ESI + 0x78]
+00726d6a  FADDP
+00726d6c  FXCH
+00726d6e  FMUL float ptr [ESI + 0x70]
+00726d71  FADDP
+00726d73  FLD float ptr [ESP + 0x18]
+00726d77  FMUL float ptr [ESI + 0x78]
+00726d7a  FLD float ptr [ESP + 0x14]
+00726d7e  FMUL float ptr [ESI + 0x74]
+00726d81  FADDP
+00726d83  FLD float ptr [ESP + 0x10]
+00726d87  FMUL float ptr [ESI + 0x70]
+00726d8a  FADDP
+00726d8c  FST float ptr [ESP + 0xc]
+00726d90  FMUL ST1
+00726d92  FCOMP float ptr [0x00890968]
+00726d98  FNSTSW AX
+00726d9a  TEST AH,0x5
+00726d9d  JP 0x00726e24
+00726da3  FLD float ptr [EDX]
+00726da5  PUSH ECX
+00726da6  FSUB float ptr [ECX]
+00726da8  FLD float ptr [EDX + 0x4]
+00726dab  FSUB float ptr [ECX + 0x4]
+00726dae  FLD float ptr [EDX + 0x8]
+00726db1  LEA EDX,[ESP + 0x24]
+00726db5  FSUB float ptr [ECX + 0x8]
+00726db8  FSTP float ptr [ESP + 0x1c]
+00726dbc  MOV EAX,dword ptr [ESP + 0x1c]
+00726dc0  FXCH
+00726dc2  MOV dword ptr [ESP + 0x2c],EAX
+00726dc6  FSTP float ptr [ESP + 0x24]
+00726dca  LEA EAX,[ESP + 0x14]
+00726dce  FSTP float ptr [ESP + 0x28]
+00726dd2  FABS
+00726dd4  FLD float ptr [ESP + 0x10]
+00726dd8  FABS
+00726dda  FADD ST0,ST1
+00726ddc  FDIVR ST0,ST1
+00726dde  FSTP float ptr [ESP]
+00726de1  PUSH EDX
+00726de2  PUSH ECX
+00726de3  PUSH EAX
+00726de4  FSTP ST0
+00726de6  CALL 0x0045f640
+00726deb  ADD ESP,0x10
+00726dee  PUSH 0x0
+00726df0  LEA ECX,[ESP + 0x14]
+00726df4  PUSH ECX
+00726df5  MOV ECX,ESI
+00726df7  CALL 0x00726af0
+00726dfc  TEST AL,AL
+00726dfe  JZ 0x00726e26
+00726e00  MOV EAX,dword ptr [EBP + 0x10]
+00726e03  TEST EAX,EAX
+00726e05  JZ 0x00726e1b
+00726e07  MOV EDX,dword ptr [ESP + 0x10]
+00726e0b  MOV ECX,dword ptr [ESP + 0x14]
+00726e0f  MOV dword ptr [EAX],EDX
+00726e11  MOV EDX,dword ptr [ESP + 0x18]
+00726e15  MOV dword ptr [EAX + 0x4],ECX
+00726e18  MOV dword ptr [EAX + 0x8],EDX
+00726e1b  MOV AL,0x1
+00726e1d  POP ESI
+00726e1e  MOV ESP,EBP
+00726e20  POP EBP
+00726e21  RET 0xc
+00726e24  FSTP ST0
+00726e26  XOR AL,AL
+00726e28  POP ESI
+00726e29  MOV ESP,EBP
+00726e2b  POP EBP
+00726e2c  RET 0xc

@@ -1,0 +1,8 @@
+006ca2a0  MOV EAX,dword ptr [ESP + 0x4]
+006ca2a4  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x4478]
+006ca2ab  TEST EDX,EDX
+006ca2ad  JZ 0x006ca2b7
+006ca2af  PUSH 0x2
+006ca2b1  PUSH EAX
+006ca2b2  CALL 0x006e0fa0
+006ca2b7  RET 0x4

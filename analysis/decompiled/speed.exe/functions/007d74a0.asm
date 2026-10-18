@@ -1,0 +1,13 @@
+007d74a0  CMP dword ptr [EBP + 0x8],0x1
+007d74a4  JNZ 0x007d74ab
+007d74a6  MOV EAX,dword ptr [EBP + -0x1c]
+007d74a9  JMP 0x007d74ae
+007d74ab  MOV EAX,dword ptr [EBP + -0x24]
+007d74ae  MOV ECX,dword ptr [EBP + -0x10]
+007d74b1  MOV dword ptr FS:[0x0],ECX
+007d74b8  POP EDI
+007d74b9  POP ESI
+007d74ba  POP EBX
+007d74bb  MOV ESP,EBP
+007d74bd  POP EBP
+007d74be  RET

@@ -1,0 +1,23 @@
+0069a170  MOV EAX,dword ptr [ECX + 0x60]
+0069a173  MOV EAX,dword ptr [EAX]
+0069a175  TEST byte ptr [EAX + 0x1e],0x4
+0069a179  JZ 0x0069a1c3
+0069a17b  FLD float ptr [EAX + 0x20]
+0069a17e  FMUL float ptr [0x00895c40]
+0069a184  FSTP float ptr [EAX + 0x20]
+0069a187  FLD float ptr [EAX + 0x24]
+0069a18a  FMUL float ptr [0x00895c40]
+0069a190  FSTP float ptr [EAX + 0x24]
+0069a193  FLD float ptr [EAX + 0x28]
+0069a196  FMUL float ptr [0x00895c40]
+0069a19c  FSTP float ptr [EAX + 0x28]
+0069a19f  FLD float ptr [EAX + 0x30]
+0069a1a2  FMUL float ptr [0x008ab388]
+0069a1a8  FSTP float ptr [EAX + 0x30]
+0069a1ab  FLD float ptr [EAX + 0x34]
+0069a1ae  FMUL float ptr [0x008ab388]
+0069a1b4  FSTP float ptr [EAX + 0x34]
+0069a1b7  FLD float ptr [EAX + 0x38]
+0069a1ba  FMUL float ptr [0x008ab388]
+0069a1c0  FSTP float ptr [EAX + 0x38]
+0069a1c3  RET

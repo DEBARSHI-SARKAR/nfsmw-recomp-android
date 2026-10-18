@@ -1,0 +1,2 @@
+007034e0  MOV dword ptr [0x00993cc8],0x0
+007034ea  RET

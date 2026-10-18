@@ -1,0 +1,2 @@
+007357a0  MOV AL,byte ptr [ECX + 0x111]
+007357a6  RET

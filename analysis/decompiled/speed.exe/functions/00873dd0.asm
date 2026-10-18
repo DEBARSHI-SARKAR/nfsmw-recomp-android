@@ -1,0 +1,4 @@
+00873dd0  MOV EAX,[0x0091dcc0]
+00873dd5  AND EAX,0xfffffffe
+00873dd8  MOV [0x0091dcc0],EAX
+00873ddd  RET

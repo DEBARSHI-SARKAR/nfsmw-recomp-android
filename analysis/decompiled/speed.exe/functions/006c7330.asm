@@ -1,0 +1,2 @@
+006c7330  MOV dword ptr [0x00982ce4],0x0
+006c733a  RET

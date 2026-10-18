@@ -1,0 +1,28 @@
+005abf80  PUSH EBP
+005abf81  MOV EBP,ESP
+005abf83  SUB ESP,0x3c
+005abf86  MOV dword ptr [EBP + -0x3c],ECX
+005abf89  PUSH EAX
+005abf8a  MOV EAX,0xcfcecdcc
+005abf8f  MOV EAX,0x5abf8f
+005abf94  MOV EAX,0x1
+005abf99  MOV EAX,0x0
+005abf9e  MOV EAX,0xcfcecdcc
+005abfa3  POP EAX
+005abfa4  LEA EAX,[EBP + 0x8]
+005abfa7  PUSH EAX
+005abfa8  LEA ECX,[EBP + -0x8]
+005abfab  PUSH ECX
+005abfac  CALL 0x005abd70
+005abfb1  MOV ECX,EAX
+005abfb3  CALL 0x005aafb0
+005abfb8  PUSH EAX
+005abfb9  MOV EAX,0xcfcecdcc
+005abfbe  MOV EAX,0x5abf8f
+005abfc3  MOV EAX,0x0
+005abfc8  MOV EAX,0x0
+005abfcd  MOV EAX,0xcecdcccb
+005abfd2  POP EAX
+005abfd3  MOV ESP,EBP
+005abfd5  POP EBP
+005abfd6  RET 0x4

@@ -1,0 +1,8 @@
+0082b440  PUSH EBP
+0082b441  MOV EBP,ESP
+0082b443  MOV EAX,dword ptr [EBP + 0x8]
+0082b446  MOV EDX,dword ptr [EBP + 0xc]
+0082b449  MOV dword ptr [ECX + 0x10c],EAX
+0082b44f  MOV dword ptr [ECX + 0x110],EDX
+0082b455  POP EBP
+0082b456  RET 0x8

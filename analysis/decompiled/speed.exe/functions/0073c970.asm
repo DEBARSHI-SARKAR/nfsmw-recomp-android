@@ -1,0 +1,3 @@
+0073c970  MOV EAX,dword ptr [ESP + 0x4]
+0073c974  MOV [0x009b0a48],EAX
+0073c979  RET

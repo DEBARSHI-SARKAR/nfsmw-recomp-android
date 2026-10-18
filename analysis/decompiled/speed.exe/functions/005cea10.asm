@@ -1,0 +1,58 @@
+005cea10  PUSH EBX
+005cea11  PUSH ESI
+005cea12  MOV ESI,ECX
+005cea14  LEA EAX,[ESI + 0x3]
+005cea17  CMP ESI,EAX
+005cea19  JNC 0x005cea2e
+005cea1b  JMP 0x005cea20
+005cea20  MOV BL,byte ptr [EAX]
+005cea22  MOV DL,byte ptr [ECX]
+005cea24  MOV byte ptr [ECX],BL
+005cea26  INC ECX
+005cea27  MOV byte ptr [EAX],DL
+005cea29  DEC EAX
+005cea2a  CMP ECX,EAX
+005cea2c  JC 0x005cea20
+005cea2e  PUSH 0x8
+005cea30  PUSH 0x18
+005cea32  PUSH 0x3
+005cea34  PUSH 0x5
+005cea36  PUSH 0x2
+005cea38  PUSH 0x1
+005cea3a  PUSH 0x1
+005cea3c  PUSH 0x1
+005cea3e  PUSH 0x0
+005cea40  PUSH 0x1
+005cea42  LEA EAX,[ESI + 0x4]
+005cea45  PUSH 0x5
+005cea47  PUSH EAX
+005cea48  CALL 0x005ce500
+005cea4d  LEA EAX,[ESI + 0x8]
+005cea50  LEA ECX,[EAX + 0x3]
+005cea53  ADD ESP,0x30
+005cea56  CMP EAX,ECX
+005cea58  JNC 0x005cea6e
+005cea5a  LEA EBX,[EBX]
+005cea60  MOV BL,byte ptr [ECX]
+005cea62  MOV DL,byte ptr [EAX]
+005cea64  MOV byte ptr [EAX],BL
+005cea66  INC EAX
+005cea67  MOV byte ptr [ECX],DL
+005cea69  DEC ECX
+005cea6a  CMP EAX,ECX
+005cea6c  JC 0x005cea60
+005cea6e  LEA EAX,[ESI + 0xc]
+005cea71  LEA ECX,[EAX + 0x3]
+005cea74  CMP EAX,ECX
+005cea76  JNC 0x005cea86
+005cea78  MOV BL,byte ptr [ECX]
+005cea7a  MOV DL,byte ptr [EAX]
+005cea7c  MOV byte ptr [EAX],BL
+005cea7e  INC EAX
+005cea7f  MOV byte ptr [ECX],DL
+005cea81  DEC ECX
+005cea82  CMP EAX,ECX
+005cea84  JC 0x005cea78
+005cea86  POP ESI
+005cea87  POP EBX
+005cea88  RET

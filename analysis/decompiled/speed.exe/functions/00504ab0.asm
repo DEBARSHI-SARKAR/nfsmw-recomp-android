@@ -1,0 +1,16 @@
+00504ab0  MOV ECX,dword ptr [ESP + 0x8]
+00504ab4  MOV EDX,dword ptr [ESP + 0x4]
+00504ab8  CMP EDX,ECX
+00504aba  MOV EAX,dword ptr [ESP + 0xc]
+00504abe  JZ 0x00504ad7
+00504ac0  PUSH ESI
+00504ac1  MOV ESI,dword ptr [ECX + -0x8]
+00504ac4  SUB ECX,0x8
+00504ac7  SUB EAX,0x8
+00504aca  CMP ECX,EDX
+00504acc  MOV dword ptr [EAX],ESI
+00504ace  MOV ESI,dword ptr [ECX + 0x4]
+00504ad1  MOV dword ptr [EAX + 0x4],ESI
+00504ad4  JNZ 0x00504ac1
+00504ad6  POP ESI
+00504ad7  RET

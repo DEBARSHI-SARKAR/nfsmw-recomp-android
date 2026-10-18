@@ -1,0 +1,2 @@
+0066bc00  XOR AL,AL
+0066bc02  RET

@@ -1,0 +1,68 @@
+006f5f80  PUSH EBX
+006f5f81  PUSH ESI
+006f5f82  PUSH EDI
+006f5f83  MOV ESI,ECX
+006f5f85  CALL 0x006f5ed0
+006f5f8a  MOV EAX,dword ptr [ESI + 0x47dc]
+006f5f90  MOV ECX,dword ptr [ESI + 0x47d4]
+006f5f96  MOV EBX,dword ptr [ESI + 0x47d4]
+006f5f9c  LEA EDI,[ESI + 0x47d0]
+006f5fa2  LEA EDX,[ECX + EAX*0x8]
+006f5fa5  CMP EBX,EDX
+006f5fa7  JZ 0x006f5ffa
+006f5fa9  LEA ESP,[ESP]
+006f5fb0  MOV EAX,dword ptr [EBX + 0x4]
+006f5fb3  TEST EAX,EAX
+006f5fb5  JZ 0x006f5fea
+006f5fb7  MOV EAX,dword ptr [ESI + 0xc]
+006f5fba  CMP EAX,dword ptr [ESI + 0x8]
+006f5fbd  JC 0x006f5fd0
+006f5fbf  MOV EDX,dword ptr [ESI]
+006f5fc1  INC EAX
+006f5fc2  PUSH EAX
+006f5fc3  MOV ECX,ESI
+006f5fc5  CALL dword ptr [EDX + 0xc]
+006f5fc8  PUSH EAX
+006f5fc9  MOV ECX,ESI
+006f5fcb  CALL 0x006efa70
+006f5fd0  MOV EAX,dword ptr [ESI + 0xc]
+006f5fd3  MOV ECX,dword ptr [ESI + 0x4]
+006f5fd6  LEA EAX,[ECX + EAX*0x8]
+006f5fd9  TEST EAX,EAX
+006f5fdb  JZ 0x006f5fe7
+006f5fdd  MOV EDX,dword ptr [EBX]
+006f5fdf  MOV dword ptr [EAX],EDX
+006f5fe1  MOV ECX,dword ptr [EBX + 0x4]
+006f5fe4  MOV dword ptr [EAX + 0x4],ECX
+006f5fe7  INC dword ptr [ESI + 0xc]
+006f5fea  MOV EDX,dword ptr [EDI + 0xc]
+006f5fed  MOV EAX,dword ptr [EDI + 0x4]
+006f5ff0  ADD EBX,0x8
+006f5ff3  LEA ECX,[EAX + EDX*0x8]
+006f5ff6  CMP EBX,ECX
+006f5ff8  JNZ 0x006f5fb0
+006f5ffa  MOV EAX,dword ptr [EDI + 0xc]
+006f5ffd  TEST EAX,EAX
+006f5fff  JLE 0x006f600a
+006f6001  MOV ECX,EAX
+006f6003  DEC ECX
+006f6004  DEC EAX
+006f6005  JNZ 0x006f6003
+006f6007  MOV dword ptr [EDI + 0xc],ECX
+006f600a  MOV EAX,dword ptr [EDI + 0x4]
+006f600d  TEST EAX,EAX
+006f600f  JZ 0x006f6032
+006f6011  MOV ECX,dword ptr [EDI + 0x8]
+006f6014  MOV EDX,dword ptr [EDI]
+006f6016  PUSH ECX
+006f6017  PUSH EAX
+006f6018  MOV ECX,EDI
+006f601a  CALL dword ptr [EDX + 0x8]
+006f601d  MOV dword ptr [EDI + 0x4],0x0
+006f6024  MOV dword ptr [EDI + 0x8],0x0
+006f602b  MOV dword ptr [EDI + 0xc],0x0
+006f6032  POP EDI
+006f6033  MOV ECX,ESI
+006f6035  POP ESI
+006f6036  POP EBX
+006f6037  JMP 0x006f5ed0

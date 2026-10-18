@@ -1,0 +1,114 @@
+<!doctype html>
+<!-- The player page for one game's web build. tools/web_launcher.py places it,
+     with @APP@.js/.wasm/.data, in <launcher>/<game id>/; the game's files were
+     imported by the launcher into the browser's private storage at
+     <game id>/game, and the profile lives at <game id>/profile. The page must
+     be served cross-origin isolated (COOP same-origin, COEP require-corp). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@TITLE@</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; color: #ddd; font: 14px system-ui, sans-serif; overflow: hidden; }
+  #canvas { display: block; width: 100vw; height: 100vh; outline: none; }
+  #status { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 0 16px; white-space: pre-line; pointer-events: none; }
+  #status a { pointer-events: auto; color: #8cf; }
+</style>
+</head>
+<body>
+<canvas id="canvas" tabindex="-1"></canvas>
+<div id="status">Loading…</div>
+<script>
+"use strict";
+const statusEl = document.getElementById("status");
+const canvas = document.getElementById("canvas");
+function status(text, back) {
+  statusEl.textContent = text;
+  if (back) {
+    const a = document.createElement("a");
+    a.href = "../";
+    a.textContent = "\nBack to the launcher";
+    statusEl.append(document.createElement("br"), a);
+  }
+  statusEl.hidden = !text;
+}
+const log = [];
+window.recompLog = log; // for tests
+
+async function gameId() {
+  const parts = location.pathname.split("/").filter(Boolean);
+  if (parts.length && parts[parts.length - 1].includes(".")) parts.pop();
+  return decodeURIComponent(parts[parts.length - 1] || "");
+}
+
+async function start() {
+  if (!crossOriginIsolated) throw new Error("This page must be served cross-origin isolated (COOP/COEP headers).");
+  if (!navigator.gpu) throw new Error("This browser has no WebGPU.");
+  const id = await gameId();
+  const games = await fetch("../games.json").then((r) => r.json());
+  const game = games.find((g) => g.id === id);
+  if (!game) throw new Error(`No game "${id}" in the launcher's games.json.`);
+  document.title = game.title;
+
+  // The game must have been imported by the launcher first.
+  let dir = await navigator.storage.getDirectory();
+  try {
+    for (const p of [id, "game"]) dir = await dir.getDirectoryHandle(p);
+    await dir.getFileHandle(game.executable);
+  } catch {
+    throw new Error(`${game.title} has not been imported yet.`);
+  }
+
+  const adapter = await navigator.gpu.requestAdapter({ powerPreference: "high-performance" });
+  if (!adapter) throw new Error("WebGPU gave no adapter.");
+  const wanted = ["texture-compression-bc", "depth32float-stencil8", "float32-filterable",
+                  "unorm16-texture-formats", "rg11b10ufloat-renderable"];
+  const requiredFeatures = wanted.filter((f) => adapter.features.has(f));
+  const requiredLimits = {};
+  for (const k of ["maxTextureDimension2D", "maxBufferSize", "maxStorageBufferBindingSize",
+                   "maxUniformBufferBindingSize", "maxBindGroups", "maxSampledTexturesPerShaderStage",
+                   "maxSamplersPerShaderStage", "maxStorageBuffersPerShaderStage",
+                   "maxUniformBuffersPerShaderStage", "maxDynamicUniformBuffersPerPipelineLayout",
+                   "maxVertexBuffers", "maxVertexAttributes", "maxColorAttachments",
+                   "maxInterStageShaderVariables"])
+    if (k in adapter.limits) requiredLimits[k] = adapter.limits[k];
+  const device = await adapter.requestDevice({ requiredFeatures, requiredLimits });
+  device.lost.then((info) => status(`The graphics device was lost: ${info.message}`, true));
+  device.addEventListener("uncapturederror", (e) => console.error("WebGPU:", e.error.message));
+
+  const exe = `/opfs/${id}/game/${game.executable}`;
+  const Module = {
+    canvas,
+    preinitializedWebGPUDevice: device,
+    noInitialRun: true,
+    print: (t) => { log.push(t); console.log(t); },
+    printErr: (t) => { log.push(t); console.warn(t); },
+    setStatus: (t) => status(t ? t : ""),
+    onAbort: (what) => status(`The game stopped: ${what}`, true),
+    preRun: [() => {
+      const m = Module;
+      m.ENV.RECOMP_PROFILE_DIR = `/opfs/${id}/profile`;
+      const extra = new URLSearchParams(location.search);
+      for (const [k, v] of extra) if (k.startsWith("RECOMP_")) m.ENV[k] = v;
+    }],
+    onRuntimeInitialized() {
+      status("");
+      canvas.focus();
+      Module.callMain([`--exe=${exe}`]);
+    },
+  };
+  window.Module = Module;
+  const script = document.createElement("script");
+  script.src = "@APP@.js";
+  script.onerror = () => status("The game's web build is missing.", true);
+  document.body.append(script);
+}
+
+canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+canvas.addEventListener("click", () => canvas.focus());
+start().catch((e) => status(e.message, true));
+</script>
+</body>
+</html>

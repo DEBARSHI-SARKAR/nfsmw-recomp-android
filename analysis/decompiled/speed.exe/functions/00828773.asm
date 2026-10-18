@@ -1,0 +1,11 @@
+00828773  MOV EAX,ECX
+00828775  XOR ECX,ECX
+00828777  MOV dword ptr [EAX + 0xd44],ECX
+0082877d  MOV dword ptr [EAX + 0xd54],ECX
+00828783  MOV dword ptr [EAX + 0xd58],ECX
+00828789  MOV word ptr [EAX + 0xd50],CX
+00828790  MOV word ptr [EAX + 0xd52],CX
+00828797  MOV dword ptr [EAX + 0xd5c],ECX
+0082879d  MOV dword ptr [EAX + 0xd60],ECX
+008287a3  MOV dword ptr [EAX + 0xd64],0x1
+008287ad  RET

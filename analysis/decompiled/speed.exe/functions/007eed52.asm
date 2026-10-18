@@ -1,0 +1,5 @@
+007eed52  PUSH 0x9bb15c
+007eed57  MOV byte ptr [0x009bb170],0x1
+007eed5e  CALL 0x007ecc6d
+007eed63  POP ECX
+007eed64  RET

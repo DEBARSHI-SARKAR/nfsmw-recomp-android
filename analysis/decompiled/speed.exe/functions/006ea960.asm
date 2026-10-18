@@ -1,0 +1,79 @@
+006ea960  PUSH -0x1
+006ea962  PUSH 0x87e89f
+006ea967  MOV EAX,FS:[0x0]
+006ea96d  PUSH EAX
+006ea96e  MOV dword ptr FS:[0x0],ESP
+006ea975  PUSH ECX
+006ea976  MOV EAX,[0x008ee348]
+006ea97b  TEST EAX,EAX
+006ea97d  PUSH ESI
+006ea97e  MOV ESI,ECX
+006ea980  JG 0x006eaa6e
+006ea986  MOV AL,byte ptr [ESI + 0x3a0]
+006ea98c  TEST AL,AL
+006ea98e  JZ 0x006ea99d
+006ea990  MOV EAX,[0x00926144]
+006ea995  TEST EAX,EAX
+006ea997  JZ 0x006eaa6e
+006ea99d  CMP dword ptr [ESI + 0x2ac],0x5
+006ea9a4  JNZ 0x006eaa6e
+006ea9aa  MOV EAX,dword ptr [ESI + 0x2b4]
+006ea9b0  CMP EAX,0x1
+006ea9b3  JZ 0x006eaa6e
+006ea9b9  CMP EAX,0x2
+006ea9bc  JZ 0x006eaa6e
+006ea9c2  MOV AL,byte ptr [ESI + 0x3a1]
+006ea9c8  TEST AL,AL
+006ea9ca  JZ 0x006ea9e7
+006ea9cc  FLD float ptr [ESI + 0x1c]
+006ea9cf  FCOMP float ptr [ESI + 0x3b4]
+006ea9d5  FNSTSW AX
+006ea9d7  TEST AH,0x41
+006ea9da  JZ 0x006eaa6e
+006ea9e0  MOV byte ptr [ESI + 0x3b1],0x1
+006ea9e7  MOV ECX,dword ptr [ESI + 0x370]
+006ea9ed  TEST ECX,ECX
+006ea9ef  JZ 0x006eaa01
+006ea9f1  MOV EDX,dword ptr [0x009885d8]
+006ea9f7  MOV EAX,dword ptr [ECX]
+006ea9f9  PUSH 0x0
+006ea9fb  PUSH 0x1
+006ea9fd  PUSH EDX
+006ea9fe  CALL dword ptr [EAX + 0x4c]
+006eaa01  MOV dword ptr [ESI + 0x2ac],0x7
+006eaa0b  CALL 0x0070e570
+006eaa10  PUSH 0x1
+006eaa12  CALL 0x006ff2d0
+006eaa17  ADD ESP,0x4
+006eaa1a  TEST EAX,EAX
+006eaa1c  JZ 0x006eaa25
+006eaa1e  MOV EDX,dword ptr [EAX]
+006eaa20  MOV ECX,EAX
+006eaa22  CALL dword ptr [EDX + 0x48]
+006eaa25  CALL 0x0047b520
+006eaa2a  MOV ECX,dword ptr [ESI + 0x354]
+006eaa30  TEST ECX,ECX
+006eaa32  JZ 0x006eaa39
+006eaa34  CALL 0x00447970
+006eaa39  PUSH 0xc
+006eaa3b  CALL 0x00627400
+006eaa40  ADD ESP,0x4
+006eaa43  MOV dword ptr [ESP + 0x4],EAX
+006eaa47  TEST EAX,EAX
+006eaa49  MOV dword ptr [ESP + 0x10],0x0
+006eaa51  JZ 0x006eaa5c
+006eaa53  PUSH 0x0
+006eaa55  MOV ECX,EAX
+006eaa57  CALL 0x0062c9a0
+006eaa5c  MOV AL,0x1
+006eaa5e  POP ESI
+006eaa5f  MOV ECX,dword ptr [ESP + 0x4]
+006eaa63  MOV dword ptr FS:[0x0],ECX
+006eaa6a  ADD ESP,0x10
+006eaa6d  RET
+006eaa6e  MOV ECX,dword ptr [ESP + 0x8]
+006eaa72  XOR AL,AL
+006eaa74  POP ESI
+006eaa75  MOV dword ptr FS:[0x0],ECX
+006eaa7c  ADD ESP,0x10
+006eaa7f  RET

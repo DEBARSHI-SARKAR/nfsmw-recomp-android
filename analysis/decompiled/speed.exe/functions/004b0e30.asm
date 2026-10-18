@@ -1,0 +1,16 @@
+004b0e30  PUSH ESI
+004b0e31  MOV ESI,ECX
+004b0e33  MOV ECX,dword ptr [ESI + 0x8]
+004b0e36  TEST ECX,ECX
+004b0e38  JZ 0x004b0e40
+004b0e3a  MOV EAX,dword ptr [ECX]
+004b0e3c  PUSH 0x1
+004b0e3e  CALL dword ptr [EAX]
+004b0e40  MOV ECX,dword ptr [ESI + 0xc]
+004b0e43  TEST ECX,ECX
+004b0e45  POP ESI
+004b0e46  JZ 0x004b0e4e
+004b0e48  MOV EDX,dword ptr [ECX]
+004b0e4a  PUSH 0x1
+004b0e4c  CALL dword ptr [EDX]
+004b0e4e  RET

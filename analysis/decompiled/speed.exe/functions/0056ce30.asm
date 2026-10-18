@@ -1,0 +1,26 @@
+0056ce30  MOV EDX,dword ptr [ESP + 0x4]
+0056ce34  PUSH ESI
+0056ce35  MOV ESI,ECX
+0056ce37  MOV ECX,dword ptr [ESP + 0xc]
+0056ce3b  MOV EAX,dword ptr [ESI]
+0056ce3d  PUSH ECX
+0056ce3e  PUSH EDX
+0056ce3f  MOV ECX,ESI
+0056ce41  CALL dword ptr [EAX + 0xc]
+0056ce44  MOV ECX,dword ptr [ESP + 0x24]
+0056ce48  MOV EDX,dword ptr [ESP + 0x20]
+0056ce4c  MOV EAX,dword ptr [ESI]
+0056ce4e  PUSH ECX
+0056ce4f  MOV ECX,dword ptr [ESP + 0x20]
+0056ce53  PUSH EDX
+0056ce54  MOV EDX,dword ptr [ESP + 0x20]
+0056ce58  PUSH ECX
+0056ce59  MOV ECX,dword ptr [ESP + 0x20]
+0056ce5d  PUSH EDX
+0056ce5e  MOV EDX,dword ptr [ESP + 0x20]
+0056ce62  PUSH ECX
+0056ce63  PUSH EDX
+0056ce64  MOV ECX,ESI
+0056ce66  CALL dword ptr [EAX + 0x2c]
+0056ce69  POP ESI
+0056ce6a  RET 0x20

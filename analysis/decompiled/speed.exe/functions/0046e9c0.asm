@@ -1,0 +1,13 @@
+0046e9c0  MOV CL,byte ptr [ESP + 0x4]
+0046e9c4  XOR EDX,EDX
+0046e9c6  XOR EAX,EAX
+0046e9c8  JMP 0x0046e9d0
+0046e9d0  CMP CL,byte ptr [EAX*0x8 + 0x8edeec]
+0046e9d7  JZ 0x0046e9e7
+0046e9d9  INC EAX
+0046e9da  CMP EAX,0x5
+0046e9dd  JL 0x0046e9d0
+0046e9df  MOV EAX,dword ptr [EDX*0x8 + 0x8edef0]
+0046e9e6  RET
+0046e9e7  MOV EAX,dword ptr [EAX*0x8 + 0x8edef0]
+0046e9ee  RET

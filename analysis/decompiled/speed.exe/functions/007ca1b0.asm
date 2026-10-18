@@ -1,0 +1,21 @@
+007ca1b0  PUSH EBP
+007ca1b1  MOV EBP,ESP
+007ca1b3  MOVZX EAX,word ptr [EBP + 0xe]
+007ca1b7  AND EAX,0x7ff8
+007ca1bc  CMP EAX,0x7ff0
+007ca1c1  JNZ 0x007ca1d3
+007ca1c3  MOV ECX,dword ptr [EBP + 0xc]
+007ca1c6  SHL ECX,0xd
+007ca1c9  TEST ECX,ECX
+007ca1cb  JNZ 0x007ca1e5
+007ca1cd  CMP dword ptr [EBP + 0x8],0x0
+007ca1d1  JNZ 0x007ca1e5
+007ca1d3  MOVZX EDX,word ptr [EBP + 0xe]
+007ca1d7  AND EDX,0x7ff8
+007ca1dd  CMP EDX,0x7ff8
+007ca1e3  JNZ 0x007ca1ec
+007ca1e5  MOV EAX,0x1
+007ca1ea  JMP 0x007ca1ee
+007ca1ec  XOR EAX,EAX
+007ca1ee  POP EBP
+007ca1ef  RET

@@ -1,0 +1,25 @@
+0076d900  SUB ESP,0x8
+0076d903  MOV ECX,dword ptr [ESP + 0xc]
+0076d907  LEA EAX,[ESP]
+0076d90a  PUSH EAX
+0076d90b  PUSH ECX
+0076d90c  MOV ECX,dword ptr [0x009b38b4]
+0076d912  CALL 0x00765450
+0076d917  MOV EAX,dword ptr [ESP + 0x10]
+0076d91b  MOV EDX,dword ptr [ESP]
+0076d91e  MOV ECX,dword ptr [EDX + EAX*0x4 + 0x4]
+0076d922  MOV EDX,dword ptr [ESP + 0x4]
+0076d926  MOV EAX,dword ptr [EDX + EAX*0x4 + 0x4]
+0076d92a  SAR ECX,0x12
+0076d92d  MOV dword ptr [ESP + 0xc],ECX
+0076d931  FILD dword ptr [ESP + 0xc]
+0076d935  SAR EAX,0x12
+0076d938  MOV dword ptr [ESP + 0xc],EAX
+0076d93c  FMUL float ptr [0x009b3a68]
+0076d942  FILD dword ptr [ESP + 0xc]
+0076d946  FMUL float ptr [0x009b3a68]
+0076d94c  FSUB ST0,ST1
+0076d94e  FMUL float ptr [ESP + 0x14]
+0076d952  FADDP
+0076d954  ADD ESP,0x8
+0076d957  RET 0xc

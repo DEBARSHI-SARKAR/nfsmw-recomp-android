@@ -1,0 +1,7 @@
+0073d090  MOV EAX,ECX
+0073d092  MOV ECX,dword ptr [ESP + 0x4]
+0073d096  MOV dword ptr [EAX],ECX
+0073d098  XOR ECX,ECX
+0073d09a  MOV dword ptr [EAX + 0x4],ECX
+0073d09d  MOV dword ptr [EAX + 0x8],ECX
+0073d0a0  RET 0x4

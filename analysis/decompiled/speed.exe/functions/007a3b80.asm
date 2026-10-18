@@ -1,0 +1,19 @@
+007a3b80  MOV EAX,dword ptr [ECX + 0x1ac]
+007a3b86  AND EAX,0xffff
+007a3b8b  DEC EAX
+007a3b8c  CMP EAX,0x1f
+007a3b8f  JA 0x007a3bbd
+007a3b91  MOVZX EAX,byte ptr [EAX + 0x7a3bdc]
+007a3b98  JMP dword ptr [EAX*0x4 + 0x7a3bc0]
+007a3b9f  MOV EAX,0x1
+007a3ba4  RET
+007a3ba5  MOV EAX,0x2
+007a3baa  RET
+007a3bab  MOV EAX,0x3
+007a3bb0  RET
+007a3bb1  MOV EAX,0x4
+007a3bb6  RET
+007a3bb7  MOV EAX,0x5
+007a3bbc  RET
+007a3bbd  XOR EAX,EAX
+007a3bbf  RET

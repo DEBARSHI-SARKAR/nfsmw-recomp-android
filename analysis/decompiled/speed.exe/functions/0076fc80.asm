@@ -1,0 +1,73 @@
+0076fc80  SUB ESP,0x8
+0076fc83  PUSH ESI
+0076fc84  MOV ESI,ECX
+0076fc86  MOVSX ECX,word ptr [ESI + 0x8e]
+0076fc8d  IMUL ECX,ECX,0x16
+0076fc90  PUSH EDI
+0076fc91  MOV EDI,dword ptr [0x009b38c0]
+0076fc97  LEA EAX,[ESP + 0x8]
+0076fc9b  ADD ECX,EDI
+0076fc9d  PUSH EAX
+0076fc9e  PUSH ECX
+0076fc9f  MOV ECX,dword ptr [0x009b38b4]
+0076fca5  CALL 0x00765450
+0076fcaa  TEST AL,AL
+0076fcac  JZ 0x0076fd5d
+0076fcb2  MOVSX EAX,byte ptr [ESI + 0x8c]
+0076fcb9  TEST EAX,EAX
+0076fcbb  JZ 0x0076fcc9
+0076fcbd  MOV ECX,dword ptr [ESP + EAX*0x4 + 0x8]
+0076fcc1  MOVZX EDX,byte ptr [ECX]
+0076fcc4  XOR EDI,EDI
+0076fcc6  DEC EDX
+0076fcc7  JMP 0x0076fcd3
+0076fcc9  MOV EDX,dword ptr [ESP + 0x8]
+0076fccd  MOVZX EDI,byte ptr [EDX]
+0076fcd0  DEC EDI
+0076fcd1  XOR EDX,EDX
+0076fcd3  MOV ECX,dword ptr [ESP + EAX*0x4 + 0x8]
+0076fcd7  MOV EAX,dword ptr [ECX + EDI*0x4 + 0x4]
+0076fcdb  MOV EDI,EAX
+0076fcdd  SHL EDI,0xe
+0076fce0  SAR EDI,0x12
+0076fce3  MOV dword ptr [ESP + 0x8],EDI
+0076fce7  FILD dword ptr [ESP + 0x8]
+0076fceb  SAR EAX,0x12
+0076fcee  MOV dword ptr [ESP + 0x8],EAX
+0076fcf2  FMUL float ptr [0x009b3a68]
+0076fcf8  FMUL float ptr [0x008933d4]
+0076fcfe  FILD dword ptr [ESP + 0x8]
+0076fd02  FMUL float ptr [0x009b3a68]
+0076fd08  FADDP
+0076fd0a  FMUL float ptr [0x00890da8]
+0076fd10  FCOMP float ptr [ESI + 0x2c4]
+0076fd16  FNSTSW AX
+0076fd18  TEST AH,0x5
+0076fd1b  JP 0x0076fd65
+0076fd1d  MOV EAX,dword ptr [ECX + EDX*0x4 + 0x4]
+0076fd21  MOV EDX,EAX
+0076fd23  SHL EDX,0xe
+0076fd26  SAR EDX,0x12
+0076fd29  MOV dword ptr [ESP + 0x8],EDX
+0076fd2d  FILD dword ptr [ESP + 0x8]
+0076fd31  SAR EAX,0x12
+0076fd34  MOV dword ptr [ESP + 0x8],EAX
+0076fd38  FMUL float ptr [0x009b3a68]
+0076fd3e  FMUL float ptr [0x008933d4]
+0076fd44  FILD dword ptr [ESP + 0x8]
+0076fd48  FMUL float ptr [0x009b3a68]
+0076fd4e  FADDP
+0076fd50  FCOMP float ptr [ESI + 0x2c4]
+0076fd56  FNSTSW AX
+0076fd58  TEST AH,0x41
+0076fd5b  JNZ 0x0076fd65
+0076fd5d  POP EDI
+0076fd5e  XOR AL,AL
+0076fd60  POP ESI
+0076fd61  ADD ESP,0x8
+0076fd64  RET
+0076fd65  POP EDI
+0076fd66  MOV AL,0x1
+0076fd68  POP ESI
+0076fd69  ADD ESP,0x8
+0076fd6c  RET

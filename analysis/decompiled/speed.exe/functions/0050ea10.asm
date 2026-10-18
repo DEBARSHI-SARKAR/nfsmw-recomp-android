@@ -1,0 +1,12 @@
+0050ea10  MOV EAX,dword ptr [ESP + 0x4]
+0050ea14  CMP EAX,-0x1
+0050ea17  JZ 0x0050ea30
+0050ea19  CMP EAX,0x4
+0050ea1c  JNZ 0x0050ea2b
+0050ea1e  LEA EAX,[ECX + 0x2]
+0050ea21  XOR ECX,ECX
+0050ea23  MOV dword ptr [EAX],ECX
+0050ea25  MOV dword ptr [EAX + 0x4],ECX
+0050ea28  RET 0x4
+0050ea2b  MOV byte ptr [EAX + ECX*0x1 + 0x2],0x0
+0050ea30  RET 0x4

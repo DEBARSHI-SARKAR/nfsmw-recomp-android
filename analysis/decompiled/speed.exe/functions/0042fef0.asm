@@ -1,0 +1,8 @@
+0042fef0  PUSH ESI
+0042fef1  MOV ESI,ECX
+0042fef3  CALL 0x0041ba30
+0042fef8  MOV dword ptr [ESI + 0x4],EAX
+0042fefb  MOV dword ptr [ESI + 0x8],0x0
+0042ff02  MOV EAX,ESI
+0042ff04  POP ESI
+0042ff05  RET

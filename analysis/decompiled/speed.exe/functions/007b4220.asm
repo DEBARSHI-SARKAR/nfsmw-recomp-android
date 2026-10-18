@@ -1,0 +1,7 @@
+007b4220  CALL 0x007b41c0
+007b4225  XOR ECX,ECX
+007b4227  MOV dword ptr [EAX + 0x624],ECX
+007b422d  MOV dword ptr [EAX + 0x628],ECX
+007b4233  MOV byte ptr [EAX + 0x620],CL
+007b4239  MOV byte ptr [EAX + 0x621],CL
+007b423f  RET

@@ -1,0 +1,8 @@
+006c97a0  MOV EAX,dword ptr [ESP + 0x4]
+006c97a4  MOV ECX,dword ptr [0x00982d10]
+006c97aa  MOV EDX,dword ptr [ECX + 0x8]
+006c97ad  PUSH EAX
+006c97ae  PUSH EDX
+006c97af  CALL 0x00463ca0
+006c97b4  ADD ESP,0x8
+006c97b7  RET

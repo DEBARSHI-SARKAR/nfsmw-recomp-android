@@ -1,0 +1,20 @@
+007f3bfa  PUSH EBP
+007f3bfb  MOV EBP,ESP
+007f3bfd  MOV EAX,dword ptr [EBP + 0x18]
+007f3c00  TEST EAX,EAX
+007f3c02  JZ 0x007f3c12
+007f3c04  CMP dword ptr [EAX + 0xc],0x1
+007f3c08  JZ 0x007f3c0f
+007f3c0a  CMP dword ptr [EAX],0x1
+007f3c0d  JNZ 0x007f3c12
+007f3c0f  PUSH EAX
+007f3c10  JMP 0x007f3c14
+007f3c12  PUSH 0x0
+007f3c14  PUSH dword ptr [EBP + 0x14]
+007f3c17  MOV ECX,dword ptr [ECX]
+007f3c19  PUSH dword ptr [EBP + 0x10]
+007f3c1c  PUSH dword ptr [EBP + 0xc]
+007f3c1f  PUSH dword ptr [EBP + 0x8]
+007f3c22  CALL 0x007f5d2a
+007f3c27  POP EBP
+007f3c28  RET 0x14

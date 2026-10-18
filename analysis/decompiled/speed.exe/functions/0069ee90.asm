@@ -1,0 +1,116 @@
+0069ee90  PUSH ECX
+0069ee91  PUSH ESI
+0069ee92  MOV ESI,ECX
+0069ee94  MOV EAX,dword ptr [ESI + 0xec]
+0069ee9a  TEST EAX,EAX
+0069ee9c  JZ 0x0069f01a
+0069eea2  MOV ECX,EAX
+0069eea4  MOV EAX,dword ptr [ECX]
+0069eea6  CALL dword ptr [EAX + 0x20]
+0069eea9  FSTP float ptr [ESP + 0x4]
+0069eead  FLD float ptr [0x00890968]
+0069eeb3  FLD float ptr [ESP + 0x4]
+0069eeb7  FUCOMPP
+0069eeb9  FNSTSW AX
+0069eebb  TEST AH,0x44
+0069eebe  JNP 0x0069f01a
+0069eec4  MOV ECX,dword ptr [ESI + 0xd4]
+0069eeca  FLD float ptr [ECX + 0x70]
+0069eecd  MOV ECX,dword ptr [ESI + 0xfc]
+0069eed3  FLD float ptr [ECX + 0x78]
+0069eed6  FCOMP float ptr [0x00890968]
+0069eedc  FNSTSW AX
+0069eede  TEST AH,0x41
+0069eee1  JNZ 0x0069ef23
+0069eee3  FLD float ptr [0x0089096c]
+0069eee9  FSUB ST0,ST1
+0069eeeb  FMUL float ptr [ESP + 0x4]
+0069eeef  FCOM float ptr [0x00890968]
+0069eef5  FLD ST0
+0069eef7  FNSTSW AX
+0069eef9  TEST AH,0x5
+0069eefc  JP 0x0069ef00
+0069eefe  FCHS
+0069ef00  FCOMP float ptr [0x00890968]
+0069ef06  FNSTSW AX
+0069ef08  TEST AH,0x1
+0069ef0b  JNZ 0x0069ef21
+0069ef0d  FMUL float ptr [0x008933d4]
+0069ef13  FADD float ptr [ECX + 0xe0]
+0069ef19  FSTP float ptr [ECX + 0xe0]
+0069ef1f  JMP 0x0069ef23
+0069ef21  FSTP ST0
+0069ef23  MOV ECX,dword ptr [ESI + 0x100]
+0069ef29  FLD float ptr [ECX + 0x78]
+0069ef2c  FCOMP float ptr [0x00890968]
+0069ef32  FNSTSW AX
+0069ef34  TEST AH,0x41
+0069ef37  JNZ 0x0069ef79
+0069ef39  FLD float ptr [0x0089096c]
+0069ef3f  FSUB ST0,ST1
+0069ef41  FMUL float ptr [ESP + 0x4]
+0069ef45  FCOM float ptr [0x00890968]
+0069ef4b  FLD ST0
+0069ef4d  FNSTSW AX
+0069ef4f  TEST AH,0x5
+0069ef52  JP 0x0069ef56
+0069ef54  FCHS
+0069ef56  FCOMP float ptr [0x00890968]
+0069ef5c  FNSTSW AX
+0069ef5e  TEST AH,0x1
+0069ef61  JNZ 0x0069ef77
+0069ef63  FMUL float ptr [0x008933d4]
+0069ef69  FADD float ptr [ECX + 0xe0]
+0069ef6f  FSTP float ptr [ECX + 0xe0]
+0069ef75  JMP 0x0069ef79
+0069ef77  FSTP ST0
+0069ef79  MOV ECX,dword ptr [ESI + 0x104]
+0069ef7f  FLD float ptr [ECX + 0x78]
+0069ef82  FCOMP float ptr [0x00890968]
+0069ef88  FNSTSW AX
+0069ef8a  TEST AH,0x41
+0069ef8d  JNZ 0x0069efc9
+0069ef8f  FLD float ptr [ESP + 0x4]
+0069ef93  FMUL ST1
+0069ef95  FCOM float ptr [0x00890968]
+0069ef9b  FLD ST0
+0069ef9d  FNSTSW AX
+0069ef9f  TEST AH,0x5
+0069efa2  JP 0x0069efa6
+0069efa4  FCHS
+0069efa6  FCOMP float ptr [0x00890968]
+0069efac  FNSTSW AX
+0069efae  TEST AH,0x1
+0069efb1  JNZ 0x0069efc7
+0069efb3  FMUL float ptr [0x008933d4]
+0069efb9  FADD float ptr [ECX + 0xe0]
+0069efbf  FSTP float ptr [ECX + 0xe0]
+0069efc5  JMP 0x0069efc9
+0069efc7  FSTP ST0
+0069efc9  MOV ESI,dword ptr [ESI + 0x108]
+0069efcf  FLD float ptr [ESI + 0x78]
+0069efd2  FCOMP float ptr [0x00890968]
+0069efd8  FNSTSW AX
+0069efda  TEST AH,0x41
+0069efdd  JNZ 0x0069f018
+0069efdf  FMUL float ptr [ESP + 0x4]
+0069efe3  FCOM float ptr [0x00890968]
+0069efe9  FLD ST0
+0069efeb  FNSTSW AX
+0069efed  TEST AH,0x5
+0069eff0  JP 0x0069eff4
+0069eff2  FCHS
+0069eff4  FCOMP float ptr [0x00890968]
+0069effa  FNSTSW AX
+0069effc  TEST AH,0x1
+0069efff  JNZ 0x0069f018
+0069f001  FMUL float ptr [0x008933d4]
+0069f007  FADD float ptr [ESI + 0xe0]
+0069f00d  FSTP float ptr [ESI + 0xe0]
+0069f013  POP ESI
+0069f014  POP ECX
+0069f015  RET 0x4
+0069f018  FSTP ST0
+0069f01a  POP ESI
+0069f01b  POP ECX
+0069f01c  RET 0x4

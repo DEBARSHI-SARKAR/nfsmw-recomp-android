@@ -1,0 +1,153 @@
+007ea9a0  PUSH EBP
+007ea9a1  MOV EBP,ESP
+007ea9a3  PUSH EBX
+007ea9a4  PUSH ESI
+007ea9a5  PUSH EDI
+007ea9a6  MOV EDI,dword ptr [EBP + 0x8]
+007ea9a9  PUSH EDI
+007ea9aa  MOV ESI,ECX
+007ea9ac  CALL 0x007e9ef0
+007ea9b1  MOV AL,byte ptr [EDI + 0x14]
+007ea9b4  MOV byte ptr [ESI],AL
+007ea9b6  MOVZX ECX,word ptr [EDI + 0x18]
+007ea9ba  MOV dword ptr [ESI + 0x18],ECX
+007ea9bd  MOVZX EDX,word ptr [EDI + 0x1c]
+007ea9c1  MOV dword ptr [ESI + 0x1c],EDX
+007ea9c4  MOV EAX,dword ptr [EDI + 0x20]
+007ea9c7  MOV dword ptr [ESI + 0x10],EAX
+007ea9ca  MOV ECX,dword ptr [EDI + 0x24]
+007ea9cd  MOV dword ptr [ESI + 0x14],ECX
+007ea9d0  MOV EAX,dword ptr [EDI + 0x28]
+007ea9d3  MOV ECX,dword ptr [ESI]
+007ea9d5  AND ECX,0xfffffff
+007ea9db  SHL EAX,0x1c
+007ea9de  OR EAX,ECX
+007ea9e0  MOV dword ptr [ESI],EAX
+007ea9e2  MOV ECX,dword ptr [EDI + 0x30]
+007ea9e5  XOR EBX,EBX
+007ea9e7  AND EAX,0xfeffffff
+007ea9ec  CMP ECX,0x1
+007ea9ef  SETNZ BL
+007ea9f2  DEC EBX
+007ea9f3  AND EBX,0x10000
+007ea9f9  SHL EBX,0x8
+007ea9fc  OR EBX,EAX
+007ea9fe  MOV dword ptr [ESI],EBX
+007eaa00  MOV EDX,dword ptr [EDI + 0x14]
+007eaa03  PUSH EDX
+007eaa04  CALL 0x007ea930
+007eaa09  ADD ESP,0x4
+007eaa0c  AND EBX,0xffbfffff
+007eaa12  TEST AL,AL
+007eaa14  JZ 0x007eaa31
+007eaa16  MOV EAX,dword ptr [EDI + 0x2c]
+007eaa19  XOR ECX,ECX
+007eaa1b  CMP EAX,0x1
+007eaa1e  SETNZ CL
+007eaa21  DEC ECX
+007eaa22  AND ECX,0x4000
+007eaa28  SHL ECX,0x8
+007eaa2b  OR ECX,EBX
+007eaa2d  MOV dword ptr [ESI],ECX
+007eaa2f  JMP 0x007eaa33
+007eaa31  MOV dword ptr [ESI],EBX
+007eaa33  MOV EAX,dword ptr [EDI + 0x34]
+007eaa36  MOV ECX,dword ptr [ESI]
+007eaa38  XOR EDX,EDX
+007eaa3a  AND ECX,0xfffeffff
+007eaa40  CMP EAX,0x1
+007eaa43  SETNZ DL
+007eaa46  PUSH EDI
+007eaa47  DEC EDX
+007eaa48  AND EDX,0x100
+007eaa4e  SHL EDX,0x8
+007eaa51  MOV EAX,EDX
+007eaa53  OR EAX,ECX
+007eaa55  XOR EDX,EDX
+007eaa57  MOV dword ptr [ESI],EAX
+007eaa59  MOV ECX,dword ptr [EDI + 0x38]
+007eaa5c  AND EAX,0xfffdffff
+007eaa61  CMP ECX,0x1
+007eaa64  SETNZ DL
+007eaa67  DEC EDX
+007eaa68  AND EDX,0x200
+007eaa6e  SHL EDX,0x8
+007eaa71  MOV ECX,EDX
+007eaa73  OR ECX,EAX
+007eaa75  XOR EDX,EDX
+007eaa77  MOV dword ptr [ESI],ECX
+007eaa79  MOV EAX,dword ptr [EDI + 0x3c]
+007eaa7c  AND ECX,0xfffbffff
+007eaa82  CMP EAX,0x1
+007eaa85  SETNZ DL
+007eaa88  DEC EDX
+007eaa89  AND EDX,0x400
+007eaa8f  SHL EDX,0x8
+007eaa92  MOV EAX,EDX
+007eaa94  OR EAX,ECX
+007eaa96  XOR EDX,EDX
+007eaa98  MOV dword ptr [ESI],EAX
+007eaa9a  MOV ECX,dword ptr [EDI + 0x40]
+007eaa9d  AND EAX,0xfff7ffff
+007eaaa2  CMP ECX,0x1
+007eaaa5  SETNZ DL
+007eaaa8  DEC EDX
+007eaaa9  AND EDX,0x800
+007eaaaf  SHL EDX,0x8
+007eaab2  MOV ECX,EDX
+007eaab4  OR ECX,EAX
+007eaab6  XOR EDX,EDX
+007eaab8  MOV dword ptr [ESI],ECX
+007eaaba  MOV EAX,dword ptr [EDI + 0x44]
+007eaabd  AND ECX,0xffefffff
+007eaac3  CMP EAX,0x1
+007eaac6  SETNZ DL
+007eaac9  DEC EDX
+007eaaca  AND EDX,0x1000
+007eaad0  SHL EDX,0x8
+007eaad3  MOV EAX,EDX
+007eaad5  OR EAX,ECX
+007eaad7  XOR EDX,EDX
+007eaad9  MOV dword ptr [ESI],EAX
+007eaadb  MOV ECX,dword ptr [EDI + 0x48]
+007eaade  AND EAX,0xffdfffff
+007eaae3  CMP ECX,0x1
+007eaae6  SETNZ DL
+007eaae9  DEC EDX
+007eaaea  AND EDX,0x2000
+007eaaf0  SHL EDX,0x8
+007eaaf3  MOV ECX,EDX
+007eaaf5  OR ECX,EAX
+007eaaf7  XOR EDX,EDX
+007eaaf9  MOV dword ptr [ESI],ECX
+007eaafb  MOV EAX,dword ptr [EDI + 0x4c]
+007eaafe  AND ECX,0xff7fffff
+007eab04  CMP EAX,0x1
+007eab07  SETNZ DL
+007eab0a  DEC EDX
+007eab0b  AND EDX,0x8000
+007eab11  SHL EDX,0x8
+007eab14  OR EDX,ECX
+007eab16  MOV dword ptr [ESI],EDX
+007eab18  CALL 0x007e9bf0
+007eab1d  ADD ESP,0x4
+007eab20  SUB EAX,0x20
+007eab23  LEA ECX,[ESI + 0x20]
+007eab26  XOR EDX,EDX
+007eab28  CMP ECX,EDX
+007eab2a  JNZ 0x007eab39
+007eab2c  POP EDI
+007eab2d  MOV dword ptr [ESI + 0x8],EDX
+007eab30  MOV dword ptr [ESI + 0xc],EDX
+007eab33  POP ESI
+007eab34  POP EBX
+007eab35  POP EBP
+007eab36  RET 0x4
+007eab39  SUB ECX,ESI
+007eab3b  POP EDI
+007eab3c  MOV dword ptr [ESI + 0x8],ECX
+007eab3f  MOV dword ptr [ESI + 0xc],EAX
+007eab42  POP ESI
+007eab43  POP EBX
+007eab44  POP EBP
+007eab45  RET 0x4

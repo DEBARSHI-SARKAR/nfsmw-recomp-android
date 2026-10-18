@@ -1,0 +1,5 @@
+00853070  MOV EAX,dword ptr [ESP + 0x4]
+00853074  XOR ECX,ECX
+00853076  MOV dword ptr [EAX + 0x8],ECX
+00853079  MOV dword ptr [EAX + 0xc],ECX
+0085307c  RET

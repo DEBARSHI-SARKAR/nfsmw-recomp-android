@@ -1,0 +1,75 @@
+007af220  PUSH -0x1
+007af222  PUSH 0x883068
+007af227  MOV EAX,FS:[0x0]
+007af22d  PUSH EAX
+007af22e  MOV dword ptr FS:[0x0],ESP
+007af235  SUB ESP,0x20
+007af238  MOV AL,byte ptr [ESP + 0x34]
+007af23c  TEST AL,AL
+007af23e  PUSH ESI
+007af23f  MOV ESI,ECX
+007af241  MOV dword ptr [ESP + 0x4],0x0
+007af249  MOV dword ptr [ESP + 0x8],0x0
+007af251  MOV dword ptr [ESP + 0xc],0x0
+007af259  JZ 0x007af26e
+007af25b  LEA EAX,[ESP + 0x4]
+007af25f  PUSH EAX
+007af260  ADD ESI,0x8
+007af263  PUSH ESI
+007af264  CALL 0x0067c570
+007af269  ADD ESP,0x8
+007af26c  JMP 0x007af2cb
+007af26e  MOV ECX,dword ptr [ESI + 0x4]
+007af271  MOV EDX,dword ptr [ECX + 0x8]
+007af274  PUSH 0x0
+007af276  PUSH 0x0
+007af278  PUSH EDX
+007af279  LEA ECX,[ESP + 0x1c]
+007af27d  CALL 0x004e4ea0
+007af282  MOV EAX,[0x0091cf90]
+007af287  MOV ECX,dword ptr [EAX + 0x10]
+007af28a  MOV EAX,dword ptr [ESI + 0x4]
+007af28d  LEA EDX,[ESP + 0x10]
+007af291  PUSH EDX
+007af292  MOV EDX,dword ptr [EAX]
+007af294  ADD ECX,0x414
+007af29a  PUSH EDX
+007af29b  MOV dword ptr [ESP + 0x34],0x0
+007af2a3  CALL 0x005814e0
+007af2a8  LEA EAX,[ESP + 0x4]
+007af2ac  PUSH EAX
+007af2ad  LEA ECX,[ESP + 0x14]
+007af2b1  PUSH ECX
+007af2b2  CALL 0x0067c570
+007af2b7  ADD ESP,0x8
+007af2ba  LEA ECX,[ESP + 0x10]
+007af2be  MOV dword ptr [ESP + 0x2c],0xffffffff
+007af2c6  CALL 0x0045a430
+007af2cb  MOV EAX,dword ptr [ESP + 0x34]
+007af2cf  SUB EAX,0x0
+007af2d2  POP ESI
+007af2d3  JZ 0x007af31c
+007af2d5  DEC EAX
+007af2d6  JZ 0x007af307
+007af2d8  DEC EAX
+007af2d9  JZ 0x007af2f2
+007af2db  FLD float ptr [0x00890968]
+007af2e1  MOV ECX,dword ptr [ESP + 0x20]
+007af2e5  MOV dword ptr FS:[0x0],ECX
+007af2ec  ADD ESP,0x2c
+007af2ef  RET 0x8
+007af2f2  FLD float ptr [ESP + 0x8]
+007af2f6  MOV ECX,dword ptr [ESP + 0x20]
+007af2fa  MOV dword ptr FS:[0x0],ECX
+007af301  ADD ESP,0x2c
+007af304  RET 0x8
+007af307  FLD float ptr [ESP + 0x4]
+007af30b  MOV ECX,dword ptr [ESP + 0x20]
+007af30f  MOV dword ptr FS:[0x0],ECX
+007af316  ADD ESP,0x2c
+007af319  RET 0x8
+007af31c  MOV ECX,dword ptr [ESP + 0x20]
+007af320  FLD float ptr [ESP]
+007af323  MOV dword ptr FS:[0x0],ECX
+007af32a  ADD ESP,0x2c
+007af32d  RET 0x8

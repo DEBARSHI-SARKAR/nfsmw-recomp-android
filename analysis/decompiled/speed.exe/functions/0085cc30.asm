@@ -1,0 +1,19 @@
+0085cc30  PUSH ESI
+0085cc31  MOV ESI,dword ptr [ESP + 0x8]
+0085cc35  MOV EAX,dword ptr [ESI + 0x18c]
+0085cc3b  TEST EAX,EAX
+0085cc3d  JNZ 0x0085cc6c
+0085cc3f  MOV ECX,dword ptr [ESP + 0x10]
+0085cc43  MOV EDX,dword ptr [ESP + 0xc]
+0085cc47  MOV EAX,dword ptr [ESP + 0x14]
+0085cc4b  PUSH ECX
+0085cc4c  PUSH EDX
+0085cc4d  PUSH ESI
+0085cc4e  MOV dword ptr [ESI + 0xd8],EAX
+0085cc54  CALL 0x0085bc60
+0085cc59  PUSH ESI
+0085cc5a  CALL 0x0085be30
+0085cc5f  ADD ESP,0x10
+0085cc62  MOV dword ptr [ESI + 0x18c],0x2
+0085cc6c  POP ESI
+0085cc6d  RET

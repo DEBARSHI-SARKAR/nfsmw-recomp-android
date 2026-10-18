@@ -1,0 +1,23 @@
+0040e9a0  MOV EAX,dword ptr [ESP + 0x4]
+0040e9a4  MOV ECX,dword ptr [ESP + 0x8]
+0040e9a8  CMP EAX,ECX
+0040e9aa  JZ 0x0040e9d1
+0040e9ac  MOV EDX,dword ptr [ESP + 0xc]
+0040e9b0  PUSH EBX
+0040e9b1  PUSH ESI
+0040e9b2  PUSH EDI
+0040e9b3  MOV ESI,EDX
+0040e9b5  MOV EBX,dword ptr [ESI]
+0040e9b7  MOV EDI,EAX
+0040e9b9  MOV dword ptr [EDI],EBX
+0040e9bb  MOV EBX,dword ptr [ESI + 0x4]
+0040e9be  MOV dword ptr [EDI + 0x4],EBX
+0040e9c1  MOV ESI,dword ptr [ESI + 0x8]
+0040e9c4  ADD EAX,0xc
+0040e9c7  CMP EAX,ECX
+0040e9c9  MOV dword ptr [EDI + 0x8],ESI
+0040e9cc  JNZ 0x0040e9b3
+0040e9ce  POP EDI
+0040e9cf  POP ESI
+0040e9d0  POP EBX
+0040e9d1  RET

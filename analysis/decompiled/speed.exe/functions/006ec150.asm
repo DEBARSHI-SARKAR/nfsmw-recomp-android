@@ -1,0 +1,26 @@
+006ec150  MOV ECX,dword ptr [ESP + 0x4]
+006ec154  MOV EDX,dword ptr [ESP + 0x8]
+006ec158  CMP ECX,EDX
+006ec15a  MOV EAX,dword ptr [ESP + 0xc]
+006ec15e  JZ 0x006ec18a
+006ec160  PUSH EBX
+006ec161  PUSH ESI
+006ec162  PUSH EDI
+006ec163  MOV ESI,ECX
+006ec165  MOV EBX,dword ptr [ESI]
+006ec167  MOV EDI,EAX
+006ec169  MOV dword ptr [EDI],EBX
+006ec16b  MOV EBX,dword ptr [ESI + 0x4]
+006ec16e  MOV dword ptr [EDI + 0x4],EBX
+006ec171  MOV EBX,dword ptr [ESI + 0x8]
+006ec174  MOV dword ptr [EDI + 0x8],EBX
+006ec177  MOV ESI,dword ptr [ESI + 0xc]
+006ec17a  ADD ECX,0x10
+006ec17d  ADD EAX,0x10
+006ec180  CMP ECX,EDX
+006ec182  MOV dword ptr [EDI + 0xc],ESI
+006ec185  JNZ 0x006ec163
+006ec187  POP EDI
+006ec188  POP ESI
+006ec189  POP EBX
+006ec18a  RET

@@ -1,0 +1,8 @@
+005bcc50  PUSH ESI
+005bcc51  MOV ESI,ECX
+005bcc53  CALL 0x005bc050
+005bcc58  MOV dword ptr [ESI],0x8a2e0c
+005bcc5e  MOV dword ptr [ESI + 0x18],0x3
+005bcc65  MOV EAX,ESI
+005bcc67  POP ESI
+005bcc68  RET

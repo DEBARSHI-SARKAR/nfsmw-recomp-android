@@ -1,0 +1,14 @@
+005e79d0  MOV ECX,dword ptr [ESP + 0x8]
+005e79d4  MOV EDX,dword ptr [ESP + 0x4]
+005e79d8  CMP EDX,ECX
+005e79da  MOV EAX,dword ptr [ESP + 0xc]
+005e79de  JZ 0x005e79f1
+005e79e0  PUSH ESI
+005e79e1  MOV ESI,dword ptr [ECX + -0x4]
+005e79e4  SUB ECX,0x4
+005e79e7  SUB EAX,0x4
+005e79ea  CMP ECX,EDX
+005e79ec  MOV dword ptr [EAX],ESI
+005e79ee  JNZ 0x005e79e1
+005e79f0  POP ESI
+005e79f1  RET

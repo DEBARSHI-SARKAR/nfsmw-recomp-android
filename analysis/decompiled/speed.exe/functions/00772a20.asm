@@ -1,0 +1,188 @@
+00772a20  SUB ESP,0x78
+00772a23  MOV EAX,dword ptr [ECX + 0x64]
+00772a26  PUSH EBX
+00772a27  MOV EBX,dword ptr [ESP + 0x84]
+00772a2e  PUSH EBP
+00772a2f  MOV EBP,dword ptr [ECX + 0x60]
+00772a32  CMP EBP,EAX
+00772a34  PUSH ESI
+00772a35  PUSH EDI
+00772a36  MOV dword ptr [ESP + 0x18],ECX
+00772a3a  MOV dword ptr [ESP + 0x10],0x0
+00772a42  JZ 0x00772aff
+00772a48  JMP 0x00772a50
+00772a50  MOV EDI,dword ptr [EBP]
+00772a53  MOV ESI,dword ptr [EDI + 0x4]
+00772a56  CMP ESI,dword ptr [EDI + 0x8]
+00772a59  JZ 0x00772af1
+00772a5f  NOP
+00772a60  MOV ECX,dword ptr [ESP + 0x8c]
+00772a67  LEA EAX,[ESP + 0x14]
+00772a6b  PUSH EAX
+00772a6c  PUSH ECX
+00772a6d  MOV ECX,ESI
+00772a6f  CALL 0x00763350
+00772a74  TEST AL,AL
+00772a76  JZ 0x00772adf
+00772a78  LEA EDX,[ESP + 0x1c]
+00772a7c  PUSH EDX
+00772a7d  MOV ECX,ESI
+00772a7f  CALL 0x00402690
+00772a84  FLD float ptr [ESP + 0x14]
+00772a88  FCOMP float ptr [0x00890968]
+00772a8e  FNSTSW AX
+00772a90  TEST AH,0x1
+00772a93  JNZ 0x00772adf
+00772a95  FLD float ptr [ESP + 0x14]
+00772a99  FCOMP float ptr [ESP + 0x98]
+00772aa0  FNSTSW AX
+00772aa2  TEST AH,0x5
+00772aa5  JP 0x00772adf
+00772aa7  FLD float ptr [ESP + 0x98]
+00772aae  MOV EAX,dword ptr [ESP + 0x10]
+00772ab2  FSUB float ptr [ESP + 0x14]
+00772ab6  INC EAX
+00772ab7  FLD float ptr [ESP + 0x1c]
+00772abb  MOV dword ptr [ESP + 0x10],EAX
+00772abf  FADD float ptr [EBX]
+00772ac1  FMUL ST1
+00772ac3  FSTP float ptr [EBX]
+00772ac5  FLD float ptr [ESP + 0x20]
+00772ac9  FADD float ptr [EBX + 0x4]
+00772acc  FMUL ST1
+00772ace  FSTP float ptr [EBX + 0x4]
+00772ad1  FLD float ptr [ESP + 0x24]
+00772ad5  FADD float ptr [EBX + 0x8]
+00772ad8  FMUL ST1
+00772ada  FSTP float ptr [EBX + 0x8]
+00772add  FSTP ST0
+00772adf  MOV EAX,dword ptr [EDI + 0x8]
+00772ae2  ADD ESI,0x30
+00772ae5  CMP ESI,EAX
+00772ae7  JNZ 0x00772a60
+00772aed  MOV ECX,dword ptr [ESP + 0x18]
+00772af1  MOV EAX,dword ptr [ECX + 0x64]
+00772af4  ADD EBP,0x4
+00772af7  CMP EBP,EAX
+00772af9  JNZ 0x00772a50
+00772aff  MOV EDI,dword ptr [ECX + 0x50]
+00772b02  CMP EDI,dword ptr [ECX + 0x54]
+00772b05  JZ 0x00772c82
+00772b0b  MOV dword ptr [ESP + 0x34],0x3f800000
+00772b13  MOV EBP,dword ptr [ESP + 0x34]
+00772b17  MOV dword ptr [ESP + 0x20],0x0
+00772b1f  LEA ESI,[EDI + 0x10]
+00772b22  FLD float ptr [ESI + 0xc]
+00772b25  MOV EAX,EDI
+00772b27  MOV ECX,dword ptr [EAX]
+00772b29  FLD float ptr [ESI + 0x8]
+00772b2c  MOV EDX,dword ptr [EAX + 0x4]
+00772b2f  FSUB float ptr [ESI + -0x8]
+00772b32  MOV dword ptr [ESP + 0x48],ECX
+00772b36  MOV ECX,dword ptr [EAX + 0x8]
+00772b39  MOV dword ptr [ESP + 0x4c],EDX
+00772b3d  MOV EDX,dword ptr [EAX + 0xc]
+00772b40  MOV dword ptr [ESP + 0x50],ECX
+00772b44  MOV ECX,dword ptr [EAX]
+00772b46  MOV dword ptr [ESP + 0x54],EDX
+00772b4a  MOV EDX,dword ptr [EAX + 0x4]
+00772b4d  MOV dword ptr [ESP + 0x58],ECX
+00772b51  MOV ECX,dword ptr [EAX + 0x8]
+00772b54  MOV dword ptr [ESP + 0x5c],EDX
+00772b58  MOV EDX,dword ptr [EAX + 0xc]
+00772b5b  MOV dword ptr [ESP + 0x60],ECX
+00772b5f  MOV dword ptr [ESP + 0x64],EDX
+00772b63  MOV EAX,ESI
+00772b65  MOV ECX,dword ptr [EAX]
+00772b67  MOV EDX,dword ptr [EAX + 0x4]
+00772b6a  MOV dword ptr [ESP + 0x68],ECX
+00772b6e  MOV ECX,dword ptr [EAX + 0x8]
+00772b71  MOV dword ptr [ESP + 0x6c],EDX
+00772b75  MOV EDX,dword ptr [EAX + 0xc]
+00772b78  MOV dword ptr [ESP + 0x70],ECX
+00772b7c  MOV ECX,dword ptr [EAX]
+00772b7e  MOV dword ptr [ESP + 0x74],EDX
+00772b82  MOV EDX,dword ptr [EAX + 0x4]
+00772b85  MOV dword ptr [ESP + 0x78],ECX
+00772b89  MOV ECX,dword ptr [EAX + 0x8]
+00772b8c  MOV dword ptr [ESP + 0x7c],EDX
+00772b90  MOV EDX,dword ptr [EAX + 0xc]
+00772b93  MOV EAX,dword ptr [ESP + 0x6c]
+00772b97  MOV dword ptr [ESP + 0x5c],EAX
+00772b9b  MOV EAX,dword ptr [ESP + 0x8c]
+00772ba2  MOV dword ptr [ESP + 0x80],ECX
+00772ba9  MOV ECX,dword ptr [ESP + 0x4c]
+00772bad  MOV dword ptr [ESP + 0x84],EDX
+00772bb4  MOV EDX,dword ptr [EAX]
+00772bb6  FMUL ST1
+00772bb8  MOV dword ptr [ESP + 0x28],EDX
+00772bbc  MOV EDX,dword ptr [EAX + 0x8]
+00772bbf  FSTP float ptr [ESP + 0x1c]
+00772bc3  MOV dword ptr [ESP + 0x7c],ECX
+00772bc7  MOV ECX,dword ptr [EAX + 0x4]
+00772bca  FLD float ptr [ESI]
+00772bcc  FSUB float ptr [EDI]
+00772bce  MOV EAX,dword ptr [ESP + 0x28]
+00772bd2  MOV dword ptr [ESP + 0x38],EAX
+00772bd6  LEA EAX,[ESP + 0x14]
+00772bda  PUSH EAX
+00772bdb  FMUL ST1
+00772bdd  MOV dword ptr [ESP + 0x30],ECX
+00772be1  MOV dword ptr [ESP + 0x40],ECX
+00772be5  PUSH 0x0
+00772be7  FCHS
+00772be9  LEA ECX,[ESP + 0x40]
+00772bed  FSTP float ptr [ESP + 0x2c]
+00772bf1  MOV dword ptr [ESP + 0x38],EDX
+00772bf5  MOV dword ptr [ESP + 0x48],EDX
+00772bf9  FSTP ST0
+00772bfb  PUSH ECX
+00772bfc  LEA EDX,[ESP + 0x28]
+00772c00  PUSH EDX
+00772c01  LEA EAX,[ESP + 0x58]
+00772c05  PUSH EAX
+00772c06  MOV dword ptr [ESP + 0x58],EBP
+00772c0a  CALL 0x00767fd0
+00772c0f  ADD ESP,0x14
+00772c12  TEST AL,AL
+00772c14  JZ 0x00772c6d
+00772c16  FLD float ptr [ESP + 0x14]
+00772c1a  FCOMP float ptr [0x00890968]
+00772c20  FNSTSW AX
+00772c22  TEST AH,0x1
+00772c25  JNZ 0x00772c6d
+00772c27  FLD float ptr [ESP + 0x14]
+00772c2b  FCOMP float ptr [ESP + 0x94]
+00772c32  FNSTSW AX
+00772c34  TEST AH,0x5
+00772c37  JP 0x00772c6d
+00772c39  FLD float ptr [ESP + 0x94]
+00772c40  MOV EAX,dword ptr [ESP + 0x10]
+00772c44  FSUB float ptr [ESP + 0x14]
+00772c48  INC EAX
+00772c49  FLD float ptr [ESP + 0x1c]
+00772c4d  MOV dword ptr [ESP + 0x10],EAX
+00772c51  FADD float ptr [EBX]
+00772c53  FMUL ST1
+00772c55  FSTP float ptr [EBX]
+00772c57  FLD float ptr [EBX + 0x4]
+00772c5a  FMUL ST1
+00772c5c  FSTP float ptr [EBX + 0x4]
+00772c5f  FLD float ptr [ESP + 0x24]
+00772c63  FADD float ptr [EBX + 0x8]
+00772c66  FMUL ST1
+00772c68  FSTP float ptr [EBX + 0x8]
+00772c6b  FSTP ST0
+00772c6d  MOV ECX,dword ptr [ESP + 0x18]
+00772c71  MOV EAX,dword ptr [ECX + 0x54]
+00772c74  ADD EDI,0x28
+00772c77  ADD ESI,0x28
+00772c7a  CMP EDI,EAX
+00772c7c  JNZ 0x00772b22
+00772c82  MOV EAX,dword ptr [ESP + 0x10]
+00772c86  POP EDI
+00772c87  POP ESI
+00772c88  POP EBP
+00772c89  POP EBX
+00772c8a  ADD ESP,0x78
+00772c8d  RET 0x10

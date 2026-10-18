@@ -1,0 +1,12 @@
+0066ec90  PUSH ESI
+0066ec91  MOV ESI,ECX
+0066ec93  PUSH ESI
+0066ec94  CALL 0x00668850
+0066ec99  MOV EAX,dword ptr [ESP + 0xc]
+0066ec9d  MOV ECX,dword ptr [ESP + 0x10]
+0066eca1  MOV dword ptr [ESI + 0x4],EAX
+0066eca4  ADD ESP,0x4
+0066eca7  MOV dword ptr [ESI + 0x8],ECX
+0066ecaa  MOV EAX,ESI
+0066ecac  POP ESI
+0066ecad  RET 0x8

@@ -1,0 +1,20 @@
+005af1c0  MOV EDX,dword ptr [ESP + 0x4]
+005af1c4  OR EAX,0xffffffff
+005af1c7  TEST EDX,EDX
+005af1c9  JZ 0x005af1ee
+005af1cb  MOV CL,byte ptr [EDX]
+005af1cd  TEST CL,CL
+005af1cf  JZ 0x005af1ee
+005af1d1  IMUL EAX,EAX,0x21
+005af1d4  CMP CL,0x61
+005af1d7  JL 0x005af1e1
+005af1d9  CMP CL,0x7a
+005af1dc  JG 0x005af1e1
+005af1de  ADD CL,0xe0
+005af1e1  MOVZX ECX,CL
+005af1e4  ADD EAX,ECX
+005af1e6  MOV CL,byte ptr [EDX + 0x1]
+005af1e9  INC EDX
+005af1ea  TEST CL,CL
+005af1ec  JNZ 0x005af1d1
+005af1ee  RET

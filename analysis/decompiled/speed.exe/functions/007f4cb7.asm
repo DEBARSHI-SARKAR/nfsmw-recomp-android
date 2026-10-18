@@ -1,0 +1,104 @@
+007f4cb7  PUSH EBP
+007f4cb8  MOV EBP,ESP
+007f4cba  SUB ESP,0x10
+007f4cbd  MOV EAX,dword ptr [EBP + 0xc]
+007f4cc0  PUSH EBX
+007f4cc1  MOV EBX,ECX
+007f4cc3  PUSH ESI
+007f4cc4  MOV ESI,dword ptr [EBP + 0x8]
+007f4cc7  PUSH EDI
+007f4cc8  MOV EDI,EBX
+007f4cca  MOVSD ES:EDI,ESI
+007f4ccb  MOVSD ES:EDI,ESI
+007f4ccc  MOVSD ES:EDI,ESI
+007f4ccd  MOVSD ES:EDI,ESI
+007f4cce  MOV ESI,dword ptr [EBP + 0x10]
+007f4cd1  PUSH 0x13
+007f4cd3  POP ECX
+007f4cd4  MOV dword ptr [EBX + 0x10],EAX
+007f4cd7  LEA EDI,[EBX + 0x1c]
+007f4cda  MOVSD.REP ES:EDI,ESI
+007f4cdc  XOR EDI,EDI
+007f4cde  LEA ECX,[EBX + 0x8c]
+007f4ce4  MOV byte ptr [EBX + 0x6a],0x0
+007f4ce8  MOV dword ptr [EBX + 0x6c],EDI
+007f4ceb  MOV dword ptr [EBX + 0x70],EDI
+007f4cee  MOV dword ptr [EBX + 0x74],EDI
+007f4cf1  MOV byte ptr [EBX + 0x78],0x0
+007f4cf5  MOV dword ptr [EBX + 0x7c],EDI
+007f4cf8  MOV dword ptr [EBX + 0x80],EDI
+007f4cfe  MOV byte ptr [EBX + 0x84],0x1
+007f4d05  MOV dword ptr [EBX + 0x88],EDI
+007f4d0b  CALL 0x007f3e70
+007f4d10  LEA ESI,[EBX + 0xa4]
+007f4d16  MOV dword ptr [ESI],EDI
+007f4d18  MOV dword ptr [ESI + 0x4],EDI
+007f4d1b  MOV dword ptr [ESI + 0x8],EDI
+007f4d1e  LEA ECX,[EBX + 0xd8]
+007f4d24  MOV dword ptr [EBX + 0xd4],EDI
+007f4d2a  CALL 0x007f3f10
+007f4d2f  LEA EAX,[EBX + 0x100]
+007f4d35  MOV dword ptr [EBX + 0xfc],EDI
+007f4d3b  MOV dword ptr [EAX],EDI
+007f4d3d  MOV dword ptr [EAX + 0x4],EDI
+007f4d40  LEA ECX,[EBX + 0x10c]
+007f4d46  MOV dword ptr [EBX + 0x108],EDI
+007f4d4c  CALL 0x007f59f7
+007f4d51  LEA ECX,[EBX + 0x290]
+007f4d57  MOV dword ptr [EBX + 0x128],EDI
+007f4d5d  MOV dword ptr [EBX + 0x12c],EDI
+007f4d63  MOV byte ptr [EBX + 0x130],0x0
+007f4d6a  MOV dword ptr [EBX + 0x134],EDI
+007f4d70  MOV dword ptr [EBX + 0x138],EDI
+007f4d76  MOV dword ptr [EBX + 0x13c],EDI
+007f4d7c  MOV dword ptr [EBX + 0x140],EDI
+007f4d82  MOV dword ptr [EBX + 0x144],EDI
+007f4d88  MOV dword ptr [EBX + 0x148],EDI
+007f4d8e  CALL 0x007f5a15
+007f4d93  LEA ECX,[EBX + 0x2c0]
+007f4d99  CALL 0x007f5a15
+007f4d9e  OR dword ptr [EBX + 0x2f8],0xffffffff
+007f4da5  PUSH 0x138
+007f4daa  MOV byte ptr [EBX + 0x2f0],0x0
+007f4db1  MOV dword ptr [EBX + 0x2f4],0x4
+007f4dbb  MOV dword ptr [EBX + 0x2fc],EDI
+007f4dc1  MOV dword ptr [EBX + 0x300],0x1
+007f4dcb  CALL 0x007f414d
+007f4dd0  CMP EAX,EDI
+007f4dd2  POP ECX
+007f4dd3  JZ 0x007f4de2
+007f4dd5  PUSH dword ptr [EBP + 0xc]
+007f4dd8  MOV ECX,EAX
+007f4dda  PUSH EBX
+007f4ddb  CALL 0x007f63c2
+007f4de0  JMP 0x007f4de4
+007f4de2  XOR EAX,EAX
+007f4de4  MOV dword ptr [EBX + 0x18],EAX
+007f4de7  XOR EAX,EAX
+007f4de9  PUSH 0x8
+007f4deb  POP ECX
+007f4dec  PUSH dword ptr [EBP + 0x8]
+007f4def  LEA EDI,[EBX + 0xb4]
+007f4df5  STOSD.REP ES:EDI
+007f4df7  MOV EDI,ESI
+007f4df9  STOSD ES:EDI
+007f4dfa  STOSD ES:EDI
+007f4dfb  STOSD ES:EDI
+007f4dfc  STOSD ES:EDI
+007f4dfd  XOR EAX,EAX
+007f4dff  LEA EDI,[EBX + 0x100]
+007f4e05  STOSD ES:EDI
+007f4e06  LEA ECX,[EBP + -0x10]
+007f4e09  STOSD ES:EDI
+007f4e0a  CALL 0x007f40a9
+007f4e0f  LEA EAX,[EBP + -0x10]
+007f4e12  PUSH EAX
+007f4e13  CALL 0x007f7677
+007f4e18  POP ECX
+007f4e19  POP EDI
+007f4e1a  MOV dword ptr [EBX + 0x14],EAX
+007f4e1d  POP ESI
+007f4e1e  MOV EAX,EBX
+007f4e20  POP EBX
+007f4e21  LEAVE
+007f4e22  RET 0xc

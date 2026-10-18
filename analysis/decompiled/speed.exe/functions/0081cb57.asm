@@ -1,0 +1,13 @@
+0081cb57  PUSH EBP
+0081cb58  MOV EBP,ESP
+0081cb5a  PUSH 0x0
+0081cb5c  PUSH 0x0
+0081cb5e  PUSH dword ptr [EBP + 0x18]
+0081cb61  PUSH dword ptr [EBP + 0x14]
+0081cb64  PUSH dword ptr [EBP + 0x10]
+0081cb67  PUSH dword ptr [EBP + 0xc]
+0081cb6a  PUSH dword ptr [EBP + 0x8]
+0081cb6d  CALL 0x0081c930
+0081cb72  ADD ESP,0x1c
+0081cb75  POP EBP
+0081cb76  RET

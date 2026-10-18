@@ -1,0 +1,6 @@
+0077ed4a  MOV EDX,dword ptr [EBP + 0x10]
+0077ed4d  MOV EAX,dword ptr [EBP + -0x14]
+0077ed50  MOV ECX,dword ptr [EBP + -0x20]
+0077ed53  PUSH EDX
+0077ed54  PUSH EAX
+0077ed55  CALL 0x00769e70

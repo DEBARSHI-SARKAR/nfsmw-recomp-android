@@ -1,0 +1,12 @@
+006e9f80  PUSH ESI
+006e9f81  MOV ESI,ECX
+006e9f83  MOV EAX,dword ptr [ESI + 0x5c]
+006e9f86  TEST EAX,EAX
+006e9f88  JZ 0x006e9f9b
+006e9f8a  MOV EDX,dword ptr [ESI + 0x2c]
+006e9f8d  LEA ECX,[ESI + 0x2c]
+006e9f90  PUSH EAX
+006e9f91  CALL dword ptr [EDX + 0x8]
+006e9f94  MOV dword ptr [ESI + 0x5c],0x0
+006e9f9b  POP ESI
+006e9f9c  RET

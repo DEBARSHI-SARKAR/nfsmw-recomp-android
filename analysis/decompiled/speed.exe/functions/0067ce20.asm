@@ -1,0 +1,39 @@
+0067ce20  PUSH -0x1
+0067ce22  PUSH 0x87afc8
+0067ce27  MOV EAX,FS:[0x0]
+0067ce2d  PUSH EAX
+0067ce2e  MOV dword ptr FS:[0x0],ESP
+0067ce35  PUSH ECX
+0067ce36  PUSH ESI
+0067ce37  MOV ESI,ECX
+0067ce39  PUSH EDI
+0067ce3a  MOV dword ptr [ESP + 0x8],ESI
+0067ce3e  MOV dword ptr [ESI],0x8a9bb0
+0067ce44  MOV EAX,dword ptr [ESI + 0xc]
+0067ce47  XOR EDI,EDI
+0067ce49  CMP EAX,EDI
+0067ce4b  MOV dword ptr [ESP + 0x14],EDI
+0067ce4f  JLE 0x0067ce5a
+0067ce51  MOV ECX,EAX
+0067ce53  DEC ECX
+0067ce54  DEC EAX
+0067ce55  JNZ 0x0067ce53
+0067ce57  MOV dword ptr [ESI + 0xc],ECX
+0067ce5a  MOV EAX,dword ptr [ESI + 0x4]
+0067ce5d  CMP EAX,EDI
+0067ce5f  JZ 0x0067ce77
+0067ce61  MOV ECX,dword ptr [ESI + 0x8]
+0067ce64  PUSH ECX
+0067ce65  PUSH EAX
+0067ce66  MOV ECX,ESI
+0067ce68  CALL dword ptr [0x008a9bb8]
+0067ce6e  MOV dword ptr [ESI + 0x4],EDI
+0067ce71  MOV dword ptr [ESI + 0x8],EDI
+0067ce74  MOV dword ptr [ESI + 0xc],EDI
+0067ce77  MOV ECX,dword ptr [ESP + 0xc]
+0067ce7b  MOV dword ptr [ESI],0x8a95dc
+0067ce81  POP EDI
+0067ce82  POP ESI
+0067ce83  MOV dword ptr FS:[0x0],ECX
+0067ce8a  ADD ESP,0x10
+0067ce8d  RET

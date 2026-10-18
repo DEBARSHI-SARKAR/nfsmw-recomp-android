@@ -1,0 +1,2 @@
+004d9760  MOV dword ptr [ECX],0x8967fc
+004d9766  RET

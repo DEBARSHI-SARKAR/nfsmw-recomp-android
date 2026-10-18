@@ -1,0 +1,8 @@
+0040e1a0  MOV ECX,dword ptr [ECX + 0x4]
+0040e1a3  PUSH 0x404ff0
+0040e1a8  CALL 0x005d59f0
+0040e1ad  MOV ECX,dword ptr [ESP + 0x4]
+0040e1b1  TEST EAX,EAX
+0040e1b3  MOV dword ptr [ECX],EAX
+0040e1b5  SETNZ AL
+0040e1b8  RET 0x4

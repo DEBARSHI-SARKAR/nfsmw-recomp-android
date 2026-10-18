@@ -1,0 +1,18 @@
+006ddd60  PUSH ESI
+006ddd61  MOV ESI,ECX
+006ddd63  MOV EAX,dword ptr [ESI]
+006ddd65  CMP EAX,ESI
+006ddd67  JZ 0x006ddd89
+006ddd69  LEA ESP,[ESP]
+006ddd70  MOV ECX,dword ptr [EAX]
+006ddd72  MOV EDX,dword ptr [EAX + 0x4]
+006ddd75  MOV dword ptr [EDX],ECX
+006ddd77  PUSH EAX
+006ddd78  MOV dword ptr [ECX + 0x4],EDX
+006ddd7b  CALL 0x00466440
+006ddd80  MOV EAX,dword ptr [ESI]
+006ddd82  ADD ESP,0x4
+006ddd85  CMP EAX,ESI
+006ddd87  JNZ 0x006ddd70
+006ddd89  POP ESI
+006ddd8a  RET

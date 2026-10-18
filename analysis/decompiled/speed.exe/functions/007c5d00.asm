@@ -1,0 +1,66 @@
+007c5d00  PUSH EBP
+007c5d01  MOV EBP,ESP
+007c5d03  SUB ESP,0xc
+007c5d06  PUSH 0x2
+007c5d08  MOV EAX,[0x009c544c]
+007c5d0d  PUSH EAX
+007c5d0e  CALL 0x007c7730
+007c5d13  ADD ESP,0x8
+007c5d16  MOV dword ptr [EBP + -0x8],EAX
+007c5d19  MOV ECX,dword ptr [0x009c5448]
+007c5d1f  SUB ECX,dword ptr [0x009c544c]
+007c5d25  ADD ECX,0x4
+007c5d28  CMP dword ptr [EBP + -0x8],ECX
+007c5d2b  JNC 0x007c5dc2
+007c5d31  CMP dword ptr [EBP + -0x8],0x800
+007c5d38  JNC 0x007c5d42
+007c5d3a  MOV EDX,dword ptr [EBP + -0x8]
+007c5d3d  MOV dword ptr [EBP + -0xc],EDX
+007c5d40  JMP 0x007c5d49
+007c5d42  MOV dword ptr [EBP + -0xc],0x800
+007c5d49  PUSH 0x7d
+007c5d4b  PUSH 0x8b8134
+007c5d50  PUSH 0x2
+007c5d52  MOV EAX,dword ptr [EBP + -0x8]
+007c5d55  ADD EAX,dword ptr [EBP + -0xc]
+007c5d58  PUSH EAX
+007c5d59  MOV ECX,dword ptr [0x009c544c]
+007c5d5f  PUSH ECX
+007c5d60  CALL 0x007c6bf0
+007c5d65  ADD ESP,0x14
+007c5d68  MOV dword ptr [EBP + -0x4],EAX
+007c5d6b  CMP dword ptr [EBP + -0x4],0x0
+007c5d6f  JNZ 0x007c5d9f
+007c5d71  PUSH 0x83
+007c5d76  PUSH 0x8b8134
+007c5d7b  PUSH 0x2
+007c5d7d  MOV EDX,dword ptr [EBP + -0x8]
+007c5d80  ADD EDX,0x10
+007c5d83  PUSH EDX
+007c5d84  MOV EAX,[0x009c544c]
+007c5d89  PUSH EAX
+007c5d8a  CALL 0x007c6bf0
+007c5d8f  ADD ESP,0x14
+007c5d92  MOV dword ptr [EBP + -0x4],EAX
+007c5d95  CMP dword ptr [EBP + -0x4],0x0
+007c5d99  JNZ 0x007c5d9f
+007c5d9b  XOR EAX,EAX
+007c5d9d  JMP 0x007c5ddf
+007c5d9f  MOV ECX,dword ptr [0x009c5448]
+007c5da5  SUB ECX,dword ptr [0x009c544c]
+007c5dab  SAR ECX,0x2
+007c5dae  MOV EDX,dword ptr [EBP + -0x4]
+007c5db1  LEA EAX,[EDX + ECX*0x4]
+007c5db4  MOV [0x009c5448],EAX
+007c5db9  MOV ECX,dword ptr [EBP + -0x4]
+007c5dbc  MOV dword ptr [0x009c544c],ECX
+007c5dc2  MOV EDX,dword ptr [0x009c5448]
+007c5dc8  MOV EAX,dword ptr [EBP + 0x8]
+007c5dcb  MOV dword ptr [EDX],EAX
+007c5dcd  MOV ECX,dword ptr [0x009c5448]
+007c5dd3  ADD ECX,0x4
+007c5dd6  MOV dword ptr [0x009c5448],ECX
+007c5ddc  MOV EAX,dword ptr [EBP + 0x8]
+007c5ddf  MOV ESP,EBP
+007c5de1  POP EBP
+007c5de2  RET

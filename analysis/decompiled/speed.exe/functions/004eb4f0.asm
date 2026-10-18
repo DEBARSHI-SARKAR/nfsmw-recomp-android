@@ -1,0 +1,49 @@
+004eb4f0  PUSH EBX
+004eb4f1  PUSH EBP
+004eb4f2  MOV EBP,dword ptr [ESP + 0x18]
+004eb4f6  PUSH ESI
+004eb4f7  MOV ESI,dword ptr [ESP + 0x14]
+004eb4fb  MOV ECX,dword ptr [ESI]
+004eb4fd  PUSH EDI
+004eb4fe  MOV EDI,dword ptr [ESP + 0x14]
+004eb502  MOV EAX,dword ptr [EDI]
+004eb504  PUSH EAX
+004eb505  PUSH ECX
+004eb506  CALL EBP
+004eb508  ADD ESP,0x8
+004eb50b  TEST AL,AL
+004eb50d  JZ 0x004eb517
+004eb50f  MOV EDX,dword ptr [EDI]
+004eb511  MOV EAX,dword ptr [ESI]
+004eb513  MOV dword ptr [ESI],EDX
+004eb515  MOV dword ptr [EDI],EAX
+004eb517  MOV EAX,dword ptr [ESI]
+004eb519  MOV EBX,dword ptr [ESP + 0x1c]
+004eb51d  MOV ECX,dword ptr [EBX]
+004eb51f  PUSH EAX
+004eb520  PUSH ECX
+004eb521  CALL EBP
+004eb523  ADD ESP,0x8
+004eb526  TEST AL,AL
+004eb528  JZ 0x004eb532
+004eb52a  MOV EDX,dword ptr [ESI]
+004eb52c  MOV EAX,dword ptr [EBX]
+004eb52e  MOV dword ptr [EBX],EDX
+004eb530  MOV dword ptr [ESI],EAX
+004eb532  MOV EAX,dword ptr [EDI]
+004eb534  MOV ECX,dword ptr [ESI]
+004eb536  PUSH EAX
+004eb537  PUSH ECX
+004eb538  CALL EBP
+004eb53a  ADD ESP,0x8
+004eb53d  TEST AL,AL
+004eb53f  JZ 0x004eb549
+004eb541  MOV EDX,dword ptr [EDI]
+004eb543  MOV EAX,dword ptr [ESI]
+004eb545  MOV dword ptr [ESI],EDX
+004eb547  MOV dword ptr [EDI],EAX
+004eb549  POP EDI
+004eb54a  POP ESI
+004eb54b  POP EBP
+004eb54c  POP EBX
+004eb54d  RET

@@ -1,0 +1,7 @@
+007f3f10  XOR EAX,EAX
+007f3f12  MOV dword ptr [ECX + 0x10],EAX
+007f3f15  MOV dword ptr [ECX + 0x14],EAX
+007f3f18  MOV dword ptr [ECX + 0x18],EAX
+007f3f1b  CALL 0x007f3e78
+007f3f20  MOV EAX,ECX
+007f3f22  RET

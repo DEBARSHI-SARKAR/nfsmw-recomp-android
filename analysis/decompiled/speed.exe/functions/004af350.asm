@@ -1,0 +1,12 @@
+004af350  MOV EAX,[0x00912374]
+004af355  TEST EAX,EAX
+004af357  JZ 0x004af367
+004af359  MOV byte ptr [EAX + 0x38],0x1
+004af35d  MOV ECX,dword ptr [0x00925ae8]
+004af363  MOV dword ptr [EAX + 0x60],ECX
+004af366  RET
+004af367  MOV EAX,[0x0091236c]
+004af36c  MOV byte ptr [EAX + 0x38],0x1
+004af370  MOV EDX,dword ptr [0x00925ae8]
+004af376  MOV dword ptr [EAX + 0x60],EDX
+004af379  RET

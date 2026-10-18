@@ -1,0 +1,5 @@
+007caf4f  MOV EDX,dword ptr [EBP + 0x14]
+007caf52  PUSH EDX
+007caf53  CALL 0x007c9400
+007caf58  ADD ESP,0x4
+007caf5b  RET

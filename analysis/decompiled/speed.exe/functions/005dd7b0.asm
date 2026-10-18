@@ -1,0 +1,11 @@
+005dd7b0  PUSH ESI
+005dd7b1  MOV ESI,ECX
+005dd7b3  XOR EAX,EAX
+005dd7b5  PUSH 0x320
+005dd7ba  MOV dword ptr [ESI + 0x2bc],EAX
+005dd7c0  MOV dword ptr [ESI + 0x2c0],EAX
+005dd7c6  CALL 0x00652ad0
+005dd7cb  ADD ESP,0x4
+005dd7ce  MOV dword ptr [ESI + 0x2c4],EAX
+005dd7d4  POP ESI
+005dd7d5  RET

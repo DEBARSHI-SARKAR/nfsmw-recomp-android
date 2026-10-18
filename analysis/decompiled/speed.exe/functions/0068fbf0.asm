@@ -1,0 +1,82 @@
+0068fbf0  SUB ESP,0x10
+0068fbf3  PUSH EBX
+0068fbf4  PUSH EBP
+0068fbf5  MOV EBP,ECX
+0068fbf7  MOV ECX,dword ptr [EBP + 0x34]
+0068fbfa  MOV EAX,dword ptr [ECX]
+0068fbfc  PUSH ESI
+0068fbfd  PUSH EDI
+0068fbfe  CALL dword ptr [EAX + 0x54]
+0068fc01  MOV EDX,dword ptr [EBP + 0x4c]
+0068fc04  LEA ESI,[EBP + 0x4c]
+0068fc07  XOR EDI,EDI
+0068fc09  MOV ECX,ESI
+0068fc0b  MOV dword ptr [ESP + 0x1c],EAX
+0068fc0f  MOV dword ptr [ESP + 0x14],EDI
+0068fc13  XOR EBX,EBX
+0068fc15  CALL dword ptr [EDX + 0x8]
+0068fc18  TEST EAX,EAX
+0068fc1a  JBE 0x0068fcc7
+0068fc20  LEA EAX,[EBP + 0xfc]
+0068fc26  MOV dword ptr [ESP + 0x10],EAX
+0068fc2a  LEA EBX,[EBX]
+0068fc30  MOV ECX,dword ptr [ESP + 0x10]
+0068fc34  MOV EDI,dword ptr [ECX]
+0068fc36  MOV EDX,dword ptr [EDI + 0xc4]
+0068fc3c  MOV ECX,dword ptr [ESP + 0x1c]
+0068fc40  MOV EAX,EDX
+0068fc42  PUSH EAX
+0068fc43  PUSH ECX
+0068fc44  MOV ECX,EDI
+0068fc46  MOV dword ptr [ESP + 0x20],EDX
+0068fc4a  CALL 0x00671730
+0068fc4f  TEST AL,AL
+0068fc51  JZ 0x0068fc8d
+0068fc53  MOV EDX,dword ptr [ESI]
+0068fc55  PUSH EBX
+0068fc56  MOV ECX,ESI
+0068fc58  CALL dword ptr [EDX + 0x64]
+0068fc5b  FADD float ptr [EDI + 0x48]
+0068fc5e  FCOM float ptr [0x00890968]
+0068fc64  FNSTSW AX
+0068fc66  TEST AH,0x5
+0068fc69  JP 0x0068fcb6
+0068fc6b  FSTP ST0
+0068fc6d  FLD float ptr [0x00890968]
+0068fc73  FLD float ptr [0x00890968]
+0068fc79  FSTP float ptr [EDI + 0x78]
+0068fc7c  FCOMP float ptr [0x00890968]
+0068fc82  FNSTSW AX
+0068fc84  TEST AH,0x41
+0068fc87  JNZ 0x0068fc8d
+0068fc89  INC dword ptr [ESP + 0x14]
+0068fc8d  MOV EDX,dword ptr [ESP + 0x10]
+0068fc91  MOV EAX,dword ptr [ESI]
+0068fc93  ADD EDX,0x4
+0068fc96  MOV ECX,ESI
+0068fc98  INC EBX
+0068fc99  MOV dword ptr [ESP + 0x10],EDX
+0068fc9d  CALL dword ptr [EAX + 0x8]
+0068fca0  CMP EBX,EAX
+0068fca2  JC 0x0068fc30
+0068fca4  MOV ECX,dword ptr [ESP + 0x14]
+0068fca8  POP EDI
+0068fca9  POP ESI
+0068fcaa  MOV dword ptr [EBP + 0xf4],ECX
+0068fcb0  POP EBP
+0068fcb1  POP EBX
+0068fcb2  ADD ESP,0x10
+0068fcb5  RET
+0068fcb6  FCOM float ptr [0x00890968]
+0068fcbc  FNSTSW AX
+0068fcbe  TEST AH,0x41
+0068fcc1  JNZ 0x0068fc73
+0068fcc3  FLD ST0
+0068fcc5  JMP 0x0068fc79
+0068fcc7  MOV dword ptr [EBP + 0xf4],EDI
+0068fccd  POP EDI
+0068fcce  POP ESI
+0068fccf  POP EBP
+0068fcd0  POP EBX
+0068fcd1  ADD ESP,0x10
+0068fcd4  RET

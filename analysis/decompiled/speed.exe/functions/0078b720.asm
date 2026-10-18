@@ -1,0 +1,2 @@
+0078b720  MOV EAX,dword ptr [ECX + 0x38]
+0078b723  RET

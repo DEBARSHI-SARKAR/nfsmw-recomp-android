@@ -1,0 +1,17 @@
+0045be30  PUSH ESI
+0045be31  PUSH EDI
+0045be32  MOV EDI,dword ptr [ESP + 0xc]
+0045be36  MOV EAX,dword ptr [EDI + 0x4]
+0045be39  PUSH EAX
+0045be3a  MOV ESI,ECX
+0045be3c  CALL 0x0045a760
+0045be41  MOV ECX,dword ptr [EDI]
+0045be43  MOV dword ptr [ESI],ECX
+0045be45  MOV EDX,dword ptr [EDI + 0xc]
+0045be48  MOV dword ptr [ESI + 0xc],EDX
+0045be4b  MOV AX,word ptr [EDI + 0x10]
+0045be4f  MOV word ptr [ESI + 0x10],AX
+0045be53  POP EDI
+0045be54  MOV EAX,ESI
+0045be56  POP ESI
+0045be57  RET 0x4

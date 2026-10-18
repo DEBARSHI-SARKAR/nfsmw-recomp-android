@@ -1,0 +1,72 @@
+0068d340  SUB ESP,0x10
+0068d343  PUSH ESI
+0068d344  MOV ESI,ECX
+0068d346  MOV EAX,dword ptr [ESI]
+0068d348  PUSH 0x1
+0068d34a  MOV dword ptr [ESP + 0x14],0x0
+0068d352  CALL dword ptr [EAX + 0x38]
+0068d355  FSTP float ptr [ESP + 0x8]
+0068d359  MOV EDX,dword ptr [ESI]
+0068d35b  PUSH 0x0
+0068d35d  MOV ECX,ESI
+0068d35f  CALL dword ptr [EDX + 0x38]
+0068d362  FADD float ptr [ESP + 0x8]
+0068d366  MOV EAX,dword ptr [ESI]
+0068d368  PUSH 0x1
+0068d36a  FMUL float ptr [0x008933d4]
+0068d370  MOV ECX,ESI
+0068d372  FSTP float ptr [ESP + 0x8]
+0068d376  CALL dword ptr [EAX + 0x58]
+0068d379  MOV EDX,dword ptr [ESI]
+0068d37b  FSTP float ptr [ESP + 0x8]
+0068d37f  PUSH 0x0
+0068d381  MOV ECX,ESI
+0068d383  CALL dword ptr [EDX + 0x58]
+0068d386  FADD float ptr [ESP + 0x8]
+0068d38a  MOV ECX,dword ptr [ESI + -0x18]
+0068d38d  MOV EAX,dword ptr [ECX]
+0068d38f  FMUL float ptr [0x008933d4]
+0068d395  FSTP float ptr [ESP + 0xc]
+0068d399  CALL dword ptr [EAX + 0x54]
+0068d39c  MOV EDX,dword ptr [EAX]
+0068d39e  MOV ECX,EAX
+0068d3a0  CALL dword ptr [EDX + 0x2c]
+0068d3a3  FSTP float ptr [ESP + 0x8]
+0068d3a7  MOV ECX,dword ptr [ESI + -0x4]
+0068d3aa  MOV EAX,dword ptr [ECX]
+0068d3ac  CALL dword ptr [EAX + 0x90]
+0068d3b2  FCOMP float ptr [0x00890968]
+0068d3b8  POP ESI
+0068d3b9  FNSTSW AX
+0068d3bb  TEST AH,0x41
+0068d3be  JNZ 0x0068d417
+0068d3c0  FLD float ptr [ESP + 0x4]
+0068d3c4  FCOMP float ptr [0x0089096c]
+0068d3ca  FNSTSW AX
+0068d3cc  TEST AH,0x41
+0068d3cf  JNZ 0x0068d417
+0068d3d1  FLD float ptr [ESP + 0x8]
+0068d3d5  FMUL float ptr [ESP]
+0068d3d8  FCOMP float ptr [0x00890968]
+0068d3de  FNSTSW AX
+0068d3e0  TEST AH,0x5
+0068d3e3  JP 0x0068d417
+0068d3e5  FLD float ptr [ESP]
+0068d3e8  FCOMP float ptr [0x00890968]
+0068d3ee  FLD float ptr [ESP]
+0068d3f1  FNSTSW AX
+0068d3f3  TEST AH,0x5
+0068d3f6  JP 0x0068d3fa
+0068d3f8  FCHS
+0068d3fa  FDIV float ptr [ESP + 0x4]
+0068d3fe  FCOM float ptr [0x0089096c]
+0068d404  FNSTSW AX
+0068d406  TEST AH,0x5
+0068d409  JNP 0x0068d413
+0068d40b  FSTP ST0
+0068d40d  FLD float ptr [0x0089096c]
+0068d413  ADD ESP,0x10
+0068d416  RET
+0068d417  FLD float ptr [ESP + 0xc]
+0068d41b  ADD ESP,0x10
+0068d41e  RET

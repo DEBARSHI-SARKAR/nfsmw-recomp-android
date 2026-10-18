@@ -1,0 +1,33 @@
+0049c9d0  MOVZX EDX,word ptr [ECX + 0x4]
+0049c9d4  PUSH ESI
+0049c9d5  LEA ESI,[EDX + 0x1]
+0049c9d8  MOV EAX,EDX
+0049c9da  IMUL EDX,dword ptr [ESP + 0x10]
+0049c9df  IMUL EAX,dword ptr [ESP + 0xc]
+0049c9e4  AND ESI,0xfffffffe
+0049c9e7  LEA EDX,[ESI + EDX*0x2 + 0x4]
+0049c9eb  LEA EAX,[ESI + EAX*0x2 + 0x4]
+0049c9ef  LEA ESI,[ECX + EDX*0x2]
+0049c9f2  XOR EDX,EDX
+0049c9f4  CMP word ptr [ECX + 0x4],DX
+0049c9f8  LEA EAX,[ECX + EAX*0x2]
+0049c9fb  JBE 0x0049ca27
+0049c9fd  PUSH EBX
+0049c9fe  PUSH EDI
+0049c9ff  MOV EDI,dword ptr [ESP + 0x1c]
+0049ca03  SUB ESI,EAX
+0049ca05  FLD float ptr [ESI + EAX*0x1]
+0049ca08  MOVZX EBX,word ptr [ECX + EDX*0x2 + 0x8]
+0049ca0d  FSUB float ptr [EAX]
+0049ca0f  INC EDX
+0049ca10  ADD EAX,0x4
+0049ca13  FMUL float ptr [ESP + 0x10]
+0049ca17  FADD float ptr [EAX + -0x4]
+0049ca1a  FSTP float ptr [EDI + EBX*0x4]
+0049ca1d  MOVZX EBX,word ptr [ECX + 0x4]
+0049ca21  CMP EDX,EBX
+0049ca23  JL 0x0049ca05
+0049ca25  POP EDI
+0049ca26  POP EBX
+0049ca27  POP ESI
+0049ca28  RET 0x10

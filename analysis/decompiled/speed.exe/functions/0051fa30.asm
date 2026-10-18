@@ -1,0 +1,6 @@
+0051fa30  MOV EAX,[0x0091ca4c]
+0051fa35  TEST EAX,EAX
+0051fa37  JZ 0x0051fa47
+0051fa39  AND byte ptr [EAX + 0x2],0x7f
+0051fa3d  MOV dword ptr [0x0091ca4c],0x0
+0051fa47  RET

@@ -1,0 +1,12 @@
+0062bad0  PUSH ESI
+0062bad1  MOV ESI,ECX
+0062bad3  CALL 0x00621490
+0062bad8  TEST byte ptr [ESP + 0x8],0x1
+0062badd  JZ 0x0062baf0
+0062badf  MOV ECX,dword ptr [0x00920394]
+0062bae5  MOV EAX,dword ptr [ESI + 0x4]
+0062bae8  ADD ECX,EAX
+0062baea  MOV dword ptr [0x00920394],ECX
+0062baf0  MOV EAX,ESI
+0062baf2  POP ESI
+0062baf3  RET 0x4

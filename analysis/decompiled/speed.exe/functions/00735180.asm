@@ -1,0 +1,2 @@
+00735180  FLD float ptr [ECX + 0x1264]
+00735186  RET

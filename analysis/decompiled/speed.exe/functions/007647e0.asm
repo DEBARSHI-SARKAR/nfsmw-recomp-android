@@ -1,0 +1,31 @@
+007647e0  SUB ESP,0x10
+007647e3  MOVZX EAX,word ptr [ECX + 0xc]
+007647e7  MOVSX EDX,byte ptr [ECX + 0x10]
+007647eb  MOV dword ptr [ESP],EAX
+007647ee  MOVSX EAX,byte ptr [ECX + 0x11]
+007647f2  FILD dword ptr [ESP]
+007647f5  MOVSX ECX,byte ptr [ECX + 0x12]
+007647f9  MOV dword ptr [ESP],EDX
+007647fc  FMUL float ptr [0x009b3950]
+00764802  MOV EDX,dword ptr [ESP + 0x14]
+00764806  FMUL float ptr [0x00890bf0]
+0076480c  FILD dword ptr [ESP]
+0076480f  MOV dword ptr [ESP],EAX
+00764812  FMUL ST1
+00764814  FSTP float ptr [ESP + 0x4]
+00764818  MOV EAX,dword ptr [ESP + 0x4]
+0076481c  FILD dword ptr [ESP]
+0076481f  MOV dword ptr [ESP],ECX
+00764822  MOV dword ptr [EDX],EAX
+00764824  FMUL ST1
+00764826  FSTP float ptr [ESP + 0x8]
+0076482a  MOV ECX,dword ptr [ESP + 0x8]
+0076482e  FILD dword ptr [ESP]
+00764831  MOV dword ptr [EDX + 0x4],ECX
+00764834  FMUL ST1
+00764836  FSTP float ptr [ESP + 0xc]
+0076483a  MOV EAX,dword ptr [ESP + 0xc]
+0076483e  MOV dword ptr [EDX + 0x8],EAX
+00764841  FSTP ST0
+00764843  ADD ESP,0x10
+00764846  RET 0x4

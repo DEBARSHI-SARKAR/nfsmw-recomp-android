@@ -1,0 +1,4 @@
+0075a5a0  MOV EAX,ECX
+0075a5a2  MOV dword ptr [EAX],EAX
+0075a5a4  MOV dword ptr [EAX + 0x4],EAX
+0075a5a7  RET

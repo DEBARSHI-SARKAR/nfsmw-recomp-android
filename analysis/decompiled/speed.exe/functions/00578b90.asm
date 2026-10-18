@@ -1,0 +1,38 @@
+00578b90  MOV EAX,dword ptr [ECX]
+00578b92  MOV DL,byte ptr [EAX + 0x15]
+00578b95  TEST DL,DL
+00578b97  JNZ 0x00578be6
+00578b99  MOV EDX,dword ptr [EAX + 0x8]
+00578b9c  PUSH EBX
+00578b9d  MOV BL,byte ptr [EDX + 0x15]
+00578ba0  TEST BL,BL
+00578ba2  JNZ 0x00578bbf
+00578ba4  MOV EAX,dword ptr [EDX]
+00578ba6  MOV BL,byte ptr [EAX + 0x15]
+00578ba9  TEST BL,BL
+00578bab  JNZ 0x00578bbb
+00578bad  LEA ECX,[ECX]
+00578bb0  MOV EDX,EAX
+00578bb2  MOV EAX,dword ptr [EDX]
+00578bb4  MOV BL,byte ptr [EAX + 0x15]
+00578bb7  TEST BL,BL
+00578bb9  JZ 0x00578bb0
+00578bbb  MOV dword ptr [ECX],EDX
+00578bbd  POP EBX
+00578bbe  RET
+00578bbf  MOV EAX,dword ptr [EAX + 0x4]
+00578bc2  MOV DL,byte ptr [EAX + 0x15]
+00578bc5  TEST DL,DL
+00578bc7  JNZ 0x00578be3
+00578bc9  LEA ESP,[ESP]
+00578bd0  MOV EDX,dword ptr [ECX]
+00578bd2  CMP EDX,dword ptr [EAX + 0x8]
+00578bd5  JNZ 0x00578be3
+00578bd7  MOV dword ptr [ECX],EAX
+00578bd9  MOV EAX,dword ptr [EAX + 0x4]
+00578bdc  MOV DL,byte ptr [EAX + 0x15]
+00578bdf  TEST DL,DL
+00578be1  JZ 0x00578bd0
+00578be3  MOV dword ptr [ECX],EAX
+00578be5  POP EBX
+00578be6  RET

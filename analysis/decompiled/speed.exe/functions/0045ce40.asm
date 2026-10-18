@@ -1,0 +1,10 @@
+0045ce40  SUB ESP,0x8
+0045ce43  LEA EAX,[ESP]
+0045ce46  PUSH EAX
+0045ce47  CALL dword ptr [0x0089017c]
+0045ce4d  MOV EAX,dword ptr [ESP]
+0045ce50  MOV EDX,dword ptr [ESP + 0x4]
+0045ce54  MOV ECX,dword ptr [0x0090e63c]
+0045ce5a  CALL 0x007c66a0
+0045ce5f  ADD ESP,0x8
+0045ce62  RET

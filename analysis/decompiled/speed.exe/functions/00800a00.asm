@@ -1,0 +1,18 @@
+00800a00  PUSH EBP
+00800a01  MOV EBP,ESP
+00800a03  MOV ECX,dword ptr [EBP + 0x8]
+00800a06  MOV EAX,dword ptr [EBP + 0x10]
+00800a09  MOV EDX,dword ptr [EBP + 0xc]
+00800a0c  PUSH ESI
+00800a0d  MOV ESI,dword ptr [ECX + EAX*0x4 + 0xc]
+00800a11  MOV dword ptr [EDX + 0x4],ESI
+00800a14  MOV ESI,dword ptr [ECX + 0x4]
+00800a17  SHL EAX,0x7
+00800a1a  MOV AX,word ptr [EAX + ESI*0x1]
+00800a1e  MOV word ptr [EDX + 0xa],AX
+00800a22  MOV EAX,dword ptr [ECX + 0x8]
+00800a25  MOV AX,word ptr [EAX*0x4 + 0x8c4d50]
+00800a2d  MOV word ptr [EDX + 0x8],AX
+00800a31  POP ESI
+00800a32  POP EBP
+00800a33  RET

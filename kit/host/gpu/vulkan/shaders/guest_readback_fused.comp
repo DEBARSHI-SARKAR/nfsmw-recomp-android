@@ -1,0 +1,23 @@
+#version 450
+layout(local_size_x = 8, local_size_y = 8) in;
+layout(set = 0, binding = 8) uniform sampler2D color;
+layout(set = 0, binding = 9) uniform sampler2D coverage;
+layout(std430, set = 0, binding = 0) buffer Out { uvec2 output_words[]; };
+layout(std430, set = 0, binding = 1) readonly buffer Params { uvec4 p[3]; };
+void main() {
+    uvec2 tid = gl_GlobalInvocationID.xy;
+    uvec2 span = p[0].zw - p[0].xy;
+    if (any(greaterThanEqual(tid, span))) return;
+    uvec2 guest = p[0].xy + tid, native_size = p[1].xy, guest_size = p[1].zw;
+    uvec2 pos = min(((2u * guest + 1u) * native_size) / (2u * guest_size), p[2].yz - 1u);
+    uvec3 rgb = uvec3(round(texelFetch(color, ivec2(pos), 0).rgb * 255.0));
+    uint covered = texelFetch(coverage, ivec2(pos), 0).r > 0.0 ? 1u : 0u;
+    uvec2 lo = (guest * native_size + guest_size - 1u) / guest_size;
+    uvec2 hi = ((guest + 1u) * native_size + guest_size - 1u) / guest_size;
+    uint lit = 0u;
+    for (uint y = lo.y; y < hi.y; ++y)
+        for (uint x = lo.x; x < hi.x; ++x)
+            lit += any(greaterThan(round(texelFetch(color, ivec2(x, y), 0).rgb * 255.0), vec3(8.0))) ? 1u : 0u;
+    output_words[p[2].x + tid.y * span.x + tid.x] =
+        uvec2(rgb.b | (rgb.g << 8) | (rgb.r << 16) | (covered << 24), lit);
+}

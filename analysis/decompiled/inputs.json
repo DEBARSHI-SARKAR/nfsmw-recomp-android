@@ -1,0 +1,6 @@
+{
+  "executable_sha256": "80774c2e5d619b4f120b48d4462896fd504c263399d203a238769cffde1d253c",
+  "annotations_revision": null,
+  "ghidra_analysis": "default analyzers",
+  "ghidra_version": "12.1.3"
+}

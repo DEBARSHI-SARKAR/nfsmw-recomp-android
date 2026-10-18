@@ -1,0 +1,9 @@
+00773aa0  MOV DL,byte ptr [ESP + 0xc]
+00773aa4  XOR EAX,EAX
+00773aa6  MOV AL,byte ptr [ESP + 0x8]
+00773aaa  XOR AL,DL
+00773aac  MOV EDX,dword ptr [ESP + 0x4]
+00773ab0  PUSH EAX
+00773ab1  PUSH EDX
+00773ab2  CALL 0x0076e980
+00773ab7  RET 0xc

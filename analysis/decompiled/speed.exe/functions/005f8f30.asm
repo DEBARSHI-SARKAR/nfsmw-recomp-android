@@ -1,0 +1,72 @@
+005f8f30  MOV EAX,FS:[0x0]
+005f8f36  PUSH -0x1
+005f8f38  PUSH 0x875e20
+005f8f3d  PUSH EAX
+005f8f3e  MOV dword ptr FS:[0x0],ESP
+005f8f45  SUB ESP,0x24
+005f8f48  PUSH EBX
+005f8f49  PUSH ESI
+005f8f4a  PUSH EDI
+005f8f4b  MOV EDI,ECX
+005f8f4d  MOV ECX,dword ptr [EDI + 0x4]
+005f8f50  MOV EAX,dword ptr [ECX + 0x4]
+005f8f53  MOV ESI,ECX
+005f8f55  MOV CL,byte ptr [EAX + 0x21]
+005f8f58  XOR EBX,EBX
+005f8f5a  CMP CL,BL
+005f8f5c  MOV ECX,dword ptr [ESP + 0x40]
+005f8f60  JNZ 0x005f8f77
+005f8f62  MOV EDX,dword ptr [ECX]
+005f8f64  CMP dword ptr [EAX + 0xc],EDX
+005f8f67  JNC 0x005f8f6e
+005f8f69  MOV EAX,dword ptr [EAX + 0x8]
+005f8f6c  JMP 0x005f8f72
+005f8f6e  MOV ESI,EAX
+005f8f70  MOV EAX,dword ptr [EAX]
+005f8f72  CMP byte ptr [EAX + 0x21],BL
+005f8f75  JZ 0x005f8f64
+005f8f77  CMP ESI,dword ptr [EDI + 0x4]
+005f8f7a  JZ 0x005f8f83
+005f8f7c  MOV EAX,dword ptr [ECX]
+005f8f7e  CMP EAX,dword ptr [ESI + 0xc]
+005f8f81  JNC 0x005f8fe9
+005f8f83  MOV dword ptr [ESP + 0x10],EBX
+005f8f87  MOV dword ptr [ESP + 0x14],EBX
+005f8f8b  MOV dword ptr [ESP + 0x18],EBX
+005f8f8f  MOV ECX,dword ptr [ECX]
+005f8f91  LEA EDX,[ESP + 0xc]
+005f8f95  MOV dword ptr [ESP + 0x1c],ECX
+005f8f99  PUSH EDX
+005f8f9a  LEA ECX,[ESP + 0x24]
+005f8f9e  MOV dword ptr [ESP + 0x3c],EBX
+005f8fa2  CALL 0x005f2be0
+005f8fa7  LEA EAX,[ESP + 0x1c]
+005f8fab  PUSH EAX
+005f8fac  PUSH ESI
+005f8fad  LEA ECX,[ESP + 0x48]
+005f8fb1  PUSH ECX
+005f8fb2  MOV ECX,EDI
+005f8fb4  MOV byte ptr [ESP + 0x44],0x1
+005f8fb9  CALL 0x005f8ac0
+005f8fbe  MOV ECX,dword ptr [ESP + 0x24]
+005f8fc2  CMP ECX,EBX
+005f8fc4  MOV ESI,dword ptr [EAX]
+005f8fc6  MOV byte ptr [ESP + 0x38],BL
+005f8fca  JZ 0x005f8fe9
+005f8fcc  MOV EAX,dword ptr [ESP + 0x2c]
+005f8fd0  SUB EAX,ECX
+005f8fd2  SAR EAX,0x2
+005f8fd5  PUSH EBX
+005f8fd6  LEA EDX,[EAX*0x4 + 0x0]
+005f8fdd  PUSH EDX
+005f8fde  PUSH ECX
+005f8fdf  MOV ECX,0x925b30
+005f8fe4  CALL 0x005d0370
+005f8fe9  MOV ECX,dword ptr [ESP + 0x30]
+005f8fed  POP EDI
+005f8fee  LEA EAX,[ESI + 0x10]
+005f8ff1  POP ESI
+005f8ff2  POP EBX
+005f8ff3  MOV dword ptr FS:[0x0],ECX
+005f8ffa  ADD ESP,0x30
+005f8ffd  RET 0x4

@@ -1,0 +1,21 @@
+007008e0  PUSH ESI
+007008e1  PUSH EDI
+007008e2  MOV ESI,ECX
+007008e4  MOV EAX,dword ptr [ESI]
+007008e6  XOR EDI,EDI
+007008e8  PUSH -0x1
+007008ea  MOV dword ptr [ESI + 0xc],EDI
+007008ed  CALL dword ptr [EAX + 0xc]
+007008f0  MOV dword ptr [ESI + 0x18],EDI
+007008f3  MOV dword ptr [ESI + 0x14],EDI
+007008f6  MOV dword ptr [ESI + 0x20],EDI
+007008f9  MOV dword ptr [ESI + 0x1c],EDI
+007008fc  MOV dword ptr [ESI + 0x24],EDI
+007008ff  MOV dword ptr [ESI + 0x28],EDI
+00700902  MOV dword ptr [ESI + 0x30],EDI
+00700905  MOV dword ptr [ESI + 0x2c],EDI
+00700908  MOV dword ptr [ESI + 0x10],EDI
+0070090b  MOV dword ptr [ESI + 0x34],EDI
+0070090e  POP EDI
+0070090f  POP ESI
+00700910  RET

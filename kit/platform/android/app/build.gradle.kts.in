@@ -1,0 +1,35 @@
+plugins {
+    id("com.android.application")
+}
+
+android {
+    namespace = "@bundle_id@"
+    compileSdk = 36
+    buildToolsVersion = "37.0.0"
+
+    defaultConfig {
+        applicationId = "@bundle_id@"
+        minSdk = 29
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
+        ndk {
+            abiFilters += "arm64-v8a"
+        }
+        resValue("string", "app_name", "@app_name@")
+        resValue("string", "game_id", "@id@")
+    }
+
+    buildFeatures {
+        resValues = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    sourceSets.named("main") {
+        // Use the SDL version fetched by the native build; no copied Java sources.
+        java.srcDirs("src/main/java", "@sdl_java_dir@")
+        jniLibs.srcDirs("src/main/jniLibs")
+    }
+}

@@ -1,0 +1,12 @@
+005e00e0  MOV EAX,dword ptr [ESP + 0x4]
+005e00e4  MOV ECX,dword ptr [EAX + 0x8]
+005e00e7  MOV DL,byte ptr [ECX + 0x21]
+005e00ea  TEST DL,DL
+005e00ec  JNZ 0x005e00fc
+005e00ee  MOV EDI,EDI
+005e00f0  MOV EAX,ECX
+005e00f2  MOV ECX,dword ptr [EAX + 0x8]
+005e00f5  MOV DL,byte ptr [ECX + 0x21]
+005e00f8  TEST DL,DL
+005e00fa  JZ 0x005e00f0
+005e00fc  RET

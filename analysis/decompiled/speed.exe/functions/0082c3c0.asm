@@ -1,0 +1,23 @@
+0082c3c0  MOV EDX,dword ptr [0x009c2964]
+0082c3c6  MOV EAX,dword ptr [EDX + 0x18]
+0082c3c9  PUSH EBX
+0082c3ca  MOV BL,byte ptr [EAX + 0xf]
+0082c3cd  XOR ECX,ECX
+0082c3cf  TEST BL,BL
+0082c3d1  POP EBX
+0082c3d2  JBE 0x0082c3fd
+0082c3d4  PUSH EDI
+0082c3d5  MOV EDI,dword ptr [EDX + 0x24]
+0082c3d8  MOVSX EDI,word ptr [EDI + ECX*0x2]
+0082c3dc  LEA EAX,[EAX + EDI*0x4]
+0082c3df  TEST EAX,EAX
+0082c3e1  JZ 0x0082c3f0
+0082c3e3  AND dword ptr [EAX + 0x10],0xfffdffff
+0082c3ea  MOV EDX,dword ptr [0x009c2964]
+0082c3f0  MOV EAX,dword ptr [EDX + 0x18]
+0082c3f3  MOVZX EDI,byte ptr [EAX + 0xf]
+0082c3f7  INC ECX
+0082c3f8  CMP ECX,EDI
+0082c3fa  JL 0x0082c3d5
+0082c3fc  POP EDI
+0082c3fd  RET

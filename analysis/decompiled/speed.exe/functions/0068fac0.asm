@@ -1,0 +1,2 @@
+0068fac0  ADD ECX,0x9c
+0068fac6  JMP 0x0045a430

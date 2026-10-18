@@ -1,0 +1,153 @@
+0082dbb0  PUSH EBP
+0082dbb1  MOV EBP,ESP
+0082dbb3  SUB ESP,0x8
+0082dbb6  PUSH EBX
+0082dbb7  PUSH ESI
+0082dbb8  MOV ESI,dword ptr [EBP + 0x8]
+0082dbbb  MOV DX,word ptr [ESI + 0x3a]
+0082dbbf  MOV ECX,dword ptr [ESI + 0x34]
+0082dbc2  MOVSX EBX,DX
+0082dbc5  PUSH EDI
+0082dbc6  MOV DI,word ptr [ESI + 0x38]
+0082dbca  MOV dword ptr [EBP + 0x8],EBX
+0082dbcd  MOVSX EAX,DI
+0082dbd0  FILD dword ptr [EBP + 0x8]
+0082dbd3  MOV dword ptr [EBP + 0x8],EAX
+0082dbd6  MOV EAX,dword ptr [EBP + 0x8]
+0082dbd9  FSTP float ptr [EBP + -0x8]
+0082dbdc  AND EAX,0xff80
+0082dbe1  FILD dword ptr [EBP + 0x8]
+0082dbe4  SHL ECX,0x10
+0082dbe7  OR ECX,EAX
+0082dbe9  XOR EAX,EAX
+0082dbeb  MOV AL,byte ptr [ESI + 0x3c]
+0082dbee  FSTP float ptr [EBP + -0x4]
+0082dbf1  FLD float ptr [EBP + -0x8]
+0082dbf4  AND ECX,0xffffff80
+0082dbf7  FSUB float ptr [EBP + -0x4]
+0082dbfa  FLD float ptr [0x00890da8]
+0082dc00  FLD ST1
+0082dc02  FCOMP float ptr [0x00890968]
+0082dc08  AND EAX,0x7f
+0082dc0b  OR ECX,EAX
+0082dc0d  FNSTSW AX
+0082dc0f  TEST AH,0x5
+0082dc12  JP 0x0082dc18
+0082dc14  XOR EAX,EAX
+0082dc16  JMP 0x0082dc1d
+0082dc18  MOV EAX,0x1
+0082dc1d  SHL EAX,0x7
+0082dc20  XOR EAX,ECX
+0082dc22  AND EAX,0x80
+0082dc27  XOR ECX,EAX
+0082dc29  MOV EAX,[0x009c2980]
+0082dc2e  SUB EAX,dword ptr [ESI + 0x30]
+0082dc31  TEST EAX,EAX
+0082dc33  MOV dword ptr [EBP + 0x8],EAX
+0082dc36  FILD dword ptr [EBP + 0x8]
+0082dc39  JGE 0x0082dc41
+0082dc3b  FADD float ptr [0x00891214]
+0082dc41  MOV EAX,ECX
+0082dc43  SHR EAX,0x10
+0082dc46  TEST EAX,EAX
+0082dc48  MOV dword ptr [EBP + 0x8],EAX
+0082dc4b  FILD dword ptr [EBP + 0x8]
+0082dc4e  JGE 0x0082dc56
+0082dc50  FADD float ptr [0x00891214]
+0082dc56  FDIVP
+0082dc58  FST float ptr [EBP + 0x8]
+0082dc5b  FCOMP float ptr [0x0089096c]
+0082dc61  FNSTSW AX
+0082dc63  TEST AH,0x1
+0082dc66  JNZ 0x0082dc95
+0082dc68  MOV ECX,dword ptr [ESI + 0x12c]
+0082dc6e  FSTP ST0
+0082dc70  MOV EDX,dword ptr [ECX]
+0082dc72  FSTP ST0
+0082dc74  PUSH EBX
+0082dc75  CALL dword ptr [EDX + 0x38]
+0082dc78  OR EAX,0xffffffff
+0082dc7b  POP EDI
+0082dc7c  MOV word ptr [ESI + 0x38],AX
+0082dc80  MOV word ptr [ESI + 0x3a],AX
+0082dc84  MOV word ptr [ESI + 0x3c],AX
+0082dc88  MOV dword ptr [ESI + 0x30],0x0
+0082dc8f  POP ESI
+0082dc90  POP EBX
+0082dc91  MOV ESP,EBP
+0082dc93  POP EBP
+0082dc94  RET
+0082dc95  TEST CL,CL
+0082dc97  JNS 0x0082dca5
+0082dc99  FLD float ptr [0x0089096c]
+0082dc9f  FSUB float ptr [EBP + 0x8]
+0082dca2  FSTP float ptr [EBP + 0x8]
+0082dca5  AND ECX,0x7f
+0082dca8  DEC ECX
+0082dca9  JZ 0x0082dcd4
+0082dcab  DEC ECX
+0082dcac  JZ 0x0082dcc4
+0082dcae  DEC ECX
+0082dcaf  JNZ 0x0082dcdf
+0082dcb1  FSTP ST0
+0082dcb3  FLD float ptr [0x0089096c]
+0082dcb9  FDIV float ptr [EBP + 0x8]
+0082dcbc  FMUL float ptr [0x008c613c]
+0082dcc2  JMP 0x0082dcdf
+0082dcc4  FSTP ST0
+0082dcc6  FLD float ptr [EBP + 0x8]
+0082dcc9  FMUL float ptr [EBP + 0x8]
+0082dccc  FSUBR float ptr [0x0089096c]
+0082dcd2  JMP 0x0082dcdf
+0082dcd4  FSTP ST0
+0082dcd6  FLD float ptr [0x0089096c]
+0082dcdc  FSUB float ptr [EBP + 0x8]
+0082dcdf  CMP DX,DI
+0082dce2  FLD float ptr [EBP + -0x4]
+0082dce5  JGE 0x0082dcec
+0082dce7  FSTP ST0
+0082dce9  FLD float ptr [EBP + -0x8]
+0082dcec  FLD ST2
+0082dcee  FCOMP float ptr [0x00890968]
+0082dcf4  FNSTSW AX
+0082dcf6  TEST AH,0x5
+0082dcf9  JP 0x0082dd01
+0082dcfb  FXCH ST2
+0082dcfd  FCHS
+0082dcff  FXCH ST2
+0082dd01  FLD ST1
+0082dd03  FCOMP float ptr [0x00890968]
+0082dd09  FNSTSW AX
+0082dd0b  TEST AH,0x1
+0082dd0e  JNZ 0x0082dd43
+0082dd10  FLD ST1
+0082dd12  FCOMP float ptr [0x0089096c]
+0082dd18  FNSTSW AX
+0082dd1a  TEST AH,0x41
+0082dd1d  JP 0x0082dd43
+0082dd1f  MOV ESI,dword ptr [ESI + 0x12c]
+0082dd25  FXCH
+0082dd27  MOV EDI,dword ptr [ESI]
+0082dd29  FMUL ST2
+0082dd2b  FADD ST0,ST1
+0082dd2d  CALL 0x007c4b80
+0082dd32  FSTP ST0
+0082dd34  PUSH EAX
+0082dd35  FSTP ST0
+0082dd37  MOV ECX,ESI
+0082dd39  CALL dword ptr [EDI + 0x38]
+0082dd3c  POP EDI
+0082dd3d  POP ESI
+0082dd3e  POP EBX
+0082dd3f  MOV ESP,EBP
+0082dd41  POP EBP
+0082dd42  RET
+0082dd43  FSTP ST0
+0082dd45  POP EDI
+0082dd46  FSTP ST0
+0082dd48  POP ESI
+0082dd49  FSTP ST0
+0082dd4b  POP EBX
+0082dd4c  MOV ESP,EBP
+0082dd4e  POP EBP
+0082dd4f  RET

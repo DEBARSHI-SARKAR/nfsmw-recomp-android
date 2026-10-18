@@ -1,0 +1,6 @@
+005e08c0  MOV ECX,dword ptr [ESP + 0x4]
+005e08c4  MOV EDX,dword ptr [ESP + 0x8]
+005e08c8  XOR EAX,EAX
+005e08ca  CMP ECX,EDX
+005e08cc  SETZ AL
+005e08cf  RET 0x8

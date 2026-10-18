@@ -1,0 +1,31 @@
+007d07a0  PUSH EBP
+007d07a1  MOV EBP,ESP
+007d07a3  PUSH ECX
+007d07a4  CMP dword ptr [EBP + 0x8],0x0
+007d07a8  JNZ 0x007d07ae
+007d07aa  XOR EAX,EAX
+007d07ac  JMP 0x007d07f4
+007d07ae  MOV EAX,dword ptr [EBP + 0x8]
+007d07b1  MOV ECX,dword ptr [EAX]
+007d07b3  MOV dword ptr [EBP + -0x4],ECX
+007d07b6  MOV EDX,dword ptr [EBP + -0x4]
+007d07b9  CMP dword ptr [EDX],0xe06d7363
+007d07bf  JNZ 0x007d07f2
+007d07c1  MOV EAX,dword ptr [EBP + -0x4]
+007d07c4  CMP dword ptr [EAX + 0x10],0x3
+007d07c8  JNZ 0x007d07f2
+007d07ca  MOV ECX,dword ptr [EBP + -0x4]
+007d07cd  CMP dword ptr [ECX + 0x14],0x19930520
+007d07d4  JZ 0x007d07e2
+007d07d6  MOV EDX,dword ptr [EBP + -0x4]
+007d07d9  CMP dword ptr [EDX + 0x14],0x19930521
+007d07e0  JNZ 0x007d07f2
+007d07e2  MOV EAX,dword ptr [EBP + -0x4]
+007d07e5  CMP dword ptr [EAX + 0x1c],0x0
+007d07e9  JNZ 0x007d07f2
+007d07eb  MOV EAX,0x1
+007d07f0  JMP 0x007d07f4
+007d07f2  XOR EAX,EAX
+007d07f4  MOV ESP,EBP
+007d07f6  POP EBP
+007d07f7  RET

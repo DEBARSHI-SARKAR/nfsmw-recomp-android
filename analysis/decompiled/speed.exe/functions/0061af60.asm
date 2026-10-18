@@ -1,0 +1,36 @@
+0061af60  PUSH EAX
+0061af61  PUSH ESI
+0061af62  CALL 0x00618970
+0061af67  MOV ECX,dword ptr [ESP + 0xc]
+0061af6b  PUSH ECX
+0061af6c  PUSH ESI
+0061af6d  CALL 0x00614e00
+0061af72  PUSH 0x8
+0061af74  PUSH ESI
+0061af75  CALL 0x00613f40
+0061af7a  MOV ECX,dword ptr [ESI + 0x8]
+0061af7d  MOV EDX,dword ptr [ESP + 0x20]
+0061af81  MOV dword ptr [ECX],0x7
+0061af87  MOV dword ptr [ECX + 0x4],EAX
+0061af8a  ADD dword ptr [ESI + 0x8],0x8
+0061af8e  MOV ECX,dword ptr [ESP + 0x24]
+0061af92  PUSH 0x1
+0061af94  PUSH 0x60d4a0
+0061af99  PUSH ESI
+0061af9a  MOV dword ptr [EAX + 0x10],EDX
+0061af9d  MOV dword ptr [EAX + 0x14],ECX
+0061afa0  CALL 0x00618e90
+0061afa5  MOV EAX,dword ptr [ESI + 0x8]
+0061afa8  LEA EDX,[EAX + -0x8]
+0061afab  LEA ECX,[EAX + -0x18]
+0061afae  PUSH EDX
+0061afaf  ADD EAX,-0x10
+0061afb2  PUSH EAX
+0061afb3  PUSH ECX
+0061afb4  PUSH ESI
+0061afb5  CALL 0x0060bf90
+0061afba  MOV EAX,dword ptr [ESI + 0x8]
+0061afbd  ADD EAX,-0x18
+0061afc0  ADD ESP,0x34
+0061afc3  MOV dword ptr [ESI + 0x8],EAX
+0061afc6  RET

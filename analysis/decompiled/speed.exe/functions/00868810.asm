@@ -1,0 +1,2 @@
+00868810  MOV ECX,dword ptr [EBP + -0x10]
+00868813  JMP 0x006f82f0

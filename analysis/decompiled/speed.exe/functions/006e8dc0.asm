@@ -1,0 +1,7 @@
+006e8dc0  MOV EAX,[0x009885e0]
+006e8dc5  TEST EAX,EAX
+006e8dc7  JZ 0x006e8dcd
+006e8dc9  FLD float ptr [EAX + 0x24]
+006e8dcc  RET
+006e8dcd  FLD float ptr [0x00890968]
+006e8dd3  RET

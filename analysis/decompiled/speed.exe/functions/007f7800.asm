@@ -1,0 +1,11 @@
+007f7800  PUSH EBP
+007f7801  MOV EBP,ESP
+007f7803  PUSH dword ptr [EBP + 0x18]
+007f7806  PUSH dword ptr [EBP + 0x14]
+007f7809  PUSH dword ptr [EBP + 0x10]
+007f780c  PUSH dword ptr [EBP + 0xc]
+007f780f  PUSH dword ptr [EBP + 0x8]
+007f7812  CALL dword ptr [ECX + 0x4]
+007f7815  ADD ESP,0x14
+007f7818  POP EBP
+007f7819  RET 0x14

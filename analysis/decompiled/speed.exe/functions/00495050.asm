@@ -1,0 +1,14 @@
+00495050  MOV EAX,ECX
+00495052  XOR ECX,ECX
+00495054  OR EDX,0xffffffff
+00495057  MOV dword ptr [EAX + 0x4],ECX
+0049505a  MOV dword ptr [EAX + 0xc],ECX
+0049505d  MOV dword ptr [EAX],0x8957c8
+00495063  MOV dword ptr [EAX + 0x10],EDX
+00495066  MOV dword ptr [EAX + 0x14],ECX
+00495069  MOV dword ptr [EAX + 0x18],ECX
+0049506c  MOV dword ptr [EAX + 0x1c],EDX
+0049506f  MOV dword ptr [EAX + 0x20],ECX
+00495072  MOV dword ptr [EAX + 0x24],ECX
+00495075  MOV dword ptr [EAX + 0x8],0x15
+0049507c  RET

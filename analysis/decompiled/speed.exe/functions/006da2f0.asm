@@ -1,0 +1,25 @@
+006da2f0  MOV AL,[0x0093cb18]
+006da2f5  TEST AL,AL
+006da2f7  MOV byte ptr [0x009877cc],0x0
+006da2fe  JZ 0x006da316
+006da300  MOV EAX,[0x0093caf4]
+006da305  TEST EAX,EAX
+006da307  JZ 0x006da316
+006da309  MOV ECX,dword ptr [EAX]
+006da30b  PUSH EAX
+006da30c  CALL dword ptr [ECX + 0x30]
+006da30f  MOV byte ptr [0x0093cb18],0x0
+006da316  MOV ECX,0x93caf4
+006da31b  CALL 0x006c1010
+006da320  MOV EDX,dword ptr [0x00982c80]
+006da326  MOV EAX,dword ptr [EDX + 0x48]
+006da329  MOV ECX,dword ptr [EAX]
+006da32b  PUSH EAX
+006da32c  CALL dword ptr [ECX + 0x108]
+006da332  MOV EAX,[0x00982bdc]
+006da337  MOV EDX,dword ptr [EAX]
+006da339  PUSH 0x1
+006da33b  PUSH 0xe
+006da33d  PUSH EAX
+006da33e  CALL dword ptr [EDX + 0xe4]
+006da344  RET

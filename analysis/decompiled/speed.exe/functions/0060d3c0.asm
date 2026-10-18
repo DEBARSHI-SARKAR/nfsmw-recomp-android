@@ -1,0 +1,29 @@
+0060d3c0  MOV EDX,dword ptr [ESP + 0x8]
+0060d3c4  PUSH EDI
+0060d3c5  MOV EDI,dword ptr [ESP + 0x10]
+0060d3c9  CMP EDX,EDI
+0060d3cb  JZ 0x0060d3f5
+0060d3cd  PUSH EBX
+0060d3ce  MOV EBX,dword ptr [ESP + 0x1c]
+0060d3d2  PUSH ESI
+0060d3d3  MOV ESI,dword ptr [ESP + 0x1c]
+0060d3d7  MOV EAX,dword ptr [EDX]
+0060d3d9  CMP EAX,dword ptr [EBX]
+0060d3db  JZ 0x0060d3e4
+0060d3dd  MOV ECX,ESI
+0060d3df  ADD ESI,0x4
+0060d3e2  MOV dword ptr [ECX],EAX
+0060d3e4  ADD EDX,0x4
+0060d3e7  CMP EDX,EDI
+0060d3e9  JNZ 0x0060d3d7
+0060d3eb  MOV EAX,dword ptr [ESP + 0x10]
+0060d3ef  MOV dword ptr [EAX],ESI
+0060d3f1  POP ESI
+0060d3f2  POP EBX
+0060d3f3  POP EDI
+0060d3f4  RET
+0060d3f5  MOV EAX,dword ptr [ESP + 0x8]
+0060d3f9  MOV ECX,dword ptr [ESP + 0x14]
+0060d3fd  MOV dword ptr [EAX],ECX
+0060d3ff  POP EDI
+0060d400  RET

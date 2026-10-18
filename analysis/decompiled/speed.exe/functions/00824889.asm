@@ -1,0 +1,74 @@
+00824889  PUSH EBP
+0082488a  MOV EBP,ESP
+0082488c  SUB ESP,0x10
+0082488f  MOV EAX,dword ptr [EBP + 0xc]
+00824892  MOV ECX,dword ptr [EBP + 0x8]
+00824895  PUSH ESI
+00824896  MOV ESI,dword ptr [EBP + 0x14]
+00824899  LEA EDX,[ESI + EAX*0x4]
+0082489c  CMP ESI,EDX
+0082489e  MOV EAX,dword ptr [ECX + 0x24]
+008248a1  PUSH EDI
+008248a2  MOV EDI,dword ptr [ECX + 0x1c]
+008248a5  MOV dword ptr [EBP + 0x14],EDX
+008248a8  LEA EAX,[EDI + EAX*0x4]
+008248ab  JNC 0x00824945
+008248b1  MOV EDX,dword ptr [EBP + 0x10]
+008248b4  FLD float ptr [0x00890dfc]
+008248ba  MOV EDI,ESI
+008248bc  ADD EDX,0x8
+008248bf  SUB EDI,dword ptr [EBP + 0x10]
+008248c2  PUSH EBX
+008248c3  FLD float ptr [ECX + 0x2c]
+008248c6  FMUL float ptr [EAX]
+008248c8  FADD float ptr [EDX + -0x8]
+008248cb  FADD ST0,ST1
+008248cd  FLD float ptr [ECX + 0x2c]
+008248d0  FMUL float ptr [EAX + 0x4]
+008248d3  FADD float ptr [EDX + -0x4]
+008248d6  FADD ST0,ST2
+008248d8  FLD float ptr [ECX + 0x2c]
+008248db  FMUL float ptr [EAX + 0x8]
+008248de  FADD float ptr [EDX]
+008248e0  FADD ST0,ST3
+008248e2  FSTP float ptr [EBP + -0x8]
+008248e5  FLD float ptr [EAX + 0xc]
+008248e8  MOV EBX,dword ptr [EBP + -0x8]
+008248eb  FMUL float ptr [ECX + 0x2c]
+008248ee  FADD float ptr [EDX + 0x4]
+008248f1  FADD ST0,ST3
+008248f3  FSTP float ptr [EBP + -0x4]
+008248f6  FLD ST1
+008248f8  FMUL float ptr [ECX + 0x30]
+008248fb  FADD float ptr [EAX]
+008248fd  FSTP float ptr [ESI]
+008248ff  ADD ESI,0x10
+00824902  FLD ST0
+00824904  FMUL float ptr [ECX + 0x30]
+00824907  FADD float ptr [EAX + 0x4]
+0082490a  FSTP float ptr [ESI + -0xc]
+0082490d  FLD float ptr [EBP + -0x8]
+00824910  FMUL float ptr [ECX + 0x30]
+00824913  FADD float ptr [EAX + 0x8]
+00824916  FSTP float ptr [EDI + EDX*0x1]
+00824919  ADD EDX,0x10
+0082491c  FLD float ptr [EBP + -0x4]
+0082491f  FMUL float ptr [ECX + 0x30]
+00824922  FADD float ptr [EAX + 0xc]
+00824925  FSTP float ptr [ESI + -0x4]
+00824928  MOV dword ptr [EAX + 0x8],EBX
+0082492b  MOV EBX,dword ptr [EBP + -0x4]
+0082492e  FLD ST1
+00824930  FSTP float ptr [EAX]
+00824932  MOV dword ptr [EAX + 0xc],EBX
+00824935  ADD EAX,0x10
+00824938  CMP ESI,dword ptr [EBP + 0x14]
+0082493b  FSTP float ptr [EAX + -0xc]
+0082493e  FSTP ST0
+00824940  JC 0x008248c3
+00824942  FSTP ST0
+00824944  POP EBX
+00824945  POP EDI
+00824946  POP ESI
+00824947  LEAVE
+00824948  RET

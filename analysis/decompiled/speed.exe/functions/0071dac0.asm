@@ -1,0 +1,19 @@
+0071dac0  MOV EAX,dword ptr [ESP + 0x4]
+0071dac4  CMP EAX,-0x4
+0071dac7  JG 0x0071dad3
+0071dac9  MOV dword ptr [ESP + 0x4],0x1
+0071dad1  JMP 0x0071dae3
+0071dad3  XOR ECX,ECX
+0071dad5  CMP EAX,0x4
+0071dad8  SETG CL
+0071dadb  LEA ECX,[ECX + ECX*0x1 + 0x2]
+0071dadf  MOV dword ptr [ESP + 0x4],ECX
+0071dae3  PUSH 0x0
+0071dae5  PUSH 0x9924fc
+0071daea  PUSH 0x901fc4
+0071daef  LEA EDX,[ESP + 0x10]
+0071daf3  PUSH EDX
+0071daf4  PUSH 0x4
+0071daf6  CALL 0x00713b20
+0071dafb  ADD ESP,0x14
+0071dafe  RET

@@ -1,0 +1,7 @@
+007cbf80  PUSH EBP
+007cbf81  MOV EBP,ESP
+007cbf83  CALL 0x007cd100
+007cbf88  MOV ECX,dword ptr [EBP + 0x8]
+007cbf8b  MOV dword ptr [EAX + 0x14],ECX
+007cbf8e  POP EBP
+007cbf8f  RET

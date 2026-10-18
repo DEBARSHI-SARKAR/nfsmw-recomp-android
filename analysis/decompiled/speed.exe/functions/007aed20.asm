@@ -1,0 +1,30 @@
+007aed20  PUSH EDI
+007aed21  MOV EDI,dword ptr [ESP + 0x8]
+007aed25  PUSH EDI
+007aed26  MOV ECX,0x9b9ec0
+007aed2b  CALL 0x007aec00
+007aed30  TEST EAX,EAX
+007aed32  JZ 0x007aed3e
+007aed34  MOV EAX,dword ptr [EAX + 0xc]
+007aed37  MOV EAX,dword ptr [EAX + 0xc]
+007aed3a  POP EDI
+007aed3b  RET 0x4
+007aed3e  MOV EDX,dword ptr [0x009b9ec4]
+007aed44  MOV ECX,dword ptr [0x0091cf90]
+007aed4a  MOV ECX,dword ptr [ECX + 0x10]
+007aed4d  XOR EAX,EAX
+007aed4f  MOV AL,byte ptr [EDX + 0x10]
+007aed52  PUSH ESI
+007aed53  ADD ECX,0x414
+007aed59  PUSH EAX
+007aed5a  CALL 0x0056f100
+007aed5f  MOV ECX,dword ptr [0x009b9ec4]
+007aed65  PUSH EDI
+007aed66  MOV ESI,EAX
+007aed68  CALL 0x005816b0
+007aed6d  PUSH EAX
+007aed6e  MOV ECX,ESI
+007aed70  CALL 0x0056f250
+007aed75  POP ESI
+007aed76  POP EDI
+007aed77  RET 0x4

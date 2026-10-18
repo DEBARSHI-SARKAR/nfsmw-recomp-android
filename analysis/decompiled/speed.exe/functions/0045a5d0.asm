@@ -1,0 +1,35 @@
+0045a5d0  PUSH ESI
+0045a5d1  MOV ESI,ECX
+0045a5d3  TEST byte ptr [ESI + 0x10],0x1
+0045a5d7  JZ 0x0045a628
+0045a5d9  MOV ECX,dword ptr [ESI + 0x4]
+0045a5dc  MOV EAX,dword ptr [ECX + 0x10]
+0045a5df  XOR EDX,EDX
+0045a5e1  CMP EAX,EDX
+0045a5e3  MOV dword ptr [ESI + 0x4],EAX
+0045a5e6  JZ 0x0045a5f6
+0045a5e8  MOV EAX,dword ptr [EAX + 0x18]
+0045a5eb  MOV dword ptr [ESI + 0x8],EAX
+0045a5ee  MOV EAX,dword ptr [ESI + 0x4]
+0045a5f1  INC dword ptr [EAX + 0x1c]
+0045a5f4  JMP 0x0045a5f9
+0045a5f6  MOV dword ptr [ESI + 0x8],EDX
+0045a5f9  MOV EAX,dword ptr [ECX + 0x1c]
+0045a5fc  CMP EAX,0x1
+0045a5ff  JBE 0x0045a60b
+0045a601  DEC EAX
+0045a602  MOV dword ptr [ECX + 0x1c],EAX
+0045a605  AND byte ptr [ESI + 0x10],0xfe
+0045a609  POP ESI
+0045a60a  RET
+0045a60b  MOV dword ptr [ECX + 0x1c],EDX
+0045a60e  MOV EDX,dword ptr [0x0090dcbc]
+0045a614  MOV EAX,dword ptr [EDX + 0x4]
+0045a617  ADD EAX,0x38
+0045a61a  PUSH EAX
+0045a61b  PUSH ECX
+0045a61c  CALL 0x00459f80
+0045a621  ADD ESP,0x8
+0045a624  AND byte ptr [ESI + 0x10],0xfe
+0045a628  POP ESI
+0045a629  RET

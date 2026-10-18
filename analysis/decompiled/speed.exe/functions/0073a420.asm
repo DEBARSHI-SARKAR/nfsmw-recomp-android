@@ -1,0 +1,9 @@
+0073a420  MOV EAX,dword ptr [ESP + 0x4]
+0073a424  XOR EDX,EDX
+0073a426  TEST EAX,EAX
+0073a428  SETZ DL
+0073a42b  MOV dword ptr [ECX + 0x8],EAX
+0073a42e  MOV EAX,dword ptr [ESP + 0x8]
+0073a432  MOV dword ptr [ECX + 0x10],EAX
+0073a435  MOV dword ptr [ECX + 0xc],EDX
+0073a438  RET 0x8

@@ -1,0 +1,2 @@
+0087cd40  LEA ECX,[EBP + -0x50]
+0087cd43  JMP 0x004aa9a0

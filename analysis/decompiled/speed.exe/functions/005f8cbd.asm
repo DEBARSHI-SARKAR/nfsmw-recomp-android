@@ -1,0 +1,9 @@
+005f8cbd  MOV EAX,dword ptr [EBP + -0x14]
+005f8cc0  MOV ECX,dword ptr [EBP + -0x18]
+005f8cc3  PUSH 0x1
+005f8cc5  PUSH EAX
+005f8cc6  INC ECX
+005f8cc7  CALL 0x005df9c0
+005f8ccc  PUSH 0x0
+005f8cce  PUSH 0x0
+005f8cd0  CALL 0x007c56b0

@@ -1,0 +1,21 @@
+00661e20  PUSH ESI
+00661e21  MOV ESI,ECX
+00661e23  TEST byte ptr [ESI + 0xc],0x1
+00661e27  JNZ 0x00661e4d
+00661e29  MOV EDX,dword ptr [ESI + 0x4]
+00661e2c  MOV ECX,dword ptr [0x008f7ea8]
+00661e32  MOV EAX,dword ptr [ECX]
+00661e34  PUSH 0x0
+00661e36  SHL EDX,0x4
+00661e39  PUSH EDX
+00661e3a  MOV EDX,dword ptr [ESI]
+00661e3c  PUSH EDX
+00661e3d  CALL dword ptr [EAX + 0x4]
+00661e40  MOV dword ptr [ESI],0x0
+00661e46  MOV dword ptr [ESI + 0x4],0x0
+00661e4d  MOV EAX,dword ptr [ESI + 0xc]
+00661e50  AND EAX,0x1
+00661e53  MOV dword ptr [ESI + 0x8],0x0
+00661e5a  MOV dword ptr [ESI + 0xc],EAX
+00661e5d  POP ESI
+00661e5e  RET

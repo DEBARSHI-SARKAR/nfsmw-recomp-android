@@ -1,0 +1,60 @@
+0081fed2  MOV AL,[0x009c1fd8]
+0081fed7  XOR EDX,EDX
+0081fed9  INC EDX
+0081feda  XOR ECX,ECX
+0081fedc  CMP AL,DL
+0081fede  JNZ 0x0081feeb
+0081fee0  MOV dword ptr [0x009c1fdc],ECX
+0081fee6  JMP 0x0081ff79
+0081feeb  CMP AL,0x2
+0081feed  JNZ 0x0081ff0b
+0081feef  MOV dword ptr [0x009c1fdc],EDX
+0081fef5  MOV dword ptr [0x009c1fc4],0x42b40000
+0081feff  MOV dword ptr [0x009c1fc8],0x43870000
+0081ff09  JMP 0x0081ff81
+0081ff0b  CMP AL,0x4
+0081ff0d  JNZ 0x0081ff43
+0081ff0f  MOV dword ptr [0x009c1fdc],0x2
+0081ff19  MOV dword ptr [0x009c1fc4],0x42340000
+0081ff23  MOV dword ptr [0x009c1fc8],0x43070000
+0081ff2d  MOV dword ptr [0x009c1fcc],0x43610000
+0081ff37  MOV dword ptr [0x009c1fd0],0x439d8000
+0081ff41  JMP 0x0081ff81
+0081ff43  CMP AL,0x6
+0081ff45  JNZ 0x0081ff81
+0081ff47  MOV dword ptr [0x009c1fdc],0x3
+0081ff51  MOV dword ptr [0x009c1fc8],0x42340000
+0081ff5b  MOV dword ptr [0x009c1fcc],0x43070000
+0081ff65  MOV dword ptr [0x009c1fd0],0x43610000
+0081ff6f  MOV dword ptr [0x009c1fd4],0x439d8000
+0081ff79  FLDZ
+0081ff7b  FSTP float ptr [0x009c1fc4]
+0081ff81  CMP byte ptr [0x009c205f],0x2
+0081ff88  JNZ 0x0081ff9e
+0081ff8a  MOV word ptr [0x009c220c],0xc000
+0081ff93  MOV word ptr [0x009c220e],0x4000
+0081ff9c  JMP 0x0081ffb0
+0081ff9e  MOV word ptr [0x009c220c],0xe000
+0081ffa7  MOV word ptr [0x009c220e],0x2000
+0081ffb0  MOV AX,[0x009c20ac]
+0081ffb6  MOV [0x009c2218],AX
+0081ffbc  MOV AX,[0x009c20a8]
+0081ffc2  MOV [0x009c221a],AX
+0081ffc8  MOV AX,[0x009c20aa]
+0081ffce  MOV [0x009c221c],AX
+0081ffd4  MOV word ptr [0x009c2224],0xe000
+0081ffdd  MOV word ptr [0x009c2226],0x2000
+0081ffe6  MOV word ptr [0x009c2228],0xa000
+0081ffef  MOV word ptr [0x009c222a],0x6000
+0081fff8  MOV word ptr [0x009c2230],0xe000
+00820001  MOV word ptr [0x009c2232],CX
+00820008  MOV word ptr [0x009c2234],0x2000
+00820011  MOV word ptr [0x009c2236],0xa000
+0082001a  MOV word ptr [0x009c2238],0x6000
+00820023  MOV word ptr [0x009c223c],0xe000
+0082002c  MOV word ptr [0x009c223e],CX
+00820033  MOV word ptr [0x009c2240],0x2000
+0082003c  MOV word ptr [0x009c2242],0xa000
+00820045  MOV word ptr [0x009c2244],0x6000
+0082004e  MOV word ptr [0x009c2246],CX
+00820055  RET

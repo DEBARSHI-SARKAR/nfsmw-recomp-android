@@ -1,0 +1,22 @@
+00574bc0  PUSH ESI
+00574bc1  PUSH EDI
+00574bc2  MOV EDI,dword ptr [ESP + 0xc]
+00574bc6  MOV ESI,ECX
+00574bc8  MOV EAX,dword ptr [ESI + 0x5c]
+00574bcb  LEA ECX,[ESI + 0x5c]
+00574bce  PUSH EDI
+00574bcf  CALL dword ptr [EAX + 0x4]
+00574bd2  TEST AL,AL
+00574bd4  JZ 0x00574be7
+00574bd6  MOV EDX,dword ptr [ESI]
+00574bd8  PUSH EDI
+00574bd9  MOV ECX,ESI
+00574bdb  CALL dword ptr [EDX + 0x38]
+00574bde  POP EDI
+00574bdf  MOV byte ptr [ESI + 0x2a],0x1
+00574be3  POP ESI
+00574be4  RET 0x4
+00574be7  POP EDI
+00574be8  MOV byte ptr [ESI + 0x2a],0x0
+00574bec  POP ESI
+00574bed  RET 0x4

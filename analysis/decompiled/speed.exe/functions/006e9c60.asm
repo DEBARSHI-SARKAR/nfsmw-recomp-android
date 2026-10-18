@@ -1,0 +1,17 @@
+006e9c60  MOV EAX,[0x009885d0]
+006e9c65  TEST EAX,EAX
+006e9c67  JZ 0x006e9c7c
+006e9c69  MOV ECX,dword ptr [ESP + 0x4]
+006e9c6d  LEA ECX,[ECX]
+006e9c70  CMP dword ptr [EAX + 0x20],ECX
+006e9c73  JZ 0x006e9c87
+006e9c75  MOV EAX,dword ptr [EAX + 0x14]
+006e9c78  TEST EAX,EAX
+006e9c7a  JNZ 0x006e9c70
+006e9c7c  MOV EDX,dword ptr [ESP + 0x8]
+006e9c80  XOR EAX,EAX
+006e9c82  MOV dword ptr [EAX],EDX
+006e9c84  RET 0x8
+006e9c87  MOV ECX,dword ptr [ESP + 0x8]
+006e9c8b  MOV dword ptr [EAX],ECX
+006e9c8d  RET 0x8

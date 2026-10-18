@@ -1,0 +1,30 @@
+007e0420  PUSH EBP
+007e0421  MOV EBP,ESP
+007e0423  MOV EAX,dword ptr [EBP + 0x10]
+007e0426  CMP dword ptr [EAX],0x0
+007e0429  JZ 0x007e0466
+007e042b  MOV ECX,dword ptr [EBP + 0x8]
+007e042e  MOVSX EDX,byte ptr [ECX]
+007e0431  TEST EDX,EDX
+007e0433  JZ 0x007e0466
+007e0435  MOV EAX,dword ptr [EBP + 0xc]
+007e0438  MOV ECX,dword ptr [EAX]
+007e043a  MOV EDX,dword ptr [EBP + 0x8]
+007e043d  MOV AL,byte ptr [EDX]
+007e043f  MOV byte ptr [ECX],AL
+007e0441  MOV ECX,dword ptr [EBP + 0xc]
+007e0444  MOV EDX,dword ptr [ECX]
+007e0446  ADD EDX,0x1
+007e0449  MOV EAX,dword ptr [EBP + 0xc]
+007e044c  MOV dword ptr [EAX],EDX
+007e044e  MOV ECX,dword ptr [EBP + 0x8]
+007e0451  ADD ECX,0x1
+007e0454  MOV dword ptr [EBP + 0x8],ECX
+007e0457  MOV EDX,dword ptr [EBP + 0x10]
+007e045a  MOV EAX,dword ptr [EDX]
+007e045c  SUB EAX,0x1
+007e045f  MOV ECX,dword ptr [EBP + 0x10]
+007e0462  MOV dword ptr [ECX],EAX
+007e0464  JMP 0x007e0423
+007e0466  POP EBP
+007e0467  RET

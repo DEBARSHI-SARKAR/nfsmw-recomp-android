@@ -1,0 +1,22 @@
+0045ae00  MOV ECX,dword ptr [0x0090dcd4]
+0045ae06  MOV EAX,dword ptr [ESP + 0x8]
+0045ae0a  MOV EDX,dword ptr [0x0090dcd0]
+0045ae10  SUB ECX,EAX
+0045ae12  CMP ECX,EDX
+0045ae14  MOV dword ptr [0x0090dcd4],ECX
+0045ae1a  JBE 0x0045ae22
+0045ae1c  MOV dword ptr [0x0090dcd0],ECX
+0045ae22  MOV EDX,dword ptr [ESP + 0x4]
+0045ae26  TEST EDX,EDX
+0045ae28  JZ 0x0045ae3f
+0045ae2a  TEST EAX,EAX
+0045ae2c  JBE 0x0045ae3f
+0045ae2e  MOV ECX,dword ptr [0x008f7ea8]
+0045ae34  PUSH ESI
+0045ae35  MOV ESI,dword ptr [ECX]
+0045ae37  PUSH 0x0
+0045ae39  PUSH EAX
+0045ae3a  PUSH EDX
+0045ae3b  CALL dword ptr [ESI + 0x4]
+0045ae3e  POP ESI
+0045ae3f  RET

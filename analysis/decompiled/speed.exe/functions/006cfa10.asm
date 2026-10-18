@@ -1,0 +1,54 @@
+006cfa10  MOV EAX,[0x00919694]
+006cfa15  CMP EAX,0x919694
+006cfa1a  JZ 0x006cfabb
+006cfa20  TEST EAX,EAX
+006cfa22  JZ 0x006cfa4d
+006cfa24  LEA ECX,[EAX + -0x4]
+006cfa27  TEST ECX,ECX
+006cfa29  JZ 0x006cfa4d
+006cfa2b  MOV ECX,dword ptr [0x00919704]
+006cfa31  CMP ECX,0x919704
+006cfa37  JZ 0x006cfa4d
+006cfa39  TEST ECX,ECX
+006cfa3b  JZ 0x006cfa4d
+006cfa3d  ADD ECX,-0x4
+006cfa40  JZ 0x006cfa4d
+006cfa42  MOV dword ptr [0x00982b3c],0x3
+006cfa4c  RET
+006cfa4d  CMP EAX,0x919694
+006cfa52  JZ 0x006cfabb
+006cfa54  TEST EAX,EAX
+006cfa56  JZ 0x006cfaa1
+006cfa58  LEA ECX,[EAX + -0x4]
+006cfa5b  TEST ECX,ECX
+006cfa5d  JZ 0x006cfaa1
+006cfa5f  MOV ECX,dword ptr [0x00919774]
+006cfa65  CMP ECX,0x919774
+006cfa6b  JZ 0x006cfaa1
+006cfa6d  TEST ECX,ECX
+006cfa6f  JZ 0x006cfaa1
+006cfa71  ADD ECX,-0x4
+006cfa74  JZ 0x006cfaa1
+006cfa76  CMP EAX,0x919694
+006cfa7b  JZ 0x006cfa86
+006cfa7d  TEST EAX,EAX
+006cfa7f  JZ 0x006cfa86
+006cfa81  LEA ECX,[EAX + -0x4]
+006cfa84  JMP 0x006cfa88
+006cfa86  XOR ECX,ECX
+006cfa88  MOV EAX,dword ptr [ECX]
+006cfa8a  CALL dword ptr [EAX + 0x24]
+006cfa8d  TEST AL,AL
+006cfa8f  JNZ 0x006cfa9c
+006cfa91  MOV dword ptr [0x00982b3c],0x2
+006cfa9b  RET
+006cfa9c  MOV EAX,[0x00919694]
+006cfaa1  CMP EAX,0x919694
+006cfaa6  JZ 0x006cfabb
+006cfaa8  TEST EAX,EAX
+006cfaaa  JZ 0x006cfabb
+006cfaac  ADD EAX,-0x4
+006cfaaf  MOV dword ptr [0x00982b3c],0x1
+006cfab9  JNZ 0x006cfac5
+006cfabb  MOV dword ptr [0x00982b3c],0x0
+006cfac5  RET

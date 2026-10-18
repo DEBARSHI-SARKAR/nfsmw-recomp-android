@@ -1,0 +1,22 @@
+004b6820  PUSH ESI
+004b6821  MOV ESI,ECX
+004b6823  MOV EAX,dword ptr [ESI + 0x14]
+004b6826  MOV ECX,dword ptr [EAX + 0x1c]
+004b6829  MOV dword ptr [ESI + 0x28],ECX
+004b682c  MOV ECX,dword ptr [ESI + 0x2c]
+004b682f  MOV EDX,dword ptr [ECX]
+004b6831  LEA EAX,[ESI + 0x30]
+004b6834  PUSH EAX
+004b6835  CALL dword ptr [EDX + 0x38]
+004b6838  MOV ECX,dword ptr [ESI + 0x2c]
+004b683b  MOV EDX,dword ptr [ECX]
+004b683d  LEA EAX,[ESI + 0x50]
+004b6840  PUSH EAX
+004b6841  CALL dword ptr [EDX + 0x40]
+004b6844  MOV ECX,dword ptr [ESI + 0x2c]
+004b6847  MOV EDX,dword ptr [ECX]
+004b6849  ADD ESI,0x40
+004b684c  PUSH ESI
+004b684d  CALL dword ptr [EDX + 0x3c]
+004b6850  POP ESI
+004b6851  RET

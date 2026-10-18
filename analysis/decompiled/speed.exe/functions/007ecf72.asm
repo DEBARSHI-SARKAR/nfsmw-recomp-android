@@ -1,0 +1,10 @@
+007ecf72  PUSH EBP
+007ecf73  MOV EBP,ESP
+007ecf75  MOV ECX,dword ptr [EBP + 0xc]
+007ecf78  MOV EAX,dword ptr [EBP + 0x8]
+007ecf7b  LEA EAX,[EAX + ECX*0x1 + -0x1]
+007ecf7f  DEC ECX
+007ecf80  NOT ECX
+007ecf82  AND EAX,ECX
+007ecf84  POP EBP
+007ecf85  RET

@@ -1,0 +1,52 @@
+00762640  MOV EAX,dword ptr [ESP + 0xc]
+00762644  PUSH EBX
+00762645  PUSH ESI
+00762646  PUSH EDI
+00762647  LEA EDX,[EAX + 0x10]
+0076264a  MOV ESI,EDX
+0076264c  MOV EBX,dword ptr [ESI]
+0076264e  MOV EDI,EAX
+00762650  MOV dword ptr [EDI],EBX
+00762652  MOV EBX,dword ptr [ESI + 0x4]
+00762655  MOV ESI,dword ptr [ESI + 0x8]
+00762658  MOV dword ptr [EDI + 0x4],EBX
+0076265b  MOV dword ptr [EDI + 0x8],ESI
+0076265e  LEA ESI,[EAX + 0x20]
+00762661  MOV EDI,ESI
+00762663  MOV EBX,dword ptr [EDI]
+00762665  MOV dword ptr [EDX],EBX
+00762667  MOV EBX,dword ptr [EDI + 0x4]
+0076266a  MOV EDI,dword ptr [EDI + 0x8]
+0076266d  MOV dword ptr [EDX + 0x4],EBX
+00762670  MOV dword ptr [EDX + 0x8],EDI
+00762673  MOV EDX,dword ptr [ESP + 0x10]
+00762677  MOVSX EDI,word ptr [ECX + EDX*0x8 + 0x10]
+0076267c  MOV dword ptr [ESP + 0x18],EDI
+00762680  MOV EDI,dword ptr [ESP + 0x14]
+00762684  FILD dword ptr [ESP + 0x18]
+00762688  FMUL float ptr [0x00905cf4]
+0076268e  FADD float ptr [EDI]
+00762690  FSTP float ptr [ESI]
+00762692  MOVSX ESI,word ptr [ECX + EDX*0x8 + 0x12]
+00762697  MOV dword ptr [ESP + 0x18],ESI
+0076269b  FILD dword ptr [ESP + 0x18]
+0076269f  FMUL float ptr [0x00905cf4]
+007626a5  FADD float ptr [EDI + 0x4]
+007626a8  FSTP float ptr [EAX + 0x24]
+007626ab  MOVSX ESI,word ptr [ECX + EDX*0x8 + 0x14]
+007626b0  MOV dword ptr [ESP + 0x18],ESI
+007626b4  LEA ECX,[ECX + EDX*0x8 + 0x16]
+007626b8  FILD dword ptr [ESP + 0x18]
+007626bc  FMUL float ptr [0x00905cf4]
+007626c2  FADD float ptr [EDI + 0x8]
+007626c5  POP EDI
+007626c6  POP ESI
+007626c7  POP EBX
+007626c8  FSTP float ptr [EAX + 0x28]
+007626cb  MOV DL,byte ptr [ECX]
+007626cd  MOV CL,byte ptr [ECX + 0x1]
+007626d0  MOV byte ptr [ESP + 0xc],DL
+007626d4  MOV byte ptr [ESP + 0xd],CL
+007626d8  MOV DX,word ptr [ESP + 0xc]
+007626dd  MOV word ptr [EAX + 0x2c],DX
+007626e1  RET 0xc

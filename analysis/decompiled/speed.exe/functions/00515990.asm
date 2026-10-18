@@ -1,0 +1,4 @@
+00515990  FILD dword ptr [0x00987f6c]
+00515996  MOV EAX,dword ptr [ESP + 0x4]
+0051599a  FSTP float ptr [EAX]
+0051599c  RET

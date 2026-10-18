@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "target": "Apple M5 Max",
+  "machine": "Apple M5 Max",
+  "target_verified": true,
+  "probe_complete": true,
+  "native_compatibility": true,
+  "full_probe": false,
+  "scope": "seven shipping RGB565 modes",
+  "script_sha256": "e6d19691b956836208229a4ebc3fe7ba22dda9afaad1acf9d284490aad88404c",
+  "smoke_sha256": "faaf19b1d45a02bb6aed709c69e626ba965e3245e116f4efaf4ddb91af63a80e",
+  "modes": [
+    {
+      "w": 640,
+      "h": 480,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 42,
+          "diagnostic_source": "structured",
+          "com_log_line": 43
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/640x480/smoke.log",
+      "composite_sha256": "b9c48ab0dd19cf2ca55b2b9c863c8bfa11951c2cbdb6d61cbc8c9b70785be713"
+    },
+    {
+      "w": 800,
+      "h": 600,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 43,
+          "diagnostic_source": "structured",
+          "com_log_line": 44
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            800,
+            600,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 339,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/800x600/smoke.log",
+      "composite_sha256": "1205f623d0de3212905201ed38c674fdd115560ddb6972576040305c695ef80e"
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 42,
+          "diagnostic_source": "structured",
+          "com_log_line": 43
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            1024,
+            768,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 338,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/1024x768/smoke.log",
+      "composite_sha256": "11f68f85df9dc92315be347e0d911f3988323fd4566f27a52dd4e4c541567d7d"
+    },
+    {
+      "w": 1280,
+      "h": 720,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 43,
+          "diagnostic_source": "structured",
+          "com_log_line": 44
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            1280,
+            720,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 338,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/1280x720/smoke.log",
+      "composite_sha256": "8d7438853c3373125e215d8d42e325ac132c69c629f0e1cb94b95e70ed11e7c7"
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 43,
+          "diagnostic_source": "structured",
+          "com_log_line": 44
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            1920,
+            1080,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 339,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/1920x1080/smoke.log",
+      "composite_sha256": "167f7c07d7321bd7814f4b33dfa7a8ff77e3110e60a35a32b7b03f03c3672cef"
+    },
+    {
+      "w": 2560,
+      "h": 1440,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 42,
+          "diagnostic_source": "structured",
+          "com_log_line": 43
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            2560,
+            1440,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 338,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/2560x1440/smoke.log",
+      "composite_sha256": "625382c2bc5679e2c96cf02edb964e0fc825f9f845cdae866502411c97586025"
+    },
+    {
+      "w": 3840,
+      "h": 2160,
+      "bpp": 16,
+      "status": "pass",
+      "passed": true,
+      "framing": "aspect-fit",
+      "fault_address": null,
+      "reason": "mode, level entry, completed gameplay dumpc and clean exit verified",
+      "surface_failures": [
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            640,
+            480,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 43,
+          "diagnostic_source": "structured",
+          "com_log_line": 44
+        },
+        {
+          "interface": "IDirectDraw",
+          "hresult": "0x88760091",
+          "surface": "offscreen",
+          "descriptor_readable": true,
+          "descriptor_flags": 4103,
+          "caps": 4096,
+          "requested_width": 2,
+          "requested_height": 2,
+          "requested_format": {
+            "size": 32,
+            "flags": 4,
+            "fourcc": 1129469520,
+            "bpp": 0,
+            "rmask": 0,
+            "gmask": 0,
+            "bmask": 0,
+            "amask": 0
+          },
+          "display_mode": [
+            3840,
+            2160,
+            16
+          ],
+          "expected_format_probe": true,
+          "log_line": 338,
+          "diagnostic_source": "structured"
+        }
+      ],
+      "exit_status": 0,
+      "log": "build/higher-resolutions/final-modes/3840x2160/smoke.log",
+      "composite_sha256": "972e0f821a4a87eeff6327889701cf96cbb2c549d521e4d75a1343b6c09f7439"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+005e29e0  MOV EAX,dword ptr [ECX]
+005e29e2  MOV ECX,dword ptr [0x0091e00c]
+005e29e8  PUSH EAX
+005e29e9  CALL 0x005dd930
+005e29ee  RET

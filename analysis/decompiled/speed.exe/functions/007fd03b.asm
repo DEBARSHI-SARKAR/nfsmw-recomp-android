@@ -1,0 +1,12 @@
+007fd03b  PUSH EBP
+007fd03c  MOV EBP,ESP
+007fd03e  MOV ECX,dword ptr [EBP + 0x8]
+007fd041  MOV dword ptr [ECX + 0x13c],0x8c45b8
+007fd04b  XOR EAX,EAX
+007fd04d  MOV EDX,dword ptr [EAX*0x4 + 0x8c44b8]
+007fd054  MOV byte ptr [EDX + ECX*0x1 + 0x140],AL
+007fd05b  INC EAX
+007fd05c  CMP EAX,0x40
+007fd05f  JL 0x007fd04d
+007fd061  POP EBP
+007fd062  RET

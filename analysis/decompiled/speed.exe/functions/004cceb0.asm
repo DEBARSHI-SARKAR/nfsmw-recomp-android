@@ -1,0 +1,6 @@
+004cceb0  PUSH 0x4cc6a0
+004cceb5  PUSH 0x3
+004cceb7  PUSH 0x74
+004cceb9  PUSH ECX
+004cceba  CALL 0x007c8f50
+004ccebf  RET

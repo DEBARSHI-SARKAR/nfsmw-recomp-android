@@ -1,0 +1,29 @@
+006be8f0  MOV ECX,dword ptr [ECX]
+006be8f2  PUSH ESI
+006be8f3  MOV ESI,dword ptr [ESP + 0x8]
+006be8f7  XOR EDX,EDX
+006be8f9  ADD ECX,0x144
+006be8ff  NOP
+006be900  FLD float ptr [ECX + 0x4]
+006be903  FMUL float ptr [ESI + 0x8]
+006be906  FLD float ptr [ECX + -0x4]
+006be909  FMUL float ptr [ESI]
+006be90b  FADDP
+006be90d  FLD float ptr [ECX]
+006be90f  FMUL float ptr [ESI + 0x4]
+006be912  FADDP
+006be914  FADD float ptr [ECX + 0x8]
+006be917  FCOMP float ptr [0x00890968]
+006be91d  FNSTSW AX
+006be91f  TEST AH,0x41
+006be922  JNZ 0x006be936
+006be924  INC EDX
+006be925  ADD ECX,0x10
+006be928  CMP EDX,0x5
+006be92b  JLE 0x006be900
+006be92d  MOV EAX,0x2
+006be932  POP ESI
+006be933  RET 0x8
+006be936  XOR EAX,EAX
+006be938  POP ESI
+006be939  RET 0x8

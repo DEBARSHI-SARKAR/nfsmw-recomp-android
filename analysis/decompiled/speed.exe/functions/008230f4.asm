@@ -1,0 +1,4 @@
+008230f4  PUSH dword ptr [ESP + 0x4]
+008230f8  CALL 0x00822e1a
+008230fd  POP ECX
+008230fe  JMP dword ptr [0x009c2314]

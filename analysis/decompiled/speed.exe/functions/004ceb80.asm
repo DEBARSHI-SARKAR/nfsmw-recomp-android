@@ -1,0 +1,17 @@
+004ceb80  MOV EAX,FS:[0x0]
+004ceb86  PUSH -0x1
+004ceb88  PUSH 0x86c708
+004ceb8d  PUSH EAX
+004ceb8e  MOV EAX,dword ptr [ESP + 0x18]
+004ceb92  MOV dword ptr FS:[0x0],ESP
+004ceb99  SUB ESP,0x18
+004ceb9c  PUSH EDI
+004ceb9d  XOR EDI,EDI
+004ceb9f  CMP EAX,EDI
+004ceba1  JNZ 0x004cebb5
+004ceba3  XOR EAX,EAX
+004ceba5  POP EDI
+004ceba6  MOV ECX,dword ptr [ESP + 0x18]
+004cebaa  MOV dword ptr FS:[0x0],ECX
+004cebb1  ADD ESP,0x24
+004cebb4  RET

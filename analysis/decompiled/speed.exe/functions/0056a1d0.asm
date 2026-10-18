@@ -1,0 +1,25 @@
+0056a1d0  SUB ESP,0xc
+0056a1d3  MOV CL,byte ptr [ESP + 0x10]
+0056a1d7  MOV byte ptr [ESP],0x2f
+0056a1db  MOV byte ptr [ESP + 0x1],0x5c
+0056a1e0  MOV byte ptr [ESP + 0x2],0x7c
+0056a1e5  MOV byte ptr [ESP + 0x3],0x60
+0056a1ea  MOV byte ptr [ESP + 0x4],0x7e
+0056a1ef  MOV byte ptr [ESP + 0x5],0x23
+0056a1f4  MOV byte ptr [ESP + 0x6],0x25
+0056a1f9  MOV byte ptr [ESP + 0x7],0x2b
+0056a1fe  MOV byte ptr [ESP + 0x8],0x2a
+0056a203  MOV byte ptr [ESP + 0x9],0x3d
+0056a208  XOR EAX,EAX
+0056a20a  LEA EBX,[EBX]
+0056a210  CMP CL,byte ptr [ESP + EAX*0x1]
+0056a213  JZ 0x0056a223
+0056a215  INC EAX
+0056a216  CMP EAX,0xa
+0056a219  JC 0x0056a210
+0056a21b  XOR AL,AL
+0056a21d  ADD ESP,0xc
+0056a220  RET 0x4
+0056a223  MOV AL,0x1
+0056a225  ADD ESP,0xc
+0056a228  RET 0x4

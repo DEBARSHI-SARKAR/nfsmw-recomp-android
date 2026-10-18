@@ -1,0 +1,26 @@
+005dca70  MOV EAX,dword ptr [ECX + 0x3c]
+005dca73  MOV ECX,dword ptr [ECX]
+005dca75  PUSH ESI
+005dca76  XOR EDX,EDX
+005dca78  TEST ECX,ECX
+005dca7a  PUSH EDI
+005dca7b  MOV EDI,dword ptr [ESP + 0xc]
+005dca7f  JBE 0x005dca93
+005dca81  MOV ESI,dword ptr [EAX]
+005dca83  TEST ESI,ESI
+005dca85  JZ 0x005dca93
+005dca87  CMP ESI,EDI
+005dca89  JZ 0x005dca95
+005dca8b  ADD EAX,0x10
+005dca8e  INC EDX
+005dca8f  CMP EDX,ECX
+005dca91  JC 0x005dca81
+005dca93  MOV dword ptr [EAX],EDI
+005dca95  MOV EAX,dword ptr [EAX + 0x4]
+005dca98  AND EAX,dword ptr [ESP + 0x10]
+005dca9c  NEG EAX
+005dca9e  SBB EAX,EAX
+005dcaa0  POP EDI
+005dcaa1  NEG EAX
+005dcaa3  POP ESI
+005dcaa4  RET 0x8

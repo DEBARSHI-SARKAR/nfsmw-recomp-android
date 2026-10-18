@@ -1,0 +1,17 @@
+0073d7d0  MOV EAX,dword ptr [ECX + 0xc]
+0073d7d3  TEST EAX,EAX
+0073d7d5  JZ 0x0073d7fa
+0073d7d7  MOV ECX,dword ptr [ECX + 0x18]
+0073d7da  TEST ECX,ECX
+0073d7dc  JZ 0x0073d7fa
+0073d7de  MOV EAX,dword ptr [EAX + 0x10]
+0073d7e1  MOV EDX,dword ptr [ESP + 0x4]
+0073d7e5  MOV EAX,dword ptr [EAX + EDX*0x4]
+0073d7e8  ADD EAX,ECX
+0073d7ea  JNZ 0x0073d7f5
+0073d7ec  FLD float ptr [0x00890968]
+0073d7f2  RET 0x4
+0073d7f5  FLD float ptr [EAX]
+0073d7f7  RET 0x4
+0073d7fa  FLD float ptr [0x00890968]
+0073d800  RET 0x4

@@ -1,0 +1,10 @@
+007c51de  PUSH EBX
+007c51df  PUSH ECX
+007c51e0  MOV EBX,0x906280
+007c51e5  MOV ECX,dword ptr [EBP + 0x8]
+007c51e8  MOV dword ptr [EBX + 0x8],ECX
+007c51eb  MOV dword ptr [EBX + 0x4],EAX
+007c51ee  MOV dword ptr [EBX + 0xc],EBP
+007c51f1  POP ECX
+007c51f2  POP EBX
+007c51f3  RET 0x4

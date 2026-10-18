@@ -1,0 +1,6 @@
+004aaf50  MOV EAX,dword ptr [ECX + 0x3c]
+004aaf53  ADD ECX,0x34
+004aaf56  TEST EAX,EAX
+004aaf58  JZ 0x004aaf5f
+004aaf5a  JMP 0x0045a8a0
+004aaf5f  RET

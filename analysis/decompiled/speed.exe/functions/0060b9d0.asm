@@ -1,0 +1,25 @@
+0060b9d0  PUSH ESI
+0060b9d1  MOV ESI,dword ptr [ESP + 0x8]
+0060b9d5  MOV EAX,dword ptr [ESI + 0x48]
+0060b9d8  TEST EAX,EAX
+0060b9da  JZ 0x0060ba04
+0060b9dc  PUSH EDI
+0060b9dd  MOV EDI,dword ptr [ESP + 0x10]
+0060b9e1  PUSH EBX
+0060b9e2  MOV EDX,dword ptr [EAX + 0x8]
+0060b9e5  CMP EDX,EDI
+0060b9e7  JC 0x0060ba02
+0060b9e9  MOV EBX,dword ptr [EDX]
+0060b9eb  LEA ECX,[EAX + 0xc]
+0060b9ee  MOV dword ptr [ECX],EBX
+0060b9f0  MOV EDX,dword ptr [EDX + 0x4]
+0060b9f3  MOV dword ptr [ECX + 0x4],EDX
+0060b9f6  MOV dword ptr [EAX + 0x8],ECX
+0060b9f9  MOV EAX,dword ptr [EAX]
+0060b9fb  TEST EAX,EAX
+0060b9fd  MOV dword ptr [ESI + 0x48],EAX
+0060ba00  JNZ 0x0060b9e2
+0060ba02  POP EBX
+0060ba03  POP EDI
+0060ba04  POP ESI
+0060ba05  RET

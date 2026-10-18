@@ -1,0 +1,28 @@
+006cb190  MOV EAX,[0x008faf20]
+006cb195  PUSH ESI
+006cb196  XOR EDX,EDX
+006cb198  TEST EAX,EAX
+006cb19a  PUSH EDI
+006cb19b  JZ 0x006cb1c4
+006cb19d  MOV ESI,dword ptr [ESP + 0x10]
+006cb1a1  MOV EDI,dword ptr [ESP + 0xc]
+006cb1a5  MOV ECX,0x8faf20
+006cb1aa  LEA EBX,[EBX]
+006cb1b0  CMP EAX,EDI
+006cb1b2  JNZ 0x006cb1b9
+006cb1b4  CMP dword ptr [ECX + 0x4],ESI
+006cb1b7  JZ 0x006cb1cd
+006cb1b9  MOV EAX,dword ptr [ECX + 0xc]
+006cb1bc  ADD ECX,0xc
+006cb1bf  INC EDX
+006cb1c0  TEST EAX,EAX
+006cb1c2  JNZ 0x006cb1b0
+006cb1c4  FLD float ptr [0x0089096c]
+006cb1ca  POP EDI
+006cb1cb  POP ESI
+006cb1cc  RET
+006cb1cd  LEA EAX,[EDX + EDX*0x2]
+006cb1d0  FLD float ptr [EAX*0x4 + 0x8faf28]
+006cb1d7  POP EDI
+006cb1d8  POP ESI
+006cb1d9  RET

@@ -1,0 +1,10 @@
+00566f30  MOV AL,byte ptr [ECX + 0x28]
+00566f33  TEST AL,AL
+00566f35  PUSH -0x1
+00566f37  JZ 0x00566f3f
+00566f39  MOV EAX,dword ptr [ECX]
+00566f3b  CALL dword ptr [EAX + 0x38]
+00566f3e  RET
+00566f3f  MOV EDX,dword ptr [ECX]
+00566f41  CALL dword ptr [EDX + 0x34]
+00566f44  RET

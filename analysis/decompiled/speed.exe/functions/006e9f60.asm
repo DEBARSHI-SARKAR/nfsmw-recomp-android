@@ -1,0 +1,10 @@
+006e9f60  PUSH ESI
+006e9f61  MOV ESI,ECX
+006e9f63  MOV ECX,dword ptr [ESI + 0x6c]
+006e9f66  TEST ECX,ECX
+006e9f68  JZ 0x006e9f76
+006e9f6a  MOV EAX,dword ptr [ECX]
+006e9f6c  CALL dword ptr [EAX + 0x4]
+006e9f6f  MOV dword ptr [ESI + 0x6c],0x0
+006e9f76  POP ESI
+006e9f77  RET

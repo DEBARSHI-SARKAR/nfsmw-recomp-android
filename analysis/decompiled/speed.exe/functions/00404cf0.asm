@@ -1,0 +1,23 @@
+00404cf0  PUSH ECX
+00404cf1  PUSH ESI
+00404cf2  LEA EAX,[ESP + 0x4]
+00404cf6  PUSH EAX
+00404cf7  MOV ESI,ECX
+00404cf9  CALL 0x00404c70
+00404cfe  MOV ECX,dword ptr [ESP + 0x8]
+00404d02  MOV EDX,dword ptr [ESP + 0x10]
+00404d06  ADD ESP,0x4
+00404d09  XOR EAX,EAX
+00404d0b  MOV dword ptr [ESI],ECX
+00404d0d  MOV ECX,dword ptr [ESP + 0x14]
+00404d11  MOV dword ptr [ESI + 0x4],EAX
+00404d14  MOV dword ptr [ESI + 0xc],EAX
+00404d17  MOV EAX,dword ptr [ESP + 0x10]
+00404d1b  MOV dword ptr [ESI + 0x14],EAX
+00404d1e  MOV dword ptr [ESI + 0x8],0x1c
+00404d25  MOV dword ptr [ESI + 0x10],EDX
+00404d28  MOV dword ptr [ESI + 0x18],ECX
+00404d2b  MOV EAX,ESI
+00404d2d  POP ESI
+00404d2e  POP ECX
+00404d2f  RET 0xc

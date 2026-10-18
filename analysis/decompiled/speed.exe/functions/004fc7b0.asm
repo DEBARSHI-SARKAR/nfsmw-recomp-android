@@ -1,0 +1,17 @@
+004fc7b0  MOV EAX,[0x0091c190]
+004fc7b5  XOR EDX,EDX
+004fc7b7  CMP EAX,EDX
+004fc7b9  JNZ 0x004fc7f4
+004fc7bb  MOV dword ptr [0x0091c190],0x1
+004fc7c5  MOV ECX,0x916a78
+004fc7ca  LEA EBX,[EBX]
+004fc7d0  MOV EAX,ECX
+004fc7d2  ADD ECX,0x30
+004fc7d5  CMP ECX,0x9173d8
+004fc7db  MOV byte ptr [EAX + 0x2d],DL
+004fc7de  MOV dword ptr [EAX + 0x20],EDX
+004fc7e1  MOV dword ptr [EAX + 0x24],EDX
+004fc7e4  MOV dword ptr [EAX + 0x28],0xbf800000
+004fc7eb  MOV dword ptr [EAX + 0x1c],0x4479c000
+004fc7f2  JL 0x004fc7d0
+004fc7f4  RET

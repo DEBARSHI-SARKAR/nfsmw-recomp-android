@@ -1,0 +1,6 @@
+00710fca  MOV EDX,dword ptr [EBP + 0x10]
+00710fcd  MOV EAX,dword ptr [EBP + -0x14]
+00710fd0  MOV ECX,dword ptr [EBP + -0x20]
+00710fd3  PUSH EDX
+00710fd4  PUSH EAX
+00710fd5  CALL 0x00702780

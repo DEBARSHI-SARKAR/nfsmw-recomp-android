@@ -1,0 +1,2 @@
+0088f220  MOV dword ptr [0x009bb398],0x8a894c
+0088f22a  RET

@@ -1,0 +1,3 @@
+00451780  MOV EAX,dword ptr [ECX + 0x4]
+00451783  MOV EAX,dword ptr [EAX + 0x18]
+00451786  RET

@@ -1,0 +1,25 @@
+006353b0  PUSH 0x0
+006353b2  PUSH 0x1c
+006353b4  MOV ECX,0x925b30
+006353b9  CALL 0x005d29d0
+006353be  TEST EAX,EAX
+006353c0  JZ 0x006353f4
+006353c2  MOV EDX,dword ptr [ESP + 0x8]
+006353c6  MOV ECX,dword ptr [ESP + 0x4]
+006353ca  MOV dword ptr [EAX],ECX
+006353cc  MOV dword ptr [EAX + 0x4],EDX
+006353cf  MOV EDX,dword ptr [ESP + 0xc]
+006353d3  PUSH ESI
+006353d4  MOV ESI,dword ptr [EDX]
+006353d6  LEA ECX,[EAX + 0x8]
+006353d9  MOV dword ptr [ECX],ESI
+006353db  MOV ESI,dword ptr [EDX + 0x4]
+006353de  MOV dword ptr [ECX + 0x4],ESI
+006353e1  MOV ESI,dword ptr [EDX + 0x8]
+006353e4  MOV dword ptr [ECX + 0x8],ESI
+006353e7  MOV ESI,dword ptr [EDX + 0xc]
+006353ea  MOV dword ptr [ECX + 0xc],ESI
+006353ed  MOV EDX,dword ptr [EDX + 0x10]
+006353f0  MOV dword ptr [ECX + 0x10],EDX
+006353f3  POP ESI
+006353f4  RET 0xc

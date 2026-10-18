@@ -1,0 +1,27 @@
+006d6970  PUSH ESI
+006d6971  MOV ESI,ECX
+006d6973  MOV EAX,dword ptr [ESI + 0x44]
+006d6976  PUSH EAX
+006d6977  MOV dword ptr [ESI],0x8af1f8
+006d697d  CALL 0x00652b00
+006d6982  MOV EAX,dword ptr [ESI + 0x48]
+006d6985  ADD ESP,0x4
+006d6988  TEST EAX,EAX
+006d698a  JZ 0x006d69a5
+006d698c  MOV ECX,dword ptr [EAX]
+006d698e  PUSH EAX
+006d698f  CALL dword ptr [ECX + 0x114]
+006d6995  MOV EAX,dword ptr [ESI + 0x48]
+006d6998  MOV EDX,dword ptr [EAX]
+006d699a  PUSH EAX
+006d699b  CALL dword ptr [EDX + 0x8]
+006d699e  MOV dword ptr [ESI + 0x48],0x0
+006d69a5  MOV EAX,dword ptr [ESI + 0x4c]
+006d69a8  TEST EAX,EAX
+006d69aa  JZ 0x006d69b9
+006d69ac  MOV ECX,dword ptr [EAX]
+006d69ae  PUSH EAX
+006d69af  CALL dword ptr [ECX + 0x8]
+006d69b2  MOV dword ptr [ESI + 0x4c],0x0
+006d69b9  POP ESI
+006d69ba  RET

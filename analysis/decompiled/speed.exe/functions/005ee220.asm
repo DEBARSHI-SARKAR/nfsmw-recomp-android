@@ -1,0 +1,14 @@
+005ee220  SUB ESP,0x8
+005ee223  MOV EAX,dword ptr [ECX]
+005ee225  LEA ECX,[ESP]
+005ee228  PUSH ECX
+005ee229  MOV ECX,dword ptr [0x0091e00c]
+005ee22f  LEA EDX,[ESP + 0x8]
+005ee233  PUSH EDX
+005ee234  ADD ECX,0x98
+005ee23a  MOV dword ptr [ESP + 0x8],EAX
+005ee23e  CALL 0x005ec420
+005ee243  MOV EAX,dword ptr [ESP + 0x4]
+005ee247  FLD float ptr [EAX + 0x14]
+005ee24a  ADD ESP,0x8
+005ee24d  RET

@@ -1,0 +1,11 @@
+0081e022  CMP byte ptr [0x009c2188],0x0
+0081e029  JNZ 0x0081e02f
+0081e02b  PUSH -0xa
+0081e02d  POP EAX
+0081e02e  RET
+0081e02f  MOV EAX,dword ptr [ESP + 0x4]
+0081e033  MOV ECX,dword ptr [EAX*0x4 + 0x9c1f44]
+0081e03a  MOV EAX,dword ptr [ECX + 0x4c]
+0081e03d  MOV ECX,dword ptr [ECX + 0x48]
+0081e040  ADD EAX,ECX
+0081e042  RET

@@ -1,0 +1,21 @@
+00657cb0  PUSH EBP
+00657cb1  MOV EBP,ESP
+00657cb3  AND ESP,0xfffffff0
+00657cb6  SUB ESP,0x10
+00657cb9  MOV EAX,dword ptr [EBP + 0x10]
+00657cbc  MOV EDX,dword ptr [EBP + 0xc]
+00657cbf  PUSH EAX
+00657cc0  PUSH EDX
+00657cc1  LEA EAX,[ESP + 0x8]
+00657cc5  PUSH EAX
+00657cc6  CALL 0x006497b0
+00657ccb  FLD float ptr [ESP]
+00657cce  MOV EAX,dword ptr [EBP + 0x8]
+00657cd1  MOV ECX,dword ptr [ESP + 0x4]
+00657cd5  FSTP float ptr [EAX]
+00657cd7  MOV EDX,dword ptr [ESP + 0x8]
+00657cdb  MOV dword ptr [EAX + 0x4],ECX
+00657cde  MOV dword ptr [EAX + 0x8],EDX
+00657ce1  MOV ESP,EBP
+00657ce3  POP EBP
+00657ce4  RET 0xc

@@ -1,0 +1,16 @@
+007ecd94  PUSH EBP
+007ecd95  MOV EBP,ESP
+007ecd97  PUSH ESI
+007ecd98  MOV ESI,dword ptr [0x009bb130]
+007ecd9e  ADD ESI,dword ptr [EBP + 0x8]
+007ecda1  JMP 0x007ecdb0
+007ecda3  CALL 0x007ec59c
+007ecda8  PUSH 0x0
+007ecdaa  CALL 0x007ec298
+007ecdaf  POP ECX
+007ecdb0  MOV EAX,[0x009bb130]
+007ecdb5  SUB EAX,ESI
+007ecdb7  JS 0x007ecda3
+007ecdb9  POP ESI
+007ecdba  POP EBP
+007ecdbb  RET

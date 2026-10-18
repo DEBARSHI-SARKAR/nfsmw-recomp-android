@@ -1,0 +1,9 @@
+008755b0  CMP dword ptr [EBP + -0x10],0x0
+008755b4  JZ 0x008755c8
+008755ba  MOV EAX,dword ptr [EBP + -0x10]
+008755bd  ADD EAX,0x8
+008755c0  MOV dword ptr [EBP + -0x14],EAX
+008755c3  JMP 0x008755cf
+008755c8  MOV dword ptr [EBP + -0x14],0x0
+008755cf  MOV ECX,dword ptr [EBP + -0x14]
+008755d2  JMP 0x00466750

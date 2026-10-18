@@ -1,0 +1,9 @@
+004b0cd0  MOV ECX,dword ptr [0x009120c8]
+004b0cd6  TEST ECX,ECX
+004b0cd8  JZ 0x004b0ce8
+004b0cda  MOV EAX,dword ptr [ESP + 0x4]
+004b0cde  TEST EAX,EAX
+004b0ce0  JZ 0x004b0ce8
+004b0ce2  PUSH EAX
+004b0ce3  CALL 0x0045f2e0
+004b0ce8  RET

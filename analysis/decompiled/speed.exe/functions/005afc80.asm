@@ -1,0 +1,49 @@
+005afc80  PUSH EBX
+005afc81  PUSH EBP
+005afc82  PUSH ESI
+005afc83  PUSH EDI
+005afc84  MOV EDI,EAX
+005afc86  MOV ESI,ECX
+005afc88  JMP 0x005afc90
+005afc90  MOV DX,word ptr [ESI]
+005afc93  CMP DX,-0x80
+005afc97  JL 0x005afcda
+005afc99  CMP DX,0x7f
+005afc9d  JGE 0x005afcda
+005afc9f  MOV BL,byte ptr [EDI]
+005afca1  MOV CL,BL
+005afca3  CMP CL,0x61
+005afca6  JL 0x005afcb0
+005afca8  CMP CL,0x7a
+005afcab  JG 0x005afcb0
+005afcad  ADD CL,0xe0
+005afcb0  MOV AL,byte ptr [ESI]
+005afcb2  CMP AL,0x61
+005afcb4  JL 0x005afcbc
+005afcb6  CMP AL,0x7a
+005afcb8  JG 0x005afcbc
+005afcba  ADD AL,0xe0
+005afcbc  MOVSX EBP,AL
+005afcbf  MOVSX EAX,CL
+005afcc2  SUB EAX,EBP
+005afcc4  JNZ 0x005afce2
+005afcc6  ADD ESI,0x2
+005afcc9  TEST DX,DX
+005afccc  JZ 0x005afcd3
+005afcce  INC EDI
+005afccf  TEST BL,BL
+005afcd1  JNZ 0x005afc90
+005afcd3  POP EDI
+005afcd4  POP ESI
+005afcd5  POP EBP
+005afcd6  XOR EAX,EAX
+005afcd8  POP EBX
+005afcd9  RET
+005afcda  MOVSX ECX,word ptr [ESI]
+005afcdd  MOVSX EAX,byte ptr [EDI]
+005afce0  SUB EAX,ECX
+005afce2  POP EDI
+005afce3  POP ESI
+005afce4  POP EBP
+005afce5  POP EBX
+005afce6  RET

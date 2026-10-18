@@ -1,0 +1,16 @@
+006437c0  PUSH ESI
+006437c1  MOV ESI,ECX
+006437c3  MOV EAX,dword ptr [ESI + 0x4]
+006437c6  MOV ECX,dword ptr [EAX + 0x4]
+006437c9  PUSH ECX
+006437ca  MOV ECX,ESI
+006437cc  CALL 0x0063fe40
+006437d1  MOV EAX,dword ptr [ESI + 0x4]
+006437d4  MOV dword ptr [EAX + 0x4],EAX
+006437d7  MOV EAX,dword ptr [ESI + 0x4]
+006437da  MOV dword ptr [ESI + 0x8],0x0
+006437e1  MOV dword ptr [EAX],EAX
+006437e3  MOV ESI,dword ptr [ESI + 0x4]
+006437e6  MOV dword ptr [ESI + 0x8],ESI
+006437e9  POP ESI
+006437ea  RET

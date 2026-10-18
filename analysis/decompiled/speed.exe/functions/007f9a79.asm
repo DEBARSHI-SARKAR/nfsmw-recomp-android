@@ -1,0 +1,15 @@
+007f9a79  PUSH EBP
+007f9a7a  MOV EBP,ESP
+007f9a7c  MOV EDX,dword ptr [EBP + 0xc]
+007f9a7f  MOV EAX,ECX
+007f9a81  MOV ECX,dword ptr [EBP + 0x8]
+007f9a84  PUSH ESI
+007f9a85  PUSH EDX
+007f9a86  MOV dword ptr [EAX + 0x18],ECX
+007f9a89  MOV dword ptr [EAX + 0x4],EDX
+007f9a8c  MOV ESI,dword ptr [ECX]
+007f9a8e  PUSH EAX
+007f9a8f  CALL dword ptr [ESI + 0x4]
+007f9a92  POP ESI
+007f9a93  POP EBP
+007f9a94  RET 0x8

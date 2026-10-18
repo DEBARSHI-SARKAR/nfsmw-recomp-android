@@ -1,0 +1,2 @@
+00452790  MOV EAX,dword ptr [ECX + 0x34]
+00452793  RET

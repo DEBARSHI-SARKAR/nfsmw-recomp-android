@@ -1,0 +1,66 @@
+00697180  SUB ESP,0x18
+00697183  MOV EAX,dword ptr [ECX + 0x30]
+00697186  PUSH ESI
+00697187  MOV ESI,dword ptr [EAX]
+00697189  LEA EDX,[ESP + 0x4]
+0069718d  PUSH EDX
+0069718e  LEA EAX,[ESI + 0x70]
+00697191  PUSH EAX
+00697192  ADD ECX,0xa8
+00697198  PUSH ECX
+00697199  CALL 0x00401670
+0069719e  FLD float ptr [ESP + 0x10]
+006971a2  FADD float ptr [ESI + 0x10]
+006971a5  MOV EAX,dword ptr [ESP + 0x2c]
+006971a9  FLD float ptr [ESP + 0x14]
+006971ad  ADD ESP,0xc
+006971b0  FADD float ptr [ESI + 0x14]
+006971b3  FLD float ptr [ESP + 0xc]
+006971b7  FADD float ptr [ESI + 0x18]
+006971ba  FSTP float ptr [ESP + 0xc]
+006971be  FLD float ptr [EAX]
+006971c0  FSUB ST0,ST2
+006971c2  FSTP float ptr [ESP + 0x10]
+006971c6  FLD float ptr [EAX + 0x4]
+006971c9  FSUB ST0,ST1
+006971cb  FSTP ST2
+006971cd  FSTP ST0
+006971cf  FLD float ptr [EAX + 0x8]
+006971d2  MOV EAX,dword ptr [ESP + 0x24]
+006971d6  FSUB float ptr [ESP + 0xc]
+006971da  MOV ECX,EAX
+006971dc  FLD ST0
+006971de  FMUL float ptr [ESI + 0x34]
+006971e1  FLD ST2
+006971e3  FMUL float ptr [ESI + 0x38]
+006971e6  FSUBP
+006971e8  FSTP float ptr [ESP + 0x4]
+006971ec  MOV EDX,dword ptr [ESP + 0x4]
+006971f0  FLD float ptr [ESP + 0x10]
+006971f4  FMUL float ptr [ESI + 0x38]
+006971f7  FXCH
+006971f9  FMUL float ptr [ESI + 0x30]
+006971fc  FSUBP
+006971fe  FSTP float ptr [ESP + 0x8]
+00697202  FMUL float ptr [ESI + 0x30]
+00697205  FLD float ptr [ESP + 0x10]
+00697209  FMUL float ptr [ESI + 0x34]
+0069720c  MOV dword ptr [ECX],EDX
+0069720e  MOV EDX,dword ptr [ESP + 0x8]
+00697212  MOV dword ptr [ECX + 0x4],EDX
+00697215  FSUBP
+00697217  FSTP float ptr [ESP + 0xc]
+0069721b  MOV EDX,dword ptr [ESP + 0xc]
+0069721f  MOV dword ptr [ECX + 0x8],EDX
+00697222  FLD float ptr [ESI + 0x20]
+00697225  FADD float ptr [EAX]
+00697227  FSTP float ptr [EAX]
+00697229  FLD float ptr [ESI + 0x24]
+0069722c  FADD float ptr [EAX + 0x4]
+0069722f  FSTP float ptr [EAX + 0x4]
+00697232  FLD float ptr [ESI + 0x28]
+00697235  POP ESI
+00697236  FADD float ptr [EAX + 0x8]
+00697239  FSTP float ptr [EAX + 0x8]
+0069723c  ADD ESP,0x18
+0069723f  RET 0x8

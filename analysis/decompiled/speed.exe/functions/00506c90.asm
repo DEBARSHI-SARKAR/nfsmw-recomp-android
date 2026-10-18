@@ -1,0 +1,39 @@
+00506c90  PUSH ESI
+00506c91  PUSH EDI
+00506c92  MOV EDI,dword ptr [ESP + 0xc]
+00506c96  MOV EAX,dword ptr [EDI + 0x80]
+00506c9c  LEA ESI,[EDI + 0x80]
+00506ca2  CMP EAX,ESI
+00506ca4  JZ 0x00506cc1
+00506ca6  MOV EAX,dword ptr [ESI]
+00506ca8  MOV ECX,dword ptr [EAX]
+00506caa  MOV EDX,dword ptr [EAX + 0x4]
+00506cad  MOV dword ptr [EDX],ECX
+00506caf  PUSH EAX
+00506cb0  MOV dword ptr [ECX + 0x4],EDX
+00506cb3  CALL 0x00466440
+00506cb8  MOV EAX,dword ptr [ESI]
+00506cba  ADD ESP,0x4
+00506cbd  CMP EAX,ESI
+00506cbf  JNZ 0x00506ca6
+00506cc1  MOV EAX,dword ptr [EDI + 0x88]
+00506cc7  LEA ESI,[EDI + 0x88]
+00506ccd  CMP EAX,ESI
+00506ccf  JZ 0x00506cec
+00506cd1  MOV EAX,dword ptr [ESI]
+00506cd3  MOV ECX,dword ptr [EAX]
+00506cd5  MOV EDX,dword ptr [EAX + 0x4]
+00506cd8  MOV dword ptr [EDX],ECX
+00506cda  PUSH EAX
+00506cdb  MOV dword ptr [ECX + 0x4],EDX
+00506cde  CALL 0x00466440
+00506ce3  MOV EAX,dword ptr [ESI]
+00506ce5  ADD ESP,0x4
+00506ce8  CMP EAX,ESI
+00506cea  JNZ 0x00506cd1
+00506cec  XOR EAX,EAX
+00506cee  MOV word ptr [EDI + 0x7c],AX
+00506cf2  MOV word ptr [EDI + 0x7e],AX
+00506cf6  POP EDI
+00506cf7  POP ESI
+00506cf8  RET

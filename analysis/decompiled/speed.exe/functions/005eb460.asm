@@ -1,0 +1,16 @@
+005eb460  PUSH ESI
+005eb461  MOV ESI,ECX
+005eb463  MOV dword ptr [ESI + 0x150],0x0
+005eb46d  CALL 0x006e8de0
+005eb472  FSTP float ptr [ESI + 0x14c]
+005eb478  MOV dword ptr [ESI + 0x15c],0x0
+005eb482  CALL 0x006e8de0
+005eb487  FSTP float ptr [ESI + 0x158]
+005eb48d  MOV dword ptr [ESI + 0x168],0x0
+005eb497  CALL 0x006e8de0
+005eb49c  FSTP float ptr [ESI + 0x164]
+005eb4a2  MOV ECX,ESI
+005eb4a4  CALL 0x005e84d0
+005eb4a9  MOV EAX,ESI
+005eb4ab  POP ESI
+005eb4ac  RET

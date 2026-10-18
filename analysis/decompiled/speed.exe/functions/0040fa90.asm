@@ -1,0 +1,16 @@
+0040fa90  MOV ECX,dword ptr [ESP + 0x4]
+0040fa94  MOV EDX,dword ptr [ESP + 0x8]
+0040fa98  CMP ECX,EDX
+0040fa9a  MOV EAX,dword ptr [ESP + 0xc]
+0040fa9e  JZ 0x0040fab4
+0040faa0  PUSH ESI
+0040faa1  TEST EAX,EAX
+0040faa3  JZ 0x0040faa9
+0040faa5  MOV ESI,dword ptr [ECX]
+0040faa7  MOV dword ptr [EAX],ESI
+0040faa9  ADD ECX,0x4
+0040faac  ADD EAX,0x4
+0040faaf  CMP ECX,EDX
+0040fab1  JNZ 0x0040faa1
+0040fab3  POP ESI
+0040fab4  RET

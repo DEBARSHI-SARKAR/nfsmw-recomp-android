@@ -1,0 +1,41 @@
+0049c670  FLD float ptr [ESP + 0xc]
+0049c674  FSUB float ptr [ESP + 0x8]
+0049c678  FLD float ptr [ESP + 0x4]
+0049c67c  FCOMP float ptr [ESP + 0x8]
+0049c680  FNSTSW AX
+0049c682  TEST AH,0x5
+0049c685  JP 0x0049c6af
+0049c687  FLD float ptr [ESP + 0x8]
+0049c68b  FSUB float ptr [ESP + 0x4]
+0049c68f  FLD ST0
+0049c691  FDIV ST0,ST2
+0049c693  CALL 0x007c4b80
+0049c698  MOV dword ptr [ESP + 0x4],EAX
+0049c69c  FILD dword ptr [ESP + 0x4]
+0049c6a0  FMULP ST2
+0049c6a2  FXCH
+0049c6a4  FSUBR ST0,ST1
+0049c6a6  FSUBR float ptr [ESP + 0xc]
+0049c6aa  FSTP ST1
+0049c6ac  RET 0xc
+0049c6af  FLD float ptr [ESP + 0x4]
+0049c6b3  FCOMP float ptr [ESP + 0xc]
+0049c6b7  FNSTSW AX
+0049c6b9  TEST AH,0x1
+0049c6bc  JNZ 0x0049c6e6
+0049c6be  FLD float ptr [ESP + 0x4]
+0049c6c2  FSUB float ptr [ESP + 0xc]
+0049c6c6  FLD ST0
+0049c6c8  FDIV ST0,ST2
+0049c6ca  CALL 0x007c4b80
+0049c6cf  MOV dword ptr [ESP + 0x4],EAX
+0049c6d3  FILD dword ptr [ESP + 0x4]
+0049c6d7  FMULP ST2
+0049c6d9  FXCH
+0049c6db  FSUBR ST0,ST1
+0049c6dd  FADD float ptr [ESP + 0x8]
+0049c6e1  FSTP ST1
+0049c6e3  RET 0xc
+0049c6e6  FSTP ST0
+0049c6e8  FLD float ptr [ESP + 0x4]
+0049c6ec  RET 0xc

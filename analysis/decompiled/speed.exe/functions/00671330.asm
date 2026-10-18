@@ -1,0 +1,71 @@
+00671330  PUSH ESI
+00671331  PUSH 0x3ccccccd
+00671336  MOV ESI,ECX
+00671338  CALL 0x00449320
+0067133d  MOV ECX,dword ptr [0x008a2fc0]
+00671343  LEA EAX,[ESI + 0x3c]
+00671346  MOV dword ptr [EAX],ECX
+00671348  MOV EDX,dword ptr [0x008a2fc4]
+0067134e  MOV dword ptr [EAX + 0x4],EDX
+00671351  MOV ECX,dword ptr [0x008a2fc8]
+00671357  MOV dword ptr [EAX + 0x8],ECX
+0067135a  MOV EDX,dword ptr [0x008a2fcc]
+00671360  MOV dword ptr [EAX + 0xc],EDX
+00671363  MOV ECX,dword ptr [0x008a2fb4]
+00671369  LEA EAX,[ESI + 0x4c]
+0067136c  MOV dword ptr [EAX],ECX
+0067136e  MOV EDX,dword ptr [0x008a2fb8]
+00671374  MOV dword ptr [EAX + 0x4],EDX
+00671377  MOV ECX,dword ptr [0x008a2fbc]
+0067137d  MOV EDX,dword ptr [ESP + 0x8]
+00671381  MOV dword ptr [EAX + 0x8],ECX
+00671384  MOV dword ptr [ESI + 0x58],EDX
+00671387  MOV ECX,dword ptr [0x008a2fb4]
+0067138d  LEA EAX,[ESI + 0x5c]
+00671390  MOV dword ptr [EAX],ECX
+00671392  MOV EDX,dword ptr [0x008a2fb8]
+00671398  MOV dword ptr [EAX + 0x4],EDX
+0067139b  MOV ECX,dword ptr [0x008a2fbc]
+006713a1  MOV dword ptr [EAX + 0x8],ECX
+006713a4  MOV dword ptr [ESI + 0x68],0x0
+006713ab  MOV EAX,[0x008a2fb4]
+006713b0  LEA EDX,[ESI + 0x6c]
+006713b3  MOV dword ptr [EDX],EAX
+006713b5  MOV ECX,dword ptr [0x008a2fb8]
+006713bb  MOV dword ptr [EDX + 0x4],ECX
+006713be  MOV EAX,[0x008a2fbc]
+006713c3  MOV dword ptr [EDX + 0x8],EAX
+006713c6  MOV dword ptr [ESI + 0x78],0x0
+006713cd  MOV EDX,dword ptr [0x008a2fb4]
+006713d3  LEA ECX,[ESI + 0x7c]
+006713d6  MOV dword ptr [ECX],EDX
+006713d8  MOV EAX,[0x008a2fb8]
+006713dd  MOV dword ptr [ECX + 0x4],EAX
+006713e0  MOV EDX,dword ptr [0x008a2fbc]
+006713e6  MOV dword ptr [ECX + 0x8],EDX
+006713e9  MOV ECX,dword ptr [0x008a2fb4]
+006713ef  LEA EAX,[ESI + 0x8c]
+006713f5  MOV dword ptr [EAX],ECX
+006713f7  MOV EDX,dword ptr [0x008a2fb8]
+006713fd  MOV dword ptr [EAX + 0x4],EDX
+00671400  MOV ECX,dword ptr [0x008a2fbc]
+00671406  PUSH 0x0
+00671408  MOV dword ptr [EAX + 0x8],ECX
+0067140b  MOV EDX,dword ptr [0x00988e84]
+00671411  PUSH 0x0
+00671413  PUSH EDX
+00671414  LEA ECX,[ESI + 0x9c]
+0067141a  CALL 0x00467c30
+0067141f  MOV dword ptr [ESI + 0xb0],0x0
+00671429  MOV ECX,dword ptr [0x008a2fc0]
+0067142f  LEA EAX,[ESI + 0xb4]
+00671435  MOV dword ptr [EAX],ECX
+00671437  MOV EDX,dword ptr [0x008a2fc4]
+0067143d  MOV dword ptr [EAX + 0x4],EDX
+00671440  MOV ECX,dword ptr [0x008a2fc8]
+00671446  MOV dword ptr [EAX + 0x8],ECX
+00671449  MOV EDX,dword ptr [0x008a2fcc]
+0067144f  MOV dword ptr [EAX + 0xc],EDX
+00671452  MOV EAX,ESI
+00671454  POP ESI
+00671455  RET 0x4

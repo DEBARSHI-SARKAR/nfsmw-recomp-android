@@ -1,0 +1,8 @@
+007f2bd1  PUSH ESI
+007f2bd2  MOV ESI,ECX
+007f2bd4  CALL 0x007f347f
+007f2bd9  AND dword ptr [ESI + 0x78],0x0
+007f2bdd  MOV dword ptr [ESI],0x8c22e0
+007f2be3  MOV EAX,ESI
+007f2be5  POP ESI
+007f2be6  RET

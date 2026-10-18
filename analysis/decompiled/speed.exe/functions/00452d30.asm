@@ -1,0 +1,2 @@
+00452d30  MOV EAX,dword ptr [ECX + 0x4]
+00452d33  RET

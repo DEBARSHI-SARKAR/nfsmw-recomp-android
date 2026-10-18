@@ -1,0 +1,5 @@
+004baa30  MOV EAX,dword ptr [ESP + 0x4]
+004baa34  PUSH EAX
+004baa35  MOV ECX,0x9922c8
+004baa3a  CALL 0x00700120
+004baa3f  RET

@@ -1,0 +1,5 @@
+006fe400  MOV EAX,dword ptr [ECX]
+006fe402  TEST EAX,EAX
+006fe404  JZ 0x006fe40a
+006fe406  MOV byte ptr [EAX + 0x18],0x0
+006fe40a  RET

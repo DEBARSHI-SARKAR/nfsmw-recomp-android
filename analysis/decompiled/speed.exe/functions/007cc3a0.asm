@@ -1,0 +1,72 @@
+007cc3a0  PUSH EBP
+007cc3a1  MOV EBP,ESP
+007cc3a3  SUB ESP,0x14
+007cc3a6  CMP dword ptr [0x009c5450],0x0
+007cc3ad  JNZ 0x007cc3b4
+007cc3af  CALL 0x007ddc00
+007cc3b4  MOV byte ptr [0x009babfc],0x0
+007cc3bb  PUSH 0x104
+007cc3c0  PUSH 0x9baaf8
+007cc3c5  PUSH 0x0
+007cc3c7  CALL dword ptr [0x008901d4]
+007cc3cd  MOV dword ptr [0x009baa50],0x9baaf8
+007cc3d7  CMP dword ptr [0x009c6468],0x0
+007cc3de  JZ 0x007cc3f7
+007cc3e0  MOV EAX,[0x009c6468]
+007cc3e5  MOVSX ECX,byte ptr [EAX]
+007cc3e8  TEST ECX,ECX
+007cc3ea  JZ 0x007cc3f7
+007cc3ec  MOV EDX,dword ptr [0x009c6468]
+007cc3f2  MOV dword ptr [EBP + -0x14],EDX
+007cc3f5  JMP 0x007cc3ff
+007cc3f7  MOV EAX,[0x009baa50]
+007cc3fc  MOV dword ptr [EBP + -0x14],EAX
+007cc3ff  MOV ECX,dword ptr [EBP + -0x14]
+007cc402  MOV dword ptr [EBP + -0xc],ECX
+007cc405  LEA EDX,[EBP + -0x10]
+007cc408  PUSH EDX
+007cc409  LEA EAX,[EBP + -0x8]
+007cc40c  PUSH EAX
+007cc40d  PUSH 0x0
+007cc40f  PUSH 0x0
+007cc411  MOV ECX,dword ptr [EBP + -0xc]
+007cc414  PUSH ECX
+007cc415  CALL 0x007cc490
+007cc41a  ADD ESP,0x14
+007cc41d  PUSH 0x82
+007cc422  PUSH 0x8b8ce8
+007cc427  PUSH 0x2
+007cc429  MOV EDX,dword ptr [EBP + -0x8]
+007cc42c  MOV EAX,dword ptr [EBP + -0x10]
+007cc42f  LEA ECX,[EAX + EDX*0x4]
+007cc432  PUSH ECX
+007cc433  CALL 0x007c6700
+007cc438  ADD ESP,0x10
+007cc43b  MOV dword ptr [EBP + -0x4],EAX
+007cc43e  CMP dword ptr [EBP + -0x4],0x0
+007cc442  JNZ 0x007cc449
+007cc444  OR EAX,0xffffffff
+007cc447  JMP 0x007cc481
+007cc449  LEA EDX,[EBP + -0x10]
+007cc44c  PUSH EDX
+007cc44d  LEA EAX,[EBP + -0x8]
+007cc450  PUSH EAX
+007cc451  MOV ECX,dword ptr [EBP + -0x8]
+007cc454  MOV EDX,dword ptr [EBP + -0x4]
+007cc457  LEA EAX,[EDX + ECX*0x4]
+007cc45a  PUSH EAX
+007cc45b  MOV ECX,dword ptr [EBP + -0x4]
+007cc45e  PUSH ECX
+007cc45f  MOV EDX,dword ptr [EBP + -0xc]
+007cc462  PUSH EDX
+007cc463  CALL 0x007cc490
+007cc468  ADD ESP,0x14
+007cc46b  MOV EAX,dword ptr [EBP + -0x8]
+007cc46e  SUB EAX,0x1
+007cc471  MOV [0x009baa34],EAX
+007cc476  MOV ECX,dword ptr [EBP + -0x4]
+007cc479  MOV dword ptr [0x009baa38],ECX
+007cc47f  XOR EAX,EAX
+007cc481  MOV ESP,EBP
+007cc483  POP EBP
+007cc484  RET

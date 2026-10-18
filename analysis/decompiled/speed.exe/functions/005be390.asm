@@ -1,0 +1,28 @@
+005be390  PUSH EBX
+005be391  PUSH ESI
+005be392  MOV ESI,ECX
+005be394  MOV EAX,dword ptr [ESI + 0x24]
+005be397  XOR EBX,EBX
+005be399  CMP EAX,EBX
+005be39b  JZ 0x005be3bc
+005be39d  MOV ECX,dword ptr [EAX + -0x4]
+005be3a0  PUSH EDI
+005be3a1  LEA EDI,[EAX + -0x4]
+005be3a4  PUSH 0x5ba980
+005be3a9  PUSH ECX
+005be3aa  PUSH 0x1c
+005be3ac  PUSH EAX
+005be3ad  CALL 0x007c8f50
+005be3b2  PUSH EDI
+005be3b3  CALL 0x00652b10
+005be3b8  ADD ESP,0x4
+005be3bb  POP EDI
+005be3bc  MOV dword ptr [ESI + 0x24],EBX
+005be3bf  MOV dword ptr [ESI],EBX
+005be3c1  MOV dword ptr [ESI + 0x1c],EBX
+005be3c4  MOV dword ptr [ESI + 0x18],EBX
+005be3c7  MOV byte ptr [ESI + 0x20],BL
+005be3ca  MOV byte ptr [ESI + 0x14],0x1
+005be3ce  POP ESI
+005be3cf  POP EBX
+005be3d0  RET

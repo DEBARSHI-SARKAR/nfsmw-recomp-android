@@ -1,0 +1,4 @@
+005d1010  MOV EAX,ECX
+005d1012  MOV dword ptr [EAX],0x0
+005d1018  MOV dword ptr [EAX + 0x10],0x0
+005d101f  RET

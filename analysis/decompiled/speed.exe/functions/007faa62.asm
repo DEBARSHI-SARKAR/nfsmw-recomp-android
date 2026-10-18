@@ -1,0 +1,28 @@
+007faa62  PUSH EBP
+007faa63  MOV EBP,ESP
+007faa65  PUSH ESI
+007faa66  PUSH 0x14
+007faa68  MOV ESI,ECX
+007faa6a  CALL 0x007fa3d4
+007faa6f  TEST EAX,EAX
+007faa71  POP ECX
+007faa72  JZ 0x007faa83
+007faa74  PUSH dword ptr [EBP + 0xc]
+007faa77  MOV ECX,EAX
+007faa79  PUSH dword ptr [EBP + 0x8]
+007faa7c  CALL 0x007fa486
+007faa81  JMP 0x007faa85
+007faa83  XOR EAX,EAX
+007faa85  LEA ECX,[EAX + 0x8]
+007faa88  NEG EAX
+007faa8a  SBB EAX,EAX
+007faa8c  AND EAX,ECX
+007faa8e  LEA ECX,[ESI + 0x28]
+007faa91  MOV EDX,dword ptr [ECX]
+007faa93  MOV dword ptr [ECX],EAX
+007faa95  MOV dword ptr [EDX + 0x4],EAX
+007faa98  MOV dword ptr [EAX + 0x4],ECX
+007faa9b  MOV dword ptr [EAX],EDX
+007faa9d  POP ESI
+007faa9e  POP EBP
+007faa9f  RET 0x8

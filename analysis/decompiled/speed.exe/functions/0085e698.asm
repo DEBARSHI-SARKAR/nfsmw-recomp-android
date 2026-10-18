@@ -1,0 +1,9 @@
+0085e698  MOV EAX,dword ptr [EBP + -0x20]
+0085e69b  MOV ECX,dword ptr [EBP + -0x10]
+0085e69e  MOV dword ptr FS:[0x0],ECX
+0085e6a5  POP EDI
+0085e6a6  POP ESI
+0085e6a7  POP EBX
+0085e6a8  MOV ESP,EBP
+0085e6aa  POP EBP
+0085e6ab  RET

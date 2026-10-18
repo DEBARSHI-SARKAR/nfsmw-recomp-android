@@ -1,0 +1,16 @@
+0074cf90  MOV EAX,dword ptr [ESP + 0x8]
+0074cf94  TEST EAX,EAX
+0074cf96  JBE 0x0074cfb2
+0074cf98  MOV EDX,dword ptr [ESP + 0xc]
+0074cf9c  MOV ECX,EAX
+0074cf9e  MOV EAX,dword ptr [ESP + 0x4]
+0074cfa2  PUSH ESI
+0074cfa3  TEST EAX,EAX
+0074cfa5  JZ 0x0074cfab
+0074cfa7  MOV ESI,dword ptr [EDX]
+0074cfa9  MOV dword ptr [EAX],ESI
+0074cfab  ADD EAX,0x4
+0074cfae  DEC ECX
+0074cfaf  JNZ 0x0074cfa3
+0074cfb1  POP ESI
+0074cfb2  RET

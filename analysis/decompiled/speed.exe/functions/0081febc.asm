@@ -1,0 +1,5 @@
+0081febc  CALL 0x0081bccb
+0081fec1  PUSH dword ptr [0x009c2284]
+0081fec7  CALL 0x0081eae9
+0081fecc  POP ECX
+0081fecd  JMP 0x0081bcd9

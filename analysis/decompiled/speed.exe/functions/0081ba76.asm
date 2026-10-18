@@ -1,0 +1,20 @@
+0081ba76  MOVSX ECX,byte ptr [0x009c218b]
+0081ba7d  XOR EAX,EAX
+0081ba7f  TEST ECX,ECX
+0081ba81  JLE 0x0081bab8
+0081ba83  MOV EDX,dword ptr [EAX*0x4 + 0x9c21ac]
+0081ba8a  CMP EDX,dword ptr [ESP + 0x4]
+0081ba8e  JZ 0x0081ba96
+0081ba90  INC EAX
+0081ba91  CMP EAX,ECX
+0081ba93  JL 0x0081ba83
+0081ba95  RET
+0081ba96  DEC byte ptr [0x009c218b]
+0081ba9c  JMP 0x0081baad
+0081ba9e  MOV ECX,dword ptr [EAX*0x4 + 0x9c21b0]
+0081baa5  MOV dword ptr [EAX*0x4 + 0x9c21ac],ECX
+0081baac  INC EAX
+0081baad  MOVSX ECX,byte ptr [0x009c218b]
+0081bab4  CMP EAX,ECX
+0081bab6  JL 0x0081ba9e
+0081bab8  RET

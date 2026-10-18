@@ -1,0 +1,2 @@
+00874340  MOV ECX,dword ptr [EBP + -0x10]
+00874343  JMP 0x005ad350

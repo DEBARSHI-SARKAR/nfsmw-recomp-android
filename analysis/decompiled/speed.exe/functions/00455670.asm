@@ -1,0 +1,40 @@
+00455670  MOV EAX,dword ptr [ESP + 0x8]
+00455674  MOV ECX,dword ptr [ESP + 0x4]
+00455678  MOV EDX,dword ptr [EAX]
+0045567a  PUSH ESI
+0045567b  MOV ESI,dword ptr [ECX]
+0045567d  CMP EDX,ESI
+0045567f  PUSH EDI
+00455680  JNC 0x00455692
+00455682  MOV EDI,dword ptr [EAX + 0x4]
+00455685  MOV dword ptr [EAX],ESI
+00455687  MOV ESI,dword ptr [ECX + 0x4]
+0045568a  MOV dword ptr [EAX + 0x4],ESI
+0045568d  MOV dword ptr [ECX],EDX
+0045568f  MOV dword ptr [ECX + 0x4],EDI
+00455692  MOV EDX,dword ptr [ESP + 0x14]
+00455696  MOV ESI,dword ptr [EDX]
+00455698  MOV EDI,dword ptr [EAX]
+0045569a  CMP ESI,EDI
+0045569c  JNC 0x004556b0
+0045569e  MOV dword ptr [EDX],EDI
+004556a0  MOV EDI,dword ptr [EAX + 0x4]
+004556a3  PUSH EBX
+004556a4  MOV EBX,dword ptr [EDX + 0x4]
+004556a7  MOV dword ptr [EDX + 0x4],EDI
+004556aa  MOV dword ptr [EAX + 0x4],EBX
+004556ad  MOV dword ptr [EAX],ESI
+004556af  POP EBX
+004556b0  MOV EDX,dword ptr [EAX]
+004556b2  MOV ESI,dword ptr [ECX]
+004556b4  CMP EDX,ESI
+004556b6  JNC 0x004556c8
+004556b8  MOV EDI,dword ptr [EAX + 0x4]
+004556bb  MOV dword ptr [EAX],ESI
+004556bd  MOV ESI,dword ptr [ECX + 0x4]
+004556c0  MOV dword ptr [EAX + 0x4],ESI
+004556c3  MOV dword ptr [ECX],EDX
+004556c5  MOV dword ptr [ECX + 0x4],EDI
+004556c8  POP EDI
+004556c9  POP ESI
+004556ca  RET

@@ -1,0 +1,17 @@
+00502c40  MOV EAX,dword ptr [ESP + 0x4]
+00502c44  MOV ECX,dword ptr [EAX + 0xc]
+00502c47  MOV EDX,dword ptr [ECX + EAX*0x1 + 0x14]
+00502c4b  LEA ECX,[ECX + EAX*0x1 + 0x10]
+00502c4f  ADD EAX,0x10
+00502c52  LEA ECX,[EDX + ECX*0x1 + 0x8]
+00502c56  MOV EDX,dword ptr [EAX + 0x10]
+00502c59  TEST EDX,EDX
+00502c5b  JNZ 0x00502c64
+00502c5d  MOV dword ptr [EAX + 0x10],0x1
+00502c64  MOV dword ptr [EAX + 0x14],ECX
+00502c67  MOV ECX,dword ptr [0x0091c17c]
+00502c6d  MOV dword ptr [ECX],EAX
+00502c6f  MOV [0x0091c17c],EAX
+00502c74  MOV dword ptr [EAX + 0x4],ECX
+00502c77  MOV dword ptr [EAX],0x91c178
+00502c7d  RET

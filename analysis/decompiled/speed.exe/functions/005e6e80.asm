@@ -1,0 +1,18 @@
+005e6e80  PUSH 0x0
+005e6e82  PUSH 0x20
+005e6e84  MOV ECX,0x925b30
+005e6e89  CALL 0x005d29d0
+005e6e8e  TEST EAX,EAX
+005e6e90  JZ 0x005e6e98
+005e6e92  MOV dword ptr [EAX],0x0
+005e6e98  LEA ECX,[EAX + 0x4]
+005e6e9b  TEST ECX,ECX
+005e6e9d  JZ 0x005e6ea5
+005e6e9f  MOV dword ptr [ECX],0x0
+005e6ea5  LEA ECX,[EAX + 0x8]
+005e6ea8  TEST ECX,ECX
+005e6eaa  JZ 0x005e6eb2
+005e6eac  MOV dword ptr [ECX],0x0
+005e6eb2  MOV byte ptr [EAX + 0x1c],0x1
+005e6eb6  MOV byte ptr [EAX + 0x1d],0x0
+005e6eba  RET

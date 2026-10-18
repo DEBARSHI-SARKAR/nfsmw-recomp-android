@@ -1,0 +1,14 @@
+005edf90  PUSH ESI
+005edf91  MOV ESI,ECX
+005edf93  MOV EAX,dword ptr [ESI + 0x2bc]
+005edf99  TEST EAX,EAX
+005edf9b  JBE 0x005edfb3
+005edf9d  LEA ECX,[ECX]
+005edfa0  PUSH 0x0
+005edfa2  MOV ECX,ESI
+005edfa4  CALL 0x005edd60
+005edfa9  MOV EAX,dword ptr [ESI + 0x2bc]
+005edfaf  TEST EAX,EAX
+005edfb1  JA 0x005edfa0
+005edfb3  POP ESI
+005edfb4  RET

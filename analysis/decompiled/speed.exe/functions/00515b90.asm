@@ -1,0 +1,9 @@
+00515b90  MOV EAX,dword ptr [ESP + 0x4]
+00515b94  TEST EAX,EAX
+00515b96  JZ 0x00515bab
+00515b98  MOV ECX,dword ptr [ESP + 0x8]
+00515b9c  CMP dword ptr [EAX + 0x24],ECX
+00515b9f  JZ 0x00515bab
+00515ba1  MOV dword ptr [EAX + 0x24],ECX
+00515ba4  OR dword ptr [EAX + 0x1c],0x2400000
+00515bab  RET

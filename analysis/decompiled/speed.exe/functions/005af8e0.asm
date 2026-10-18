@@ -1,0 +1,13 @@
+005af8e0  PUSH ESI
+005af8e1  MOV ESI,ECX
+005af8e3  MOV EAX,dword ptr [ESI + 0x60]
+005af8e6  TEST EAX,EAX
+005af8e8  JZ 0x005af904
+005af8ea  MOV EAX,dword ptr [ESI + 0x78]
+005af8ed  PUSH EAX
+005af8ee  CALL 0x00652b10
+005af8f3  ADD ESP,0x4
+005af8f6  MOV dword ptr [ESI + 0x78],0x0
+005af8fd  MOV dword ptr [ESI + 0x60],0x0
+005af904  POP ESI
+005af905  RET

@@ -1,0 +1,22 @@
+0044fed0  PUSH ESI
+0044fed1  MOV ESI,ECX
+0044fed3  MOV EAX,dword ptr [ESI + 0x1c]
+0044fed6  SUB EAX,0x0
+0044fed9  JZ 0x0044fee3
+0044fedb  DEC EAX
+0044fedc  JZ 0x0044fef5
+0044fede  DEC EAX
+0044fedf  MOV AL,0x1
+0044fee1  POP ESI
+0044fee2  RET
+0044fee3  MOV ECX,dword ptr [ESI + 0x28]
+0044fee6  MOV EAX,dword ptr [ESI]
+0044fee8  PUSH ECX
+0044fee9  MOV ECX,ESI
+0044feeb  CALL dword ptr [EAX + 0x10]
+0044feee  MOV ECX,ESI
+0044fef0  CALL 0x0044e710
+0044fef5  MOV dword ptr [ESI + 0x1c],0x2
+0044fefc  MOV AL,0x1
+0044fefe  POP ESI
+0044feff  RET

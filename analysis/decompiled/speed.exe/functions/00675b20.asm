@@ -1,0 +1,37 @@
+00675b20  MOV EDX,dword ptr [ESP + 0x4]
+00675b24  MOV EAX,dword ptr [EDX + 0x8]
+00675b27  PUSH EBX
+00675b28  PUSH ESI
+00675b29  MOV ESI,dword ptr [EAX]
+00675b2b  MOV dword ptr [EDX + 0x8],ESI
+00675b2e  MOV ESI,dword ptr [EAX]
+00675b30  MOV BL,byte ptr [ESI + 0x15]
+00675b33  TEST BL,BL
+00675b35  JNZ 0x00675b3a
+00675b37  MOV dword ptr [ESI + 0x4],EDX
+00675b3a  MOV ESI,dword ptr [EDX + 0x4]
+00675b3d  MOV dword ptr [EAX + 0x4],ESI
+00675b40  MOV ECX,dword ptr [ECX + 0x4]
+00675b43  CMP EDX,dword ptr [ECX + 0x4]
+00675b46  JNZ 0x00675b55
+00675b48  MOV dword ptr [ECX + 0x4],EAX
+00675b4b  POP ESI
+00675b4c  MOV dword ptr [EAX],EDX
+00675b4e  MOV dword ptr [EDX + 0x4],EAX
+00675b51  POP EBX
+00675b52  RET 0x4
+00675b55  MOV ECX,dword ptr [EDX + 0x4]
+00675b58  CMP EDX,dword ptr [ECX]
+00675b5a  JNZ 0x00675b68
+00675b5c  MOV dword ptr [ECX],EAX
+00675b5e  POP ESI
+00675b5f  MOV dword ptr [EAX],EDX
+00675b61  MOV dword ptr [EDX + 0x4],EAX
+00675b64  POP EBX
+00675b65  RET 0x4
+00675b68  MOV dword ptr [ECX + 0x8],EAX
+00675b6b  POP ESI
+00675b6c  MOV dword ptr [EAX],EDX
+00675b6e  MOV dword ptr [EDX + 0x4],EAX
+00675b71  POP EBX
+00675b72  RET 0x4

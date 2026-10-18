@@ -1,0 +1,12 @@
+/* speed.exe 00512630 FUN_00512630; analysis pseudocode, not buildable source.
+ * calls 00572360 FUN_00572360
+ */
+
+void __fastcall FUN_00512630(undefined4 *param_1)
+
+{
+  *param_1 = &PTR_FUN_0089b288;
+  FUN_00572360();
+  return;
+}
+

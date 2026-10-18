@@ -1,0 +1,7 @@
+004248e0  MOV EAX,ECX
+004248e2  XOR ECX,ECX
+004248e4  MOV dword ptr [EAX + 0x4],ECX
+004248e7  MOV dword ptr [EAX + 0x8],ECX
+004248ea  MOV dword ptr [EAX + 0xc],ECX
+004248ed  MOV dword ptr [EAX],0x8915b8
+004248f3  RET

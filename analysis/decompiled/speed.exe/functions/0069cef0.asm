@@ -1,0 +1,82 @@
+0069cef0  PUSH ECX
+0069cef1  PUSH EDI
+0069cef2  MOV EDI,ECX
+0069cef4  MOV EAX,dword ptr [EDI + 0x7c]
+0069cef7  TEST EAX,EAX
+0069cef9  JZ 0x0069cfd3
+0069ceff  MOV ECX,dword ptr [EAX + 0x4]
+0069cf02  PUSH ESI
+0069cf03  PUSH 0x404010
+0069cf08  CALL 0x005d59f0
+0069cf0d  MOV ESI,EAX
+0069cf0f  TEST ESI,ESI
+0069cf11  JZ 0x0069cfd2
+0069cf17  MOV ECX,dword ptr [EDI + 0x7c]
+0069cf1a  MOV EAX,dword ptr [ECX]
+0069cf1c  CALL dword ptr [EAX + 0x90]
+0069cf22  FSTP float ptr [ESP + 0x8]
+0069cf26  MOV EDX,dword ptr [ESI]
+0069cf28  MOV ECX,ESI
+0069cf2a  CALL dword ptr [EDX + 0x4]
+0069cf2d  FLD float ptr [ESP + 0x8]
+0069cf31  TEST EAX,EAX
+0069cf33  JZ 0x0069cf71
+0069cf35  FCOMP float ptr [0x008aacec]
+0069cf3b  FNSTSW AX
+0069cf3d  TEST AH,0x5
+0069cf40  JP 0x0069cfab
+0069cf42  FLD float ptr [ESP + 0x14]
+0069cf46  FCOMP float ptr [0x00890968]
+0069cf4c  FNSTSW AX
+0069cf4e  TEST AH,0x41
+0069cf51  JNZ 0x0069cfab
+0069cf53  FLD float ptr [0x00890968]
+0069cf59  FLD float ptr [ESP + 0x10]
+0069cf5d  FUCOMPP
+0069cf5f  FNSTSW AX
+0069cf61  TEST AH,0x44
+0069cf64  JP 0x0069cfab
+0069cf66  MOV EAX,dword ptr [ESI]
+0069cf68  PUSH 0x0
+0069cf6a  MOV ECX,ESI
+0069cf6c  CALL dword ptr [EAX + 0xc]
+0069cf6f  JMP 0x0069cfab
+0069cf71  FCOMP float ptr [0x008aac64]
+0069cf77  FNSTSW AX
+0069cf79  TEST AH,0x41
+0069cf7c  JNZ 0x0069cfab
+0069cf7e  FLD float ptr [0x00890968]
+0069cf84  FLD float ptr [ESP + 0x14]
+0069cf88  FUCOMPP
+0069cf8a  FNSTSW AX
+0069cf8c  TEST AH,0x44
+0069cf8f  JNP 0x0069cfa2
+0069cf91  FLD float ptr [ESP + 0x10]
+0069cf95  FCOMP float ptr [0x00890968]
+0069cf9b  FNSTSW AX
+0069cf9d  TEST AH,0x41
+0069cfa0  JNZ 0x0069cfab
+0069cfa2  MOV EDX,dword ptr [ESI]
+0069cfa4  PUSH 0x2
+0069cfa6  MOV ECX,ESI
+0069cfa8  CALL dword ptr [EDX + 0xc]
+0069cfab  MOV EAX,dword ptr [ESI]
+0069cfad  MOV ECX,ESI
+0069cfaf  CALL dword ptr [EAX + 0x4]
+0069cfb2  TEST EAX,EAX
+0069cfb4  JNZ 0x0069cfd2
+0069cfb6  MOV EAX,dword ptr [ESP + 0x14]
+0069cfba  MOV EDX,dword ptr [EDI + 0x48]
+0069cfbd  LEA ESI,[EDI + 0x48]
+0069cfc0  PUSH EAX
+0069cfc1  MOV ECX,ESI
+0069cfc3  CALL dword ptr [EDX + 0x18]
+0069cfc6  MOV EAX,dword ptr [ESP + 0x10]
+0069cfca  MOV EDX,dword ptr [ESI]
+0069cfcc  PUSH EAX
+0069cfcd  MOV ECX,ESI
+0069cfcf  CALL dword ptr [EDX + 0x1c]
+0069cfd2  POP ESI
+0069cfd3  POP EDI
+0069cfd4  POP ECX
+0069cfd5  RET 0x8

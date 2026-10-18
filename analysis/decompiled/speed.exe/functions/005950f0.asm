@@ -1,0 +1,34 @@
+005950f0  FLD float ptr [ESP + 0xc]
+005950f4  XOR EAX,EAX
+005950f6  FMUL float ptr [0x00893718]
+005950fc  PUSH ESI
+005950fd  MOV ESI,ECX
+005950ff  MOV ECX,dword ptr [ESP + 0xc]
+00595103  FADD float ptr [0x008933d4]
+00595109  MOV dword ptr [ESI + 0xc],EAX
+0059510c  MOV dword ptr [ESI + 0x10],EAX
+0059510f  MOV dword ptr [ESI + 0x14],EAX
+00595112  MOV dword ptr [ESI + 0x18],EAX
+00595115  MOV dword ptr [ESI + 0x1c],0xc38a0000
+0059511c  MOV dword ptr [ESI + 0x20],0xc1200000
+00595123  MOV dword ptr [ESI + 0x24],EAX
+00595126  MOV byte ptr [ESI + 0x29],AL
+00595129  MOV byte ptr [ESI + 0x2a],AL
+0059512c  MOV byte ptr [ESI + 0x28],0x1
+00595130  MOV dword ptr [ESI + 0x34],EAX
+00595133  MOV dword ptr [ESI + 0x38],EAX
+00595136  MOV dword ptr [ESI + 0x3c],EAX
+00595139  MOV dword ptr [ESI + 0x40],EAX
+0059513c  MOV dword ptr [ESI + 0x44],EAX
+0059513f  MOV dword ptr [ESI + 0x48],EAX
+00595142  MOV EAX,dword ptr [ESP + 0x8]
+00595146  MOV dword ptr [ESI + 0x2c],EAX
+00595149  MOV dword ptr [ESI + 0x30],ECX
+0059514c  MOV dword ptr [ESI],0x8a19e0
+00595152  CALL 0x007c4b80
+00595157  MOV EDX,dword ptr [ESP + 0x14]
+0059515b  MOV dword ptr [ESI + 0x4c],EAX
+0059515e  MOV dword ptr [ESI + 0x50],EDX
+00595161  MOV EAX,ESI
+00595163  POP ESI
+00595164  RET 0x10

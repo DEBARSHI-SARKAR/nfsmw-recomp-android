@@ -1,0 +1,38 @@
+004b0720  PUSH ECX
+004b0721  FLD float ptr [ECX + 0x10]
+004b0724  FSUB float ptr [ECX + 0x8]
+004b0727  FLD float ptr [ECX + 0xc]
+004b072a  FSUB float ptr [ECX + 0x8]
+004b072d  FDIVP
+004b072f  FST float ptr [ESP]
+004b0732  FCOMP float ptr [0x00890968]
+004b0738  FNSTSW AX
+004b073a  TEST AH,0x41
+004b073d  JNZ 0x004b076e
+004b073f  FLD float ptr [ESP]
+004b0742  FLD float ptr [0x0089096c]
+004b0748  FCOMP float ptr [ESP]
+004b074b  FNSTSW AX
+004b074d  TEST AH,0x5
+004b0750  JP 0x004b075a
+004b0752  FSTP ST0
+004b0754  FLD float ptr [0x0089096c]
+004b075a  FLD float ptr [ECX + 0x4]
+004b075d  MOV byte ptr [ECX + 0x18],0x0
+004b0761  FSUB float ptr [ECX]
+004b0763  FMUL ST1
+004b0765  FADD float ptr [ECX]
+004b0767  FSTP float ptr [ECX + 0x14]
+004b076a  FSTP ST0
+004b076c  POP ECX
+004b076d  RET
+004b076e  FLD float ptr [0x00890968]
+004b0774  MOV byte ptr [ECX + 0x18],0x0
+004b0778  FLD float ptr [ECX + 0x4]
+004b077b  FSUB float ptr [ECX]
+004b077d  FMUL ST1
+004b077f  FADD float ptr [ECX]
+004b0781  FSTP float ptr [ECX + 0x14]
+004b0784  FSTP ST0
+004b0786  POP ECX
+004b0787  RET

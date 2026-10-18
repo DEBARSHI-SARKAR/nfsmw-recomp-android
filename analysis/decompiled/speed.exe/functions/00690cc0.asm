@@ -1,0 +1,27 @@
+00690cc0  PUSH EBX
+00690cc1  PUSH ESI
+00690cc2  XOR EBX,EBX
+00690cc4  PUSH EBX
+00690cc5  MOV ESI,ECX
+00690cc7  CALL 0x00671330
+00690ccc  FLD float ptr [ESP + 0xc]
+00690cd0  FCOMP float ptr [0x00890cd4]
+00690cd6  MOV byte ptr [ESI + 0xc4],BL
+00690cdc  MOV dword ptr [ESI + 0xc8],EBX
+00690ce2  FNSTSW AX
+00690ce4  TEST AH,0x41
+00690ce7  JNZ 0x00690cef
+00690ce9  FLD float ptr [ESP + 0xc]
+00690ced  JMP 0x00690cf5
+00690cef  FLD float ptr [0x00890cd4]
+00690cf5  MOV dword ptr [ESI + 0xd0],EBX
+00690cfb  FSTP float ptr [ESI + 0xcc]
+00690d01  MOV dword ptr [ESI + 0xd4],EBX
+00690d07  MOV dword ptr [ESI + 0xd8],EBX
+00690d0d  MOV dword ptr [ESI + 0xdc],EBX
+00690d13  MOV dword ptr [ESI + 0xe0],EBX
+00690d19  MOV dword ptr [ESI + 0xe4],EBX
+00690d1f  MOV EAX,ESI
+00690d21  POP ESI
+00690d22  POP EBX
+00690d23  RET 0x4

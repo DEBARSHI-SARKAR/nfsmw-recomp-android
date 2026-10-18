@@ -1,0 +1,19 @@
+00510e60  MOV EAX,dword ptr [ESP + 0x4]
+00510e64  PUSH ESI
+00510e65  LEA ESI,[ECX + 0x74]
+00510e68  PUSH EAX
+00510e69  MOV ECX,ESI
+00510e6b  CALL 0x00651550
+00510e70  MOV ECX,dword ptr [ESI + 0x8]
+00510e73  MOV EDX,dword ptr [ESI + 0xc]
+00510e76  MOV dword ptr [ESI],ECX
+00510e78  MOV dword ptr [ESI + 0x4],EDX
+00510e7b  XOR EAX,EAX
+00510e7d  MOV word ptr [ESI + 0x28],AX
+00510e81  MOV ECX,dword ptr [ESI + 0x34]
+00510e84  MOV EDX,dword ptr [ESI + 0x38]
+00510e87  MOV dword ptr [ESI + 0x2c],ECX
+00510e8a  MOV dword ptr [ESI + 0x30],EDX
+00510e8d  MOV word ptr [ESI + 0x54],AX
+00510e91  POP ESI
+00510e92  RET 0x4

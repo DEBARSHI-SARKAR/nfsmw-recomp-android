@@ -1,0 +1,37 @@
+004fc800  FLD float ptr [0x0091c194]
+004fc806  FADD float ptr [0x00925970]
+004fc80c  FST float ptr [0x0091c194]
+004fc812  FLD float ptr [0x0091c198]
+004fc818  FADD float ptr [0x00925970]
+004fc81e  FSTP float ptr [0x0091c198]
+004fc824  FLD float ptr [0x0091c19c]
+004fc82a  FADD float ptr [0x00925970]
+004fc830  FSTP float ptr [0x0091c19c]
+004fc836  FCOMP float ptr [0x008933d4]
+004fc83c  FNSTSW AX
+004fc83e  TEST AH,0x41
+004fc841  JNZ 0x004fc859
+004fc843  MOV EAX,[0x0091601c]
+004fc848  NOT EAX
+004fc84a  MOV dword ptr [0x0091c194],0x0
+004fc854  MOV [0x0091601c],EAX
+004fc859  FLD float ptr [0x0091c198]
+004fc85f  FCOMP float ptr [0x00891054]
+004fc865  FNSTSW AX
+004fc867  TEST AH,0x41
+004fc86a  JNZ 0x004fc884
+004fc86c  MOV ECX,dword ptr [0x00916020]
+004fc872  NOT ECX
+004fc874  MOV dword ptr [0x0091c198],0x0
+004fc87e  MOV dword ptr [0x00916020],ECX
+004fc884  FLD float ptr [0x0091c19c]
+004fc88a  MOV dword ptr [0x00916018],0x0
+004fc894  FCOMP float ptr [0x00899d6c]
+004fc89a  FNSTSW AX
+004fc89c  TEST AH,0x41
+004fc89f  JNZ 0x004fc8b9
+004fc8a1  MOV EDX,dword ptr [0x00916024]
+004fc8a7  NOT EDX
+004fc8a9  MOV dword ptr [0x0091c19c],0x0
+004fc8b3  MOV dword ptr [0x00916024],EDX
+004fc8b9  RET

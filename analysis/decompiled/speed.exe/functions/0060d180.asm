@@ -1,0 +1,32 @@
+0060d180  PUSH ESI
+0060d181  MOV ESI,dword ptr [ESP + 0x8]
+0060d185  MOV EAX,dword ptr [ESI + 0xc]
+0060d188  SUB EAX,0x8
+0060d18b  MOV EAX,dword ptr [EAX + 0x4]
+0060d18e  CMP byte ptr [EAX + 0x7],0x1
+0060d192  JC 0x0060d199
+0060d194  ADD EAX,0x10
+0060d197  JNZ 0x0060d19d
+0060d199  XOR EAX,EAX
+0060d19b  JMP 0x0060d1b4
+0060d19d  MOV ECX,dword ptr [EAX]
+0060d19f  SUB ECX,0x2
+0060d1a2  JZ 0x0060d1b1
+0060d1a4  SUB ECX,0x5
+0060d1a7  JNZ 0x0060d199
+0060d1a9  MOV EAX,dword ptr [EAX + 0x4]
+0060d1ac  ADD EAX,0x10
+0060d1af  JMP 0x0060d1b4
+0060d1b1  MOV EAX,dword ptr [EAX + 0x4]
+0060d1b4  CALL EAX
+0060d1b6  MOV dword ptr [ESP + 0x8],EAX
+0060d1ba  MOV EAX,dword ptr [ESI + 0x8]
+0060d1bd  FILD dword ptr [ESP + 0x8]
+0060d1c1  MOV dword ptr [EAX],0x3
+0060d1c7  FSTP float ptr [EAX + 0x4]
+0060d1ca  MOV EAX,dword ptr [ESI + 0x8]
+0060d1cd  ADD EAX,0x8
+0060d1d0  MOV dword ptr [ESI + 0x8],EAX
+0060d1d3  MOV EAX,0x1
+0060d1d8  POP ESI
+0060d1d9  RET

@@ -1,0 +1,23 @@
+004cab00  PUSH ESI
+004cab01  MOV ESI,0x9123ec
+004cab06  MOV EAX,dword ptr [ESI]
+004cab08  TEST EAX,EAX
+004cab0a  JZ 0x004cab2f
+004cab0c  LEA ESP,[ESP]
+004cab10  MOV EDX,dword ptr [ESI + -0x8]
+004cab13  MOV ECX,dword ptr [EDX + EAX*0x8 + -0x8]
+004cab17  MOV EAX,dword ptr [EDX + EAX*0x8 + -0x4]
+004cab1b  MOV EDX,dword ptr [ESI]
+004cab1d  ADD EAX,0x4
+004cab20  DEC EDX
+004cab21  PUSH EAX
+004cab22  MOV dword ptr [ESI],EDX
+004cab24  CALL 0x004c7a00
+004cab29  MOV EAX,dword ptr [ESI]
+004cab2b  TEST EAX,EAX
+004cab2d  JNZ 0x004cab10
+004cab2f  ADD ESI,0x168
+004cab35  CMP ESI,0x912824
+004cab3b  JL 0x004cab06
+004cab3d  POP ESI
+004cab3e  RET 0x4

@@ -1,0 +1,43 @@
+0062ba50  PUSH ESI
+0062ba51  MOV ESI,dword ptr [ESP + 0x8]
+0062ba55  TEST ESI,ESI
+0062ba57  MOV EAX,ECX
+0062ba59  MOV dword ptr [EAX + 0x4],0x10
+0062ba60  MOV dword ptr [EAX],0x8a6a0c
+0062ba66  JNZ 0x0062ba78
+0062ba68  XOR ECX,ECX
+0062ba6a  MOV dword ptr [EAX + 0x8],ECX
+0062ba6d  MOV ECX,dword ptr [ESP + 0xc]
+0062ba71  MOV dword ptr [EAX + 0xc],ECX
+0062ba74  POP ESI
+0062ba75  RET 0x8
+0062ba78  MOV EDX,dword ptr [0x00920390]
+0062ba7e  PUSH EBX
+0062ba7f  MOV EBX,dword ptr [ESI + 0x8]
+0062ba82  PUSH EBP
+0062ba83  PUSH EDI
+0062ba84  MOV ECX,EBX
+0062ba86  MOV EBP,ECX
+0062ba88  SHR ECX,0x2
+0062ba8b  MOV EDI,EDX
+0062ba8d  MOVSD.REP ES:EDI,ESI
+0062ba8f  MOV ECX,EBP
+0062ba91  AND ECX,0x3
+0062ba94  MOVSB.REP ES:EDI,ESI
+0062ba96  MOV EDI,dword ptr [EAX + 0x4]
+0062ba99  LEA ECX,[EBX + 0xf]
+0062ba9c  AND ECX,0xfffffff0
+0062ba9f  ADD EDI,ECX
+0062baa1  MOV dword ptr [ESP + 0x14],EDX
+0062baa5  MOV dword ptr [EAX + 0x4],EDI
+0062baa8  ADD EDX,ECX
+0062baaa  MOV ECX,dword ptr [ESP + 0x14]
+0062baae  POP EDI
+0062baaf  POP EBP
+0062bab0  MOV dword ptr [EAX + 0x8],ECX
+0062bab3  MOV ECX,dword ptr [ESP + 0x10]
+0062bab7  POP EBX
+0062bab8  MOV dword ptr [0x00920390],EDX
+0062babe  MOV dword ptr [EAX + 0xc],ECX
+0062bac1  POP ESI
+0062bac2  RET 0x8

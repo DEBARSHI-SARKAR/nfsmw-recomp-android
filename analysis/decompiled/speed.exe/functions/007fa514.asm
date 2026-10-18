@@ -1,0 +1,29 @@
+007fa514  PUSH EBP
+007fa515  MOV EBP,ESP
+007fa517  PUSH ESI
+007fa518  MOV ESI,dword ptr [EBP + 0x8]
+007fa51b  LEA EDX,[ESI + 0x8]
+007fa51e  MOV EAX,dword ptr [EDX]
+007fa520  PUSH EDI
+007fa521  MOV EDI,dword ptr [EDX + 0x4]
+007fa524  MOV dword ptr [EDI],EAX
+007fa526  MOV dword ptr [EAX + 0x4],EDI
+007fa529  PUSH 0xb
+007fa52b  POP EAX
+007fa52c  MOV dword ptr [EDX],EAX
+007fa52e  MOV dword ptr [EDX + 0x4],EAX
+007fa531  MOV EAX,ESI
+007fa533  NEG EAX
+007fa535  SBB EAX,EAX
+007fa537  AND EAX,EDX
+007fa539  MOV EDX,dword ptr [ECX + 0x24]
+007fa53c  ADD ECX,0x20
+007fa53f  MOV dword ptr [EDX],EAX
+007fa541  MOV dword ptr [ECX + 0x4],EAX
+007fa544  MOV dword ptr [EAX + 0x4],EDX
+007fa547  MOV dword ptr [EAX],ECX
+007fa549  INC dword ptr [ESI + 0x10]
+007fa54c  POP EDI
+007fa54d  POP ESI
+007fa54e  POP EBP
+007fa54f  RET 0x4

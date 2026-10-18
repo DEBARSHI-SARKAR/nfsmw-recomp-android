@@ -1,0 +1,43 @@
+0049c770  MOV EAX,dword ptr [ESP + 0xc]
+0049c774  FLD float ptr [EAX + 0x8]
+0049c777  FLD float ptr [EAX + 0x4]
+0049c77a  FLD float ptr [EAX]
+0049c77c  FLD float ptr [ESP + 0x4]
+0049c780  FMUL float ptr [ESP + 0x4]
+0049c784  FLD float ptr [ESP + 0x8]
+0049c788  FMUL float ptr [ESP + 0x8]
+0049c78c  FADDP
+0049c78e  FLD ST1
+0049c790  FMUL ST2
+0049c792  FLD ST3
+0049c794  FMUL ST4
+0049c796  FADDP
+0049c798  FLD ST4
+0049c79a  FMUL ST5
+0049c79c  FADDP
+0049c79e  FSUBP
+0049c7a0  FLD float ptr [ESP + 0x4]
+0049c7a4  FMUL float ptr [ESP + 0x8]
+0049c7a8  FMUL float ptr [0x00890e94]
+0049c7ae  FDIVP
+0049c7b0  FSTP float ptr [ESP + 0x4]
+0049c7b4  FSTP ST0
+0049c7b6  FSTP ST0
+0049c7b8  FSTP ST0
+0049c7ba  FLD float ptr [ESP + 0x4]
+0049c7be  FCOMP float ptr [0x00895c44]
+0049c7c4  FNSTSW AX
+0049c7c6  TEST AH,0x5
+0049c7c9  JP 0x0049c7d4
+0049c7cb  FLD float ptr [0x00895444]
+0049c7d1  RET 0xc
+0049c7d4  FLD float ptr [ESP + 0x4]
+0049c7d8  FCOMP float ptr [0x00895c40]
+0049c7de  FNSTSW AX
+0049c7e0  TEST AH,0x41
+0049c7e3  JNZ 0x0049c7ee
+0049c7e5  FLD float ptr [0x00890968]
+0049c7eb  RET 0xc
+0049c7ee  FLD float ptr [ESP + 0x4]
+0049c7f2  CALL 0x007c4410
+0049c7f7  RET 0xc

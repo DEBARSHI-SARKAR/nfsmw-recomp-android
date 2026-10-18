@@ -1,0 +1,3 @@
+007d0bd0  PUSH EDI
+007d0bd1  MOV EDI,dword ptr [ESP + 0x8]
+007d0bd5  JMP 0x007d0c45

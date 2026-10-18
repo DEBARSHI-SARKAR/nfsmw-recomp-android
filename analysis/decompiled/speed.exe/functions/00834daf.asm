@@ -1,0 +1,22 @@
+00834daf  PUSH EBP
+00834db0  MOV EBP,ESP
+00834db2  CMP dword ptr [EBP + 0x10],0x0
+00834db6  MOV EAX,dword ptr [EBP + 0x8]
+00834db9  PUSH ESI
+00834dba  MOV ESI,ECX
+00834dbc  MOV dword ptr [ESI],EAX
+00834dbe  MOV AL,byte ptr [EBP + 0xc]
+00834dc1  MOV byte ptr [ESI + 0x4],AL
+00834dc4  JZ 0x00834dd9
+00834dc6  PUSH 0xf
+00834dc8  PUSH dword ptr [EBP + 0x10]
+00834dcb  LEA EAX,[ESI + 0x5]
+00834dce  PUSH EAX
+00834dcf  CALL 0x007c64e0
+00834dd4  ADD ESP,0xc
+00834dd7  JMP 0x00834ddd
+00834dd9  MOV byte ptr [ESI + 0x5],0x0
+00834ddd  MOV EAX,ESI
+00834ddf  POP ESI
+00834de0  POP EBP
+00834de1  RET 0xc

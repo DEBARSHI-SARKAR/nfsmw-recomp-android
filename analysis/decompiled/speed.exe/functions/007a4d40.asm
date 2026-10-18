@@ -1,0 +1,10 @@
+007a4d40  MOV EAX,dword ptr [ESP + 0x4]
+007a4d44  CMP EAX,0x6
+007a4d47  JA 0x007a4d60
+007a4d49  JMP dword ptr [EAX*0x4 + 0x7a4d68]
+007a4d50  MOV EAX,0x3
+007a4d55  RET 0x4
+007a4d58  MOV EAX,0x4
+007a4d5d  RET 0x4
+007a4d60  OR EAX,0xffffffff
+007a4d63  RET 0x4

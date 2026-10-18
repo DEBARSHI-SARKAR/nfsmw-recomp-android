@@ -1,0 +1,2 @@
+007023c0  MOV dword ptr [ECX],0x8b1f88
+007023c6  RET

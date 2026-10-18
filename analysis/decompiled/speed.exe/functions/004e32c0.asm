@@ -1,0 +1,17 @@
+004e32c0  MOV EAX,dword ptr [ESP + 0x8]
+004e32c4  MOV EDX,dword ptr [ESP + 0x4]
+004e32c8  LEA EAX,[EAX + EAX*0x2]
+004e32cb  PUSH ESI
+004e32cc  MOV ESI,dword ptr [ECX + 0x5c]
+004e32cf  SHL EAX,0x5
+004e32d2  AND EDX,0xff
+004e32d8  ADD EAX,ESI
+004e32da  POP ESI
+004e32db  JZ 0x004e32eb
+004e32dd  CMP EDX,dword ptr [EAX + 0x48]
+004e32e0  JGE 0x004e32eb
+004e32e2  MOV EAX,dword ptr [EAX + 0x8]
+004e32e5  LEA EAX,[EAX + EDX*0x8]
+004e32e8  RET 0x8
+004e32eb  XOR EAX,EAX
+004e32ed  RET 0x8

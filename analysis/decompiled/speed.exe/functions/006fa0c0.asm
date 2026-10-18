@@ -1,0 +1,23 @@
+006fa0c0  PUSH -0x1
+006fa0c2  PUSH 0x87f3f8
+006fa0c7  MOV EAX,FS:[0x0]
+006fa0cd  PUSH EAX
+006fa0ce  MOV dword ptr FS:[0x0],ESP
+006fa0d5  SUB ESP,0x44
+006fa0d8  PUSH 0x12
+006fa0da  PUSH 0x89290c
+006fa0df  LEA ECX,[ESP + 0x8]
+006fa0e3  MOV dword ptr [ESP + 0x20],0xf
+006fa0eb  MOV dword ptr [ESP + 0x1c],0x0
+006fa0f3  MOV byte ptr [ESP + 0xc],0x0
+006fa0f8  CALL 0x004303b0
+006fa0fd  LEA EAX,[ESP]
+006fa100  PUSH EAX
+006fa101  LEA ECX,[ESP + 0x20]
+006fa105  MOV dword ptr [ESP + 0x50],0x0
+006fa10d  CALL 0x00432d50
+006fa112  PUSH 0x8c9ca8
+006fa117  LEA ECX,[ESP + 0x20]
+006fa11b  PUSH ECX
+006fa11c  MOV dword ptr [ESP + 0x24],0x8bf290
+006fa124  CALL 0x007c56b0

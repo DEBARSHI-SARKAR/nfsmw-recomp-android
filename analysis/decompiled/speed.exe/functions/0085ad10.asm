@@ -1,0 +1,7 @@
+0085ad10  MOV EAX,dword ptr [ESP + 0x4]
+0085ad14  CMP dword ptr [EAX],0x0
+0085ad17  JZ 0x0085ad27
+0085ad19  ADD EAX,0x10a
+0085ad1e  MOV dword ptr [ESP + 0x4],EAX
+0085ad22  JMP 0x0085aeb0
+0085ad27  RET

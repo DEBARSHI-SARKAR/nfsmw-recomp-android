@@ -1,0 +1,8 @@
+006cbb40  MOV ECX,dword ptr [0x008fb574]
+006cbb46  XOR EAX,EAX
+006cbb48  CMP ECX,-0x1
+006cbb4b  MOV ECX,dword ptr [0x00982d24]
+006cbb51  SETZ AL
+006cbb54  DEC EAX
+006cbb55  AND EAX,ECX
+006cbb57  RET

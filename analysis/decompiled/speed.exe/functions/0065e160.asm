@@ -1,0 +1,16 @@
+0065e160  PUSH ESI
+0065e161  MOV ESI,ECX
+0065e163  MOV EAX,dword ptr [ESI + 0x4]
+0065e166  MOV ECX,dword ptr [EAX + 0x4]
+0065e169  PUSH ECX
+0065e16a  MOV ECX,ESI
+0065e16c  CALL 0x0065d0a0
+0065e171  MOV EAX,dword ptr [ESI + 0x4]
+0065e174  MOV dword ptr [EAX + 0x4],EAX
+0065e177  MOV EAX,dword ptr [ESI + 0x4]
+0065e17a  MOV dword ptr [ESI + 0x8],0x0
+0065e181  MOV dword ptr [EAX],EAX
+0065e183  MOV ESI,dword ptr [ESI + 0x4]
+0065e186  MOV dword ptr [ESI + 0x8],ESI
+0065e189  POP ESI
+0065e18a  RET

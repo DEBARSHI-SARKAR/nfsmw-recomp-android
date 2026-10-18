@@ -1,0 +1,8 @@
+0078bbe0  MOV EDX,dword ptr [ECX + 0x8]
+0078bbe3  LEA EAX,[ECX + 0x8]
+0078bbe6  XOR ECX,ECX
+0078bbe8  CMP EDX,-0x1
+0078bbeb  SETZ CL
+0078bbee  DEC ECX
+0078bbef  AND EAX,ECX
+0078bbf1  RET

@@ -1,0 +1,21 @@
+006ca5f0  MOV EAX,dword ptr [ESP + 0x8]
+006ca5f4  MOV EDX,dword ptr [ESP + 0x4]
+006ca5f8  LEA EAX,[EAX + EDX*0x8 + 0x10]
+006ca5fc  MOV EAX,dword ptr [ECX + EAX*0x4]
+006ca5ff  TEST EAX,EAX
+006ca601  JZ 0x006ca629
+006ca603  MOV ECX,dword ptr [EAX]
+006ca605  LEA EDX,[ESP + 0x8]
+006ca609  PUSH EDX
+006ca60a  PUSH EAX
+006ca60b  MOV dword ptr [ESP + 0x10],0x0
+006ca613  CALL dword ptr [ECX + 0x24]
+006ca616  TEST EAX,EAX
+006ca618  JL 0x006ca629
+006ca61a  MOV ECX,dword ptr [ESP + 0x8]
+006ca61e  XOR EAX,EAX
+006ca620  CMP ECX,0x1
+006ca623  SETZ AL
+006ca626  RET 0x8
+006ca629  XOR EAX,EAX
+006ca62b  RET 0x8

@@ -1,0 +1,24 @@
+0066dd70  PUSH EDI
+0066dd71  MOV EDI,ECX
+0066dd73  MOV ECX,dword ptr [EDI + 0x4]
+0066dd76  MOV EAX,dword ptr [ECX]
+0066dd78  MOV dword ptr [ECX],ECX
+0066dd7a  MOV ECX,dword ptr [EDI + 0x4]
+0066dd7d  MOV dword ptr [ECX + 0x4],ECX
+0066dd80  CMP EAX,dword ptr [EDI + 0x4]
+0066dd83  MOV dword ptr [EDI + 0x8],0x0
+0066dd8a  JZ 0x0066dda9
+0066dd8c  PUSH ESI
+0066dd8d  LEA ECX,[ECX]
+0066dd90  MOV ESI,dword ptr [EAX]
+0066dd92  PUSH 0x0
+0066dd94  PUSH 0xc
+0066dd96  PUSH EAX
+0066dd97  MOV ECX,0x925b30
+0066dd9c  CALL 0x005d0370
+0066dda1  CMP ESI,dword ptr [EDI + 0x4]
+0066dda4  MOV EAX,ESI
+0066dda6  JNZ 0x0066dd90
+0066dda8  POP ESI
+0066dda9  POP EDI
+0066ddaa  RET

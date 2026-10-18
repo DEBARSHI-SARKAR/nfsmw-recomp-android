@@ -1,0 +1,12 @@
+006f7cc0  PUSH ESI
+006f7cc1  MOV ESI,ECX
+006f7cc3  MOV ECX,dword ptr [ESP + 0x8]
+006f7cc7  PUSH ESI
+006f7cc8  PUSH 0x6200d0
+006f7ccd  MOV dword ptr [ESI],0x890970
+006f7cd3  MOV dword ptr [ESI + 0x4],ECX
+006f7cd6  CALL 0x005d7930
+006f7cdb  MOV dword ptr [ESI],0x8b0798
+006f7ce1  MOV EAX,ESI
+006f7ce3  POP ESI
+006f7ce4  RET 0x4

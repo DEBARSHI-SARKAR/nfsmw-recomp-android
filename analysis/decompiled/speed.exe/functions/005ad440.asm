@@ -1,0 +1,9 @@
+005ad440  MOV AL,byte ptr [ECX + 0x4]
+005ad443  TEST AL,AL
+005ad445  JZ 0x005ad451
+005ad447  MOV ECX,dword ptr [ECX + 0x8]
+005ad44a  MOV AL,byte ptr [ECX + 0x4]
+005ad44d  TEST AL,AL
+005ad44f  JNZ 0x005ad447
+005ad451  MOV EAX,dword ptr [ECX + 0x8]
+005ad454  RET

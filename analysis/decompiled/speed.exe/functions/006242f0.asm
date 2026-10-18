@@ -1,0 +1,4 @@
+006242f0  MOV EAX,ECX
+006242f2  MOV dword ptr [EAX + 0x4],0x10
+006242f9  MOV dword ptr [EAX],0x8a7250
+006242ff  RET

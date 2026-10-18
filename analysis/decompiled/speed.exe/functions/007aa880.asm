@@ -1,0 +1,15 @@
+007aa880  MOV EAX,dword ptr [ESP + 0x8]
+007aa884  PUSH ESI
+007aa885  PUSH 0x0
+007aa887  MOV ESI,ECX
+007aa889  MOV ECX,dword ptr [ESP + 0xc]
+007aa88d  PUSH EAX
+007aa88e  PUSH ECX
+007aa88f  MOV ECX,ESI
+007aa891  CALL 0x00586fa0
+007aa896  MOV EDX,dword ptr [ESP + 0x10]
+007aa89a  MOV dword ptr [ESI],0x8b75b0
+007aa8a0  MOV dword ptr [ESI + 0x4c],EDX
+007aa8a3  MOV EAX,ESI
+007aa8a5  POP ESI
+007aa8a6  RET 0xc

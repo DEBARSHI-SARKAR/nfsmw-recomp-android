@@ -1,0 +1,22 @@
+004fa150  PUSH -0x1
+004fa152  PUSH 0x86dda8
+004fa157  MOV EAX,FS:[0x0]
+004fa15d  PUSH EAX
+004fa15e  MOV dword ptr FS:[0x0],ESP
+004fa165  PUSH ECX
+004fa166  XOR EAX,EAX
+004fa168  PUSH ESI
+004fa169  MOV ESI,ECX
+004fa16b  MOV dword ptr [ESP + 0x4],ESI
+004fa16f  MOV dword ptr [ESI + 0x4],EAX
+004fa172  MOV dword ptr [ESI + 0x8],EAX
+004fa175  MOV dword ptr [ESI + 0xc],EAX
+004fa178  PUSH 0x80
+004fa17d  MOV dword ptr [ESP + 0x14],EAX
+004fa181  CALL 0x004f9e40
+004fa186  MOV ECX,dword ptr [ESP + 0x8]
+004fa18a  MOV EAX,ESI
+004fa18c  POP ESI
+004fa18d  MOV dword ptr FS:[0x0],ECX
+004fa194  ADD ESP,0x10
+004fa197  RET

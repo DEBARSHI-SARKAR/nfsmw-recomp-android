@@ -1,0 +1,7 @@
+007e48c1  CMP dword ptr [EBP + -0x24],0x0
+007e48c5  JZ 0x007e48d3
+007e48c7  MOV ECX,dword ptr [EBP + -0x28]
+007e48ca  PUSH ECX
+007e48cb  CALL 0x007e4760
+007e48d0  ADD ESP,0x4
+007e48d3  RET

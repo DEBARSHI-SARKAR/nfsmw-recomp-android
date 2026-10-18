@@ -1,0 +1,88 @@
+0085ce10  MOV EAX,dword ptr [ESP + 0x8]
+0085ce14  CMP EAX,0x63626670
+0085ce19  JNZ 0x0085ce3d
+0085ce1b  MOV EAX,dword ptr [ESP + 0xc]
+0085ce1f  TEST EAX,EAX
+0085ce21  JZ 0x0085cf30
+0085ce27  CMP dword ptr [ESP + 0x10],0x4
+0085ce2c  JL 0x0085cf30
+0085ce32  MOV ECX,dword ptr [ESP + 0x4]
+0085ce36  MOV EDX,dword ptr [ECX]
+0085ce38  MOV dword ptr [EAX],EDX
+0085ce3a  XOR EAX,EAX
+0085ce3c  RET
+0085ce3d  CMP EAX,0x63627570
+0085ce42  JNZ 0x0085ce67
+0085ce44  MOV EAX,dword ptr [ESP + 0xc]
+0085ce48  TEST EAX,EAX
+0085ce4a  JZ 0x0085cf30
+0085ce50  CMP dword ptr [ESP + 0x10],0x4
+0085ce55  JL 0x0085cf30
+0085ce5b  MOV ECX,dword ptr [ESP + 0x4]
+0085ce5f  MOV EDX,dword ptr [ECX + 0x4]
+0085ce62  MOV dword ptr [EAX],EDX
+0085ce64  XOR EAX,EAX
+0085ce66  RET
+0085ce67  CMP EAX,0x6474696d
+0085ce6c  JNZ 0x0085ce79
+0085ce6e  MOV EAX,dword ptr [ESP + 0x4]
+0085ce72  MOV EAX,dword ptr [EAX + 0xe0]
+0085ce78  RET
+0085ce79  CMP EAX,0x696e676d
+0085ce7e  JNZ 0x0085ce92
+0085ce80  MOV ECX,dword ptr [ESP + 0x4]
+0085ce84  MOV EDX,dword ptr [ECX + 0x18c]
+0085ce8a  XOR EAX,EAX
+0085ce8c  TEST EDX,EDX
+0085ce8e  SETNZ AL
+0085ce91  RET
+0085ce92  CMP EAX,0x6c627566
+0085ce97  JNZ 0x0085cea1
+0085ce99  MOV EDX,dword ptr [ESP + 0x4]
+0085ce9d  MOV EAX,dword ptr [EDX + 0x30]
+0085cea0  RET
+0085cea1  CMP EAX,0x6d696e70
+0085cea6  JNZ 0x0085ceb3
+0085cea8  MOV EAX,dword ptr [ESP + 0x4]
+0085ceac  MOV EAX,dword ptr [EAX + 0xe4]
+0085ceb2  RET
+0085ceb3  CMP EAX,0x6d6e676c
+0085ceb8  JNZ 0x0085cec5
+0085ceba  MOV ECX,dword ptr [ESP + 0x4]
+0085cebe  MOV EAX,dword ptr [ECX + 0x174]
+0085cec4  RET
+0085cec5  CMP EAX,0x6d6f7574
+0085ceca  JNZ 0x0085ced7
+0085cecc  MOV EDX,dword ptr [ESP + 0x4]
+0085ced0  MOV EAX,dword ptr [EDX + 0xe8]
+0085ced6  RET
+0085ced7  CMP EAX,0x6d776964
+0085cedc  JNZ 0x0085cee9
+0085cede  MOV EAX,dword ptr [ESP + 0x4]
+0085cee2  MOV EAX,dword ptr [EAX + 0xe8]
+0085cee8  RET
+0085cee9  CMP EAX,0x70656572
+0085ceee  JNZ 0x0085cefb
+0085cef0  MOV ECX,dword ptr [ESP + 0x4]
+0085cef4  MOV EAX,dword ptr [ECX + 0x178]
+0085cefa  RET
+0085cefb  CMP EAX,0x73657373
+0085cf00  JNZ 0x0085cf21
+0085cf02  MOV EDX,dword ptr [ESP + 0x10]
+0085cf06  MOV EAX,dword ptr [ESP + 0x4]
+0085cf0a  MOV ECX,dword ptr [ESP + 0xc]
+0085cf0e  PUSH EDX
+0085cf0f  ADD EAX,0xf0
+0085cf14  PUSH EAX
+0085cf15  PUSH ECX
+0085cf16  CALL 0x008461b0
+0085cf1b  ADD ESP,0xc
+0085cf1e  XOR EAX,EAX
+0085cf20  RET
+0085cf21  CMP EAX,0x74797065
+0085cf26  JNZ 0x0085cf30
+0085cf28  MOV EDX,dword ptr [ESP + 0x4]
+0085cf2c  MOV EAX,dword ptr [EDX + 0x2c]
+0085cf2f  RET
+0085cf30  OR EAX,0xffffffff
+0085cf33  RET

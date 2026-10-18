@@ -1,0 +1,12 @@
+004eaa90  PUSH 0x0
+004eaa92  PUSH 0xc
+004eaa94  MOV ECX,0x925b30
+004eaa99  CALL 0x005d29d0
+004eaa9e  TEST EAX,EAX
+004eaaa0  JZ 0x004eaaa4
+004eaaa2  MOV dword ptr [EAX],EAX
+004eaaa4  LEA ECX,[EAX + 0x4]
+004eaaa7  TEST ECX,ECX
+004eaaa9  JZ 0x004eaaad
+004eaaab  MOV dword ptr [ECX],EAX
+004eaaad  RET

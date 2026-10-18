@@ -1,0 +1,45 @@
+/* speed.exe 005b5bb0 FUN_005b5bb0; analysis pseudocode, not buildable source.
+ * calls 00652ad0 _malloc
+ * calls 005af1c0 FUN_005af1c0
+ * calls 00652b10 thunk_FUN_007c7250
+ */
+
+undefined4 __thiscall FUN_005b5bb0(int param_1,char *param_2)
+
+{
+  char cVar1;
+  char *pcVar2;
+  void *pvVar3;
+  undefined4 uVar4;
+  
+  if (*(int *)(param_1 + 0xc) != 0) {
+    thunk_FUN_007c7250(*(int *)(param_1 + 0xc));
+    *(undefined4 *)(param_1 + 0xc) = 0;
+    *(undefined4 *)(param_1 + 0x10) = 0;
+  }
+  if (param_2 != (char *)0x0) {
+    pcVar2 = param_2;
+    do {
+      cVar1 = *pcVar2;
+      pcVar2 = pcVar2 + 1;
+    } while (cVar1 != '\0');
+    if ((int)pcVar2 - (int)(param_2 + 1) != 0) {
+      pvVar3 = _malloc(((int)pcVar2 - (int)(param_2 + 1)) + 1);
+      *(void **)(param_1 + 0xc) = pvVar3;
+    }
+    pcVar2 = *(char **)(param_1 + 0xc);
+    if (pcVar2 != (char *)0x0) {
+      do {
+        cVar1 = *param_2;
+        param_2 = param_2 + 1;
+        *pcVar2 = cVar1;
+        pcVar2 = pcVar2 + 1;
+      } while (cVar1 != '\0');
+      uVar4 = FUN_005af1c0(*(undefined4 *)(param_1 + 0xc));
+      *(undefined4 *)(param_1 + 0x10) = uVar4;
+      return 1;
+    }
+  }
+  return 0;
+}
+

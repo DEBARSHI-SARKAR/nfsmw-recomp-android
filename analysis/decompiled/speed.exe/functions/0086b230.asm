@@ -1,0 +1,2 @@
+0086b230  MOV ECX,dword ptr [EBP + -0x10]
+0086b233  JMP 0x004aaaf0

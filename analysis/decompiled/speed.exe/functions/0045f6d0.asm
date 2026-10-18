@@ -1,0 +1,20 @@
+0045f6d0  MOV ECX,dword ptr [ESP + 0x4]
+0045f6d4  FLD float ptr [ECX]
+0045f6d6  MOV EDX,dword ptr [ESP + 0x8]
+0045f6da  FSUB float ptr [EDX]
+0045f6dc  FABS
+0045f6de  FCOMP float ptr [ESP + 0xc]
+0045f6e2  FNSTSW AX
+0045f6e4  TEST AH,0x41
+0045f6e7  JZ 0x0045f6fc
+0045f6e9  FLD float ptr [ECX + 0x4]
+0045f6ec  FSUB float ptr [EDX + 0x4]
+0045f6ef  FABS
+0045f6f1  FCOMP float ptr [ESP + 0xc]
+0045f6f5  FNSTSW AX
+0045f6f7  TEST AH,0x41
+0045f6fa  JNZ 0x0045f6ff
+0045f6fc  XOR EAX,EAX
+0045f6fe  RET
+0045f6ff  MOV EAX,0x1
+0045f704  RET

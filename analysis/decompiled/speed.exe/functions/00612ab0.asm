@@ -1,0 +1,46 @@
+00612ab0  PUSH ECX
+00612ab1  MOV EDX,dword ptr [ECX + 0x4]
+00612ab4  MOV EAX,dword ptr [EDX + 0x4]
+00612ab7  PUSH EBX
+00612ab8  MOV BL,byte ptr [EAX + 0x15]
+00612abb  TEST BL,BL
+00612abd  PUSH ESI
+00612abe  PUSH EDI
+00612abf  MOV EDI,dword ptr [ESP + 0x18]
+00612ac3  JNZ 0x00612adc
+00612ac5  MOV ESI,dword ptr [EDI]
+00612ac7  CMP dword ptr [EAX + 0xc],ESI
+00612aca  JNC 0x00612ad1
+00612acc  MOV EAX,dword ptr [EAX + 0x8]
+00612acf  JMP 0x00612ad5
+00612ad1  MOV EDX,EAX
+00612ad3  MOV EAX,dword ptr [EAX]
+00612ad5  MOV BL,byte ptr [EAX + 0x15]
+00612ad8  TEST BL,BL
+00612ada  JZ 0x00612ac7
+00612adc  MOV EAX,dword ptr [ECX + 0x4]
+00612adf  CMP EDX,EAX
+00612ae1  MOV dword ptr [ESP + 0x18],EDX
+00612ae5  JZ 0x00612b01
+00612ae7  MOV ECX,dword ptr [EDI]
+00612ae9  CMP ECX,dword ptr [EDX + 0xc]
+00612aec  JC 0x00612b01
+00612aee  LEA EAX,[ESP + 0x18]
+00612af2  MOV EDX,dword ptr [EAX]
+00612af4  MOV EAX,dword ptr [ESP + 0x14]
+00612af8  POP EDI
+00612af9  POP ESI
+00612afa  MOV dword ptr [EAX],EDX
+00612afc  POP EBX
+00612afd  POP ECX
+00612afe  RET 0x8
+00612b01  MOV dword ptr [ESP + 0xc],EAX
+00612b05  LEA EAX,[ESP + 0xc]
+00612b09  MOV EDX,dword ptr [EAX]
+00612b0b  MOV EAX,dword ptr [ESP + 0x14]
+00612b0f  POP EDI
+00612b10  POP ESI
+00612b11  MOV dword ptr [EAX],EDX
+00612b13  POP EBX
+00612b14  POP ECX
+00612b15  RET 0x8

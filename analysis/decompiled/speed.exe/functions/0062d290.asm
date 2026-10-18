@@ -1,0 +1,7 @@
+0062d290  MOV dword ptr [ECX],0x8a6d88
+0062d296  MOV EAX,[0x00993cc8]
+0062d29b  TEST EAX,EAX
+0062d29d  JZ 0x0062d2a9
+0062d29f  MOV dword ptr [EAX + 0x138],0x2
+0062d2a9  MOV dword ptr [ECX],0x8a66f8
+0062d2af  RET

@@ -1,0 +1,62 @@
+00468870  PUSH EBP
+00468871  MOV EBP,ESP
+00468873  AND ESP,0xfffffff0
+00468876  SUB ESP,0x30
+00468879  FLD float ptr [EBP + 0xc]
+0046887c  FCOMP float ptr [0x00890968]
+00468882  FNSTSW AX
+00468884  TEST AH,0x41
+00468887  JNZ 0x0046894b
+0046888d  FLD float ptr [0x008edf34]
+00468893  MOV EAX,[0x008edf3c]
+00468898  FLD float ptr [0x008edf38]
+0046889e  MOV EDX,dword ptr [0x008edf30]
+004688a4  FLD float ptr [0x008edf40]
+004688aa  MOV dword ptr [ESP + 0x2c],EAX
+004688ae  FMUL float ptr [EBP + 0xc]
+004688b1  MOV EAX,dword ptr [ECX + 0x1c]
+004688b4  ADD EAX,0x70
+004688b7  FSTP float ptr [ESP + 0x10]
+004688bb  FLD float ptr [0x008edf44]
+004688c1  FMUL float ptr [EBP + 0xc]
+004688c4  FSTP float ptr [ESP + 0x14]
+004688c8  FLD float ptr [0x008edf48]
+004688ce  FMUL float ptr [EBP + 0xc]
+004688d1  FSTP float ptr [ESP + 0x18]
+004688d5  FLD float ptr [0x008edf4c]
+004688db  MOV dword ptr [EAX],EDX
+004688dd  FMUL float ptr [EBP + 0xc]
+004688e0  MOV EDX,dword ptr [ESP + 0x2c]
+004688e4  MOV dword ptr [EAX + 0xc],EDX
+004688e7  MOV EDX,dword ptr [ESP + 0x10]
+004688eb  FSTP float ptr [ESP + 0x1c]
+004688ef  FXCH
+004688f1  FSTP float ptr [EAX + 0x4]
+004688f4  FSTP float ptr [EAX + 0x8]
+004688f7  MOV EAX,dword ptr [ECX + 0x1c]
+004688fa  ADD EAX,0x80
+004688ff  MOV dword ptr [EAX],EDX
+00468901  MOV EDX,dword ptr [ESP + 0x14]
+00468905  MOV dword ptr [EAX + 0x4],EDX
+00468908  MOV EDX,dword ptr [ESP + 0x18]
+0046890c  MOV dword ptr [EAX + 0x8],EDX
+0046890f  MOV EDX,dword ptr [ESP + 0x1c]
+00468913  MOV dword ptr [EAX + 0xc],EDX
+00468916  MOV AL,byte ptr [EBP + 0x10]
+00468919  TEST AL,AL
+0046891b  JZ 0x00468925
+0046891d  FILD dword ptr [0x00925ae8]
+00468923  JMP 0x0046892b
+00468925  FILD dword ptr [0x00925b14]
+0046892b  MOV EDX,dword ptr [EBP + 0x8]
+0046892e  MOV ECX,dword ptr [ECX + 0x1c]
+00468931  FMUL float ptr [0x00890984]
+00468937  PUSH 0x3f800000
+0046893c  FSTP float ptr [ESP + 0x10]
+00468940  MOV EAX,dword ptr [ESP + 0x10]
+00468944  PUSH EAX
+00468945  PUSH EDX
+00468946  CALL 0x00467420
+0046894b  MOV ESP,EBP
+0046894d  POP EBP
+0046894e  RET 0xc

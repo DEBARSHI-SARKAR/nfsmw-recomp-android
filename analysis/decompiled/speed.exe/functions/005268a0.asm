@@ -1,0 +1,2 @@
+005268a0  MOV byte ptr [ECX + 0x1d],0x1
+005268a4  JMP 0x00518b40

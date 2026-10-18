@@ -1,0 +1,10 @@
+0056bc30  MOV EDX,dword ptr [ESP + 0xc]
+0056bc34  CALL 0x0056bb80
+0056bc39  TEST EAX,EAX
+0056bc3b  JNZ 0x0056bc47
+0056bc3d  MOV EDX,0x9bb9ccc3
+0056bc42  CALL 0x0056bb80
+0056bc47  MOV ECX,dword ptr [ESP + 0x8]
+0056bc4b  MOV dword ptr [ESP + 0xc],ECX
+0056bc4f  MOV dword ptr [ESP + 0x8],EAX
+0056bc53  JMP 0x00460ca0

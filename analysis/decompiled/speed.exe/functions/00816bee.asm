@@ -1,0 +1,77 @@
+00816bee  PUSH EBP
+00816bef  MOV EBP,ESP
+00816bf1  PUSH ECX
+00816bf2  MOV EAX,dword ptr [EBP + 0x8]
+00816bf5  MOV ECX,dword ptr [EBP + 0x18]
+00816bf8  MOV EDX,dword ptr [EBP + 0x10]
+00816bfb  PUSH EBX
+00816bfc  PUSH ESI
+00816bfd  MOV ESI,dword ptr [EBP + 0x14]
+00816c00  PUSH EDI
+00816c01  ADD EAX,0x4
+00816c04  MOV dword ptr [EBP + -0x4],0x8
+00816c0b  MOVZX EBX,byte ptr [ESI]
+00816c0e  MOVZX EDI,byte ptr [EDX]
+00816c11  ADD EDI,EBX
+00816c13  SAR EDI,0x1
+00816c15  ADD DI,word ptr [ECX]
+00816c18  ADD ECX,0x10
+00816c1b  MOV word ptr [EAX + -0x4],DI
+00816c1f  MOVZX EBX,byte ptr [ESI + 0x1]
+00816c23  MOVZX EDI,byte ptr [EDX + 0x1]
+00816c27  ADD EDI,EBX
+00816c29  SAR EDI,0x1
+00816c2b  ADD DI,word ptr [ECX + -0xe]
+00816c2f  MOV word ptr [EAX + -0x2],DI
+00816c33  MOVZX EBX,byte ptr [ESI + 0x2]
+00816c37  MOVZX EDI,byte ptr [EDX + 0x2]
+00816c3b  ADD EDI,EBX
+00816c3d  SAR EDI,0x1
+00816c3f  ADD DI,word ptr [ECX + -0xc]
+00816c43  MOV word ptr [EAX],DI
+00816c46  MOVZX EBX,byte ptr [ESI + 0x3]
+00816c4a  MOVZX EDI,byte ptr [EDX + 0x3]
+00816c4e  ADD EDI,EBX
+00816c50  SAR EDI,0x1
+00816c52  ADD DI,word ptr [ECX + -0xa]
+00816c56  ADD EAX,0x10
+00816c59  MOV word ptr [EAX + -0xe],DI
+00816c5d  MOVZX EBX,byte ptr [ESI + 0x4]
+00816c61  MOVZX EDI,byte ptr [EDX + 0x4]
+00816c65  ADD EDI,EBX
+00816c67  SAR EDI,0x1
+00816c69  ADD DI,word ptr [ECX + -0x8]
+00816c6d  MOV word ptr [EAX + -0xc],DI
+00816c71  MOVZX EBX,byte ptr [ESI + 0x5]
+00816c75  MOVZX EDI,byte ptr [EDX + 0x5]
+00816c79  ADD EDI,EBX
+00816c7b  SAR EDI,0x1
+00816c7d  ADD DI,word ptr [ECX + -0x6]
+00816c81  MOV word ptr [EAX + -0xa],DI
+00816c85  MOVZX EBX,byte ptr [ESI + 0x6]
+00816c89  MOVZX EDI,byte ptr [EDX + 0x6]
+00816c8d  ADD EDI,EBX
+00816c8f  SAR EDI,0x1
+00816c91  ADD DI,word ptr [ECX + -0x4]
+00816c95  MOV word ptr [EAX + -0x8],DI
+00816c99  MOVZX EDI,byte ptr [EDX + 0x7]
+00816c9d  MOVZX EBX,byte ptr [ESI + 0x7]
+00816ca1  ADD EDX,dword ptr [EBP + 0x1c]
+00816ca4  ADD ESI,dword ptr [EBP + 0x1c]
+00816ca7  ADD EDI,EBX
+00816ca9  SAR EDI,0x1
+00816cab  ADD DI,word ptr [ECX + -0x2]
+00816caf  DEC dword ptr [EBP + -0x4]
+00816cb2  MOV word ptr [EAX + -0x6],DI
+00816cb6  JNZ 0x00816c0b
+00816cbc  PUSH 0x8
+00816cbe  PUSH dword ptr [EBP + 0x1c]
+00816cc1  PUSH dword ptr [EBP + 0x8]
+00816cc4  PUSH dword ptr [EBP + 0xc]
+00816cc7  CALL 0x008169be
+00816ccc  ADD ESP,0x10
+00816ccf  POP EDI
+00816cd0  POP ESI
+00816cd1  POP EBX
+00816cd2  LEAVE
+00816cd3  RET

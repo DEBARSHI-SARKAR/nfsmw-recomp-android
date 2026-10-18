@@ -1,0 +1,69 @@
+007e5ac0  PUSH EBP
+007e5ac1  MOV EBP,ESP
+007e5ac3  SUB ESP,0x8
+007e5ac6  MOV EAX,[0x009baa40]
+007e5acb  MOV dword ptr [EBP + -0x8],EAX
+007e5ace  CMP dword ptr [0x009c5444],0x0
+007e5ad5  JNZ 0x007e5ade
+007e5ad7  XOR EAX,EAX
+007e5ad9  JMP 0x007e5b82
+007e5ade  CMP dword ptr [EBP + -0x8],0x0
+007e5ae2  JNZ 0x007e5b06
+007e5ae4  CMP dword ptr [0x009baa48],0x0
+007e5aeb  JZ 0x007e5b06
+007e5aed  CALL 0x007e6fa0
+007e5af2  TEST EAX,EAX
+007e5af4  JZ 0x007e5afd
+007e5af6  XOR EAX,EAX
+007e5af8  JMP 0x007e5b82
+007e5afd  MOV ECX,dword ptr [0x009baa40]
+007e5b03  MOV dword ptr [EBP + -0x8],ECX
+007e5b06  CMP dword ptr [EBP + -0x8],0x0
+007e5b0a  JZ 0x007e5b80
+007e5b0c  CMP dword ptr [EBP + 0x8],0x0
+007e5b10  JZ 0x007e5b80
+007e5b12  MOV EDX,dword ptr [EBP + 0x8]
+007e5b15  PUSH EDX
+007e5b16  CALL 0x007d0cd0
+007e5b1b  ADD ESP,0x4
+007e5b1e  MOV dword ptr [EBP + -0x4],EAX
+007e5b21  MOV EAX,dword ptr [EBP + -0x8]
+007e5b24  CMP dword ptr [EAX],0x0
+007e5b27  JZ 0x007e5b80
+007e5b29  MOV ECX,dword ptr [EBP + -0x8]
+007e5b2c  MOV EDX,dword ptr [ECX]
+007e5b2e  PUSH EDX
+007e5b2f  CALL 0x007d0cd0
+007e5b34  ADD ESP,0x4
+007e5b37  CMP EAX,dword ptr [EBP + -0x4]
+007e5b3a  JBE 0x007e5b75
+007e5b3c  MOV EAX,dword ptr [EBP + -0x8]
+007e5b3f  MOV ECX,dword ptr [EAX]
+007e5b41  MOV EDX,dword ptr [EBP + -0x4]
+007e5b44  MOVSX EAX,byte ptr [ECX + EDX*0x1]
+007e5b48  CMP EAX,0x3d
+007e5b4b  JNZ 0x007e5b75
+007e5b4d  MOV ECX,dword ptr [EBP + -0x4]
+007e5b50  PUSH ECX
+007e5b51  MOV EDX,dword ptr [EBP + 0x8]
+007e5b54  PUSH EDX
+007e5b55  MOV EAX,dword ptr [EBP + -0x8]
+007e5b58  MOV ECX,dword ptr [EAX]
+007e5b5a  PUSH ECX
+007e5b5b  CALL 0x007e6f30
+007e5b60  ADD ESP,0xc
+007e5b63  TEST EAX,EAX
+007e5b65  JNZ 0x007e5b75
+007e5b67  MOV EDX,dword ptr [EBP + -0x8]
+007e5b6a  MOV EAX,dword ptr [EDX]
+007e5b6c  MOV ECX,dword ptr [EBP + -0x4]
+007e5b6f  LEA EAX,[EAX + ECX*0x1 + 0x1]
+007e5b73  JMP 0x007e5b82
+007e5b75  MOV EDX,dword ptr [EBP + -0x8]
+007e5b78  ADD EDX,0x4
+007e5b7b  MOV dword ptr [EBP + -0x8],EDX
+007e5b7e  JMP 0x007e5b21
+007e5b80  XOR EAX,EAX
+007e5b82  MOV ESP,EBP
+007e5b84  POP EBP
+007e5b85  RET

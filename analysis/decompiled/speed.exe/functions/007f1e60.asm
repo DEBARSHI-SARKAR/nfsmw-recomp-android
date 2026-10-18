@@ -1,0 +1,48 @@
+007f1e60  PUSH EBP
+007f1e61  MOV EBP,ESP
+007f1e63  PUSH EBX
+007f1e64  PUSH ESI
+007f1e65  MOV ESI,dword ptr [EBP + 0x8]
+007f1e68  MOV EBX,ECX
+007f1e6a  XOR EAX,EAX
+007f1e6c  PUSH EDI
+007f1e6d  MOV dword ptr [EBX],0x8c2260
+007f1e73  LEA EDI,[EBX + 0x4]
+007f1e76  MOV dword ptr [EDI],EAX
+007f1e78  MOV dword ptr [EDI + 0x4],EAX
+007f1e7b  MOV dword ptr [EDI + 0x8],EAX
+007f1e7e  MOV dword ptr [EDI + 0xc],EAX
+007f1e81  MOV dword ptr [EDI + 0x14],EAX
+007f1e84  PUSH 0x6
+007f1e86  MOV dword ptr [EDI + 0x10],0x20
+007f1e8d  POP ECX
+007f1e8e  PUSH 0x80
+007f1e93  MOV dword ptr [EBX + 0xa0],EAX
+007f1e99  MOV dword ptr [EBX + 0xa4],EAX
+007f1e9f  MOV dword ptr [EBX + 0xa8],EAX
+007f1ea5  MOV dword ptr [EBX + 0xac],EAX
+007f1eab  MOV dword ptr [EBX + 0xb0],EAX
+007f1eb1  PUSH EAX
+007f1eb2  LEA EAX,[EBX + 0x20]
+007f1eb5  MOV dword ptr [EBX + 0x1c],0x1
+007f1ebc  PUSH EAX
+007f1ebd  MOVSD.REP ES:EDI,ESI
+007f1ebf  CALL 0x007f0fe0
+007f1ec4  AND dword ptr [EBX + 0xa0],0x0
+007f1ecb  PUSH 0x14
+007f1ecd  CALL 0x007f1cbc
+007f1ed2  ADD ESP,0x10
+007f1ed5  TEST EAX,EAX
+007f1ed7  JZ 0x007f1ee5
+007f1ed9  PUSH dword ptr [EBX + 0x14]
+007f1edc  MOV ECX,EAX
+007f1ede  CALL 0x007f3093
+007f1ee3  JMP 0x007f1ee7
+007f1ee5  XOR EAX,EAX
+007f1ee7  POP EDI
+007f1ee8  MOV dword ptr [EBX + 0xb0],EAX
+007f1eee  POP ESI
+007f1eef  MOV EAX,EBX
+007f1ef1  POP EBX
+007f1ef2  POP EBP
+007f1ef3  RET 0x4

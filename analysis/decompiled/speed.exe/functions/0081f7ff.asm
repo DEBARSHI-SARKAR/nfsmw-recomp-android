@@ -1,0 +1,7 @@
+0081f7ff  MOV EAX,dword ptr [ESP + 0x4]
+0081f803  IMUL EAX,EAX,0x88
+0081f809  ADD EAX,dword ptr [0x009c2014]
+0081f80f  PUSH dword ptr [EAX + 0x68]
+0081f812  CALL dword ptr [EAX + 0x80]
+0081f818  POP ECX
+0081f819  RET

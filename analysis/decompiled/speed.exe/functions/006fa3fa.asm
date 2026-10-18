@@ -1,0 +1,3 @@
+006fa3fa  PUSH 0x0
+006fa3fc  PUSH 0x0
+006fa3fe  CALL 0x007c56b0

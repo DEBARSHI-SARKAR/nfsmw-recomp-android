@@ -1,0 +1,26 @@
+0064d110  MOV EAX,dword ptr [ESP + 0x8]
+0064d114  PUSH ESI
+0064d115  PUSH EAX
+0064d116  MOV ESI,ECX
+0064d118  CALL 0x00461970
+0064d11d  MOV dword ptr [ESI],EAX
+0064d11f  MOV EAX,dword ptr [ESP + 0xc]
+0064d123  MOV ECX,dword ptr [EAX]
+0064d125  MOV dword ptr [ESI + 0x4],ECX
+0064d128  MOV EDX,dword ptr [EAX + 0x4]
+0064d12b  MOV dword ptr [ESI + 0x8],EDX
+0064d12e  MOV ECX,dword ptr [EAX + 0x8]
+0064d131  MOV dword ptr [ESI + 0xc],ECX
+0064d134  MOV EDX,dword ptr [EAX + 0xc]
+0064d137  MOV dword ptr [ESI + 0x10],EDX
+0064d13a  MOV EAX,dword ptr [EAX + 0x10]
+0064d13d  CDQ
+0064d13e  MOV dword ptr [ESI + 0x18],EAX
+0064d141  XOR EAX,EAX
+0064d143  MOV dword ptr [ESI + 0x20],EAX
+0064d146  MOV dword ptr [ESI + 0x24],EAX
+0064d149  ADD ESP,0x4
+0064d14c  MOV dword ptr [ESI + 0x1c],EDX
+0064d14f  MOV EAX,ESI
+0064d151  POP ESI
+0064d152  RET 0x8

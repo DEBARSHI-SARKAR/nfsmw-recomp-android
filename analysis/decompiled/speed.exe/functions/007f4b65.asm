@@ -1,0 +1,17 @@
+007f4b65  PUSH EBP
+007f4b66  MOV EBP,ESP
+007f4b68  PUSH ECX
+007f4b69  XOR EAX,EAX
+007f4b6b  LEA EDX,[EBP + -0x4]
+007f4b6e  PUSH EDX
+007f4b6f  PUSH EAX
+007f4b70  MOV byte ptr [ECX + 0x6a],0x1
+007f4b74  MOV dword ptr [ECX + 0x2f4],EAX
+007f4b7a  MOV dword ptr [ECX + 0x2f8],EAX
+007f4b80  MOV dword ptr [ECX + 0x6c],EAX
+007f4b83  MOV ECX,dword ptr [ECX + 0x18]
+007f4b86  PUSH EAX
+007f4b87  MOV dword ptr [EBP + -0x4],0x1
+007f4b8e  CALL 0x007f66a8
+007f4b93  LEAVE
+007f4b94  RET 0x4

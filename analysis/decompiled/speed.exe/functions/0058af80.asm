@@ -1,0 +1,21 @@
+0058af80  PUSH ESI
+0058af81  MOV ESI,ECX
+0058af83  MOV EAX,dword ptr [ESI]
+0058af85  CMP EAX,ESI
+0058af87  JZ 0x0058afad
+0058af89  LEA ESP,[ESP]
+0058af90  MOV ECX,dword ptr [EAX]
+0058af92  MOV EDX,dword ptr [EAX + 0x4]
+0058af95  MOV dword ptr [EDX],ECX
+0058af97  MOV dword ptr [ECX + 0x4],EDX
+0058af9a  LEA ECX,[EAX + -0x4]
+0058af9d  TEST ECX,ECX
+0058af9f  JZ 0x0058afa7
+0058afa1  MOV EAX,dword ptr [ECX]
+0058afa3  PUSH 0x1
+0058afa5  CALL dword ptr [EAX]
+0058afa7  MOV EAX,dword ptr [ESI]
+0058afa9  CMP EAX,ESI
+0058afab  JNZ 0x0058af90
+0058afad  POP ESI
+0058afae  RET

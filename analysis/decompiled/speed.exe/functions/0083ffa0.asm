@@ -1,0 +1,18 @@
+0083ffa0  MOV EAX,dword ptr [ESP + 0x8]
+0083ffa4  TEST EAX,EAX
+0083ffa6  JZ 0x0083ffcd
+0083ffa8  TEST AL,0x3
+0083ffaa  JNZ 0x0083ffcd
+0083ffac  MOV EAX,dword ptr [EAX]
+0083ffae  PUSH EAX
+0083ffaf  CALL 0x0083fa70
+0083ffb4  MOV ECX,dword ptr [ESP + 0x8]
+0083ffb8  PUSH EAX
+0083ffb9  PUSH 0x8c68b0
+0083ffbe  PUSH ECX
+0083ffbf  CALL 0x007c6100
+0083ffc4  ADD ESP,0x10
+0083ffc7  MOV EAX,0x1
+0083ffcc  RET
+0083ffcd  XOR EAX,EAX
+0083ffcf  RET

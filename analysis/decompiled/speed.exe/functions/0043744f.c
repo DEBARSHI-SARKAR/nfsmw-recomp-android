@@ -1,0 +1,11 @@
+/* speed.exe 0043744f Catch@0043744f; analysis pseudocode, not buildable source.
+ * calls 007c56b0 __CxxThrowException@8
+ */
+
+void Catch_0043744f(void)
+
+{
+                    /* WARNING: Subroutine does not return */
+  __CxxThrowException_8(0,0);
+}
+

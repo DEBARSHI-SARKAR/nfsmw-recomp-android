@@ -1,0 +1,13 @@
+00658ea0  PUSH ESI
+00658ea1  MOV ESI,ECX
+00658ea3  MOV EAX,dword ptr [ESI + 0x1c]
+00658ea6  MOV ECX,dword ptr [ESI + 0x40]
+00658ea9  MOV EDX,dword ptr [ESI + 0x3c]
+00658eac  PUSH EAX
+00658ead  PUSH ECX
+00658eae  PUSH EDX
+00658eaf  CALL 0x00658a00
+00658eb4  ADD ESP,0xc
+00658eb7  MOV dword ptr [ESI + 0x3c],0x0
+00658ebe  POP ESI
+00658ebf  RET

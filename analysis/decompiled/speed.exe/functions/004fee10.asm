@@ -1,0 +1,22 @@
+004fee10  CMP dword ptr [ECX],0x0
+004fee13  JNZ 0x004fee45
+004fee15  MOV EDX,dword ptr [ECX + 0x8]
+004fee18  TEST EDX,EDX
+004fee1a  LEA EAX,[ECX + 0x10]
+004fee1d  JLE 0x004fee3f
+004fee1f  PUSH ESI
+004fee20  MOV ESI,EDX
+004fee22  LEA EDX,[EAX + 0x50]
+004fee25  MOV AX,word ptr [EAX + 0xa]
+004fee29  TEST AX,AX
+004fee2c  JZ 0x004fee39
+004fee2e  MOVZX EAX,AX
+004fee31  LEA EAX,[EAX + EAX*0x2]
+004fee34  SHL EAX,0x4
+004fee37  ADD EDX,EAX
+004fee39  DEC ESI
+004fee3a  MOV EAX,EDX
+004fee3c  JNZ 0x004fee22
+004fee3e  POP ESI
+004fee3f  MOV dword ptr [ECX],0x1
+004fee45  RET

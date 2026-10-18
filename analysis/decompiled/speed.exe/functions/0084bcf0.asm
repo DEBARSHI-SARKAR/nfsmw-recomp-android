@@ -1,0 +1,9 @@
+0084bcf0  MOV EAX,dword ptr [ESP + 0x4]
+0084bcf4  TEST EAX,EAX
+0084bcf6  JNZ 0x0084bcfd
+0084bcf8  MOV EAX,0x9c3718
+0084bcfd  MOV dword ptr [EAX + 0x8],0x0
+0084bd04  ADD EAX,0xc
+0084bd07  PUSH EAX
+0084bd08  CALL dword ptr [0x008901fc]
+0084bd0e  RET

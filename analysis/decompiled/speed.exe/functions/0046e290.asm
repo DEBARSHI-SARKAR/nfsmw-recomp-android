@@ -1,0 +1,9 @@
+0046e290  MOV AL,byte ptr [ECX + 0x78]
+0046e293  TEST AL,AL
+0046e295  JZ 0x0046e2a4
+0046e297  FILD dword ptr [0x00925b14]
+0046e29d  FMUL float ptr [0x00890984]
+0046e2a3  RET
+0046e2a4  FILD dword ptr [0x00925ae8]
+0046e2aa  FMUL float ptr [0x00890984]
+0046e2b0  RET

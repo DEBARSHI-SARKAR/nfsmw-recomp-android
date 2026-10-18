@@ -1,0 +1,37 @@
+00792790  MOV EDX,dword ptr [ESP + 0x4]
+00792794  MOV EAX,dword ptr [EDX]
+00792796  PUSH EBX
+00792797  PUSH ESI
+00792798  MOV ESI,dword ptr [EAX + 0x8]
+0079279b  MOV dword ptr [EDX],ESI
+0079279d  MOV ESI,dword ptr [EAX + 0x8]
+007927a0  MOV BL,byte ptr [ESI + 0x15]
+007927a3  TEST BL,BL
+007927a5  JNZ 0x007927aa
+007927a7  MOV dword ptr [ESI + 0x4],EDX
+007927aa  MOV ESI,dword ptr [EDX + 0x4]
+007927ad  MOV dword ptr [EAX + 0x4],ESI
+007927b0  MOV ECX,dword ptr [ECX + 0x4]
+007927b3  CMP EDX,dword ptr [ECX + 0x4]
+007927b6  JNZ 0x007927c6
+007927b8  MOV dword ptr [ECX + 0x4],EAX
+007927bb  POP ESI
+007927bc  MOV dword ptr [EAX + 0x8],EDX
+007927bf  MOV dword ptr [EDX + 0x4],EAX
+007927c2  POP EBX
+007927c3  RET 0x4
+007927c6  MOV ECX,dword ptr [EDX + 0x4]
+007927c9  CMP EDX,dword ptr [ECX + 0x8]
+007927cc  JNZ 0x007927dc
+007927ce  MOV dword ptr [ECX + 0x8],EAX
+007927d1  POP ESI
+007927d2  MOV dword ptr [EAX + 0x8],EDX
+007927d5  MOV dword ptr [EDX + 0x4],EAX
+007927d8  POP EBX
+007927d9  RET 0x4
+007927dc  MOV dword ptr [ECX],EAX
+007927de  POP ESI
+007927df  MOV dword ptr [EAX + 0x8],EDX
+007927e2  MOV dword ptr [EDX + 0x4],EAX
+007927e5  POP EBX
+007927e6  RET 0x4

@@ -1,0 +1,2 @@
+00578810  MOV EAX,dword ptr [ESP + 0x8]
+00578814  RET 0x8

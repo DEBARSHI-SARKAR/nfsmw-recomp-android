@@ -1,0 +1,13 @@
+004df060  PUSH ESI
+004df061  MOV ESI,dword ptr [ESP + 0x8]
+004df065  MOV EAX,dword ptr [ESI]
+004df067  PUSH EDI
+004df068  MOV EDI,ECX
+004df06a  MOV ECX,ESI
+004df06c  CALL dword ptr [EAX + 0x4]
+004df06f  TEST dword ptr [EAX],0xfff0
+004df075  JNZ 0x004df07d
+004df077  MOV dword ptr [EDI + 0x110],ESI
+004df07d  POP EDI
+004df07e  POP ESI
+004df07f  RET 0x4

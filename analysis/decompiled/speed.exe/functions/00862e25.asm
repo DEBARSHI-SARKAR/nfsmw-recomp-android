@@ -1,0 +1,7 @@
+00862e25  CMP byte ptr [0x009c2188],0x0
+00862e2c  JZ 0x00862e46
+00862e2e  MOVSX EAX,byte ptr [0x009c218a]
+00862e35  MOV ECX,dword ptr [ESP + 0x4]
+00862e39  MOV dword ptr [EAX*0x4 + 0x9c2194],ECX
+00862e40  INC byte ptr [0x009c218a]
+00862e46  RET

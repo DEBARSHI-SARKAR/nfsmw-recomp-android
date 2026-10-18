@@ -1,0 +1,8 @@
+00693b20  PUSH ESI
+00693b21  MOV ESI,ECX
+00693b23  MOV ECX,dword ptr [ESI + -0xc]
+00693b26  MOV EAX,dword ptr [ECX]
+00693b28  CALL dword ptr [EAX + 0x84]
+00693b2e  MOV byte ptr [ESI + 0x64],0x1
+00693b32  POP ESI
+00693b33  RET

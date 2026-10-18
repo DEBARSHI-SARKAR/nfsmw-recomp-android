@@ -1,0 +1,83 @@
+007da070  PUSH EBX
+007da071  MOV EBX,ESP
+007da073  SUB ESP,0x8
+007da076  AND ESP,0xfffffff0
+007da079  ADD ESP,0x4
+007da07c  PUSH EBP
+007da07d  MOV EBP,dword ptr [EBX + 0x4]
+007da080  MOV dword ptr [ESP + 0x4],EBP
+007da084  MOV EBP,ESP
+007da086  SUB ESP,0x90
+007da08c  MOV EAX,[0x00906980]
+007da091  MOV dword ptr [EBP + -0x4],EAX
+007da094  MOV EAX,dword ptr [EBX + 0x20]
+007da097  PUSH EAX
+007da098  LEA ECX,[EBX + 0x18]
+007da09b  PUSH ECX
+007da09c  MOV EDX,dword ptr [EBX + 0x8]
+007da09f  PUSH EDX
+007da0a0  CALL 0x007da730
+007da0a5  ADD ESP,0xc
+007da0a8  TEST EAX,EAX
+007da0aa  JNZ 0x007da0d5
+007da0ac  MOV EAX,dword ptr [EBP + -0x40]
+007da0af  AND EAX,0xfffffffe
+007da0b2  MOV dword ptr [EBP + -0x40],EAX
+007da0b5  LEA ECX,[EBX + 0x18]
+007da0b8  PUSH ECX
+007da0b9  LEA EDX,[EBX + 0x10]
+007da0bc  PUSH EDX
+007da0bd  MOV EAX,dword ptr [EBX + 0xc]
+007da0c0  PUSH EAX
+007da0c1  MOV ECX,dword ptr [EBX + 0x8]
+007da0c4  PUSH ECX
+007da0c5  LEA EDX,[EBX + 0x20]
+007da0c8  PUSH EDX
+007da0c9  LEA EAX,[EBP + -0x80]
+007da0cc  PUSH EAX
+007da0cd  CALL 0x007da280
+007da0d2  ADD ESP,0x18
+007da0d5  MOV ECX,dword ptr [EBX + 0x8]
+007da0d8  PUSH ECX
+007da0d9  CALL 0x007dab70
+007da0de  ADD ESP,0x4
+007da0e1  MOV dword ptr [EBP + 0xffffff7c],EAX
+007da0e7  CMP dword ptr [0x00907390],0x0
+007da0ee  JNZ 0x007da130
+007da0f0  CMP dword ptr [EBP + 0xffffff7c],0x0
+007da0f7  JZ 0x007da130
+007da0f9  MOV EDX,dword ptr [EBX + 0x20]
+007da0fc  PUSH EDX
+007da0fd  FLD double ptr [EBX + 0x18]
+007da100  SUB ESP,0x8
+007da103  FSTP double ptr [ESP]
+007da106  FLD double ptr [0x008942e0]
+007da10c  SUB ESP,0x8
+007da10f  FSTP double ptr [ESP]
+007da112  FLD double ptr [EBX + 0x10]
+007da115  SUB ESP,0x8
+007da118  FSTP double ptr [ESP]
+007da11b  MOV EAX,dword ptr [EBX + 0xc]
+007da11e  PUSH EAX
+007da11f  MOV ECX,dword ptr [EBP + 0xffffff7c]
+007da125  PUSH ECX
+007da126  CALL 0x007daa50
+007da12b  ADD ESP,0x24
+007da12e  JMP 0x007da153
+007da130  MOV EDX,dword ptr [EBP + 0xffffff7c]
+007da136  PUSH EDX
+007da137  CALL 0x007daaf0
+007da13c  ADD ESP,0x4
+007da13f  PUSH 0xffff
+007da144  MOV EAX,dword ptr [EBX + 0x20]
+007da147  PUSH EAX
+007da148  CALL 0x007dac10
+007da14d  ADD ESP,0x8
+007da150  FLD double ptr [EBX + 0x18]
+007da153  MOV ECX,dword ptr [EBP + -0x4]
+007da156  CALL 0x007d6cb0
+007da15b  MOV ESP,EBP
+007da15d  POP EBP
+007da15e  MOV ESP,EBX
+007da160  POP EBX
+007da161  RET

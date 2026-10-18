@@ -1,0 +1,34 @@
+005b25a0  MOV EDX,dword ptr [ESP + 0x4]
+005b25a4  MOVZX EAX,word ptr [EDX]
+005b25a7  CMP EAX,0x614d
+005b25ac  MOV ECX,dword ptr [ECX + 0xc]
+005b25af  JG 0x005b25ec
+005b25b1  JZ 0x005b25e3
+005b25b3  CMP EAX,0x314d
+005b25b8  JZ 0x005b25da
+005b25ba  CMP EAX,0x324d
+005b25bf  JZ 0x005b25d1
+005b25c1  CMP EAX,0x334d
+005b25c6  JNZ 0x005b2609
+005b25c8  MOV EAX,dword ptr [EDX + 0x4]
+005b25cb  MOV dword ptr [ECX + 0x68],EAX
+005b25ce  RET 0x4
+005b25d1  MOV EDX,dword ptr [EDX + 0x4]
+005b25d4  MOV dword ptr [ECX + 0x64],EDX
+005b25d7  RET 0x4
+005b25da  MOV EAX,dword ptr [EDX + 0x4]
+005b25dd  MOV dword ptr [ECX + 0x60],EAX
+005b25e0  RET 0x4
+005b25e3  MOV EDX,dword ptr [EDX + 0x4]
+005b25e6  MOV dword ptr [ECX + 0x6c],EDX
+005b25e9  RET 0x4
+005b25ec  CMP EAX,0x624d
+005b25f1  JZ 0x005b2603
+005b25f3  CMP EAX,0x634d
+005b25f8  JNZ 0x005b2609
+005b25fa  MOV EAX,dword ptr [EDX + 0x4]
+005b25fd  MOV dword ptr [ECX + 0x74],EAX
+005b2600  RET 0x4
+005b2603  MOV EDX,dword ptr [EDX + 0x4]
+005b2606  MOV dword ptr [ECX + 0x70],EDX
+005b2609  RET 0x4

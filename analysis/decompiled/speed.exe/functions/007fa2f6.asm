@@ -1,0 +1,11 @@
+007fa2f6  PUSH EBP
+007fa2f7  MOV EBP,ESP
+007fa2f9  MOV EAX,dword ptr [EBP + 0x8]
+007fa2fc  ADD EAX,-0x4
+007fa2ff  MOV EDX,dword ptr [EAX]
+007fa301  SUB dword ptr [ECX + 0xc],EDX
+007fa304  PUSH EAX
+007fa305  CALL dword ptr [0x00909e58]
+007fa30b  POP ECX
+007fa30c  POP EBP
+007fa30d  RET 0x8

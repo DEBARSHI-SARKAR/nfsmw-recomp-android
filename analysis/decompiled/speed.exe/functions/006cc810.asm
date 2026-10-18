@@ -1,0 +1,12 @@
+006cc810  MOV EAX,dword ptr [ESP + 0x4]
+006cc814  MOV ECX,dword ptr [EAX]
+006cc816  MOV DL,byte ptr [ECX + 0x25]
+006cc819  TEST DL,DL
+006cc81b  JNZ 0x006cc82b
+006cc81d  LEA ECX,[ECX]
+006cc820  MOV EAX,ECX
+006cc822  MOV ECX,dword ptr [EAX]
+006cc824  MOV DL,byte ptr [ECX + 0x25]
+006cc827  TEST DL,DL
+006cc829  JZ 0x006cc820
+006cc82b  RET

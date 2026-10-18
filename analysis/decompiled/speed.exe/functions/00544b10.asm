@@ -1,0 +1,11 @@
+00544b10  SUB ESP,0x8
+00544b13  MOVZX EAX,word ptr [ECX]
+00544b16  MOV dword ptr [ESP],EAX
+00544b19  FILD dword ptr [ESP]
+00544b1c  FSTP float ptr [ESP + 0x4]
+00544b20  CALL 0x00527d40
+00544b25  MOV dword ptr [ESP],EAX
+00544b28  FILD dword ptr [ESP]
+00544b2b  FDIVR float ptr [ESP + 0x4]
+00544b2f  ADD ESP,0x8
+00544b32  RET

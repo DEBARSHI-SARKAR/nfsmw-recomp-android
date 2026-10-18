@@ -1,0 +1,28 @@
+0085bbb0  PUSH ESI
+0085bbb1  MOV ESI,dword ptr [ESP + 0xc]
+0085bbb5  PUSH EDI
+0085bbb6  XOR EAX,EAX
+0085bbb8  MOV EDI,EDX
+0085bbba  MOV ECX,0x2c
+0085bbbf  STOSD.REP ES:EDI
+0085bbc1  MOV EAX,dword ptr [ESP + 0xc]
+0085bbc5  MOV EDI,EDX
+0085bbc7  MOV ECX,0x22
+0085bbcc  MOVSD.REP ES:EDI,ESI
+0085bbce  MOV dword ptr [EDX + 0xa8],0xffffffff
+0085bbd8  MOV CX,word ptr [EAX + 0x28]
+0085bbdc  MOV EAX,dword ptr [EDX + 0x4]
+0085bbdf  PUSH EAX
+0085bbe0  MOV word ptr [EDX + 0x8c],CX
+0085bbe7  MOV ECX,dword ptr [EDX]
+0085bbe9  PUSH ECX
+0085bbea  PUSH 0x8c7aac
+0085bbef  MOV word ptr [EDX + 0x94],0x1770
+0085bbf8  ADD EDX,0x68
+0085bbfb  PUSH 0x20
+0085bbfd  PUSH EDX
+0085bbfe  CALL 0x00846010
+0085bc03  ADD ESP,0x14
+0085bc06  POP EDI
+0085bc07  POP ESI
+0085bc08  RET

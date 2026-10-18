@@ -1,0 +1,15 @@
+00824e72  MOV EAX,dword ptr [ESP + 0x4]
+00824e76  XOR ECX,ECX
+00824e78  MOV dword ptr [EAX + 0x8],ECX
+00824e7b  MOV dword ptr [EAX + 0xc],ECX
+00824e7e  MOV dword ptr [EAX + 0x10],ECX
+00824e81  MOV dword ptr [EAX + 0x14],ECX
+00824e84  MOV byte ptr [EAX + 0x1b],CL
+00824e87  MOV dword ptr [EAX + 0x4],ECX
+00824e8a  MOV dword ptr [EAX],0x824e2f
+00824e90  ADD EAX,0x1c
+00824e93  PUSH EAX
+00824e94  CALL 0x0082644a
+00824e99  POP ECX
+00824e9a  XOR EAX,EAX
+00824e9c  RET

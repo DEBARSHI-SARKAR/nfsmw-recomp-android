@@ -1,0 +1,20 @@
+0046ffe0  PUSH EBP
+0046ffe1  MOV EBP,ESP
+0046ffe3  AND ESP,0xfffffff0
+0046ffe6  SUB ESP,0x10
+0046ffe9  MOV EAX,dword ptr [EBP + 0xc]
+0046ffec  PUSH EAX
+0046ffed  LEA ECX,[ESP + 0x4]
+0046fff1  PUSH ECX
+0046fff2  CALL 0x0045f490
+0046fff7  FLD float ptr [ESP + 0x8]
+0046fffb  MOV EAX,dword ptr [EBP + 0x8]
+0046fffe  MOV EDX,dword ptr [ESP + 0xc]
+00470002  FSTP float ptr [EAX]
+00470004  MOV ECX,dword ptr [ESP + 0x10]
+00470008  ADD ESP,0x8
+0047000b  MOV dword ptr [EAX + 0x4],EDX
+0047000e  MOV dword ptr [EAX + 0x8],ECX
+00470011  MOV ESP,EBP
+00470013  POP EBP
+00470014  RET

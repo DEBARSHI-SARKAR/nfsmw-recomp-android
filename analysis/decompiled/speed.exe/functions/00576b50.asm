@@ -1,0 +1,12 @@
+00576b50  MOV EAX,dword ptr [ESP + 0x4]
+00576b54  LEA EDX,[EAX + EAX*0x2 + 0xbd]
+00576b5b  MOV EDX,dword ptr [ECX + EDX*0x4]
+00576b5e  PUSH ESI
+00576b5f  MOV ESI,dword ptr [ESP + 0xc]
+00576b63  MOV dword ptr [ESI],EDX
+00576b65  MOV EDX,dword ptr [ESP + 0x10]
+00576b69  LEA EAX,[EAX + EAX*0x2]
+00576b6c  MOV ECX,dword ptr [ECX + EAX*0x4 + 0x2f8]
+00576b73  MOV dword ptr [EDX],ECX
+00576b75  POP ESI
+00576b76  RET 0xc

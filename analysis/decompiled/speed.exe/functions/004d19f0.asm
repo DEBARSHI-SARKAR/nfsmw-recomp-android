@@ -1,0 +1,5 @@
+004d19f0  CMP dword ptr [0x008f86f8],0x1
+004d19f7  JNZ 0x004d1a04
+004d19f9  MOV ECX,dword ptr [0x00911fa8]
+004d19ff  JMP 0x004d1460
+004d1a04  RET

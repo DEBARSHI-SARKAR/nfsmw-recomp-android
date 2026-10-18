@@ -1,0 +1,99 @@
+007fdd95  PUSH EBP
+007fdd96  MOV EBP,ESP
+007fdd98  SUB ESP,0x20
+007fdd9b  PUSH EBX
+007fdd9c  PUSH ESI
+007fdd9d  PUSH EDI
+007fdd9e  LEA EAX,[EBP + -0x10]
+007fdda1  PUSH EAX
+007fdda2  XOR ESI,ESI
+007fdda4  CALL dword ptr [0x00890180]
+007fddaa  TEST EAX,EAX
+007fddac  JZ 0x007fde38
+007fddb2  MOV EDI,dword ptr [0x0089017c]
+007fddb8  LEA EAX,[EBP + -0x20]
+007fddbb  PUSH EAX
+007fddbc  CALL EDI
+007fddbe  LEA EAX,[EBP + -0x8]
+007fddc1  PUSH EAX
+007fddc2  CALL 0x007fdd78
+007fddc7  MOV ESI,dword ptr [0x008903e8]
+007fddcd  POP ECX
+007fddce  CALL ESI
+007fddd0  LEA EBX,[EAX + 0x5]
+007fddd3  JMP 0x007fddd7
+007fddd5  CALL ESI
+007fddd7  CMP EAX,EBX
+007fddd9  JC 0x007fddd5
+007fdddb  LEA EAX,[EBP + -0x18]
+007fddde  PUSH EAX
+007fdddf  CALL EDI
+007fdde1  LEA EAX,[EBP + -0x4]
+007fdde4  PUSH EAX
+007fdde5  CALL 0x007fdd78
+007fddea  MOV EAX,dword ptr [EBP + -0x4]
+007fdded  SUB EAX,dword ptr [EBP + -0x8]
+007fddf0  POP ECX
+007fddf1  TEST EAX,EAX
+007fddf3  MOV dword ptr [EBP + -0x8],EAX
+007fddf6  FILD dword ptr [EBP + -0x8]
+007fddf9  JGE 0x007fde01
+007fddfb  FADD double ptr [0x008c3870]
+007fde01  MOV EAX,dword ptr [EBP + -0x10]
+007fde04  FILD dword ptr [EBP + -0x10]
+007fde07  TEST EAX,EAX
+007fde09  JGE 0x007fde11
+007fde0b  FADD double ptr [0x008c3870]
+007fde11  MOV EAX,dword ptr [EBP + -0x18]
+007fde14  FMULP
+007fde16  SUB EAX,dword ptr [EBP + -0x20]
+007fde19  TEST EAX,EAX
+007fde1b  MOV dword ptr [EBP + -0x8],EAX
+007fde1e  FILD dword ptr [EBP + -0x8]
+007fde21  JGE 0x007fde29
+007fde23  FADD double ptr [0x008c3870]
+007fde29  FDIVP
+007fde2b  FMUL double ptr [0x008938e0]
+007fde31  CALL 0x007c4b80
+007fde36  MOV ESI,EAX
+007fde38  XOR EDX,EDX
+007fde3a  MOV ECX,0xc8
+007fde3f  LEA EAX,[ESI + ESI*0x2 + 0x64]
+007fde43  DIV ECX
+007fde45  XOR EDX,EDX
+007fde47  PUSH 0x3
+007fde49  POP ECX
+007fde4a  PUSH 0x32
+007fde4c  IMUL EAX,EAX,0xc8
+007fde52  DIV ECX
+007fde54  XOR EDX,EDX
+007fde56  POP ECX
+007fde57  MOV EDI,EAX
+007fde59  LEA EAX,[ESI + 0x19]
+007fde5c  DIV ECX
+007fde5e  MOV ECX,EAX
+007fde60  IMUL ECX,ECX,0x32
+007fde63  MOV EAX,ECX
+007fde65  SUB EAX,ESI
+007fde67  CDQ
+007fde68  MOV EBX,EAX
+007fde6a  XOR EBX,EDX
+007fde6c  MOV EAX,EDI
+007fde6e  SUB EAX,ESI
+007fde70  SUB EBX,EDX
+007fde72  CDQ
+007fde73  XOR EAX,EDX
+007fde75  SUB EAX,EDX
+007fde77  CMP EBX,EAX
+007fde79  JNC 0x007fde7f
+007fde7b  MOV EAX,ECX
+007fde7d  JMP 0x007fde8a
+007fde7f  CMP EDI,0x29a
+007fde85  MOV EAX,EDI
+007fde87  JNZ 0x007fde8a
+007fde89  INC EAX
+007fde8a  POP EDI
+007fde8b  POP ESI
+007fde8c  POP EBX
+007fde8d  LEAVE
+007fde8e  RET

@@ -1,0 +1,27 @@
+0047ee00  MOV EAX,dword ptr [ESP + 0x4]
+0047ee04  LEA EDX,[EAX + EAX*0x2]
+0047ee07  PUSH ESI
+0047ee08  LEA ESI,[ECX + EDX*0x4]
+0047ee0b  MOV EDX,dword ptr [ESP + 0xc]
+0047ee0f  PUSH EDI
+0047ee10  MOV EDI,dword ptr [ESI + 0x34]
+0047ee13  MOV dword ptr [EDX],EDI
+0047ee15  MOV ESI,dword ptr [ESI + 0x38]
+0047ee18  MOV dword ptr [EDX + 0x4],ESI
+0047ee1b  LEA EAX,[EAX + EAX*0x2 + 0xf]
+0047ee1f  MOV EAX,dword ptr [ECX + EAX*0x4]
+0047ee22  MOV dword ptr [EDX + 0x8],EAX
+0047ee25  MOV AL,[0x009110a0]
+0047ee2a  TEST AL,AL
+0047ee2c  POP EDI
+0047ee2d  POP ESI
+0047ee2e  JZ 0x0047ee38
+0047ee30  FLD float ptr [EDX + 0x4]
+0047ee33  FCHS
+0047ee35  FSTP float ptr [EDX + 0x4]
+0047ee38  CMP byte ptr [ECX + 0x5],0x3
+0047ee3c  JNZ 0x0047ee49
+0047ee3e  PUSH EDX
+0047ee3f  MOV ECX,0x8ee320
+0047ee44  CALL 0x0047b300
+0047ee49  RET 0x8

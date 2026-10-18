@@ -1,0 +1,43 @@
+0066e9f0  MOV EAX,dword ptr [ECX]
+0066e9f2  MOV DL,byte ptr [EAX + 0x15]
+0066e9f5  TEST DL,DL
+0066e9f7  JZ 0x0066e9ff
+0066e9f9  MOV EAX,dword ptr [EAX + 0x8]
+0066e9fc  MOV dword ptr [ECX],EAX
+0066e9fe  RET
+0066e9ff  MOV EDX,dword ptr [EAX]
+0066ea01  PUSH EBX
+0066ea02  MOV BL,byte ptr [EDX + 0x15]
+0066ea05  TEST BL,BL
+0066ea07  JNZ 0x0066ea23
+0066ea09  MOV EAX,dword ptr [EDX + 0x8]
+0066ea0c  MOV BL,byte ptr [EAX + 0x15]
+0066ea0f  TEST BL,BL
+0066ea11  JNZ 0x0066ea1f
+0066ea13  MOV EDX,EAX
+0066ea15  MOV EAX,dword ptr [EDX + 0x8]
+0066ea18  MOV BL,byte ptr [EAX + 0x15]
+0066ea1b  TEST BL,BL
+0066ea1d  JZ 0x0066ea13
+0066ea1f  MOV dword ptr [ECX],EDX
+0066ea21  POP EBX
+0066ea22  RET
+0066ea23  MOV EAX,dword ptr [EAX + 0x4]
+0066ea26  MOV DL,byte ptr [EAX + 0x15]
+0066ea29  TEST DL,DL
+0066ea2b  JNZ 0x0066ea4b
+0066ea2d  LEA ECX,[ECX]
+0066ea30  MOV EDX,dword ptr [ECX]
+0066ea32  CMP EDX,dword ptr [EAX]
+0066ea34  JNZ 0x0066ea42
+0066ea36  MOV dword ptr [ECX],EAX
+0066ea38  MOV EAX,dword ptr [EAX + 0x4]
+0066ea3b  MOV DL,byte ptr [EAX + 0x15]
+0066ea3e  TEST DL,DL
+0066ea40  JZ 0x0066ea30
+0066ea42  MOV DL,byte ptr [EAX + 0x15]
+0066ea45  TEST DL,DL
+0066ea47  JNZ 0x0066ea4b
+0066ea49  MOV dword ptr [ECX],EAX
+0066ea4b  POP EBX
+0066ea4c  RET

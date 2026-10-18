@@ -1,0 +1,6 @@
+007e99d0  PUSH EBP
+007e99d1  MOV EBP,ESP
+007e99d3  MOV EAX,dword ptr [EBP + 0x8]
+007e99d6  MOV dword ptr [ECX + 0x18],EAX
+007e99d9  POP EBP
+007e99da  RET 0x4

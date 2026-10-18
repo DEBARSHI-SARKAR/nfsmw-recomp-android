@@ -1,0 +1,26 @@
+004aaa60  PUSH -0x1
+004aaa62  PUSH 0x86aff8
+004aaa67  MOV EAX,FS:[0x0]
+004aaa6d  PUSH EAX
+004aaa6e  MOV dword ptr FS:[0x0],ESP
+004aaa75  PUSH ECX
+004aaa76  PUSH ESI
+004aaa77  PUSH 0x0
+004aaa79  PUSH 0x0
+004aaa7b  MOV ESI,ECX
+004aaa7d  PUSH 0x0
+004aaa7f  MOV dword ptr [ESP + 0x10],ESI
+004aaa83  CALL 0x00467c30
+004aaa88  MOV EAX,[0x00988e18]
+004aaa8d  TEST EAX,EAX
+004aaa8f  MOV dword ptr [ESP + 0x10],0x0
+004aaa97  JZ 0x004aaaa1
+004aaa99  PUSH EAX
+004aaa9a  MOV ECX,ESI
+004aaa9c  CALL 0x0045a760
+004aaaa1  MOV ECX,dword ptr [ESP + 0x8]
+004aaaa5  MOV EAX,ESI
+004aaaa7  POP ESI
+004aaaa8  MOV dword ptr FS:[0x0],ECX
+004aaaaf  ADD ESP,0x10
+004aaab2  RET

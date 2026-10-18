@@ -1,0 +1,2 @@
+007c99c9  MOV EDX,0x906d2a
+007c99ce  JMP 0x007c99bd

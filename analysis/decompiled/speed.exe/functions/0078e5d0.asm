@@ -1,0 +1,18 @@
+0078e5d0  MOV EAX,dword ptr [ESP + 0x4]
+0078e5d4  CMP EAX,0x3
+0078e5d7  JNZ 0x0078e5f6
+0078e5d9  MOV EDX,dword ptr [ECX + 0x94]
+0078e5df  MOV EAX,dword ptr [ECX + 0x9c]
+0078e5e5  ADD EAX,EDX
+0078e5e7  ADD EAX,dword ptr [ECX + 0x6c]
+0078e5ea  ADD EAX,dword ptr [ECX + 0x64]
+0078e5ed  ADD EAX,dword ptr [ECX + 0x3c]
+0078e5f0  ADD EAX,dword ptr [ECX + 0x34]
+0078e5f3  RET 0x4
+0078e5f6  LEA EAX,[EAX + EAX*0x2]
+0078e5f9  SHL EAX,0x4
+0078e5fc  MOV EDX,dword ptr [ECX + EAX*0x1 + 0x34]
+0078e600  ADD ECX,EAX
+0078e602  MOV EAX,dword ptr [ECX + 0x3c]
+0078e605  ADD EAX,EDX
+0078e607  RET 0x4

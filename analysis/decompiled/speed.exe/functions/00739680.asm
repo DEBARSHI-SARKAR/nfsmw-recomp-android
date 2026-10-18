@@ -1,0 +1,3 @@
+00739680  MOV EAX,dword ptr [ESP + 0x4]
+00739684  MOV EAX,dword ptr [EAX*0x4 + 0x9036a0]
+0073968b  RET

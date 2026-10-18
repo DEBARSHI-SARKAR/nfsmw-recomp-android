@@ -1,0 +1,43 @@
+0084bb00  SUB ESP,0x24
+0084bb03  MOV EAX,[0x00906980]
+0084bb08  MOV dword ptr [ESP + 0x20],EAX
+0084bb0c  XOR EAX,EAX
+0084bb0e  MOV dword ptr [ESP],EAX
+0084bb11  MOV dword ptr [ESP + 0x4],EAX
+0084bb15  MOV dword ptr [ESP + 0x8],EAX
+0084bb19  XOR ECX,ECX
+0084bb1b  MOV dword ptr [ESP + 0xc],EAX
+0084bb1f  MOV byte ptr [ESP + 0x2],AL
+0084bb23  PUSH 0x10
+0084bb25  MOV AL,0x1
+0084bb27  MOV dword ptr [ESP + 0x14],ECX
+0084bb2b  LEA EDX,[ESP + 0x4]
+0084bb2f  PUSH EDX
+0084bb30  MOV byte ptr [ESP + 0xf],AL
+0084bb34  MOV byte ptr [ESP + 0xe],AL
+0084bb38  MOV dword ptr [ESP + 0x1c],ECX
+0084bb3c  LEA EAX,[ESP + 0x18]
+0084bb40  MOV dword ptr [ESP + 0x20],ECX
+0084bb44  PUSH 0x10
+0084bb46  PUSH EAX
+0084bb47  MOV word ptr [ESP + 0x10],0x2
+0084bb4e  MOV byte ptr [ESP + 0x13],0x4f
+0084bb53  MOV byte ptr [ESP + 0x15],0xa8
+0084bb58  MOV byte ptr [ESP + 0x14],0xc0
+0084bb5d  MOV dword ptr [ESP + 0x2c],ECX
+0084bb61  CALL 0x0084b770
+0084bb66  MOV ECX,dword ptr [ESP + 0x24]
+0084bb6a  MOVZX EDX,byte ptr [ESP + 0x26]
+0084bb6f  MOVZX EAX,CL
+0084bb72  SHL EAX,0x8
+0084bb75  MOVZX ECX,CH
+0084bb78  OR EAX,ECX
+0084bb7a  MOVZX ECX,byte ptr [ESP + 0x27]
+0084bb7f  SHL EAX,0x8
+0084bb82  OR EAX,EDX
+0084bb84  SHL EAX,0x8
+0084bb87  OR EAX,ECX
+0084bb89  MOV ECX,dword ptr [ESP + 0x30]
+0084bb8d  CALL 0x007d6cb0
+0084bb92  ADD ESP,0x34
+0084bb95  RET

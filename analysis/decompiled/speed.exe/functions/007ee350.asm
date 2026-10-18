@@ -1,0 +1,14 @@
+007ee350  MOV EAX,dword ptr [ECX]
+007ee352  TEST EAX,EAX
+007ee354  JZ 0x007ee365
+007ee356  MOV EDX,dword ptr [EAX]
+007ee358  TEST EDX,EDX
+007ee35a  JZ 0x007ee365
+007ee35c  AND dword ptr [EAX],0x0
+007ee35f  TEST EDX,EDX
+007ee361  MOV EAX,EDX
+007ee363  JNZ 0x007ee356
+007ee365  AND dword ptr [ECX + 0x4],0x0
+007ee369  AND dword ptr [ECX],0x0
+007ee36c  AND dword ptr [ECX + 0x8],0x0
+007ee370  RET

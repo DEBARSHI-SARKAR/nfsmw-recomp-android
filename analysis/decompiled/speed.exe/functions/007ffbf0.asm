@@ -1,0 +1,52 @@
+007ffbf0  PUSH EBP
+007ffbf1  MOV EBP,ESP
+007ffbf3  PUSH EDI
+007ffbf4  MOV EDI,dword ptr [EBP + 0x8]
+007ffbf7  CMP dword ptr [EDI + 0x8],0x0
+007ffbfb  JZ 0x007ffc08
+007ffbfd  PUSH dword ptr [EBP + 0xc]
+007ffc00  PUSH EDI
+007ffc01  CALL 0x007fe49d
+007ffc06  POP ECX
+007ffc07  POP ECX
+007ffc08  MOV EAX,dword ptr [EDI + 0x68]
+007ffc0b  CMP EAX,0x1
+007ffc0e  JBE 0x007ffc26
+007ffc10  CMP EAX,0x2
+007ffc13  JNZ 0x007ffc62
+007ffc15  PUSH dword ptr [EBP + 0x10]
+007ffc18  PUSH dword ptr [EBP + 0xc]
+007ffc1b  PUSH EDI
+007ffc1c  CALL 0x007ffaa6
+007ffc21  ADD ESP,0xc
+007ffc24  JMP 0x007ffc62
+007ffc26  PUSH EBX
+007ffc27  PUSH ESI
+007ffc28  MOV ESI,dword ptr [EBP + 0x10]
+007ffc2b  MOV EAX,dword ptr [ESI + 0x4]
+007ffc2e  SUB EAX,dword ptr [EDI + 0x74]
+007ffc31  MOV EDX,dword ptr [ESI]
+007ffc33  MOV ECX,EDX
+007ffc35  SUB ECX,dword ptr [EDI + 0x70]
+007ffc38  SHR EAX,0x1
+007ffc3a  MOV EDI,EAX
+007ffc3c  IMUL EDX,EAX
+007ffc3f  SAR EDI,0x1
+007ffc41  IMUL EDI,dword ptr [ESI + 0xc]
+007ffc45  SHR ECX,0x1
+007ffc47  MOV EBX,ECX
+007ffc49  SAR EBX,0x1
+007ffc4b  ADD EDI,EBX
+007ffc4d  PUSH EDI
+007ffc4e  ADD EDX,ECX
+007ffc50  PUSH EDX
+007ffc51  PUSH ESI
+007ffc52  PUSH dword ptr [EBP + 0xc]
+007ffc55  PUSH dword ptr [EBP + 0x8]
+007ffc58  CALL 0x007ff8cc
+007ffc5d  ADD ESP,0x14
+007ffc60  POP ESI
+007ffc61  POP EBX
+007ffc62  POP EDI
+007ffc63  POP EBP
+007ffc64  RET

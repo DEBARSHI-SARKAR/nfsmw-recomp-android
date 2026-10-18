@@ -1,0 +1,44 @@
+0040fcc0  PUSH ESI
+0040fcc1  PUSH EDI
+0040fcc2  MOV EDI,dword ptr [ESP + 0x10]
+0040fcc6  LEA EAX,[EDI + -0x1]
+0040fcc9  CDQ
+0040fcca  SUB EAX,EDX
+0040fccc  MOV ESI,EAX
+0040fcce  MOV EAX,dword ptr [ESP + 0x14]
+0040fcd2  SAR ESI,0x1
+0040fcd4  CMP EAX,EDI
+0040fcd6  JGE 0x0040fd12
+0040fcd8  PUSH EBX
+0040fcd9  MOV EBX,dword ptr [ESP + 0x10]
+0040fcdd  PUSH EBP
+0040fcde  MOV EBP,dword ptr [ESP + 0x20]
+0040fce2  MOV EAX,dword ptr [EBX + ESI*0x4]
+0040fce5  PUSH EBP
+0040fce6  PUSH EAX
+0040fce7  CALL dword ptr [ESP + 0x2c]
+0040fceb  ADD ESP,0x8
+0040fcee  TEST AL,AL
+0040fcf0  JZ 0x0040fd0a
+0040fcf2  MOV ECX,dword ptr [EBX + ESI*0x4]
+0040fcf5  LEA EAX,[ESI + -0x1]
+0040fcf8  CDQ
+0040fcf9  SUB EAX,EDX
+0040fcfb  SAR EAX,0x1
+0040fcfd  MOV dword ptr [EBX + EDI*0x4],ECX
+0040fd00  MOV EDI,ESI
+0040fd02  MOV ESI,EAX
+0040fd04  CMP dword ptr [ESP + 0x1c],EDI
+0040fd08  JL 0x0040fce2
+0040fd0a  MOV dword ptr [EBX + EDI*0x4],EBP
+0040fd0d  POP EBP
+0040fd0e  POP EBX
+0040fd0f  POP EDI
+0040fd10  POP ESI
+0040fd11  RET
+0040fd12  MOV EDX,dword ptr [ESP + 0x18]
+0040fd16  MOV EAX,dword ptr [ESP + 0xc]
+0040fd1a  MOV dword ptr [EAX + EDI*0x4],EDX
+0040fd1d  POP EDI
+0040fd1e  POP ESI
+0040fd1f  RET

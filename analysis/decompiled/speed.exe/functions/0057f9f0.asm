@@ -1,0 +1,39 @@
+0057f9f0  PUSH -0x1
+0057f9f2  PUSH 0x871ffb
+0057f9f7  MOV EAX,FS:[0x0]
+0057f9fd  PUSH EAX
+0057f9fe  MOV dword ptr FS:[0x0],ESP
+0057fa05  SUB ESP,0x8c
+0057fa0b  XOR EAX,EAX
+0057fa0d  PUSH ESI
+0057fa0e  PUSH EDI
+0057fa0f  MOV dword ptr [ESP + 0x8],0x8a071c
+0057fa17  MOV dword ptr [ESP + 0xc],EAX
+0057fa1b  MOV dword ptr [ESP + 0x10],0x67452301
+0057fa23  MOV dword ptr [ESP + 0x14],0xefcdab89
+0057fa2b  MOV dword ptr [ESP + 0x18],0x98badcfe
+0057fa33  MOV dword ptr [ESP + 0x1c],0x10325476
+0057fa3b  MOV byte ptr [ESP + 0x60],AL
+0057fa3f  MOV ECX,dword ptr [ESP + 0xa4]
+0057fa46  MOV dword ptr [ESP + 0x9c],EAX
+0057fa4d  MOV EAX,dword ptr [ESP + 0xac]
+0057fa54  PUSH EAX
+0057fa55  PUSH ECX
+0057fa56  LEA ECX,[ESP + 0x10]
+0057fa5a  CALL 0x0065b6e0
+0057fa5f  LEA ECX,[ESP + 0x8]
+0057fa63  CALL 0x0065b760
+0057fa68  MOV EDI,dword ptr [ESP + 0xa8]
+0057fa6f  LEA ECX,[ESP + 0x8]
+0057fa73  CALL 0x0065b760
+0057fa78  MOV ESI,EAX
+0057fa7a  MOV ECX,0x4
+0057fa7f  XOR EDX,EDX
+0057fa81  CMPSD.REPE ES:EDI,ESI
+0057fa83  MOV ECX,dword ptr [ESP + 0x94]
+0057fa8a  POP EDI
+0057fa8b  SETZ AL
+0057fa8e  POP ESI
+0057fa8f  MOV dword ptr FS:[0x0],ECX
+0057fa96  ADD ESP,0x98
+0057fa9c  RET 0xc

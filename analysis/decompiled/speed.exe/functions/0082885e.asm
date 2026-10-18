@@ -1,0 +1,3 @@
+0082885e  MOV EAX,dword ptr [ESP + 0x4]
+00828862  MOV dword ptr [ECX + 0xd64],EAX
+00828868  RET 0x4

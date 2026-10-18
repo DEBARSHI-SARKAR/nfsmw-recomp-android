@@ -1,0 +1,82 @@
+006ff490  MOV EAX,dword ptr [ESP + 0x8]
+006ff494  MOV ECX,dword ptr [EAX]
+006ff496  MOV EDX,dword ptr [ESP + 0xc]
+006ff49a  PUSH EBX
+006ff49b  PUSH ESI
+006ff49c  MOV ESI,dword ptr [EDX]
+006ff49e  PUSH EDI
+006ff49f  MOV EDI,dword ptr [ESP + 0x10]
+006ff4a3  MOV EDX,dword ptr [EDI + 0x54]
+006ff4a6  SHL ECX,0x18
+006ff4a9  ADD ECX,ESI
+006ff4ab  XOR EBX,EBX
+006ff4ad  DEC EDX
+006ff4ae  MOV EAX,EDX
+006ff4b0  SAR EAX,0x1
+006ff4b2  MOV ESI,EAX
+006ff4b4  SHL ESI,0x4
+006ff4b7  MOV ESI,dword ptr [ESI + EDI*0x1 + 0x58]
+006ff4bb  CMP ESI,ECX
+006ff4bd  JZ 0x006ff4e4
+006ff4bf  NOP
+006ff4c0  CMP EAX,EBX
+006ff4c2  JZ 0x006ff4e4
+006ff4c4  CMP EAX,EDX
+006ff4c6  JZ 0x006ff4e4
+006ff4c8  CMP ESI,ECX
+006ff4ca  JNC 0x006ff4d0
+006ff4cc  MOV EBX,EAX
+006ff4ce  JMP 0x006ff4d2
+006ff4d0  MOV EDX,EAX
+006ff4d2  LEA EAX,[EDX + EBX*0x1]
+006ff4d5  SAR EAX,0x1
+006ff4d7  MOV ESI,EAX
+006ff4d9  SHL ESI,0x4
+006ff4dc  MOV ESI,dword ptr [ESI + EDI*0x1 + 0x58]
+006ff4e0  CMP ESI,ECX
+006ff4e2  JNZ 0x006ff4c0
+006ff4e4  MOV ESI,EAX
+006ff4e6  SHL ESI,0x4
+006ff4e9  CMP dword ptr [ESI + EDI*0x1 + 0x58],ECX
+006ff4ed  JZ 0x006ff50b
+006ff4ef  MOV EAX,EBX
+006ff4f1  SHL EAX,0x4
+006ff4f4  CMP dword ptr [EAX + EDI*0x1 + 0x58],ECX
+006ff4f8  JNZ 0x006ff4fe
+006ff4fa  MOV EAX,EBX
+006ff4fc  JMP 0x006ff50b
+006ff4fe  MOV EAX,EDX
+006ff500  SHL EAX,0x4
+006ff503  CMP dword ptr [EAX + EDI*0x1 + 0x58],ECX
+006ff507  JNZ 0x006ff51a
+006ff509  MOV EAX,EDX
+006ff50b  MOV ECX,EAX
+006ff50d  SHL ECX,0x4
+006ff510  MOV EDX,dword ptr [ECX + EDI*0x1 + 0x5c]
+006ff514  ADD ECX,EDI
+006ff516  TEST EDX,EDX
+006ff518  JNZ 0x006ff539
+006ff51a  MOV EAX,dword ptr [ESP + 0x1c]
+006ff51e  POP EDI
+006ff51f  POP ESI
+006ff520  MOV dword ptr [EAX],0x0
+006ff526  MOV dword ptr [EAX + 0x8],0x0
+006ff52d  MOV dword ptr [EAX + 0x4],0xffffffff
+006ff534  OR EAX,0xffffffff
+006ff537  POP EBX
+006ff538  RET
+006ff539  ADD EAX,0x6
+006ff53c  SHL EAX,0x4
+006ff53f  MOV EDX,dword ptr [EAX + EDI*0x1]
+006ff542  MOV EAX,dword ptr [ESP + 0x1c]
+006ff546  ADD EDX,EDI
+006ff548  MOV dword ptr [EAX],EDX
+006ff54a  MOV EDX,dword ptr [ECX + 0x5c]
+006ff54d  MOV dword ptr [EAX + 0x4],EDX
+006ff550  MOV ECX,dword ptr [ECX + 0x64]
+006ff553  POP EDI
+006ff554  POP ESI
+006ff555  MOV dword ptr [EAX + 0x8],ECX
+006ff558  XOR EAX,EAX
+006ff55a  POP EBX
+006ff55b  RET

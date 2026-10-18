@@ -1,0 +1,10 @@
+/* speed.exe 007e8ae0 FUN_007e8ae0; analysis pseudocode, not buildable source.
+ */
+
+void __thiscall FUN_007e8ae0(undefined1 *param_1,undefined1 param_2)
+
+{
+  *param_1 = param_2;
+  return;
+}
+

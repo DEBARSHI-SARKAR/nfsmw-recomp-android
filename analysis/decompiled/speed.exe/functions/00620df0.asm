@@ -1,0 +1,67 @@
+00620df0  PUSH -0x1
+00620df2  PUSH 0x876be8
+00620df7  MOV EAX,FS:[0x0]
+00620dfd  PUSH EAX
+00620dfe  MOV dword ptr FS:[0x0],ESP
+00620e05  SUB ESP,0x40
+00620e08  PUSH EBX
+00620e09  PUSH EBP
+00620e0a  PUSH ESI
+00620e0b  MOV ESI,ECX
+00620e0d  PUSH EDI
+00620e0e  MOV dword ptr [ESP + 0x1c],ESI
+00620e12  MOV dword ptr [ESI],0x8a68cc
+00620e18  LEA EAX,[ESI + 0x10]
+00620e1b  MOV ECX,dword ptr [EAX]
+00620e1d  MOV EDX,dword ptr [EAX + 0x4]
+00620e20  MOV EAX,dword ptr [EAX + 0x8]
+00620e23  PUSH ECX
+00620e24  MOV dword ptr [ESP + 0x1c],ESP
+00620e28  MOV EDI,ESP
+00620e2a  PUSH 0x891664
+00620e2f  MOV dword ptr [ESP + 0x60],0x0
+00620e37  MOV dword ptr [ESP + 0x28],ECX
+00620e3b  MOV dword ptr [ESP + 0x2c],EDX
+00620e3f  MOV dword ptr [ESP + 0x30],EAX
+00620e43  CALL 0x005cc240
+00620e48  MOV dword ptr [EDI],EAX
+00620e4a  MOV ECX,dword ptr [ESI + 0x8]
+00620e4d  MOV EDX,dword ptr [ESI + 0xc]
+00620e50  MOV EDI,dword ptr [ESP + 0x28]
+00620e54  MOV EBX,dword ptr [ESP + 0x2c]
+00620e58  MOV EBP,dword ptr [ESP + 0x30]
+00620e5c  LEA EAX,[ESP + 0x18]
+00620e60  PUSH EAX
+00620e61  MOV dword ptr [ESP + 0x24],ECX
+00620e65  MOV dword ptr [ESP + 0x20],EDX
+00620e69  CALL 0x00405b70
+00620e6e  MOV ECX,dword ptr [ESP + 0x1c]
+00620e72  MOV EDX,dword ptr [ESP + 0x20]
+00620e76  XOR EAX,EAX
+00620e78  MOV dword ptr [ESP + 0x3c],EAX
+00620e7c  MOV dword ptr [ESP + 0x44],EAX
+00620e80  MOV EAX,dword ptr [ESP + 0x24]
+00620e84  MOV dword ptr [ESP + 0x38],ECX
+00620e88  ADD ESP,0x8
+00620e8b  LEA ECX,[ESP + 0x30]
+00620e8f  MOV dword ptr [ESP + 0x38],0x24
+00620e97  MOV dword ptr [ESP + 0x40],EDI
+00620e9b  MOV dword ptr [ESP + 0x44],EBX
+00620e9f  MOV dword ptr [ESP + 0x48],EBP
+00620ea3  MOV dword ptr [ESP + 0x4c],EDX
+00620ea7  MOV dword ptr [ESP + 0x50],EAX
+00620eab  CALL 0x00654af0
+00620eb0  PUSH 0x41a00000
+00620eb5  LEA ECX,[ESP + 0x24]
+00620eb9  PUSH ECX
+00620eba  MOV ECX,dword ptr [0x0091e00c]
+00620ec0  CALL 0x005e4850
+00620ec5  MOV ECX,dword ptr [ESP + 0x50]
+00620ec9  POP EDI
+00620eca  MOV dword ptr [ESI],0x8a66f8
+00620ed0  POP ESI
+00620ed1  POP EBP
+00620ed2  MOV dword ptr FS:[0x0],ECX
+00620ed9  POP EBX
+00620eda  ADD ESP,0x4c
+00620edd  RET

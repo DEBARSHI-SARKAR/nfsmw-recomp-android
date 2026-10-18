@@ -1,0 +1,17 @@
+005ec8c0  MOV EAX,dword ptr [ESP + 0xc]
+005ec8c4  PUSH ESI
+005ec8c5  MOV ESI,dword ptr [ESP + 0xc]
+005ec8c9  PUSH EDI
+005ec8ca  MOV EDI,dword ptr [ESP + 0xc]
+005ec8ce  PUSH EAX
+005ec8cf  PUSH ECX
+005ec8d0  MOV ECX,dword ptr [ESP + 0x1c]
+005ec8d4  PUSH ECX
+005ec8d5  PUSH ESI
+005ec8d6  PUSH EDI
+005ec8d7  CALL 0x005e7a30
+005ec8dc  ADD ESP,0x14
+005ec8df  LEA EAX,[EDI + ESI*0x4]
+005ec8e2  POP EDI
+005ec8e3  POP ESI
+005ec8e4  RET 0xc

@@ -1,0 +1,20 @@
+0082d700  PUSH EBP
+0082d701  MOV EBP,ESP
+0082d703  MOV EAX,[0x009c2980]
+0082d708  MOV ECX,dword ptr [EBP + 0x10]
+0082d70b  MOV DX,word ptr [EBP + 0x14]
+0082d70f  PUSH ESI
+0082d710  MOV ESI,dword ptr [EBP + 0x8]
+0082d713  MOV dword ptr [ESI + 0x24],ECX
+0082d716  MOV ECX,dword ptr [ESI + 0x12c]
+0082d71c  MOV dword ptr [ESI + 0x20],EAX
+0082d71f  MOV word ptr [ESI + 0x2c],DX
+0082d723  MOV EAX,dword ptr [ECX]
+0082d725  PUSH 0x0
+0082d727  CALL dword ptr [EAX + 0x3c]
+0082d72a  MOVSX CX,byte ptr [EBP + 0xc]
+0082d72f  MOV word ptr [ESI + 0x28],AX
+0082d733  MOV word ptr [ESI + 0x2a],CX
+0082d737  POP ESI
+0082d738  POP EBP
+0082d739  RET

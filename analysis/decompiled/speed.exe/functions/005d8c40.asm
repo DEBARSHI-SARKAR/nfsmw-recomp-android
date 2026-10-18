@@ -1,0 +1,15 @@
+005d8c40  PUSH 0x14
+005d8c42  CALL 0x00652ad0
+005d8c47  XOR ECX,ECX
+005d8c49  ADD ESP,0x4
+005d8c4c  CMP EAX,ECX
+005d8c4e  JZ 0x005d8c65
+005d8c50  MOV EDX,dword ptr [ESP + 0x4]
+005d8c54  MOV dword ptr [EAX],EDX
+005d8c56  MOV dword ptr [EAX + 0x4],ECX
+005d8c59  MOV dword ptr [EAX + 0x8],ECX
+005d8c5c  MOV dword ptr [EAX + 0xc],ECX
+005d8c5f  MOV dword ptr [EAX + 0x10],ECX
+005d8c62  RET 0x4
+005d8c65  XOR EAX,EAX
+005d8c67  RET 0x4

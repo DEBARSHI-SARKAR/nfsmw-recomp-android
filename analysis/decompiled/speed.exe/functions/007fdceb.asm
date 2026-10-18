@@ -1,0 +1,58 @@
+007fdceb  PUSH EBP
+007fdcec  MOV EBP,ESP
+007fdcee  MOV EAX,dword ptr [EBP + 0xc]
+007fdcf1  MOV EDX,dword ptr [EBP + 0x8]
+007fdcf4  SUB EAX,EDX
+007fdcf6  JNS 0x007fdcff
+007fdcf8  MOV EAX,EDX
+007fdcfa  MOV EDX,dword ptr [EBP + 0xc]
+007fdcfd  SUB EAX,EDX
+007fdcff  CMP EAX,0x1
+007fdd02  JNZ 0x007fdd26
+007fdd04  MOV EAX,dword ptr [EBP + 0x18]
+007fdd07  LEA EAX,[EAX*0x8 + 0x90a378]
+007fdd0e  PUSH EAX
+007fdd0f  PUSH 0x8
+007fdd11  PUSH 0x8
+007fdd13  PUSH 0x1
+007fdd15  PUSH dword ptr [EBP + 0x14]
+007fdd18  PUSH dword ptr [EBP + 0x10]
+007fdd1b  PUSH EDX
+007fdd1c  CALL 0x007fdbf5
+007fdd21  ADD ESP,0x1c
+007fdd24  POP EBP
+007fdd25  RET
+007fdd26  MOV ECX,dword ptr [EBP + 0x14]
+007fdd29  CMP EAX,ECX
+007fdd2b  JNZ 0x007fdd40
+007fdd2d  MOV EAX,dword ptr [EBP + 0x1c]
+007fdd30  LEA EAX,[EAX*0x8 + 0x90a378]
+007fdd37  PUSH EAX
+007fdd38  PUSH 0x8
+007fdd3a  PUSH 0x8
+007fdd3c  PUSH ECX
+007fdd3d  PUSH ECX
+007fdd3e  JMP 0x007fdd18
+007fdd40  PUSH ESI
+007fdd41  LEA ESI,[ECX + -0x1]
+007fdd44  CMP EAX,ESI
+007fdd46  JNZ 0x007fdd4b
+007fdd48  DEC EDX
+007fdd49  JMP 0x007fdd52
+007fdd4b  LEA ESI,[ECX + 0x1]
+007fdd4e  CMP EAX,ESI
+007fdd50  JNZ 0x007fdd75
+007fdd52  MOV EAX,dword ptr [EBP + 0x1c]
+007fdd55  LEA EAX,[EAX*0x8 + 0x90a378]
+007fdd5c  PUSH EAX
+007fdd5d  MOV EAX,dword ptr [EBP + 0x18]
+007fdd60  LEA EAX,[EAX*0x8 + 0x90a378]
+007fdd67  PUSH EAX
+007fdd68  PUSH ECX
+007fdd69  PUSH dword ptr [EBP + 0x10]
+007fdd6c  PUSH EDX
+007fdd6d  CALL 0x007fdcb3
+007fdd72  ADD ESP,0x14
+007fdd75  POP ESI
+007fdd76  POP EBP
+007fdd77  RET

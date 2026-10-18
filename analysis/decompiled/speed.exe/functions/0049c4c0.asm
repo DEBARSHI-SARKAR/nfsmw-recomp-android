@@ -1,0 +1,28 @@
+0049c4c0  FLD float ptr [ESP + 0xc]
+0049c4c4  FSUB float ptr [ESP + 0x8]
+0049c4c8  FLD float ptr [ESP + 0x4]
+0049c4cc  FCOMP float ptr [ESP + 0x8]
+0049c4d0  FNSTSW AX
+0049c4d2  TEST AH,0x5
+0049c4d5  JP 0x0049c4eb
+0049c4d7  FLD float ptr [ESP + 0x8]
+0049c4db  FSUB float ptr [ESP + 0x4]
+0049c4df  FDIV ST0,ST1
+0049c4e1  CALL 0x007c4b80
+0049c4e6  FSTP ST0
+0049c4e8  RET 0xc
+0049c4eb  FLD float ptr [ESP + 0x4]
+0049c4ef  FCOMP float ptr [ESP + 0xc]
+0049c4f3  FNSTSW AX
+0049c4f5  TEST AH,0x1
+0049c4f8  JNZ 0x0049c50f
+0049c4fa  FLD float ptr [ESP + 0x4]
+0049c4fe  FSUB float ptr [ESP + 0xc]
+0049c502  FDIV ST0,ST1
+0049c504  CALL 0x007c4b80
+0049c509  FSTP ST0
+0049c50b  INC EAX
+0049c50c  RET 0xc
+0049c50f  XOR EAX,EAX
+0049c511  FSTP ST0
+0049c513  RET 0xc

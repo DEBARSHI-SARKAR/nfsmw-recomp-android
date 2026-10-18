@@ -1,0 +1,29 @@
+004b3e60  PUSH ESI
+004b3e61  MOV ESI,dword ptr [ESP + 0x8]
+004b3e65  MOV EAX,dword ptr [ESI]
+004b3e67  PUSH EDI
+004b3e68  MOV EDI,ECX
+004b3e6a  MOV ECX,ESI
+004b3e6c  CALL dword ptr [EAX + 0x4]
+004b3e6f  MOV EAX,dword ptr [EAX]
+004b3e71  SAR EAX,0x4
+004b3e74  AND EAX,0xfff
+004b3e79  CMP EAX,0x7
+004b3e7c  JA 0x004b3ea0
+004b3e7e  JMP dword ptr [EAX*0x4 + 0x4b3ea8]
+004b3e85  MOV dword ptr [EDI + 0x28],ESI
+004b3e88  POP EDI
+004b3e89  POP ESI
+004b3e8a  RET 0x4
+004b3e8d  MOV dword ptr [EDI + 0x2c],ESI
+004b3e90  POP EDI
+004b3e91  POP ESI
+004b3e92  RET 0x4
+004b3e95  MOV dword ptr [EDI + 0x30],ESI
+004b3e98  POP EDI
+004b3e99  POP ESI
+004b3e9a  RET 0x4
+004b3e9d  MOV dword ptr [EDI + 0x34],ESI
+004b3ea0  POP EDI
+004b3ea1  POP ESI
+004b3ea2  RET 0x4

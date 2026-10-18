@@ -1,0 +1,91 @@
+// keypad_layout.h - the SDL_Scancode values the on-screen controls spell
+// out, and which of them are the latching modifiers. The split keypad's
+// tables and geometry now live in the built-in "keys" controls layout
+// (host/controls/builtin_layouts.cpp). Pure: no SDL, no GPU.
+#pragma once
+
+// SDL_Scancode values, spelled out so this file needs no SDL header.
+// keypad_tests.cpp asserts they match SDL's enumerators.
+enum KeypadScan {
+    kScanA = 4,
+    kScanB,
+    kScanC,
+    kScanD,
+    kScanE,
+    kScanF,
+    kScanG,
+    kScanH,
+    kScanI,
+    kScanJ,
+    kScanK,
+    kScanL,
+    kScanM,
+    kScanN,
+    kScanO,
+    kScanP,
+    kScanQ,
+    kScanR,
+    kScanS,
+    kScanT,
+    kScanU,
+    kScanV,
+    kScanW,
+    kScanX,
+    kScanY,
+    kScanZ, // 29
+    kScan1 = 30,
+    kScan2,
+    kScan3,
+    kScan4,
+    kScan5,
+    kScan6,
+    kScan7,
+    kScan8,
+    kScan9,
+    kScan0, // 39
+    kScanReturn = 40,
+    kScanEscape = 41,
+    kScanBackspace = 42,
+    kScanTab = 43,
+    kScanSpace = 44,
+    kScanMinus = 45,
+    kScanEquals = 46,
+    kScanLeftBracket = 47,
+    kScanRightBracket = 48,
+    kScanBackslash = 49,
+    kScanSemicolon = 51,
+    kScanApostrophe = 52,
+    kScanGrave = 53,
+    kScanComma = 54,
+    kScanPeriod = 55,
+    kScanSlash = 56,
+    kScanF1 = 58,
+    kScanF2,
+    kScanF3,
+    kScanF4,
+    kScanF5,
+    kScanF6,
+    kScanF7,
+    kScanF8,
+    kScanF9,
+    kScanF10,
+    kScanF11,
+    kScanF12, // 69
+    kScanInsert = 73,
+    kScanHome = 74,
+    kScanPageUp = 75,
+    kScanDelete = 76,
+    kScanEnd = 77,
+    kScanPageDown = 78,
+    kScanRight = 79,
+    kScanLeft = 80,
+    kScanDown = 81,
+    kScanUp = 82,
+    kScanLCtrl = 224,
+    kScanLShift = 225,
+    kScanLAlt = 226,
+};
+
+bool keypad_is_modifier(int scancode);
+// The lit bit for a modifier scancode (0 for other keys).
+unsigned keypad_modifier_bit(int scancode);

@@ -1,0 +1,18 @@
+004f5200  PUSH ESI
+004f5201  MOV ESI,ECX
+004f5203  LEA ECX,[ESI + 0x4]
+004f5206  CALL 0x004eaff0
+004f520b  MOV EAX,dword ptr [ESP + 0x8]
+004f520f  MOV ECX,dword ptr [ESP + 0xc]
+004f5213  MOV dword ptr [ESI],0x8992e4
+004f5219  FLD float ptr [EAX + 0x4]
+004f521c  FLD float ptr [EAX + 0x8]
+004f521f  MOV EAX,dword ptr [EAX]
+004f5221  FXCH
+004f5223  MOV dword ptr [ESI + 0x10],EAX
+004f5226  FSTP float ptr [ESI + 0x14]
+004f5229  MOV EAX,ESI
+004f522b  FSTP float ptr [ESI + 0x18]
+004f522e  MOV dword ptr [ESI + 0x20],ECX
+004f5231  POP ESI
+004f5232  RET 0x8

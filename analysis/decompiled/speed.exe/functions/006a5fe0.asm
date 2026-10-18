@@ -1,0 +1,12 @@
+006a5fe0  PUSH 0x0
+006a5fe2  PUSH 0xc
+006a5fe4  MOV ECX,0x925b30
+006a5fe9  CALL 0x005d29d0
+006a5fee  TEST EAX,EAX
+006a5ff0  JZ 0x006a5ff4
+006a5ff2  MOV dword ptr [EAX],EAX
+006a5ff4  LEA ECX,[EAX + 0x4]
+006a5ff7  TEST ECX,ECX
+006a5ff9  JZ 0x006a5ffd
+006a5ffb  MOV dword ptr [ECX],EAX
+006a5ffd  RET

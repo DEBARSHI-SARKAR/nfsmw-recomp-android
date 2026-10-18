@@ -1,0 +1,29 @@
+004b8a90  PUSH EBX
+004b8a91  PUSH EBP
+004b8a92  PUSH ESI
+004b8a93  MOV ESI,ECX
+004b8a95  XOR EBP,EBP
+004b8a97  PUSH EDI
+004b8a98  MOV dword ptr [ESI + 0x8],EBP
+004b8a9b  MOV dword ptr [ESI + 0xc],EBP
+004b8a9e  MOV dword ptr [ESI + 0x10],EBP
+004b8aa1  MOV dword ptr [ESI + 0x14],0x890978
+004b8aa8  PUSH 0x890978
+004b8aad  MOV dword ptr [ESI],0xffffffff
+004b8ab3  CALL 0x004522f0
+004b8ab8  PUSH 0x890978
+004b8abd  MOV EDI,EAX
+004b8abf  MOV EBX,EDX
+004b8ac1  CALL 0x004519d0
+004b8ac6  ADD ESP,0x8
+004b8ac9  MOV dword ptr [ESI + 0x8],EDI
+004b8acc  MOV dword ptr [ESI + 0xc],EBX
+004b8acf  MOV dword ptr [ESI + 0x10],EAX
+004b8ad2  POP EDI
+004b8ad3  MOV dword ptr [ESI + 0x14],0x890978
+004b8ada  MOV dword ptr [ESI + 0x18],EBP
+004b8add  MOV EAX,ESI
+004b8adf  POP ESI
+004b8ae0  POP EBP
+004b8ae1  POP EBX
+004b8ae2  RET

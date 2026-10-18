@@ -1,0 +1,24 @@
+007c79c0  PUSH EBP
+007c79c1  MOV EBP,ESP
+007c79c3  PUSH ECX
+007c79c4  MOV dword ptr [EBP + -0x4],0x1
+007c79cb  MOV EAX,dword ptr [EBP + 0x10]
+007c79ce  MOV ECX,dword ptr [EBP + 0x10]
+007c79d1  SUB ECX,0x1
+007c79d4  MOV dword ptr [EBP + 0x10],ECX
+007c79d7  TEST EAX,EAX
+007c79d9  JZ 0x007c79fb
+007c79db  MOVZX EDX,byte ptr [EBP + 0xc]
+007c79df  MOV EAX,dword ptr [EBP + 0x8]
+007c79e2  MOVZX ECX,byte ptr [EAX]
+007c79e5  MOV EAX,dword ptr [EBP + 0x8]
+007c79e8  ADD EAX,0x1
+007c79eb  MOV dword ptr [EBP + 0x8],EAX
+007c79ee  CMP ECX,EDX
+007c79f0  JZ 0x007c79f9
+007c79f2  MOV dword ptr [EBP + -0x4],0x0
+007c79f9  JMP 0x007c79cb
+007c79fb  MOV EAX,dword ptr [EBP + -0x4]
+007c79fe  MOV ESP,EBP
+007c7a00  POP EBP
+007c7a01  RET

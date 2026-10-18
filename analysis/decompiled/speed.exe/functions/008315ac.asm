@@ -1,0 +1,15 @@
+008315ac  PUSH EBP
+008315ad  MOV EBP,ESP
+008315af  SUB ESP,0xc
+008315b2  MOV ECX,dword ptr [0x009c29d4]
+008315b8  XOR EAX,EAX
+008315ba  LEA EDX,[EBP + -0xc]
+008315bd  PUSH EDX
+008315be  PUSH dword ptr [EBP + 0x8]
+008315c1  MOV dword ptr [EBP + -0xc],EAX
+008315c4  MOV dword ptr [EBP + -0x8],EAX
+008315c7  MOV dword ptr [EBP + -0x4],EAX
+008315ca  MOV EAX,dword ptr [ECX]
+008315cc  CALL dword ptr [EAX]
+008315ce  LEAVE
+008315cf  RET 0x14

@@ -1,0 +1,19 @@
+00668520  PUSH ECX
+00668521  MOVSX EAX,word ptr [ECX + 0x10]
+00668525  MOV dword ptr [ESP],EAX
+00668528  MOV EAX,dword ptr [ESP + 0x8]
+0066852c  FILD dword ptr [ESP]
+0066852f  FMUL float ptr [0x00890d60]
+00668535  FSTP float ptr [EAX]
+00668537  MOVSX EDX,word ptr [ECX + 0x12]
+0066853b  MOV dword ptr [ESP + 0x8],EDX
+0066853f  FILD dword ptr [ESP + 0x8]
+00668543  FMUL float ptr [0x00890d60]
+00668549  FSTP float ptr [EAX + 0x4]
+0066854c  MOVSX ECX,word ptr [ECX + 0x14]
+00668550  MOV dword ptr [ESP + 0x8],ECX
+00668554  FILD dword ptr [ESP + 0x8]
+00668558  FMUL float ptr [0x00890d60]
+0066855e  FSTP float ptr [EAX + 0x8]
+00668561  POP ECX
+00668562  RET 0x4

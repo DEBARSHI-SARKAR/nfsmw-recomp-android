@@ -1,0 +1,43 @@
+00771f90  MOV EAX,dword ptr [ECX]
+00771f92  MOV DL,byte ptr [EAX + 0xf]
+00771f95  TEST DL,DL
+00771f97  JZ 0x00771f9f
+00771f99  MOV EAX,dword ptr [EAX + 0x8]
+00771f9c  MOV dword ptr [ECX],EAX
+00771f9e  RET
+00771f9f  MOV EDX,dword ptr [EAX]
+00771fa1  PUSH EBX
+00771fa2  MOV BL,byte ptr [EDX + 0xf]
+00771fa5  TEST BL,BL
+00771fa7  JNZ 0x00771fc3
+00771fa9  MOV EAX,dword ptr [EDX + 0x8]
+00771fac  MOV BL,byte ptr [EAX + 0xf]
+00771faf  TEST BL,BL
+00771fb1  JNZ 0x00771fbf
+00771fb3  MOV EDX,EAX
+00771fb5  MOV EAX,dword ptr [EDX + 0x8]
+00771fb8  MOV BL,byte ptr [EAX + 0xf]
+00771fbb  TEST BL,BL
+00771fbd  JZ 0x00771fb3
+00771fbf  MOV dword ptr [ECX],EDX
+00771fc1  POP EBX
+00771fc2  RET
+00771fc3  MOV EAX,dword ptr [EAX + 0x4]
+00771fc6  MOV DL,byte ptr [EAX + 0xf]
+00771fc9  TEST DL,DL
+00771fcb  JNZ 0x00771feb
+00771fcd  LEA ECX,[ECX]
+00771fd0  MOV EDX,dword ptr [ECX]
+00771fd2  CMP EDX,dword ptr [EAX]
+00771fd4  JNZ 0x00771fe2
+00771fd6  MOV dword ptr [ECX],EAX
+00771fd8  MOV EAX,dword ptr [EAX + 0x4]
+00771fdb  MOV DL,byte ptr [EAX + 0xf]
+00771fde  TEST DL,DL
+00771fe0  JZ 0x00771fd0
+00771fe2  MOV DL,byte ptr [EAX + 0xf]
+00771fe5  TEST DL,DL
+00771fe7  JNZ 0x00771feb
+00771fe9  MOV dword ptr [ECX],EAX
+00771feb  POP EBX
+00771fec  RET

@@ -1,0 +1,299 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/cmake/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "macos",
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      }
+    },
+    {
+      "name": "linux",
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    },
+    {
+      "name": "windows",
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_EXE_LINKER_FLAGS": "-fuse-ld=lld -Wl,/map",
+        "CMAKE_SHARED_LINKER_FLAGS": "-fuse-ld=lld",
+        "CMAKE_MODULE_LINKER_FLAGS": "-fuse-ld=lld"
+      }
+    },
+    {
+      "name": "macos-debug",
+      "inherits": "macos",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-debug",
+      "inherits": "linux",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "windows-debug",
+      "inherits": "windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "macos-stub",
+      "inherits": "macos",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "linux-stub",
+      "inherits": "linux",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "windows-stub",
+      "inherits": "windows",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "windows-cross",
+      "inherits": "base",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/llvm-mingw.cmake",
+      "cacheVariables": {
+        "RECOMP_VIDEO": "ON"
+      }
+    },
+    {
+      "name": "windows-cross-stub",
+      "inherits": "windows-cross",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "web",
+      "inherits": "base",
+      "toolchainFile": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+      "cacheVariables": {
+        "RECOMP_VIDEO": "OFF",
+        "CMAKE_C_FLAGS": "-pthread",
+        "CMAKE_CXX_FLAGS": "-pthread",
+        "CMAKE_EXE_LINKER_FLAGS": "-pthread"
+      }
+    },
+    {
+      "name": "web-stub",
+      "inherits": "web",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "android",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build/cmake/android",
+      "toolchainFile": "$env{ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake",
+      "cacheVariables": {
+        "ANDROID_ABI": "arm64-v8a",
+        "ANDROID_PLATFORM": "android-29",
+        "ANDROID_STL": "c++_static",
+        "ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES": "ON",
+        "POP_TRANSLATE": "ON"
+      }
+    },
+    {
+      "name": "android-stub",
+      "inherits": "android",
+      "binaryDir": "${sourceDir}/build/cmake/android-stub",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    },
+    {
+      "name": "ios",
+      "generator": "Xcode",
+      "binaryDir": "${sourceDir}/build/cmake/ios",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "iOS",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "17.0",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_BUILD_TYPE": "Release",
+        "POP_TRANSLATE": "ON"
+      }
+    },
+    {
+      "name": "ios-stub",
+      "inherits": "ios",
+      "binaryDir": "${sourceDir}/build/cmake/ios-stub",
+      "cacheVariables": {
+        "POP_TRANSLATE": "STUB"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "macos",
+      "configurePreset": "macos"
+    },
+    {
+      "name": "linux",
+      "configurePreset": "linux"
+    },
+    {
+      "name": "windows",
+      "configurePreset": "windows"
+    },
+    {
+      "name": "macos-debug",
+      "configurePreset": "macos-debug"
+    },
+    {
+      "name": "linux-debug",
+      "configurePreset": "linux-debug"
+    },
+    {
+      "name": "windows-debug",
+      "configurePreset": "windows-debug"
+    },
+    {
+      "name": "macos-stub",
+      "configurePreset": "macos-stub"
+    },
+    {
+      "name": "linux-stub",
+      "configurePreset": "linux-stub"
+    },
+    {
+      "name": "windows-stub",
+      "configurePreset": "windows-stub"
+    },
+    {
+      "name": "android",
+      "configurePreset": "android"
+    },
+    {
+      "name": "android-stub",
+      "configurePreset": "android-stub"
+    },
+    {
+      "name": "ios",
+      "configurePreset": "ios",
+      "configuration": "Release"
+    },
+    {
+      "name": "ios-stub",
+      "configurePreset": "ios-stub",
+      "configuration": "Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "macos",
+      "configurePreset": "macos",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "linux",
+      "configurePreset": "linux",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "windows",
+      "configurePreset": "windows",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "macos-debug",
+      "configurePreset": "macos-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "linux-debug",
+      "configurePreset": "linux-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "windows-debug",
+      "configurePreset": "windows-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "macos-stub",
+      "configurePreset": "macos-stub",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "linux-stub",
+      "configurePreset": "linux-stub",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "windows-stub",
+      "configurePreset": "windows-stub",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

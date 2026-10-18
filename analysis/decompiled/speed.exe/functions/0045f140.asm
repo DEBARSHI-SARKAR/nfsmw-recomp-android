@@ -1,0 +1,7 @@
+0045f140  MOV ECX,dword ptr [ESP + 0x4]
+0045f144  MOV EAX,dword ptr [ECX + 0x18]
+0045f147  SUB EAX,dword ptr [ECX + 0x2c]
+0045f14a  NEG EAX
+0045f14c  SBB EAX,EAX
+0045f14e  INC EAX
+0045f14f  RET

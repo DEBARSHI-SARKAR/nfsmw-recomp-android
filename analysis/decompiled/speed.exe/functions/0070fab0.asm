@@ -1,0 +1,23 @@
+0070fab0  PUSH -0x1
+0070fab2  PUSH 0x87fde8
+0070fab7  MOV EAX,FS:[0x0]
+0070fabd  PUSH EAX
+0070fabe  MOV dword ptr FS:[0x0],ESP
+0070fac5  SUB ESP,0x44
+0070fac8  PUSH 0x11
+0070faca  PUSH 0x8b25c4
+0070facf  LEA ECX,[ESP + 0x8]
+0070fad3  MOV dword ptr [ESP + 0x20],0xf
+0070fadb  MOV dword ptr [ESP + 0x1c],0x0
+0070fae3  MOV byte ptr [ESP + 0xc],0x0
+0070fae8  CALL 0x004303b0
+0070faed  LEA EAX,[ESP]
+0070faf0  PUSH EAX
+0070faf1  LEA ECX,[ESP + 0x20]
+0070faf5  MOV dword ptr [ESP + 0x50],0x0
+0070fafd  CALL 0x00432d50
+0070fb02  PUSH 0x8c9ca8
+0070fb07  LEA ECX,[ESP + 0x20]
+0070fb0b  PUSH ECX
+0070fb0c  MOV dword ptr [ESP + 0x24],0x8bf290
+0070fb14  CALL 0x007c56b0

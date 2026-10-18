@@ -1,0 +1,501 @@
+00827d27  PUSH EBP
+00827d28  MOV EBP,ESP
+00827d2a  SUB ESP,0x30
+00827d2d  PUSH EBX
+00827d2e  LEA EBX,[EDI + EAX*0x4 + 0x684]
+00827d35  PUSH ESI
+00827d36  LEA EAX,[EBP + -0x30]
+00827d39  PUSH EAX
+00827d3a  LEA ESI,[EDI + 0x114]
+00827d40  CALL 0x00827c9b
+00827d45  MOV EAX,dword ptr [EBP + 0x8]
+00827d48  TEST EAX,EAX
+00827d4a  POP ECX
+00827d4b  JLE 0x008283fb
+00827d51  FLD float ptr [EBP + -0x4]
+00827d54  FLD float ptr [EBP + -0x8]
+00827d57  FLD float ptr [EBP + -0xc]
+00827d5a  FLD float ptr [EBP + -0x10]
+00827d5d  FLD float ptr [EBP + -0x14]
+00827d60  FLD float ptr [EBP + -0x18]
+00827d63  FLD ST2
+00827d65  FMUL float ptr [EDI + 0x164]
+00827d6b  FLD float ptr [EBP + -0x20]
+00827d6e  FMUL float ptr [EDI + 0x154]
+00827d74  FADDP
+00827d76  FLD float ptr [EBP + -0x30]
+00827d79  FMUL float ptr [EDI + 0x144]
+00827d7f  FADDP
+00827d81  FLD ST4
+00827d83  FMUL float ptr [EDI + 0x168]
+00827d89  FADDP
+00827d8b  FLD float ptr [EBP + -0x1c]
+00827d8e  FMUL float ptr [EDI + 0x158]
+00827d94  FADDP
+00827d96  FLD float ptr [EBP + -0x2c]
+00827d99  FMUL float ptr [EDI + 0x148]
+00827d9f  FADDP
+00827da1  FLD ST6
+00827da3  FMUL float ptr [EDI + 0x170]
+00827da9  FADDP
+00827dab  FLD ST5
+00827dad  FMUL float ptr [EDI + 0x16c]
+00827db3  FADDP
+00827db5  FLD ST1
+00827db7  FMUL float ptr [EDI + 0x15c]
+00827dbd  FADDP
+00827dbf  FLD float ptr [EBP + -0x28]
+00827dc2  FMUL float ptr [EDI + 0x14c]
+00827dc8  FADDP
+00827dca  FLD ST2
+00827dcc  FMUL float ptr [EDI + 0x160]
+00827dd2  FADDP
+00827dd4  FLD float ptr [EBP + -0x24]
+00827dd7  FMUL float ptr [EDI + 0x150]
+00827ddd  FADDP
+00827ddf  FADD float ptr [EBX]
+00827de1  FST float ptr [EBP + 0x8]
+00827de4  FST float ptr [EDI + 0x170]
+00827dea  FSTP float ptr [EBX]
+00827dec  FLD ST3
+00827dee  FMUL float ptr [EDI + 0x164]
+00827df4  FLD float ptr [EBP + -0x1c]
+00827df7  FMUL float ptr [EDI + 0x154]
+00827dfd  FADDP
+00827dff  FLD float ptr [EBP + -0x2c]
+00827e02  FMUL float ptr [EDI + 0x144]
+00827e08  FADDP
+00827e0a  FLD ST5
+00827e0c  FMUL float ptr [EDI + 0x168]
+00827e12  FADDP
+00827e14  FLD ST1
+00827e16  FMUL float ptr [EDI + 0x158]
+00827e1c  FADDP
+00827e1e  FLD float ptr [EBP + -0x28]
+00827e21  FMUL float ptr [EDI + 0x148]
+00827e27  FADDP
+00827e29  FLD ST6
+00827e2b  FMUL float ptr [EDI + 0x16c]
+00827e31  FADDP
+00827e33  FLD ST2
+00827e35  FMUL float ptr [EDI + 0x15c]
+00827e3b  FADDP
+00827e3d  FLD float ptr [EBP + -0x24]
+00827e40  FMUL float ptr [EDI + 0x14c]
+00827e46  FADDP
+00827e48  FLD float ptr [EBP + -0x30]
+00827e4b  FMUL float ptr [EDI + 0x170]
+00827e51  FADDP
+00827e53  FLD ST3
+00827e55  FMUL float ptr [EDI + 0x160]
+00827e5b  FADDP
+00827e5d  FLD float ptr [EBP + -0x20]
+00827e60  FMUL float ptr [EDI + 0x150]
+00827e66  FADDP
+00827e68  FADD float ptr [EBX + 0x4]
+00827e6b  FST float ptr [EBP + 0x8]
+00827e6e  FST float ptr [EDI + 0x16c]
+00827e74  FSTP float ptr [EBX + 0x4]
+00827e77  FLD ST4
+00827e79  FMUL float ptr [EDI + 0x164]
+00827e7f  FLD ST1
+00827e81  FMUL float ptr [EDI + 0x154]
+00827e87  FADDP
+00827e89  FLD float ptr [EBP + -0x28]
+00827e8c  FMUL float ptr [EDI + 0x144]
+00827e92  FADDP
+00827e94  FLD ST6
+00827e96  FMUL float ptr [EDI + 0x168]
+00827e9c  FADDP
+00827e9e  FLD ST2
+00827ea0  FMUL float ptr [EDI + 0x158]
+00827ea6  FADDP
+00827ea8  FLD float ptr [EBP + -0x24]
+00827eab  FMUL float ptr [EDI + 0x148]
+00827eb1  FADDP
+00827eb3  FLD ST3
+00827eb5  FMUL float ptr [EDI + 0x15c]
+00827ebb  FADDP
+00827ebd  FLD float ptr [EBP + -0x20]
+00827ec0  FMUL float ptr [EDI + 0x14c]
+00827ec6  FADDP
+00827ec8  FLD float ptr [EBP + -0x2c]
+00827ecb  FMUL float ptr [EDI + 0x170]
+00827ed1  FADDP
+00827ed3  FLD float ptr [EBP + -0x30]
+00827ed6  FMUL float ptr [EDI + 0x16c]
+00827edc  FADDP
+00827ede  FLD ST4
+00827ee0  FMUL float ptr [EDI + 0x160]
+00827ee6  FADDP
+00827ee8  FLD float ptr [EBP + -0x1c]
+00827eeb  FMUL float ptr [EDI + 0x150]
+00827ef1  FADDP
+00827ef3  FADD float ptr [EBX + 0x8]
+00827ef6  FST float ptr [EBP + 0x8]
+00827ef9  FST float ptr [EDI + 0x168]
+00827eff  FSTP float ptr [EBX + 0x8]
+00827f02  FLD ST5
+00827f04  FMUL float ptr [EDI + 0x164]
+00827f0a  FLD ST2
+00827f0c  FMUL float ptr [EDI + 0x154]
+00827f12  FADDP
+00827f14  FLD float ptr [EBP + -0x24]
+00827f17  FMUL float ptr [EDI + 0x144]
+00827f1d  FADDP
+00827f1f  FLD ST3
+00827f21  FMUL float ptr [EDI + 0x158]
+00827f27  FADDP
+00827f29  FLD float ptr [EBP + -0x20]
+00827f2c  FMUL float ptr [EDI + 0x148]
+00827f32  FADDP
+00827f34  FLD float ptr [EBP + -0x30]
+00827f37  FMUL float ptr [EDI + 0x168]
+00827f3d  FADDP
+00827f3f  FLD ST4
+00827f41  FMUL float ptr [EDI + 0x15c]
+00827f47  FADDP
+00827f49  FLD float ptr [EBP + -0x1c]
+00827f4c  FMUL float ptr [EDI + 0x14c]
+00827f52  FADDP
+00827f54  FLD float ptr [EBP + -0x28]
+00827f57  FMUL float ptr [EDI + 0x170]
+00827f5d  FADDP
+00827f5f  FLD float ptr [EBP + -0x2c]
+00827f62  FMUL float ptr [EDI + 0x16c]
+00827f68  FADDP
+00827f6a  FLD ST5
+00827f6c  FMUL float ptr [EDI + 0x160]
+00827f72  FADDP
+00827f74  FLD ST1
+00827f76  FMUL float ptr [EDI + 0x150]
+00827f7c  FADDP
+00827f7e  FADD float ptr [EBX + 0xc]
+00827f81  FST float ptr [EBP + 0x8]
+00827f84  FST float ptr [EDI + 0x164]
+00827f8a  FSTP float ptr [EBX + 0xc]
+00827f8d  FLD ST2
+00827f8f  FMUL float ptr [EDI + 0x154]
+00827f95  FLD float ptr [EBP + -0x20]
+00827f98  FMUL float ptr [EDI + 0x144]
+00827f9e  FADDP
+00827fa0  FLD float ptr [EBP + -0x30]
+00827fa3  FMUL float ptr [EDI + 0x164]
+00827fa9  FADDP
+00827fab  FLD ST4
+00827fad  FMUL float ptr [EDI + 0x158]
+00827fb3  FADDP
+00827fb5  FLD float ptr [EBP + -0x1c]
+00827fb8  FMUL float ptr [EDI + 0x148]
+00827fbe  FADDP
+00827fc0  FLD float ptr [EBP + -0x2c]
+00827fc3  FMUL float ptr [EDI + 0x168]
+00827fc9  FADDP
+00827fcb  FLD ST5
+00827fcd  FMUL float ptr [EDI + 0x15c]
+00827fd3  FADDP
+00827fd5  FLD ST1
+00827fd7  FMUL float ptr [EDI + 0x14c]
+00827fdd  FADDP
+00827fdf  FLD float ptr [EBP + -0x24]
+00827fe2  FMUL float ptr [EDI + 0x170]
+00827fe8  FADDP
+00827fea  FLD float ptr [EBP + -0x28]
+00827fed  FMUL float ptr [EDI + 0x16c]
+00827ff3  FADDP
+00827ff5  FLD ST6
+00827ff7  FMUL float ptr [EDI + 0x160]
+00827ffd  FADDP
+00827fff  FLD ST2
+00828001  FMUL float ptr [EDI + 0x150]
+00828007  FADDP
+00828009  FADD float ptr [EBX + 0x10]
+0082800c  FST float ptr [EBP + 0x8]
+0082800f  FST float ptr [EDI + 0x160]
+00828015  FSTP float ptr [EBX + 0x10]
+00828018  FLD ST3
+0082801a  FMUL float ptr [EDI + 0x154]
+00828020  FLD float ptr [EBP + -0x1c]
+00828023  FMUL float ptr [EDI + 0x144]
+00828029  FADDP
+0082802b  FLD float ptr [EBP + -0x2c]
+0082802e  FMUL float ptr [EDI + 0x164]
+00828034  FADDP
+00828036  FLD ST5
+00828038  FMUL float ptr [EDI + 0x158]
+0082803e  FADDP
+00828040  FLD ST1
+00828042  FMUL float ptr [EDI + 0x148]
+00828048  FADDP
+0082804a  FLD float ptr [EBP + -0x28]
+0082804d  FMUL float ptr [EDI + 0x168]
+00828053  FADDP
+00828055  FLD ST6
+00828057  FMUL float ptr [EDI + 0x15c]
+0082805d  FADDP
+0082805f  FLD ST2
+00828061  FMUL float ptr [EDI + 0x14c]
+00828067  FADDP
+00828069  FLD float ptr [EBP + -0x20]
+0082806c  FMUL float ptr [EDI + 0x170]
+00828072  FADDP
+00828074  FLD float ptr [EBP + -0x24]
+00828077  FMUL float ptr [EDI + 0x16c]
+0082807d  FADDP
+0082807f  FLD ST3
+00828081  FMUL float ptr [EDI + 0x150]
+00828087  FADDP
+00828089  FLD float ptr [EBP + -0x30]
+0082808c  FMUL float ptr [EDI + 0x160]
+00828092  FADDP
+00828094  FADD float ptr [EBX + 0x14]
+00828097  FST float ptr [EBP + 0x8]
+0082809a  FST float ptr [EDI + 0x15c]
+008280a0  FSTP float ptr [EBX + 0x14]
+008280a3  FLD ST4
+008280a5  FMUL float ptr [EDI + 0x154]
+008280ab  FLD ST1
+008280ad  FMUL float ptr [EDI + 0x144]
+008280b3  FADDP
+008280b5  FLD float ptr [EBP + -0x28]
+008280b8  FMUL float ptr [EDI + 0x164]
+008280be  FADDP
+008280c0  FLD ST6
+008280c2  FMUL float ptr [EDI + 0x158]
+008280c8  FADDP
+008280ca  FLD ST2
+008280cc  FMUL float ptr [EDI + 0x148]
+008280d2  FADDP
+008280d4  FLD float ptr [EBP + -0x24]
+008280d7  FMUL float ptr [EDI + 0x168]
+008280dd  FADDP
+008280df  FLD ST3
+008280e1  FMUL float ptr [EDI + 0x14c]
+008280e7  FADDP
+008280e9  FLD float ptr [EBP + -0x1c]
+008280ec  FMUL float ptr [EDI + 0x170]
+008280f2  FADDP
+008280f4  FLD float ptr [EBP + -0x20]
+008280f7  FMUL float ptr [EDI + 0x16c]
+008280fd  FADDP
+008280ff  FLD float ptr [EBP + -0x30]
+00828102  FMUL float ptr [EDI + 0x15c]
+00828108  FADDP
+0082810a  FLD ST4
+0082810c  FMUL float ptr [EDI + 0x150]
+00828112  FADDP
+00828114  FLD float ptr [EBP + -0x2c]
+00828117  FMUL float ptr [EDI + 0x160]
+0082811d  FADDP
+0082811f  FADD float ptr [EBX + 0x18]
+00828122  FST float ptr [EBP + 0x8]
+00828125  FST float ptr [EDI + 0x158]
+0082812b  FSTP float ptr [EBX + 0x18]
+0082812e  FLD ST5
+00828130  FMUL float ptr [EDI + 0x154]
+00828136  FLD ST2
+00828138  FMUL float ptr [EDI + 0x144]
+0082813e  FADDP
+00828140  FLD float ptr [EBP + -0x24]
+00828143  FMUL float ptr [EDI + 0x164]
+00828149  FADDP
+0082814b  FLD ST3
+0082814d  FMUL float ptr [EDI + 0x148]
+00828153  FADDP
+00828155  FLD float ptr [EBP + -0x20]
+00828158  FMUL float ptr [EDI + 0x168]
+0082815e  FADDP
+00828160  FLD float ptr [EBP + -0x30]
+00828163  FMUL float ptr [EDI + 0x158]
+00828169  FADDP
+0082816b  FLD ST4
+0082816d  FMUL float ptr [EDI + 0x14c]
+00828173  FADDP
+00828175  FLD ST1
+00828177  FMUL float ptr [EDI + 0x170]
+0082817d  FADDP
+0082817f  FLD float ptr [EBP + -0x1c]
+00828182  FMUL float ptr [EDI + 0x16c]
+00828188  FADDP
+0082818a  FLD float ptr [EBP + -0x2c]
+0082818d  FMUL float ptr [EDI + 0x15c]
+00828193  FADDP
+00828195  FLD ST5
+00828197  FMUL float ptr [EDI + 0x150]
+0082819d  FADDP
+0082819f  FLD float ptr [EBP + -0x28]
+008281a2  FMUL float ptr [EDI + 0x160]
+008281a8  FADDP
+008281aa  FADD float ptr [EBX + 0x1c]
+008281ad  FST float ptr [EBP + 0x8]
+008281b0  FST float ptr [EDI + 0x154]
+008281b6  FSTP float ptr [EBX + 0x1c]
+008281b9  FLD ST2
+008281bb  FMUL float ptr [EDI + 0x144]
+008281c1  FLD float ptr [EBP + -0x20]
+008281c4  FMUL float ptr [EDI + 0x164]
+008281ca  FADDP
+008281cc  FLD float ptr [EBP + -0x30]
+008281cf  FMUL float ptr [EDI + 0x154]
+008281d5  FADDP
+008281d7  FLD ST4
+008281d9  FMUL float ptr [EDI + 0x148]
+008281df  FADDP
+008281e1  FLD float ptr [EBP + -0x1c]
+008281e4  FMUL float ptr [EDI + 0x168]
+008281ea  FADDP
+008281ec  FLD float ptr [EBP + -0x2c]
+008281ef  FMUL float ptr [EDI + 0x158]
+008281f5  FADDP
+008281f7  FLD ST5
+008281f9  FMUL float ptr [EDI + 0x14c]
+008281ff  FADDP
+00828201  FLD ST2
+00828203  FMUL float ptr [EDI + 0x170]
+00828209  FADDP
+0082820b  FLD ST1
+0082820d  FMUL float ptr [EDI + 0x16c]
+00828213  FADDP
+00828215  FLD float ptr [EBP + -0x28]
+00828218  FMUL float ptr [EDI + 0x15c]
+0082821e  FADDP
+00828220  FLD ST6
+00828222  FMUL float ptr [EDI + 0x150]
+00828228  FADDP
+0082822a  FLD float ptr [EBP + -0x24]
+0082822d  FMUL float ptr [EDI + 0x160]
+00828233  FADDP
+00828235  FADD float ptr [EBX + 0x20]
+00828238  FST float ptr [EBP + 0x8]
+0082823b  FST float ptr [EDI + 0x150]
+00828241  FSTP float ptr [EBX + 0x20]
+00828244  FLD ST3
+00828246  FMUL float ptr [EDI + 0x144]
+0082824c  FLD float ptr [EBP + -0x1c]
+0082824f  FMUL float ptr [EDI + 0x164]
+00828255  FADDP
+00828257  FLD float ptr [EBP + -0x2c]
+0082825a  FMUL float ptr [EDI + 0x154]
+00828260  FADDP
+00828262  FLD ST5
+00828264  FMUL float ptr [EDI + 0x148]
+0082826a  FADDP
+0082826c  FLD ST1
+0082826e  FMUL float ptr [EDI + 0x168]
+00828274  FADDP
+00828276  FLD float ptr [EBP + -0x28]
+00828279  FMUL float ptr [EDI + 0x158]
+0082827f  FADDP
+00828281  FLD ST6
+00828283  FMUL float ptr [EDI + 0x14c]
+00828289  FADDP
+0082828b  FLD ST3
+0082828d  FMUL float ptr [EDI + 0x170]
+00828293  FADDP
+00828295  FLD ST2
+00828297  FMUL float ptr [EDI + 0x16c]
+0082829d  FADDP
+0082829f  FLD float ptr [EBP + -0x24]
+008282a2  FMUL float ptr [EDI + 0x15c]
+008282a8  FADDP
+008282aa  FLD float ptr [EBP + -0x20]
+008282ad  FMUL float ptr [EDI + 0x160]
+008282b3  FADDP
+008282b5  FLD float ptr [EBP + -0x30]
+008282b8  FMUL float ptr [EDI + 0x150]
+008282be  FADDP
+008282c0  FADD float ptr [EBX + 0x24]
+008282c3  FST float ptr [EBP + 0x8]
+008282c6  FST float ptr [EDI + 0x14c]
+008282cc  FSTP float ptr [EBX + 0x24]
+008282cf  FLD ST4
+008282d1  FMUL float ptr [EDI + 0x144]
+008282d7  FLD ST1
+008282d9  FMUL float ptr [EDI + 0x164]
+008282df  FADDP
+008282e1  FLD float ptr [EBP + -0x28]
+008282e4  FMUL float ptr [EDI + 0x154]
+008282ea  FADDP
+008282ec  FLD ST6
+008282ee  FMUL float ptr [EDI + 0x148]
+008282f4  FADDP
+008282f6  FLD ST2
+008282f8  FMUL float ptr [EDI + 0x168]
+008282fe  FADDP
+00828300  FLD float ptr [EBP + -0x24]
+00828303  FMUL float ptr [EDI + 0x158]
+00828309  ADD EBX,0x30
+0082830c  DEC EAX
+0082830d  FADDP
+0082830f  FLD ST4
+00828311  FMUL float ptr [EDI + 0x170]
+00828317  FADDP
+00828319  FLD ST3
+0082831b  FMUL float ptr [EDI + 0x16c]
+00828321  FADDP
+00828323  FLD float ptr [EBP + -0x20]
+00828326  FMUL float ptr [EDI + 0x15c]
+0082832c  FADDP
+0082832e  FLD float ptr [EBP + -0x30]
+00828331  FMUL float ptr [EDI + 0x14c]
+00828337  FADDP
+00828339  FLD float ptr [EBP + -0x1c]
+0082833c  FMUL float ptr [EDI + 0x160]
+00828342  FADDP
+00828344  FLD float ptr [EBP + -0x2c]
+00828347  FMUL float ptr [EDI + 0x150]
+0082834d  FADDP
+0082834f  FADD float ptr [EBX + -0x8]
+00828352  FST float ptr [EBP + 0x8]
+00828355  FST float ptr [EDI + 0x148]
+0082835b  FSTP float ptr [EBX + -0x8]
+0082835e  FLD ST5
+00828360  FMUL float ptr [EDI + 0x144]
+00828366  FLD ST2
+00828368  FMUL float ptr [EDI + 0x164]
+0082836e  FADDP
+00828370  FLD float ptr [EBP + -0x24]
+00828373  FMUL float ptr [EDI + 0x154]
+00828379  FADDP
+0082837b  FLD ST3
+0082837d  FMUL float ptr [EDI + 0x168]
+00828383  FADDP
+00828385  FLD float ptr [EBP + -0x20]
+00828388  FMUL float ptr [EDI + 0x158]
+0082838e  FADDP
+00828390  FLD float ptr [EBP + -0x30]
+00828393  FMUL float ptr [EDI + 0x148]
+00828399  FADDP
+0082839b  FLD ST5
+0082839d  FMUL float ptr [EDI + 0x170]
+008283a3  FADDP
+008283a5  FLD ST4
+008283a7  FMUL float ptr [EDI + 0x16c]
+008283ad  FADDP
+008283af  FLD float ptr [EBP + -0x1c]
+008283b2  FMUL float ptr [EDI + 0x15c]
+008283b8  FADDP
+008283ba  FLD float ptr [EBP + -0x2c]
+008283bd  FMUL float ptr [EDI + 0x14c]
+008283c3  FADDP
+008283c5  FLD ST1
+008283c7  FMUL float ptr [EDI + 0x160]
+008283cd  FADDP
+008283cf  FLD float ptr [EBP + -0x28]
+008283d2  FMUL float ptr [EDI + 0x150]
+008283d8  FADDP
+008283da  FADD float ptr [EBX + -0x4]
+008283dd  FST float ptr [EBP + 0x8]
+008283e0  FST float ptr [EDI + 0x144]
+008283e6  FSTP float ptr [EBX + -0x4]
+008283e9  JNZ 0x00827d63
+008283ef  FSTP ST0
+008283f1  FSTP ST0
+008283f3  FSTP ST0
+008283f5  FSTP ST0
+008283f7  FSTP ST0
+008283f9  FSTP ST0
+008283fb  POP ESI
+008283fc  POP EBX
+008283fd  LEAVE
+008283fe  RET

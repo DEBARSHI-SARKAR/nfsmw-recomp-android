@@ -1,0 +1,2 @@
+00694070  MOV dword ptr [ECX],0x8967e4
+00694076  RET

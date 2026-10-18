@@ -1,0 +1,2 @@
+007ecd3d  MOV EAX,[0x009bb130]
+007ecd42  RET

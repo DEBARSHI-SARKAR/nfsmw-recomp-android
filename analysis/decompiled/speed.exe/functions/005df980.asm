@@ -1,0 +1,12 @@
+005df980  MOV EAX,dword ptr [ESP + 0x4]
+005df984  MOV ECX,dword ptr [EAX]
+005df986  MOV DL,byte ptr [ECX + 0x1d]
+005df989  TEST DL,DL
+005df98b  JNZ 0x005df99b
+005df98d  LEA ECX,[ECX]
+005df990  MOV EAX,ECX
+005df992  MOV ECX,dword ptr [EAX]
+005df994  MOV DL,byte ptr [ECX + 0x1d]
+005df997  TEST DL,DL
+005df999  JZ 0x005df990
+005df99b  RET

@@ -1,0 +1,27 @@
+007f6d8c  PUSH EBP
+007f6d8d  MOV EBP,ESP
+007f6d8f  PUSH ESI
+007f6d90  MOV ESI,ECX
+007f6d92  MOV dword ptr [ESI + 0x108],0x2
+007f6d9c  CALL 0x007f6337
+007f6da1  PUSH dword ptr [EBP + 0x8]
+007f6da4  LEA ECX,[ESI + 0x8]
+007f6da7  CALL 0x007f60d5
+007f6dac  CMP dword ptr [EBP + 0xc],0x0
+007f6db0  JZ 0x007f6ddc
+007f6db2  MOV EAX,[0x00908240]
+007f6db7  PUSH 0x0
+007f6db9  PUSH EAX
+007f6dba  LEA ECX,[ESI + 0x60]
+007f6dbd  MOV dword ptr [ESI + 0x5c],0x40
+007f6dc4  CALL 0x007f60a1
+007f6dc9  PUSH 0x0
+007f6dcb  PUSH dword ptr [EBP + 0x10]
+007f6dce  LEA ECX,[ESI + 0xb0]
+007f6dd4  PUSH dword ptr [EBP + 0xc]
+007f6dd7  CALL 0x007f6152
+007f6ddc  MOV ECX,ESI
+007f6dde  CALL 0x007f6455
+007f6de3  POP ESI
+007f6de4  POP EBP
+007f6de5  RET 0xc

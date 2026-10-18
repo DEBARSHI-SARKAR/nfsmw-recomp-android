@@ -1,0 +1,25 @@
+007c2b30  PUSH -0x1
+007c2b32  PUSH 0x883b36
+007c2b37  MOV EAX,FS:[0x0]
+007c2b3d  PUSH EAX
+007c2b3e  MOV dword ptr FS:[0x0],ESP
+007c2b45  PUSH ECX
+007c2b46  PUSH ESI
+007c2b47  MOV ESI,ECX
+007c2b49  MOV dword ptr [ESP + 0x4],ESI
+007c2b4d  MOV dword ptr [ESI],0x8b8068
+007c2b53  LEA ECX,[ESI + 0x220]
+007c2b59  MOV dword ptr [ESP + 0x10],0x1
+007c2b61  MOV dword ptr [ESI + 0x218],0x0
+007c2b6b  CALL 0x0052a600
+007c2b70  LEA ECX,[ESI + 0x1cc]
+007c2b76  MOV byte ptr [ESP + 0x10],0x0
+007c2b7b  CALL 0x007aa190
+007c2b80  MOV ECX,ESI
+007c2b82  MOV dword ptr [ESP + 0x10],0xffffffff
+007c2b8a  CALL 0x007bcf80
+007c2b8f  MOV ECX,dword ptr [ESP + 0x8]
+007c2b93  POP ESI
+007c2b94  MOV dword ptr FS:[0x0],ECX
+007c2b9b  ADD ESP,0x10
+007c2b9e  RET

@@ -1,0 +1,24 @@
+007df270  PUSH EBP
+007df271  MOV EBP,ESP
+007df273  PUSH ECX
+007df274  CMP dword ptr [EBP + 0x10],0xa
+007df278  JNZ 0x007df289
+007df27a  CMP dword ptr [EBP + 0x8],0x0
+007df27e  JGE 0x007df289
+007df280  MOV dword ptr [EBP + -0x4],0x1
+007df287  JMP 0x007df290
+007df289  MOV dword ptr [EBP + -0x4],0x0
+007df290  MOV EAX,dword ptr [EBP + -0x4]
+007df293  PUSH EAX
+007df294  MOV ECX,dword ptr [EBP + 0x10]
+007df297  PUSH ECX
+007df298  MOV EDX,dword ptr [EBP + 0xc]
+007df29b  PUSH EDX
+007df29c  MOV EAX,dword ptr [EBP + 0x8]
+007df29f  PUSH EAX
+007df2a0  CALL 0x007df1a0
+007df2a5  ADD ESP,0x10
+007df2a8  MOV EAX,dword ptr [EBP + 0xc]
+007df2ab  MOV ESP,EBP
+007df2ad  POP EBP
+007df2ae  RET

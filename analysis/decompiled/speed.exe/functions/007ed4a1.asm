@@ -1,0 +1,25 @@
+007ed4a1  PUSH EBP
+007ed4a2  MOV EBP,ESP
+007ed4a4  PUSH ESI
+007ed4a5  PUSH EDI
+007ed4a6  MOV EDI,dword ptr [EBP + 0x8]
+007ed4a9  MOV ESI,ECX
+007ed4ab  PUSH 0x0
+007ed4ad  PUSH ESI
+007ed4ae  LEA ECX,[EDI + 0x10]
+007ed4b1  MOV byte ptr [ESI + 0x10],0x1
+007ed4b5  CALL 0x007ee4ab
+007ed4ba  TEST AL,AL
+007ed4bc  JZ 0x007ed4d5
+007ed4be  PUSH ESI
+007ed4bf  LEA ECX,[EDI + 0x1c]
+007ed4c2  CALL 0x007ee3f3
+007ed4c7  PUSH dword ptr [ESI + 0x18]
+007ed4ca  PUSH -0x1
+007ed4cc  PUSH dword ptr [ESI + 0xc]
+007ed4cf  CALL dword ptr [ESI + 0x1c]
+007ed4d2  ADD ESP,0xc
+007ed4d5  POP EDI
+007ed4d6  POP ESI
+007ed4d7  POP EBP
+007ed4d8  RET 0x4

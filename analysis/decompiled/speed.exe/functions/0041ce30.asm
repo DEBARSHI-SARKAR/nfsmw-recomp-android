@@ -1,0 +1,15 @@
+0041ce30  MOV EAX,dword ptr [ECX + 0x1c]
+0041ce33  TEST EAX,EAX
+0041ce35  JZ 0x0041ce52
+0041ce37  MOV ECX,dword ptr [EAX + 0x4]
+0041ce3a  PUSH 0x4039f0
+0041ce3f  CALL 0x005d59f0
+0041ce44  MOV ECX,dword ptr [ESP + 0x4]
+0041ce48  TEST EAX,EAX
+0041ce4a  MOV dword ptr [ECX],EAX
+0041ce4c  SETNZ AL
+0041ce4f  RET 0x4
+0041ce52  MOV EDX,dword ptr [ESP + 0x4]
+0041ce56  MOV dword ptr [EDX],0x0
+0041ce5c  XOR AL,AL
+0041ce5e  RET 0x4

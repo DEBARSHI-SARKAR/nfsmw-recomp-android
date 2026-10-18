@@ -1,0 +1,79 @@
+007fec00  PUSH EBP
+007fec01  MOV EBP,ESP
+007fec03  MOV EAX,dword ptr [EBP + 0xc]
+007fec06  ADD EAX,-0x3
+007fec09  MOV ECX,dword ptr [EBP + 0x10]
+007fec0c  PUSH EBX
+007fec0d  PUSH ESI
+007fec0e  MOV ESI,dword ptr [EBP + 0x8]
+007fec11  PUSH EDI
+007fec12  JZ 0x007fec9f
+007fec18  PUSH 0x3
+007fec1a  DEC EAX
+007fec1b  XOR EDX,EDX
+007fec1d  POP EDI
+007fec1e  DIV EDI
+007fec20  INC EAX
+007fec21  MOV dword ptr [EBP + 0x10],EAX
+007fec24  MOVZX EDI,byte ptr [ESI + 0x1]
+007fec28  MOVZX EDX,byte ptr [ESI]
+007fec2b  MOV byte ptr [ECX],DL
+007fec2d  IMUL EDX,EDX,0x66
+007fec30  MOV EAX,EDI
+007fec32  IMUL EAX,EAX,0x9a
+007fec38  LEA EAX,[EAX + EDX*0x1 + 0x80]
+007fec3f  SHR EAX,0x8
+007fec42  MOV byte ptr [ECX + 0x1],AL
+007fec45  MOVZX EDX,byte ptr [ESI + 0x2]
+007fec49  MOV EAX,EDI
+007fec4b  IMUL EDI,EDI,0x33
+007fec4e  IMUL EAX,EAX,0xcd
+007fec54  MOV EBX,EDX
+007fec56  IMUL EBX,EBX,0x33
+007fec59  LEA EAX,[EAX + EBX*0x1 + 0x80]
+007fec60  SHR EAX,0x8
+007fec63  MOV byte ptr [ECX + 0x2],AL
+007fec66  MOV EAX,EDX
+007fec68  IMUL EDX,EDX,0x9a
+007fec6e  IMUL EAX,EAX,0xcd
+007fec74  LEA EAX,[EAX + EDI*0x1 + 0x80]
+007fec7b  SHR EAX,0x8
+007fec7e  MOV byte ptr [ECX + 0x3],AL
+007fec81  ADD ESI,0x3
+007fec84  MOVZX EAX,byte ptr [ESI]
+007fec87  IMUL EAX,EAX,0x66
+007fec8a  LEA EAX,[EAX + EDX*0x1 + 0x80]
+007fec91  SHR EAX,0x8
+007fec94  MOV byte ptr [ECX + 0x4],AL
+007fec97  ADD ECX,0x5
+007fec9a  DEC dword ptr [EBP + 0x10]
+007fec9d  JNZ 0x007fec24
+007fec9f  MOVZX EDX,byte ptr [ESI + 0x1]
+007feca3  MOVZX EAX,byte ptr [ESI]
+007feca6  MOV EDI,EDX
+007feca8  MOV byte ptr [ECX],AL
+007fecaa  IMUL EDI,EDI,0x9a
+007fecb0  IMUL EAX,EAX,0x66
+007fecb3  LEA EAX,[EDI + EAX*0x1 + 0x80]
+007fecba  SHR EAX,0x8
+007fecbd  MOV byte ptr [ECX + 0x1],AL
+007fecc0  MOVZX EAX,byte ptr [ESI + 0x2]
+007fecc4  MOV ESI,EDX
+007fecc6  IMUL EDX,EDX,0x33
+007fecc9  IMUL ESI,ESI,0xcd
+007feccf  MOV EDI,EAX
+007fecd1  IMUL EDI,EDI,0x33
+007fecd4  LEA EBX,[ESI + EDI*0x1 + 0x80]
+007fecdb  MOV ESI,EAX
+007fecdd  IMUL ESI,ESI,0xcd
+007fece3  SHR EBX,0x8
+007fece6  LEA EDX,[ESI + EDX*0x1 + 0x80]
+007feced  POP EDI
+007fecee  SHR EDX,0x8
+007fecf1  POP ESI
+007fecf2  MOV byte ptr [ECX + 0x2],BL
+007fecf5  MOV byte ptr [ECX + 0x3],DL
+007fecf8  MOV byte ptr [ECX + 0x4],AL
+007fecfb  POP EBX
+007fecfc  POP EBP
+007fecfd  RET

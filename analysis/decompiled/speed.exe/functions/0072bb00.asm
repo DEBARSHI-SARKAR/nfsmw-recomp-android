@@ -1,0 +1,13 @@
+0072bb00  PUSH ESI
+0072bb01  MOV ESI,dword ptr [ESP + 0x8]
+0072bb05  MOV EAX,dword ptr [ESI + 0xb4]
+0072bb0b  MOV ECX,dword ptr [ESI + 0xbc]
+0072bb11  MOV EDX,dword ptr [ESI + 0xb8]
+0072bb17  PUSH EAX
+0072bb18  PUSH ECX
+0072bb19  PUSH EDX
+0072bb1a  CALL 0x0065d530
+0072bb1f  ADD ESP,0xc
+0072bb22  MOV byte ptr [ESI + 0xb1],0x0
+0072bb29  POP ESI
+0072bb2a  RET

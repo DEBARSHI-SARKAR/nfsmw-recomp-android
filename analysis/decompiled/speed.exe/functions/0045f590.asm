@@ -1,0 +1,49 @@
+0045f590  MOV ECX,dword ptr [ESP + 0x8]
+0045f594  FLD float ptr [ECX + 0xc]
+0045f597  FLD float ptr [ECX + 0x8]
+0045f59a  FLD float ptr [ECX + 0x4]
+0045f59d  FLD float ptr [ECX]
+0045f59f  FLD ST0
+0045f5a1  FMUL ST1
+0045f5a3  FLD ST2
+0045f5a5  FMUL ST3
+0045f5a7  FADDP
+0045f5a9  FLD ST3
+0045f5ab  FMUL ST4
+0045f5ad  FADDP
+0045f5af  FLD ST4
+0045f5b1  FMUL ST5
+0045f5b3  FADDP
+0045f5b5  FSQRT
+0045f5b7  FSTP ST4
+0045f5b9  FSTP ST0
+0045f5bb  FSTP ST0
+0045f5bd  FSTP ST0
+0045f5bf  FLD float ptr [0x00890968]
+0045f5c5  FLD ST1
+0045f5c7  FUCOMPP
+0045f5c9  FNSTSW AX
+0045f5cb  TEST AH,0x44
+0045f5ce  JNP 0x0045f5fb
+0045f5d0  FDIVR float ptr [0x0089096c]
+0045f5d6  MOV EAX,dword ptr [ECX + 0x8]
+0045f5d9  MOV dword ptr [ESP + 0x8],EAX
+0045f5dd  MOV EAX,dword ptr [ESP + 0x4]
+0045f5e1  FLD float ptr [ECX + 0x4]
+0045f5e4  FLD ST1
+0045f5e6  FMUL float ptr [ECX]
+0045f5e8  FSTP float ptr [EAX]
+0045f5ea  FMUL ST1
+0045f5ec  FSTP float ptr [EAX + 0x4]
+0045f5ef  FLD float ptr [ESP + 0x8]
+0045f5f3  FMUL ST1
+0045f5f5  FSTP float ptr [EAX + 0x8]
+0045f5f8  FSTP ST0
+0045f5fa  RET
+0045f5fb  MOV EAX,dword ptr [ESP + 0x4]
+0045f5ff  FSTP ST0
+0045f601  XOR ECX,ECX
+0045f603  MOV dword ptr [EAX],0x3f800000
+0045f609  MOV dword ptr [EAX + 0x4],ECX
+0045f60c  MOV dword ptr [EAX + 0x8],ECX
+0045f60f  RET

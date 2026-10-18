@@ -1,0 +1,9 @@
+007f9da1  PUSH EBP
+007f9da2  MOV EBP,ESP
+007f9da4  CMP dword ptr [EBP + 0x8],0x0
+007f9da8  JZ 0x007f9db3
+007f9daa  MOV ECX,dword ptr [ECX + 0x34]
+007f9dad  POP EBP
+007f9dae  JMP 0x007f9b39
+007f9db3  POP EBP
+007f9db4  RET 0x4

@@ -1,0 +1,20 @@
+006b8650  MOV EAX,dword ptr [ESP + 0x8]
+006b8654  PUSH ESI
+006b8655  MOV ESI,ECX
+006b8657  MOV ECX,dword ptr [ESP + 0x8]
+006b865b  PUSH EAX
+006b865c  PUSH ECX
+006b865d  MOV ECX,ESI
+006b865f  CALL 0x006b7ad0
+006b8664  MOV dword ptr [ESI],0x8ad230
+006b866a  MOV dword ptr [ESI + 0x8],0x8ad224
+006b8671  MOV dword ptr [ESI + 0x48],0x8ad178
+006b8678  MOV dword ptr [ESI + 0x50],0x8ad0d0
+006b867f  MOV dword ptr [ESI + 0x58],0x8ad0cc
+006b8686  MOV dword ptr [ESI + 0x60],0x8ad094
+006b868d  MOV dword ptr [ESI + 0x64],0x8ad090
+006b8694  MOV dword ptr [ESI + 0x68],0x8ad080
+006b869b  MOV dword ptr [ESI + 0x130],0x8ad060
+006b86a5  MOV EAX,ESI
+006b86a7  POP ESI
+006b86a8  RET 0x8

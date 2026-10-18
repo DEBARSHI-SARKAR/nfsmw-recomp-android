@@ -1,0 +1,28 @@
+00729a80  MOV EDX,dword ptr [ESP + 0x4]
+00729a84  MOV EAX,dword ptr [EDX]
+00729a86  CMP EAX,0x80034150
+00729a8b  JNZ 0x00729ab9
+00729a8d  MOV dword ptr [ECX],ECX
+00729a8f  MOV dword ptr [ECX + 0x4],ECX
+00729a92  LEA EAX,[ECX + 0x8]
+00729a95  MOV dword ptr [EAX],EAX
+00729a97  MOV dword ptr [EAX + 0x4],EAX
+00729a9a  LEA EAX,[ECX + 0x20]
+00729a9d  MOV dword ptr [EAX],EAX
+00729a9f  MOV dword ptr [EAX + 0x4],EAX
+00729aa2  LEA EAX,[ECX + 0x10]
+00729aa5  MOV dword ptr [EAX],EAX
+00729aa7  MOV dword ptr [EAX + 0x4],EAX
+00729aaa  MOV dword ptr [ECX + 0x54],0x0
+00729ab1  MOV EAX,0x1
+00729ab6  RET 0x4
+00729ab9  CMP EAX,0x34158
+00729abe  JNZ 0x00729ad3
+00729ac0  MOV EAX,dword ptr [EDX + 0x8]
+00729ac3  MOV ECX,dword ptr [EDX + 0xc]
+00729ac6  MOV dword ptr [ECX],EAX
+00729ac8  MOV dword ptr [EAX + 0x4],ECX
+00729acb  MOV EAX,0x1
+00729ad0  RET 0x4
+00729ad3  XOR EAX,EAX
+00729ad5  RET 0x4

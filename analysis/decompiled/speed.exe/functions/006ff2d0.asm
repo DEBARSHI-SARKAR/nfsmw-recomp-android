@@ -1,0 +1,7 @@
+006ff2d0  MOV EAX,dword ptr [ESP + 0x4]
+006ff2d4  CMP EAX,0x2
+006ff2d7  JGE 0x006ff2e1
+006ff2d9  MOV EAX,dword ptr [EAX*0x4 + 0x99222c]
+006ff2e0  RET
+006ff2e1  XOR EAX,EAX
+006ff2e3  RET

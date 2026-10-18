@@ -1,0 +1,16 @@
+004fb420  MOV EDX,dword ptr [ECX + 0x1c]
+004fb423  TEST EDX,EDX
+004fb425  MOV EAX,dword ptr [ESP + 0x8]
+004fb429  PUSH ESI
+004fb42a  MOV ESI,dword ptr [ESP + 0x8]
+004fb42e  JZ 0x004fb434
+004fb430  MOV dword ptr [ESI + EAX*0x4],EDX
+004fb433  INC EAX
+004fb434  MOV ECX,dword ptr [ECX + 0x20]
+004fb437  TEST ECX,ECX
+004fb439  JZ 0x004fb442
+004fb43b  MOV ECX,dword ptr [ECX + 0x3c]
+004fb43e  MOV dword ptr [ESI + EAX*0x4],ECX
+004fb441  INC EAX
+004fb442  POP ESI
+004fb443  RET 0x8

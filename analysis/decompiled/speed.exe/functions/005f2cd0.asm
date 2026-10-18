@@ -1,0 +1,77 @@
+005f2cd0  PUSH EBX
+005f2cd1  MOV EBX,dword ptr [ESP + 0x10]
+005f2cd5  PUSH ESI
+005f2cd6  MOV ESI,dword ptr [ESP + 0x10]
+005f2cda  PUSH EDI
+005f2cdb  MOV EDI,ECX
+005f2cdd  MOV EAX,dword ptr [EDI + 0x4]
+005f2ce0  CMP ESI,dword ptr [EAX]
+005f2ce2  JNZ 0x005f2d1c
+005f2ce4  CMP EBX,EAX
+005f2ce6  JNZ 0x005f2d1c
+005f2ce8  MOV EAX,dword ptr [EAX + 0x4]
+005f2ceb  PUSH EAX
+005f2cec  MOV ECX,EDI
+005f2cee  CALL 0x005e7090
+005f2cf3  MOV EAX,dword ptr [EDI + 0x4]
+005f2cf6  MOV dword ptr [EAX + 0x4],EAX
+005f2cf9  MOV EAX,dword ptr [EDI + 0x4]
+005f2cfc  MOV dword ptr [EDI + 0x8],0x0
+005f2d03  MOV dword ptr [EAX],EAX
+005f2d05  MOV EAX,dword ptr [EDI + 0x4]
+005f2d08  MOV dword ptr [EAX + 0x8],EAX
+005f2d0b  MOV ECX,dword ptr [EDI + 0x4]
+005f2d0e  MOV EDX,dword ptr [ECX]
+005f2d10  MOV EAX,dword ptr [ESP + 0x10]
+005f2d14  POP EDI
+005f2d15  POP ESI
+005f2d16  MOV dword ptr [EAX],EDX
+005f2d18  POP EBX
+005f2d19  RET 0xc
+005f2d1c  CMP ESI,EBX
+005f2d1e  JZ 0x005f2d7b
+005f2d20  MOV AL,byte ptr [ESI + 0xf]
+005f2d23  TEST AL,AL
+005f2d25  MOV ECX,ESI
+005f2d27  JNZ 0x005f2d6a
+005f2d29  MOV EAX,dword ptr [ESI + 0x8]
+005f2d2c  MOV DL,byte ptr [EAX + 0xf]
+005f2d2f  TEST DL,DL
+005f2d31  JNZ 0x005f2d4d
+005f2d33  MOV ESI,EAX
+005f2d35  MOV EAX,dword ptr [ESI]
+005f2d37  MOV DL,byte ptr [EAX + 0xf]
+005f2d3a  TEST DL,DL
+005f2d3c  JNZ 0x005f2d6a
+005f2d3e  MOV EDI,EDI
+005f2d40  MOV ESI,EAX
+005f2d42  MOV EAX,dword ptr [ESI]
+005f2d44  MOV DL,byte ptr [EAX + 0xf]
+005f2d47  TEST DL,DL
+005f2d49  JZ 0x005f2d40
+005f2d4b  JMP 0x005f2d6a
+005f2d4d  MOV EAX,dword ptr [ESI + 0x4]
+005f2d50  MOV DL,byte ptr [EAX + 0xf]
+005f2d53  TEST DL,DL
+005f2d55  JNZ 0x005f2d68
+005f2d57  CMP ESI,dword ptr [EAX + 0x8]
+005f2d5a  JNZ 0x005f2d68
+005f2d5c  MOV ESI,EAX
+005f2d5e  MOV EAX,dword ptr [EAX + 0x4]
+005f2d61  MOV DL,byte ptr [EAX + 0xf]
+005f2d64  TEST DL,DL
+005f2d66  JZ 0x005f2d57
+005f2d68  MOV ESI,EAX
+005f2d6a  PUSH ECX
+005f2d6b  LEA EAX,[ESP + 0x18]
+005f2d6f  PUSH EAX
+005f2d70  MOV ECX,EDI
+005f2d72  CALL 0x005f1190
+005f2d77  CMP ESI,EBX
+005f2d79  JNZ 0x005f2d20
+005f2d7b  MOV EAX,dword ptr [ESP + 0x10]
+005f2d7f  POP EDI
+005f2d80  MOV dword ptr [EAX],ESI
+005f2d82  POP ESI
+005f2d83  POP EBX
+005f2d84  RET 0xc

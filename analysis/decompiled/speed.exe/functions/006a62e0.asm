@@ -1,0 +1,14 @@
+006a62e0  PUSH 0x0
+006a62e2  PUSH 0xc
+006a62e4  MOV ECX,0x925b30
+006a62e9  CALL 0x005d29d0
+006a62ee  TEST EAX,EAX
+006a62f0  JZ 0x006a6308
+006a62f2  MOV ECX,dword ptr [ESP + 0x4]
+006a62f6  MOV EDX,dword ptr [ESP + 0x8]
+006a62fa  MOV dword ptr [EAX],ECX
+006a62fc  MOV ECX,dword ptr [ESP + 0xc]
+006a6300  MOV dword ptr [EAX + 0x4],EDX
+006a6303  MOV EDX,dword ptr [ECX]
+006a6305  MOV dword ptr [EAX + 0x8],EDX
+006a6308  RET 0xc

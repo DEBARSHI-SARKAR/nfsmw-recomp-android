@@ -1,0 +1,7 @@
+00579080  MOV EAX,ECX
+00579082  MOV ECX,dword ptr [ESP + 0x4]
+00579086  MOV EDX,dword ptr [ECX]
+00579088  MOV dword ptr [EAX],EDX
+0057908a  MOV ECX,dword ptr [ECX + 0x4]
+0057908d  MOV dword ptr [EAX + 0x4],ECX
+00579090  RET 0x4

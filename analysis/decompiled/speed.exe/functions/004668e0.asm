@@ -1,0 +1,16 @@
+004668e0  MOV EAX,ECX
+004668e2  MOV ECX,dword ptr [ESP + 0x4]
+004668e6  FLD float ptr [ECX + 0x4]
+004668e9  FLD float ptr [ECX + 0x8]
+004668ec  FLD float ptr [EAX]
+004668ee  FSUB float ptr [ECX]
+004668f0  FSTP float ptr [EAX]
+004668f2  FLD float ptr [EAX + 0x4]
+004668f5  FSUB ST0,ST2
+004668f7  FSTP float ptr [EAX + 0x4]
+004668fa  FLD float ptr [EAX + 0x8]
+004668fd  FSUB ST0,ST1
+004668ff  FSTP float ptr [EAX + 0x8]
+00466902  FSTP ST0
+00466904  FSTP ST0
+00466906  RET 0x4

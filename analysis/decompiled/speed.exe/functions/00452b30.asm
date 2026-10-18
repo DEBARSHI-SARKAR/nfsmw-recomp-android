@@ -1,0 +1,7 @@
+00452b30  MOV EAX,ECX
+00452b32  XOR ECX,ECX
+00452b34  MOV dword ptr [EAX],ECX
+00452b36  MOV dword ptr [EAX + 0x4],ECX
+00452b39  MOV dword ptr [EAX + 0x8],ECX
+00452b3c  MOV dword ptr [EAX + 0xc],ECX
+00452b3f  RET

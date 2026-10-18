@@ -1,0 +1,2 @@
+007c5cdc  CALL 0x007ca530
+007c5ce1  RET

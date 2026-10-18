@@ -1,0 +1,7 @@
+0078fbc0  MOV EAX,dword ptr [ECX + 0xc]
+0078fbc3  TEST EAX,EAX
+0078fbc5  JZ 0x0078fbce
+0078fbc7  PUSH EAX
+0078fbc8  CALL 0x00652b10
+0078fbcd  POP ECX
+0078fbce  RET

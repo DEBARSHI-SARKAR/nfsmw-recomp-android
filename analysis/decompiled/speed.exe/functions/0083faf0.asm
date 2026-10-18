@@ -1,0 +1,21 @@
+0083faf0  SUB ESP,0x14
+0083faf3  MOV EAX,[0x00906980]
+0083faf8  MOV dword ptr [ESP + 0x10],EAX
+0083fafc  MOV EAX,dword ptr [ESP + 0x18]
+0083fb00  MOV byte ptr [ESP + 0x7],AL
+0083fb04  SHR EAX,0x8
+0083fb07  MOV byte ptr [ESP + 0x6],AL
+0083fb0b  SHR EAX,0x8
+0083fb0e  MOV byte ptr [ESP + 0x5],AL
+0083fb12  SHR EAX,0x8
+0083fb15  PUSH 0x14
+0083fb17  MOV byte ptr [ESP + 0x8],AL
+0083fb1b  LEA EAX,[ESP + 0x4]
+0083fb1f  PUSH 0x9c362c
+0083fb24  PUSH EAX
+0083fb25  CALL 0x0083f910
+0083fb2a  MOV ECX,dword ptr [ESP + 0x1c]
+0083fb2e  MOV EAX,0x9c362c
+0083fb33  CALL 0x007d6cb0
+0083fb38  ADD ESP,0x20
+0083fb3b  RET

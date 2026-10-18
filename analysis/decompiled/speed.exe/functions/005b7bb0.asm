@@ -1,0 +1,20 @@
+005b7bb0  MOV EAX,dword ptr [ECX + 0x4144]
+005b7bb6  CMP EAX,0x10
+005b7bb9  JNZ 0x005b7bc0
+005b7bbb  XOR AL,AL
+005b7bbd  RET 0x4
+005b7bc0  MOV EDX,EAX
+005b7bc2  SHL EDX,0x8
+005b7bc5  INC EAX
+005b7bc6  MOV dword ptr [ECX + 0x4144],EAX
+005b7bcc  MOV EAX,dword ptr [ESP + 0x4]
+005b7bd0  LEA EDX,[EDX + ECX*0x1 + 0x4148]
+005b7bd7  SUB EDX,EAX
+005b7bd9  LEA ESP,[ESP]
+005b7be0  MOV CL,byte ptr [EAX]
+005b7be2  MOV byte ptr [EDX + EAX*0x1],CL
+005b7be5  INC EAX
+005b7be6  TEST CL,CL
+005b7be8  JNZ 0x005b7be0
+005b7bea  MOV AL,0x1
+005b7bec  RET 0x4

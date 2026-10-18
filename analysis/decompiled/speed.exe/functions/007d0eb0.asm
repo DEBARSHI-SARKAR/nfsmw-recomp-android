@@ -1,0 +1,71 @@
+007d0eb0  PUSH EBP
+007d0eb1  MOV EBP,ESP
+007d0eb3  PUSH -0x1
+007d0eb5  PUSH 0x8bcc10
+007d0eba  PUSH 0x7cd5e4
+007d0ebf  MOV EAX,FS:[0x0]
+007d0ec5  PUSH EAX
+007d0ec6  MOV dword ptr FS:[0x0],ESP
+007d0ecd  ADD ESP,-0x10
+007d0ed0  PUSH EBX
+007d0ed1  PUSH ESI
+007d0ed2  PUSH EDI
+007d0ed3  MOV EAX,dword ptr [EBP + 0x8]
+007d0ed6  CMP dword ptr [EAX*0x8 + 0x906990],0x0
+007d0ede  JZ 0x007d0eea
+007d0ee0  MOV EAX,0x1
+007d0ee5  JMP 0x007d0fbc
+007d0eea  PUSH 0xfb
+007d0eef  PUSH 0x8bcc04
+007d0ef4  PUSH 0x2
+007d0ef6  PUSH 0x18
+007d0ef8  CALL 0x007c6700
+007d0efd  ADD ESP,0x10
+007d0f00  MOV dword ptr [EBP + -0x1c],EAX
+007d0f03  CMP dword ptr [EBP + -0x1c],0x0
+007d0f07  JNZ 0x007d0f1b
+007d0f09  CALL 0x007cb270
+007d0f0e  MOV dword ptr [EAX],0xc
+007d0f14  XOR EAX,EAX
+007d0f16  JMP 0x007d0fbc
+007d0f1b  PUSH 0xa
+007d0f1d  CALL 0x007d0fd0
+007d0f22  ADD ESP,0x4
+007d0f25  MOV dword ptr [EBP + -0x4],0x0
+007d0f2c  MOV ECX,dword ptr [EBP + 0x8]
+007d0f2f  CMP dword ptr [ECX*0x8 + 0x906990],0x0
+007d0f37  JNZ 0x007d0f90
+007d0f39  PUSH 0xfa0
+007d0f3e  MOV EDX,dword ptr [EBP + -0x1c]
+007d0f41  PUSH EDX
+007d0f42  CALL 0x007ddc30
+007d0f47  ADD ESP,0x8
+007d0f4a  TEST EAX,EAX
+007d0f4c  JNZ 0x007d0f81
+007d0f4e  PUSH 0x2
+007d0f50  MOV EAX,dword ptr [EBP + -0x1c]
+007d0f53  PUSH EAX
+007d0f54  CALL 0x007c7290
+007d0f59  ADD ESP,0x8
+007d0f5c  CALL 0x007cb270
+007d0f61  MOV dword ptr [EAX],0xc
+007d0f67  MOV dword ptr [EBP + -0x20],0x0
+007d0f6e  PUSH -0x1
+007d0f70  LEA ECX,[EBP + -0x10]
+007d0f73  PUSH ECX
+007d0f74  CALL 0x007c514a
+007d0f79  ADD ESP,0x8
+007d0f7c  MOV EAX,dword ptr [EBP + -0x20]
+007d0f7f  JMP 0x007d0fbc
+007d0f81  MOV EDX,dword ptr [EBP + 0x8]
+007d0f84  MOV EAX,dword ptr [EBP + -0x1c]
+007d0f87  MOV dword ptr [EDX*0x8 + 0x906990],EAX
+007d0f8e  JMP 0x007d0f9e
+007d0f90  PUSH 0x2
+007d0f92  MOV ECX,dword ptr [EBP + -0x1c]
+007d0f95  PUSH ECX
+007d0f96  CALL 0x007c7290
+007d0f9b  ADD ESP,0x8
+007d0f9e  MOV dword ptr [EBP + -0x4],0xffffffff
+007d0fa5  CALL 0x007d0fac
+007d0faa  JMP 0x007d0fb7

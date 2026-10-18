@@ -1,0 +1,43 @@
+0084bba0  MOV EDX,dword ptr [ESP + 0x8]
+0084bba4  PUSH ESI
+0084bba5  MOV ESI,dword ptr [ESP + 0x10]
+0084bba9  TEST ESI,ESI
+0084bbab  PUSH EDI
+0084bbac  MOV EDI,dword ptr [ESP + 0xc]
+0084bbb0  MOV ECX,EDI
+0084bbb2  JGE 0x0084bbdd
+0084bbb4  MOV AL,byte ptr [EDI]
+0084bbb6  TEST AL,AL
+0084bbb8  JZ 0x0084bbcd
+0084bbba  LEA EBX,[EBX]
+0084bbc0  CMP AL,byte ptr [EDX]
+0084bbc2  JNZ 0x0084bbd2
+0084bbc4  MOV AL,byte ptr [ECX + 0x1]
+0084bbc7  INC ECX
+0084bbc8  INC EDX
+0084bbc9  TEST AL,AL
+0084bbcb  JNZ 0x0084bbc0
+0084bbcd  XOR EAX,EAX
+0084bbcf  POP EDI
+0084bbd0  POP ESI
+0084bbd1  RET
+0084bbd2  MOVZX EDX,byte ptr [EDX]
+0084bbd5  MOVZX EAX,byte ptr [ECX]
+0084bbd8  POP EDI
+0084bbd9  SUB EAX,EDX
+0084bbdb  POP ESI
+0084bbdc  RET
+0084bbdd  JLE 0x0084bbf2
+0084bbdf  SUB EDX,EDI
+0084bbe1  MOVZX EDI,byte ptr [EDX + ECX*0x1]
+0084bbe5  MOVZX EAX,byte ptr [ECX]
+0084bbe8  SUB EAX,EDI
+0084bbea  JNZ 0x0084bbcf
+0084bbec  INC ECX
+0084bbed  DEC ESI
+0084bbee  TEST ESI,ESI
+0084bbf0  JG 0x0084bbe1
+0084bbf2  POP EDI
+0084bbf3  XOR EAX,EAX
+0084bbf5  POP ESI
+0084bbf6  RET

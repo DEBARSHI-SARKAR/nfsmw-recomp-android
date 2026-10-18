@@ -1,0 +1,19 @@
+005ddb30  MOV EDX,dword ptr [ECX + 0x2c0]
+005ddb36  PUSH ESI
+005ddb37  XOR EAX,EAX
+005ddb39  TEST EDX,EDX
+005ddb3b  JBE 0x005ddb53
+005ddb3d  MOV ECX,dword ptr [ECX + 0x2c4]
+005ddb43  MOV ESI,dword ptr [ESP + 0x8]
+005ddb47  CMP dword ptr [ECX],ESI
+005ddb49  JZ 0x005ddb59
+005ddb4b  INC EAX
+005ddb4c  ADD ECX,0x4
+005ddb4f  CMP EAX,EDX
+005ddb51  JC 0x005ddb47
+005ddb53  XOR AL,AL
+005ddb55  POP ESI
+005ddb56  RET 0x4
+005ddb59  MOV AL,0x1
+005ddb5b  POP ESI
+005ddb5c  RET 0x4

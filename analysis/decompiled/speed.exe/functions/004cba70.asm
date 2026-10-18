@@ -1,0 +1,20 @@
+004cba70  PUSH ECX
+004cba71  PUSH ESI
+004cba72  MOV ESI,dword ptr [ESP + 0x10]
+004cba76  PUSH EDI
+004cba77  MOV EDI,dword ptr [ESP + 0x10]
+004cba7b  MOV byte ptr [ESP + 0x8],0x0
+004cba80  MOV EAX,dword ptr [ESP + 0x8]
+004cba84  PUSH EAX
+004cba85  PUSH ECX
+004cba86  MOV ECX,dword ptr [ESP + 0x20]
+004cba8a  PUSH ECX
+004cba8b  PUSH ESI
+004cba8c  PUSH EDI
+004cba8d  CALL 0x004c1980
+004cba92  ADD ESP,0x14
+004cba95  LEA EAX,[EDI + ESI*0x4]
+004cba98  POP EDI
+004cba99  POP ESI
+004cba9a  POP ECX
+004cba9b  RET 0xc

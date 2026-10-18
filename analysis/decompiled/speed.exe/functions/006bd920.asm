@@ -1,0 +1,8 @@
+006bd920  MOV EAX,dword ptr [ESP + 0x8]
+006bd924  MOV ECX,dword ptr [ESP + 0xc]
+006bd928  MOV EDX,dword ptr [ESP + 0x4]
+006bd92c  PUSH EAX
+006bd92d  PUSH ECX
+006bd92e  PUSH EDX
+006bd92f  CALL 0x007e7d64
+006bd934  RET

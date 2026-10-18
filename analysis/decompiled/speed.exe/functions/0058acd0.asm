@@ -1,0 +1,20 @@
+0058acd0  PUSH ECX
+0058acd1  MOV EAX,dword ptr [ESP + 0xc]
+0058acd5  PUSH EAX
+0058acd6  CALL 0x005769c0
+0058acdb  ADD ESP,0x4
+0058acde  TEST EAX,EAX
+0058ace0  MOV dword ptr [ESP],0x0
+0058ace7  JZ 0x0058ad01
+0058ace9  MOV ECX,dword ptr [ESP + 0x10]
+0058aced  PUSH ECX
+0058acee  PUSH EAX
+0058acef  CALL 0x0058aab0
+0058acf4  ADD ESP,0x8
+0058acf7  TEST EAX,EAX
+0058acf9  JZ 0x0058ad01
+0058acfb  MOV EDX,dword ptr [EAX + 0x8]
+0058acfe  MOV dword ptr [ESP],EDX
+0058ad01  FLD float ptr [ESP]
+0058ad04  ADD ESP,0x4
+0058ad07  JMP 0x007c4b80

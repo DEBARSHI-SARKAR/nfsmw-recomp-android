@@ -1,0 +1,20 @@
+004bace0  PUSH ESI
+004bace1  MOV ESI,ECX
+004bace3  CALL 0x004b21b0
+004bace8  TEST AL,AL
+004bacea  JZ 0x004bacf8
+004bacec  MOV EAX,dword ptr [ESI + 0x14]
+004bacef  PUSH EAX
+004bacf0  CALL 0x0081c4d8
+004bacf5  ADD ESP,0x4
+004bacf8  MOV ECX,dword ptr [ESP + 0xc]
+004bacfc  MOV EDX,dword ptr [ESP + 0x8]
+004bad00  MOV EAX,dword ptr [ESI + 0x14]
+004bad03  PUSH ECX
+004bad04  PUSH EDX
+004bad05  PUSH 0x0
+004bad07  PUSH EAX
+004bad08  CALL 0x0081c4b0
+004bad0d  ADD ESP,0x10
+004bad10  POP ESI
+004bad11  RET 0x8

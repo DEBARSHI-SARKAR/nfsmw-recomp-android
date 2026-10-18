@@ -1,0 +1,12 @@
+0040dd70  MOV EAX,dword ptr [ESP + 0x4]
+0040dd74  MOV ECX,dword ptr [EAX + 0x8]
+0040dd77  MOV DL,byte ptr [ECX + 0xf]
+0040dd7a  TEST DL,DL
+0040dd7c  JNZ 0x0040dd8c
+0040dd7e  MOV EDI,EDI
+0040dd80  MOV EAX,ECX
+0040dd82  MOV ECX,dword ptr [EAX + 0x8]
+0040dd85  MOV DL,byte ptr [ECX + 0xf]
+0040dd88  TEST DL,DL
+0040dd8a  JZ 0x0040dd80
+0040dd8c  RET

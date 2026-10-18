@@ -1,0 +1,29 @@
+007d2320  PUSH EBP
+007d2321  MOV EBP,ESP
+007d2323  PUSH ECX
+007d2324  CMP dword ptr [EBP + 0x8],0x0
+007d2328  JL 0x007d2330
+007d232a  CMP dword ptr [EBP + 0x8],0x3
+007d232e  JL 0x007d2335
+007d2330  OR EAX,0xffffffff
+007d2333  JMP 0x007d2371
+007d2335  CMP dword ptr [EBP + 0xc],-0x1
+007d2339  JNZ 0x007d2347
+007d233b  MOV EAX,dword ptr [EBP + 0x8]
+007d233e  MOV EAX,dword ptr [EAX*0x4 + 0x906abc]
+007d2345  JMP 0x007d2371
+007d2347  MOV ECX,dword ptr [EBP + 0xc]
+007d234a  AND ECX,0xfffffff8
+007d234d  JZ 0x007d2354
+007d234f  OR EAX,0xffffffff
+007d2352  JMP 0x007d2371
+007d2354  MOV EDX,dword ptr [EBP + 0x8]
+007d2357  MOV EAX,dword ptr [EDX*0x4 + 0x906abc]
+007d235e  MOV dword ptr [EBP + -0x4],EAX
+007d2361  MOV ECX,dword ptr [EBP + 0x8]
+007d2364  MOV EDX,dword ptr [EBP + 0xc]
+007d2367  MOV dword ptr [ECX*0x4 + 0x906abc],EDX
+007d236e  MOV EAX,dword ptr [EBP + -0x4]
+007d2371  MOV ESP,EBP
+007d2373  POP EBP
+007d2374  RET

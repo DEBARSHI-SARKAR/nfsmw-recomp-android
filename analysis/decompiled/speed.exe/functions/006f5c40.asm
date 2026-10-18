@@ -1,0 +1,68 @@
+006f5c40  PUSH EBX
+006f5c41  PUSH ESI
+006f5c42  PUSH EDI
+006f5c43  MOV ESI,ECX
+006f5c45  CALL 0x006f5ba0
+006f5c4a  MOV EAX,dword ptr [ESI + 0x5c]
+006f5c4d  MOV ECX,dword ptr [ESI + 0x54]
+006f5c50  MOV EBX,dword ptr [ESI + 0x54]
+006f5c53  LEA EDI,[ESI + 0x50]
+006f5c56  LEA EDX,[ECX + EAX*0x8]
+006f5c59  CMP EBX,EDX
+006f5c5b  JZ 0x006f5caa
+006f5c5d  LEA ECX,[ECX]
+006f5c60  MOV EAX,dword ptr [EBX + 0x4]
+006f5c63  TEST EAX,EAX
+006f5c65  JZ 0x006f5c9a
+006f5c67  MOV EAX,dword ptr [ESI + 0xc]
+006f5c6a  CMP EAX,dword ptr [ESI + 0x8]
+006f5c6d  JC 0x006f5c80
+006f5c6f  MOV EDX,dword ptr [ESI]
+006f5c71  INC EAX
+006f5c72  PUSH EAX
+006f5c73  MOV ECX,ESI
+006f5c75  CALL dword ptr [EDX + 0xc]
+006f5c78  PUSH EAX
+006f5c79  MOV ECX,ESI
+006f5c7b  CALL 0x006ef960
+006f5c80  MOV EAX,dword ptr [ESI + 0xc]
+006f5c83  MOV ECX,dword ptr [ESI + 0x4]
+006f5c86  LEA EAX,[ECX + EAX*0x8]
+006f5c89  TEST EAX,EAX
+006f5c8b  JZ 0x006f5c97
+006f5c8d  MOV EDX,dword ptr [EBX]
+006f5c8f  MOV dword ptr [EAX],EDX
+006f5c91  MOV ECX,dword ptr [EBX + 0x4]
+006f5c94  MOV dword ptr [EAX + 0x4],ECX
+006f5c97  INC dword ptr [ESI + 0xc]
+006f5c9a  MOV EDX,dword ptr [EDI + 0xc]
+006f5c9d  MOV EAX,dword ptr [EDI + 0x4]
+006f5ca0  ADD EBX,0x8
+006f5ca3  LEA ECX,[EAX + EDX*0x8]
+006f5ca6  CMP EBX,ECX
+006f5ca8  JNZ 0x006f5c60
+006f5caa  MOV EAX,dword ptr [EDI + 0xc]
+006f5cad  TEST EAX,EAX
+006f5caf  JLE 0x006f5cba
+006f5cb1  MOV ECX,EAX
+006f5cb3  DEC ECX
+006f5cb4  DEC EAX
+006f5cb5  JNZ 0x006f5cb3
+006f5cb7  MOV dword ptr [EDI + 0xc],ECX
+006f5cba  MOV EAX,dword ptr [EDI + 0x4]
+006f5cbd  TEST EAX,EAX
+006f5cbf  JZ 0x006f5ce2
+006f5cc1  MOV ECX,dword ptr [EDI + 0x8]
+006f5cc4  MOV EDX,dword ptr [EDI]
+006f5cc6  PUSH ECX
+006f5cc7  PUSH EAX
+006f5cc8  MOV ECX,EDI
+006f5cca  CALL dword ptr [EDX + 0x8]
+006f5ccd  MOV dword ptr [EDI + 0x4],0x0
+006f5cd4  MOV dword ptr [EDI + 0x8],0x0
+006f5cdb  MOV dword ptr [EDI + 0xc],0x0
+006f5ce2  POP EDI
+006f5ce3  MOV ECX,ESI
+006f5ce5  POP ESI
+006f5ce6  POP EBX
+006f5ce7  JMP 0x006f5ba0

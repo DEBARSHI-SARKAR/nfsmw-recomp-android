@@ -1,0 +1,29 @@
+007e8ca0  MOV EAX,dword ptr [ECX]
+007e8ca2  AND EAX,0xff
+007e8ca7  LEA ECX,[EAX + -0x69]
+007e8caa  CMP ECX,0x18
+007e8cad  JA 0x007e8cd5
+007e8caf  MOVZX ECX,byte ptr [ECX + 0x7e8d18]
+007e8cb6  JMP dword ptr [ECX*0x4 + 0x7e8d04]
+007e8cbd  MOV EAX,0x1
+007e8cc2  RET
+007e8cc3  MOV EAX,0x10
+007e8cc8  RET
+007e8cc9  MOV EAX,0x20
+007e8cce  RET
+007e8ccf  MOV EAX,0x80
+007e8cd4  RET
+007e8cd5  LEA ECX,[EAX + -0x29]
+007e8cd8  CMP ECX,0x9
+007e8cdb  JA 0x007e8cf1
+007e8cdd  MOVZX EDX,byte ptr [ECX + 0x7e8d3c]
+007e8ce4  JMP dword ptr [EDX*0x4 + 0x7e8d34]
+007e8ceb  MOV EAX,0x4
+007e8cf0  RET
+007e8cf1  PUSH EAX
+007e8cf2  CALL 0x007e8c50
+007e8cf7  ADD ESP,0x4
+007e8cfa  NEG AL
+007e8cfc  SBB EAX,EAX
+007e8cfe  AND EAX,0x2
+007e8d01  RET

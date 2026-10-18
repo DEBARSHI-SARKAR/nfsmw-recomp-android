@@ -1,0 +1,25 @@
+0063fc70  PUSH ESI
+0063fc71  MOV ESI,ECX
+0063fc73  MOV EAX,dword ptr [ESI + 0xc]
+0063fc76  TEST EAX,EAX
+0063fc78  JLE 0x0063fc87
+0063fc7a  MOV ECX,EAX
+0063fc7c  LEA ESP,[ESP]
+0063fc80  DEC ECX
+0063fc81  DEC EAX
+0063fc82  JNZ 0x0063fc80
+0063fc84  MOV dword ptr [ESI + 0xc],ECX
+0063fc87  MOV EAX,dword ptr [ESI + 0x4]
+0063fc8a  TEST EAX,EAX
+0063fc8c  JZ 0x0063fcaf
+0063fc8e  MOV ECX,dword ptr [ESI + 0x8]
+0063fc91  MOV EDX,dword ptr [ESI]
+0063fc93  PUSH ECX
+0063fc94  PUSH EAX
+0063fc95  MOV ECX,ESI
+0063fc97  CALL dword ptr [EDX + 0x8]
+0063fc9a  MOV dword ptr [ESI + 0x4],0x0
+0063fca1  MOV dword ptr [ESI + 0x8],0x0
+0063fca8  MOV dword ptr [ESI + 0xc],0x0
+0063fcaf  POP ESI
+0063fcb0  RET

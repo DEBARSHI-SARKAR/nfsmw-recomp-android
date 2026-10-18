@@ -1,0 +1,24 @@
+007f107b  PUSH EBP
+007f107c  MOV EBP,ESP
+007f107e  TEST byte ptr [EBP + 0xb],0x2
+007f1082  JZ 0x007f109a
+007f1084  MOV dword ptr [0x00907fa8],0x7f1791
+007f108e  MOV dword ptr [0x00907fac],0x7f1685
+007f1098  POP EBP
+007f1099  RET
+007f109a  TEST byte ptr [EBP + 0xa],0x40
+007f109e  JZ 0x007f10b6
+007f10a0  MOV dword ptr [0x00907fa8],0x7f15d1
+007f10aa  MOV dword ptr [0x00907fac],0x7f143b
+007f10b4  POP EBP
+007f10b5  RET
+007f10b6  TEST byte ptr [EBP + 0xa],0x80
+007f10ba  JZ 0x007f10d2
+007f10bc  MOV dword ptr [0x00907fa8],0x7f1387
+007f10c6  MOV dword ptr [0x00907fac],0x7f129d
+007f10d0  POP EBP
+007f10d1  RET
+007f10d2  MOV dword ptr [0x00907fa8],0x7f11e3
+007f10dc  MOV dword ptr [0x00907fac],0x7f10e8
+007f10e6  POP EBP
+007f10e7  RET

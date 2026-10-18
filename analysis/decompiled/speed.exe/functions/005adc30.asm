@@ -1,0 +1,18 @@
+005adc30  MOV EAX,dword ptr [ESP + 0x4]
+005adc34  TEST EAX,EAX
+005adc36  JL 0x005adc40
+005adc38  CDQ
+005adc39  IDIV dword ptr [ESP + 0x8]
+005adc3d  MOV EAX,EDX
+005adc3f  RET
+005adc40  MOV ECX,dword ptr [ESP + 0x8]
+005adc44  CMP ECX,0x1
+005adc47  JLE 0x005adc53
+005adc49  NEG EAX
+005adc4b  CDQ
+005adc4c  IDIV ECX
+005adc4e  MOV EAX,ECX
+005adc50  SUB EAX,EDX
+005adc52  RET
+005adc53  XOR EAX,EAX
+005adc55  RET

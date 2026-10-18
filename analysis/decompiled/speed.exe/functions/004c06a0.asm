@@ -1,0 +1,24 @@
+004c06a0  PUSH ESI
+004c06a1  MOV ESI,ECX
+004c06a3  MOV EAX,dword ptr [ESI + 0xc]
+004c06a6  CMP EAX,dword ptr [ESI + 0x8]
+004c06a9  JC 0x004c06bc
+004c06ab  MOV EDX,dword ptr [ESI]
+004c06ad  INC EAX
+004c06ae  PUSH EAX
+004c06af  MOV ECX,ESI
+004c06b1  CALL dword ptr [EDX + 0xc]
+004c06b4  PUSH EAX
+004c06b5  MOV ECX,ESI
+004c06b7  CALL 0x004c0140
+004c06bc  MOV EAX,dword ptr [ESI + 0xc]
+004c06bf  MOV ECX,dword ptr [ESI + 0x4]
+004c06c2  LEA EAX,[ECX + EAX*0x4]
+004c06c5  TEST EAX,EAX
+004c06c7  JZ 0x004c06d1
+004c06c9  MOV EDX,dword ptr [ESP + 0x8]
+004c06cd  MOV ECX,dword ptr [EDX]
+004c06cf  MOV dword ptr [EAX],ECX
+004c06d1  INC dword ptr [ESI + 0xc]
+004c06d4  POP ESI
+004c06d5  RET 0x4

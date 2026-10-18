@@ -1,0 +1,3 @@
+0077deea  PUSH 0x0
+0077deec  PUSH 0x0
+0077deee  CALL 0x007c56b0

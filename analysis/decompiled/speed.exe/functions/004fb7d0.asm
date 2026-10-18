@@ -1,0 +1,7 @@
+004fb7d0  MOV EAX,dword ptr [ECX + 0xc]
+004fb7d3  TEST EAX,EAX
+004fb7d5  JZ 0x004fb7db
+004fb7d7  ADD EAX,0x40
+004fb7da  RET
+004fb7db  XOR EAX,EAX
+004fb7dd  RET

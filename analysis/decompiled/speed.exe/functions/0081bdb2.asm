@@ -1,0 +1,81 @@
+0081bdb2  PUSH EBP
+0081bdb3  MOV EBP,ESP
+0081bdb5  PUSH ECX
+0081bdb6  PUSH ECX
+0081bdb7  CMP byte ptr [0x009c2188],0x0
+0081bdbe  JNZ 0x0081bdc4
+0081bdc0  PUSH -0xa
+0081bdc2  JMP 0x0081bdd3
+0081bdc4  PUSH dword ptr [EBP + 0x8]
+0081bdc7  CALL 0x0081c131
+0081bdcc  TEST EAX,EAX
+0081bdce  POP ECX
+0081bdcf  JNZ 0x0081bdd6
+0081bdd1  PUSH -0x8
+0081bdd3  POP EAX
+0081bdd4  LEAVE
+0081bdd5  RET
+0081bdd6  CMP dword ptr [EBP + 0xc],0x0
+0081bdda  FILD dword ptr [EBP + 0x10]
+0081bddd  FMUL float ptr [0x00890bf0]
+0081bde3  FST float ptr [EBP + -0x4]
+0081bde6  JG 0x0081bdfb
+0081bde8  PUSH ECX
+0081bde9  FSTP float ptr [ESP]
+0081bdec  PUSH -0x1
+0081bdee  PUSH dword ptr [EBP + 0x8]
+0081bdf1  CALL 0x0081d5f2
+0081bdf6  ADD ESP,0xc
+0081bdf9  LEAVE
+0081bdfa  RET
+0081bdfb  FSTP ST0
+0081bdfd  PUSH EBX
+0081bdfe  FILD dword ptr [EBP + 0xc]
+0081be01  PUSH ESI
+0081be02  PUSH EDI
+0081be03  PUSH 0x6
+0081be05  FDIVR float ptr [0x0089096c]
+0081be0b  LEA ESI,[EAX + 0x15c]
+0081be11  POP EBX
+0081be12  MOV EDI,0x9c1b5c
+0081be17  FSTP float ptr [EBP + -0x8]
+0081be1a  FLD float ptr [0x00890968]
+0081be20  FLD float ptr [ESI]
+0081be22  FUCOMPP
+0081be24  FNSTSW AX
+0081be26  TEST AH,0x44
+0081be29  JNP 0x0081be36
+0081be2b  LEA EAX,[ESI + -0x14]
+0081be2e  PUSH EAX
+0081be2f  MOV ECX,EDI
+0081be31  CALL 0x00819648
+0081be36  FLD float ptr [EBP + -0x4]
+0081be39  MOV EAX,dword ptr [EBP + -0x4]
+0081be3c  FSUB float ptr [ESI + -0x18]
+0081be3f  FST float ptr [ESI]
+0081be41  FMUL float ptr [EBP + -0x8]
+0081be44  FMUL float ptr [0x009c1b54]
+0081be4a  MOV dword ptr [ESI + -0x4],EAX
+0081be4d  FSTP float ptr [ESI]
+0081be4f  FLD float ptr [0x00890968]
+0081be55  FLD float ptr [ESI]
+0081be57  FUCOMPP
+0081be59  FNSTSW AX
+0081be5b  TEST AH,0x44
+0081be5e  JNP 0x0081be78
+0081be60  LEA EAX,[ESI + -0x20]
+0081be63  MOV dword ptr [ESI + -0x8],EAX
+0081be66  LEA EAX,[ESI + -0x14]
+0081be69  PUSH EAX
+0081be6a  MOV ECX,EDI
+0081be6c  MOV dword ptr [ESI + -0xc],0x81bce6
+0081be73  CALL 0x0081962e
+0081be78  ADD ESI,0x24
+0081be7b  DEC EBX
+0081be7c  JNZ 0x0081be1a
+0081be7e  POP EDI
+0081be7f  POP ESI
+0081be80  XOR EAX,EAX
+0081be82  POP EBX
+0081be83  LEAVE
+0081be84  RET

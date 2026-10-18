@@ -1,0 +1,143 @@
+0050ce20  PUSH EBP
+0050ce21  MOV EBP,ESP
+0050ce23  AND ESP,0xfffffff0
+0050ce26  SUB ESP,0x124
+0050ce2c  MOV EAX,[0x0092d87c]
+0050ce31  MOV ECX,dword ptr [0x0092d884]
+0050ce37  PUSH EBX
+0050ce38  MOV EBX,EAX
+0050ce3a  LEA EDX,[EAX + ECX*0x4]
+0050ce3d  CMP EBX,EDX
+0050ce3f  PUSH ESI
+0050ce40  PUSH EDI
+0050ce41  MOV dword ptr [ESP + 0x14],EBX
+0050ce45  JZ 0x0050cfd5
+0050ce4b  JMP 0x0050ce50
+0050ce50  MOV ECX,dword ptr [EBX]
+0050ce52  MOV EAX,dword ptr [ECX]
+0050ce54  CALL dword ptr [EAX + 0x4]
+0050ce57  TEST EAX,EAX
+0050ce59  JZ 0x0050cfb8
+0050ce5f  MOV EDX,dword ptr [EAX]
+0050ce61  MOV ECX,EAX
+0050ce63  CALL dword ptr [EDX + 0x54]
+0050ce66  MOV ESI,EAX
+0050ce68  TEST ESI,ESI
+0050ce6a  JZ 0x0050cfb8
+0050ce70  MOV EAX,dword ptr [ESI]
+0050ce72  MOV ECX,ESI
+0050ce74  CALL dword ptr [EAX + 0x20]
+0050ce77  MOV EDX,dword ptr [ESI]
+0050ce79  MOV ECX,ESI
+0050ce7b  MOV EDI,EAX
+0050ce7d  CALL dword ptr [EDX + 0x24]
+0050ce80  FLD float ptr [EAX]
+0050ce82  FMUL float ptr [0x008910ec]
+0050ce88  LEA ECX,[ESP + 0x20]
+0050ce8c  FADD float ptr [EDI]
+0050ce8e  FLD float ptr [EAX + 0x4]
+0050ce91  FMUL float ptr [0x008910ec]
+0050ce97  FADD float ptr [EDI + 0x4]
+0050ce9a  FLD float ptr [EAX + 0x8]
+0050ce9d  LEA EAX,[ESP + 0x30]
+0050cea1  FMUL float ptr [0x008910ec]
+0050cea7  PUSH EAX
+0050cea8  PUSH ECX
+0050cea9  FADD float ptr [EDI + 0x8]
+0050ceac  FSTP float ptr [ESP + 0x28]
+0050ceb0  FXCH
+0050ceb2  FCHS
+0050ceb4  FSTP float ptr [ESP + 0x2c]
+0050ceb8  FSTP float ptr [ESP + 0x30]
+0050cebc  CALL 0x00504210
+0050cec1  XOR ECX,ECX
+0050cec3  ADD ESP,0x8
+0050cec6  TEST EAX,EAX
+0050cec8  MOV dword ptr [ESP + 0x1c],EAX
+0050cecc  MOV dword ptr [ESP + 0x10],ECX
+0050ced0  JLE 0x0050cfb8
+0050ced6  MOV EDI,dword ptr [ESP + ECX*0x4 + 0x30]
+0050ceda  MOV EAX,dword ptr [EDI + 0xc]
+0050cedd  TEST EAX,EAX
+0050cedf  JNZ 0x0050cf9f
+0050cee5  MOV AL,[0x008f86ec]
+0050ceea  TEST AL,AL
+0050ceec  JZ 0x0050cf9f
+0050cef2  MOV EDX,dword ptr [EDI]
+0050cef4  PUSH EDX
+0050cef5  PUSH 0xaba86e60
+0050cefa  CALL 0x00455fd0
+0050ceff  ADD ESP,0x8
+0050cf02  TEST EAX,EAX
+0050cf04  JZ 0x0050cf9f
+0050cf0a  PUSH 0xc000000
+0050cf0f  PUSH EAX
+0050cf10  MOV ECX,0x9166c0
+0050cf15  CALL 0x0050c7b0
+0050cf1a  MOV ESI,EAX
+0050cf1c  TEST ESI,ESI
+0050cf1e  JZ 0x0050cf9f
+0050cf20  LEA EAX,[EDI + 0x10]
+0050cf23  PUSH EAX
+0050cf24  MOV dword ptr [ESP + 0x1c],EAX
+0050cf28  LEA EAX,[ESI + 0x20]
+0050cf2b  MOV dword ptr [ESI + 0x60],EDI
+0050cf2e  MOV dword ptr [ESI + 0x6c],0x4fdfd0
+0050cf35  PUSH EAX
+0050cf36  MOV dword ptr [EDI + 0xc],ESI
+0050cf39  CALL 0x00444fe0
+0050cf3e  MOV EDI,dword ptr [ESI + 0x8]
+0050cf41  LEA EBX,[ESI + 0x8]
+0050cf44  ADD ESP,0x8
+0050cf47  CMP EDI,EBX
+0050cf49  JZ 0x0050cf67
+0050cf4b  JMP 0x0050cf50
+0050cf50  MOV ECX,dword ptr [ESP + 0x18]
+0050cf54  PUSH ECX
+0050cf55  LEA EDX,[EDI + 0x20]
+0050cf58  PUSH EDX
+0050cf59  CALL 0x00444fe0
+0050cf5e  MOV EDI,dword ptr [EDI]
+0050cf60  ADD ESP,0x8
+0050cf63  CMP EDI,EBX
+0050cf65  JNZ 0x0050cf50
+0050cf67  MOV EDI,dword ptr [ESI + 0x18]
+0050cf6a  MOV EAX,dword ptr [EBX]
+0050cf6c  MOV EDX,0x1
+0050cf71  OR EDI,EDX
+0050cf73  CMP EAX,EBX
+0050cf75  MOV dword ptr [ESI + 0x18],EDI
+0050cf78  JZ 0x0050cf9f
+0050cf7a  LEA EBX,[EBX]
+0050cf80  MOV ECX,dword ptr [EAX + 0x7c]
+0050cf83  MOV ESI,dword ptr [ECX + 0x4]
+0050cf86  TEST ESI,ESI
+0050cf88  JZ 0x0050cf99
+0050cf8a  MOV ECX,dword ptr [ECX + 0x8]
+0050cf8d  CMP byte ptr [ECX + 0x112],0x0
+0050cf94  JZ 0x0050cf99
+0050cf96  OR dword ptr [EAX + 0x18],EDX
+0050cf99  MOV EAX,dword ptr [EAX]
+0050cf9b  CMP EAX,EBX
+0050cf9d  JNZ 0x0050cf80
+0050cf9f  MOV ECX,dword ptr [ESP + 0x10]
+0050cfa3  MOV EAX,dword ptr [ESP + 0x1c]
+0050cfa7  INC ECX
+0050cfa8  CMP ECX,EAX
+0050cfaa  MOV dword ptr [ESP + 0x10],ECX
+0050cfae  JL 0x0050ced6
+0050cfb4  MOV EBX,dword ptr [ESP + 0x14]
+0050cfb8  MOV EDX,dword ptr [0x0092d87c]
+0050cfbe  MOV EAX,[0x0092d884]
+0050cfc3  ADD EBX,0x4
+0050cfc6  LEA ECX,[EDX + EAX*0x4]
+0050cfc9  CMP EBX,ECX
+0050cfcb  MOV dword ptr [ESP + 0x14],EBX
+0050cfcf  JNZ 0x0050ce50
+0050cfd5  CALL 0x005041a0
+0050cfda  POP EDI
+0050cfdb  POP ESI
+0050cfdc  POP EBX
+0050cfdd  MOV ESP,EBP
+0050cfdf  POP EBP
+0050cfe0  RET

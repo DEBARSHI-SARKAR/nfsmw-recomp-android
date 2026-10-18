@@ -1,0 +1,24 @@
+0045a8a0  PUSH ESI
+0045a8a1  MOV ESI,ECX
+0045a8a3  MOV EAX,dword ptr [ESI + 0x8]
+0045a8a6  TEST EAX,EAX
+0045a8a8  JZ 0x0045a8e3
+0045a8aa  MOV ECX,dword ptr [EAX + 0x1c]
+0045a8ad  CMP ECX,0x1
+0045a8b0  JBE 0x0045a8bf
+0045a8b2  DEC ECX
+0045a8b3  MOV dword ptr [EAX + 0x1c],ECX
+0045a8b6  MOV dword ptr [ESI + 0x8],0x0
+0045a8bd  POP ESI
+0045a8be  RET
+0045a8bf  MOV dword ptr [EAX + 0x1c],0x0
+0045a8c6  MOV ECX,dword ptr [0x0090dcbc]
+0045a8cc  MOV EDX,dword ptr [ECX + 0x4]
+0045a8cf  ADD EDX,0x38
+0045a8d2  PUSH EDX
+0045a8d3  PUSH EAX
+0045a8d4  CALL 0x00459f80
+0045a8d9  ADD ESP,0x8
+0045a8dc  MOV dword ptr [ESI + 0x8],0x0
+0045a8e3  POP ESI
+0045a8e4  RET

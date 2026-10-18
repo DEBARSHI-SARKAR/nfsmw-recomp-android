@@ -1,0 +1,6 @@
+007cab30  PUSH EBP
+007cab31  MOV EBP,ESP
+007cab33  MOV EAX,dword ptr [EBP + 0x8]
+007cab36  AND EAX,0x7f
+007cab39  POP EBP
+007cab3a  RET

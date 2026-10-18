@@ -1,0 +1,6 @@
+004b1d60  LEA EAX,[ECX + 0x40]
+004b1d63  MOV ECX,dword ptr [ESP + 0x4]
+004b1d67  TEST ECX,ECX
+004b1d69  JZ 0x004b1d71
+004b1d6b  MOV dword ptr [ECX],0x40
+004b1d71  RET 0x4

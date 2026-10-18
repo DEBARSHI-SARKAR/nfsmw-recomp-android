@@ -1,0 +1,19 @@
+005f7d00  PUSH ESI
+005f7d01  PUSH EDI
+005f7d02  MOV EDI,ECX
+005f7d04  LEA ESI,[EDI + 0x4]
+005f7d07  MOV ECX,ESI
+005f7d09  CALL 0x005e6e40
+005f7d0e  MOV dword ptr [ESI + 0x4],EAX
+005f7d11  MOV byte ptr [EAX + 0xf],0x1
+005f7d15  MOV EAX,dword ptr [ESI + 0x4]
+005f7d18  MOV dword ptr [EAX + 0x4],EAX
+005f7d1b  MOV EAX,dword ptr [ESI + 0x4]
+005f7d1e  MOV dword ptr [EAX],EAX
+005f7d20  MOV EAX,dword ptr [ESI + 0x4]
+005f7d23  MOV dword ptr [EAX + 0x8],EAX
+005f7d26  MOV EAX,EDI
+005f7d28  POP EDI
+005f7d29  MOV dword ptr [ESI + 0x8],0x0
+005f7d30  POP ESI
+005f7d31  RET

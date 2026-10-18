@@ -1,0 +1,8 @@
+00768b90  MOV ECX,dword ptr [0x009b3888]
+00768b96  TEST ECX,ECX
+00768b98  JZ 0x00768ba0
+00768b9a  MOV EAX,dword ptr [ECX]
+00768b9c  PUSH 0x1
+00768b9e  CALL dword ptr [EAX]
+00768ba0  MOV dword ptr [0x009b3888],0x0
+00768baa  RET

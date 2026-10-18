@@ -1,0 +1,11 @@
+005b2c30  MOV EAX,dword ptr [ECX + 0x8]
+005b2c33  TEST EAX,EAX
+005b2c35  JZ 0x005b2c4c
+005b2c37  MOV ECX,dword ptr [ESP + 0x4]
+005b2c3b  JMP 0x005b2c40
+005b2c40  CMP dword ptr [EAX + 0x24],ECX
+005b2c43  JZ 0x005b2c4c
+005b2c45  MOV EAX,dword ptr [EAX + 0x4]
+005b2c48  TEST EAX,EAX
+005b2c4a  JNZ 0x005b2c40
+005b2c4c  RET 0x4

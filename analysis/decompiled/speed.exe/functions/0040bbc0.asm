@@ -1,0 +1,13 @@
+0040bbc0  MOV EAX,dword ptr [ECX + 0x4]
+0040bbc3  TEST EAX,EAX
+0040bbc5  JNZ 0x0040bbc8
+0040bbc7  RET
+0040bbc8  MOV ECX,dword ptr [ECX + 0x8]
+0040bbcb  SUB ECX,EAX
+0040bbcd  MOV EAX,0x2aaaaaab
+0040bbd2  IMUL ECX
+0040bbd4  SAR EDX,0x1
+0040bbd6  MOV EAX,EDX
+0040bbd8  SHR EAX,0x1f
+0040bbdb  ADD EAX,EDX
+0040bbdd  RET

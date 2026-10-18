@@ -1,0 +1,6 @@
+00625160  MOV EAX,ECX
+00625162  MOV ECX,dword ptr [ESP + 0x4]
+00625166  MOV dword ptr [EAX + 0x4],0x10
+0062516d  MOV dword ptr [EAX],0x8a7514
+00625173  MOV dword ptr [EAX + 0x8],ECX
+00625176  RET 0x4

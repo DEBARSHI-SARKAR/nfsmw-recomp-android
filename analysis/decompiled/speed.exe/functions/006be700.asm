@@ -1,0 +1,9 @@
+006be700  MOV EAX,dword ptr [ESP + 0xc]
+006be704  MOV ECX,dword ptr [ESP + 0x8]
+006be708  MOV EDX,dword ptr [ESP + 0x4]
+006be70c  PUSH EAX
+006be70d  PUSH ECX
+006be70e  PUSH EDX
+006be70f  CALL 0x006d1260
+006be714  ADD ESP,0xc
+006be717  RET 0xc

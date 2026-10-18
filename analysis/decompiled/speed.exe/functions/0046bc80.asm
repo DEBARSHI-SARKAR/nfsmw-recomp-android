@@ -1,0 +1,33 @@
+0046bc80  FLD float ptr [0x0089096c]
+0046bc86  FDIV float ptr [ECX + 0x24]
+0046bc89  FLD ST0
+0046bc8b  FMUL float ptr [ECX + 0x24]
+0046bc8e  FLD ST0
+0046bc90  FMUL float ptr [ECX + 0x10]
+0046bc93  FMUL float ptr [0x008945ec]
+0046bc99  FLD float ptr [ECX + 0x14]
+0046bc9c  FADD ST0,ST0
+0046bc9e  FADDP
+0046bca0  FMUL ST1
+0046bca2  FADD float ptr [ECX + 0x18]
+0046bca5  FMULP ST2
+0046bca7  FSTP ST0
+0046bca9  FCOM float ptr [0x00890968]
+0046bcaf  FLD ST0
+0046bcb1  FNSTSW AX
+0046bcb3  TEST AH,0x5
+0046bcb6  JP 0x0046bcba
+0046bcb8  FCHS
+0046bcba  FCOM float ptr [ESP + 0x4]
+0046bcbe  FNSTSW AX
+0046bcc0  TEST AH,0x41
+0046bcc3  JNZ 0x0046bcd6
+0046bcc5  FDIV ST0,ST1
+0046bcc7  FMUL float ptr [ESP + 0x4]
+0046bccb  FMUL float ptr [ECX + 0x24]
+0046bcce  FSTP float ptr [ECX + 0xc]
+0046bcd1  FSTP ST0
+0046bcd3  RET 0x4
+0046bcd6  FSTP ST0
+0046bcd8  FSTP ST0
+0046bcda  RET 0x4

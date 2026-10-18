@@ -1,0 +1,16 @@
+007ed4db  MOV ECX,dword ptr [0x009bb13c]
+007ed4e1  PUSH ESI
+007ed4e2  PUSH EDI
+007ed4e3  ADD ECX,0x34
+007ed4e6  CALL 0x007ec1bd
+007ed4eb  MOV ESI,dword ptr [0x009bb13c]
+007ed4f1  LEA ECX,[ESI + 0x28]
+007ed4f4  CALL 0x007ee583
+007ed4f9  LEA ECX,[ESI + 0x34]
+007ed4fc  MOV EDI,EAX
+007ed4fe  CALL 0x007ec1c8
+007ed503  OR dword ptr [EDI + 0x8],0xffffffff
+007ed507  MOV EAX,EDI
+007ed509  POP EDI
+007ed50a  POP ESI
+007ed50b  RET

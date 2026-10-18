@@ -1,0 +1,2 @@
+004fb000  XOR AL,AL
+004fb002  RET

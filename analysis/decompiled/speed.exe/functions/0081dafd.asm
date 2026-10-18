@@ -1,0 +1,5 @@
+0081dafd  CALL 0x008224d5
+0081db02  MOV ECX,dword ptr [ESP + 0x4]
+0081db06  SHL ECX,0x5
+0081db09  LEA EAX,[EAX + ECX*0x1 + 0x9c]
+0081db10  RET

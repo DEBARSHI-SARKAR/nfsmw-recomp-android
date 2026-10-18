@@ -1,0 +1,18 @@
+004102f0  PUSH EBP
+004102f1  MOV EBP,ESP
+004102f3  FLD float ptr [ECX]
+004102f5  MOV EAX,dword ptr [EBP + 0xc]
+004102f8  FSUB float ptr [EAX]
+004102fa  AND ESP,0xfffffff0
+004102fd  FLD float ptr [ECX + 0x4]
+00410300  FSUB float ptr [EAX + 0x4]
+00410303  FLD float ptr [ECX + 0x8]
+00410306  FSUB float ptr [EAX + 0x8]
+00410309  MOV EAX,dword ptr [EBP + 0x8]
+0041030c  FXCH ST2
+0041030e  FSTP float ptr [EAX]
+00410310  FSTP float ptr [EAX + 0x4]
+00410313  FSTP float ptr [EAX + 0x8]
+00410316  MOV ESP,EBP
+00410318  POP EBP
+00410319  RET 0x8

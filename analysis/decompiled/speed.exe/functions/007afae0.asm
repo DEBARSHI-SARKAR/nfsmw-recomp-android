@@ -1,0 +1,38 @@
+007afae0  PUSH -0x1
+007afae2  PUSH 0x883088
+007afae7  MOV EAX,FS:[0x0]
+007afaed  PUSH EAX
+007afaee  MOV dword ptr FS:[0x0],ESP
+007afaf5  SUB ESP,0x14
+007afaf8  MOV EAX,dword ptr [ECX + 0x4]
+007afafb  MOV ECX,dword ptr [EAX + 0x8]
+007afafe  PUSH EBX
+007afaff  PUSH 0x0
+007afb01  PUSH 0x0
+007afb03  PUSH ECX
+007afb04  LEA ECX,[ESP + 0x10]
+007afb08  CALL 0x004e4ea0
+007afb0d  PUSH 0x1
+007afb0f  LEA EDX,[ESP + 0x8]
+007afb13  PUSH 0x5
+007afb15  PUSH EDX
+007afb16  MOV dword ptr [ESP + 0x2c],0x0
+007afb1e  CALL 0x00678ad0
+007afb23  LEA EAX,[ESP + 0x10]
+007afb27  PUSH EAX
+007afb28  CALL 0x00672f50
+007afb2d  ADD ESP,0x10
+007afb30  MOV EBX,EAX
+007afb32  DEC EBX
+007afb33  NEG EBX
+007afb35  SBB BL,BL
+007afb37  LEA ECX,[ESP + 0x4]
+007afb3b  INC BL
+007afb3d  MOV dword ptr [ESP + 0x20],0xffffffff
+007afb45  CALL 0x0045a430
+007afb4a  MOV ECX,dword ptr [ESP + 0x18]
+007afb4e  MOV AL,BL
+007afb50  POP EBX
+007afb51  MOV dword ptr FS:[0x0],ECX
+007afb58  ADD ESP,0x20
+007afb5b  RET

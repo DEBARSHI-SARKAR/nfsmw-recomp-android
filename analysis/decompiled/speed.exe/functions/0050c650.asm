@@ -1,0 +1,72 @@
+0050c650  PUSH -0x1
+0050c652  PUSH 0x86e0eb
+0050c657  MOV EAX,FS:[0x0]
+0050c65d  PUSH EAX
+0050c65e  MOV dword ptr FS:[0x0],ESP
+0050c665  PUSH ECX
+0050c666  PUSH EBX
+0050c667  PUSH EBP
+0050c668  PUSH ESI
+0050c669  MOV ESI,ECX
+0050c66b  LEA EAX,[ESI + 0x8]
+0050c66e  PUSH EDI
+0050c66f  MOV dword ptr [ESP + 0x10],ESI
+0050c673  MOV dword ptr [EAX],EAX
+0050c675  MOV dword ptr [EAX + 0x4],EAX
+0050c678  MOV EBX,dword ptr [ESP + 0x24]
+0050c67c  XOR EDI,EDI
+0050c67e  PUSH EBX
+0050c67f  MOV ECX,0x9166c0
+0050c684  MOV dword ptr [ESP + 0x20],EDI
+0050c688  CALL 0x0050bfb0
+0050c68d  MOV EBP,dword ptr [ESP + 0x28]
+0050c691  MOV dword ptr [ESI + 0x70],EAX
+0050c694  MOV word ptr [ESI + 0x1c],DI
+0050c698  MOV EAX,0x3f800000
+0050c69d  MOV dword ptr [ESI + 0x68],EAX
+0050c6a0  MOV ECX,EBP
+0050c6a2  OR ECX,0x10
+0050c6a5  MOV dword ptr [ESI + 0x18],ECX
+0050c6a8  MOV dword ptr [ESI + 0x20],EAX
+0050c6ab  MOV dword ptr [ESI + 0x24],EDI
+0050c6ae  MOV dword ptr [ESI + 0x28],EDI
+0050c6b1  MOV dword ptr [ESI + 0x2c],EDI
+0050c6b4  MOV dword ptr [ESI + 0x30],EDI
+0050c6b7  MOV dword ptr [ESI + 0x34],EAX
+0050c6ba  MOV dword ptr [ESI + 0x38],EDI
+0050c6bd  MOV dword ptr [ESI + 0x3c],EDI
+0050c6c0  MOV dword ptr [ESI + 0x40],EDI
+0050c6c3  MOV dword ptr [ESI + 0x44],EDI
+0050c6c6  MOV dword ptr [ESI + 0x48],EAX
+0050c6c9  MOV dword ptr [ESI + 0x4c],EDI
+0050c6cc  MOV dword ptr [ESI + 0x50],EDI
+0050c6cf  MOV dword ptr [ESI + 0x54],EDI
+0050c6d2  MOV dword ptr [ESI + 0x58],EDI
+0050c6d5  MOV dword ptr [ESI + 0x5c],EAX
+0050c6d8  MOV dword ptr [ESI + 0x60],EDI
+0050c6db  MOV dword ptr [ESI + 0x6c],EDI
+0050c6de  MOV dword ptr [ESI + 0x74],EDI
+0050c6e1  CALL 0x0045ce40
+0050c6e6  CMP EBX,EDI
+0050c6e8  MOV dword ptr [ESI + 0x78],EAX
+0050c6eb  MOV dword ptr [ESI + 0x7c],EDI
+0050c6ee  JZ 0x0050c70a
+0050c6f0  PUSH EBP
+0050c6f1  MOV ECX,ESI
+0050c6f3  CALL 0x0050c260
+0050c6f8  TEST AL,AL
+0050c6fa  MOV EAX,dword ptr [ESI + 0x18]
+0050c6fd  JZ 0x0050c704
+0050c6ff  OR EAX,0x8
+0050c702  JMP 0x0050c707
+0050c704  AND EAX,0xfffffff7
+0050c707  MOV dword ptr [ESI + 0x18],EAX
+0050c70a  MOV ECX,dword ptr [ESP + 0x14]
+0050c70e  POP EDI
+0050c70f  MOV EAX,ESI
+0050c711  POP ESI
+0050c712  POP EBP
+0050c713  POP EBX
+0050c714  MOV dword ptr FS:[0x0],ECX
+0050c71b  ADD ESP,0x10
+0050c71e  RET 0x8

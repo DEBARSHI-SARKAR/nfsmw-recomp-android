@@ -1,0 +1,83 @@
+00833cd9  PUSH EBP
+00833cda  MOV EBP,ESP
+00833cdc  SUB ESP,0x20
+00833cdf  CMP dword ptr [0x009c2be8],0x0
+00833ce6  JZ 0x00833dd5
+00833cec  LEA EAX,[EBP + -0x14]
+00833cef  PUSH EAX
+00833cf0  PUSH dword ptr [EBP + 0x8]
+00833cf3  CALL 0x00831cd3
+00833cf8  TEST EAX,EAX
+00833cfa  POP ECX
+00833cfb  POP ECX
+00833cfc  JZ 0x00833dd5
+00833d02  MOV EAX,dword ptr [EBP + -0x14]
+00833d05  AND dword ptr [EBP + -0x8],0x0
+00833d09  PUSH ESI
+00833d0a  MOV ESI,dword ptr [EAX + 0x4]
+00833d0d  MOV EAX,dword ptr [EAX]
+00833d0f  MOVZX EAX,byte ptr [EAX + 0x9]
+00833d13  PUSH EDI
+00833d14  MOVZX EDI,byte ptr [EBX + 0x2]
+00833d18  SHR EDI,0x2
+00833d1b  TEST EDI,EDI
+00833d1d  MOV dword ptr [EBP + -0x18],EAX
+00833d20  JLE 0x00833dd3
+00833d26  AND dword ptr [EBP + -0xc],0x0
+00833d2a  MOV EAX,dword ptr [EBP + -0x8]
+00833d2d  MOVZX EAX,byte ptr [EBX + EAX*0x1 + 0x8]
+00833d32  AND dword ptr [EBP + -0x4],0x0
+00833d36  LEA EAX,[EBX + EAX*0x4]
+00833d39  MOVSX ECX,byte ptr [EAX + 0x4]
+00833d3d  TEST ECX,ECX
+00833d3f  MOV dword ptr [EBP + -0x20],ECX
+00833d42  JLE 0x00833dc3
+00833d44  ADD EAX,0xd
+00833d47  MOV dword ptr [EBP + -0x10],EAX
+00833d4a  MOVZX EAX,byte ptr [EAX]
+00833d4d  CMP EAX,0xff
+00833d52  JZ 0x00833daf
+00833d54  PUSH EAX
+00833d55  PUSH dword ptr [EBP + 0xc]
+00833d58  CALL 0x00834ad8
+00833d5d  MOV ECX,dword ptr [EBP + -0xc]
+00833d60  MOV EDX,dword ptr [0x009c2c10]
+00833d66  MOV dword ptr [EBP + -0x1c],EAX
+00833d69  LEA EAX,[ESI + ESI*0x4]
+00833d6c  SHL EAX,0x5
+00833d6f  ADD EAX,ECX
+00833d71  MOVZX ECX,word ptr [EAX + 0x9c2c40]
+00833d78  MOVSX EAX,word ptr [EAX + 0x9c2c3c]
+00833d7f  MOV EAX,dword ptr [EDX + EAX*0x8 + 0x4]
+00833d83  PUSH ECX
+00833d84  PUSH EAX
+00833d85  CALL 0x008349d8
+00833d8a  ADD ESP,0x10
+00833d8d  TEST EAX,EAX
+00833d8f  JZ 0x00833daf
+00833d91  MOV ECX,dword ptr [EBP + -0x4]
+00833d94  MOV CL,byte ptr [ECX + EAX*0x1]
+00833d97  PUSH dword ptr [EBP + -0x18]
+00833d9a  XOR EDX,EDX
+00833d9c  INC EDX
+00833d9d  SHL EDX,CL
+00833d9f  PUSH EDX
+00833da0  PUSH dword ptr [EBP + -0x1c]
+00833da3  PUSH dword ptr [EBP + 0x8]
+00833da6  CALL dword ptr [0x009c2be8]
+00833dac  ADD ESP,0x10
+00833daf  INC dword ptr [EBP + -0x4]
+00833db2  MOV EAX,dword ptr [EBP + -0x10]
+00833db5  MOV ECX,dword ptr [EBP + -0x4]
+00833db8  ADD EAX,0x8
+00833dbb  CMP ECX,dword ptr [EBP + -0x20]
+00833dbe  MOV dword ptr [EBP + -0x10],EAX
+00833dc1  JL 0x00833d4a
+00833dc3  INC dword ptr [EBP + -0x8]
+00833dc6  ADD dword ptr [EBP + -0xc],0xc
+00833dca  CMP dword ptr [EBP + -0x8],EDI
+00833dcd  JL 0x00833d2a
+00833dd3  POP EDI
+00833dd4  POP ESI
+00833dd5  LEAVE
+00833dd6  RET

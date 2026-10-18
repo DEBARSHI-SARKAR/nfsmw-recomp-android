@@ -1,0 +1,23 @@
+007ecddf  PUSH EBP
+007ecde0  MOV EBP,ESP
+007ecde2  PUSH ESI
+007ecde3  PUSH EDI
+007ecde4  MOV EDI,dword ptr [EBP + 0x8]
+007ecde7  MOV ESI,dword ptr [EDI]
+007ecde9  CMP ESI,0x50
+007ecdec  JLE 0x007ecdf7
+007ecdee  PUSH ESI
+007ecdef  PUSH EDI
+007ecdf0  CALL 0x007f0df9
+007ecdf5  POP ECX
+007ecdf6  POP ECX
+007ecdf7  PUSH ESI
+007ecdf8  PUSH 0x9076d8
+007ecdfd  PUSH EDI
+007ecdfe  CALL 0x007f0e0f
+007ece03  ADD ESP,0xc
+007ece06  POP EDI
+007ece07  MOV AL,0x1
+007ece09  POP ESI
+007ece0a  POP EBP
+007ece0b  RET

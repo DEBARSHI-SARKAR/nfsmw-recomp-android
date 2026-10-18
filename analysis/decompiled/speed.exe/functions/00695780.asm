@@ -1,0 +1,3 @@
+00695780  MOV EAX,dword ptr [ECX]
+00695782  MOV dword ptr [EAX],0x0
+00695788  RET

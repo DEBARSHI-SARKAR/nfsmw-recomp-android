@@ -1,0 +1,34 @@
+00476ff0  MOV EAX,dword ptr [ECX + 0x80]
+00476ff6  XOR EDX,EDX
+00476ff8  CMP EAX,EDX
+00476ffa  JZ 0x004770aa
+00477000  CMP EAX,0x1
+00477003  JZ 0x00477096
+00477009  MOV EAX,dword ptr [ECX + 0x9c]
+0047700f  MOV dword ptr [ECX + 0xcc],EAX
+00477015  MOV EAX,dword ptr [ECX + 0xa0]
+0047701b  MOV dword ptr [ECX + 0xd0],EAX
+00477021  MOV dword ptr [ECX + 0xfc],EDX
+00477027  MOV dword ptr [ECX + 0x100],0x42340000
+00477031  FLD float ptr [ECX + 0xb4]
+00477037  FLD float ptr [ECX + 0xb8]
+0047703d  MOV EAX,dword ptr [ECX + 0xb0]
+00477043  MOV dword ptr [ECX + 0xe0],EAX
+00477049  FXCH
+0047704b  FSTP float ptr [ECX + 0xe4]
+00477051  FSTP float ptr [ECX + 0xe8]
+00477057  MOV dword ptr [ECX + 0x110],EDX
+0047705d  MOV dword ptr [ECX + 0x114],EDX
+00477063  MOV dword ptr [ECX + 0x118],0x3f400000
+0047706d  MOV EAX,dword ptr [ECX + 0xfc]
+00477073  PUSH EAX
+00477074  MOV EAX,dword ptr [ECX + 0xcc]
+0047707a  PUSH EAX
+0047707b  CALL 0x0046b980
+00477080  FSTP float ptr [ECX + 0xfc]
+00477086  MOV dword ptr [ECX + 0x134],EDX
+0047708c  MOV dword ptr [ECX + 0x138],0x3f0e147b
+00477096  MOV EDX,dword ptr [ESP + 0x4]
+0047709a  MOV dword ptr [ECX + 0x80],0x1
+004770a4  MOV dword ptr [ECX + 0x120],EDX
+004770aa  RET 0x4

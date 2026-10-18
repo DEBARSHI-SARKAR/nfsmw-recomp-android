@@ -1,0 +1,9 @@
+0087a808  CMP dword ptr [EBP + -0x10],0x0
+0087a80c  JZ 0x0087a820
+0087a812  MOV EAX,dword ptr [EBP + -0x10]
+0087a815  ADD EAX,0x48
+0087a818  MOV dword ptr [EBP + -0x14],EAX
+0087a81b  JMP 0x0087a827
+0087a820  MOV dword ptr [EBP + -0x14],0x0
+0087a827  MOV ECX,dword ptr [EBP + -0x14]
+0087a82a  JMP 0x0066edc0

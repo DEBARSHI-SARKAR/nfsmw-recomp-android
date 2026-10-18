@@ -1,0 +1,6 @@
+00418070  MOV dword ptr [ECX],0x891100
+00418076  MOV EAX,dword ptr [ECX + 0x4]
+00418079  MOV ECX,dword ptr [ECX + 0x8]
+0041807c  MOV dword ptr [ECX],EAX
+0041807e  MOV dword ptr [EAX + 0x4],ECX
+00418081  RET

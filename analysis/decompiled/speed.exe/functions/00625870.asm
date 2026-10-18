@@ -1,0 +1,4 @@
+00625870  MOV EAX,ECX
+00625872  MOV dword ptr [EAX + 0x4],0x10
+00625879  MOV dword ptr [EAX],0x8a76bc
+0062587f  RET

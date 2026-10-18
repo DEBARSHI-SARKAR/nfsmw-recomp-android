@@ -1,0 +1,45 @@
+005cef70  MOV EDX,dword ptr [ECX + 0x4]
+005cef73  PUSH EBX
+005cef74  MOV EBX,dword ptr [ECX + 0xc]
+005cef77  PUSH EBP
+005cef78  MOV EBP,EDX
+005cef7a  PUSH ESI
+005cef7b  SHR EBP,0x1
+005cef7d  XOR EAX,EAX
+005cef7f  AND EBP,0x1
+005cef82  PUSH EDI
+005cef83  MOV EDI,EBX
+005cef85  JZ 0x005cef8c
+005cef87  SHL EDI,0x4
+005cef8a  ADD EDI,ECX
+005cef8c  SHR EDX,0x5
+005cef8f  MOV ESI,EDX
+005cef91  SHL ESI,0x4
+005cef94  ADD ESI,EDI
+005cef96  MOV EDI,dword ptr [ECX + 0x8]
+005cef99  ADD EDI,EDX
+005cef9b  SHL EDI,0x4
+005cef9e  MOV EDI,EDI
+005cefa0  TEST EBP,EBP
+005cefa2  MOV EDX,EBX
+005cefa4  JZ 0x005cefab
+005cefa6  SHL EDX,0x4
+005cefa9  ADD EDX,ECX
+005cefab  ADD EDX,EDI
+005cefad  CMP ESI,EDX
+005cefaf  JZ 0x005cefd1
+005cefb1  TEST byte ptr [ESI + 0x4],0x1
+005cefb5  MOV EDX,dword ptr [ESI]
+005cefb7  JZ 0x005cefc5
+005cefb9  AND EDX,0xffff2020
+005cefbf  OR EDX,0x2020
+005cefc5  CMP EDX,dword ptr [ESP + 0x14]
+005cefc9  JNZ 0x005cefcc
+005cefcb  INC EAX
+005cefcc  ADD ESI,0x10
+005cefcf  JMP 0x005cefa0
+005cefd1  POP EDI
+005cefd2  POP ESI
+005cefd3  POP EBP
+005cefd4  POP EBX
+005cefd5  RET 0x4

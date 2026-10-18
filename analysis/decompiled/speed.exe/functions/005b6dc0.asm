@@ -1,0 +1,16 @@
+005b6dc0  PUSH ESI
+005b6dc1  MOV ESI,ECX
+005b6dc3  MOV EAX,dword ptr [ESI]
+005b6dc5  CMP EAX,0x200
+005b6dca  JC 0x005b6de6
+005b6dcc  CMP EAX,0x204
+005b6dd1  JA 0x005b6de6
+005b6dd3  CMP EAX,0x203
+005b6dd8  JZ 0x005b6de6
+005b6dda  MOV EAX,dword ptr [ESI + 0x4]
+005b6ddd  PUSH EAX
+005b6dde  CALL 0x00652b10
+005b6de3  ADD ESP,0x4
+005b6de6  MOV dword ptr [ESI + 0x4],0x0
+005b6ded  POP ESI
+005b6dee  RET

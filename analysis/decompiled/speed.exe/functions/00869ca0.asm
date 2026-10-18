@@ -1,0 +1,10 @@
+00869ca0  MOV EAX,dword ptr [EBP + 0x4]
+00869ca3  IMUL EAX,EAX,0xc
+00869ca6  MOV ECX,dword ptr [EBP + -0x14]
+00869ca9  ADD EAX,dword ptr [ECX]
+00869cab  PUSH EAX
+00869cac  MOV EDX,dword ptr [EBP + -0x10]
+00869caf  PUSH EDX
+00869cb0  CALL 0x004511d0
+00869cb5  ADD ESP,0x8
+00869cb8  RET

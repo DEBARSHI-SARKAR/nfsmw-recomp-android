@@ -1,0 +1,2 @@
+004fca10  MOV EAX,[0x008f23e8]
+004fca15  RET

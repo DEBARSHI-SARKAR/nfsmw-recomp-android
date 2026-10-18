@@ -1,0 +1,7 @@
+004e4040  MOV AL,byte ptr [ECX + 0x34]
+004e4043  TEST AL,AL
+004e4045  JZ 0x004e404f
+004e4047  MOV ECX,dword ptr [ECX + 0x28]
+004e404a  MOV EAX,dword ptr [ECX]
+004e404c  JMP dword ptr [EAX + 0x8]
+004e404f  RET 0x8

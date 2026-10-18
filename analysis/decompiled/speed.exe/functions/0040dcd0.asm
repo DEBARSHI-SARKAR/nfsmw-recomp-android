@@ -1,0 +1,6 @@
+0040dcd0  MOV EAX,dword ptr [ESP + 0x4]
+0040dcd4  PUSH 0x890f10
+0040dcd9  PUSH EAX
+0040dcda  MOV ECX,0x925b30
+0040dcdf  CALL 0x005d29d0
+0040dce4  RET 0x4

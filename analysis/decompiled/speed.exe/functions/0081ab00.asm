@@ -1,0 +1,5 @@
+0081ab00  INC dword ptr [0x009c1ab4]
+0081ab06  JNS 0x0081ab12
+0081ab08  MOV dword ptr [0x009c1ab4],0x1
+0081ab12  MOV EAX,[0x009c1ab4]
+0081ab17  RET

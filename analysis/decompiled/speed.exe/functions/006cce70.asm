@@ -1,0 +1,2 @@
+006cce70  MOV EAX,0x8fc268
+006cce75  RET

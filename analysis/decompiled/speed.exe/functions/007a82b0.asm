@@ -1,0 +1,6 @@
+007a82b0  MOV ECX,dword ptr [ESP + 0x4]
+007a82b4  MOV EDX,dword ptr [ESP + 0x8]
+007a82b8  XOR EAX,EAX
+007a82ba  CMP ECX,EDX
+007a82bc  SETL AL
+007a82bf  RET 0x8

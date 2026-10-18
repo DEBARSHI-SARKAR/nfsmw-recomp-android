@@ -1,0 +1,2 @@
+0087e6e0  LEA ECX,[EBP + 0xfffffc20]
+0087e6e6  JMP 0x006e2a30

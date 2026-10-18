@@ -1,0 +1,5 @@
+007ccf50  PUSH EBP
+007ccf51  MOV EBP,ESP
+007ccf53  CALL dword ptr [0x00890200]
+007ccf59  POP EBP
+007ccf5a  RET 0x4

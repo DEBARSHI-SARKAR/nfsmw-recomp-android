@@ -1,0 +1,69 @@
+0042b070  SUB ESP,0x8
+0042b073  PUSH EBX
+0042b074  PUSH EBP
+0042b075  PUSH EDI
+0042b076  MOV EDI,ECX
+0042b078  MOV ECX,dword ptr [EDI + 0x4]
+0042b07b  TEST ECX,ECX
+0042b07d  MOV byte ptr [ESP + 0xf],0x0
+0042b082  MOV dword ptr [ESP + 0x10],0x0
+0042b08a  JZ 0x0042b09f
+0042b08c  MOV EAX,dword ptr [ECX]
+0042b08e  CALL dword ptr [EAX + 0xc]
+0042b091  MOV ECX,dword ptr [EDI + 0x4]
+0042b094  MOV EDX,dword ptr [ECX + 0x44]
+0042b097  MOV byte ptr [ESP + 0xf],AL
+0042b09b  MOV dword ptr [ESP + 0x10],EDX
+0042b09f  MOV EAX,dword ptr [EDI + 0xc]
+0042b0a2  MOV EBP,dword ptr [EAX]
+0042b0a4  XOR EBX,EBX
+0042b0a6  CMP EBP,EAX
+0042b0a8  JZ 0x0042b119
+0042b0aa  PUSH ESI
+0042b0ab  JMP 0x0042b0b0
+0042b0b0  MOV ESI,dword ptr [EBP + 0x8]
+0042b0b3  CMP ESI,dword ptr [EDI + 0x4]
+0042b0b6  JZ 0x0042b0ec
+0042b0b8  MOV ECX,dword ptr [ESP + 0x1c]
+0042b0bc  MOV EAX,dword ptr [ESI]
+0042b0be  PUSH ECX
+0042b0bf  MOV ECX,ESI
+0042b0c1  CALL dword ptr [EAX + 0x8]
+0042b0c4  TEST AL,AL
+0042b0c6  JZ 0x0042b0ec
+0042b0c8  MOV AL,byte ptr [ESP + 0x13]
+0042b0cc  TEST AL,AL
+0042b0ce  JNZ 0x0042b0de
+0042b0d0  FLD float ptr [ESI + 0x44]
+0042b0d3  FCOMP float ptr [ESP + 0x14]
+0042b0d7  FNSTSW AX
+0042b0d9  TEST AH,0x1
+0042b0dc  JNZ 0x0042b0ec
+0042b0de  MOV EDX,dword ptr [ESI + 0x44]
+0042b0e1  MOV EBX,ESI
+0042b0e3  MOV byte ptr [ESP + 0x13],0x0
+0042b0e8  MOV dword ptr [ESP + 0x14],EDX
+0042b0ec  MOV EBP,dword ptr [EBP]
+0042b0ef  CMP EBP,dword ptr [EDI + 0xc]
+0042b0f2  JNZ 0x0042b0b0
+0042b0f4  TEST EBX,EBX
+0042b0f6  POP ESI
+0042b0f7  JZ 0x0042b119
+0042b0f9  MOV ECX,dword ptr [EDI + 0x4]
+0042b0fc  TEST ECX,ECX
+0042b0fe  JZ 0x0042b10a
+0042b100  MOV EDX,dword ptr [ESP + 0x18]
+0042b104  MOV EAX,dword ptr [ECX]
+0042b106  PUSH EDX
+0042b107  CALL dword ptr [EAX + 0x18]
+0042b10a  MOV ECX,dword ptr [ESP + 0x18]
+0042b10e  MOV dword ptr [EDI + 0x4],EBX
+0042b111  MOV EAX,dword ptr [EBX]
+0042b113  PUSH ECX
+0042b114  MOV ECX,EBX
+0042b116  CALL dword ptr [EAX + 0x14]
+0042b119  POP EDI
+0042b11a  POP EBP
+0042b11b  POP EBX
+0042b11c  ADD ESP,0x8
+0042b11f  RET 0x4

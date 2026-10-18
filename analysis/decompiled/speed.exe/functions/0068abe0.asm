@@ -1,0 +1,12 @@
+0068abe0  PUSH ESI
+0068abe1  MOV ESI,ECX
+0068abe3  MOV ECX,dword ptr [ESP + 0x8]
+0068abe7  PUSH ESI
+0068abe8  PUSH 0x4040d0
+0068abed  MOV dword ptr [ESI],0x890970
+0068abf3  MOV dword ptr [ESI + 0x4],ECX
+0068abf6  CALL 0x005d7930
+0068abfb  MOV dword ptr [ESI],0x8ab02c
+0068ac01  MOV EAX,ESI
+0068ac03  POP ESI
+0068ac04  RET 0x4

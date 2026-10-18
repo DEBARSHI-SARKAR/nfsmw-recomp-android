@@ -1,0 +1,2 @@
+00528b20  MOV dword ptr [ECX],0x89b8c8
+00528b26  RET

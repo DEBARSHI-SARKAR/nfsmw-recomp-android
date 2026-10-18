@@ -1,0 +1,26 @@
+006fe4b0  PUSH -0x1
+006fe4b2  PUSH 0x87f888
+006fe4b7  MOV EAX,FS:[0x0]
+006fe4bd  PUSH EAX
+006fe4be  MOV dword ptr FS:[0x0],ESP
+006fe4c5  PUSH ECX
+006fe4c6  MOV EAX,dword ptr [ESP + 0x14]
+006fe4ca  PUSH ESI
+006fe4cb  MOV ESI,ECX
+006fe4cd  PUSH EAX
+006fe4ce  MOV dword ptr [ESP + 0x8],ESI
+006fe4d2  CALL 0x004523c0
+006fe4d7  MOV EAX,dword ptr [ESI + 0x8]
+006fe4da  TEST EAX,EAX
+006fe4dc  MOV dword ptr [ESP + 0x10],0x0
+006fe4e4  JNZ 0x006fe4f3
+006fe4e6  PUSH 0x40
+006fe4e8  CALL 0x006269b0
+006fe4ed  ADD ESP,0x4
+006fe4f0  MOV dword ptr [ESI + 0x8],EAX
+006fe4f3  MOV ECX,dword ptr [ESP + 0x8]
+006fe4f7  MOV EAX,ESI
+006fe4f9  POP ESI
+006fe4fa  MOV dword ptr FS:[0x0],ECX
+006fe501  ADD ESP,0x10
+006fe504  RET 0x4

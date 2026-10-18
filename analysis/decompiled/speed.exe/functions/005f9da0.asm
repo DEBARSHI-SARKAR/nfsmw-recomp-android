@@ -1,0 +1,70 @@
+005f9da0  SUB ESP,0x10
+005f9da3  PUSH EBP
+005f9da4  PUSH ESI
+005f9da5  MOV ESI,dword ptr [ESP + 0x1c]
+005f9da9  MOV EAX,dword ptr [ESI]
+005f9dab  PUSH EDI
+005f9dac  MOV EDI,ECX
+005f9dae  MOV ECX,ESI
+005f9db0  CALL dword ptr [EAX + 0x4]
+005f9db3  LEA ECX,[EDI + 0x28]
+005f9db6  PUSH ECX
+005f9db7  LEA EDX,[ESP + 0x1c]
+005f9dbb  PUSH EDX
+005f9dbc  LEA ECX,[EDI + 0x30]
+005f9dbf  MOV dword ptr [ESP + 0x18],EAX
+005f9dc3  MOV dword ptr [ESP + 0x14],0x0
+005f9dcb  MOV byte ptr [ESP + 0x28],0x0
+005f9dd0  CALL 0x005ec5b0
+005f9dd5  MOV EAX,dword ptr [EAX]
+005f9dd7  MOV EBP,dword ptr [EAX + 0x14]
+005f9dda  CMP EBP,dword ptr [EAX + 0x18]
+005f9ddd  MOV dword ptr [ESP + 0x14],EAX
+005f9de1  JZ 0x005f9e59
+005f9de3  PUSH EBX
+005f9de4  MOV EBX,dword ptr [EBP]
+005f9de7  MOV EAX,dword ptr [EBX + 0xc]
+005f9dea  MOV ECX,dword ptr [EAX + 0x4]
+005f9ded  CMP ECX,dword ptr [ESI + 0x18]
+005f9df0  JNZ 0x005f9e30
+005f9df2  PUSH ESI
+005f9df3  MOV ECX,EBX
+005f9df5  MOV dword ptr [ESI + 0x2c],EDI
+005f9df8  MOV dword ptr [ESI + 0x30],EBX
+005f9dfb  CALL 0x005dd410
+005f9e00  TEST AL,AL
+005f9e02  JZ 0x005f9e30
+005f9e04  MOV ECX,ESI
+005f9e06  CALL 0x00609fe0
+005f9e0b  MOV AL,byte ptr [ESP + 0x24]
+005f9e0f  TEST AL,AL
+005f9e11  JNZ 0x005f9e28
+005f9e13  MOV EDX,dword ptr [ESP + 0x14]
+005f9e17  PUSH EDX
+005f9e18  MOV ECX,EDI
+005f9e1a  CALL 0x005f9d30
+005f9e1f  MOV dword ptr [ESP + 0x10],EAX
+005f9e23  MOV byte ptr [ESP + 0x24],0x1
+005f9e28  PUSH ESI
+005f9e29  MOV ECX,EBX
+005f9e2b  CALL 0x005dd520
+005f9e30  MOV EAX,dword ptr [ESP + 0x18]
+005f9e34  MOV ECX,dword ptr [EAX + 0x18]
+005f9e37  ADD EBP,0x4
+005f9e3a  CMP EBP,ECX
+005f9e3c  JNZ 0x005f9de4
+005f9e3e  MOV AL,byte ptr [ESP + 0x24]
+005f9e42  TEST AL,AL
+005f9e44  POP EBX
+005f9e45  JZ 0x005f9e59
+005f9e47  MOV ECX,dword ptr [ESP + 0xc]
+005f9e4b  MOV EDX,dword ptr [ESP + 0x10]
+005f9e4f  PUSH ECX
+005f9e50  PUSH EDX
+005f9e51  CALL 0x00605a60
+005f9e56  ADD ESP,0x8
+005f9e59  POP EDI
+005f9e5a  POP ESI
+005f9e5b  POP EBP
+005f9e5c  ADD ESP,0x10
+005f9e5f  RET 0x4

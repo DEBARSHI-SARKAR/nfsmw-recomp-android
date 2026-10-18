@@ -1,0 +1,25 @@
+004afe40  PUSH ESI
+004afe41  PUSH 0x0
+004afe43  MOV ESI,ECX
+004afe45  MOV ECX,dword ptr [ESP + 0xc]
+004afe49  PUSH 0xbec30f42
+004afe4e  CALL 0x00454810
+004afe53  TEST EAX,EAX
+004afe55  JNZ 0x004afe61
+004afe57  PUSH 0x10
+004afe59  CALL 0x006269b0
+004afe5e  ADD ESP,0x4
+004afe61  MOV EAX,dword ptr [EAX + 0xc]
+004afe64  TEST EAX,EAX
+004afe66  JZ 0x004afe8c
+004afe68  MOV DL,byte ptr [EAX]
+004afe6a  XOR ECX,ECX
+004afe6c  TEST DL,DL
+004afe6e  SETZ CL
+004afe71  TEST CL,CL
+004afe73  JNZ 0x004afe8c
+004afe75  MOV dword ptr [ESI + 0xf8],EAX
+004afe7b  OR dword ptr [ESI + 0xec],0x200
+004afe85  MOV byte ptr [ESI + 0xfc],0x1
+004afe8c  POP ESI
+004afe8d  RET 0x4

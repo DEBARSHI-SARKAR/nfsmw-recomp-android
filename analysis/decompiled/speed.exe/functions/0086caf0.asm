@@ -1,0 +1,5 @@
+0086caf0  MOV EAX,dword ptr [EBP + -0x10]
+0086caf3  PUSH EAX
+0086caf4  CALL 0x004d4f90
+0086caf9  POP ECX
+0086cafa  RET

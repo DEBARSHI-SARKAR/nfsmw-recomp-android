@@ -1,0 +1,14 @@
+0083e3b0  MOV ECX,dword ptr [ESP + 0x4]
+0083e3b4  TEST ECX,ECX
+0083e3b6  JZ 0x0083e3ce
+0083e3b8  MOV EAX,dword ptr [ESP + 0x8]
+0083e3bc  TEST EAX,EAX
+0083e3be  JL 0x0083e3ce
+0083e3c0  CMP EAX,dword ptr [ECX + 0x18]
+0083e3c3  JGE 0x0083e3ce
+0083e3c5  MOV ECX,dword ptr [ECX + 0x40]
+0083e3c8  MOV EDX,dword ptr [ECX + EAX*0x4]
+0083e3cb  MOV EAX,dword ptr [EDX]
+0083e3cd  RET
+0083e3ce  XOR EAX,EAX
+0083e3d0  RET

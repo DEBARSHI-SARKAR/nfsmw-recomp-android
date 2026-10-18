@@ -1,0 +1,16 @@
+0066a460  FLD float ptr [ECX + 0xb0]
+0066a466  FCOMP float ptr [0x00890968]
+0066a46c  FNSTSW AX
+0066a46e  TEST AH,0x41
+0066a471  JNZ 0x0066a497
+0066a473  FLD float ptr [ESP + 0x4]
+0066a477  FCOMP float ptr [ECX + 0xb0]
+0066a47d  FNSTSW AX
+0066a47f  TEST AH,0x5
+0066a482  JP 0x0066a497
+0066a484  FLD float ptr [ECX + 0xb0]
+0066a48a  FSUB float ptr [ESP + 0x4]
+0066a48e  FSTP float ptr [ECX + 0xb0]
+0066a494  RET 0x4
+0066a497  MOV dword ptr [ECX + 0xb0],0x0
+0066a4a1  RET 0x4

@@ -1,0 +1,11 @@
+005dc720  MOV EDX,dword ptr [ESP + 0x8]
+005dc724  TEST EDX,EDX
+005dc726  MOV EAX,dword ptr [ESP + 0x4]
+005dc72a  FLD float ptr [ECX + EAX*0x4 + 0x443c]
+005dc731  JLE 0x005dc745
+005dc733  TEST EAX,EAX
+005dc735  JNZ 0x005dc745
+005dc737  FLD float ptr [ECX + 0x448c]
+005dc73d  FSUB float ptr [ECX + 0x4488]
+005dc743  FADDP
+005dc745  RET 0x8

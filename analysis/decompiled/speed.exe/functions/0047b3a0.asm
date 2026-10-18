@@ -1,0 +1,28 @@
+0047b3a0  PUSH ECX
+0047b3a1  PUSH ESI
+0047b3a2  MOV ESI,ECX
+0047b3a4  MOV ECX,dword ptr [0x009885c8]
+0047b3aa  TEST ECX,ECX
+0047b3ac  MOV dword ptr [ESP + 0x4],0x0
+0047b3b4  JZ 0x0047b3df
+0047b3b6  MOV EAX,dword ptr [ECX]
+0047b3b8  CALL dword ptr [EAX + 0x48]
+0047b3bb  MOV ECX,EAX
+0047b3bd  TEST ECX,ECX
+0047b3bf  JZ 0x0047b3df
+0047b3c1  FLD float ptr [ESI + 0x58]
+0047b3c4  FCOMP float ptr [0x00890968]
+0047b3ca  FNSTSW AX
+0047b3cc  TEST AH,0x41
+0047b3cf  JNZ 0x0047b3df
+0047b3d1  MOV EDX,dword ptr [ECX]
+0047b3d3  CALL dword ptr [EDX + 0x28]
+0047b3d6  FSUB float ptr [ESI + 0x54]
+0047b3d9  FDIV float ptr [ESI + 0x58]
+0047b3dc  POP ESI
+0047b3dd  POP ECX
+0047b3de  RET
+0047b3df  FLD float ptr [ESP + 0x4]
+0047b3e3  POP ESI
+0047b3e4  POP ECX
+0047b3e5  RET

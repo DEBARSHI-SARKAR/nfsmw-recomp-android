@@ -1,0 +1,24 @@
+004ea770  PUSH EDI
+004ea771  MOV EDI,ECX
+004ea773  MOV ECX,dword ptr [EDI + 0x4]
+004ea776  MOV EAX,dword ptr [ECX]
+004ea778  MOV dword ptr [ECX],ECX
+004ea77a  MOV ECX,dword ptr [EDI + 0x4]
+004ea77d  MOV dword ptr [ECX + 0x4],ECX
+004ea780  CMP EAX,dword ptr [EDI + 0x4]
+004ea783  MOV dword ptr [EDI + 0x8],0x0
+004ea78a  JZ 0x004ea7a9
+004ea78c  PUSH ESI
+004ea78d  LEA ECX,[ECX]
+004ea790  MOV ESI,dword ptr [EAX]
+004ea792  PUSH 0x0
+004ea794  PUSH 0xc
+004ea796  PUSH EAX
+004ea797  MOV ECX,0x925b30
+004ea79c  CALL 0x005d0370
+004ea7a1  CMP ESI,dword ptr [EDI + 0x4]
+004ea7a4  MOV EAX,ESI
+004ea7a6  JNZ 0x004ea790
+004ea7a8  POP ESI
+004ea7a9  POP EDI
+004ea7aa  RET

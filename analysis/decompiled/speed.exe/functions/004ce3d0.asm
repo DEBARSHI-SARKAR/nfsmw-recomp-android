@@ -1,0 +1,27 @@
+004ce3d0  MOV EAX,dword ptr [ECX + 0x4]
+004ce3d3  MOV EDX,dword ptr [ECX + 0x8]
+004ce3d6  CMP EAX,EDX
+004ce3d8  JZ 0x004ce3f4
+004ce3da  PUSH ESI
+004ce3db  MOV ESI,dword ptr [ESP + 0x8]
+004ce3df  NOP
+004ce3e0  CMP dword ptr [EAX],ESI
+004ce3e2  JZ 0x004ce3ed
+004ce3e4  ADD EAX,0x8
+004ce3e7  CMP EAX,EDX
+004ce3e9  JNZ 0x004ce3e0
+004ce3eb  JMP 0x004ce3f3
+004ce3ed  MOV EDX,dword ptr [ESP + 0xc]
+004ce3f1  MOV dword ptr [EAX],EDX
+004ce3f3  POP ESI
+004ce3f4  MOV EAX,dword ptr [ECX + 0x8]
+004ce3f7  MOV ECX,dword ptr [ECX + 0x4]
+004ce3fa  MOV EDX,EAX
+004ce3fc  SUB EDX,ECX
+004ce3fe  SAR EDX,0x3
+004ce401  PUSH EDX
+004ce402  PUSH EAX
+004ce403  PUSH ECX
+004ce404  CALL 0x004cd280
+004ce409  ADD ESP,0xc
+004ce40c  RET 0x8

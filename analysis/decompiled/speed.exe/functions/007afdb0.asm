@@ -1,0 +1,90 @@
+007afdb0  MOV EAX,dword ptr [ESP + 0x4]
+007afdb4  CMP EAX,0x201
+007afdb9  JG 0x007afdf0
+007afdbb  JZ 0x007afdea
+007afdbd  ADD EAX,0xfffffeff
+007afdc2  CMP EAX,0x4
+007afdc5  JA 0x007afed3
+007afdcb  JMP dword ptr [EAX*0x4 + 0x7afedc]
+007afdd2  MOV EAX,0x7c50498c
+007afdd7  RET
+007afdd8  MOV EAX,0x52012995
+007afddd  RET
+007afdde  MOV EAX,0x8a4699e1
+007afde3  RET
+007afde4  MOV EAX,0x830100f0
+007afde9  RET
+007afdea  MOV EAX,0x2f3ec04d
+007afdef  RET
+007afdf0  CMP EAX,0x301
+007afdf5  JG 0x007afe4b
+007afdf7  JZ 0x007afe45
+007afdf9  ADD EAX,0xfffffdfe
+007afdfe  CMP EAX,0x5
+007afe01  JA 0x007afed3
+007afe07  JMP dword ptr [EAX*0x4 + 0x7afef0]
+007afe0e  MOV EAX,0xd1e77ca1
+007afe13  RET
+007afe14  MOV EAX,0xb7cbfcce
+007afe19  RET
+007afe1a  MOV EAX,0xc129562b
+007afe1f  RET
+007afe20  MOV EAX,0xd3efbefe
+007afe25  RET
+007afe26  MOV EAX,0x2884658f
+007afe2b  RET
+007afe2c  MOV ECX,0x9b9ec0
+007afe31  CALL 0x007afae0
+007afe36  NEG AL
+007afe38  SBB EAX,EAX
+007afe3a  AND EAX,0x70513881
+007afe3f  ADD EAX,0x63a51aa2
+007afe44  RET
+007afe45  MOV EAX,0xd3a2d4d3
+007afe4a  RET
+007afe4b  CMP EAX,0x606
+007afe50  JG 0x007afe9c
+007afe52  CMP EAX,0x601
+007afe57  JGE 0x007afe6e
+007afe59  CMP EAX,0x307
+007afe5e  JG 0x007afe7a
+007afe60  JZ 0x007afe74
+007afe62  SUB EAX,0x302
+007afe67  JZ 0x007afe96
+007afe69  SUB EAX,0x3
+007afe6c  JNZ 0x007afed3
+007afe6e  MOV EAX,0xd2cbc510
+007afe73  RET
+007afe74  MOV EAX,0xc253ec92
+007afe79  RET
+007afe7a  CMP EAX,0x506
+007afe7f  JG 0x007afed3
+007afe81  CMP EAX,0x501
+007afe86  JGE 0x007afe6e
+007afe88  CMP EAX,0x402
+007afe8d  JL 0x007afed3
+007afe8f  CMP EAX,0x409
+007afe94  JG 0x007afed3
+007afe96  MOV EAX,0xd413e189
+007afe9b  RET
+007afe9c  CMP EAX,0x802
+007afea1  JG 0x007afecc
+007afea3  JZ 0x007afec6
+007afea5  CMP EAX,0x702
+007afeaa  JL 0x007afed3
+007afeac  CMP EAX,0x70b
+007afeb1  JLE 0x007afec0
+007afeb3  CMP EAX,0x801
+007afeb8  JNZ 0x007afed3
+007afeba  MOV EAX,0xd3a2fbe1
+007afebf  RET
+007afec0  MOV EAX,0x8a4bfbf2
+007afec5  RET
+007afec6  MOV EAX,0x3c27a989
+007afecb  RET
+007afecc  CMP EAX,0x803
+007afed1  JZ 0x007afed6
+007afed3  XOR EAX,EAX
+007afed5  RET
+007afed6  MOV EAX,0x5692be6b
+007afedb  RET

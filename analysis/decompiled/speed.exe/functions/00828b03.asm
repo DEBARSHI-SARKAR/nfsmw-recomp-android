@@ -1,0 +1,14 @@
+00828b03  MOV EAX,dword ptr [ESP + 0x4]
+00828b07  TEST EAX,EAX
+00828b09  JZ 0x00828b11
+00828b0b  CMP dword ptr [ECX + 0x8],0x0
+00828b0f  JZ 0x00828b16
+00828b11  OR EAX,0xffffffff
+00828b14  JMP 0x00828b2c
+00828b16  MOV EDX,dword ptr [ESP + 0xc]
+00828b1a  MOV dword ptr [ECX + 0x8],EDX
+00828b1d  MOV EDX,dword ptr [ESP + 0x8]
+00828b21  MOV dword ptr [ECX + 0xa0],EAX
+00828b27  MOV dword ptr [ECX + 0xc],EDX
+00828b2a  XOR EAX,EAX
+00828b2c  RET 0xc

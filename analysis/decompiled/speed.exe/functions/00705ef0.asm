@@ -1,0 +1,14 @@
+00705ef0  PUSH 0x0
+00705ef2  PUSH 0xc
+00705ef4  MOV ECX,0x925b30
+00705ef9  CALL 0x005d29d0
+00705efe  TEST EAX,EAX
+00705f00  JZ 0x00705f18
+00705f02  MOV ECX,dword ptr [ESP + 0x4]
+00705f06  MOV EDX,dword ptr [ESP + 0x8]
+00705f0a  MOV dword ptr [EAX],ECX
+00705f0c  MOV ECX,dword ptr [ESP + 0xc]
+00705f10  MOV dword ptr [EAX + 0x4],EDX
+00705f13  MOV EDX,dword ptr [ECX]
+00705f15  MOV dword ptr [EAX + 0x8],EDX
+00705f18  RET 0xc

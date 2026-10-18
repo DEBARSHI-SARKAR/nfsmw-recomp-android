@@ -1,0 +1,5 @@
+0073d300  FILD dword ptr [0x00925ae8]
+0073d306  FMUL float ptr [0x00890984]
+0073d30c  FST float ptr [0x00904b54]
+0073d312  FSTP float ptr [0x00904b68]
+0073d318  RET

@@ -1,0 +1,4 @@
+005de350  MOV EAX,dword ptr [ESP + 0x4]
+005de354  TEST dword ptr [ECX],EAX
+005de356  SETNZ AL
+005de359  RET 0x4

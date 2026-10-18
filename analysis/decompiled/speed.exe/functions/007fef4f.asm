@@ -1,0 +1,26 @@
+007fef4f  PUSH EBP
+007fef50  MOV EBP,ESP
+007fef52  MOV EAX,dword ptr [EBP + 0x8]
+007fef55  PUSH ESI
+007fef56  PUSH EDI
+007fef57  MOV EDI,dword ptr [EBP + 0x10]
+007fef5a  TEST EDI,EDI
+007fef5c  MOV ESI,EAX
+007fef5e  JBE 0x007fef7b
+007fef60  MOV ECX,dword ptr [EBP + 0xc]
+007fef63  ADD EAX,ECX
+007fef65  PUSH EBX
+007fef66  MOVZX EDX,byte ptr [EAX + ECX*0x1]
+007fef6a  MOVZX EBX,byte ptr [ESI]
+007fef6d  LEA EDX,[EDX + EBX*0x1 + 0x1]
+007fef71  SHR EDX,0x1
+007fef73  INC ESI
+007fef74  MOV byte ptr [EAX],DL
+007fef76  INC EAX
+007fef77  DEC EDI
+007fef78  JNZ 0x007fef66
+007fef7a  POP EBX
+007fef7b  POP EDI
+007fef7c  POP ESI
+007fef7d  POP EBP
+007fef7e  RET

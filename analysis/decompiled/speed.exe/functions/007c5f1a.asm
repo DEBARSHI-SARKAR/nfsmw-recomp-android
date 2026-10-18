@@ -1,0 +1,9 @@
+007c5f1a  MOV EAX,dword ptr [EBP + -0x20]
+007c5f1d  MOV ECX,dword ptr [EBP + -0x10]
+007c5f20  MOV dword ptr FS:[0x0],ECX
+007c5f27  POP EDI
+007c5f28  POP ESI
+007c5f29  POP EBX
+007c5f2a  MOV ESP,EBP
+007c5f2c  POP EBP
+007c5f2d  RET

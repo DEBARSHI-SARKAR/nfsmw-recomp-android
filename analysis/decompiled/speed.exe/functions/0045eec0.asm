@@ -1,0 +1,84 @@
+0045eec0  PUSH EBX
+0045eec1  PUSH ESI
+0045eec2  MOV ESI,dword ptr [ESP + 0xc]
+0045eec6  MOV AL,byte ptr [ESI + 0x8]
+0045eec9  XOR EBX,EBX
+0045eecb  CMP AL,BL
+0045eecd  PUSH EDI
+0045eece  JZ 0x0045ef5b
+0045eed4  MOV EAX,dword ptr [ESP + 0x18]
+0045eed8  CMP EAX,EBX
+0045eeda  JZ 0x0045ef90
+0045eee0  MOV EDI,dword ptr [ESP + 0x14]
+0045eee4  MOV EDX,dword ptr [0x0090e654]
+0045eeea  PUSH EBP
+0045eeeb  MOV EBP,dword ptr [ESP + 0x20]
+0045eeef  MOV dword ptr [ESP + 0x14],EAX
+0045eef3  CMP byte ptr [ESI + 0x8],BL
+0045eef6  MOV CL,byte ptr [EDI]
+0045eef8  JZ 0x0045ef34
+0045eefa  MOV byte ptr [EDX + 0x90df50],CL
+0045ef00  INC EDX
+0045ef01  AND EDX,0x7f
+0045ef04  CMP EDX,0x7f
+0045ef07  MOV dword ptr [0x0090e654],EDX
+0045ef0d  JNZ 0x0045ef47
+0045ef0f  XOR EAX,EAX
+0045ef11  MOV AL,[0x0090df08]
+0045ef16  PUSH 0x90df50
+0045ef1b  MOV byte ptr [0x0090dfcf],BL
+0045ef21  PUSH EAX
+0045ef22  CALL 0x0045cc70
+0045ef27  ADD ESP,0x8
+0045ef2a  XOR EDX,EDX
+0045ef2c  MOV dword ptr [0x0090e654],EDX
+0045ef32  JMP 0x0045ef47
+0045ef34  MOV EAX,dword ptr [ESI + 0x4]
+0045ef37  DEC EAX
+0045ef38  CMP dword ptr [EBP],EAX
+0045ef3b  JGE 0x0045ef4a
+0045ef3d  MOV EAX,dword ptr [ESI]
+0045ef3f  CMP EAX,EBX
+0045ef41  JZ 0x0045ef47
+0045ef43  MOV byte ptr [EAX],CL
+0045ef45  INC dword ptr [ESI]
+0045ef47  INC dword ptr [EBP]
+0045ef4a  MOV EAX,dword ptr [ESP + 0x14]
+0045ef4e  INC EDI
+0045ef4f  DEC EAX
+0045ef50  MOV dword ptr [ESP + 0x14],EAX
+0045ef54  JNZ 0x0045eef3
+0045ef56  POP EBP
+0045ef57  POP EDI
+0045ef58  POP ESI
+0045ef59  POP EBX
+0045ef5a  RET
+0045ef5b  MOV EDI,dword ptr [ESP + 0x1c]
+0045ef5f  MOV EDX,dword ptr [EDI]
+0045ef61  MOV EAX,dword ptr [ESI + 0x4]
+0045ef64  MOV ECX,dword ptr [ESP + 0x18]
+0045ef68  SUB EAX,EDX
+0045ef6a  DEC EAX
+0045ef6b  CMP ECX,EAX
+0045ef6d  JLE 0x0045ef71
+0045ef6f  MOV ECX,EAX
+0045ef71  ADD EDX,ECX
+0045ef73  MOV dword ptr [EDI],EDX
+0045ef75  CMP dword ptr [ESI],EBX
+0045ef77  JZ 0x0045ef90
+0045ef79  CMP ECX,EBX
+0045ef7b  JLE 0x0045ef90
+0045ef7d  MOV EAX,dword ptr [ESP + 0x14]
+0045ef81  MOV BL,byte ptr [EAX]
+0045ef83  MOV EDX,dword ptr [ESI]
+0045ef85  MOV byte ptr [EDX],BL
+0045ef87  MOV EBX,dword ptr [ESI]
+0045ef89  INC EBX
+0045ef8a  INC EAX
+0045ef8b  DEC ECX
+0045ef8c  MOV dword ptr [ESI],EBX
+0045ef8e  JNZ 0x0045ef81
+0045ef90  POP EDI
+0045ef91  POP ESI
+0045ef92  POP EBX
+0045ef93  RET

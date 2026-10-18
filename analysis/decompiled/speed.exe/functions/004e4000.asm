@@ -1,0 +1,11 @@
+004e4000  MOV EAX,dword ptr [ESP + 0x4]
+004e4004  MOV ECX,dword ptr [ESP + 0x8]
+004e4008  MOV EDX,dword ptr [ESP + 0xc]
+004e400c  MOV [0x00914400],EAX
+004e4011  MOV EAX,dword ptr [ESP + 0x10]
+004e4015  MOV dword ptr [0x00914404],ECX
+004e401b  MOV ECX,dword ptr [ESP + 0x14]
+004e401f  MOV dword ptr [0x00914408],EDX
+004e4025  MOV [0x0091440c],EAX
+004e402a  MOV dword ptr [0x00914410],ECX
+004e4030  RET

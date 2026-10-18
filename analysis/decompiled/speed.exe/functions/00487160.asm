@@ -1,0 +1,101 @@
+00487160  PUSH EBX
+00487161  PUSH EBP
+00487162  PUSH ESI
+00487163  MOV ESI,dword ptr [ESP + 0x10]
+00487167  MOV EAX,dword ptr [ESI]
+00487169  MOV EBP,ECX
+0048716b  PUSH EDI
+0048716c  MOV ECX,ESI
+0048716e  CALL dword ptr [EAX + 0x28]
+00487171  MOV ECX,dword ptr [EAX]
+00487173  MOV dword ptr [EBP + 0x80],ECX
+00487179  MOV EDX,dword ptr [EAX + 0x4]
+0048717c  MOV dword ptr [EBP + 0x84],EDX
+00487182  MOV EAX,dword ptr [EAX + 0x8]
+00487185  MOV dword ptr [EBP + 0x88],EAX
+0048718b  MOV EDX,dword ptr [ESI]
+0048718d  MOV ECX,ESI
+0048718f  CALL dword ptr [EDX + 0x30]
+00487192  MOV ECX,dword ptr [EAX]
+00487194  MOV dword ptr [EBP + 0x8c],ECX
+0048719a  MOV EDX,dword ptr [EAX + 0x4]
+0048719d  MOV dword ptr [EBP + 0x90],EDX
+004871a3  MOV EAX,dword ptr [EAX + 0x8]
+004871a6  MOV dword ptr [EBP + 0x94],EAX
+004871ac  MOV EDX,dword ptr [ESI]
+004871ae  MOV ECX,ESI
+004871b0  CALL dword ptr [EDX + 0x10]
+004871b3  MOV ECX,dword ptr [EAX]
+004871b5  MOV dword ptr [EBP + 0x98],ECX
+004871bb  MOV EDX,dword ptr [EAX + 0x4]
+004871be  MOV dword ptr [EBP + 0x9c],EDX
+004871c4  MOV EAX,dword ptr [EAX + 0x8]
+004871c7  MOV dword ptr [EBP + 0xa0],EAX
+004871cd  MOV EDX,dword ptr [ESI]
+004871cf  MOV ECX,ESI
+004871d1  CALL dword ptr [EDX + 0x8]
+004871d4  MOV ECX,dword ptr [EAX]
+004871d6  MOV dword ptr [EBP + 0xa4],ECX
+004871dc  MOV EDX,dword ptr [EAX + 0x4]
+004871df  MOV dword ptr [EBP + 0xa8],EDX
+004871e5  MOV EAX,dword ptr [EAX + 0x8]
+004871e8  MOV dword ptr [EBP + 0xac],EAX
+004871ee  MOV EDX,dword ptr [ESI]
+004871f0  MOV ECX,ESI
+004871f2  CALL dword ptr [EDX]
+004871f4  MOV ECX,dword ptr [EAX]
+004871f6  MOV dword ptr [EBP + 0xb0],ECX
+004871fc  MOV EDX,dword ptr [EAX + 0x4]
+004871ff  MOV dword ptr [EBP + 0xb4],EDX
+00487205  MOV EAX,dword ptr [EAX + 0x8]
+00487208  MOV dword ptr [EBP + 0xb8],EAX
+0048720e  MOV EAX,0x3f800000
+00487213  MOV dword ptr [EBP + 0xbc],EAX
+00487219  MOV dword ptr [EBP + 0xc0],EAX
+0048721f  MOV dword ptr [EBP + 0xc4],EAX
+00487225  MOV EDX,dword ptr [ESI]
+00487227  MOV ECX,ESI
+00487229  CALL dword ptr [EDX + 0x34]
+0048722c  XOR EBX,EBX
+0048722e  MOV byte ptr [EBP + 0xc8],AL
+00487234  MOV dword ptr [EBP + 0xcc],EBX
+0048723a  MOV EAX,dword ptr [ESI]
+0048723c  MOV ECX,ESI
+0048723e  CALL dword ptr [EAX + 0x2c]
+00487241  FSTP float ptr [EBP + 0xd0]
+00487247  MOV dword ptr [EBP + 0xd8],EBX
+0048724d  MOV dword ptr [EBP + 0xdc],EBX
+00487253  MOV dword ptr [EBP + 0xe0],EBX
+00487259  MOV dword ptr [EBP + 0xe4],EBX
+0048725f  MOV dword ptr [EBP + 0xe8],EBX
+00487265  MOV dword ptr [EBP + 0xec],EBX
+0048726b  MOV dword ptr [EBP + 0xf0],EBX
+00487271  MOV dword ptr [EBP + 0xf4],EBX
+00487277  MOV dword ptr [EBP + 0xf8],EBX
+0048727d  MOV dword ptr [EBP + 0xfc],EBX
+00487283  MOV dword ptr [EBP + 0x100],EBX
+00487289  MOV dword ptr [EBP + 0x104],EBX
+0048728f  MOV dword ptr [EBP + 0x108],EBX
+00487295  MOV dword ptr [EBP + 0x10c],EBX
+0048729b  MOV byte ptr [EBP + 0x110],BL
+004872a1  MOV EDX,dword ptr [ESI]
+004872a3  MOV ECX,ESI
+004872a5  CALL dword ptr [EDX + 0x18]
+004872a8  MOV ESI,EAX
+004872aa  LEA EAX,[EBP + 0x40]
+004872ad  PUSH EAX
+004872ae  MOV ECX,0x10
+004872b3  MOV EDI,EBP
+004872b5  PUSH EBP
+004872b6  MOVSD.REP ES:EDI,ESI
+004872b8  CALL 0x004665b0
+004872bd  ADD ESP,0x8
+004872c0  FLD float ptr [0x0089096c]
+004872c6  POP EDI
+004872c7  FDIV float ptr [EBP + 0xd0]
+004872cd  POP ESI
+004872ce  MOV EAX,EBP
+004872d0  FSTP float ptr [EBP + 0xd4]
+004872d6  POP EBP
+004872d7  POP EBX
+004872d8  RET 0x4

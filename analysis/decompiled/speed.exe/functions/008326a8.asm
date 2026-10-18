@@ -1,0 +1,3 @@
+008326a8  MOV EAX,dword ptr [ESP + 0x4]
+008326ac  SHL EAX,0x3
+008326af  RET

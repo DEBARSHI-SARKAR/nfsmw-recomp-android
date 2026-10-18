@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "module",
+  "description": "The kit web launcher. node --test web/launcher/tests/*.test.mjs"
+}

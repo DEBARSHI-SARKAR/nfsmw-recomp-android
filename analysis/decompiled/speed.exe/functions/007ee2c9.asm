@@ -1,0 +1,11 @@
+007ee2c9  PUSH EBP
+007ee2ca  MOV EBP,ESP
+007ee2cc  PUSH ESI
+007ee2cd  PUSH dword ptr [EBP + 0x8]
+007ee2d0  MOV ESI,ECX
+007ee2d2  CALL 0x007ecfec
+007ee2d7  MOV dword ptr [ESI],0x8c1fb4
+007ee2dd  MOV EAX,ESI
+007ee2df  POP ESI
+007ee2e0  POP EBP
+007ee2e1  RET 0x4

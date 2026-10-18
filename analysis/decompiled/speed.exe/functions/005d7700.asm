@@ -1,0 +1,6 @@
+005d7700  MOV EAX,ECX
+005d7702  XOR ECX,ECX
+005d7704  MOV dword ptr [EAX + 0x4],ECX
+005d7707  MOV dword ptr [EAX + 0x8],ECX
+005d770a  MOV dword ptr [EAX + 0xc],ECX
+005d770d  RET

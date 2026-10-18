@@ -1,0 +1,3 @@
+007f35c5  MOV EAX,ECX
+007f35c7  MOV dword ptr [EAX],0x8c2390
+007f35cd  RET

@@ -1,0 +1,10 @@
+00467a30  FLD float ptr [ECX]
+00467a32  MOV EAX,dword ptr [ESP + 0x4]
+00467a36  FLD float ptr [ESP + 0x4]
+00467a3a  MOV dword ptr [ECX + 0x8],EAX
+00467a3d  FUCOMPP
+00467a3f  FNSTSW AX
+00467a41  TEST AH,0x44
+00467a44  JNP 0x00467a4c
+00467a46  MOV word ptr [ECX + 0x28],0x2
+00467a4c  RET 0x4

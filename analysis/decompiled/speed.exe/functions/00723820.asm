@@ -1,0 +1,23 @@
+00723820  MOV EAX,dword ptr [ESP + 0x4]
+00723824  MOV EDX,dword ptr [ESP + 0x8]
+00723828  IMUL EAX,EAX,0x64
+0072382b  LEA EAX,[EAX + ECX*0x1 + 0xc0]
+00723832  PUSH ESI
+00723833  MOV ESI,dword ptr [EDX]
+00723835  MOV dword ptr [EAX],ESI
+00723837  MOV ESI,dword ptr [EDX + 0x4]
+0072383a  MOV dword ptr [EAX + 0x4],ESI
+0072383d  MOV EDX,dword ptr [EDX + 0x8]
+00723840  MOV dword ptr [EAX + 0x8],EDX
+00723843  XOR EDX,EDX
+00723845  MOV dword ptr [EAX + 0xc],EDX
+00723848  MOV dword ptr [EAX + 0x10],EDX
+0072384b  MOV dword ptr [EAX + 0x14],EDX
+0072384e  MOV dword ptr [EAX + 0x18],EDX
+00723851  MOV byte ptr [EAX + 0x1c],0x1
+00723855  MOV byte ptr [EAX + 0x1d],DL
+00723858  MOV dword ptr [EAX + 0x24],0xffffffff
+0072385f  MOV word ptr [EAX + 0x20],DX
+00723863  MOV byte ptr [ECX + 0x2b0],0x1
+0072386a  POP ESI
+0072386b  RET 0x8

@@ -1,0 +1,7 @@
+00516ac0  MOV EAX,dword ptr [ECX]
+00516ac2  ADD EAX,0xd8
+00516ac7  JZ 0x00516acd
+00516ac9  MOV EAX,dword ptr [EAX + 0x8]
+00516acc  RET
+00516acd  XOR EAX,EAX
+00516acf  RET

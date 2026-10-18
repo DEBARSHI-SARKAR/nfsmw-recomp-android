@@ -1,0 +1,16 @@
+007d9d90  PUSH EBP
+007d9d91  MOV EBP,ESP
+007d9d93  MOVZX EAX,word ptr [EBP + 0xe]
+007d9d97  AND EAX,0x7ff0
+007d9d9c  SAR EAX,0x4
+007d9d9f  MOVSX ECX,AX
+007d9da2  MOV EDX,dword ptr [EBP + 0x10]
+007d9da5  LEA EAX,[ECX + EDX*0x1 + 0xfffffc02]
+007d9dac  PUSH EAX
+007d9dad  FLD double ptr [EBP + 0x8]
+007d9db0  SUB ESP,0x8
+007d9db3  FSTP double ptr [ESP]
+007d9db6  CALL 0x007d9d20
+007d9dbb  ADD ESP,0xc
+007d9dbe  POP EBP
+007d9dbf  RET

@@ -1,0 +1,9 @@
+007f9d6a  PUSH EBP
+007f9d6b  MOV EBP,ESP
+007f9d6d  MOV EAX,dword ptr [EBP + 0x8]
+007f9d70  AND dword ptr [ECX + 0x20],0x0
+007f9d74  PUSH 0x2
+007f9d76  MOV dword ptr [ECX + 0x34],EAX
+007f9d79  POP EAX
+007f9d7a  POP EBP
+007f9d7b  RET 0x8

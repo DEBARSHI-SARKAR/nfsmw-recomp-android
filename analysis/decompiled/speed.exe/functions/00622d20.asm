@@ -1,0 +1,21 @@
+00622d20  MOV EAX,dword ptr [ECX + 0x8]
+00622d23  INC EAX
+00622d24  CMP EAX,0x4
+00622d27  MOV dword ptr [ECX],0x8a6f3c
+00622d2d  JA 0x00622d7a
+00622d2f  JMP dword ptr [EAX*0x4 + 0x622d8c]
+00622d36  MOV dword ptr [0x00902144],0x0
+00622d40  MOV dword ptr [ECX],0x8a66f8
+00622d46  RET
+00622d47  MOV dword ptr [0x00902144],0x1
+00622d51  MOV dword ptr [ECX],0x8a66f8
+00622d57  RET
+00622d58  MOV dword ptr [0x00902144],0x2
+00622d62  MOV dword ptr [ECX],0x8a66f8
+00622d68  RET
+00622d69  MOV dword ptr [0x00902144],0x3
+00622d73  MOV dword ptr [ECX],0x8a66f8
+00622d79  RET
+00622d7a  MOV dword ptr [0x00902144],0xffffffff
+00622d84  MOV dword ptr [ECX],0x8a66f8
+00622d8a  RET

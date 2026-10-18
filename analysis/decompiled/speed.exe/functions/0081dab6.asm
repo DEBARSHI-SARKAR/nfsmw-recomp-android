@@ -1,0 +1,25 @@
+0081dab6  PUSH ESI
+0081dab7  OR EAX,0xffffffff
+0081daba  XOR ESI,ESI
+0081dabc  CMP dword ptr [ESP + 0xc],ESI
+0081dac0  PUSH EDI
+0081dac1  MOV EDI,EAX
+0081dac3  JLE 0x0081daed
+0081dac5  MOV ECX,dword ptr [ESP + 0xc]
+0081dac9  MOV EDX,dword ptr [0x009c21f4]
+0081dacf  LEA ECX,[ECX + ECX*0x8]
+0081dad2  SHL ECX,0x4
+0081dad5  LEA ECX,[ECX + EDX*0x1 + 0x4]
+0081dad9  MOVSX EDX,word ptr [ECX]
+0081dadc  CMP EDX,EDI
+0081dade  JLE 0x0081dae4
+0081dae0  MOV EDI,EDX
+0081dae2  MOV EAX,ESI
+0081dae4  INC ESI
+0081dae5  INC ECX
+0081dae6  INC ECX
+0081dae7  CMP ESI,dword ptr [ESP + 0x10]
+0081daeb  JL 0x0081dad9
+0081daed  POP EDI
+0081daee  POP ESI
+0081daef  RET

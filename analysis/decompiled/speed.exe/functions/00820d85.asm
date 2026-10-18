@@ -1,0 +1,8 @@
+00820d85  MOV EAX,dword ptr [ESP + 0x4]
+00820d89  MOV ECX,dword ptr [ESP + 0x8]
+00820d8d  LEA EAX,[EAX + EAX*0x2]
+00820d90  LEA EAX,[ECX + EAX*0x2]
+00820d93  MOV ECX,dword ptr [ESP + 0xc]
+00820d97  LEA EAX,[EAX + EAX*0x2]
+00820d9a  MOVZX EAX,byte ptr [ECX + EAX*0x2 + 0x90c43d]
+00820da2  RET

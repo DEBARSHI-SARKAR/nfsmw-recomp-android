@@ -1,0 +1,79 @@
+007fd327  PUSH EBP
+007fd328  MOV EBP,ESP
+007fd32a  MOVZX EAX,byte ptr [EBP + 0x14]
+007fd32e  MOVZX EAX,byte ptr [EAX + 0x8c47b8]
+007fd335  MOV ECX,dword ptr [EBP + 0x8]
+007fd338  PUSH EBX
+007fd339  MOV EBX,dword ptr [EBP + 0x10]
+007fd33c  PUSH ESI
+007fd33d  PUSH EDI
+007fd33e  SHL EAX,0x8
+007fd341  LEA EDX,[EAX + ECX*0x1]
+007fd344  XOR EAX,EAX
+007fd346  PUSH 0x20
+007fd348  POP ECX
+007fd349  MOV EDI,EBX
+007fd34b  STOSD.REP ES:EDI
+007fd34d  MOV EAX,dword ptr [EBP + 0xc]
+007fd350  MOVSX EAX,word ptr [EAX]
+007fd353  MOV ECX,dword ptr [EDX + 0x590]
+007fd359  CMP EAX,ECX
+007fd35b  MOV byte ptr [EBP + 0x17],0x0
+007fd35f  JL 0x007fd378
+007fd361  MOV ECX,dword ptr [EDX + 0x390]
+007fd367  ADD ECX,EAX
+007fd369  IMUL ECX,dword ptr [EDX + 0x190]
+007fd370  SAR ECX,0x10
+007fd373  MOV word ptr [EBX],CX
+007fd376  JMP 0x007fd39c
+007fd378  NEG ECX
+007fd37a  CMP EAX,ECX
+007fd37c  JG 0x007fd398
+007fd37e  SUB EAX,dword ptr [EDX + 0x390]
+007fd384  IMUL EAX,dword ptr [EDX + 0x190]
+007fd38b  ADD EAX,0xffff
+007fd390  SAR EAX,0x10
+007fd393  MOV word ptr [EBX],AX
+007fd396  JMP 0x007fd39c
+007fd398  MOV byte ptr [EBP + 0x17],0x1
+007fd39c  ADD EBX,0x2
+007fd39f  MOV dword ptr [EBP + 0x8],0x4
+007fd3a6  MOV EAX,dword ptr [EBP + 0x8]
+007fd3a9  MOV ESI,dword ptr [EAX + 0x8c44b8]
+007fd3af  MOVZX EAX,byte ptr [EBP + 0x17]
+007fd3b3  MOV EAX,dword ptr [EDX + EAX*0x4 + 0x790]
+007fd3ba  MOV ECX,ESI
+007fd3bc  SHL ECX,0x2
+007fd3bf  MOV EDI,dword ptr [ECX + EDX*0x1 + 0x590]
+007fd3c6  ADD EDI,EAX
+007fd3c8  MOV EAX,dword ptr [EBP + 0xc]
+007fd3cb  MOVSX EAX,word ptr [EAX + ESI*0x2]
+007fd3cf  CMP EAX,EDI
+007fd3d1  JL 0x007fd3f0
+007fd3d3  MOV ESI,dword ptr [ECX + EDX*0x1 + 0x390]
+007fd3da  ADD ESI,EAX
+007fd3dc  IMUL ESI,dword ptr [ECX + EDX*0x1 + 0x190]
+007fd3e4  SAR ESI,0x10
+007fd3e7  MOV word ptr [EBX],SI
+007fd3ea  MOV byte ptr [EBP + 0x17],0x0
+007fd3ee  JMP 0x007fd415
+007fd3f0  NEG EDI
+007fd3f2  CMP EAX,EDI
+007fd3f4  JG 0x007fd412
+007fd3f6  SUB EAX,dword ptr [ECX + EDX*0x1 + 0x390]
+007fd3fd  IMUL EAX,dword ptr [ECX + EDX*0x1 + 0x190]
+007fd405  ADD EAX,0xffff
+007fd40a  SAR EAX,0x10
+007fd40d  MOV word ptr [EBX],AX
+007fd410  JMP 0x007fd3ea
+007fd412  INC byte ptr [EBP + 0x17]
+007fd415  ADD dword ptr [EBP + 0x8],0x4
+007fd419  INC EBX
+007fd41a  INC EBX
+007fd41b  CMP dword ptr [EBP + 0x8],0x100
+007fd422  JC 0x007fd3a6
+007fd424  POP EDI
+007fd425  POP ESI
+007fd426  POP EBX
+007fd427  POP EBP
+007fd428  RET

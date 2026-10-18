@@ -1,0 +1,17 @@
+007ea380  PUSH EBP
+007ea381  MOV EBP,ESP
+007ea383  MOV EDX,dword ptr [ECX]
+007ea385  MOV EAX,dword ptr [EBP + 0x8]
+007ea388  SHR EDX,0xa
+007ea38b  AND EDX,0x1
+007ea38e  MOV dword ptr [EAX + 0x8],EDX
+007ea391  MOV EDX,dword ptr [ECX]
+007ea393  SHR EDX,0xb
+007ea396  AND EDX,0x1
+007ea399  MOV dword ptr [EAX + 0xc],EDX
+007ea39c  MOV ECX,dword ptr [ECX]
+007ea39e  SHR ECX,0x9
+007ea3a1  AND ECX,0x1
+007ea3a4  MOV dword ptr [EAX + 0x10],ECX
+007ea3a7  POP EBP
+007ea3a8  RET 0x4

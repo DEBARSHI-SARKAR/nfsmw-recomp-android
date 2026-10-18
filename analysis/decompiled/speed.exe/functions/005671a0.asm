@@ -1,0 +1,49 @@
+005671a0  MOV EDX,ECX
+005671a2  XOR ECX,ECX
+005671a4  MOV dword ptr [EDX + 0x148],ECX
+005671aa  MOV dword ptr [EDX + 0x14c],ECX
+005671b0  MOV dword ptr [EDX + 0x150],ECX
+005671b6  LEA EAX,[EDX + 0x148]
+005671bc  MOV dword ptr [EAX + 0xc],ECX
+005671bf  MOV dword ptr [EAX + 0x10],ECX
+005671c2  MOV dword ptr [EAX + 0x14],ECX
+005671c5  ADD EAX,0xc
+005671c8  MOV dword ptr [EAX + 0xc],ECX
+005671cb  MOV dword ptr [EAX + 0x10],ECX
+005671ce  MOV dword ptr [EAX + 0x14],ECX
+005671d1  ADD EAX,0xc
+005671d4  MOV dword ptr [EAX + 0xc],ECX
+005671d7  MOV dword ptr [EAX + 0x10],ECX
+005671da  MOV dword ptr [EAX + 0x14],ECX
+005671dd  ADD EAX,0xc
+005671e0  MOV dword ptr [EAX + 0xc],ECX
+005671e3  MOV dword ptr [EAX + 0x10],ECX
+005671e6  MOV dword ptr [EAX + 0x14],ECX
+005671e9  ADD EAX,0xc
+005671ec  MOV dword ptr [EAX + 0xc],ECX
+005671ef  MOV dword ptr [EAX + 0x10],ECX
+005671f2  MOV dword ptr [EAX + 0x14],ECX
+005671f5  ADD EAX,0xc
+005671f8  MOV dword ptr [EAX + 0xc],ECX
+005671fb  MOV dword ptr [EAX + 0x10],ECX
+005671fe  MOV dword ptr [EAX + 0x14],ECX
+00567201  ADD EAX,0xc
+00567204  ADD EAX,0xc
+00567207  MOV dword ptr [EAX],ECX
+00567209  MOV dword ptr [EAX + 0x4],ECX
+0056720c  MOV dword ptr [EAX + 0x8],ECX
+0056720f  ADD EAX,0xc
+00567212  MOV dword ptr [EAX],ECX
+00567214  MOV dword ptr [EAX + 0x4],ECX
+00567217  MOV dword ptr [EAX + 0x8],ECX
+0056721a  MOV EAX,dword ptr [ESP + 0x4]
+0056721e  PUSH EDI
+0056721f  MOV dword ptr [EDX + 0x4],EAX
+00567222  MOV dword ptr [EDX],ECX
+00567224  XOR EAX,EAX
+00567226  LEA EDI,[EDX + 0x48]
+00567229  MOV ECX,0x40
+0056722e  STOSD.REP ES:EDI
+00567230  MOV EAX,EDX
+00567232  POP EDI
+00567233  RET 0x4

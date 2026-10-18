@@ -1,0 +1,22 @@
+0065aa00  MOV ECX,dword ptr [0x00925a94]
+0065aa06  MOV EAX,dword ptr [ESP + 0x4]
+0065aa0a  MOV dword ptr [ECX],EAX
+0065aa0c  MOV [0x00925a94],EAX
+0065aa11  MOV dword ptr [EAX + 0x4],ECX
+0065aa14  MOV ECX,dword ptr [EAX + 0xc]
+0065aa17  XOR EDX,EDX
+0065aa19  TEST ECX,ECX
+0065aa1b  MOV dword ptr [EAX],0x925a90
+0065aa21  JLE 0x0065aa3a
+0065aa23  LEA ECX,[EAX + 0x20]
+0065aa26  PUSH ESI
+0065aa27  MOV ESI,dword ptr [ECX + -0xc]
+0065aa2a  ADD ESI,EAX
+0065aa2c  MOV dword ptr [ECX],ESI
+0065aa2e  MOV ESI,dword ptr [EAX + 0xc]
+0065aa31  INC EDX
+0065aa32  ADD ECX,0x14
+0065aa35  CMP EDX,ESI
+0065aa37  JL 0x0065aa27
+0065aa39  POP ESI
+0065aa3a  RET

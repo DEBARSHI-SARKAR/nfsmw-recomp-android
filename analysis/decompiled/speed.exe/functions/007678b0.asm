@@ -1,0 +1,66 @@
+007678b0  SUB ESP,0x48
+007678b3  MOV EAX,dword ptr [ESP + 0x4c]
+007678b7  MOV ECX,dword ptr [EAX]
+007678b9  MOV EDX,dword ptr [ECX]
+007678bb  MOV dword ptr [ESP + 0x18],EDX
+007678bf  MOV EDX,dword ptr [ECX + 0x4]
+007678c2  MOV ECX,dword ptr [ECX + 0x8]
+007678c5  MOV dword ptr [ESP + 0x1c],EDX
+007678c9  MOV EDX,dword ptr [EAX + 0x4]
+007678cc  MOV dword ptr [ESP + 0x20],ECX
+007678d0  MOV ECX,dword ptr [EDX]
+007678d2  MOV dword ptr [ESP + 0x24],ECX
+007678d6  MOV ECX,dword ptr [EDX + 0x4]
+007678d9  MOV EDX,dword ptr [EDX + 0x8]
+007678dc  MOV dword ptr [ESP + 0x28],ECX
+007678e0  MOV ECX,dword ptr [EAX + 0x8]
+007678e3  MOV dword ptr [ESP + 0x2c],EDX
+007678e7  MOV EDX,dword ptr [ECX]
+007678e9  MOV dword ptr [ESP + 0x30],EDX
+007678ed  MOV EDX,dword ptr [ECX + 0x4]
+007678f0  MOV ECX,dword ptr [ECX + 0x8]
+007678f3  MOV dword ptr [ESP + 0x34],EDX
+007678f7  MOV EDX,dword ptr [EAX + 0xc]
+007678fa  MOV EAX,dword ptr [EDX]
+007678fc  MOV dword ptr [ESP + 0x38],ECX
+00767900  MOV ECX,dword ptr [EDX + 0x4]
+00767903  MOV EDX,dword ptr [EDX + 0x8]
+00767906  MOV dword ptr [ESP + 0x3c],EAX
+0076790a  LEA EAX,[ESP + 0x18]
+0076790e  MOV dword ptr [ESP + 0x40],ECX
+00767912  PUSH EAX
+00767913  LEA ECX,[ESP + 0x10]
+00767917  PUSH ECX
+00767918  MOV dword ptr [ESP + 0x4c],EDX
+0076791c  CALL 0x007676c0
+00767921  FLD float ptr [0x00890968]
+00767927  MOV ECX,dword ptr [EAX + 0x4]
+0076792a  MOV EDX,dword ptr [EAX]
+0076792c  MOV dword ptr [ESP + 0xc],ECX
+00767930  FLD float ptr [ESP + 0xc]
+00767934  FUCOMPP
+00767936  MOV dword ptr [ESP + 0x8],EDX
+0076793a  MOV EDX,dword ptr [EAX + 0x8]
+0076793d  ADD ESP,0x8
+00767940  MOV dword ptr [ESP + 0x8],EDX
+00767944  FNSTSW AX
+00767946  TEST AH,0x44
+00767949  JP 0x00767959
+0076794b  FLD float ptr [ESP + 0x1c]
+0076794f  FSUBR float ptr [ESP + 0x40]
+00767953  FABS
+00767955  ADD ESP,0x48
+00767958  RET
+00767959  FLD float ptr [ESP + 0x44]
+0076795d  FSUB float ptr [ESP + 0x20]
+00767961  FMUL float ptr [ESP + 0x8]
+00767965  FLD float ptr [ESP + 0x3c]
+00767969  FSUB float ptr [ESP + 0x18]
+0076796d  FMUL float ptr [ESP]
+00767970  FADDP
+00767972  FDIV float ptr [ESP + 0x4]
+00767976  FSUBR float ptr [ESP + 0x1c]
+0076797a  FSUBR float ptr [ESP + 0x40]
+0076797e  FABS
+00767980  ADD ESP,0x48
+00767983  RET

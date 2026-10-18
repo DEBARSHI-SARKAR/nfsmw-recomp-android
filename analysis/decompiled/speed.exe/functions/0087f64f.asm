@@ -1,0 +1,3 @@
+0087f64f  MOV ECX,dword ptr [EBP + -0x10]
+0087f652  ADD ECX,0x8c
+0087f658  JMP 0x006ef6e0

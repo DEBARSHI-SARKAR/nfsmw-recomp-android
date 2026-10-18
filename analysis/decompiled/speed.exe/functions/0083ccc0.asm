@@ -1,0 +1,13 @@
+0083ccc0  MOV EAX,[0x009c3620]
+0083ccc5  TEST EAX,EAX
+0083ccc7  JZ 0x0083cccd
+0083ccc9  OR EAX,0xffffffff
+0083cccc  RET
+0083cccd  PUSH 0x2
+0083cccf  CALL 0x0084ad90
+0083ccd4  ADD ESP,0x4
+0083ccd7  MOV dword ptr [0x009c3620],0x1
+0083cce1  MOV dword ptr [0x009c3624],0x0
+0083cceb  MOV dword ptr [0x009c3628],0x0
+0083ccf5  XOR EAX,EAX
+0083ccf7  RET

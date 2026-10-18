@@ -1,0 +1,4 @@
+007ec1c8  ADD ECX,0x4
+007ec1cb  PUSH ECX
+007ec1cc  CALL dword ptr [0x008901bc]
+007ec1d2  RET

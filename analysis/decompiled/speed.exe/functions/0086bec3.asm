@@ -1,0 +1,8 @@
+0086bec3  PUSH 0x1
+0086bec5  MOV EAX,dword ptr [EBP + 0x4]
+0086bec8  PUSH EAX
+0086bec9  MOV ECX,dword ptr [EBP + -0x10]
+0086becc  PUSH ECX
+0086becd  CALL 0x004b8770
+0086bed2  ADD ESP,0xc
+0086bed5  RET

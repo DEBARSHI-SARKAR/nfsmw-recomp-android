@@ -1,0 +1,6 @@
+00653770  MOV EDX,dword ptr [ESP + 0x8]
+00653774  MOV EAX,ECX
+00653776  MOV ECX,dword ptr [ESP + 0x4]
+0065377a  MOV dword ptr [EAX],ECX
+0065377c  MOV dword ptr [EAX + 0x4],EDX
+0065377f  RET 0x8

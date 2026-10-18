@@ -1,0 +1,23 @@
+0041cb50  MOV EAX,[0x0092c668]
+0041cb55  TEST EAX,EAX
+0041cb57  JZ 0x0041cb6b
+0041cb59  MOV ECX,dword ptr [ESP + 0x4]
+0041cb5d  LEA ECX,[ECX]
+0041cb60  CMP dword ptr [EAX],ECX
+0041cb62  JZ 0x0041cb6e
+0041cb64  MOV EAX,dword ptr [EAX + 0x8]
+0041cb67  TEST EAX,EAX
+0041cb69  JNZ 0x0041cb60
+0041cb6b  XOR EAX,EAX
+0041cb6d  RET
+0041cb6e  MOV EDX,dword ptr [ESP + 0x8]
+0041cb72  SUB ESP,0x10
+0041cb75  MOV ECX,ESP
+0041cb77  MOV dword ptr [ECX],EDX
+0041cb79  MOV EDX,dword ptr [ESP + 0x1c]
+0041cb7d  MOV dword ptr [ECX + 0x4],EDX
+0041cb80  MOV EDX,dword ptr [ESP + 0x20]
+0041cb84  MOV dword ptr [ECX + 0x8],EDX
+0041cb87  CALL dword ptr [EAX + 0x4]
+0041cb8a  ADD ESP,0x10
+0041cb8d  RET

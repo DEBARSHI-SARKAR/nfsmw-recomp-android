@@ -1,0 +1,77 @@
+0061cc70  PUSH EBX
+0061cc71  MOV EBX,dword ptr [ESP + 0x10]
+0061cc75  PUSH ESI
+0061cc76  MOV ESI,dword ptr [ESP + 0x10]
+0061cc7a  PUSH EDI
+0061cc7b  MOV EDI,ECX
+0061cc7d  MOV EAX,dword ptr [EDI + 0x4]
+0061cc80  CMP ESI,dword ptr [EAX]
+0061cc82  JNZ 0x0061ccbc
+0061cc84  CMP EBX,EAX
+0061cc86  JNZ 0x0061ccbc
+0061cc88  MOV EAX,dword ptr [EAX + 0x4]
+0061cc8b  PUSH EAX
+0061cc8c  MOV ECX,EDI
+0061cc8e  CALL 0x00619cb0
+0061cc93  MOV EAX,dword ptr [EDI + 0x4]
+0061cc96  MOV dword ptr [EAX + 0x4],EAX
+0061cc99  MOV EAX,dword ptr [EDI + 0x4]
+0061cc9c  MOV dword ptr [EDI + 0x8],0x0
+0061cca3  MOV dword ptr [EAX],EAX
+0061cca5  MOV EAX,dword ptr [EDI + 0x4]
+0061cca8  MOV dword ptr [EAX + 0x8],EAX
+0061ccab  MOV ECX,dword ptr [EDI + 0x4]
+0061ccae  MOV EDX,dword ptr [ECX]
+0061ccb0  MOV EAX,dword ptr [ESP + 0x10]
+0061ccb4  POP EDI
+0061ccb5  POP ESI
+0061ccb6  MOV dword ptr [EAX],EDX
+0061ccb8  POP EBX
+0061ccb9  RET 0xc
+0061ccbc  CMP ESI,EBX
+0061ccbe  JZ 0x0061cd1b
+0061ccc0  MOV AL,byte ptr [ESI + 0x21]
+0061ccc3  TEST AL,AL
+0061ccc5  MOV ECX,ESI
+0061ccc7  JNZ 0x0061cd0a
+0061ccc9  MOV EAX,dword ptr [ESI + 0x8]
+0061cccc  MOV DL,byte ptr [EAX + 0x21]
+0061cccf  TEST DL,DL
+0061ccd1  JNZ 0x0061cced
+0061ccd3  MOV ESI,EAX
+0061ccd5  MOV EAX,dword ptr [ESI]
+0061ccd7  MOV DL,byte ptr [EAX + 0x21]
+0061ccda  TEST DL,DL
+0061ccdc  JNZ 0x0061cd0a
+0061ccde  MOV EDI,EDI
+0061cce0  MOV ESI,EAX
+0061cce2  MOV EAX,dword ptr [ESI]
+0061cce4  MOV DL,byte ptr [EAX + 0x21]
+0061cce7  TEST DL,DL
+0061cce9  JZ 0x0061cce0
+0061cceb  JMP 0x0061cd0a
+0061cced  MOV EAX,dword ptr [ESI + 0x4]
+0061ccf0  MOV DL,byte ptr [EAX + 0x21]
+0061ccf3  TEST DL,DL
+0061ccf5  JNZ 0x0061cd08
+0061ccf7  CMP ESI,dword ptr [EAX + 0x8]
+0061ccfa  JNZ 0x0061cd08
+0061ccfc  MOV ESI,EAX
+0061ccfe  MOV EAX,dword ptr [EAX + 0x4]
+0061cd01  MOV DL,byte ptr [EAX + 0x21]
+0061cd04  TEST DL,DL
+0061cd06  JZ 0x0061ccf7
+0061cd08  MOV ESI,EAX
+0061cd0a  PUSH ECX
+0061cd0b  LEA EAX,[ESP + 0x18]
+0061cd0f  PUSH EAX
+0061cd10  MOV ECX,EDI
+0061cd12  CALL 0x00616de0
+0061cd17  CMP ESI,EBX
+0061cd19  JNZ 0x0061ccc0
+0061cd1b  MOV EAX,dword ptr [ESP + 0x10]
+0061cd1f  POP EDI
+0061cd20  MOV dword ptr [EAX],ESI
+0061cd22  POP ESI
+0061cd23  POP EBX
+0061cd24  RET 0xc

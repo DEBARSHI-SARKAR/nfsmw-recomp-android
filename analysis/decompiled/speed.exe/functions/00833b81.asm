@@ -1,0 +1,67 @@
+00833b81  PUSH EBP
+00833b82  MOV EBP,ESP
+00833b84  SUB ESP,0x14
+00833b87  LEA EAX,[EBP + -0x14]
+00833b8a  PUSH EAX
+00833b8b  PUSH dword ptr [EBP + 0x8]
+00833b8e  CALL 0x00831dbc
+00833b93  TEST EAX,EAX
+00833b95  POP ECX
+00833b96  POP ECX
+00833b97  JZ 0x00833c43
+00833b9d  MOVZX EAX,byte ptr [EBX + 0x2]
+00833ba1  AND dword ptr [EBP + -0xc],0x0
+00833ba5  SHR EAX,0x2
+00833ba8  TEST EAX,EAX
+00833baa  MOV dword ptr [EBP + -0x10],EAX
+00833bad  JLE 0x00833c43
+00833bb3  PUSH ESI
+00833bb4  PUSH EDI
+00833bb5  MOV EDI,dword ptr [EBP + 0xc]
+00833bb8  ADD EDI,0xa
+00833bbb  MOV ECX,dword ptr [EBP + -0xc]
+00833bbe  MOVZX ECX,byte ptr [EBX + ECX*0x1 + 0x8]
+00833bc3  AND dword ptr [EBP + -0x8],0x0
+00833bc7  LEA ESI,[EBX + ECX*0x4]
+00833bca  CMP byte ptr [ESI + 0x4],0x0
+00833bce  JLE 0x00833c32
+00833bd0  LEA ECX,[ESI + 0xe]
+00833bd3  MOV dword ptr [EBP + -0x4],ECX
+00833bd6  MOV ECX,dword ptr [EBP + -0x4]
+00833bd9  CMP byte ptr [ECX + -0x2],0xfe
+00833bdd  JNZ 0x00833c22
+00833bdf  TEST byte ptr [ECX],0x80
+00833be2  JNZ 0x00833c22
+00833be4  MOVSX EAX,word ptr [EDI + -0x6]
+00833be8  MOV ECX,dword ptr [0x009c2c10]
+00833bee  MOV EAX,dword ptr [ECX + EAX*0x8 + 0x4]
+00833bf2  MOVZX ECX,byte ptr [EDI]
+00833bf5  MOV EDX,dword ptr [EBP + 0xc]
+00833bf8  MOVZX ECX,byte ptr [ECX + EDX*0x1 + 0x92]
+00833c00  PUSH ECX
+00833c01  PUSH EAX
+00833c02  CALL 0x008349d8
+00833c07  TEST EAX,EAX
+00833c09  POP ECX
+00833c0a  POP ECX
+00833c0b  JZ 0x00833c1f
+00833c0d  MOV ECX,dword ptr [EBP + -0x4]
+00833c10  MOV EDX,dword ptr [EBP + -0x8]
+00833c13  MOVZX ECX,byte ptr [ECX]
+00833c16  MOV AL,byte ptr [EAX + EDX*0x1]
+00833c19  MOV EDX,dword ptr [EBP + -0x14]
+00833c1c  MOV byte ptr [ECX + EDX*0x1],AL
+00833c1f  MOV EAX,dword ptr [EBP + -0x10]
+00833c22  MOVSX ECX,byte ptr [ESI + 0x4]
+00833c26  INC dword ptr [EBP + -0x8]
+00833c29  ADD dword ptr [EBP + -0x4],0x8
+00833c2d  CMP dword ptr [EBP + -0x8],ECX
+00833c30  JL 0x00833bd6
+00833c32  INC dword ptr [EBP + -0xc]
+00833c35  ADD EDI,0xc
+00833c38  CMP dword ptr [EBP + -0xc],EAX
+00833c3b  JL 0x00833bbb
+00833c41  POP EDI
+00833c42  POP ESI
+00833c43  LEAVE
+00833c44  RET

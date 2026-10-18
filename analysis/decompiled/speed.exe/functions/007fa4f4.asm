@@ -1,0 +1,15 @@
+007fa4f4  PUSH ESI
+007fa4f5  MOV ESI,ECX
+007fa4f7  MOV EAX,dword ptr [ESI + 0x4]
+007fa4fa  TEST EAX,EAX
+007fa4fc  JZ 0x007fa509
+007fa4fe  PUSH EAX
+007fa4ff  CALL 0x007e94f0
+007fa504  AND dword ptr [ESI + 0x4],0x0
+007fa508  POP ECX
+007fa509  PUSH 0x7
+007fa50b  POP EAX
+007fa50c  MOV dword ptr [ESI + 0x8],EAX
+007fa50f  MOV dword ptr [ESI + 0xc],EAX
+007fa512  POP ESI
+007fa513  RET

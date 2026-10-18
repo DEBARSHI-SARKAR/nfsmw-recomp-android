@@ -1,0 +1,25 @@
+005d3c50  MOV AL,byte ptr [ESP + 0x8]
+005d3c54  SUB ESP,0x10
+005d3c57  TEST AL,AL
+005d3c59  JZ 0x005d3c9b
+005d3c5b  MOV ECX,dword ptr [ESP + 0x14]
+005d3c5f  LEA EDX,[ESP + 0x14]
+005d3c63  LEA EAX,[ESP + 0x18]
+005d3c67  PUSH ESI
+005d3c68  MOV dword ptr [ESP + 0xc],EDX
+005d3c6c  MOV dword ptr [ESP + 0x8],EAX
+005d3c70  MOV EAX,dword ptr [ESP + 0x20]
+005d3c74  LEA EDX,[ESP + 0x4]
+005d3c78  PUSH EDX
+005d3c79  MOV dword ptr [ESP + 0x20],0x40000000
+005d3c81  MOV ESI,ECX
+005d3c83  MOV dword ptr [ESP + 0x8],0x1
+005d3c8b  MOV dword ptr [ESP + 0x14],EAX
+005d3c8f  CALL 0x005cf5f0
+005d3c94  MOV EAX,ESI
+005d3c96  POP ESI
+005d3c97  ADD ESP,0x10
+005d3c9a  RET
+005d3c9b  MOV EAX,dword ptr [ESP + 0x14]
+005d3c9f  ADD ESP,0x10
+005d3ca2  RET

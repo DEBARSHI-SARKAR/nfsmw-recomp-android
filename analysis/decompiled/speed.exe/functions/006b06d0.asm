@@ -1,0 +1,70 @@
+006b06d0  SUB ESP,0x30
+006b06d3  PUSH ESI
+006b06d4  MOV ESI,ECX
+006b06d6  MOV ECX,dword ptr [ESI + 0xe8]
+006b06dc  MOV EAX,dword ptr [ECX]
+006b06de  CALL dword ptr [EAX + 0x4]
+006b06e1  FLD float ptr [EAX]
+006b06e3  MOV ECX,dword ptr [ESI + 0xe8]
+006b06e9  FCHS
+006b06eb  MOV EDX,dword ptr [ECX]
+006b06ed  FSTP float ptr [ESP + 0x4]
+006b06f1  CALL dword ptr [EDX + 0x4]
+006b06f4  MOV EAX,dword ptr [EAX + 0x8]
+006b06f7  MOV EDX,dword ptr [ESP + 0x38]
+006b06fb  MOV ECX,dword ptr [ESP + 0x4]
+006b06ff  PUSH 0x0
+006b0701  MOV dword ptr [ESP + 0xc],EAX
+006b0705  PUSH EDX
+006b0706  LEA EAX,[ESP + 0x10]
+006b070a  MOV dword ptr [ESP + 0x14],ECX
+006b070e  PUSH EAX
+006b070f  MOV ECX,0x9aa540
+006b0714  CALL 0x00727480
+006b0719  TEST EAX,EAX
+006b071b  JZ 0x006b07b1
+006b0721  FLD float ptr [EAX + 0x8]
+006b0724  MOV ECX,dword ptr [EAX + 0x4]
+006b0727  FCHS
+006b0729  MOV dword ptr [ESP + 0x18],ECX
+006b072d  FSTP float ptr [ESP + 0x10]
+006b0731  MOV EDX,dword ptr [ESP + 0x10]
+006b0735  FLD float ptr [EAX + 0x10]
+006b0738  MOV EAX,dword ptr [EAX + 0xc]
+006b073b  MOV dword ptr [ESP + 0x14],0x0
+006b0743  FCHS
+006b0745  MOV ECX,dword ptr [ESP + 0x14]
+006b0749  FSTP float ptr [ESP + 0x10]
+006b074d  MOV dword ptr [ESP + 0x2c],ECX
+006b0751  MOV ECX,dword ptr [ESP + 0x10]
+006b0755  MOV dword ptr [ESP + 0x28],EDX
+006b0759  MOV EDX,dword ptr [ESP + 0x18]
+006b075d  MOV dword ptr [ESP + 0x1c],ECX
+006b0761  MOV dword ptr [ESP + 0x30],EDX
+006b0765  LEA ECX,[ESP + 0x1c]
+006b0769  MOV dword ptr [ESP + 0x14],0x0
+006b0771  MOV EDX,dword ptr [ESP + 0x14]
+006b0775  PUSH ECX
+006b0776  MOV dword ptr [ESP + 0x1c],EAX
+006b077a  MOV dword ptr [ESP + 0x24],EDX
+006b077e  MOV dword ptr [ESP + 0x28],EAX
+006b0782  CALL 0x00410220
+006b0787  FCOMP float ptr [0x008aabe0]
+006b078d  ADD ESP,0x4
+006b0790  FNSTSW AX
+006b0792  TEST AH,0x41
+006b0795  JNZ 0x006b07b1
+006b0797  PUSH 0x0
+006b0799  LEA EDX,[ESP + 0x20]
+006b079d  PUSH EDX
+006b079e  LEA EAX,[ESP + 0x30]
+006b07a2  PUSH EAX
+006b07a3  MOV ECX,ESI
+006b07a5  CALL 0x006a45f0
+006b07aa  POP ESI
+006b07ab  ADD ESP,0x30
+006b07ae  RET 0x4
+006b07b1  XOR AL,AL
+006b07b3  POP ESI
+006b07b4  ADD ESP,0x30
+006b07b7  RET 0x4

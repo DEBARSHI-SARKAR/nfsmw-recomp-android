@@ -1,0 +1,8 @@
+00575ae0  MOV EAX,dword ptr [ESP + 0x4]
+00575ae4  CMP word ptr [EAX],0x0
+00575ae8  JZ 0x00575af9
+00575aea  LEA EBX,[EBX]
+00575af0  ADD EAX,0x2
+00575af3  CMP word ptr [EAX],0x0
+00575af7  JNZ 0x00575af0
+00575af9  RET 0x4

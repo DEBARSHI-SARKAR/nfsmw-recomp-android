@@ -1,0 +1,65 @@
+0046a040  FLD float ptr [0x0089096c]
+0046a046  XOR EAX,EAX
+0046a048  PUSH EBX
+0046a049  PUSH EBP
+0046a04a  PUSH ESI
+0046a04b  MOV ESI,dword ptr [ESP + 0x10]
+0046a04f  MOV EDX,0x3f800000
+0046a054  MOV dword ptr [ESI + 0x4],EAX
+0046a057  MOV dword ptr [ESI + 0x8],EAX
+0046a05a  MOV dword ptr [ESI + 0xc],EAX
+0046a05d  LEA EBX,[ESI + 0x10]
+0046a060  MOV dword ptr [EBX],EAX
+0046a062  MOV dword ptr [ESI + 0x18],EAX
+0046a065  MOV dword ptr [ESI + 0x1c],EAX
+0046a068  LEA EBP,[ESI + 0x20]
+0046a06b  MOV dword ptr [EBP],EAX
+0046a06e  MOV dword ptr [ESI + 0x24],EAX
+0046a071  MOV dword ptr [ESI + 0x2c],EAX
+0046a074  MOV dword ptr [ESI + 0x30],EAX
+0046a077  MOV dword ptr [ESI + 0x34],EAX
+0046a07a  MOV dword ptr [ESI + 0x38],EAX
+0046a07d  MOV dword ptr [ESI],EDX
+0046a07f  MOV dword ptr [ESI + 0x14],EDX
+0046a082  MOV dword ptr [ESI + 0x28],EDX
+0046a085  MOV dword ptr [ESI + 0x3c],EDX
+0046a088  PUSH EDI
+0046a089  MOV EDI,dword ptr [ECX]
+0046a08b  FSUB float ptr [EDI + 0x58]
+0046a08e  FABS
+0046a090  FCOMP float ptr [0x00890d60]
+0046a096  FNSTSW AX
+0046a098  TEST AH,0x41
+0046a09b  JP 0x0046a0ae
+0046a09d  FLD float ptr [EDI + 0x70]
+0046a0a0  FCHS
+0046a0a2  FSTP float ptr [ESI]
+0046a0a4  FLD float ptr [EDI + 0x74]
+0046a0a7  FCHS
+0046a0a9  FSTP float ptr [ESI + 0x4]
+0046a0ac  JMP 0x0046a0b9
+0046a0ae  MOV EAX,dword ptr [EDI + 0x50]
+0046a0b1  MOV dword ptr [ESI],EAX
+0046a0b3  MOV ECX,dword ptr [EDI + 0x54]
+0046a0b6  MOV dword ptr [ESI + 0x4],ECX
+0046a0b9  PUSH ESI
+0046a0ba  PUSH ESI
+0046a0bb  CALL 0x0045f3c0
+0046a0c0  PUSH ESI
+0046a0c1  PUSH EBP
+0046a0c2  PUSH EBX
+0046a0c3  CALL 0x0045f7c0
+0046a0c8  FLD float ptr [EDI + 0x24]
+0046a0cb  FLD float ptr [EDI + 0x28]
+0046a0ce  MOV EDX,dword ptr [EDI + 0x20]
+0046a0d1  ADD ESP,0x14
+0046a0d4  FXCH
+0046a0d6  FSTP float ptr [ESI + 0x34]
+0046a0d9  POP EDI
+0046a0da  MOV dword ptr [ESI + 0x30],EDX
+0046a0dd  FSTP float ptr [ESI + 0x38]
+0046a0e0  MOV dword ptr [ESI + 0x3c],0x3f800000
+0046a0e7  POP ESI
+0046a0e8  POP EBP
+0046a0e9  POP EBX
+0046a0ea  RET 0x4

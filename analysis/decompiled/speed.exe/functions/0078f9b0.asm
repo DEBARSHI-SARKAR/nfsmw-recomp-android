@@ -1,0 +1,11 @@
+0078f9b0  PUSH ECX
+0078f9b1  PUSH 0x20
+0078f9b3  LEA EAX,[ESP + 0x4]
+0078f9b7  PUSH EAX
+0078f9b8  MOV dword ptr [ESP + 0x8],0x0
+0078f9c0  CALL 0x0078a3a0
+0078f9c5  MOV ECX,dword ptr [ESP]
+0078f9c8  MOV dword ptr [ESP],ECX
+0078f9cb  FLD float ptr [ESP]
+0078f9ce  POP ECX
+0078f9cf  RET

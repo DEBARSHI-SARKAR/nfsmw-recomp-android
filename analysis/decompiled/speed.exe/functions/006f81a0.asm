@@ -1,0 +1,5 @@
+006f81a0  MOV EAX,dword ptr [ESP + 0x4]
+006f81a4  MOV ECX,dword ptr [0x00988ecc]
+006f81aa  PUSH EAX
+006f81ab  CALL 0x006f8050
+006f81b0  RET

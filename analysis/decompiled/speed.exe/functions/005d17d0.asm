@@ -1,0 +1,18 @@
+005d17d0  MOV ECX,dword ptr [ESP + 0x4]
+005d17d4  MOV EDX,dword ptr [ESP + 0x8]
+005d17d8  CMP ECX,EDX
+005d17da  MOV EAX,dword ptr [ESP + 0xc]
+005d17de  JZ 0x005d17fa
+005d17e0  PUSH ESI
+005d17e1  TEST EAX,EAX
+005d17e3  JZ 0x005d17ef
+005d17e5  MOV ESI,dword ptr [ECX]
+005d17e7  MOV dword ptr [EAX],ESI
+005d17e9  MOV ESI,dword ptr [ECX + 0x4]
+005d17ec  MOV dword ptr [EAX + 0x4],ESI
+005d17ef  ADD ECX,0x8
+005d17f2  ADD EAX,0x8
+005d17f5  CMP ECX,EDX
+005d17f7  JNZ 0x005d17e1
+005d17f9  POP ESI
+005d17fa  RET

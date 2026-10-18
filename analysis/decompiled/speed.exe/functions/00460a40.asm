@@ -1,0 +1,4 @@
+00460a40  MOV EAX,dword ptr [ESP + 0x4]
+00460a44  LEA EAX,[EAX + EAX*0x2]
+00460a47  MOV byte ptr [EAX*0x4 + 0x90de48],0x1
+00460a4f  RET

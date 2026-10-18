@@ -1,0 +1,125 @@
+00446f00  PUSH EBP
+00446f01  MOV EBP,ESP
+00446f03  AND ESP,0xfffffff0
+00446f06  SUB ESP,0x74
+00446f09  MOV EAX,0x3f800000
+00446f0e  PUSH EBX
+00446f0f  XOR EBX,EBX
+00446f11  PUSH ESI
+00446f12  MOV ESI,dword ptr [EBP + 0xc]
+00446f15  PUSH EDI
+00446f16  MOV EDI,dword ptr [EBP + 0x8]
+00446f19  MOV dword ptr [EDI],EAX
+00446f1b  MOV dword ptr [EDI + 0x14],EAX
+00446f1e  MOV dword ptr [EDI + 0x28],EAX
+00446f21  MOV dword ptr [EDI + 0x3c],EAX
+00446f24  MOV dword ptr [EDI + 0x4],EBX
+00446f27  MOV dword ptr [EDI + 0x8],EBX
+00446f2a  MOV dword ptr [EDI + 0xc],EBX
+00446f2d  MOV dword ptr [EDI + 0x10],EBX
+00446f30  MOV dword ptr [EDI + 0x18],EBX
+00446f33  MOV dword ptr [EDI + 0x1c],EBX
+00446f36  MOV dword ptr [EDI + 0x20],EBX
+00446f39  MOV dword ptr [EDI + 0x24],EBX
+00446f3c  MOV dword ptr [EDI + 0x2c],EBX
+00446f3f  MOV dword ptr [EDI + 0x30],EBX
+00446f42  MOV dword ptr [EDI + 0x34],EBX
+00446f45  MOV dword ptr [EDI + 0x38],EBX
+00446f48  MOV dword ptr [ESI],EAX
+00446f4a  MOV dword ptr [ESI + 0x14],EAX
+00446f4d  MOV dword ptr [ESI + 0x28],EAX
+00446f50  MOV dword ptr [ESI + 0x3c],EAX
+00446f53  CMP byte ptr [EBP + 0x10],BL
+00446f56  MOV dword ptr [ESI + 0x4],EBX
+00446f59  MOV dword ptr [ESI + 0x8],EBX
+00446f5c  MOV dword ptr [ESI + 0xc],EBX
+00446f5f  MOV dword ptr [ESI + 0x10],EBX
+00446f62  MOV dword ptr [ESI + 0x18],EBX
+00446f65  MOV dword ptr [ESI + 0x1c],EBX
+00446f68  MOV dword ptr [ESI + 0x20],EBX
+00446f6b  MOV dword ptr [ESI + 0x24],EBX
+00446f6e  MOV dword ptr [ESI + 0x2c],EBX
+00446f71  MOV dword ptr [ESI + 0x30],EBX
+00446f74  MOV dword ptr [ESI + 0x34],EBX
+00446f77  MOV dword ptr [ESI + 0x38],EBX
+00446f7a  JZ 0x00446fa1
+00446f7c  FLD float ptr [0x0090daa0]
+00446f82  MOV EAX,[0x0090daa4]
+00446f87  MOV ECX,dword ptr [0x0090da08]
+00446f8d  FST float ptr [ESP + 0x20]
+00446f91  FLD float ptr [0x0090daa8]
+00446f97  MOV dword ptr [ESP + 0x24],EAX
+00446f9b  MOV dword ptr [ESP + 0x10],ECX
+00446f9f  JMP 0x00446fbd
+00446fa1  FLD float ptr [0x00890968]
+00446fa7  MOV dword ptr [ESP + 0x24],0x0
+00446faf  FST float ptr [ESP + 0x20]
+00446fb3  MOV dword ptr [ESP + 0x10],EBX
+00446fb7  FLD float ptr [0x00890968]
+00446fbd  FST float ptr [ESP + 0x28]
+00446fc1  LEA EDX,[ESP + 0x14]
+00446fc5  FLD float ptr [ESP + 0x24]
+00446fc9  PUSH EDX
+00446fca  FCHS
+00446fcc  LEA EAX,[ESP + 0x10]
+00446fd0  FSTP float ptr [ESP + 0x34]
+00446fd4  PUSH EAX
+00446fd5  LEA ECX,[ESP + 0x38]
+00446fd9  FST float ptr [ESP + 0x3c]
+00446fdd  PUSH ECX
+00446fde  FXCH
+00446fe0  MOV dword ptr [ESP + 0x20],0x0
+00446fe8  FSTP float ptr [ESP + 0x44]
+00446fec  MOV dword ptr [ESP + 0x24],0x3f800000
+00446ff4  MOV dword ptr [ESP + 0x28],0x0
+00446ffc  FSTP float ptr [ESP + 0x18]
+00447000  CALL 0x0044a3c0
+00447005  ADD ESP,0xc
+00447008  TEST AL,AL
+0044700a  JZ 0x00447014
+0044700c  MOV EDX,dword ptr [ESP + 0xc]
+00447010  MOV dword ptr [ESP + 0x28],EDX
+00447014  LEA EAX,[ESP + 0x20]
+00447018  PUSH EAX
+00447019  PUSH ESI
+0044701a  CALL 0x006bddf0
+0044701f  MOV AL,byte ptr [EBP + 0x10]
+00447022  ADD ESP,0x8
+00447025  CMP AL,BL
+00447027  MOV dword ptr [ESP + 0x40],0x3f800000
+0044702f  MOV dword ptr [ESP + 0x44],0x0
+00447037  MOV dword ptr [ESP + 0x48],0x0
+0044703f  MOV dword ptr [ESP + 0x4c],0x0
+00447047  MOV dword ptr [ESP + 0x50],0x0
+0044704f  MOV dword ptr [ESP + 0x54],0x3f800000
+00447057  MOV dword ptr [ESP + 0x58],0x0
+0044705f  MOV dword ptr [ESP + 0x5c],0x0
+00447067  MOV dword ptr [ESP + 0x60],0x0
+0044706f  MOV dword ptr [ESP + 0x64],0x0
+00447077  MOV dword ptr [ESP + 0x68],0x3f800000
+0044707f  MOV dword ptr [ESP + 0x6c],0x0
+00447087  MOV dword ptr [ESP + 0x70],0x0
+0044708f  MOV dword ptr [ESP + 0x74],0x0
+00447097  MOV dword ptr [ESP + 0x78],0x0
+0044709f  MOV dword ptr [ESP + 0x7c],0x3f800000
+004470a7  JZ 0x004470cf
+004470a9  MOV ECX,dword ptr [ESP + 0x10]
+004470ad  ADD ECX,0xffffc000
+004470b3  PUSH ECX
+004470b4  LEA EDX,[ESP + 0x44]
+004470b8  PUSH EDX
+004470b9  MOV EAX,EDX
+004470bb  PUSH EAX
+004470bc  CALL 0x006bdd20
+004470c1  LEA ECX,[ESP + 0x4c]
+004470c5  PUSH ECX
+004470c6  PUSH EDI
+004470c7  CALL 0x00444fe0
+004470cc  ADD ESP,0x14
+004470cf  POP EDI
+004470d0  POP ESI
+004470d1  MOV AL,0x1
+004470d3  POP EBX
+004470d4  MOV ESP,EBP
+004470d6  POP EBP
+004470d7  RET

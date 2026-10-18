@@ -1,0 +1,46 @@
+006e19d0  PUSH ECX
+006e19d1  MOV EDX,dword ptr [ECX + 0x4]
+006e19d4  MOV EAX,dword ptr [EDX + 0x4]
+006e19d7  PUSH EBX
+006e19d8  MOV BL,byte ptr [EAX + 0x25]
+006e19db  TEST BL,BL
+006e19dd  PUSH ESI
+006e19de  PUSH EDI
+006e19df  MOV EDI,dword ptr [ESP + 0x18]
+006e19e3  JNZ 0x006e19fc
+006e19e5  MOV ESI,dword ptr [EDI]
+006e19e7  CMP dword ptr [EAX + 0xc],ESI
+006e19ea  JNC 0x006e19f1
+006e19ec  MOV EAX,dword ptr [EAX + 0x8]
+006e19ef  JMP 0x006e19f5
+006e19f1  MOV EDX,EAX
+006e19f3  MOV EAX,dword ptr [EAX]
+006e19f5  MOV BL,byte ptr [EAX + 0x25]
+006e19f8  TEST BL,BL
+006e19fa  JZ 0x006e19e7
+006e19fc  MOV EAX,dword ptr [ECX + 0x4]
+006e19ff  CMP EDX,EAX
+006e1a01  MOV dword ptr [ESP + 0x18],EDX
+006e1a05  JZ 0x006e1a21
+006e1a07  MOV ECX,dword ptr [EDI]
+006e1a09  CMP ECX,dword ptr [EDX + 0xc]
+006e1a0c  JC 0x006e1a21
+006e1a0e  LEA EAX,[ESP + 0x18]
+006e1a12  MOV EDX,dword ptr [EAX]
+006e1a14  MOV EAX,dword ptr [ESP + 0x14]
+006e1a18  POP EDI
+006e1a19  POP ESI
+006e1a1a  MOV dword ptr [EAX],EDX
+006e1a1c  POP EBX
+006e1a1d  POP ECX
+006e1a1e  RET 0x8
+006e1a21  MOV dword ptr [ESP + 0xc],EAX
+006e1a25  LEA EAX,[ESP + 0xc]
+006e1a29  MOV EDX,dword ptr [EAX]
+006e1a2b  MOV EAX,dword ptr [ESP + 0x14]
+006e1a2f  POP EDI
+006e1a30  POP ESI
+006e1a31  MOV dword ptr [EAX],EDX
+006e1a33  POP EBX
+006e1a34  POP ECX
+006e1a35  RET 0x8

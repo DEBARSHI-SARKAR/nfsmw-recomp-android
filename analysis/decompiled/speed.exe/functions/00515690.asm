@@ -1,0 +1,26 @@
+00515690  PUSH ESI
+00515691  MOV ESI,dword ptr [ESP + 0x8]
+00515695  TEST ESI,ESI
+00515697  JZ 0x005156d9
+00515699  MOV EAX,dword ptr [ESI + 0x24]
+0051569c  PUSH 0x0
+0051569e  PUSH 0x1
+005156a0  PUSH EAX
+005156a1  CALL 0x00503400
+005156a6  MOVSX ECX,word ptr [EAX + 0x44]
+005156aa  MOV EDX,dword ptr [ESI + 0x2c]
+005156ad  MOV dword ptr [ESP + 0x14],ECX
+005156b1  MOV ECX,dword ptr [ESP + 0x18]
+005156b5  ADD ESP,0xc
+005156b8  FILD dword ptr [ESP + 0x8]
+005156bc  FMUL float ptr [EDX + 0x4c]
+005156bf  FSTP float ptr [ECX]
+005156c1  MOVSX EDX,word ptr [EAX + 0x46]
+005156c5  MOV EAX,dword ptr [ESI + 0x2c]
+005156c8  MOV ECX,dword ptr [ESP + 0x10]
+005156cc  MOV dword ptr [ESP + 0x8],EDX
+005156d0  FILD dword ptr [ESP + 0x8]
+005156d4  FMUL float ptr [EAX + 0x50]
+005156d7  FSTP float ptr [ECX]
+005156d9  POP ESI
+005156da  RET

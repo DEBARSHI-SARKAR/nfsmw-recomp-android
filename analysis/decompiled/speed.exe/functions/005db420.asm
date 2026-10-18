@@ -1,0 +1,7 @@
+005db420  MOV EAX,dword ptr [ESP + 0x4]
+005db424  TEST EAX,EAX
+005db426  JNZ 0x005db431
+005db428  FLD float ptr [ECX + 0x4488]
+005db42e  RET 0x4
+005db431  FLD float ptr [ECX + 0x448c]
+005db437  RET 0x4

@@ -1,0 +1,35 @@
+0040b140  PUSH EBP
+0040b141  MOV EBP,ESP
+0040b143  AND ESP,0xfffffff0
+0040b146  SUB ESP,0x10
+0040b149  MOV AL,[0x00919658]
+0040b14e  TEST AL,AL
+0040b150  JNZ 0x0040b175
+0040b152  MOV ECX,dword ptr [0x008a2fb4]
+0040b158  MOV EAX,dword ptr [EBP + 0x8]
+0040b15b  MOV dword ptr [EAX],ECX
+0040b15d  MOV EDX,dword ptr [0x008a2fb8]
+0040b163  MOV dword ptr [EAX + 0x4],EDX
+0040b166  MOV ECX,dword ptr [0x008a2fbc]
+0040b16c  MOV dword ptr [EAX + 0x8],ECX
+0040b16f  MOV ESP,EBP
+0040b171  POP EBP
+0040b172  RET 0x4
+0040b175  MOV EAX,[0x00919690]
+0040b17a  FLD float ptr [EAX + 0x50]
+0040b17d  MOV EDX,dword ptr [EBP + 0x8]
+0040b180  FLD float ptr [EAX + 0x58]
+0040b183  FLD float ptr [EAX + 0x54]
+0040b186  FCHS
+0040b188  FSTP float ptr [ESP]
+0040b18b  MOV EAX,dword ptr [ESP]
+0040b18e  MOV dword ptr [EDX],EAX
+0040b190  FSTP float ptr [ESP + 0x4]
+0040b194  MOV ECX,dword ptr [ESP + 0x4]
+0040b198  MOV dword ptr [EDX + 0x4],ECX
+0040b19b  FSTP float ptr [ESP + 0x8]
+0040b19f  MOV EAX,dword ptr [ESP + 0x8]
+0040b1a3  MOV dword ptr [EDX + 0x8],EAX
+0040b1a6  MOV ESP,EBP
+0040b1a8  POP EBP
+0040b1a9  RET 0x4

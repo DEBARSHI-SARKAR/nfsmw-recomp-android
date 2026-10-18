@@ -1,0 +1,71 @@
+/* speed.exe 004f2760 FUN_004f2760; analysis pseudocode, not buildable source.
+ * calls 004ea670 FUN_004ea670
+ */
+
+void FUN_004f2760(void)
+
+{
+  FUN_004ea670(&DAT_008efb3c);
+  FUN_004ea670(&DAT_008efb4c);
+  FUN_004ea670(&DAT_008efb2c);
+  FUN_004ea670(&DAT_008efdd4);
+  FUN_004ea670(&DAT_008efde4);
+  FUN_004ea670(&DAT_008efb5c);
+  FUN_004ea670(&DAT_008efadc);
+  FUN_004ea670(&DAT_008efa8c);
+  FUN_004ea670(&DAT_008efa54);
+  FUN_004ea670(&DAT_008efa68);
+  FUN_004ea670(&DAT_008efb6c);
+  FUN_004ea670(&DAT_008efa78);
+  FUN_004ea670(&DAT_008efabc);
+  FUN_004ea670(&DAT_008efacc);
+  FUN_004ea670(&DAT_008efc70);
+  FUN_004ea670(&DAT_008efb7c);
+  FUN_004ea670(&DAT_008efbbc);
+  FUN_004ea670(&DAT_008efb8c);
+  FUN_004ea670(&DAT_008efa40);
+  FUN_004ea670(&DAT_008efb9c);
+  FUN_004ea670(&DAT_008efbcc);
+  FUN_004ea670(&DAT_008efbfc);
+  FUN_004ea670(&DAT_008efcf4);
+  FUN_004ea670(&DAT_008efd58);
+  FUN_004ea670(&DAT_008efc0c);
+  FUN_004ea670(&DAT_008efc2c);
+  FUN_004ea670(&DAT_008efc4c);
+  FUN_004ea670(&DAT_008efb0c);
+  FUN_004ea670(&DAT_008efd68);
+  FUN_004ea670(&DAT_008efd84);
+  FUN_004ea670(&DAT_008efd94);
+  FUN_004ea670(&DAT_008efc80);
+  FUN_004ea670(&DAT_008efdc4);
+  FUN_004ea670(&DAT_008efc3c);
+  FUN_004ea670(&DAT_008ee7d8);
+  FUN_004ea670(&DAT_008ee704);
+  FUN_004ea670(&DAT_008ee6e8);
+  FUN_004ea670(&DAT_008ee714);
+  FUN_004ea670(&DAT_008ee724);
+  FUN_004ea670(&DAT_008ee744);
+  FUN_004ea670(&DAT_008ee6c8);
+  FUN_004ea670(&DAT_008ee698);
+  FUN_004ea670(&DAT_008ee754);
+  FUN_004ea670(&DAT_008ee76c);
+  FUN_004ea670(&DAT_008ee780);
+  FUN_004ea670(&DAT_008efda4);
+  FUN_004ea670(&DAT_008eea98);
+  FUN_004ea670(&DAT_008ee7c0);
+  FUN_004ea670(&DAT_008efa14);
+  FUN_004ea670(&DAT_008ee7a0);
+  FUN_004ea670(&DAT_008ee7b0);
+  FUN_004ea670(&DAT_008efc1c);
+  FUN_004ea670(&DAT_008efdb4);
+  FUN_004ea670(&DAT_008efbac);
+  FUN_004ea670(&DAT_008efaec);
+  FUN_004ea670(&DAT_008efafc);
+  FUN_004ea670(&DAT_008efaac);
+  FUN_004ea670(&DAT_008efa9c);
+  FUN_004ea670(&DAT_008efdf4);
+  FUN_004ea670(&DAT_008eea88);
+  FUN_004ea670(&DAT_008efbdc);
+  return;
+}
+

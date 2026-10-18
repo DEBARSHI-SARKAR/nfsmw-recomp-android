@@ -1,0 +1,14 @@
+005e3a00  MOV EAX,dword ptr [ECX + 0xc]
+005e3a03  TEST EAX,EAX
+005e3a05  JZ 0x005e3a0c
+005e3a07  CMP dword ptr [EAX],0x0
+005e3a0a  JZ 0x005e3a18
+005e3a0c  MOV EAX,dword ptr [ECX + 0x10]
+005e3a0f  TEST EAX,EAX
+005e3a11  JZ 0x005e3a1b
+005e3a13  CMP dword ptr [EAX],0x0
+005e3a16  JNZ 0x005e3a1b
+005e3a18  XOR AL,AL
+005e3a1a  RET
+005e3a1b  MOV AL,0x1
+005e3a1d  RET

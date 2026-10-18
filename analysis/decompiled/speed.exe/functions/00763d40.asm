@@ -1,0 +1,76 @@
+00763d40  SUB ESP,0x24
+00763d43  FLD float ptr [EAX + 0x10]
+00763d46  LEA ECX,[ESP + 0xc]
+00763d4a  FSUB float ptr [EAX]
+00763d4c  LEA EDX,[ESP + 0x18]
+00763d50  FSTP float ptr [ESP + 0x18]
+00763d54  FLD float ptr [EAX + 0x14]
+00763d57  FSUB float ptr [EAX + 0x4]
+00763d5a  FSTP float ptr [ESP + 0x1c]
+00763d5e  FLD float ptr [EAX + 0x18]
+00763d61  FSUB float ptr [EAX + 0x8]
+00763d64  FSTP float ptr [ESP + 0x20]
+00763d68  FLD float ptr [EAX]
+00763d6a  FSUB float ptr [EAX + 0x20]
+00763d6d  FSTP float ptr [ESP + 0xc]
+00763d71  FLD float ptr [EAX + 0x4]
+00763d74  FSUB float ptr [EAX + 0x24]
+00763d77  FSTP float ptr [ESP + 0x10]
+00763d7b  FLD float ptr [EAX + 0x8]
+00763d7e  FSUB float ptr [EAX + 0x28]
+00763d81  LEA EAX,[ESP]
+00763d84  PUSH EAX
+00763d85  PUSH ECX
+00763d86  PUSH EDX
+00763d87  FSTP float ptr [ESP + 0x20]
+00763d8b  CALL 0x005c6420
+00763d90  FLD float ptr [0x00890968]
+00763d96  FLD float ptr [ESP + 0xc]
+00763d9a  ADD ESP,0xc
+00763d9d  FUCOMPP
+00763d9f  FNSTSW AX
+00763da1  TEST AH,0x44
+00763da4  JP 0x00763de2
+00763da6  FLD float ptr [0x00890968]
+00763dac  FLD float ptr [ESP + 0x4]
+00763db0  FUCOMPP
+00763db2  FNSTSW AX
+00763db4  TEST AH,0x44
+00763db7  JP 0x00763de2
+00763db9  FLD float ptr [0x00890968]
+00763dbf  FLD float ptr [ESP + 0x8]
+00763dc3  FUCOMPP
+00763dc5  FNSTSW AX
+00763dc7  TEST AH,0x44
+00763dca  JP 0x00763de2
+00763dcc  MOV dword ptr [ESI],0x0
+00763dd2  MOV dword ptr [ESI + 0x4],0x3f800000
+00763dd9  MOV dword ptr [ESI + 0x8],0x0
+00763de0  JMP 0x00763def
+00763de2  LEA EAX,[ESP]
+00763de5  PUSH ESI
+00763de6  PUSH EAX
+00763de7  CALL 0x005c67f0
+00763dec  ADD ESP,0x8
+00763def  FLD float ptr [ESI + 0x4]
+00763df2  FCOMP float ptr [0x00890968]
+00763df8  FNSTSW AX
+00763dfa  TEST AH,0x5
+00763dfd  JP 0x00763e15
+00763dff  FLD float ptr [ESI]
+00763e01  FCHS
+00763e03  FSTP float ptr [ESI]
+00763e05  FLD float ptr [ESI + 0x4]
+00763e08  FCHS
+00763e0a  FSTP float ptr [ESI + 0x4]
+00763e0d  FLD float ptr [ESI + 0x8]
+00763e10  FCHS
+00763e12  FSTP float ptr [ESI + 0x8]
+00763e15  FLD float ptr [ESI + 0x4]
+00763e18  FCOMP float ptr [0x0089097c]
+00763e1e  FNSTSW AX
+00763e20  TEST AH,0x1
+00763e23  JNZ 0x00763e2c
+00763e25  MOV dword ptr [ESI + 0x4],0x3f7ff972
+00763e2c  ADD ESP,0x24
+00763e2f  RET

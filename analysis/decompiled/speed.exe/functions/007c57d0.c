@@ -1,0 +1,33 @@
+/* speed.exe 007c57d0 exception; analysis pseudocode, not buildable source.
+ * calls 007d0bd0 FUN_007d0bd0
+ * calls 007c66d0 _malloc
+ * calls 007d0cd0 _strlen
+ */
+
+/* Library Function - Single Match
+    public: __thiscall exception::exception(class exception const &)
+   
+   Libraries: Visual Studio 2003 Debug, Visual Studio 2003 Release */
+
+exception * __thiscall exception::exception(exception *this,exception *param_1)
+
+{
+  size_t sVar1;
+  void *pvVar2;
+  
+  *(undefined ***)this = &PTR_FUN_008b80d0;
+  *(undefined4 *)(this + 8) = *(undefined4 *)(param_1 + 8);
+  if (*(int *)(this + 8) == 0) {
+    *(undefined4 *)(this + 4) = *(undefined4 *)(param_1 + 4);
+  }
+  else {
+    sVar1 = _strlen(*(char **)(param_1 + 4));
+    pvVar2 = _malloc(sVar1 + 1);
+    *(void **)(this + 4) = pvVar2;
+    if (*(int *)(this + 4) != 0) {
+      FUN_007d0bd0(*(undefined4 *)(this + 4),*(undefined4 *)(param_1 + 4));
+    }
+  }
+  return this;
+}
+

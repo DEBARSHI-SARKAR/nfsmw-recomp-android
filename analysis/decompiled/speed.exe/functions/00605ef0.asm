@@ -1,0 +1,12 @@
+00605ef0  MOV EAX,dword ptr [ESP + 0x4]
+00605ef4  MOV ECX,dword ptr [EAX + 0x8]
+00605ef7  PUSH ESI
+00605ef8  MOV ESI,dword ptr [ESP + 0xc]
+00605efc  XOR EDX,EDX
+00605efe  TEST ESI,ESI
+00605f00  SETNZ DL
+00605f03  MOV dword ptr [ECX],0x1
+00605f09  POP ESI
+00605f0a  MOV dword ptr [ECX + 0x4],EDX
+00605f0d  ADD dword ptr [EAX + 0x8],0x8
+00605f11  RET

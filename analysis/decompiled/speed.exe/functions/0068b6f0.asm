@@ -1,0 +1,5 @@
+0068b6f0  MOV dword ptr [ECX],0x890970
+0068b6f6  PUSH ECX
+0068b6f7  MOV ECX,dword ptr [ECX + 0x4]
+0068b6fa  CALL 0x005d5a50
+0068b6ff  RET

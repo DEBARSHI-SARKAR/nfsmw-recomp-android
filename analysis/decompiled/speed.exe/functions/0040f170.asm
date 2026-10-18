@@ -1,0 +1,34 @@
+0040f170  MOV EDX,dword ptr [ESP + 0x4]
+0040f174  MOV ECX,dword ptr [ESP + 0x8]
+0040f178  CMP EDX,ECX
+0040f17a  MOV EAX,dword ptr [ESP + 0xc]
+0040f17e  JZ 0x0040f1c0
+0040f180  PUSH EBX
+0040f181  PUSH ESI
+0040f182  PUSH EDI
+0040f183  SUB ECX,0x1c
+0040f186  SUB EAX,0x1c
+0040f189  CMP ECX,EDX
+0040f18b  MOV ESI,ECX
+0040f18d  MOV EBX,dword ptr [ESI]
+0040f18f  MOV EDI,EAX
+0040f191  MOV dword ptr [EDI],EBX
+0040f193  MOV EBX,dword ptr [ESI + 0x4]
+0040f196  MOV dword ptr [EDI + 0x4],EBX
+0040f199  MOV ESI,dword ptr [ESI + 0x8]
+0040f19c  MOV dword ptr [EDI + 0x8],ESI
+0040f19f  LEA ESI,[ECX + 0xc]
+0040f1a2  MOV EBX,dword ptr [ESI]
+0040f1a4  LEA EDI,[EAX + 0xc]
+0040f1a7  MOV dword ptr [EDI],EBX
+0040f1a9  MOV EBX,dword ptr [ESI + 0x4]
+0040f1ac  MOV dword ptr [EDI + 0x4],EBX
+0040f1af  MOV ESI,dword ptr [ESI + 0x8]
+0040f1b2  MOV dword ptr [EDI + 0x8],ESI
+0040f1b5  MOV ESI,dword ptr [ECX + 0x18]
+0040f1b8  MOV dword ptr [EAX + 0x18],ESI
+0040f1bb  JNZ 0x0040f183
+0040f1bd  POP EDI
+0040f1be  POP ESI
+0040f1bf  POP EBX
+0040f1c0  RET

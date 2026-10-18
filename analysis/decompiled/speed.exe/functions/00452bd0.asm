@@ -1,0 +1,5 @@
+00452bd0  MOV EAX,dword ptr [ECX]
+00452bd2  TEST EAX,EAX
+00452bd4  JZ 0x00452bda
+00452bd6  DEC word ptr [EAX + 0x12]
+00452bda  RET

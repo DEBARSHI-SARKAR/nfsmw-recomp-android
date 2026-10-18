@@ -1,0 +1,17 @@
+00605bd0  MOV EDX,dword ptr [ESP + 0x8]
+00605bd4  TEST EDX,EDX
+00605bd6  JLE 0x00605bea
+00605bd8  MOV ECX,dword ptr [ESP + 0x4]
+00605bdc  MOV EAX,dword ptr [ECX + 0xc]
+00605bdf  LEA EAX,[EAX + EDX*0x8 + -0x8]
+00605be3  CMP EAX,dword ptr [ECX + 0x8]
+00605be6  JNC 0x00605bf7
+00605be8  JMP 0x00605bf3
+00605bea  MOV EAX,dword ptr [ESP + 0x4]
+00605bee  CALL 0x00605950
+00605bf3  TEST EAX,EAX
+00605bf5  JNZ 0x00605bfb
+00605bf7  OR EAX,0xffffffff
+00605bfa  RET
+00605bfb  MOV EAX,dword ptr [EAX]
+00605bfd  RET

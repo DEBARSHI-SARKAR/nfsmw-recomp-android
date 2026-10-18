@@ -1,0 +1,21 @@
+007de550  PUSH EBP
+007de551  MOV EBP,ESP
+007de553  PUSH ECX
+007de554  MOV dword ptr [EBP + -0x4],0x0
+007de55b  JMP 0x007de566
+007de55d  MOV EAX,dword ptr [EBP + -0x4]
+007de560  ADD EAX,0x1
+007de563  MOV dword ptr [EBP + -0x4],EAX
+007de566  CMP dword ptr [EBP + -0x4],0x3
+007de56a  JGE 0x007de57e
+007de56c  MOV ECX,dword ptr [EBP + -0x4]
+007de56f  MOV EDX,dword ptr [EBP + 0x8]
+007de572  CMP dword ptr [EDX + ECX*0x4],0x0
+007de576  JZ 0x007de57c
+007de578  XOR EAX,EAX
+007de57a  JMP 0x007de583
+007de57c  JMP 0x007de55d
+007de57e  MOV EAX,0x1
+007de583  MOV ESP,EBP
+007de585  POP EBP
+007de586  RET

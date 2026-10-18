@@ -1,0 +1,11 @@
+007f4199  PUSH EBP
+007f419a  MOV EBP,ESP
+007f419c  MOV EAX,dword ptr [EBP + 0x14]
+007f419f  SHL EAX,0x8
+007f41a2  OR EAX,dword ptr [EBP + 0x10]
+007f41a5  SHL EAX,0x8
+007f41a8  OR EAX,dword ptr [EBP + 0xc]
+007f41ab  SHL EAX,0x8
+007f41ae  OR EAX,dword ptr [EBP + 0x8]
+007f41b1  POP EBP
+007f41b2  RET

@@ -1,0 +1,4 @@
+00739860  MOVZX EAX,byte ptr [ECX + 0x7]
+00739864  MOV ECX,dword ptr [0x009b09c4]
+0073986a  MOV EAX,dword ptr [ECX + EAX*0x4]
+0073986d  RET

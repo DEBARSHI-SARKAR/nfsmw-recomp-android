@@ -1,0 +1,59 @@
+00783d70  PUSH -0x1
+00783d72  PUSH 0x8820c8
+00783d77  MOV EAX,FS:[0x0]
+00783d7d  PUSH EAX
+00783d7e  MOV dword ptr FS:[0x0],ESP
+00783d85  SUB ESP,0x30
+00783d88  XOR EAX,EAX
+00783d8a  PUSH ESI
+00783d8b  PUSH EDI
+00783d8c  MOV EDI,ECX
+00783d8e  MOV dword ptr [ESP + 0xc],EAX
+00783d92  MOV dword ptr [ESP + 0x10],EAX
+00783d96  MOV dword ptr [ESP + 0x14],EAX
+00783d9a  MOV dword ptr [ESP + 0x8],0x891594
+00783da2  PUSH 0x40
+00783da4  LEA ECX,[ESP + 0xc]
+00783da8  MOV dword ptr [ESP + 0x44],EAX
+00783dac  CALL 0x0041b250
+00783db1  MOV ESI,dword ptr [ESP + 0x4c]
+00783db5  FLD float ptr [ESI]
+00783db7  LEA EAX,[ESP + 0x8]
+00783dbb  FSUB float ptr [ESP + 0x50]
+00783dbf  PUSH EAX
+00783dc0  LEA ECX,[ESP + 0x1c]
+00783dc4  PUSH ECX
+00783dc5  MOV ECX,dword ptr [0x009b38a8]
+00783dcb  FSTP float ptr [ESP + 0x20]
+00783dcf  FLD float ptr [ESI + 0x8]
+00783dd2  MOV dword ptr [ESP + 0x34],0x0
+00783dda  FSUB float ptr [ESP + 0x58]
+00783dde  MOV dword ptr [ESP + 0x24],0x0
+00783de6  FSTP float ptr [ESP + 0x28]
+00783dea  FLD float ptr [ESP + 0x58]
+00783dee  FADD float ptr [ESI]
+00783df0  FSTP float ptr [ESP + 0x30]
+00783df4  FLD float ptr [ESP + 0x58]
+00783df8  FADD float ptr [ESI + 0x8]
+00783dfb  FSTP float ptr [ESP + 0x38]
+00783dff  CALL 0x007736e0
+00783e04  MOV EDX,dword ptr [ESP + 0x54]
+00783e08  MOV EAX,dword ptr [ESP + 0x50]
+00783e0c  MOV ECX,dword ptr [ESP + 0x48]
+00783e10  PUSH EDX
+00783e11  PUSH EAX
+00783e12  PUSH ESI
+00783e13  PUSH ECX
+00783e14  LEA EDX,[ESP + 0x18]
+00783e18  PUSH EDX
+00783e19  MOV ECX,EDI
+00783e1b  CALL 0x00783b80
+00783e20  LEA ECX,[ESP + 0x8]
+00783e24  MOV dword ptr [ESP + 0x40],0xffffffff
+00783e2c  CALL 0x0042cbf0
+00783e31  MOV ECX,dword ptr [ESP + 0x38]
+00783e35  POP EDI
+00783e36  POP ESI
+00783e37  MOV dword ptr FS:[0x0],ECX
+00783e3e  ADD ESP,0x3c
+00783e41  RET 0x10

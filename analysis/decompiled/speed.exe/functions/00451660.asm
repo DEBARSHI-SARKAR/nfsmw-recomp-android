@@ -1,0 +1,3 @@
+00451660  MOV EAX,dword ptr [ECX + 0x8]
+00451663  MOVZX EAX,word ptr [EAX + 0x2e]
+00451667  RET

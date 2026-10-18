@@ -1,0 +1,26 @@
+0055af20  PUSH -0x1
+0055af22  PUSH 0x870e38
+0055af27  MOV EAX,FS:[0x0]
+0055af2d  PUSH EAX
+0055af2e  MOV dword ptr FS:[0x0],ESP
+0055af35  PUSH ECX
+0055af36  PUSH ESI
+0055af37  MOV ESI,ECX
+0055af39  MOV dword ptr [ESP + 0x4],ESI
+0055af3d  MOV dword ptr [ESI],0x89eef4
+0055af43  MOV dword ptr [ESI + 0x2c],0x89eee8
+0055af4a  MOV ECX,dword ptr [ESI + 0xe4]
+0055af50  TEST ECX,ECX
+0055af52  MOV dword ptr [ESP + 0x10],0x0
+0055af5a  JZ 0x0055af62
+0055af5c  MOV EAX,dword ptr [ECX]
+0055af5e  PUSH 0x1
+0055af60  CALL dword ptr [EAX]
+0055af62  MOV ECX,ESI
+0055af64  MOV dword ptr [ESP + 0x10],0xffffffff
+0055af6c  CALL 0x0052a680
+0055af71  MOV ECX,dword ptr [ESP + 0x8]
+0055af75  POP ESI
+0055af76  MOV dword ptr FS:[0x0],ECX
+0055af7d  ADD ESP,0x10
+0055af80  RET

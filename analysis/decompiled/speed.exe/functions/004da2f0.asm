@@ -1,0 +1,110 @@
+004da2f0  PUSH -0x1
+004da2f2  PUSH 0x86c9db
+004da2f7  MOV EAX,FS:[0x0]
+004da2fd  PUSH EAX
+004da2fe  MOV dword ptr FS:[0x0],ESP
+004da305  PUSH ECX
+004da306  PUSH ESI
+004da307  MOV ESI,ECX
+004da309  MOV AL,byte ptr [ESI + 0x8]
+004da30c  TEST AL,AL
+004da30e  JZ 0x004da450
+004da314  CMP dword ptr [0x008f86f8],0x1
+004da31b  JNZ 0x004da450
+004da321  MOV EAX,dword ptr [ESI + 0x38]
+004da324  TEST EAX,EAX
+004da326  JNZ 0x004da450
+004da32c  FLD float ptr [ESI + 0x70]
+004da32f  MOV dword ptr [ESI + 0x64],0x1
+004da336  FCOMP float ptr [0x00891050]
+004da33c  FNSTSW AX
+004da33e  TEST AH,0x41
+004da341  JNZ 0x004da356
+004da343  MOV ECX,dword ptr [0x00911fa8]
+004da349  PUSH 0x2
+004da34b  CALL 0x004aecf0
+004da350  ADD EAX,0x2
+004da353  MOV dword ptr [ESI + 0x64],EAX
+004da356  CMP dword ptr [ESI + 0x64],0x1
+004da35a  JNZ 0x004da36c
+004da35c  MOV EAX,dword ptr [ESI + 0x58]
+004da35f  MOV EAX,dword ptr [EAX + 0x8]
+004da362  MOV ECX,dword ptr [EAX + 0x18]
+004da365  FILD dword ptr [EAX + 0x18]
+004da368  TEST ECX,ECX
+004da36a  JMP 0x004da37f
+004da36c  MOV EDX,dword ptr [ESI + 0x58]
+004da36f  MOV EAX,dword ptr [EDX + 0x8]
+004da372  MOV EAX,dword ptr [EAX + 0x1c]
+004da375  MOV dword ptr [ESP + 0x4],EAX
+004da379  FILD dword ptr [ESP + 0x4]
+004da37d  TEST EAX,EAX
+004da37f  JGE 0x004da387
+004da381  FADD float ptr [0x00891214]
+004da387  FMUL float ptr [ESI + 0x70]
+004da38a  CALL 0x007c4b80
+004da38f  PUSH EDI
+004da390  MOV dword ptr [ESI + 0x60],EAX
+004da393  MOV ECX,dword ptr [0x00911fa8]
+004da399  PUSH 0x898764
+004da39e  CALL 0x004ae980
+004da3a3  PUSH 0x1c
+004da3a5  CALL 0x00831667
+004da3aa  MOV EDI,EAX
+004da3ac  ADD ESP,0x4
+004da3af  MOV dword ptr [ESP + 0x8],EDI
+004da3b3  TEST EDI,EDI
+004da3b5  MOV dword ptr [ESP + 0x14],0x0
+004da3bd  JZ 0x004da3f0
+004da3bf  MOV ECX,dword ptr [ESI + 0x18]
+004da3c2  FLD float ptr [ECX + 0x64]
+004da3c5  CALL 0x007c4b80
+004da3ca  FLD float ptr [ESI + 0x70]
+004da3cd  MOV EDX,dword ptr [ESP + 0x2c]
+004da3d1  FMUL float ptr [0x00898760]
+004da3d7  PUSH EAX
+004da3d8  PUSH EDX
+004da3d9  PUSH 0x0
+004da3db  CALL 0x007c4b80
+004da3e0  PUSH EAX
+004da3e1  MOV EAX,dword ptr [ESI + 0x64]
+004da3e4  PUSH 0x0
+004da3e6  PUSH EAX
+004da3e7  MOV ECX,EDI
+004da3e9  CALL 0x004d8720
+004da3ee  JMP 0x004da3f2
+004da3f0  XOR EAX,EAX
+004da3f2  MOV dword ptr [ESI + 0x38],EAX
+004da3f5  INC dword ptr [0x009142f0]
+004da3fb  MOV EAX,dword ptr [ESI + 0x38]
+004da3fe  TEST EAX,EAX
+004da400  MOV dword ptr [ESP + 0x14],0xffffffff
+004da408  POP EDI
+004da409  JZ 0x004da42b
+004da40b  MOV EAX,dword ptr [EAX]
+004da40d  TEST EAX,EAX
+004da40f  MOV dword ptr [ESP + 0x28],0x0
+004da417  JZ 0x004da425
+004da419  LEA ECX,[ESP + 0x28]
+004da41d  PUSH ECX
+004da41e  MOV ECX,EAX
+004da420  CALL 0x008311aa
+004da425  MOV EAX,dword ptr [ESP + 0x28]
+004da429  JMP 0x004da42d
+004da42b  XOR EAX,EAX
+004da42d  MOV EDX,dword ptr [ESI + 0x18]
+004da430  PUSH 0x0
+004da432  PUSH 0x1
+004da434  MOV word ptr [ESI + 0x1c],AX
+004da438  MOV EAX,dword ptr [EDX + 0x3c]
+004da43b  PUSH 0x3f800000
+004da440  PUSH 0x3f800000
+004da445  LEA ECX,[ESI + 0x3c]
+004da448  MOV dword ptr [ESI + 0x68],EAX
+004da44b  CALL 0x004b02b0
+004da450  MOV ECX,dword ptr [ESP + 0x8]
+004da454  XOR EAX,EAX
+004da456  POP ESI
+004da457  MOV dword ptr FS:[0x0],ECX
+004da45e  ADD ESP,0x10
+004da461  RET 0x14

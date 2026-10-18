@@ -1,0 +1,21 @@
+007b79f0  PUSH -0x1
+007b79f2  PUSH 0x8833c8
+007b79f7  MOV EAX,FS:[0x0]
+007b79fd  PUSH EAX
+007b79fe  MOV dword ptr FS:[0x0],ESP
+007b7a05  PUSH ECX
+007b7a06  PUSH ESI
+007b7a07  MOV ESI,ECX
+007b7a09  MOV dword ptr [ESP + 0x4],ESI
+007b7a0d  MOV dword ptr [ESI],0x8b7d4c
+007b7a13  LEA ECX,[ESI + 0x58]
+007b7a16  MOV dword ptr [ESP + 0x10],0x0
+007b7a1e  CALL 0x007b3f00
+007b7a23  MOV ECX,ESI
+007b7a25  MOV dword ptr [ESP + 0x10],0xffffffff
+007b7a2d  CALL 0x007aa190
+007b7a32  MOV ECX,dword ptr [ESP + 0x8]
+007b7a36  POP ESI
+007b7a37  MOV dword ptr FS:[0x0],ECX
+007b7a3e  ADD ESP,0x10
+007b7a41  RET

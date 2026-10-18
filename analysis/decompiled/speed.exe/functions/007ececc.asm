@@ -1,0 +1,19 @@
+007ececc  PUSH EBP
+007ececd  MOV EBP,ESP
+007ececf  PUSH ESI
+007eced0  PUSH 0x0
+007eced2  PUSH dword ptr [EBP + 0xc]
+007eced5  PUSH dword ptr [EBP + 0x8]
+007eced8  CALL 0x007edb59
+007ecedd  MOV ESI,EAX
+007ecedf  PUSH ESI
+007ecee0  CALL 0x007ed9a6
+007ecee5  PUSH ESI
+007ecee6  CALL 0x007edab2
+007eceeb  ADD ESP,0x14
+007eceee  NEG EAX
+007ecef0  SBB EAX,EAX
+007ecef2  NEG EAX
+007ecef4  POP ESI
+007ecef5  POP EBP
+007ecef6  RET

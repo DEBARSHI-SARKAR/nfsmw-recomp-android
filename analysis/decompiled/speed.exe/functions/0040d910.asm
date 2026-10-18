@@ -1,0 +1,33 @@
+0040d910  MOV EAX,dword ptr [ECX + 0x14]
+0040d913  CMP dword ptr [EAX],ECX
+0040d915  JNZ 0x0040d91c
+0040d917  MOV EDX,dword ptr [ECX + 0x4]
+0040d91a  MOV dword ptr [EAX],EDX
+0040d91c  MOV EAX,dword ptr [ECX]
+0040d91e  TEST EAX,EAX
+0040d920  JZ 0x0040d928
+0040d922  MOV EDX,dword ptr [ECX + 0x4]
+0040d925  MOV dword ptr [EAX + 0x4],EDX
+0040d928  MOV EAX,dword ptr [ECX + 0x4]
+0040d92b  TEST EAX,EAX
+0040d92d  JZ 0x0040d933
+0040d92f  MOV EDX,dword ptr [ECX]
+0040d931  MOV dword ptr [EAX],EDX
+0040d933  MOV EAX,dword ptr [ESP + 0x4]
+0040d937  TEST EAX,EAX
+0040d939  MOV dword ptr [ECX + 0x4],0x0
+0040d940  MOV dword ptr [ECX],0x0
+0040d946  JZ 0x0040d94d
+0040d948  MOV dword ptr [ECX],EAX
+0040d94a  MOV dword ptr [EAX + 0x4],ECX
+0040d94d  MOV EAX,dword ptr [ESP + 0x8]
+0040d951  TEST EAX,EAX
+0040d953  JZ 0x0040d966
+0040d955  MOV dword ptr [ECX + 0x4],EAX
+0040d958  MOV dword ptr [EAX],ECX
+0040d95a  MOV EAX,dword ptr [ECX + 0x14]
+0040d95d  MOV EDX,dword ptr [ECX + 0x4]
+0040d960  CMP EDX,dword ptr [EAX]
+0040d962  JNZ 0x0040d966
+0040d964  MOV dword ptr [EAX],ECX
+0040d966  RET 0x8

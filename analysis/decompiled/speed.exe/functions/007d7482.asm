@@ -1,0 +1,4 @@
+007d7482  JMP 0x007d737b
+007d7487  MOV dword ptr [EBP + -0x4],0xffffffff
+007d748e  CALL 0x007d7495
+007d7493  JMP 0x007d74a0

@@ -1,0 +1,17 @@
+0045f640  MOV EAX,dword ptr [ESP + 0xc]
+0045f644  FLD float ptr [ESP + 0x10]
+0045f648  FMUL float ptr [EAX + 0x4]
+0045f64b  MOV ECX,dword ptr [ESP + 0x8]
+0045f64f  FADD float ptr [ECX + 0x4]
+0045f652  FLD float ptr [ESP + 0x10]
+0045f656  FMUL float ptr [EAX + 0x8]
+0045f659  FADD float ptr [ECX + 0x8]
+0045f65c  FLD float ptr [ESP + 0x10]
+0045f660  FMUL float ptr [EAX]
+0045f662  MOV EAX,dword ptr [ESP + 0x4]
+0045f666  FADD float ptr [ECX]
+0045f668  FSTP float ptr [EAX]
+0045f66a  FXCH
+0045f66c  FSTP float ptr [EAX + 0x4]
+0045f66f  FSTP float ptr [EAX + 0x8]
+0045f672  RET

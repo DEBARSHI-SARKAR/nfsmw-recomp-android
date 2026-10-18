@@ -1,0 +1,5 @@
+0086be5b  MOV EAX,dword ptr [EBP + -0x10]
+0086be5e  PUSH EAX
+0086be5f  CALL 0x004adc20
+0086be64  POP ECX
+0086be65  RET

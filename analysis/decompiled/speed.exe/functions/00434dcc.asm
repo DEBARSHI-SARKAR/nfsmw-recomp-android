@@ -1,0 +1,6 @@
+00434dcc  MOV EDX,dword ptr [EBP + 0xc]
+00434dcf  MOV EAX,dword ptr [EBP + 0x10]
+00434dd2  MOV ECX,dword ptr [EBP + -0x18]
+00434dd5  PUSH EDX
+00434dd6  PUSH EAX
+00434dd7  CALL 0x0040d640

@@ -1,0 +1,5 @@
+0086d2ea  MOV EAX,dword ptr [EBP + -0x48]
+0086d2ed  PUSH EAX
+0086d2ee  CALL 0x004b0cd0
+0086d2f3  POP ECX
+0086d2f4  RET

@@ -1,0 +1,24 @@
+004238b0  PUSH ESI
+004238b1  MOV ESI,ECX
+004238b3  CALL 0x00409e60
+004238b8  MOV ECX,dword ptr [ESP + 0x8]
+004238bc  MOV dword ptr [ESI + 0x1c],0x0
+004238c3  MOV EDX,dword ptr [ECX]
+004238c5  LEA EAX,[ESI + 0x10]
+004238c8  MOV dword ptr [EAX],EDX
+004238ca  MOV EDX,dword ptr [ECX + 0x4]
+004238cd  MOV dword ptr [EAX + 0x4],EDX
+004238d0  MOV ECX,dword ptr [ECX + 0x8]
+004238d3  MOV dword ptr [EAX + 0x8],ECX
+004238d6  MOV EAX,[0x008a2fb4]
+004238db  LEA EDX,[ESI + 0x20]
+004238de  MOV dword ptr [EDX],EAX
+004238e0  MOV ECX,dword ptr [0x008a2fb8]
+004238e6  MOV dword ptr [EDX + 0x4],ECX
+004238e9  MOV EAX,[0x008a2fbc]
+004238ee  MOV ECX,ESI
+004238f0  MOV dword ptr [EDX + 0x8],EAX
+004238f3  MOV byte ptr [ESI + 0x2c],0x1
+004238f7  CALL 0x004180f0
+004238fc  POP ESI
+004238fd  RET 0x4

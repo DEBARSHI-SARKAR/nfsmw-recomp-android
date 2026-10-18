@@ -1,0 +1,62 @@
+0083fcf0  MOV AL,[0x009c36d4]
+0083fcf5  TEST AL,AL
+0083fcf7  JNZ 0x0083fe0b
+0083fcfd  PUSH 0x10
+0083fcff  PUSH 0x9c36c0
+0083fd04  PUSH 0x6d616378
+0083fd09  CALL 0x0083cd40
+0083fd0e  ADD ESP,0xc
+0083fd11  TEST EAX,EAX
+0083fd13  JLE 0x0083fe0b
+0083fd19  MOVZX EAX,byte ptr [0x009c36c0]
+0083fd20  MOV ECX,EAX
+0083fd22  AND EAX,0xf
+0083fd25  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fd2b  MOV [0x009c36d6],AL
+0083fd30  MOVZX EAX,byte ptr [0x009c36c1]
+0083fd37  SHR ECX,0x4
+0083fd3a  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fd40  MOV ECX,EAX
+0083fd42  AND EAX,0xf
+0083fd45  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fd4b  MOV [0x009c36d8],AL
+0083fd50  MOVZX EAX,byte ptr [0x009c36c2]
+0083fd57  SHR ECX,0x4
+0083fd5a  MOV byte ptr [0x009c36d5],DL
+0083fd60  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fd66  MOV ECX,EAX
+0083fd68  AND EAX,0xf
+0083fd6b  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fd71  MOV [0x009c36da],AL
+0083fd76  MOVZX EAX,byte ptr [0x009c36c3]
+0083fd7d  SHR ECX,0x4
+0083fd80  MOV byte ptr [0x009c36d7],DL
+0083fd86  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fd8c  MOV ECX,EAX
+0083fd8e  AND EAX,0xf
+0083fd91  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fd97  MOV [0x009c36dc],AL
+0083fd9c  MOVZX EAX,byte ptr [0x009c36c4]
+0083fda3  SHR ECX,0x4
+0083fda6  MOV byte ptr [0x009c36d9],DL
+0083fdac  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fdb2  MOV ECX,EAX
+0083fdb4  AND EAX,0xf
+0083fdb7  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fdbd  MOV [0x009c36de],AL
+0083fdc2  MOVZX EAX,byte ptr [0x009c36c5]
+0083fdc9  SHR ECX,0x4
+0083fdcc  MOV byte ptr [0x009c36db],DL
+0083fdd2  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fdd8  MOV ECX,EAX
+0083fdda  SHR ECX,0x4
+0083fddd  AND EAX,0xf
+0083fde0  MOV AL,byte ptr [EAX + 0x8c68a0]
+0083fde6  MOV byte ptr [0x009c36dd],DL
+0083fdec  MOV DL,byte ptr [ECX + 0x8c68a0]
+0083fdf2  MOV byte ptr [0x009c36d4],0x24
+0083fdf9  MOV byte ptr [0x009c36df],DL
+0083fdff  MOV [0x009c36e0],AL
+0083fe04  MOV byte ptr [0x009c36e1],0x0
+0083fe0b  MOV EAX,0x9c36d4
+0083fe10  RET

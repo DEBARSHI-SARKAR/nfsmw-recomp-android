@@ -1,0 +1,4 @@
+004d5c70  MOV EAX,dword ptr [ESP + 0x4]
+004d5c74  DEC EAX
+004d5c75  XOR EAX,EAX
+004d5c77  RET 0xc

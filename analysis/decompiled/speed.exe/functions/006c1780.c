@@ -1,0 +1,99 @@
+/* speed.exe 006c1780 FUN_006c1780; analysis pseudocode, not buildable source.
+ */
+
+void FUN_006c1780(void)
+
+{
+  int iVar1;
+  
+  if (DAT_00901840 < DAT_009017b8) {
+    DAT_009017b8 = DAT_00901840;
+  }
+  if (DAT_00901844 < DAT_009017bc) {
+    DAT_009017bc = DAT_00901844;
+  }
+  if (DAT_00901848 < DAT_009017c0) {
+    DAT_009017c0 = DAT_00901848;
+  }
+  if (DAT_0090184c < DAT_009017c4) {
+    DAT_009017c4 = DAT_0090184c;
+  }
+  if (DAT_00901850 < DAT_009017c8) {
+    DAT_009017c8 = DAT_00901850;
+  }
+  if (DAT_00901854 < DAT_009017cc) {
+    DAT_009017cc = DAT_00901854;
+  }
+  if (DAT_00901858 < DAT_009017d0) {
+    DAT_009017d0 = DAT_00901858;
+  }
+  if (DAT_0090185c < DAT_009017d4) {
+    DAT_009017d4 = DAT_0090185c;
+  }
+  if (DAT_00901860 < DAT_009017d8) {
+    DAT_009017d8 = DAT_00901860;
+  }
+  if (DAT_00901864 < DAT_009017dc) {
+    DAT_009017dc = DAT_00901864;
+  }
+  if (DAT_00901868 < DAT_009017e0) {
+    DAT_009017e0 = DAT_00901868;
+  }
+  if (DAT_0090186c < DAT_009017e4) {
+    DAT_009017e4 = DAT_0090186c;
+  }
+  if (DAT_00901870 < DAT_009017e8) {
+    DAT_009017e8 = DAT_00901870;
+  }
+  if (DAT_00901874 < DAT_009017ec) {
+    DAT_009017ec = DAT_00901874;
+  }
+  if (DAT_00901878 < DAT_009017f0) {
+    DAT_009017f0 = DAT_00901878;
+  }
+  if (DAT_0090187c < DAT_009017f4) {
+    DAT_009017f4 = DAT_0090187c;
+  }
+  if (DAT_00901880 < DAT_009017f8) {
+    DAT_009017f8 = DAT_00901880;
+  }
+  if (DAT_00901890 < DAT_00901808) {
+    DAT_00901808 = DAT_00901890;
+  }
+  if (DAT_00901888 < DAT_00901800) {
+    DAT_00901800 = DAT_00901888;
+  }
+  if (DAT_00901884 < DAT_009017fc) {
+    DAT_009017fc = DAT_00901884;
+  }
+  if (DAT_00901894 < DAT_0090180c) {
+    DAT_0090180c = DAT_00901894;
+  }
+  if (DAT_00901898 < DAT_00901810) {
+    DAT_00901810 = DAT_00901898;
+  }
+  if (DAT_0090189c < DAT_00901814) {
+    DAT_00901814 = DAT_0090189c;
+  }
+  if (DAT_009018a0 < DAT_00901818) {
+    DAT_00901818 = DAT_009018a0;
+  }
+  if (DAT_009018b0 < DAT_00901828) {
+    DAT_00901828 = DAT_009018b0;
+  }
+  if (DAT_009018b8 < DAT_00901830) {
+    DAT_00901830 = DAT_009018b8;
+  }
+  iVar1 = DAT_0090181c;
+  if (((&DAT_0093dbec)[DAT_0090181c] == 0) && (-1 < DAT_0090181c)) {
+    while ((&DAT_0093dbec)[iVar1] == 0) {
+      iVar1 = iVar1 + -1;
+      if (iVar1 < 0) {
+        return;
+      }
+    }
+  }
+  DAT_0090181c = iVar1;
+  return;
+}
+

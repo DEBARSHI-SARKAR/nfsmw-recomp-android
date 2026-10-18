@@ -1,0 +1,36 @@
+006c0330  SUB ESP,0x14
+006c0333  MOV ECX,dword ptr [ESP + 0x1c]
+006c0337  MOV byte ptr [ESP + 0xc],CL
+006c033b  SAR ECX,0x8
+006c033e  XOR EAX,EAX
+006c0340  MOV byte ptr [ESP + 0xd],CL
+006c0344  MOV ECX,dword ptr [ESP + 0x20]
+006c0348  MOV byte ptr [ESP + 0xe],CL
+006c034c  SAR ECX,0x8
+006c034f  MOV byte ptr [ESP + 0xf],CL
+006c0353  MOV ECX,dword ptr [ESP + 0x18]
+006c0357  CMP ECX,EAX
+006c0359  MOV byte ptr [ESP],AL
+006c035c  MOV byte ptr [ESP + 0x1],AL
+006c0360  MOV byte ptr [ESP + 0x2],0x2
+006c0365  MOV byte ptr [ESP + 0x3],AL
+006c0369  MOV byte ptr [ESP + 0x4],AL
+006c036d  MOV byte ptr [ESP + 0x5],AL
+006c0371  MOV byte ptr [ESP + 0x6],AL
+006c0375  MOV byte ptr [ESP + 0x7],AL
+006c0379  MOV byte ptr [ESP + 0x8],AL
+006c037d  MOV byte ptr [ESP + 0x9],AL
+006c0381  MOV byte ptr [ESP + 0xa],AL
+006c0385  MOV byte ptr [ESP + 0xb],AL
+006c0389  MOV byte ptr [ESP + 0x10],0x20
+006c038e  MOV byte ptr [ESP + 0x11],0x28
+006c0393  JZ 0x006c03a7
+006c0395  PUSH ECX
+006c0396  PUSH 0x12
+006c0398  LEA EAX,[ESP + 0x8]
+006c039c  PUSH 0x1
+006c039e  PUSH EAX
+006c039f  CALL 0x007cb730
+006c03a4  ADD ESP,0x10
+006c03a7  ADD ESP,0x14
+006c03aa  RET

@@ -1,0 +1,19 @@
+006919c0  CMP dword ptr [ECX],0x2
+006919c3  JNZ 0x006919fd
+006919c5  FLD float ptr [ESP + 0x4]
+006919c9  FCOMP float ptr [0x00890968]
+006919cf  FNSTSW AX
+006919d1  TEST AH,0x41
+006919d4  JNZ 0x006919eb
+006919d6  MOV EAX,dword ptr [ESP + 0x4]
+006919da  MOV EDX,EAX
+006919dc  MOV dword ptr [ECX],0x1
+006919e2  MOV dword ptr [ECX + 0x4],EAX
+006919e5  MOV dword ptr [ECX + 0x8],EDX
+006919e8  RET 0x4
+006919eb  MOV EAX,dword ptr [ESP + 0x4]
+006919ef  MOV EDX,EAX
+006919f1  MOV dword ptr [ECX],0x0
+006919f7  MOV dword ptr [ECX + 0x4],EAX
+006919fa  MOV dword ptr [ECX + 0x8],EDX
+006919fd  RET 0x4

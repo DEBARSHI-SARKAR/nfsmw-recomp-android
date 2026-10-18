@@ -1,0 +1,75 @@
+0073d660  SUB ESP,0x14
+0073d663  MOV EAX,dword ptr [ECX + 0x8]
+0073d666  FLD float ptr [ESP + 0x18]
+0073d66a  MOV EDX,dword ptr [EAX + 0x4]
+0073d66d  MOV dword ptr [ESP + 0xc],EDX
+0073d671  MOV EDX,dword ptr [EAX + 0x8]
+0073d674  FCOMP float ptr [ESP + 0xc]
+0073d678  MOV dword ptr [ESP + 0x10],EDX
+0073d67c  MOV EDX,dword ptr [EAX + 0xc]
+0073d67f  MOV EAX,dword ptr [EAX + 0x10]
+0073d682  MOV dword ptr [ESP + 0x8],EAX
+0073d686  FNSTSW AX
+0073d688  MOV dword ptr [ESP + 0x4],EDX
+0073d68c  XOR EDX,EDX
+0073d68e  TEST AH,0x5
+0073d691  JP 0x0073d6c8
+0073d693  FLD float ptr [ESP + 0x18]
+0073d697  FCOMP float ptr [ESP + 0x4]
+0073d69b  FNSTSW AX
+0073d69d  TEST AH,0x41
+0073d6a0  JNZ 0x0073d6c8
+0073d6a2  FLD float ptr [ESP + 0x1c]
+0073d6a6  FCOMP float ptr [ESP + 0x10]
+0073d6aa  FNSTSW AX
+0073d6ac  TEST AH,0x5
+0073d6af  JP 0x0073d6c8
+0073d6b1  FLD float ptr [ESP + 0x1c]
+0073d6b5  FCOMP float ptr [ESP + 0x8]
+0073d6b9  FNSTSW AX
+0073d6bb  TEST AH,0x41
+0073d6be  JNZ 0x0073d6c8
+0073d6c0  XOR EAX,EAX
+0073d6c2  ADD ESP,0x14
+0073d6c5  RET 0x8
+0073d6c8  MOV ECX,dword ptr [ECX + 0x1c]
+0073d6cb  CMP word ptr [ECX],0x0
+0073d6cf  JZ 0x0073d74a
+0073d6d1  FLD float ptr [ESP + 0x4]
+0073d6d5  FADD float ptr [ESP + 0xc]
+0073d6d9  FMUL float ptr [0x008933d4]
+0073d6df  FLD float ptr [ESP + 0x8]
+0073d6e3  FADD float ptr [ESP + 0x10]
+0073d6e7  FMUL float ptr [0x008933d4]
+0073d6ed  FSTP float ptr [ESP]
+0073d6f0  FLD float ptr [ESP + 0x18]
+0073d6f4  FCOMP
+0073d6f6  FLD float ptr [ESP + 0x1c]
+0073d6fa  FNSTSW AX
+0073d6fc  FCOMP float ptr [ESP]
+0073d6ff  TEST AH,0x5
+0073d702  FNSTSW AX
+0073d704  JP 0x0073d723
+0073d706  TEST AH,0x5
+0073d709  FSTP float ptr [ESP + 0x4]
+0073d70d  MOV EAX,dword ptr [ESP]
+0073d710  JP 0x0073d71c
+0073d712  MOVZX EDX,word ptr [ECX + EDX*0x8]
+0073d716  MOV dword ptr [ESP + 0x8],EAX
+0073d71a  JMP 0x0073d743
+0073d71c  MOVZX EDX,word ptr [ECX + EDX*0x8 + 0x2]
+0073d721  JMP 0x0073d73f
+0073d723  TEST AH,0x5
+0073d726  FSTP float ptr [ESP + 0xc]
+0073d72a  MOV EAX,dword ptr [ESP]
+0073d72d  JP 0x0073d73a
+0073d72f  MOVZX EDX,word ptr [ECX + EDX*0x8 + 0x4]
+0073d734  MOV dword ptr [ESP + 0x8],EAX
+0073d738  JMP 0x0073d743
+0073d73a  MOVZX EDX,word ptr [ECX + EDX*0x8 + 0x6]
+0073d73f  MOV dword ptr [ESP + 0x10],EAX
+0073d743  CMP word ptr [ECX + EDX*0x8],0x0
+0073d748  JNZ 0x0073d6d1
+0073d74a  MOVZX EAX,word ptr [ECX + EDX*0x8 + 0x2]
+0073d74f  ADD ESP,0x14
+0073d752  RET 0x8

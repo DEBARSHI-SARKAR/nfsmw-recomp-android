@@ -1,0 +1,26 @@
+00447390  MOV ECX,dword ptr [ESP + 0x4]
+00447394  XOR EDX,EDX
+00447396  CMP ECX,EDX
+00447398  JL 0x004473fa
+0044739a  CMP ECX,0x4
+0044739d  JGE 0x004473fa
+0044739f  FLD float ptr [ESP + 0xc]
+004473a3  MOV dword ptr [ECX*0x4 + 0x90da28],EDX
+004473aa  FCOMP float ptr [0x00890968]
+004473b0  FNSTSW AX
+004473b2  TEST AH,0x41
+004473b5  JNZ 0x004473e8
+004473b7  FLD float ptr [ESP + 0xc]
+004473bb  FSTP float ptr [ECX*0x4 + 0x90da38]
+004473c2  FLD float ptr [ESP + 0x8]
+004473c6  FSTP float ptr [ECX*0x4 + 0x90da48]
+004473cd  FLD float ptr [ESP + 0x10]
+004473d1  FSUB float ptr [ESP + 0x8]
+004473d5  FSTP float ptr [ECX*0x4 + 0x90da58]
+004473dc  FLD float ptr [ESP + 0x8]
+004473e0  FSTP float ptr [ECX*0x4 + 0x9ae8a0]
+004473e7  RET
+004473e8  FLD float ptr [ESP + 0x8]
+004473ec  MOV dword ptr [ECX*0x4 + 0x90da38],EDX
+004473f3  FSTP float ptr [ECX*0x4 + 0x9ae8a0]
+004473fa  RET

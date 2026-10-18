@@ -1,0 +1,3 @@
+00837190  MOV EAX,dword ptr [ESP + 0x4]
+00837194  MOV EAX,dword ptr [EAX]
+00837196  RET

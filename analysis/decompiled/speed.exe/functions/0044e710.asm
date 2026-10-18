@@ -1,0 +1,19 @@
+0044e710  PUSH ESI
+0044e711  MOV ESI,ECX
+0044e713  MOV AL,byte ptr [ESI + 0x38]
+0044e716  TEST AL,AL
+0044e718  JNZ 0x0044e745
+0044e71a  MOV EAX,dword ptr [ESI + 0x10]
+0044e71d  MOV byte ptr [ESI + 0x40],0x1
+0044e721  MOV EAX,dword ptr [EAX + 0x10]
+0044e724  FILD dword ptr [EAX + 0x28]
+0044e727  FMUL float ptr [0x008934e0]
+0044e72d  FSTP float ptr [ESI + 0x28]
+0044e730  FILD dword ptr [EAX + 0x2c]
+0044e733  FMUL float ptr [0x008934e0]
+0044e739  FSTP float ptr [ESI + 0x2c]
+0044e73c  CALL 0x0044cfe0
+0044e741  MOV byte ptr [ESI + 0x38],0x1
+0044e745  MOV AL,0x1
+0044e747  POP ESI
+0044e748  RET

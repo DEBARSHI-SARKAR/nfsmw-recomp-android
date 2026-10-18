@@ -1,0 +1,5 @@
+00723c90  MOV EAX,dword ptr [ESP + 0x4]
+00723c94  MOV ECX,dword ptr [0x009a3a64]
+00723c9a  LEA EAX,[EAX + EAX*0x2]
+00723c9d  LEA EAX,[ECX + EAX*0x2]
+00723ca0  RET

@@ -1,0 +1,23 @@
+005afd60  TEST ECX,ECX
+005afd62  JZ 0x005afd92
+005afd64  TEST EDX,EDX
+005afd66  JZ 0x005afd92
+005afd68  MOV AX,word ptr [ECX]
+005afd6b  TEST AX,AX
+005afd6e  JZ 0x005afd8c
+005afd70  CMP AX,0xff80
+005afd74  JL 0x005afd92
+005afd76  CMP AX,0x7f
+005afd7a  JG 0x005afd92
+005afd7c  MOV AL,byte ptr [ECX]
+005afd7e  ADD ECX,0x2
+005afd81  MOV byte ptr [EDX],AL
+005afd83  MOV AX,word ptr [ECX]
+005afd86  INC EDX
+005afd87  TEST AX,AX
+005afd8a  JNZ 0x005afd70
+005afd8c  MOV byte ptr [EDX],0x0
+005afd8f  MOV AL,0x1
+005afd91  RET
+005afd92  XOR AL,AL
+005afd94  RET

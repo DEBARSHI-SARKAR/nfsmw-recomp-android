@@ -1,0 +1,6 @@
+0081b1ce  CMP byte ptr [0x009c2188],0x0
+0081b1d5  JNZ 0x0081b1db
+0081b1d7  PUSH -0xa
+0081b1d9  POP EAX
+0081b1da  RET
+0081b1db  JMP 0x0081f9fb

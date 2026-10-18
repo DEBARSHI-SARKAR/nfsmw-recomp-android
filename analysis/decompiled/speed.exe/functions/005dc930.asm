@@ -1,0 +1,11 @@
+005dc930  MOV EDX,dword ptr [ECX]
+005dc932  MOV EAX,dword ptr [ESP + 0x4]
+005dc936  CMP EAX,EDX
+005dc938  JNC 0x005dc946
+005dc93a  MOV ECX,dword ptr [ECX + 0xc]
+005dc93d  LEA EAX,[EAX + EAX*0x4]
+005dc940  LEA EAX,[ECX + EAX*0x4]
+005dc943  RET 0x4
+005dc946  SUB EAX,EDX
+005dc948  MOV EAX,dword ptr [ECX + EAX*0x4 + 0x10]
+005dc94c  RET 0x4

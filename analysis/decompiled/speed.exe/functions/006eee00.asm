@@ -1,0 +1,39 @@
+006eee00  PUSH -0x1
+006eee02  PUSH 0x87ea08
+006eee07  MOV EAX,FS:[0x0]
+006eee0d  PUSH EAX
+006eee0e  MOV dword ptr FS:[0x0],ESP
+006eee15  SUB ESP,0x14
+006eee18  PUSH ESI
+006eee19  MOV ESI,ECX
+006eee1b  MOV EAX,dword ptr [ESI]
+006eee1d  PUSH 0x0
+006eee1f  PUSH 0x0
+006eee21  PUSH EAX
+006eee22  LEA ECX,[ESP + 0x10]
+006eee26  CALL 0x004e4ea0
+006eee2b  MOV ECX,dword ptr [ESI + 0x8]
+006eee2e  TEST ECX,ECX
+006eee30  MOV dword ptr [ESP + 0x20],0x0
+006eee38  POP ESI
+006eee39  JZ 0x006eee44
+006eee3b  LEA EDX,[ESP]
+006eee3e  PUSH EDX
+006eee3f  CALL 0x0056f210
+006eee44  MOV EAX,dword ptr [ESP + 0x24]
+006eee48  PUSH EBX
+006eee49  PUSH EAX
+006eee4a  LEA ECX,[ESP + 0x8]
+006eee4e  PUSH ECX
+006eee4f  CALL 0x00679580
+006eee54  ADD ESP,0x8
+006eee57  LEA ECX,[ESP + 0x4]
+006eee5b  MOV BL,AL
+006eee5d  MOV dword ptr [ESP + 0x20],0xffffffff
+006eee65  CALL 0x0045a430
+006eee6a  MOV ECX,dword ptr [ESP + 0x18]
+006eee6e  MOV AL,BL
+006eee70  POP EBX
+006eee71  MOV dword ptr FS:[0x0],ECX
+006eee78  ADD ESP,0x20
+006eee7b  RET 0x4

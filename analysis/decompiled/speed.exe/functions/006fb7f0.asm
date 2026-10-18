@@ -1,0 +1,77 @@
+006fb7f0  PUSH EBX
+006fb7f1  MOV EBX,dword ptr [ESP + 0x10]
+006fb7f5  PUSH ESI
+006fb7f6  MOV ESI,dword ptr [ESP + 0x10]
+006fb7fa  PUSH EDI
+006fb7fb  MOV EDI,ECX
+006fb7fd  MOV EAX,dword ptr [EDI + 0x4]
+006fb800  CMP ESI,dword ptr [EAX]
+006fb802  JNZ 0x006fb83c
+006fb804  CMP EBX,EAX
+006fb806  JNZ 0x006fb83c
+006fb808  MOV EAX,dword ptr [EAX + 0x4]
+006fb80b  PUSH EAX
+006fb80c  MOV ECX,EDI
+006fb80e  CALL 0x006efc40
+006fb813  MOV EAX,dword ptr [EDI + 0x4]
+006fb816  MOV dword ptr [EAX + 0x4],EAX
+006fb819  MOV EAX,dword ptr [EDI + 0x4]
+006fb81c  MOV dword ptr [EDI + 0x8],0x0
+006fb823  MOV dword ptr [EAX],EAX
+006fb825  MOV EAX,dword ptr [EDI + 0x4]
+006fb828  MOV dword ptr [EAX + 0x8],EAX
+006fb82b  MOV ECX,dword ptr [EDI + 0x4]
+006fb82e  MOV EDX,dword ptr [ECX]
+006fb830  MOV EAX,dword ptr [ESP + 0x10]
+006fb834  POP EDI
+006fb835  POP ESI
+006fb836  MOV dword ptr [EAX],EDX
+006fb838  POP EBX
+006fb839  RET 0xc
+006fb83c  CMP ESI,EBX
+006fb83e  JZ 0x006fb89b
+006fb840  MOV AL,byte ptr [ESI + 0x15]
+006fb843  TEST AL,AL
+006fb845  MOV ECX,ESI
+006fb847  JNZ 0x006fb88a
+006fb849  MOV EAX,dword ptr [ESI + 0x8]
+006fb84c  MOV DL,byte ptr [EAX + 0x15]
+006fb84f  TEST DL,DL
+006fb851  JNZ 0x006fb86d
+006fb853  MOV ESI,EAX
+006fb855  MOV EAX,dword ptr [ESI]
+006fb857  MOV DL,byte ptr [EAX + 0x15]
+006fb85a  TEST DL,DL
+006fb85c  JNZ 0x006fb88a
+006fb85e  MOV EDI,EDI
+006fb860  MOV ESI,EAX
+006fb862  MOV EAX,dword ptr [ESI]
+006fb864  MOV DL,byte ptr [EAX + 0x15]
+006fb867  TEST DL,DL
+006fb869  JZ 0x006fb860
+006fb86b  JMP 0x006fb88a
+006fb86d  MOV EAX,dword ptr [ESI + 0x4]
+006fb870  MOV DL,byte ptr [EAX + 0x15]
+006fb873  TEST DL,DL
+006fb875  JNZ 0x006fb888
+006fb877  CMP ESI,dword ptr [EAX + 0x8]
+006fb87a  JNZ 0x006fb888
+006fb87c  MOV ESI,EAX
+006fb87e  MOV EAX,dword ptr [EAX + 0x4]
+006fb881  MOV DL,byte ptr [EAX + 0x15]
+006fb884  TEST DL,DL
+006fb886  JZ 0x006fb877
+006fb888  MOV ESI,EAX
+006fb88a  PUSH ECX
+006fb88b  LEA EAX,[ESP + 0x18]
+006fb88f  PUSH EAX
+006fb890  MOV ECX,EDI
+006fb892  CALL 0x006fb250
+006fb897  CMP ESI,EBX
+006fb899  JNZ 0x006fb840
+006fb89b  MOV EAX,dword ptr [ESP + 0x10]
+006fb89f  POP EDI
+006fb8a0  MOV dword ptr [EAX],ESI
+006fb8a2  POP ESI
+006fb8a3  POP EBX
+006fb8a4  RET 0xc

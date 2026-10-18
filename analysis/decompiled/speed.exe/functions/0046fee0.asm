@@ -1,0 +1,24 @@
+0046fee0  MOV EAX,dword ptr [ESP + 0x4]
+0046fee4  FLD float ptr [EAX + 0xc]
+0046fee7  FLD float ptr [EAX + 0x8]
+0046feea  FLD float ptr [EAX + 0x4]
+0046feed  FLD float ptr [EAX]
+0046feef  FLD ST0
+0046fef1  FMUL ST1
+0046fef3  FLD ST2
+0046fef5  FMUL ST3
+0046fef7  FADDP
+0046fef9  FLD ST3
+0046fefb  FMUL ST4
+0046fefd  FADDP
+0046feff  FLD ST4
+0046ff01  FMUL ST5
+0046ff03  FADDP
+0046ff05  FSTP float ptr [ESP + 0x4]
+0046ff09  MOV EAX,dword ptr [ESP + 0x4]
+0046ff0d  FSTP ST0
+0046ff0f  MOV dword ptr [ESP + 0x4],EAX
+0046ff13  FSTP ST0
+0046ff15  FSTP ST0
+0046ff17  FSTP ST0
+0046ff19  JMP 0x005c5e80

@@ -1,0 +1,15 @@
+007f9bcd  PUSH EBP
+007f9bce  MOV EBP,ESP
+007f9bd0  PUSH ESI
+007f9bd1  MOV ESI,ECX
+007f9bd3  MOV dword ptr [ESI],0x8c27a4
+007f9bd9  CALL 0x007f9a97
+007f9bde  TEST byte ptr [EBP + 0x8],0x1
+007f9be2  JZ 0x007f9bec
+007f9be4  PUSH ESI
+007f9be5  CALL dword ptr [0x00909e58]
+007f9beb  POP ECX
+007f9bec  MOV EAX,ESI
+007f9bee  POP ESI
+007f9bef  POP EBP
+007f9bf0  RET 0x4

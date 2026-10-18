@@ -1,0 +1,6 @@
+00723920  XOR AL,AL
+00723922  MOV byte ptr [ECX + 0xdc],AL
+00723928  MOV byte ptr [ECX + 0xdd],AL
+0072392e  MOV byte ptr [ECX + 0x140],AL
+00723934  MOV byte ptr [ECX + 0x141],AL
+0072393a  RET

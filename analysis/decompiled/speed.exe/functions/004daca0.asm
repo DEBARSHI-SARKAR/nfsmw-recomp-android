@@ -1,0 +1,11 @@
+004daca0  PUSH ESI
+004daca1  MOV ESI,ECX
+004daca3  CALL 0x004b0e30
+004daca8  TEST byte ptr [ESP + 0x8],0x1
+004dacad  JZ 0x004dacb8
+004dacaf  PUSH ESI
+004dacb0  CALL 0x00652b00
+004dacb5  ADD ESP,0x4
+004dacb8  MOV EAX,ESI
+004dacba  POP ESI
+004dacbb  RET 0x4

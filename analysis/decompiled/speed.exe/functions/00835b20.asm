@@ -1,0 +1,9 @@
+00835b20  MOV EAX,dword ptr [ESP + 0x4]
+00835b24  MOV ECX,dword ptr [EAX + 0x58]
+00835b27  MOV EDX,dword ptr [EAX + ECX*0x4 + 0x18]
+00835b2b  CMP EDX,dword ptr [ESP + 0x8]
+00835b2f  JNZ 0x00835b35
+00835b31  MOV EAX,dword ptr [EAX + 0x5c]
+00835b34  RET
+00835b35  MOV EAX,0x3
+00835b3a  RET

@@ -1,0 +1,6 @@
+00464d30  MOV EAX,ECX
+00464d32  LEA EDX,[EAX + 0x4]
+00464d35  MOV dword ptr [EDX],EDX
+00464d37  MOV dword ptr [EDX + 0x4],EDX
+00464d3a  MOV dword ptr [EAX],0x1
+00464d40  RET

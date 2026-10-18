@@ -1,0 +1,2 @@
+0058d5f0  MOV dword ptr [ECX],0x8a1600
+0058d5f6  JMP 0x00572360

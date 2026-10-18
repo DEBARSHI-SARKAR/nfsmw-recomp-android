@@ -1,0 +1,26 @@
+005af460  MOV EAX,dword ptr [ECX + 0x8c]
+005af466  IMUL EAX,dword ptr [ECX + 0x60]
+005af46a  ADD EAX,dword ptr [ECX + 0x88]
+005af470  MOV EDX,dword ptr [ECX + 0x90]
+005af476  PUSH ESI
+005af477  LEA ESI,[EAX + EAX*0x2]
+005af47a  SHL ESI,0x4
+005af47d  MOV EAX,dword ptr [ESI + EDX*0x1 + 0x18]
+005af481  ADD ESI,EDX
+005af483  PUSH EDI
+005af484  MOV EDI,dword ptr [ESP + 0xc]
+005af488  CMP EAX,EDI
+005af48a  JZ 0x005af4ab
+005af48c  CMP EAX,0x2
+005af48f  JNZ 0x005af4a8
+005af491  MOV EAX,dword ptr [ESI + 0x20]
+005af494  TEST EAX,EAX
+005af496  JZ 0x005af4a8
+005af498  PUSH EAX
+005af499  CALL 0x00652b10
+005af49e  ADD ESP,0x4
+005af4a1  MOV dword ptr [ESI + 0x20],0x0
+005af4a8  MOV dword ptr [ESI + 0x18],EDI
+005af4ab  POP EDI
+005af4ac  POP ESI
+005af4ad  RET 0x4

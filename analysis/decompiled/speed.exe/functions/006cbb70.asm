@@ -1,0 +1,44 @@
+006cbb70  PUSH ESI
+006cbb71  MOV ESI,dword ptr [0x0089039c]
+006cbb77  MOV EAX,[0x009018bc]
+006cbb7c  TEST EAX,EAX
+006cbb7e  JZ 0x006cbbd8
+006cbb80  CALL 0x006c2620
+006cbb85  TEST AL,AL
+006cbb87  JNZ 0x006cbb95
+006cbb89  MOV dword ptr [0x009018bc],0x1
+006cbb93  JMP 0x006cbba1
+006cbb95  MOV AL,0x1
+006cbb97  MOV dword ptr [0x009018bc],0x0
+006cbba1  MOV ECX,dword ptr [0x008a9260]
+006cbba7  TEST ECX,ECX
+006cbba9  JNZ 0x006cbbf8
+006cbbab  TEST AL,AL
+006cbbad  JNZ 0x006cbbf8
+006cbbaf  PUSH 0x8a17c8
+006cbbb4  CALL 0x0065f7a0
+006cbbb9  ADD ESP,0x4
+006cbbbc  TEST EAX,EAX
+006cbbbe  JNZ 0x006cbbf8
+006cbbc0  PUSH 0x1
+006cbbc2  PUSH 0x8af684
+006cbbc7  PUSH 0x8af66c
+006cbbcc  PUSH EAX
+006cbbcd  CALL ESI
+006cbbcf  CMP EAX,0x1
+006cbbd2  JZ 0x006cbb77
+006cbbd4  XOR AL,AL
+006cbbd6  POP ESI
+006cbbd7  RET
+006cbbd8  XOR EAX,EAX
+006cbbda  MOV AL,[0x008f945c]
+006cbbdf  PUSH EAX
+006cbbe0  CALL 0x006c25a0
+006cbbe5  ADD ESP,0x4
+006cbbe8  TEST AL,AL
+006cbbea  JNZ 0x006cbb97
+006cbbec  MOV dword ptr [0x009018bc],0x1
+006cbbf6  JMP 0x006cbba1
+006cbbf8  MOV AL,0x1
+006cbbfa  POP ESI
+006cbbfb  RET

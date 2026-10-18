@@ -1,0 +1,267 @@
+00816d40  PUSH EBP
+00816d41  MOV EBP,ESP
+00816d43  MOV EAX,dword ptr [EBP + 0x8]
+00816d46  MOV ECX,dword ptr [EBP + 0xc]
+00816d49  MOVSX EDX,word ptr [ECX]
+00816d4c  PUSH ESI
+00816d4d  MOVSX ESI,word ptr [EAX]
+00816d50  IMUL ESI,EDX
+00816d53  MOV EDX,dword ptr [EBP + 0x10]
+00816d56  MOV dword ptr [EDX],ESI
+00816d58  MOVSX ESI,word ptr [EAX + 0x2]
+00816d5c  PUSH EDI
+00816d5d  MOVSX EDI,word ptr [ECX + 0x2]
+00816d61  IMUL ESI,EDI
+00816d64  MOV dword ptr [EDX + 0x4],ESI
+00816d67  MOVSX EDI,word ptr [ECX + 0x4]
+00816d6b  MOVSX ESI,word ptr [EAX + 0x4]
+00816d6f  IMUL ESI,EDI
+00816d72  MOV dword ptr [EDX + 0x20],ESI
+00816d75  MOVSX EDI,word ptr [ECX + 0x6]
+00816d79  MOVSX ESI,word ptr [EAX + 0x6]
+00816d7d  IMUL ESI,EDI
+00816d80  MOV dword ptr [EDX + 0x40],ESI
+00816d83  MOVSX EDI,word ptr [ECX + 0x8]
+00816d87  MOVSX ESI,word ptr [EAX + 0x8]
+00816d8b  IMUL ESI,EDI
+00816d8e  MOV dword ptr [EDX + 0x24],ESI
+00816d91  MOVSX EDI,word ptr [ECX + 0xa]
+00816d95  MOVSX ESI,word ptr [EAX + 0xa]
+00816d99  IMUL ESI,EDI
+00816d9c  MOV dword ptr [EDX + 0x8],ESI
+00816d9f  MOVSX EDI,word ptr [ECX + 0xc]
+00816da3  MOVSX ESI,word ptr [EAX + 0xc]
+00816da7  IMUL ESI,EDI
+00816daa  MOV dword ptr [EDX + 0xc],ESI
+00816dad  MOVSX EDI,word ptr [ECX + 0xe]
+00816db1  MOVSX ESI,word ptr [EAX + 0xe]
+00816db5  IMUL ESI,EDI
+00816db8  MOV dword ptr [EDX + 0x28],ESI
+00816dbb  MOVSX EDI,word ptr [ECX + 0x10]
+00816dbf  MOVSX ESI,word ptr [EAX + 0x10]
+00816dc3  IMUL ESI,EDI
+00816dc6  MOV dword ptr [EDX + 0x44],ESI
+00816dc9  MOVSX EDI,word ptr [ECX + 0x12]
+00816dcd  MOVSX ESI,word ptr [EAX + 0x12]
+00816dd1  IMUL ESI,EDI
+00816dd4  MOV dword ptr [EDX + 0x60],ESI
+00816dd7  MOVSX EDI,word ptr [ECX + 0x14]
+00816ddb  MOVSX ESI,word ptr [EAX + 0x14]
+00816ddf  IMUL ESI,EDI
+00816de2  MOV dword ptr [EDX + 0x80],ESI
+00816de8  MOVSX EDI,word ptr [ECX + 0x16]
+00816dec  MOVSX ESI,word ptr [EAX + 0x16]
+00816df0  IMUL ESI,EDI
+00816df3  MOV dword ptr [EDX + 0x64],ESI
+00816df6  MOVSX EDI,word ptr [ECX + 0x18]
+00816dfa  MOVSX ESI,word ptr [EAX + 0x18]
+00816dfe  IMUL ESI,EDI
+00816e01  MOV dword ptr [EDX + 0x48],ESI
+00816e04  MOVSX EDI,word ptr [ECX + 0x1a]
+00816e08  MOVSX ESI,word ptr [EAX + 0x1a]
+00816e0c  IMUL ESI,EDI
+00816e0f  MOV dword ptr [EDX + 0x2c],ESI
+00816e12  MOVSX EDI,word ptr [ECX + 0x1c]
+00816e16  MOVSX ESI,word ptr [EAX + 0x1c]
+00816e1a  IMUL ESI,EDI
+00816e1d  MOV dword ptr [EDX + 0x10],ESI
+00816e20  MOVSX EDI,word ptr [ECX + 0x1e]
+00816e24  MOVSX ESI,word ptr [EAX + 0x1e]
+00816e28  IMUL ESI,EDI
+00816e2b  MOV dword ptr [EDX + 0x14],ESI
+00816e2e  MOVSX EDI,word ptr [ECX + 0x20]
+00816e32  MOVSX ESI,word ptr [EAX + 0x20]
+00816e36  IMUL ESI,EDI
+00816e39  MOV dword ptr [EDX + 0x30],ESI
+00816e3c  MOVSX EDI,word ptr [ECX + 0x22]
+00816e40  MOVSX ESI,word ptr [EAX + 0x22]
+00816e44  IMUL ESI,EDI
+00816e47  MOV dword ptr [EDX + 0x4c],ESI
+00816e4a  MOVSX ESI,word ptr [EAX + 0x24]
+00816e4e  MOVSX EDI,word ptr [ECX + 0x24]
+00816e52  IMUL ESI,EDI
+00816e55  MOV dword ptr [EDX + 0x68],ESI
+00816e58  MOVSX EDI,word ptr [ECX + 0x26]
+00816e5c  MOVSX ESI,word ptr [EAX + 0x26]
+00816e60  IMUL ESI,EDI
+00816e63  MOV dword ptr [EDX + 0x84],ESI
+00816e69  MOVSX EDI,word ptr [ECX + 0x28]
+00816e6d  MOVSX ESI,word ptr [EAX + 0x28]
+00816e71  IMUL ESI,EDI
+00816e74  MOV dword ptr [EDX + 0xa0],ESI
+00816e7a  MOVSX EDI,word ptr [ECX + 0x2a]
+00816e7e  MOVSX ESI,word ptr [EAX + 0x2a]
+00816e82  IMUL ESI,EDI
+00816e85  MOV dword ptr [EDX + 0xc0],ESI
+00816e8b  MOVSX EDI,word ptr [ECX + 0x2c]
+00816e8f  MOVSX ESI,word ptr [EAX + 0x2c]
+00816e93  IMUL ESI,EDI
+00816e96  MOV dword ptr [EDX + 0xa4],ESI
+00816e9c  MOVSX EDI,word ptr [ECX + 0x2e]
+00816ea0  MOVSX ESI,word ptr [EAX + 0x2e]
+00816ea4  IMUL ESI,EDI
+00816ea7  MOV dword ptr [EDX + 0x88],ESI
+00816ead  MOVSX EDI,word ptr [ECX + 0x30]
+00816eb1  MOVSX ESI,word ptr [EAX + 0x30]
+00816eb5  IMUL ESI,EDI
+00816eb8  MOV dword ptr [EDX + 0x6c],ESI
+00816ebb  MOVSX EDI,word ptr [ECX + 0x32]
+00816ebf  MOVSX ESI,word ptr [EAX + 0x32]
+00816ec3  IMUL ESI,EDI
+00816ec6  MOV dword ptr [EDX + 0x50],ESI
+00816ec9  MOVSX EDI,word ptr [ECX + 0x34]
+00816ecd  MOVSX ESI,word ptr [EAX + 0x34]
+00816ed1  IMUL ESI,EDI
+00816ed4  MOV dword ptr [EDX + 0x34],ESI
+00816ed7  MOVSX EDI,word ptr [ECX + 0x36]
+00816edb  MOVSX ESI,word ptr [EAX + 0x36]
+00816edf  IMUL ESI,EDI
+00816ee2  MOV dword ptr [EDX + 0x18],ESI
+00816ee5  MOVSX EDI,word ptr [ECX + 0x38]
+00816ee9  MOVSX ESI,word ptr [EAX + 0x38]
+00816eed  IMUL ESI,EDI
+00816ef0  MOV dword ptr [EDX + 0x1c],ESI
+00816ef3  MOVSX EDI,word ptr [ECX + 0x3a]
+00816ef7  MOVSX ESI,word ptr [EAX + 0x3a]
+00816efb  IMUL ESI,EDI
+00816efe  MOV dword ptr [EDX + 0x38],ESI
+00816f01  MOVSX EDI,word ptr [ECX + 0x3c]
+00816f05  MOVSX ESI,word ptr [EAX + 0x3c]
+00816f09  IMUL ESI,EDI
+00816f0c  MOV dword ptr [EDX + 0x54],ESI
+00816f0f  MOVSX EDI,word ptr [ECX + 0x3e]
+00816f13  MOVSX ESI,word ptr [EAX + 0x3e]
+00816f17  IMUL ESI,EDI
+00816f1a  MOV dword ptr [EDX + 0x70],ESI
+00816f1d  MOVSX EDI,word ptr [ECX + 0x40]
+00816f21  MOVSX ESI,word ptr [EAX + 0x40]
+00816f25  IMUL ESI,EDI
+00816f28  MOV dword ptr [EDX + 0x8c],ESI
+00816f2e  MOVSX EDI,word ptr [ECX + 0x42]
+00816f32  MOVSX ESI,word ptr [EAX + 0x42]
+00816f36  IMUL ESI,EDI
+00816f39  MOV dword ptr [EDX + 0xa8],ESI
+00816f3f  MOVSX EDI,word ptr [ECX + 0x44]
+00816f43  MOVSX ESI,word ptr [EAX + 0x44]
+00816f47  IMUL ESI,EDI
+00816f4a  MOV dword ptr [EDX + 0xc4],ESI
+00816f50  MOVSX EDI,word ptr [ECX + 0x46]
+00816f54  MOVSX ESI,word ptr [EAX + 0x46]
+00816f58  IMUL ESI,EDI
+00816f5b  MOV dword ptr [EDX + 0xe0],ESI
+00816f61  MOVSX EDI,word ptr [ECX + 0x48]
+00816f65  MOVSX ESI,word ptr [EAX + 0x48]
+00816f69  IMUL ESI,EDI
+00816f6c  MOV dword ptr [EDX + 0xe4],ESI
+00816f72  MOVSX EDI,word ptr [ECX + 0x4a]
+00816f76  MOVSX ESI,word ptr [EAX + 0x4a]
+00816f7a  IMUL ESI,EDI
+00816f7d  MOV dword ptr [EDX + 0xc8],ESI
+00816f83  MOVSX ESI,word ptr [EAX + 0x4c]
+00816f87  MOVSX EDI,word ptr [ECX + 0x4c]
+00816f8b  IMUL ESI,EDI
+00816f8e  MOV dword ptr [EDX + 0xac],ESI
+00816f94  MOVSX ESI,word ptr [EAX + 0x4e]
+00816f98  MOVSX EDI,word ptr [ECX + 0x4e]
+00816f9c  IMUL ESI,EDI
+00816f9f  MOV dword ptr [EDX + 0x90],ESI
+00816fa5  MOVSX EDI,word ptr [ECX + 0x50]
+00816fa9  MOVSX ESI,word ptr [EAX + 0x50]
+00816fad  IMUL ESI,EDI
+00816fb0  MOV dword ptr [EDX + 0x74],ESI
+00816fb3  MOVSX EDI,word ptr [ECX + 0x52]
+00816fb7  MOVSX ESI,word ptr [EAX + 0x52]
+00816fbb  IMUL ESI,EDI
+00816fbe  MOV dword ptr [EDX + 0x58],ESI
+00816fc1  MOVSX EDI,word ptr [ECX + 0x54]
+00816fc5  MOVSX ESI,word ptr [EAX + 0x54]
+00816fc9  IMUL ESI,EDI
+00816fcc  MOV dword ptr [EDX + 0x3c],ESI
+00816fcf  MOVSX EDI,word ptr [ECX + 0x56]
+00816fd3  MOVSX ESI,word ptr [EAX + 0x56]
+00816fd7  IMUL ESI,EDI
+00816fda  MOV dword ptr [EDX + 0x5c],ESI
+00816fdd  MOVSX EDI,word ptr [ECX + 0x58]
+00816fe1  MOVSX ESI,word ptr [EAX + 0x58]
+00816fe5  IMUL ESI,EDI
+00816fe8  MOV dword ptr [EDX + 0x78],ESI
+00816feb  MOVSX EDI,word ptr [ECX + 0x5a]
+00816fef  MOVSX ESI,word ptr [EAX + 0x5a]
+00816ff3  IMUL ESI,EDI
+00816ff6  MOV dword ptr [EDX + 0x94],ESI
+00816ffc  MOVSX EDI,word ptr [ECX + 0x5c]
+00817000  MOVSX ESI,word ptr [EAX + 0x5c]
+00817004  IMUL ESI,EDI
+00817007  MOV dword ptr [EDX + 0xb0],ESI
+0081700d  MOVSX EDI,word ptr [ECX + 0x5e]
+00817011  MOVSX ESI,word ptr [EAX + 0x5e]
+00817015  IMUL ESI,EDI
+00817018  MOV dword ptr [EDX + 0xcc],ESI
+0081701e  MOVSX EDI,word ptr [ECX + 0x60]
+00817022  MOVSX ESI,word ptr [EAX + 0x60]
+00817026  IMUL ESI,EDI
+00817029  MOV dword ptr [EDX + 0xe8],ESI
+0081702f  MOVSX EDI,word ptr [ECX + 0x62]
+00817033  MOVSX ESI,word ptr [EAX + 0x62]
+00817037  IMUL ESI,EDI
+0081703a  MOV dword ptr [EDX + 0xec],ESI
+00817040  MOVSX EDI,word ptr [ECX + 0x64]
+00817044  MOVSX ESI,word ptr [EAX + 0x64]
+00817048  IMUL ESI,EDI
+0081704b  MOV dword ptr [EDX + 0xd0],ESI
+00817051  MOVSX EDI,word ptr [ECX + 0x66]
+00817055  MOVSX ESI,word ptr [EAX + 0x66]
+00817059  IMUL ESI,EDI
+0081705c  MOV dword ptr [EDX + 0xb4],ESI
+00817062  MOVSX EDI,word ptr [ECX + 0x68]
+00817066  MOVSX ESI,word ptr [EAX + 0x68]
+0081706a  IMUL ESI,EDI
+0081706d  MOV dword ptr [EDX + 0x98],ESI
+00817073  MOVSX EDI,word ptr [ECX + 0x6a]
+00817077  MOVSX ESI,word ptr [EAX + 0x6a]
+0081707b  IMUL ESI,EDI
+0081707e  MOV dword ptr [EDX + 0x7c],ESI
+00817081  MOVSX EDI,word ptr [ECX + 0x6c]
+00817085  MOVSX ESI,word ptr [EAX + 0x6c]
+00817089  IMUL ESI,EDI
+0081708c  MOV dword ptr [EDX + 0x9c],ESI
+00817092  MOVSX EDI,word ptr [ECX + 0x6e]
+00817096  MOVSX ESI,word ptr [EAX + 0x6e]
+0081709a  IMUL ESI,EDI
+0081709d  MOV dword ptr [EDX + 0xb8],ESI
+008170a3  MOVSX EDI,word ptr [ECX + 0x70]
+008170a7  MOVSX ESI,word ptr [EAX + 0x70]
+008170ab  IMUL ESI,EDI
+008170ae  MOV dword ptr [EDX + 0xd4],ESI
+008170b4  MOVSX EDI,word ptr [ECX + 0x72]
+008170b8  MOVSX ESI,word ptr [EAX + 0x72]
+008170bc  IMUL ESI,EDI
+008170bf  MOV dword ptr [EDX + 0xf0],ESI
+008170c5  MOVSX EDI,word ptr [ECX + 0x74]
+008170c9  MOVSX ESI,word ptr [EAX + 0x74]
+008170cd  IMUL ESI,EDI
+008170d0  MOV dword ptr [EDX + 0xf4],ESI
+008170d6  MOVSX ESI,word ptr [EAX + 0x76]
+008170da  MOVSX EDI,word ptr [ECX + 0x76]
+008170de  IMUL ESI,EDI
+008170e1  MOV dword ptr [EDX + 0xd8],ESI
+008170e7  MOVSX ESI,word ptr [EAX + 0x78]
+008170eb  MOVSX EDI,word ptr [ECX + 0x78]
+008170ef  IMUL ESI,EDI
+008170f2  MOV dword ptr [EDX + 0xbc],ESI
+008170f8  MOVSX ESI,word ptr [EAX + 0x7a]
+008170fc  MOVSX EDI,word ptr [ECX + 0x7a]
+00817100  IMUL ESI,EDI
+00817103  MOV dword ptr [EDX + 0xdc],ESI
+00817109  MOVSX ESI,word ptr [EAX + 0x7c]
+0081710d  MOVSX EDI,word ptr [ECX + 0x7c]
+00817111  IMUL ESI,EDI
+00817114  MOV dword ptr [EDX + 0xf8],ESI
+0081711a  MOVSX EAX,word ptr [EAX + 0x7e]
+0081711e  MOVSX ECX,word ptr [ECX + 0x7e]
+00817122  IMUL EAX,ECX
+00817125  POP EDI
+00817126  MOV dword ptr [EDX + 0xfc],EAX
+0081712c  POP ESI
+0081712d  POP EBP
+0081712e  RET

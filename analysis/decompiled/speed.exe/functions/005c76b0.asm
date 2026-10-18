@@ -1,0 +1,6 @@
+005c76b0  TEST byte ptr [ECX + 0x4],0x1
+005c76b4  MOV EAX,dword ptr [ECX]
+005c76b6  JZ 0x005c76c2
+005c76b8  AND EAX,0xffff2020
+005c76bd  OR EAX,0x2020
+005c76c2  RET

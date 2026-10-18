@@ -1,0 +1,8 @@
+004a05a0  MOV EAX,dword ptr [ESP + 0x8]
+004a05a4  MOV ECX,dword ptr [ESP + 0xc]
+004a05a8  MOV EDX,dword ptr [ESP + 0x4]
+004a05ac  PUSH EAX
+004a05ad  PUSH ECX
+004a05ae  PUSH EDX
+004a05af  CALL 0x007e7d5e
+004a05b4  RET

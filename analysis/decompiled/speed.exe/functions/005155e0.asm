@@ -1,0 +1,20 @@
+005155e0  MOV EAX,dword ptr [ESP + 0x4]
+005155e4  TEST EAX,EAX
+005155e6  JZ 0x00515625
+005155e8  MOV EDX,dword ptr [EAX + 0x18]
+005155eb  MOV ECX,dword ptr [EAX + 0x2c]
+005155ee  DEC EDX
+005155ef  CMP EDX,0xb
+005155f2  JA 0x00515610
+005155f4  MOVZX EDX,byte ptr [EDX + 0x515630]
+005155fb  JMP dword ptr [EDX*0x4 + 0x515628]
+00515602  MOV EDX,dword ptr [ESP + 0x8]
+00515606  MOV dword ptr [ECX + 0x38],EDX
+00515609  MOV EDX,dword ptr [ESP + 0xc]
+0051560d  MOV dword ptr [ECX + 0x3c],EDX
+00515610  MOV EDX,dword ptr [ESP + 0x8]
+00515614  MOV dword ptr [ECX + 0x38],EDX
+00515617  MOV EDX,dword ptr [ESP + 0xc]
+0051561b  MOV dword ptr [ECX + 0x3c],EDX
+0051561e  OR dword ptr [EAX + 0x1c],0x400000
+00515625  RET

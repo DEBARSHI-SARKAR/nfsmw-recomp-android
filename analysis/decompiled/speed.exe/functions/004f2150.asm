@@ -1,0 +1,7 @@
+004f2150  MOV EAX,ECX
+004f2152  XOR ECX,ECX
+004f2154  MOV dword ptr [EAX + 0x4],ECX
+004f2157  MOV dword ptr [EAX + 0x8],ECX
+004f215a  MOV dword ptr [EAX + 0xc],ECX
+004f215d  MOV dword ptr [EAX],0x899218
+004f2163  RET

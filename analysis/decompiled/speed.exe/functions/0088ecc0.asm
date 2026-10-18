@@ -1,0 +1,2 @@
+0088ecc0  MOV ECX,0x9a3b50
+0088ecc5  JMP 0x0072eae0

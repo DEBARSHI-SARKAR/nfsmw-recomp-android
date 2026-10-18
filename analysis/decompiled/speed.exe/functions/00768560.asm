@@ -1,0 +1,2 @@
+00768560  MOV dword ptr [ECX],0x8967e4
+00768566  RET

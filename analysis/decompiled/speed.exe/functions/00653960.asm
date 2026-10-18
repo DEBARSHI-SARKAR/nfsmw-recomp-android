@@ -1,0 +1,10 @@
+00653960  MOV DL,byte ptr [ESP + 0x8]
+00653964  MOV EAX,ECX
+00653966  MOV CL,byte ptr [ESP + 0x4]
+0065396a  MOV byte ptr [EAX + 0x4],CL
+0065396d  XOR CL,CL
+0065396f  MOV dword ptr [EAX],0x89496c
+00653975  MOV byte ptr [EAX + 0x5],DL
+00653978  MOV byte ptr [EAX + 0x6],CL
+0065397b  MOV byte ptr [EAX + 0x7],CL
+0065397e  RET 0x8

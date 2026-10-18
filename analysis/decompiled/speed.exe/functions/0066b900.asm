@@ -1,0 +1,5 @@
+0066b900  MOV ECX,dword ptr [ESP + 0x4]
+0066b904  TEST byte ptr [ECX + 0x10],0x1
+0066b908  JZ 0x0066b90f
+0066b90a  JMP 0x0045a5d0
+0066b90f  RET

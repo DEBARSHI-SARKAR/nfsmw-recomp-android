@@ -1,0 +1,74 @@
+0045dc10  SUB ESP,0xc
+0045dc13  MOVZX EAX,word ptr [ESP + 0x18]
+0045dc18  MOV dword ptr [ESP + 0x18],EAX
+0045dc1c  FILD dword ptr [ESP + 0x18]
+0045dc20  MOV dword ptr [ESP + 0x18],0x3f800000
+0045dc28  FMUL float ptr [0x008941f4]
+0045dc2e  FCOM float ptr [0x0089421c]
+0045dc34  FNSTSW AX
+0045dc36  TEST AH,0x1
+0045dc39  JNZ 0x0045dc43
+0045dc3b  FSUB float ptr [0x00894218]
+0045dc41  JMP 0x0045dc5e
+0045dc43  FCOM float ptr [0x00891654]
+0045dc49  FNSTSW AX
+0045dc4b  TEST AH,0x1
+0045dc4e  JNZ 0x0045dc5e
+0045dc50  FSUB float ptr [0x00894214]
+0045dc56  MOV dword ptr [ESP + 0x18],0xbf800000
+0045dc5e  FLD ST0
+0045dc60  MOV ECX,dword ptr [ESP + 0x10]
+0045dc64  FMUL ST1
+0045dc66  MOV EDX,dword ptr [ESP + 0x14]
+0045dc6a  FLD ST0
+0045dc6c  FMUL ST2
+0045dc6e  FLD ST1
+0045dc70  FMUL ST2
+0045dc72  FSTP float ptr [ESP]
+0045dc75  FLD ST0
+0045dc77  FMUL ST2
+0045dc79  FLD float ptr [ESP]
+0045dc7c  FMUL ST3
+0045dc7e  FSTP float ptr [ESP + 0x4]
+0045dc82  FLD ST0
+0045dc84  FMUL ST3
+0045dc86  FLD float ptr [ESP + 0x4]
+0045dc8a  FMUL ST4
+0045dc8c  FSTP float ptr [ESP + 0x8]
+0045dc90  FXCH ST2
+0045dc92  FMUL float ptr [0x00894210]
+0045dc98  FSUBR ST0,ST4
+0045dc9a  FXCH
+0045dc9c  FMUL float ptr [0x0089420c]
+0045dca2  FADDP
+0045dca4  FLD ST1
+0045dca6  FMUL float ptr [0x00894208]
+0045dcac  FSUBP
+0045dcae  FXCH
+0045dcb0  FMUL ST2
+0045dcb2  FMUL float ptr [0x00894204]
+0045dcb8  FADDP
+0045dcba  FMUL float ptr [ESP + 0x18]
+0045dcbe  FSTP float ptr [ECX]
+0045dcc0  FLD float ptr [0x008933d4]
+0045dcc6  FMUL ST1
+0045dcc8  FSUBR float ptr [0x0089096c]
+0045dcce  FLD float ptr [ESP]
+0045dcd1  FMUL float ptr [0x0089422c]
+0045dcd7  FADDP
+0045dcd9  FLD float ptr [ESP + 0x4]
+0045dcdd  FMUL float ptr [0x00894228]
+0045dce3  FSUBP
+0045dce5  FLD float ptr [ESP + 0x8]
+0045dce9  FMUL float ptr [0x00894224]
+0045dcef  FADDP
+0045dcf1  FLD float ptr [ESP + 0x8]
+0045dcf5  FMUL ST2
+0045dcf7  FMUL float ptr [0x00894220]
+0045dcfd  FSUBP
+0045dcff  FMUL float ptr [ESP + 0x18]
+0045dd03  FSTP float ptr [EDX]
+0045dd05  FSTP ST0
+0045dd07  FSTP ST0
+0045dd09  ADD ESP,0xc
+0045dd0c  RET

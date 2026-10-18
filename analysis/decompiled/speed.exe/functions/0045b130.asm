@@ -1,0 +1,14 @@
+0045b130  PUSH ESI
+0045b131  MOV ESI,ECX
+0045b133  CALL 0x0045b160
+0045b138  MOV dword ptr [ESI + 0x4],EAX
+0045b13b  MOV byte ptr [EAX + 0x21],0x1
+0045b13f  MOV EAX,dword ptr [ESI + 0x4]
+0045b142  MOV dword ptr [EAX + 0x4],EAX
+0045b145  MOV EAX,dword ptr [ESI + 0x4]
+0045b148  MOV dword ptr [EAX],EAX
+0045b14a  MOV EAX,dword ptr [ESI + 0x4]
+0045b14d  MOV dword ptr [EAX + 0x8],EAX
+0045b150  MOV dword ptr [ESI + 0x8],0x0
+0045b157  POP ESI
+0045b158  RET

@@ -1,0 +1,17 @@
+00410070  MOV ECX,dword ptr [ESP + 0x8]
+00410074  FLD float ptr [ECX]
+00410076  MOV EDX,dword ptr [ESP + 0x4]
+0041007a  FSUB float ptr [EDX]
+0041007c  MOV EAX,dword ptr [ESP + 0xc]
+00410080  PUSH EAX
+00410081  PUSH EAX
+00410082  FSTP float ptr [EAX]
+00410084  FLD float ptr [ECX + 0x4]
+00410087  FSUB float ptr [EDX + 0x4]
+0041008a  FSTP float ptr [EAX + 0x4]
+0041008d  FLD float ptr [ECX + 0x8]
+00410090  FSUB float ptr [EDX + 0x8]
+00410093  FSTP float ptr [EAX + 0x8]
+00410096  CALL 0x0040fe20
+0041009b  ADD ESP,0x8
+0041009e  RET

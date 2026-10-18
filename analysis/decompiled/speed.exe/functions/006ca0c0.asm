@@ -1,0 +1,23 @@
+006ca0c0  PUSH ECX
+006ca0c1  PUSH ESI
+006ca0c2  XOR ESI,ESI
+006ca0c4  PUSH EDI
+006ca0c5  MOV dword ptr [ESP + 0x8],ESI
+006ca0c9  LEA EDI,[ECX + 0x4988]
+006ca0cf  NOP
+006ca0d0  FILD dword ptr [ESP + 0x8]
+006ca0d4  FMUL double ptr [0x008adfe0]
+006ca0da  FMUL double ptr [0x008af2d0]
+006ca0e0  FSIN
+006ca0e2  FMUL double ptr [0x00897a30]
+006ca0e8  CALL 0x007c4b80
+006ca0ed  INC ESI
+006ca0ee  MOV dword ptr [EDI],EAX
+006ca0f0  ADD EDI,0x4
+006ca0f3  CMP ESI,0x168
+006ca0f9  MOV dword ptr [ESP + 0x8],ESI
+006ca0fd  JL 0x006ca0d0
+006ca0ff  POP EDI
+006ca100  POP ESI
+006ca101  POP ECX
+006ca102  RET

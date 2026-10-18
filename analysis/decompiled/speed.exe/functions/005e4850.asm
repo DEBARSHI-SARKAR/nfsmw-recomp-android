@@ -1,0 +1,50 @@
+005e4850  SUB ESP,0xc
+005e4853  MOV EAX,dword ptr [ESP + 0x10]
+005e4857  MOV EDX,dword ptr [EAX + 0x8]
+005e485a  FLD float ptr [EAX]
+005e485c  MOV EAX,dword ptr [EAX + 0x4]
+005e485f  FCHS
+005e4861  MOV dword ptr [ESP + 0x8],EAX
+005e4865  FSTP float ptr [ESP + 0x4]
+005e4869  MOV EAX,dword ptr [ECX + 0x2bc]
+005e486f  PUSH ESI
+005e4870  XOR ESI,ESI
+005e4872  TEST EAX,EAX
+005e4874  MOV dword ptr [ESP + 0x4],EDX
+005e4878  JBE 0x005e48da
+005e487a  LEA EBX,[EBX]
+005e4880  MOV EDX,dword ptr [ECX + 0x2c4]
+005e4886  MOV EDX,dword ptr [EDX + ESI*0x4]
+005e4889  CMP word ptr [EDX],0xc
+005e488d  JNZ 0x005e48cf
+005e488f  FLD float ptr [ESP + 0xc]
+005e4893  FSUB float ptr [EDX + 0x18]
+005e4896  FLD float ptr [ESP + 0x8]
+005e489a  FSUB float ptr [EDX + 0x14]
+005e489d  FLD float ptr [ESP + 0x4]
+005e48a1  FSUB float ptr [EDX + 0x10]
+005e48a4  FLD ST0
+005e48a6  FMUL ST1
+005e48a8  FLD ST2
+005e48aa  FMUL ST3
+005e48ac  FADDP
+005e48ae  FLD ST3
+005e48b0  FMUL ST4
+005e48b2  FADDP
+005e48b4  FLD float ptr [ESP + 0x18]
+005e48b8  FMUL float ptr [ESP + 0x18]
+005e48bc  FCOMPP
+005e48be  FSTP ST0
+005e48c0  FNSTSW AX
+005e48c2  FSTP ST0
+005e48c4  TEST AH,0x1
+005e48c7  FSTP ST0
+005e48c9  JNZ 0x005e48cf
+005e48cb  AND byte ptr [EDX + 0x2],0xfe
+005e48cf  MOV EAX,dword ptr [ECX + 0x2bc]
+005e48d5  INC ESI
+005e48d6  CMP ESI,EAX
+005e48d8  JC 0x005e4880
+005e48da  POP ESI
+005e48db  ADD ESP,0xc
+005e48de  RET 0x8

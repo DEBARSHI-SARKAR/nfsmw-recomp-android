@@ -1,0 +1,12 @@
+0056ad30  MOV ECX,dword ptr [0x0091cf48]
+0056ad36  TEST ECX,ECX
+0056ad38  JZ 0x0056ad4f
+0056ad3a  MOV EAX,dword ptr [ECX]
+0056ad3c  PUSH 0x1
+0056ad3e  CALL dword ptr [EAX]
+0056ad40  MOV dword ptr [0x0091cf48],0x0
+0056ad4a  CALL 0x007a2940
+0056ad4f  MOV ECX,dword ptr [0x00911fa8]
+0056ad55  PUSH -0x1
+0056ad57  CALL 0x004aefe0
+0056ad5c  RET

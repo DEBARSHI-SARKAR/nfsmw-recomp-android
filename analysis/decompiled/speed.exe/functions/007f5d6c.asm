@@ -1,0 +1,5 @@
+007f5d6c  PUSH EBP
+007f5d6d  MOV EBP,ESP
+007f5d6f  MOV ECX,dword ptr [ECX + 0x18]
+007f5d72  POP EBP
+007f5d73  JMP 0x007f6faa

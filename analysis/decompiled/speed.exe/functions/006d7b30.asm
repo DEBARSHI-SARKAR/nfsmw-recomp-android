@@ -1,0 +1,79 @@
+006d7b30  MOV EAX,dword ptr [ESP + 0x4]
+006d7b34  PUSH ESI
+006d7b35  PUSH EDI
+006d7b36  MOV ESI,ECX
+006d7b38  PUSH 0x0
+006d7b3a  MOV dword ptr [ESI + 0x18],EAX
+006d7b3d  MOV EAX,dword ptr [ESP + 0x18]
+006d7b41  LEA EDI,[ESI + 0x48]
+006d7b44  PUSH EDI
+006d7b45  PUSH 0x1
+006d7b47  MOV dword ptr [ESI + 0x4c],EAX
+006d7b4a  PUSH 0x0
+006d7b4c  LEA EAX,[EAX + EAX*0x2]
+006d7b4f  PUSH 0x8
+006d7b51  MOV dword ptr [ESI],0x8afb74
+006d7b57  MOV dword ptr [ESI + 0x30],0x0
+006d7b5e  MOV ECX,dword ptr [0x00982bdc]
+006d7b64  MOV EDX,dword ptr [ECX]
+006d7b66  SHL EAX,0x2
+006d7b69  PUSH EAX
+006d7b6a  PUSH ECX
+006d7b6b  CALL dword ptr [EDX + 0x68]
+006d7b6e  MOV EAX,dword ptr [ESP + 0x10]
+006d7b72  PUSH 0x0
+006d7b74  LEA EDI,[ESI + 0x34]
+006d7b77  PUSH EDI
+006d7b78  PUSH 0x1
+006d7b7a  PUSH 0x65
+006d7b7c  MOV dword ptr [ESI + 0x3c],EAX
+006d7b7f  MOV ECX,dword ptr [0x00982bdc]
+006d7b85  MOV EDX,dword ptr [ECX]
+006d7b87  PUSH 0x8
+006d7b89  ADD EAX,EAX
+006d7b8b  PUSH EAX
+006d7b8c  PUSH ECX
+006d7b8d  CALL dword ptr [EDX + 0x6c]
+006d7b90  MOV EAX,[0x0098856c]
+006d7b95  MOV ECX,EAX
+006d7b97  AND ECX,0x80000007
+006d7b9d  JNS 0x006d7ba4
+006d7b9f  DEC ECX
+006d7ba0  OR ECX,0xfffffff8
+006d7ba3  INC ECX
+006d7ba4  CMP ECX,0x7
+006d7ba7  JNZ 0x006d7baa
+006d7ba9  INC EAX
+006d7baa  MOV EDX,EAX
+006d7bac  AND EDX,0x80000007
+006d7bb2  JNS 0x006d7bb9
+006d7bb4  DEC EDX
+006d7bb5  OR EDX,0xfffffff8
+006d7bb8  INC EDX
+006d7bb9  JNZ 0x006d7bbc
+006d7bbb  INC EAX
+006d7bbc  TEST AL,0x1
+006d7bbe  JZ 0x006d7bc8
+006d7bc0  FLD float ptr [0x0089096c]
+006d7bc6  JMP 0x006d7bce
+006d7bc8  FLD float ptr [0x00890968]
+006d7bce  TEST AL,0x2
+006d7bd0  FSTP float ptr [ESI + 0x20]
+006d7bd3  JZ 0x006d7bdd
+006d7bd5  FLD float ptr [0x0089096c]
+006d7bdb  JMP 0x006d7be3
+006d7bdd  FLD float ptr [0x00890968]
+006d7be3  TEST AL,0x4
+006d7be5  FSTP float ptr [ESI + 0x24]
+006d7be8  JZ 0x006d7bf2
+006d7bea  FLD float ptr [0x0089096c]
+006d7bf0  JMP 0x006d7bf8
+006d7bf2  FLD float ptr [0x00890968]
+006d7bf8  INC EAX
+006d7bf9  FSTP float ptr [ESI + 0x28]
+006d7bfc  MOV [0x0098856c],EAX
+006d7c01  POP EDI
+006d7c02  MOV dword ptr [ESI + 0x2c],0x3f800000
+006d7c09  MOV EAX,ESI
+006d7c0b  POP ESI
+006d7c0c  RET 0xc

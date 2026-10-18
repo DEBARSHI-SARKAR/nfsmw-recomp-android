@@ -1,0 +1,37 @@
+007ac2a0  PUSH EBX
+007ac2a1  PUSH ESI
+007ac2a2  PUSH EDI
+007ac2a3  MOV ESI,ECX
+007ac2a5  MOV ECX,dword ptr [0x0091cf90]
+007ac2ab  PUSH 0xb
+007ac2ad  CALL 0x0056dbe0
+007ac2b2  MOV EDI,dword ptr [ESP + 0x14]
+007ac2b6  CMP EDI,0x9120409e
+007ac2bc  MOVZX EBX,byte ptr [EAX + 0xa]
+007ac2c0  JNZ 0x007ac2cc
+007ac2c2  DEC EBX
+007ac2c3  JNS 0x007ac2dc
+007ac2c5  MOV EBX,0x3
+007ac2ca  JMP 0x007ac2dc
+007ac2cc  CMP EDI,0xb5971bf1
+007ac2d2  JNZ 0x007ac2dc
+007ac2d4  INC EBX
+007ac2d5  CMP EBX,0x3
+007ac2d8  JLE 0x007ac2dc
+007ac2da  XOR EBX,EBX
+007ac2dc  MOV ECX,dword ptr [0x0091cf90]
+007ac2e2  PUSH 0xb
+007ac2e4  CALL 0x0056dbe0
+007ac2e9  MOV byte ptr [EAX + 0xa],BL
+007ac2ec  MOV EAX,dword ptr [ESI]
+007ac2ee  PUSH EDI
+007ac2ef  MOV ECX,ESI
+007ac2f1  MOV byte ptr [ESI + 0x2a],0x1
+007ac2f5  CALL dword ptr [EAX + 0x38]
+007ac2f8  MOV EDX,dword ptr [ESI]
+007ac2fa  MOV ECX,ESI
+007ac2fc  CALL dword ptr [EDX + 0xc]
+007ac2ff  POP EDI
+007ac300  POP ESI
+007ac301  POP EBX
+007ac302  RET 0x8

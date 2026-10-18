@@ -1,0 +1,13 @@
+0082485e  MOV EAX,dword ptr [ESP + 0x4]
+00824862  XOR ECX,ECX
+00824864  MOV dword ptr [EAX + 0x8],ECX
+00824867  MOV dword ptr [EAX + 0xc],ECX
+0082486a  MOV dword ptr [EAX + 0x10],ECX
+0082486d  MOV dword ptr [EAX + 0x14],ECX
+00824870  MOV byte ptr [EAX + 0x1b],CL
+00824873  MOV dword ptr [EAX + 0x4],0x82484b
+0082487a  MOV dword ptr [EAX],0x8247ce
+00824880  MOV dword ptr [EAX + 0x1c],ECX
+00824883  MOV dword ptr [EAX + 0x20],ECX
+00824886  XOR EAX,EAX
+00824888  RET

@@ -1,0 +1,13 @@
+006b7ce0  PUSH ESI
+006b7ce1  MOV ESI,ECX
+006b7ce3  MOV EAX,dword ptr [ESI + 0x174]
+006b7ce9  TEST EAX,EAX
+006b7ceb  JZ 0x006b7cfe
+006b7ced  CALL 0x006e8de0
+006b7cf2  FSTP float ptr [ESI + 0x17c]
+006b7cf8  XOR AL,AL
+006b7cfa  POP ESI
+006b7cfb  RET 0x4
+006b7cfe  MOV AL,0x1
+006b7d00  POP ESI
+006b7d01  RET 0x4

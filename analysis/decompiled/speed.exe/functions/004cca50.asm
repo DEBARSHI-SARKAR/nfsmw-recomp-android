@@ -1,0 +1,32 @@
+004cca50  SUB ESP,0x8
+004cca53  PUSH ESI
+004cca54  MOV ESI,dword ptr [ECX + 0x8]
+004cca57  MOV ECX,dword ptr [ECX + 0x4]
+004cca5a  PUSH EDI
+004cca5b  MOV EDI,dword ptr [ESP + 0x14]
+004cca5f  PUSH 0x0
+004cca61  LEA EAX,[ESP + 0xc]
+004cca65  PUSH EAX
+004cca66  PUSH ESI
+004cca67  PUSH ECX
+004cca68  LEA ECX,[ESP + 0x24]
+004cca6c  PUSH ECX
+004cca6d  MOV dword ptr [ESP + 0x1c],EDI
+004cca71  MOV dword ptr [ESP + 0x20],0x0
+004cca79  CALL 0x004c99e0
+004cca7e  MOV EAX,dword ptr [ESP + 0x28]
+004cca82  ADD ESP,0x14
+004cca85  CMP EAX,ESI
+004cca87  JZ 0x004cca98
+004cca89  CMP dword ptr [EAX],EDI
+004cca8b  JNZ 0x004cca98
+004cca8d  MOV EAX,dword ptr [EAX + 0x4]
+004cca90  POP EDI
+004cca91  POP ESI
+004cca92  ADD ESP,0x8
+004cca95  RET 0x4
+004cca98  POP EDI
+004cca99  XOR EAX,EAX
+004cca9b  POP ESI
+004cca9c  ADD ESP,0x8
+004cca9f  RET 0x4

@@ -1,0 +1,6 @@
+00445300  MOV ECX,dword ptr [0x009117f4]
+00445306  MOV EDX,dword ptr [ESP + 0x4]
+0044530a  MOV EAX,dword ptr [ECX]
+0044530c  PUSH EDX
+0044530d  CALL dword ptr [EAX + 0x2c]
+00445310  RET

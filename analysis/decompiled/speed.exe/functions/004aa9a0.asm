@@ -1,0 +1,5 @@
+004aa9a0  MOV EAX,dword ptr [ECX + 0x8]
+004aa9a3  TEST EAX,EAX
+004aa9a5  JZ 0x004aa9ac
+004aa9a7  JMP 0x0045a8a0
+004aa9ac  RET

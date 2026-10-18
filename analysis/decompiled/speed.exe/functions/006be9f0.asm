@@ -1,0 +1,26 @@
+006be9f0  PUSH ESI
+006be9f1  XOR ESI,ESI
+006be9f3  MOV SI,word ptr [ESP + 0x8]
+006be9f8  SHR SI,0x1
+006be9fb  PUSH ESI
+006be9fc  CALL 0x0045db30
+006bea01  FSTP float ptr [ESP + 0xc]
+006bea05  PUSH ESI
+006bea06  CALL 0x0045dbf0
+006bea0b  FDIVR float ptr [ESP + 0x10]
+006bea0f  ADD ESP,0x8
+006bea12  POP ESI
+006bea13  FLD float ptr [0x00890968]
+006bea19  FLD ST1
+006bea1b  FUCOMPP
+006bea1d  FNSTSW AX
+006bea1f  TEST AH,0x44
+006bea22  JNP 0x006bea34
+006bea24  MOV EAX,[0x00982be4]
+006bea29  SAR EAX,0x1
+006bea2b  MOV dword ptr [ESP + 0x4],EAX
+006bea2f  FIDIVR dword ptr [ESP + 0x4]
+006bea33  RET
+006bea34  FSTP ST0
+006bea36  FLD float ptr [0x00890bf8]
+006bea3c  RET

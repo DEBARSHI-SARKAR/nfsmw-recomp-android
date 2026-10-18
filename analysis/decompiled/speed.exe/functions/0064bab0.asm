@@ -1,0 +1,7 @@
+0064bab0  MOV EAX,[0x0091cf90]
+0064bab5  MOV CL,byte ptr [EAX + 0x16f]
+0064babb  ADD EAX,0x16f
+0064bac0  TEST CL,CL
+0064bac2  JNZ 0x0064bac9
+0064bac4  JMP 0x0064a2c0
+0064bac9  RET

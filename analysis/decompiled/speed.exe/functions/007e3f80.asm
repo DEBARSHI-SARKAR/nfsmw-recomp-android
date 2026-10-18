@@ -1,0 +1,66 @@
+007e3f80  PUSH EBP
+007e3f81  MOV EBP,ESP
+007e3f83  PUSH -0x1
+007e3f85  PUSH 0x8bf098
+007e3f8a  PUSH 0x7cd5e4
+007e3f8f  MOV EAX,FS:[0x0]
+007e3f95  PUSH EAX
+007e3f96  MOV dword ptr FS:[0x0],ESP
+007e3f9d  ADD ESP,-0xc
+007e3fa0  PUSH EBX
+007e3fa1  PUSH ESI
+007e3fa2  PUSH EDI
+007e3fa3  MOV EAX,dword ptr [EBP + 0x8]
+007e3fa6  CMP EAX,dword ptr [0x009c5320]
+007e3fac  JNC 0x007e3fce
+007e3fae  MOV ECX,dword ptr [EBP + 0x8]
+007e3fb1  SAR ECX,0x5
+007e3fb4  MOV EDX,dword ptr [EBP + 0x8]
+007e3fb7  AND EDX,0x1f
+007e3fba  IMUL EDX,EDX,0x24
+007e3fbd  MOV EAX,dword ptr [ECX*0x4 + 0x9c5340]
+007e3fc4  MOVSX ECX,byte ptr [EAX + EDX*0x1 + 0x4]
+007e3fc9  AND ECX,0x1
+007e3fcc  JNZ 0x007e3fe1
+007e3fce  CALL 0x007cb270
+007e3fd3  MOV dword ptr [EAX],0x9
+007e3fd9  OR EAX,0xffffffff
+007e3fdc  JMP 0x007e407f
+007e3fe1  MOV EDX,dword ptr [EBP + 0x8]
+007e3fe4  PUSH EDX
+007e3fe5  CALL 0x007e4670
+007e3fea  ADD ESP,0x4
+007e3fed  MOV dword ptr [EBP + -0x4],0x0
+007e3ff4  MOV EAX,dword ptr [EBP + 0x8]
+007e3ff7  SAR EAX,0x5
+007e3ffa  MOV ECX,dword ptr [EBP + 0x8]
+007e3ffd  AND ECX,0x1f
+007e4000  IMUL ECX,ECX,0x24
+007e4003  MOV EDX,dword ptr [EAX*0x4 + 0x9c5340]
+007e400a  MOVSX EAX,byte ptr [EDX + ECX*0x1 + 0x4]
+007e400f  AND EAX,0x1
+007e4012  JZ 0x007e404f
+007e4014  MOV ECX,dword ptr [EBP + 0x8]
+007e4017  PUSH ECX
+007e4018  CALL 0x007e44b0
+007e401d  ADD ESP,0x4
+007e4020  PUSH EAX
+007e4021  CALL dword ptr [0x008902a4]
+007e4027  TEST EAX,EAX
+007e4029  JNZ 0x007e4036
+007e402b  CALL dword ptr [0x00890188]
+007e4031  MOV dword ptr [EBP + -0x1c],EAX
+007e4034  JMP 0x007e403d
+007e4036  MOV dword ptr [EBP + -0x1c],0x0
+007e403d  CMP dword ptr [EBP + -0x1c],0x0
+007e4041  JNZ 0x007e4045
+007e4043  JMP 0x007e4061
+007e4045  CALL 0x007cb280
+007e404a  MOV EDX,dword ptr [EBP + -0x1c]
+007e404d  MOV dword ptr [EAX],EDX
+007e404f  CALL 0x007cb270
+007e4054  MOV dword ptr [EAX],0x9
+007e405a  MOV dword ptr [EBP + -0x1c],0xffffffff
+007e4061  MOV dword ptr [EBP + -0x4],0xffffffff
+007e4068  CALL 0x007e406f
+007e406d  JMP 0x007e407c

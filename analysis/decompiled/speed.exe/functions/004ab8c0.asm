@@ -1,0 +1,17 @@
+004ab8c0  FLD float ptr [ECX + 0x58]
+004ab8c3  FLD float ptr [ECX + 0x54]
+004ab8c6  FLD float ptr [ECX + 0x50]
+004ab8c9  FLD ST0
+004ab8cb  FMUL ST1
+004ab8cd  FLD ST2
+004ab8cf  FMUL ST3
+004ab8d1  FADDP
+004ab8d3  FLD ST3
+004ab8d5  FMUL ST4
+004ab8d7  FADDP
+004ab8d9  FSQRT
+004ab8db  FSTP ST3
+004ab8dd  FSTP ST0
+004ab8df  FSTP ST0
+004ab8e1  FMUL float ptr [0x008967e0]
+004ab8e7  RET

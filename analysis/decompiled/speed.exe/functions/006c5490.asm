@@ -1,0 +1,11 @@
+006c5490  PUSH ESI
+006c5491  MOV ESI,ECX
+006c5493  MOV EAX,dword ptr [ESI]
+006c5495  CALL dword ptr [EAX + 0x8]
+006c5498  MOV ESI,dword ptr [ESI + 0x48]
+006c549b  MOV ECX,dword ptr [ESI]
+006c549d  PUSH ESI
+006c549e  CALL dword ptr [ECX + 0x10c]
+006c54a4  MOV dword ptr [0x00982c80],0x0
+006c54ae  POP ESI
+006c54af  RET

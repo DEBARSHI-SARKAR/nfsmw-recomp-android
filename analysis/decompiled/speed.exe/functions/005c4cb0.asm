@@ -1,0 +1,82 @@
+005c4cb0  MOV AL,byte ptr [ESP + 0x18]
+005c4cb4  MOV DL,byte ptr [ESP + 0x14]
+005c4cb8  PUSH EBX
+005c4cb9  PUSH ESI
+005c4cba  MOV ESI,ECX
+005c4cbc  MOV CL,byte ptr [ESP + 0x18]
+005c4cc0  MOV byte ptr [ESI + 0x9],CL
+005c4cc3  MOV ECX,dword ptr [ESP + 0x10]
+005c4cc7  PUSH EDI
+005c4cc8  XOR EDI,EDI
+005c4cca  MOV byte ptr [ESI + 0x8],AL
+005c4ccd  MOV EAX,dword ptr [ESP + 0x10]
+005c4cd1  MOV byte ptr [ESI + 0xa],DL
+005c4cd4  MOV EDX,dword ptr [ESP + 0x18]
+005c4cd8  MOV dword ptr [ESI + 0x38],ECX
+005c4cdb  MOV ECX,ESI
+005c4cdd  XOR EBX,EBX
+005c4cdf  MOV dword ptr [ESI],EDI
+005c4ce1  MOV dword ptr [ESI + 0xc],EDI
+005c4ce4  MOV dword ptr [ESI + 0x14],EDI
+005c4ce7  MOV dword ptr [ESI + 0x10],EDI
+005c4cea  MOV dword ptr [ESI + 0x30],EDI
+005c4ced  MOV dword ptr [ESI + 0x34],EDI
+005c4cf0  MOV dword ptr [ESI + 0x44],EDI
+005c4cf3  MOV dword ptr [ESI + 0x40],EDI
+005c4cf6  MOV dword ptr [ESI + 0x4c],EDI
+005c4cf9  MOV dword ptr [ESI + 0x48],EDI
+005c4cfc  MOV dword ptr [ESI + 0x4],EAX
+005c4cff  MOV dword ptr [ESI + 0x3c],EDX
+005c4d02  CALL 0x005bc710
+005c4d07  TEST AL,AL
+005c4d09  JZ 0x005c4d71
+005c4d0b  MOV ECX,ESI
+005c4d0d  CALL 0x005b2320
+005c4d12  TEST AL,AL
+005c4d14  JZ 0x005c4d71
+005c4d16  CALL 0x005c5180
+005c4d1b  TEST AL,AL
+005c4d1d  JZ 0x005c4d71
+005c4d1f  MOV ECX,ESI
+005c4d21  CALL 0x005b2380
+005c4d26  TEST AL,AL
+005c4d28  JZ 0x005c4d71
+005c4d2a  MOV ECX,ESI
+005c4d2c  CALL 0x005b2420
+005c4d31  TEST AL,AL
+005c4d33  JZ 0x005c4d71
+005c4d35  MOV ECX,ESI
+005c4d37  CALL 0x005c4a30
+005c4d3c  TEST AL,AL
+005c4d3e  JZ 0x005c4d71
+005c4d40  MOV ECX,ESI
+005c4d42  CALL 0x005c35b0
+005c4d47  TEST AL,AL
+005c4d49  JZ 0x005c4d71
+005c4d4b  MOV ECX,ESI
+005c4d4d  CALL 0x005b8d40
+005c4d52  TEST AL,AL
+005c4d54  JZ 0x005c4d71
+005c4d56  MOV CL,byte ptr [ESI + 0x8]
+005c4d59  MOV EAX,dword ptr [ESI]
+005c4d5b  MOV byte ptr [EAX + 0x16],CL
+005c4d5e  MOV EDX,dword ptr [ESI + 0x38]
+005c4d61  MOV ECX,dword ptr [ESI]
+005c4d63  PUSH EDX
+005c4d64  CALL 0x005bc4d0
+005c4d69  TEST AL,AL
+005c4d6b  JZ 0x005c4d71
+005c4d6d  MOV EBX,dword ptr [ESI]
+005c4d6f  MOV dword ptr [ESI],EDI
+005c4d71  MOV ECX,dword ptr [ESI]
+005c4d73  CMP ECX,EDI
+005c4d75  JZ 0x005c4d7d
+005c4d77  MOV EAX,dword ptr [ECX]
+005c4d79  PUSH 0x1
+005c4d7b  CALL dword ptr [EAX]
+005c4d7d  MOV dword ptr [ESI],EDI
+005c4d7f  POP EDI
+005c4d80  POP ESI
+005c4d81  MOV EAX,EBX
+005c4d83  POP EBX
+005c4d84  RET 0x18

@@ -1,0 +1,2 @@
+007a2c20  MOV dword ptr [ECX],0x8b7244
+007a2c26  RET

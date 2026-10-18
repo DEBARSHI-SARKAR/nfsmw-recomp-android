@@ -1,0 +1,11 @@
+007c79a0  PUSH EBP
+007c79a1  MOV EBP,ESP
+007c79a3  PUSH ECX
+007c79a4  MOV EAX,[0x00906cc0]
+007c79a9  MOV dword ptr [EBP + -0x4],EAX
+007c79ac  MOV ECX,dword ptr [EBP + 0x8]
+007c79af  MOV dword ptr [0x00906cc0],ECX
+007c79b5  MOV EAX,dword ptr [EBP + -0x4]
+007c79b8  MOV ESP,EBP
+007c79ba  POP EBP
+007c79bb  RET

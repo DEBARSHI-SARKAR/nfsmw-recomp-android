@@ -1,0 +1,2 @@
+006be430  MOV EAX,0x1
+006be435  RET

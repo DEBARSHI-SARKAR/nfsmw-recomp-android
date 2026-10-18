@@ -1,0 +1,4 @@
+006570a0  MOV EAX,dword ptr [ESP + 0x8]
+006570a4  MOV ECX,dword ptr [ESP + 0x4]
+006570a8  ADD EAX,ECX
+006570aa  RET 0x8

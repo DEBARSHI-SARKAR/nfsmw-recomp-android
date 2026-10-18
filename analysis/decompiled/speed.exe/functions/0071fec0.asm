@@ -1,0 +1,127 @@
+0071fec0  PUSH -0x1
+0071fec2  PUSH 0x8803c3
+0071fec7  MOV EAX,FS:[0x0]
+0071fecd  PUSH EAX
+0071fece  MOV dword ptr FS:[0x0],ESP
+0071fed5  SUB ESP,0x8
+0071fed8  PUSH EBX
+0071fed9  PUSH ESI
+0071feda  MOV ESI,ECX
+0071fedc  XOR EBX,EBX
+0071fede  PUSH EDI
+0071fedf  MOV dword ptr [ESP + 0xc],ESI
+0071fee3  MOV dword ptr [ESI + 0x4],EBX
+0071fee6  MOV dword ptr [ESI + 0x8],0xffffffff
+0071feed  MOV dword ptr [ESI + 0xc],EBX
+0071fef0  LEA EDI,[ESI + 0x14]
+0071fef3  MOV ECX,EDI
+0071fef5  MOV dword ptr [ESP + 0x1c],EBX
+0071fef9  MOV dword ptr [ESI],0x8b259c
+0071feff  CALL 0x00705820
+0071ff04  MOV dword ptr [EDI + 0x4],EAX
+0071ff07  MOV dword ptr [EDI + 0x8],EBX
+0071ff0a  MOV dword ptr [ESI + 0x10],0x8b2598
+0071ff11  MOV dword ptr [ESI + 0x20],0xc
+0071ff18  MOV dword ptr [ESI + 0x24],EBX
+0071ff1b  MOV dword ptr [ESI + 0x28],EBX
+0071ff1e  MOV EAX,[0x00925ae8]
+0071ff23  MOV dword ptr [ESI + 0x2c],EAX
+0071ff26  MOV ECX,dword ptr [0x00925ae8]
+0071ff2c  MOV dword ptr [ESI + 0x30],ECX
+0071ff2f  MOV EDX,dword ptr [0x00925ae8]
+0071ff35  MOV dword ptr [ESI + 0x34],EDX
+0071ff38  MOV EAX,[0x00925ae8]
+0071ff3d  MOV dword ptr [ESI + 0x38],EAX
+0071ff40  MOV ECX,dword ptr [0x00925ae8]
+0071ff46  MOV dword ptr [ESI + 0x3c],ECX
+0071ff49  MOV dword ptr [ESI + 0x40],EBX
+0071ff4c  MOV dword ptr [ESI + 0x44],EBX
+0071ff4f  MOV dword ptr [ESI + 0x48],0xffffffff
+0071ff56  MOV dword ptr [ESI + 0x4c],EBX
+0071ff59  MOV EDX,dword ptr [0x00925ae8]
+0071ff5f  MOV dword ptr [ESI + 0x50],EDX
+0071ff62  MOV dword ptr [ESI + 0x54],0x2
+0071ff69  MOV byte ptr [ESI + 0x58],BL
+0071ff6c  MOV byte ptr [ESI + 0x59],BL
+0071ff6f  MOV dword ptr [ESI + 0x60],EBX
+0071ff72  MOV ECX,dword ptr [0x008a2fb4]
+0071ff78  LEA EAX,[ESI + 0x6c]
+0071ff7b  MOV dword ptr [EAX],ECX
+0071ff7d  MOV EDX,dword ptr [0x008a2fb8]
+0071ff83  MOV dword ptr [EAX + 0x4],EDX
+0071ff86  MOV ECX,dword ptr [0x008a2fbc]
+0071ff8c  MOV dword ptr [EAX + 0x8],ECX
+0071ff8f  MOV EAX,[0x008a2fb4]
+0071ff94  LEA EDX,[ESI + 0x78]
+0071ff97  MOV dword ptr [EDX],EAX
+0071ff99  MOV ECX,dword ptr [0x008a2fb8]
+0071ff9f  MOV dword ptr [EDX + 0x4],ECX
+0071ffa2  MOV EAX,[0x008a2fbc]
+0071ffa7  MOV dword ptr [EDX + 0x8],EAX
+0071ffaa  MOV EDX,dword ptr [0x008a2fb4]
+0071ffb0  LEA ECX,[ESI + 0x84]
+0071ffb6  MOV dword ptr [ECX],EDX
+0071ffb8  MOV EAX,[0x008a2fb8]
+0071ffbd  MOV dword ptr [ECX + 0x4],EAX
+0071ffc0  MOV EDX,dword ptr [0x008a2fbc]
+0071ffc6  PUSH EBX
+0071ffc7  PUSH ECX
+0071ffc8  MOV dword ptr [ESP + 0x18],ESP
+0071ffcc  MOV EDI,ESP
+0071ffce  PUSH 0x897474
+0071ffd3  MOV byte ptr [ESP + 0x28],0x1
+0071ffd8  MOV dword ptr [ECX + 0x8],EDX
+0071ffdb  CALL 0x005cc240
+0071ffe0  ADD ESP,0x4
+0071ffe3  PUSH 0x708050
+0071ffe8  PUSH ESI
+0071ffe9  MOV dword ptr [EDI],EAX
+0071ffeb  CALL 0x00706260
+0071fff0  ADD ESP,0x10
+0071fff3  PUSH EBX
+0071fff4  PUSH ECX
+0071fff5  MOV dword ptr [ESI + 0x90],EAX
+0071fffb  MOV dword ptr [ESP + 0x18],ESP
+0071ffff  MOV EDI,ESP
+00720001  PUSH 0x894b20
+00720006  CALL 0x005cc240
+0072000b  ADD ESP,0x4
+0072000e  PUSH 0x70abc0
+00720013  PUSH ESI
+00720014  MOV dword ptr [EDI],EAX
+00720016  CALL 0x00706260
+0072001b  ADD ESP,0x10
+0072001e  PUSH EBX
+0072001f  PUSH ECX
+00720020  MOV dword ptr [ESI + 0x94],EAX
+00720026  MOV EAX,ESP
+00720028  MOV dword ptr [ESP + 0x18],ESP
+0072002c  PUSH 0x71ea00
+00720031  PUSH ESI
+00720032  MOV dword ptr [EAX],0x20d60dbf
+00720038  CALL 0x007062f0
+0072003d  ADD ESP,0x10
+00720040  PUSH EBX
+00720041  PUSH ECX
+00720042  MOV dword ptr [ESP + 0x18],ESP
+00720046  MOV EDI,ESP
+00720048  PUSH 0x8974e4
+0072004d  MOV dword ptr [ESI + 0x98],EAX
+00720053  CALL 0x005cc240
+00720058  ADD ESP,0x4
+0072005b  PUSH 0x704950
+00720060  PUSH ESI
+00720061  MOV dword ptr [EDI],EAX
+00720063  CALL 0x00706380
+00720068  ADD ESP,0x10
+0072006b  LEA ECX,[ESI + 0x14]
+0072006e  MOV dword ptr [ESI + 0x9c],EAX
+00720074  CALL 0x00705390
+00720079  MOV ECX,dword ptr [ESP + 0x14]
+0072007d  POP EDI
+0072007e  MOV EAX,ESI
+00720080  POP ESI
+00720081  MOV dword ptr FS:[0x0],ECX
+00720088  POP EBX
+00720089  ADD ESP,0x14
+0072008c  RET

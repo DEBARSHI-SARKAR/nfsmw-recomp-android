@@ -1,0 +1,50 @@
+# game.toml.in - tools/prepare.py renders game.toml from this, which is why
+# game.toml itself is ignored: the hashes below are of files on the machine
+# that staged them - sample.exe as this toolchain built it, and whichever Wine
+# build msvcrt.dll came out of. Nothing about one machine's copies belongs in
+# the repository, and a translation is only valid for the exact bytes it was
+# made from, which is what the hashes hold the loader to.
+#
+# A sample, not a game: sample.exe (src/sample.c, 32-bit) and, when
+# --wine-dlls names a Wine i386 directory, that Wine's own msvcrt.dll as an
+# auxiliary module. See README.md.
+#
+# The [hooks] and globals.toml addresses are sentinels in sample.exe's
+# zero-filled kit_sentinels array (.data); nothing reads or hooks them.
+
+[game]
+id = "wine-msvcrt"
+name = "Wine msvcrt sample"
+app_name = "WineMsvcrtSample"
+bundle_id = "dev.recompkit.sample.winemsvcrt"
+executable = "sample.exe"
+sha256 = "@SAMPLE_SHA256@"
+image_base = 0x00400000
+entry_point = 0x00401000
+guest_root = 'C:\Sample'
+developer_exe = "original/sample.exe"
+@MSVCRT_MODULE@
+[translate]
+listings = "analysis/decompiled/sample.exe"
+globals = "globals.toml"
+animation_counter = 0x00404100
+volatile_reads = []
+entry_points = []
+
+[hooks]
+frame_clock_begin = 0x00404110
+frame_clock_wait = 0x00404120
+frame_clock_wait_clamp = 0x00404130
+frame_clock_clamp_deadline = 0x00404140
+frame_clock_wait_deadline = 0x00404150
+cursor_surface_ptrs = [0x00404160, 0x00404164]
+mouse_vtable = 0x00404170
+mouse_device_ptr = 0x00404180
+mouse_device_right = 0x00404190
+camera = 0x004041a0
+
+[touch]
+keypad = "hidden"
+
+[bundle]
+exclude = []

@@ -1,0 +1,48 @@
+00496d90  PUSH ECX
+00496d91  MOV AX,word ptr [ECX]
+00496d94  SHR AX,0x4
+00496d98  MOVZX EDX,AX
+00496d9b  MOV dword ptr [ESP],EDX
+00496d9e  PUSH ESI
+00496d9f  MOV ESI,dword ptr [ESP + 0xc]
+00496da3  FILD dword ptr [ESP + 0x4]
+00496da7  FMUL float ptr [0x00895518]
+00496dad  FSUB float ptr [0x0089096c]
+00496db3  FSTP float ptr [ESI]
+00496db5  MOV AX,word ptr [ECX + 0x2]
+00496db9  SHR AX,0x4
+00496dbd  MOVZX EDX,AX
+00496dc0  MOV dword ptr [ESP + 0xc],EDX
+00496dc4  FILD dword ptr [ESP + 0xc]
+00496dc8  FMUL float ptr [0x00895518]
+00496dce  FSUB float ptr [0x0089096c]
+00496dd4  FSTP float ptr [ESI + 0x4]
+00496dd7  MOV AX,word ptr [ECX + 0x4]
+00496ddb  SHR AX,0x4
+00496ddf  MOVZX EDX,AX
+00496de2  MOV dword ptr [ESP + 0xc],EDX
+00496de6  XOR EAX,EAX
+00496de8  XOR EDX,EDX
+00496dea  FILD dword ptr [ESP + 0xc]
+00496dee  FMUL float ptr [0x00895518]
+00496df4  FSUB float ptr [0x0089096c]
+00496dfa  FSTP float ptr [ESI + 0x8]
+00496dfd  MOV AL,byte ptr [ECX]
+00496dff  MOV DL,byte ptr [ECX + 0x2]
+00496e02  MOVZX ECX,byte ptr [ECX + 0x4]
+00496e06  AND ECX,0xf
+00496e09  AND EAX,0xf
+00496e0c  SHL EAX,0x4
+00496e0f  AND EDX,0xf
+00496e12  ADD EAX,EDX
+00496e14  SHL EAX,0x4
+00496e17  ADD EAX,ECX
+00496e19  MOVZX EDX,AX
+00496e1c  MOV dword ptr [ESP + 0xc],EDX
+00496e20  FILD dword ptr [ESP + 0xc]
+00496e24  FMUL float ptr [0x00895518]
+00496e2a  FSUB float ptr [0x0089096c]
+00496e30  FSTP float ptr [ESI + 0xc]
+00496e33  POP ESI
+00496e34  POP ECX
+00496e35  RET 0x4

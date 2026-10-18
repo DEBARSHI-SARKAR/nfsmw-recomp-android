@@ -1,0 +1,2 @@
+00656730  MOV EAX,dword ptr [ESP + 0x8]
+00656734  RET 0x8

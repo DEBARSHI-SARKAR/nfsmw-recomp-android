@@ -1,0 +1,48 @@
+/* speed.exe 005cea10 FUN_005cea10; analysis pseudocode, not buildable source.
+ * calls 005ce500 FUN_005ce500
+ */
+
+void __fastcall FUN_005cea10(undefined1 *param_1)
+
+{
+  undefined1 uVar1;
+  undefined1 *puVar2;
+  undefined1 *puVar3;
+  
+  puVar2 = param_1 + 3;
+  puVar3 = param_1;
+  if (param_1 < puVar2) {
+    do {
+      uVar1 = *puVar3;
+      *puVar3 = *puVar2;
+      puVar3 = puVar3 + 1;
+      *puVar2 = uVar1;
+      puVar2 = puVar2 + -1;
+    } while (puVar3 < puVar2);
+  }
+  FUN_005ce500(param_1 + 4,5,1,0,1,1,1,2,5,3,0x18,8);
+  puVar2 = param_1 + 8;
+  puVar3 = param_1 + 0xb;
+  if (puVar2 < puVar3) {
+    do {
+      uVar1 = *puVar2;
+      *puVar2 = *puVar3;
+      puVar2 = puVar2 + 1;
+      *puVar3 = uVar1;
+      puVar3 = puVar3 + -1;
+    } while (puVar2 < puVar3);
+  }
+  puVar2 = param_1 + 0xc;
+  param_1 = param_1 + 0xf;
+  if (puVar2 < param_1) {
+    do {
+      uVar1 = *puVar2;
+      *puVar2 = *param_1;
+      puVar2 = puVar2 + 1;
+      *param_1 = uVar1;
+      param_1 = param_1 + -1;
+    } while (puVar2 < param_1);
+  }
+  return;
+}
+

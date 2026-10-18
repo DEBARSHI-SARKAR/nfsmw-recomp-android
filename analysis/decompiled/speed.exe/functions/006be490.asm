@@ -1,0 +1,12 @@
+006be490  MOV ECX,dword ptr [ESP + 0x4]
+006be494  MOV EDX,dword ptr [ECX + 0x4]
+006be497  LEA EAX,[ECX + 0x8]
+006be49a  LEA ECX,[EDX + ECX*0x1 + 0x8]
+006be49e  CMP EAX,ECX
+006be4a0  JNC 0x006be4ad
+006be4a2  MOV EDX,dword ptr [EAX + 0x4]
+006be4a5  LEA EAX,[EAX + EDX*0x1 + 0x8]
+006be4a9  CMP EAX,ECX
+006be4ab  JC 0x006be4a2
+006be4ad  MOV EAX,0x1
+006be4b2  RET

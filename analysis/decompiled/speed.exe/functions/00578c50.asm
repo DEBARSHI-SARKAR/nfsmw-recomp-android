@@ -1,0 +1,2 @@
+00578c50  MOV EAX,dword ptr [ESP + 0x4]
+00578c54  RET 0x8

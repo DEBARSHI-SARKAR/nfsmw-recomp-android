@@ -1,0 +1,4 @@
+0076f480  MOV EAX,dword ptr [ESP + 0x4]
+0076f484  MOV dword ptr [ECX + 0x84],EAX
+0076f48a  CALL 0x0076f3d0
+0076f48f  RET 0x4

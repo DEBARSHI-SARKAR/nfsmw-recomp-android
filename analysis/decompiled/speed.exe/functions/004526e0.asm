@@ -1,0 +1,15 @@
+004526e0  MOV EAX,dword ptr [ESP + 0x4]
+004526e4  MOV EDX,dword ptr [ECX + 0xc]
+004526e7  INC EAX
+004526e8  SHL EAX,0x4
+004526eb  ADD EAX,EDX
+004526ed  CMP dword ptr [EAX],0x0
+004526f0  JNZ 0x004526f5
+004526f2  INC dword ptr [ECX + 0x18]
+004526f5  MOV ECX,dword ptr [ESP + 0xc]
+004526f9  MOV EDX,dword ptr [ESP + 0x8]
+004526fd  MOV dword ptr [EAX + 0xc],ECX
+00452700  MOV ECX,dword ptr [ESP + 0x10]
+00452704  MOV dword ptr [EAX],EDX
+00452706  MOV dword ptr [EAX + 0x4],ECX
+00452709  RET 0x10

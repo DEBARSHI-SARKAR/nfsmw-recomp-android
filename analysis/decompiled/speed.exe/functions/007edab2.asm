@@ -1,0 +1,4 @@
+007edab2  PUSH EBP
+007edab3  MOV EBP,ESP
+007edab5  POP EBP
+007edab6  JMP 0x007eda45

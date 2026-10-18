@@ -1,0 +1,7 @@
+006bee00  MOV EAX,dword ptr [ESP + 0x4]
+006bee04  MOV ECX,dword ptr [0x00982adc]
+006bee0a  PUSH EAX
+006bee0b  PUSH ECX
+006bee0c  CALL 0x00463ca0
+006bee11  ADD ESP,0x8
+006bee14  RET 0x4

@@ -1,0 +1,17 @@
+0065ea80  MOV EAX,dword ptr [ECX + 0x4]
+0065ea83  MOV ECX,dword ptr [ECX + 0x8]
+0065ea86  CMP EAX,ECX
+0065ea88  JZ 0x0065eaab
+0065ea8a  MOV EDX,dword ptr [ESP + 0x4]
+0065ea8e  MOV EDI,EDI
+0065ea90  CMP dword ptr [EAX + 0x18],EDX
+0065ea93  JZ 0x0065ea9f
+0065ea95  ADD EAX,0x24
+0065ea98  CMP EAX,ECX
+0065ea9a  JNZ 0x0065ea90
+0065ea9c  RET 0x8
+0065ea9f  MOV CL,byte ptr [ESP + 0x8]
+0065eaa3  TEST CL,CL
+0065eaa5  SETZ CL
+0065eaa8  MOV byte ptr [EAX + 0x20],CL
+0065eaab  RET 0x8

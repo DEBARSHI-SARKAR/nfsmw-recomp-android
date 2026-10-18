@@ -1,0 +1,15 @@
+00463c70  MOV ECX,dword ptr [ESP + 0x4]
+00463c74  MOV EDX,dword ptr [ECX + 0x18]
+00463c77  MOV EAX,dword ptr [ECX + 0x10]
+00463c7a  INC EDX
+00463c7b  TEST EAX,EAX
+00463c7d  JZ 0x00463c91
+00463c7f  PUSH ESI
+00463c80  MOV ESI,dword ptr [EAX]
+00463c82  CMP EDX,dword ptr [ECX + 0x1c]
+00463c85  JLE 0x00463c8a
+00463c87  MOV dword ptr [ECX + 0x1c],EDX
+00463c8a  MOV dword ptr [ECX + 0x10],ESI
+00463c8d  MOV dword ptr [ECX + 0x18],EDX
+00463c90  POP ESI
+00463c91  RET

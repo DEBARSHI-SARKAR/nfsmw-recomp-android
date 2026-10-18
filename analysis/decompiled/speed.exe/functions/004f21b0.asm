@@ -1,0 +1,25 @@
+004f21b0  PUSH ESI
+004f21b1  MOV ESI,ECX
+004f21b3  MOV EAX,dword ptr [ESI + 0xc]
+004f21b6  TEST EAX,EAX
+004f21b8  JLE 0x004f21c7
+004f21ba  MOV ECX,EAX
+004f21bc  LEA ESP,[ESP]
+004f21c0  DEC ECX
+004f21c1  DEC EAX
+004f21c2  JNZ 0x004f21c0
+004f21c4  MOV dword ptr [ESI + 0xc],ECX
+004f21c7  MOV EAX,dword ptr [ESI + 0x4]
+004f21ca  TEST EAX,EAX
+004f21cc  JZ 0x004f21ef
+004f21ce  MOV ECX,dword ptr [ESI + 0x8]
+004f21d1  MOV EDX,dword ptr [ESI]
+004f21d3  PUSH ECX
+004f21d4  PUSH EAX
+004f21d5  MOV ECX,ESI
+004f21d7  CALL dword ptr [EDX + 0x8]
+004f21da  MOV dword ptr [ESI + 0x4],0x0
+004f21e1  MOV dword ptr [ESI + 0x8],0x0
+004f21e8  MOV dword ptr [ESI + 0xc],0x0
+004f21ef  POP ESI
+004f21f0  RET

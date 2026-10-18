@@ -1,0 +1,67 @@
+0059dd30  PUSH -0x1
+0059dd32  PUSH 0x873033
+0059dd37  MOV EAX,FS:[0x0]
+0059dd3d  PUSH EAX
+0059dd3e  MOV dword ptr FS:[0x0],ESP
+0059dd45  PUSH ECX
+0059dd46  PUSH EBX
+0059dd47  PUSH EBP
+0059dd48  MOV EBP,dword ptr [ESP + 0x20]
+0059dd4c  PUSH ESI
+0059dd4d  MOV ESI,ECX
+0059dd4f  XOR EBX,EBX
+0059dd51  LEA EAX,[ESI + 0x8]
+0059dd54  MOV dword ptr [ESI],0x8a1e80
+0059dd5a  MOV dword ptr [EAX],EAX
+0059dd5c  MOV dword ptr [EAX + 0x4],EAX
+0059dd5f  PUSH EDI
+0059dd60  MOV dword ptr [ESP + 0x10],ESI
+0059dd64  MOV dword ptr [ESI + 0x10],EBP
+0059dd67  MOV dword ptr [ESI + 0x18],0x400
+0059dd6e  MOV dword ptr [ESI + 0x1c],EBX
+0059dd71  MOV dword ptr [ESI + 0x20],EBX
+0059dd74  MOV dword ptr [ESI + 0x24],EBX
+0059dd77  MOV byte ptr [ESI + 0x28],BL
+0059dd7a  MOV ECX,dword ptr [ESP + 0x24]
+0059dd7e  LEA EDI,[ESI + 0x30]
+0059dd81  PUSH EDI
+0059dd82  PUSH 0x4b4380
+0059dd87  MOV dword ptr [ESP + 0x24],EBX
+0059dd8b  MOV dword ptr [EDI],0x890970
+0059dd91  MOV dword ptr [EDI + 0x4],ECX
+0059dd94  CALL 0x005d7930
+0059dd99  MOV dword ptr [EDI],0x8a042c
+0059dd9f  MOV dword ptr [ESI],0x8a2080
+0059dda5  MOV dword ptr [EDI],0x8a2070
+0059ddab  MOV dword ptr [ESI + 0x44],0xffffffff
+0059ddb2  PUSH 0x8a2060
+0059ddb7  MOV byte ptr [ESP + 0x20],0x1
+0059ddbc  MOV dword ptr [ESI + 0x48],EBX
+0059ddbf  CALL 0x005af1c0
+0059ddc4  ADD ESP,0x4
+0059ddc7  PUSH EAX
+0059ddc8  MOV ECX,ESI
+0059ddca  CALL 0x0058bbd0
+0059ddcf  PUSH 0x8a2058
+0059ddd4  MOV dword ptr [ESI + 0x38],EAX
+0059ddd7  CALL 0x005af1c0
+0059dddc  PUSH EAX
+0059dddd  PUSH EBP
+0059ddde  CALL 0x00524850
+0059dde3  PUSH 0x8a2048
+0059dde8  MOV dword ptr [ESI + 0x3c],EAX
+0059ddeb  CALL 0x005af1c0
+0059ddf0  PUSH EAX
+0059ddf1  PUSH EBP
+0059ddf2  CALL 0x00524850
+0059ddf7  MOV ECX,dword ptr [ESP + 0x2c]
+0059ddfb  ADD ESP,0x18
+0059ddfe  MOV dword ptr [ESI + 0x40],EAX
+0059de01  POP EDI
+0059de02  MOV EAX,ESI
+0059de04  POP ESI
+0059de05  POP EBP
+0059de06  POP EBX
+0059de07  MOV dword ptr FS:[0x0],ECX
+0059de0e  ADD ESP,0x10
+0059de11  RET 0xc

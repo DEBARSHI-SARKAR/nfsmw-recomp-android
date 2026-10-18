@@ -1,0 +1,31 @@
+005d1590  MOV EAX,dword ptr [ESP + 0x8]
+005d1594  PUSH ESI
+005d1595  MOV ESI,dword ptr [ESP + 0x10]
+005d1599  CMP EAX,ESI
+005d159b  JZ 0x005d15cc
+005d159d  MOV EDX,dword ptr [ESP + 0x14]
+005d15a1  PUSH EBX
+005d15a2  PUSH EDI
+005d15a3  MOV EDI,dword ptr [ESP + 0x20]
+005d15a7  CMP EDI,dword ptr [EAX + 0x4]
+005d15aa  JZ 0x005d15bb
+005d15ac  MOV EBX,dword ptr [EAX]
+005d15ae  MOV ECX,EDX
+005d15b0  MOV dword ptr [ECX],EBX
+005d15b2  MOV EBX,dword ptr [EAX + 0x4]
+005d15b5  ADD EDX,0x8
+005d15b8  MOV dword ptr [ECX + 0x4],EBX
+005d15bb  ADD EAX,0x8
+005d15be  CMP EAX,ESI
+005d15c0  JNZ 0x005d15a7
+005d15c2  MOV EAX,dword ptr [ESP + 0x10]
+005d15c6  POP EDI
+005d15c7  POP EBX
+005d15c8  MOV dword ptr [EAX],EDX
+005d15ca  POP ESI
+005d15cb  RET
+005d15cc  MOV EAX,dword ptr [ESP + 0x8]
+005d15d0  MOV ECX,dword ptr [ESP + 0x14]
+005d15d4  MOV dword ptr [EAX],ECX
+005d15d6  POP ESI
+005d15d7  RET

@@ -1,0 +1,13 @@
+008600b0  PUSH EBP
+008600b1  MOV EBP,ESP
+008600b3  MOV EAX,dword ptr [EBP + 0x8]
+008600b6  MOV ECX,dword ptr [EAX]
+008600b8  ADD ECX,0x8
+008600bb  MOV EDX,dword ptr [EBP + 0x8]
+008600be  MOV dword ptr [EDX],ECX
+008600c0  MOV EAX,dword ptr [EBP + 0x8]
+008600c3  MOV ECX,dword ptr [EAX]
+008600c5  MOV EAX,dword ptr [ECX + -0x8]
+008600c8  MOV EDX,dword ptr [ECX + -0x4]
+008600cb  POP EBP
+008600cc  RET

@@ -1,0 +1,6 @@
+007f88bb  PUSH EBP
+007f88bc  MOV EBP,ESP
+007f88be  MOV AL,byte ptr [EBP + 0x8]
+007f88c1  MOV byte ptr [ECX + 0x24],AL
+007f88c4  POP EBP
+007f88c5  RET 0x4

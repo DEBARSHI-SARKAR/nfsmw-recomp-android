@@ -1,0 +1,4 @@
+00627420  MOV EAX,dword ptr [ESP + 0x4]
+00627424  MOV ECX,dword ptr [EAX + 0x4]
+00627427  ADD dword ptr [0x00920394],ECX
+0062742d  RET

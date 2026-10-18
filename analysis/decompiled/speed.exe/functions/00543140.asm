@@ -1,0 +1,2 @@
+00543140  MOV dword ptr [ECX],0x89b8c8
+00543146  RET

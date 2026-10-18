@@ -1,0 +1,15 @@
+0075e8e0  MOV EAX,dword ptr [ESP + 0x4]
+0075e8e4  PUSH ESI
+0075e8e5  PUSH EAX
+0075e8e6  MOV ESI,ECX
+0075e8e8  CALL 0x0075e850
+0075e8ed  XOR EAX,EAX
+0075e8ef  MOV dword ptr [ESI + 0x1c],EAX
+0075e8f2  MOV dword ptr [ESI + 0x20],EAX
+0075e8f5  MOV dword ptr [ESI + 0x24],EAX
+0075e8f8  MOV dword ptr [ESI + 0x28],EAX
+0075e8fb  MOV dword ptr [ESI + 0x2c],EAX
+0075e8fe  MOV dword ptr [ESI],0x8b518c
+0075e904  MOV EAX,ESI
+0075e906  POP ESI
+0075e907  RET 0x4

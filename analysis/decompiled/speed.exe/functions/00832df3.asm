@@ -1,0 +1,5 @@
+00832df3  CMP dword ptr [0x009c2c0c],0x1789a34
+00832dfd  JNZ 0x00832e08
+00832dff  MOV EAX,dword ptr [ESP + 0x4]
+00832e03  MOV [0x009c2bf0],EAX
+00832e08  RET

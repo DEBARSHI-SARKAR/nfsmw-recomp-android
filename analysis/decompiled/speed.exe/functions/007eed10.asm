@@ -1,0 +1,20 @@
+007eed10  PUSH EBP
+007eed11  MOV EBP,ESP
+007eed13  MOV EAX,dword ptr [EBP + 0x8]
+007eed16  PUSH ESI
+007eed17  MOV ESI,ECX
+007eed19  PUSH dword ptr [ESI + 0x20]
+007eed1c  PUSH dword ptr [ESI + 0x30]
+007eed1f  CALL 0x007edd78
+007eed24  MOV dword ptr [ESI + 0x14],EAX
+007eed27  CMP EAX,-0x1
+007eed2a  SETZ AL
+007eed2d  DEC AL
+007eed2f  POP ECX
+007eed30  AND AL,0x3
+007eed32  ADD AL,0xfe
+007eed34  POP ECX
+007eed35  MOV byte ptr [ESI + 0x11],AL
+007eed38  POP ESI
+007eed39  POP EBP
+007eed3a  RET 0x4

@@ -1,0 +1,6 @@
+0078caf0  PUSH ESI
+0078caf1  MOV ESI,ECX
+0078caf3  CALL 0x0078c9e0
+0078caf8  MOV EAX,dword ptr [ESI + 0x964]
+0078cafe  POP ESI
+0078caff  RET

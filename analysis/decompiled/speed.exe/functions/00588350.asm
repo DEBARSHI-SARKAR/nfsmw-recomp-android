@@ -1,0 +1,62 @@
+00588350  PUSH ESI
+00588351  MOV ESI,ECX
+00588353  MOV EAX,dword ptr [ESI + 0xb0]
+00588359  PUSH EDI
+0058835a  PUSH EAX
+0058835b  CALL 0x00573cc0
+00588360  MOV EDI,dword ptr [ESP + 0xc]
+00588364  MOV dword ptr [EDI + 0x2c],EAX
+00588367  MOV ECX,dword ptr [ESI + 0xbc]
+0058836d  PUSH ECX
+0058836e  MOV ECX,ESI
+00588370  CALL 0x00573d80
+00588375  MOV dword ptr [EDI + 0x24],EAX
+00588378  MOV EDX,dword ptr [ESI + 0xd4]
+0058837e  MOV dword ptr [EDI + 0xc],EDX
+00588381  MOV EAX,dword ptr [ESI + 0xd8]
+00588387  MOV dword ptr [EDI + 0x10],EAX
+0058838a  MOV ECX,dword ptr [ESI + 0xe4]
+00588390  MOV dword ptr [EDI + 0x30],ECX
+00588393  MOV EDX,dword ptr [ESI + 0xe8]
+00588399  MOV dword ptr [EDI + 0x34],EDX
+0058839c  MOV EDX,dword ptr [ESI + 0x30]
+0058839f  LEA ECX,[ESI + 0x2c]
+005883a2  LEA EAX,[EDI + 0x4]
+005883a5  MOV dword ptr [EDX],EAX
+005883a7  MOV dword ptr [ECX + 0x4],EAX
+005883aa  MOV dword ptr [EAX],ECX
+005883ac  MOV dword ptr [EAX + 0x4],EDX
+005883af  FLD float ptr [ESI + 0x100]
+005883b5  FADD float ptr [ESI + 0xe0]
+005883bb  MOV ECX,dword ptr [ESI + 0x104]
+005883c1  INC ECX
+005883c2  MOV dword ptr [ESI + 0x104],ECX
+005883c8  FADD float ptr [ESI + 0xd8]
+005883ce  FST float ptr [ESI + 0xd8]
+005883d4  FSTP float ptr [ESI + 0xf8]
+005883da  MOV AL,byte ptr [EDI + 0x28]
+005883dd  TEST AL,AL
+005883df  JNZ 0x005883e8
+005883e1  MOV EAX,dword ptr [EDI]
+005883e3  MOV ECX,EDI
+005883e5  CALL dword ptr [EAX + 0x20]
+005883e8  MOV EDX,dword ptr [EDI]
+005883ea  MOV ECX,EDI
+005883ec  CALL dword ptr [EDX + 0x14]
+005883ef  MOV EAX,dword ptr [EDI]
+005883f1  MOV ECX,EDI
+005883f3  CALL dword ptr [EAX + 0xc]
+005883f6  MOV EDX,dword ptr [EDI]
+005883f8  MOV ECX,EDI
+005883fa  CALL dword ptr [EDX + 0x10]
+005883fd  FLD float ptr [ESI + 0xdc]
+00588403  FABS
+00588405  FSTP float ptr [EDI + 0x14]
+00588408  FLD float ptr [ESI + 0xe0]
+0058840e  FABS
+00588410  FSTP float ptr [EDI + 0x18]
+00588413  MOV EAX,dword ptr [ESI + 0x104]
+00588419  POP EDI
+0058841a  DEC EAX
+0058841b  POP ESI
+0058841c  RET 0x4

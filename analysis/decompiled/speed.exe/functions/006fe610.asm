@@ -1,0 +1,8 @@
+006fe610  PUSH ESI
+006fe611  MOV ESI,ECX
+006fe613  MOV EAX,dword ptr [ESI]
+006fe615  PUSH -0x1
+006fe617  CALL dword ptr [EAX + 0xc]
+006fe61a  MOV dword ptr [ESI + 0xc],0x0
+006fe621  POP ESI
+006fe622  RET

@@ -1,0 +1,6 @@
+008371e0  MOV EAX,dword ptr [ESP + 0x4]
+008371e4  MOV ECX,dword ptr [EAX]
+008371e6  MOV EAX,dword ptr [ECX + 0xf8]
+008371ec  SHR EAX,0x13
+008371ef  AND EAX,0x1
+008371f2  RET

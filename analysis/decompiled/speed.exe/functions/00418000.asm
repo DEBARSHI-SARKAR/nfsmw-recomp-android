@@ -1,0 +1,30 @@
+00418000  MOV EAX,ECX
+00418002  MOV ECX,dword ptr [ESP + 0x4]
+00418006  MOV dword ptr [EAX + 0xc],ECX
+00418009  MOV dword ptr [EAX],0x891100
+0041800f  MOV ECX,dword ptr [0x008a2fb4]
+00418015  LEA EDX,[EAX + 0x10]
+00418018  MOV dword ptr [EDX],ECX
+0041801a  MOV ECX,dword ptr [0x008a2fb8]
+00418020  MOV dword ptr [EDX + 0x4],ECX
+00418023  MOV ECX,dword ptr [0x008a2fbc]
+00418029  MOV dword ptr [EDX + 0x8],ECX
+0041802c  XOR ECX,ECX
+0041802e  MOV dword ptr [EAX + 0x1c],ECX
+00418031  PUSH ESI
+00418032  MOV ESI,dword ptr [0x008a2fb4]
+00418038  LEA EDX,[EAX + 0x20]
+0041803b  MOV dword ptr [EDX],ESI
+0041803d  MOV ESI,dword ptr [0x008a2fb8]
+00418043  MOV dword ptr [EDX + 0x4],ESI
+00418046  MOV ESI,dword ptr [0x008a2fbc]
+0041804c  MOV dword ptr [EDX + 0x8],ESI
+0041804f  MOV byte ptr [EAX + 0x2c],CL
+00418052  MOV EDX,dword ptr [0x0090d87c]
+00418058  LEA ECX,[EAX + 0x4]
+0041805b  MOV dword ptr [EDX],ECX
+0041805d  MOV dword ptr [0x0090d87c],ECX
+00418063  MOV dword ptr [ECX + 0x4],EDX
+00418066  MOV dword ptr [ECX],0x90d878
+0041806c  POP ESI
+0041806d  RET 0x4

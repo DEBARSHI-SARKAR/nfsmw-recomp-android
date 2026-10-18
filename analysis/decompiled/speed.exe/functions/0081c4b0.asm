@@ -1,0 +1,13 @@
+0081c4b0  CMP byte ptr [0x009c2188],0x0
+0081c4b7  JNZ 0x0081c4bd
+0081c4b9  PUSH -0xa
+0081c4bb  POP EAX
+0081c4bc  RET
+0081c4bd  PUSH 0x0
+0081c4bf  PUSH dword ptr [ESP + 0x14]
+0081c4c3  PUSH dword ptr [ESP + 0x14]
+0081c4c7  PUSH dword ptr [ESP + 0x14]
+0081c4cb  PUSH dword ptr [ESP + 0x14]
+0081c4cf  CALL 0x0081c3d6
+0081c4d4  ADD ESP,0x14
+0081c4d7  RET

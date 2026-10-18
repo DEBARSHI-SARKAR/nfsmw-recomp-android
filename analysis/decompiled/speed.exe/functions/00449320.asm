@@ -1,0 +1,33 @@
+00449320  MOV EAX,ECX
+00449322  XOR ECX,ECX
+00449324  MOV byte ptr [EAX + 0x2c],CL
+00449327  MOV byte ptr [EAX + 0x2d],CL
+0044932a  AND dword ptr [EAX + 0x30],0xffff0000
+00449331  MOV EDX,dword ptr [ESP + 0x4]
+00449335  MOV dword ptr [EAX + 0x34],EDX
+00449338  PUSH ESI
+00449339  MOV word ptr [EAX + 0x32],CX
+0044933d  MOV ESI,dword ptr [0x008a2fb4]
+00449343  MOV EDX,EAX
+00449345  MOV dword ptr [EDX],ESI
+00449347  MOV ESI,dword ptr [0x008a2fb8]
+0044934d  MOV dword ptr [EDX + 0x4],ESI
+00449350  MOV ESI,dword ptr [0x008a2fbc]
+00449356  MOV dword ptr [EDX + 0x8],ESI
+00449359  MOV ESI,dword ptr [0x008a2fb4]
+0044935f  LEA EDX,[EAX + 0x10]
+00449362  MOV dword ptr [EDX],ESI
+00449364  MOV ESI,dword ptr [0x008a2fb8]
+0044936a  MOV dword ptr [EDX + 0x4],ESI
+0044936d  MOV ESI,dword ptr [0x008a2fbc]
+00449373  MOV dword ptr [EDX + 0x8],ESI
+00449376  MOV ESI,dword ptr [0x008a2fb4]
+0044937c  LEA EDX,[EAX + 0x20]
+0044937f  MOV dword ptr [EDX],ESI
+00449381  MOV ESI,dword ptr [0x008a2fb8]
+00449387  MOV dword ptr [EDX + 0x4],ESI
+0044938a  MOV ESI,dword ptr [0x008a2fbc]
+00449390  MOV dword ptr [EDX + 0x8],ESI
+00449393  MOV dword ptr [EAX + 0x38],ECX
+00449396  POP ESI
+00449397  RET 0x4

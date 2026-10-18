@@ -1,0 +1,27 @@
+006fcdd0  PUSH ECX
+006fcdd1  PUSH ESI
+006fcdd2  MOV ESI,ECX
+006fcdd4  MOV EAX,dword ptr [ESI + 0x4]
+006fcdd7  MOV ECX,dword ptr [EAX]
+006fcdd9  PUSH EDI
+006fcdda  PUSH EAX
+006fcddb  PUSH ECX
+006fcddc  LEA EAX,[ESP + 0x10]
+006fcde0  PUSH EAX
+006fcde1  MOV ECX,ESI
+006fcde3  CALL 0x006fb7f0
+006fcde8  MOV EAX,dword ptr [ESI + 0x4]
+006fcdeb  XOR EDI,EDI
+006fcded  CMP EAX,EDI
+006fcdef  JZ 0x006fcdff
+006fcdf1  PUSH EDI
+006fcdf2  PUSH 0x18
+006fcdf4  PUSH EAX
+006fcdf5  MOV ECX,0x925b30
+006fcdfa  CALL 0x005d0370
+006fcdff  MOV dword ptr [ESI + 0x4],EDI
+006fce02  MOV dword ptr [ESI + 0x8],EDI
+006fce05  POP EDI
+006fce06  POP ESI
+006fce07  POP ECX
+006fce08  RET

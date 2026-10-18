@@ -1,0 +1,15 @@
+007a4cd0  MOV ECX,dword ptr [ECX + 0x4]
+007a4cd3  MOV EAX,[0x0091cf90]
+007a4cd8  MOV EAX,dword ptr [EAX + 0x10]
+007a4cdb  XOR EDX,EDX
+007a4cdd  MOV DL,byte ptr [ECX + 0x10]
+007a4ce0  ADD EAX,0x414
+007a4ce5  MOV ECX,EAX
+007a4ce7  PUSH EDX
+007a4ce8  CALL 0x0056f100
+007a4ced  MOV ECX,dword ptr [ESP + 0x4]
+007a4cf1  MOV EDX,0x1
+007a4cf6  SHL EDX,CL
+007a4cf8  TEST dword ptr [EAX + 0x134],EDX
+007a4cfe  SETNZ AL
+007a4d01  RET 0x4

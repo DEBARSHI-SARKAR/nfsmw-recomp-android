@@ -1,0 +1,10 @@
+0058aef0  MOV EAX,dword ptr [ECX]
+0058aef2  MOV EDX,dword ptr [ESP + 0x4]
+0058aef6  PUSH ESI
+0058aef7  MOV ESI,dword ptr [EDX]
+0058aef9  XOR ECX,ECX
+0058aefb  CMP EAX,ESI
+0058aefd  SETNZ CL
+0058af00  MOV AL,CL
+0058af02  POP ESI
+0058af03  RET 0x4

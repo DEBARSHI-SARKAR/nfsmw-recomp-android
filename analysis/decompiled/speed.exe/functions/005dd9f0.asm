@@ -1,0 +1,21 @@
+005dd9f0  PUSH ESI
+005dd9f1  MOV ESI,ECX
+005dd9f3  MOV ECX,dword ptr [ESP + 0x8]
+005dd9f7  MOV EAX,ECX
+005dd9f9  AND ECX,0x1f
+005dd9fc  MOV EDX,0x1
+005dda01  SHL EDX,CL
+005dda03  MOV CL,byte ptr [ESP + 0xc]
+005dda07  SHR EAX,0x5
+005dda0a  TEST CL,CL
+005dda0c  MOV ECX,dword ptr [ESI + EAX*0x4 + 0x264]
+005dda13  JZ 0x005dda22
+005dda15  OR ECX,EDX
+005dda17  MOV dword ptr [ESI + EAX*0x4 + 0x264],ECX
+005dda1e  POP ESI
+005dda1f  RET 0x8
+005dda22  NOT EDX
+005dda24  AND ECX,EDX
+005dda26  MOV dword ptr [ESI + EAX*0x4 + 0x264],ECX
+005dda2d  POP ESI
+005dda2e  RET 0x8

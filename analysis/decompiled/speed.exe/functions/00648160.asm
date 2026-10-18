@@ -1,0 +1,7 @@
+00648160  MOV EAX,dword ptr [ESP + 0x8]
+00648164  MOV EDX,dword ptr [ESP + 0x4]
+00648168  MOV dword ptr [ECX + 0x278],EAX
+0064816e  MOV EAX,dword ptr [ECX + 0x268]
+00648174  MOV dword ptr [ESP + 0x8],EDX
+00648178  MOV dword ptr [ESP + 0x4],EAX
+0064817c  JMP 0x00648040

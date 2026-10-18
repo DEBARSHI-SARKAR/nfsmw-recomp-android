@@ -1,0 +1,11 @@
+008195e2  PUSH EBP
+008195e3  MOV EBP,ESP
+008195e5  PUSH ECX
+008195e6  FLD float ptr [EBP + 0x8]
+008195e9  FSUB float ptr [0x008933d4]
+008195ef  FSTP float ptr [EBP + 0x8]
+008195f2  FLD float ptr [EBP + 0x8]
+008195f5  FISTP dword ptr [EBP + -0x4]
+008195f8  MOV EAX,dword ptr [EBP + -0x4]
+008195fb  LEAVE
+008195fc  RET

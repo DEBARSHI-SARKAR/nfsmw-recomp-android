@@ -1,0 +1,9 @@
+0087f726  CMP dword ptr [EBP + -0x30],0x0
+0087f72a  JZ 0x0087f73e
+0087f730  MOV EAX,dword ptr [EBP + -0x30]
+0087f733  ADD EAX,0x58
+0087f736  MOV dword ptr [EBP + -0x44],EAX
+0087f739  JMP 0x0087f745
+0087f73e  MOV dword ptr [EBP + -0x44],0x0
+0087f745  MOV ECX,dword ptr [EBP + -0x44]
+0087f748  JMP 0x0042e310

@@ -1,0 +1,7 @@
+007cab20  PUSH EBP
+007cab21  MOV EBP,ESP
+007cab23  CMP dword ptr [EBP + 0x8],0x80
+007cab2a  SBB EAX,EAX
+007cab2c  NEG EAX
+007cab2e  POP EBP
+007cab2f  RET

@@ -1,0 +1,12 @@
+004adf80  PUSH ECX
+004adf81  MOV ECX,dword ptr [ECX]
+004adf83  XOR EAX,EAX
+004adf85  TEST ECX,ECX
+004adf87  MOV dword ptr [ESP],EAX
+004adf8a  JZ 0x004adf98
+004adf8c  LEA EAX,[ESP]
+004adf8f  PUSH EAX
+004adf90  CALL 0x008311aa
+004adf95  MOV EAX,dword ptr [ESP]
+004adf98  POP ECX
+004adf99  RET

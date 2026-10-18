@@ -1,0 +1,19 @@
+007cd6f0  PUSH EBP
+007cd6f1  MOV EBP,ESP
+007cd6f3  CMP dword ptr [0x009ba9ec],0x1
+007cd6fa  JZ 0x007cd70e
+007cd6fc  CMP dword ptr [0x009ba9ec],0x0
+007cd703  JNZ 0x007cd737
+007cd705  CMP dword ptr [0x00906230],0x1
+007cd70c  JNZ 0x007cd737
+007cd70e  PUSH 0xfc
+007cd713  CALL 0x007cd740
+007cd718  ADD ESP,0x4
+007cd71b  CMP dword ptr [0x009bac14],0x0
+007cd722  JZ 0x007cd72a
+007cd724  CALL dword ptr [0x009bac14]
+007cd72a  PUSH 0xff
+007cd72f  CALL 0x007cd740
+007cd734  ADD ESP,0x4
+007cd737  POP EBP
+007cd738  RET

@@ -1,0 +1,68 @@
+006f5e10  PUSH EBX
+006f5e11  PUSH ESI
+006f5e12  PUSH EDI
+006f5e13  MOV ESI,ECX
+006f5e15  CALL 0x006f5d60
+006f5e1a  MOV EAX,dword ptr [ESI + 0x51c]
+006f5e20  MOV ECX,dword ptr [ESI + 0x514]
+006f5e26  MOV EBX,dword ptr [ESI + 0x514]
+006f5e2c  LEA EDI,[ESI + 0x510]
+006f5e32  LEA EDX,[ECX + EAX*0x8]
+006f5e35  CMP EBX,EDX
+006f5e37  JZ 0x006f5e8a
+006f5e39  LEA ESP,[ESP]
+006f5e40  MOV EAX,dword ptr [EBX + 0x4]
+006f5e43  TEST EAX,EAX
+006f5e45  JZ 0x006f5e7a
+006f5e47  MOV EAX,dword ptr [ESI + 0xc]
+006f5e4a  CMP EAX,dword ptr [ESI + 0x8]
+006f5e4d  JC 0x006f5e60
+006f5e4f  MOV EDX,dword ptr [ESI]
+006f5e51  INC EAX
+006f5e52  PUSH EAX
+006f5e53  MOV ECX,ESI
+006f5e55  CALL dword ptr [EDX + 0xc]
+006f5e58  PUSH EAX
+006f5e59  MOV ECX,ESI
+006f5e5b  CALL 0x006749e0
+006f5e60  MOV EAX,dword ptr [ESI + 0xc]
+006f5e63  MOV ECX,dword ptr [ESI + 0x4]
+006f5e66  LEA EAX,[ECX + EAX*0x8]
+006f5e69  TEST EAX,EAX
+006f5e6b  JZ 0x006f5e77
+006f5e6d  MOV EDX,dword ptr [EBX]
+006f5e6f  MOV dword ptr [EAX],EDX
+006f5e71  MOV ECX,dword ptr [EBX + 0x4]
+006f5e74  MOV dword ptr [EAX + 0x4],ECX
+006f5e77  INC dword ptr [ESI + 0xc]
+006f5e7a  MOV EDX,dword ptr [EDI + 0xc]
+006f5e7d  MOV EAX,dword ptr [EDI + 0x4]
+006f5e80  ADD EBX,0x8
+006f5e83  LEA ECX,[EAX + EDX*0x8]
+006f5e86  CMP EBX,ECX
+006f5e88  JNZ 0x006f5e40
+006f5e8a  MOV EAX,dword ptr [EDI + 0xc]
+006f5e8d  TEST EAX,EAX
+006f5e8f  JLE 0x006f5e9a
+006f5e91  MOV ECX,EAX
+006f5e93  DEC ECX
+006f5e94  DEC EAX
+006f5e95  JNZ 0x006f5e93
+006f5e97  MOV dword ptr [EDI + 0xc],ECX
+006f5e9a  MOV EAX,dword ptr [EDI + 0x4]
+006f5e9d  TEST EAX,EAX
+006f5e9f  JZ 0x006f5ec2
+006f5ea1  MOV ECX,dword ptr [EDI + 0x8]
+006f5ea4  MOV EDX,dword ptr [EDI]
+006f5ea6  PUSH ECX
+006f5ea7  PUSH EAX
+006f5ea8  MOV ECX,EDI
+006f5eaa  CALL dword ptr [EDX + 0x8]
+006f5ead  MOV dword ptr [EDI + 0x4],0x0
+006f5eb4  MOV dword ptr [EDI + 0x8],0x0
+006f5ebb  MOV dword ptr [EDI + 0xc],0x0
+006f5ec2  POP EDI
+006f5ec3  MOV ECX,ESI
+006f5ec5  POP ESI
+006f5ec6  POP EBX
+006f5ec7  JMP 0x006f5d60

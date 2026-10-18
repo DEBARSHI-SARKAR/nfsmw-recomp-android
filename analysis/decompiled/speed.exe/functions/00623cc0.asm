@@ -1,0 +1,20 @@
+00623cc0  PUSH -0x1
+00623cc2  PUSH 0x877214
+00623cc7  MOV EAX,FS:[0x0]
+00623ccd  PUSH EAX
+00623cce  MOV dword ptr FS:[0x0],ESP
+00623cd5  PUSH ECX
+00623cd6  MOV EAX,dword ptr [ESP + 0x14]
+00623cda  LEA ECX,[EAX + 0x4]
+00623cdd  MOV dword ptr [ESP + 0x14],EAX
+00623ce1  MOV dword ptr [ESP],ECX
+00623ce4  TEST ECX,ECX
+00623ce6  MOV dword ptr [ESP + 0xc],0x0
+00623cee  JZ 0x00623cfa
+00623cf0  MOV EAX,dword ptr [ESP + 0x18]
+00623cf4  PUSH EAX
+00623cf5  CALL 0x005d0df0
+00623cfa  MOV ECX,dword ptr [ESP + 0x4]
+00623cfe  MOV dword ptr FS:[0x0],ECX
+00623d05  ADD ESP,0x10
+00623d08  RET

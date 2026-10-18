@@ -1,0 +1,2 @@
+0081ef5e  XOR EAX,EAX
+0081ef60  RET

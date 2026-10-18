@@ -1,0 +1,37 @@
+004552b0  MOV EDX,dword ptr [ESP + 0x4]
+004552b4  MOV EAX,dword ptr [EDX + 0x8]
+004552b7  PUSH EBX
+004552b8  PUSH ESI
+004552b9  MOV ESI,dword ptr [EAX]
+004552bb  MOV dword ptr [EDX + 0x8],ESI
+004552be  MOV ESI,dword ptr [EAX]
+004552c0  MOV BL,byte ptr [ESI + 0x21]
+004552c3  TEST BL,BL
+004552c5  JNZ 0x004552ca
+004552c7  MOV dword ptr [ESI + 0x4],EDX
+004552ca  MOV ESI,dword ptr [EDX + 0x4]
+004552cd  MOV dword ptr [EAX + 0x4],ESI
+004552d0  MOV ECX,dword ptr [ECX + 0x4]
+004552d3  CMP EDX,dword ptr [ECX + 0x4]
+004552d6  JNZ 0x004552e5
+004552d8  MOV dword ptr [ECX + 0x4],EAX
+004552db  POP ESI
+004552dc  MOV dword ptr [EAX],EDX
+004552de  MOV dword ptr [EDX + 0x4],EAX
+004552e1  POP EBX
+004552e2  RET 0x4
+004552e5  MOV ECX,dword ptr [EDX + 0x4]
+004552e8  CMP EDX,dword ptr [ECX]
+004552ea  JNZ 0x004552f8
+004552ec  MOV dword ptr [ECX],EAX
+004552ee  POP ESI
+004552ef  MOV dword ptr [EAX],EDX
+004552f1  MOV dword ptr [EDX + 0x4],EAX
+004552f4  POP EBX
+004552f5  RET 0x4
+004552f8  MOV dword ptr [ECX + 0x8],EAX
+004552fb  POP ESI
+004552fc  MOV dword ptr [EAX],EDX
+004552fe  MOV dword ptr [EDX + 0x4],EAX
+00455301  POP EBX
+00455302  RET 0x4

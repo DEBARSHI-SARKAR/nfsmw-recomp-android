@@ -1,0 +1,24 @@
+0056f510  MOV EAX,dword ptr [ESP + 0x4]
+0056f514  DEC EAX
+0056f515  CMP EAX,0x7f
+0056f518  JA 0x0056f55f
+0056f51a  MOVZX EAX,byte ptr [EAX + 0x56f58c]
+0056f521  JMP dword ptr [EAX*0x4 + 0x56f568]
+0056f528  MOV AX,word ptr [ECX + 0x6]
+0056f52c  RET 0x4
+0056f52f  MOV AX,word ptr [ECX + 0xa]
+0056f533  RET 0x4
+0056f536  MOV AX,word ptr [ECX + 0x8]
+0056f53a  RET 0x4
+0056f53d  MOV AX,word ptr [ECX + 0xe]
+0056f541  RET 0x4
+0056f544  MOV AX,word ptr [ECX + 0x2]
+0056f548  RET 0x4
+0056f54b  MOV AX,word ptr [ECX + 0x4]
+0056f54f  RET 0x4
+0056f552  MOV AX,word ptr [ECX + 0xc]
+0056f556  RET 0x4
+0056f559  MOV AX,word ptr [ECX]
+0056f55c  RET 0x4
+0056f55f  XOR AX,AX
+0056f562  RET 0x4

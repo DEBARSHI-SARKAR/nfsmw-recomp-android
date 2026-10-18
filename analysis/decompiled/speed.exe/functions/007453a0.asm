@@ -1,0 +1,71 @@
+007453a0  PUSH EBP
+007453a1  MOV EBP,ESP
+007453a3  AND ESP,0xfffffff0
+007453a6  PUSH -0x1
+007453a8  PUSH 0x880c33
+007453ad  MOV EAX,FS:[0x0]
+007453b3  PUSH EAX
+007453b4  MOV dword ptr FS:[0x0],ESP
+007453bb  SUB ESP,0xc
+007453be  PUSH EBX
+007453bf  PUSH ESI
+007453c0  MOV ESI,ECX
+007453c2  PUSH 0x3ccccccd
+007453c7  LEA ECX,[ESI + 0x20]
+007453ca  MOV dword ptr [ESP + 0x10],ESI
+007453ce  CALL 0x00449320
+007453d3  XOR EBX,EBX
+007453d5  MOV dword ptr [ESI + 0x5c],EBX
+007453d8  LEA ECX,[ESI + 0x88]
+007453de  MOV dword ptr [ESP + 0x1c],EBX
+007453e2  CALL 0x004aaa60
+007453e7  MOV byte ptr [ESI + 0x9c],BL
+007453ed  MOV dword ptr [ESI + 0xa0],EBX
+007453f3  MOV dword ptr [ESI + 0xa4],EBX
+007453f9  MOV dword ptr [ESI + 0xa8],EBX
+007453ff  MOV dword ptr [ESI + 0xac],EBX
+00745405  MOV dword ptr [ESI + 0xb0],EBX
+0074540b  MOV byte ptr [ESI + 0xb4],BL
+00745411  MOV dword ptr [ESI + 0xb8],EBX
+00745417  MOV dword ptr [ESI + 0xbc],EBX
+0074541d  MOV dword ptr [ESI + 0xc0],EBX
+00745423  MOV dword ptr [ESI + 0xc4],EBX
+00745429  MOV dword ptr [ESI + 0xc8],EBX
+0074542f  MOV byte ptr [ESI + 0xcc],BL
+00745435  MOV dword ptr [ESI + 0xd0],EBX
+0074543b  MOV dword ptr [ESI + 0xd4],EBX
+00745441  MOV dword ptr [ESI + 0xd8],EBX
+00745447  MOV dword ptr [ESI + 0xdc],EBX
+0074544d  MOV dword ptr [ESI + 0xe0],EBX
+00745453  MOV dword ptr [ESI + 0x80],EBX
+00745459  MOV dword ptr [ESI + 0x10],EBX
+0074545c  MOV dword ptr [ESI + 0x14],EBX
+0074545f  MOV dword ptr [ESI + 0x18],EBX
+00745462  MOV dword ptr [ESI + 0x1c],EBX
+00745465  MOV dword ptr [ESI + 0x60],EBX
+00745468  MOV dword ptr [ESI + 0x64],EBX
+0074546b  MOV dword ptr [ESI + 0x68],EBX
+0074546e  MOV dword ptr [ESI + 0x6c],EBX
+00745471  PUSH 0x988e80
+00745476  MOV ECX,ESI
+00745478  MOV byte ptr [ESP + 0x20],0x4
+0074547d  MOV dword ptr [ESI + 0x70],EBX
+00745480  MOV dword ptr [ESI + 0x74],EBX
+00745483  MOV dword ptr [ESI + 0x78],EBX
+00745486  MOV dword ptr [ESI + 0x7c],EBX
+00745489  CALL 0x00738d50
+0074548e  MOV ECX,dword ptr [ESP + 0x14]
+00745492  MOV byte ptr [ESI + 0x84],BL
+00745498  MOV byte ptr [ESI + 0x85],BL
+0074549e  MOV EAX,[0x009b3524]
+007454a3  MOV dword ptr [EAX],ESI
+007454a5  MOV dword ptr [0x009b3524],ESI
+007454ab  MOV dword ptr [ESI + 0x4],EAX
+007454ae  MOV dword ptr [ESI],0x9b3520
+007454b4  MOV EAX,ESI
+007454b6  POP ESI
+007454b7  MOV dword ptr FS:[0x0],ECX
+007454be  POP EBX
+007454bf  MOV ESP,EBP
+007454c1  POP EBP
+007454c2  RET

@@ -1,0 +1,44 @@
+006a4340  SUB ESP,0x20
+006a4343  MOV EAX,dword ptr [ESP + 0x24]
+006a4347  PUSH ESI
+006a4348  MOV ESI,ECX
+006a434a  MOV dword ptr [ESI + 0x10],0xffffffff
+006a4351  PUSH EDI
+006a4352  XOR EDI,EDI
+006a4354  MOV dword ptr [ESI + 0xc],EDI
+006a4357  MOV ECX,dword ptr [EAX]
+006a4359  MOV EDX,dword ptr [EAX + 0x4]
+006a435c  MOV EAX,dword ptr [EAX + 0x8]
+006a435f  MOV dword ptr [ESP + 0x8],ECX
+006a4363  MOV ECX,dword ptr [ESP + 0x30]
+006a4367  MOV dword ptr [ESP + 0xc],EDX
+006a436b  MOV EDX,dword ptr [ECX]
+006a436d  MOV dword ptr [ESP + 0x10],EAX
+006a4371  MOV EAX,dword ptr [ECX + 0x4]
+006a4374  MOV ECX,dword ptr [ECX + 0x8]
+006a4377  MOV dword ptr [ESP + 0x18],EDX
+006a437b  MOV dword ptr [ESP + 0x1c],EAX
+006a437f  MOV dword ptr [ESP + 0x20],ECX
+006a4383  CALL 0x006e8de0
+006a4388  FSTP float ptr [ESP + 0x24]
+006a438c  MOV EAX,dword ptr [ESI + 0x10]
+006a438f  MOV ECX,dword ptr [ESI + 0x14]
+006a4392  INC EAX
+006a4393  CDQ
+006a4394  IDIV ECX
+006a4396  MOV EAX,dword ptr [ESI + 0xc]
+006a4399  CMP EAX,ECX
+006a439b  MOV dword ptr [ESP + 0x14],EDI
+006a439f  MOV dword ptr [ESI + 0x10],EDX
+006a43a2  JGE 0x006a43a8
+006a43a4  INC EAX
+006a43a5  MOV dword ptr [ESI + 0xc],EAX
+006a43a8  SHL EDX,0x5
+006a43ab  LEA EDI,[EDX + ESI*0x1 + 0x1c]
+006a43af  MOV ECX,0x8
+006a43b4  LEA ESI,[ESP + 0x8]
+006a43b8  MOVSD.REP ES:EDI,ESI
+006a43ba  POP EDI
+006a43bb  POP ESI
+006a43bc  ADD ESP,0x20
+006a43bf  RET 0x8

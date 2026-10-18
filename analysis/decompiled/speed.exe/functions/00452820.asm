@@ -1,0 +1,5 @@
+00452820  MOV EAX,dword ptr [ESP + 0x4]
+00452824  MOV ECX,dword ptr [ECX + 0x2c]
+00452827  SHL EAX,0x4
+0045282a  MOV EAX,dword ptr [EAX + ECX*0x1]
+0045282d  RET 0x4

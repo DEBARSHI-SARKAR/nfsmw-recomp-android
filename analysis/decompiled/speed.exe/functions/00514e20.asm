@@ -1,0 +1,63 @@
+00514e20  PUSH EBP
+00514e21  MOV EBP,ESP
+00514e23  AND ESP,0xfffffff0
+00514e26  SUB ESP,0x6c
+00514e29  PUSH ESI
+00514e2a  MOV ESI,dword ptr [EBP + 0x8]
+00514e2d  TEST ESI,ESI
+00514e2f  JZ 0x00514f31
+00514e35  FLD float ptr [EBP + 0xc]
+00514e38  PUSH ECX
+00514e39  FMUL float ptr [0x0089551c]
+00514e3f  MOV dword ptr [ESP + 0x34],0x3f800000
+00514e47  MOV dword ptr [ESP + 0x38],0x0
+00514e4f  MOV dword ptr [ESP + 0x3c],0x0
+00514e57  FSTP float ptr [ESP + 0x10]
+00514e5b  MOV dword ptr [ESP + 0x40],0x0
+00514e63  FLD float ptr [ESP + 0x10]
+00514e67  MOV dword ptr [ESP + 0x44],0x0
+00514e6f  FADD float ptr [0x00891654]
+00514e75  MOV dword ptr [ESP + 0x48],0x3f800000
+00514e7d  MOV dword ptr [ESP + 0x4c],0x0
+00514e85  MOV dword ptr [ESP + 0x50],0x0
+00514e8d  FSTP float ptr [ESP]
+00514e90  MOV dword ptr [ESP + 0x54],0x0
+00514e98  MOV dword ptr [ESP + 0x58],0x0
+00514ea0  MOV dword ptr [ESP + 0x5c],0x3f800000
+00514ea8  MOV dword ptr [ESP + 0x60],0x0
+00514eb0  MOV dword ptr [ESP + 0x64],0x0
+00514eb8  MOV dword ptr [ESP + 0x68],0x0
+00514ec0  MOV dword ptr [ESP + 0x6c],0x0
+00514ec8  MOV dword ptr [ESP + 0x70],0x3f800000
+00514ed0  CALL 0x0045dbd0
+00514ed5  FST float ptr [ESP + 0x48]
+00514ed9  MOV EAX,dword ptr [ESP + 0x10]
+00514edd  FSTP float ptr [ESP + 0x34]
+00514ee1  PUSH EAX
+00514ee2  CALL 0x0045dbd0
+00514ee7  FST float ptr [ESP + 0x3c]
+00514eeb  LEA ECX,[ESP + 0x38]
+00514eef  FCHS
+00514ef1  PUSH ECX
+00514ef2  FSTP float ptr [ESP + 0x4c]
+00514ef6  LEA EDX,[ESP + 0x1c]
+00514efa  PUSH EDX
+00514efb  CALL 0x0045efa0
+00514f00  MOV ECX,dword ptr [ESP + 0x24]
+00514f04  MOV EAX,dword ptr [ESP + 0x20]
+00514f08  MOV EDX,dword ptr [ESP + 0x28]
+00514f0c  ADD ESP,0x10
+00514f0f  MOV dword ptr [ESP + 0x24],ECX
+00514f13  PUSH 0x0
+00514f15  LEA ECX,[ESP + 0x24]
+00514f19  MOV dword ptr [ESP + 0x24],EAX
+00514f1d  MOV EAX,dword ptr [ESP + 0x20]
+00514f21  PUSH ECX
+00514f22  MOV ECX,ESI
+00514f24  MOV dword ptr [ESP + 0x30],EDX
+00514f28  MOV dword ptr [ESP + 0x34],EAX
+00514f2c  CALL 0x005b8200
+00514f31  POP ESI
+00514f32  MOV ESP,EBP
+00514f34  POP EBP
+00514f35  RET

@@ -1,0 +1,12 @@
+006596e0  MOV EDX,dword ptr [ECX]
+006596e2  XOR EAX,EAX
+006596e4  CMP EDX,EAX
+006596e6  JZ 0x006596ea
+006596e8  MOV dword ptr [ECX],EAX
+006596ea  CMP byte ptr [ECX + 0x14],AL
+006596ed  JZ 0x006596f2
+006596ef  MOV byte ptr [ECX + 0x14],AL
+006596f2  MOV dword ptr [ECX],0x667010
+006596f8  MOV dword ptr [ECX + 0x8],0x8a8d1c
+006596ff  MOV dword ptr [ECX + 0x4],EAX
+00659702  RET

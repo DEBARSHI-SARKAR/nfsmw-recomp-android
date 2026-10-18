@@ -1,0 +1,3 @@
+0064cb90  MOV EAX,dword ptr [ESP + 0x4]
+0064cb94  MOV [0x009258f4],EAX
+0064cb99  RET

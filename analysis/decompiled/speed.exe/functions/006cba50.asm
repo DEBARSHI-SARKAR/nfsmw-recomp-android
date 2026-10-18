@@ -1,0 +1,2 @@
+006cba50  XOR EAX,EAX
+006cba52  RET

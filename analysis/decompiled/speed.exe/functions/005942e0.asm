@@ -1,0 +1,3 @@
+005942e0  MOV EAX,dword ptr [ECX]
+005942e2  ADD EAX,0xc
+005942e5  RET

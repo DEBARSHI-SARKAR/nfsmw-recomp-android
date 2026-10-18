@@ -1,0 +1,4 @@
+00620a20  MOV EAX,ECX
+00620a22  MOV dword ptr [EAX + 0x4],0x10
+00620a29  MOV dword ptr [EAX],0x8a685c
+00620a2f  RET

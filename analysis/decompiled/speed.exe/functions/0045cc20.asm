@@ -1,0 +1,3 @@
+0045cc20  MOV EAX,dword ptr [ESP + 0x4]
+0045cc24  MOV [0x0090e634],EAX
+0045cc29  RET

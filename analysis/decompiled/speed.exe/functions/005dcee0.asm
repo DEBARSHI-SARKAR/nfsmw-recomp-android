@@ -1,0 +1,10 @@
+005dcee0  PUSH 0x0
+005dcee2  PUSH 0x8f186ac4
+005dcee7  CALL 0x00454810
+005dceec  TEST EAX,EAX
+005dceee  JNZ 0x005dcefa
+005dcef0  PUSH 0x4
+005dcef2  CALL 0x006269b0
+005dcef7  ADD ESP,0x4
+005dcefa  FLD float ptr [EAX]
+005dcefc  RET

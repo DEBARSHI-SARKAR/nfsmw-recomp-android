@@ -1,0 +1,14 @@
+00478ef0  PUSH 0x0
+00478ef2  PUSH 0xc
+00478ef4  MOV ECX,0x925b30
+00478ef9  CALL 0x005d29d0
+00478efe  TEST EAX,EAX
+00478f00  JZ 0x00478f18
+00478f02  MOV ECX,dword ptr [ESP + 0x4]
+00478f06  MOV EDX,dword ptr [ESP + 0x8]
+00478f0a  MOV dword ptr [EAX],ECX
+00478f0c  MOV ECX,dword ptr [ESP + 0xc]
+00478f10  MOV dword ptr [EAX + 0x4],EDX
+00478f13  MOV EDX,dword ptr [ECX]
+00478f15  MOV dword ptr [EAX + 0x8],EDX
+00478f18  RET 0xc

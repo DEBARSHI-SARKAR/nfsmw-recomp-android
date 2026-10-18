@@ -1,0 +1,13 @@
+004e0c40  PUSH ESI
+004e0c41  MOV ESI,dword ptr [ESP + 0x8]
+004e0c45  MOV EAX,dword ptr [ESI]
+004e0c47  PUSH EDI
+004e0c48  MOV EDI,ECX
+004e0c4a  MOV ECX,ESI
+004e0c4c  CALL dword ptr [EAX + 0x4]
+004e0c4f  TEST dword ptr [EAX],0xfff0
+004e0c55  JNZ 0x004e0c5a
+004e0c57  MOV dword ptr [EDI + 0x40],ESI
+004e0c5a  POP EDI
+004e0c5b  POP ESI
+004e0c5c  RET 0x4

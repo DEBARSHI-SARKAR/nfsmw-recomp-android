@@ -1,0 +1,33 @@
+0081fe64  PUSH EBP
+0081fe65  MOV EBP,ESP
+0081fe67  MOVZX ECX,byte ptr [EBP + 0x9]
+0081fe6b  PUSH ESI
+0081fe6c  XOR ESI,ESI
+0081fe6e  CMP byte ptr [0x009c205f],0x0
+0081fe75  PUSH EDI
+0081fe76  MOV EDI,dword ptr [EBP + 0xc]
+0081fe79  JBE 0x0081feaa
+0081fe7b  MOV EDX,0x9c226c
+0081fe80  MOV EAX,EDI
+0081fe82  SUB EDX,EDI
+0081fe84  PUSH EBX
+0081fe85  MOV EBX,dword ptr [EDX + EAX*0x1]
+0081fe88  MOVZX EBX,byte ptr [EBX + ECX*0x1]
+0081fe8c  MOV dword ptr [EBP + 0x8],EBX
+0081fe8f  INC ESI
+0081fe90  FILD dword ptr [EBP + 0x8]
+0081fe93  FMUL float ptr [0x00899dd0]
+0081fe99  FSTP float ptr [EAX]
+0081fe9b  MOVZX EBX,byte ptr [0x009c205f]
+0081fea2  ADD EAX,0x4
+0081fea5  CMP ESI,EBX
+0081fea7  JL 0x0081fe85
+0081fea9  POP EBX
+0081feaa  CMP dword ptr [0x009c1fdc],0x3
+0081feb1  JNZ 0x0081feb8
+0081feb3  FLDZ
+0081feb5  FSTP float ptr [EDI + 0x14]
+0081feb8  POP EDI
+0081feb9  POP ESI
+0081feba  POP EBP
+0081febb  RET

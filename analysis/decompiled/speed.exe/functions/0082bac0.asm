@@ -1,0 +1,14 @@
+0082bac0  PUSH EBP
+0082bac1  MOV EBP,ESP
+0082bac3  PUSH ECX
+0082bac4  MOV EAX,dword ptr [EBP + 0xc]
+0082bac7  PUSH EAX
+0082bac8  MOV EAX,dword ptr [EBP + 0x8]
+0082bacb  LEA EDX,[EBP + -0x4]
+0082bace  PUSH EDX
+0082bacf  PUSH EAX
+0082bad0  MOV dword ptr [EBP + -0x4],0x0
+0082bad7  CALL 0x0082ba50
+0082badc  MOV ESP,EBP
+0082bade  POP EBP
+0082badf  RET 0x8

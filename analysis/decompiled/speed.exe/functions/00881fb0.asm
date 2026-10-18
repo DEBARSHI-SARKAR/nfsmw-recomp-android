@@ -1,0 +1,2 @@
+00881fb0  LEA ECX,[EBP + -0x34]
+00881fb3  JMP 0x0042cbf0

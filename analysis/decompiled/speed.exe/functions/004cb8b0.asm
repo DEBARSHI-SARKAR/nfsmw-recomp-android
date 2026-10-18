@@ -1,0 +1,8 @@
+004cb8b0  PUSH ESI
+004cb8b1  MOV ESI,ECX
+004cb8b3  CALL 0x004c03f0
+004cb8b8  MOV dword ptr [ESI + 0x4],EAX
+004cb8bb  MOV dword ptr [ESI + 0x8],0x0
+004cb8c2  MOV EAX,ESI
+004cb8c4  POP ESI
+004cb8c5  RET

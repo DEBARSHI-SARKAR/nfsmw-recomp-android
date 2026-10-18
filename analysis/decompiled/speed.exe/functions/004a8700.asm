@@ -1,0 +1,3 @@
+004a8700  MOV EAX,dword ptr [ESP + 0x4]
+004a8704  MOV dword ptr [EAX],0x895998
+004a870a  RET

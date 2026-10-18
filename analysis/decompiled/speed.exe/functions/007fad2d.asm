@@ -1,0 +1,9 @@
+007fad2d  MOV EAX,[0x009c0a30]
+007fad32  SHR EAX,0x1a
+007fad35  MOV EDX,dword ptr [EAX*0x4 + 0x9c0930]
+007fad3c  MOV ECX,EDX
+007fad3e  AND ECX,0xff
+007fad44  CALL 0x007facf0
+007fad49  MOV EAX,EDX
+007fad4b  SAR EAX,0x16
+007fad4e  RET

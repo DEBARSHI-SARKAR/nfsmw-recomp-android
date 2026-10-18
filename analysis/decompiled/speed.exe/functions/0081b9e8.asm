@@ -1,0 +1,25 @@
+0081b9e8  PUSH EBP
+0081b9e9  MOV EBP,ESP
+0081b9eb  SUB ESP,0xcc
+0081b9f1  CMP dword ptr [EBP + 0x8],0x0
+0081b9f5  FLDZ
+0081b9f7  PUSH ESI
+0081b9f8  MOV ESI,dword ptr [EBP + 0xc]
+0081b9fb  FSTP float ptr [ESI]
+0081b9fd  JZ 0x0081ba04
+0081b9ff  PUSH -0x5
+0081ba01  POP EAX
+0081ba02  JMP 0x0081ba28
+0081ba04  LEA EAX,[EBP + 0xffffff34]
+0081ba0a  PUSH EAX
+0081ba0b  CALL 0x0081e639
+0081ba10  MOVZX EAX,byte ptr [EBP + 0xffffff77]
+0081ba17  MOV dword ptr [EBP + 0xc],EAX
+0081ba1a  POP ECX
+0081ba1b  XOR EAX,EAX
+0081ba1d  FILD dword ptr [EBP + 0xc]
+0081ba20  FMUL float ptr [0x00890dc4]
+0081ba26  FSTP float ptr [ESI]
+0081ba28  POP ESI
+0081ba29  LEAVE
+0081ba2a  RET

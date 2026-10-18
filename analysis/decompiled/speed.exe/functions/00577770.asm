@@ -1,0 +1,8 @@
+00577770  MOV EAX,ECX
+00577772  MOV ECX,dword ptr [ESP + 0x4]
+00577776  MOV EDX,dword ptr [ECX]
+00577778  MOV ECX,dword ptr [ESP + 0x8]
+0057777c  MOV dword ptr [EAX],EDX
+0057777e  MOV EDX,dword ptr [ECX]
+00577780  MOV dword ptr [EAX + 0x4],EDX
+00577783  RET 0x8

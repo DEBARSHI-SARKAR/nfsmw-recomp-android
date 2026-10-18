@@ -1,0 +1,26 @@
+00723870  PUSH EBP
+00723871  MOV EBP,ESP
+00723873  MOV EAX,dword ptr [EBP + 0xc]
+00723876  FLD float ptr [EAX]
+00723878  AND ESP,0xfffffff0
+0072387b  FLD float ptr [EAX + 0x4]
+0072387e  MOV EAX,dword ptr [EBP + 0x8]
+00723881  IMUL EAX,EAX,0x64
+00723884  FXCH
+00723886  FSTP float ptr [EAX + ECX*0x1 + 0xc0]
+0072388d  FSTP float ptr [EAX + ECX*0x1 + 0xc4]
+00723894  LEA EAX,[EAX + ECX*0x1 + 0xc0]
+0072389b  XOR EDX,EDX
+0072389d  MOV dword ptr [EAX + 0x8],EDX
+007238a0  MOV dword ptr [EAX + 0xc],EDX
+007238a3  MOV dword ptr [EAX + 0x10],EDX
+007238a6  MOV dword ptr [EAX + 0x14],EDX
+007238a9  MOV dword ptr [EAX + 0x18],EDX
+007238ac  MOV byte ptr [EAX + 0x1c],0x1
+007238b0  MOV byte ptr [EAX + 0x1d],DL
+007238b3  MOV dword ptr [EAX + 0x24],0xffffffff
+007238ba  MOV word ptr [EAX + 0x20],DX
+007238be  MOV byte ptr [ECX + 0x2b0],0x1
+007238c5  MOV ESP,EBP
+007238c7  POP EBP
+007238c8  RET 0x8

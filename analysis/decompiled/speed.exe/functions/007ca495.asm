@@ -1,0 +1,4 @@
+007ca495  CMP dword ptr [EBP + 0x10],0x0
+007ca499  JZ 0x007ca4a0
+007ca49b  CALL 0x007ca530
+007ca4a0  RET

@@ -1,0 +1,17 @@
+007fd4c3  PUSH EBP
+007fd4c4  MOV EBP,ESP
+007fd4c6  PUSH ESI
+007fd4c7  PUSH EDI
+007fd4c8  MOV EDI,dword ptr [EBP + 0x8]
+007fd4cb  MOV ESI,dword ptr [EDI]
+007fd4cd  TEST ESI,ESI
+007fd4cf  JZ 0x007fd4e1
+007fd4d1  CALL 0x007fd429
+007fd4d6  PUSH dword ptr [EDI]
+007fd4d8  CALL 0x007fc603
+007fd4dd  AND dword ptr [EDI],0x0
+007fd4e0  POP ECX
+007fd4e1  POP EDI
+007fd4e2  POP ESI
+007fd4e3  POP EBP
+007fd4e4  RET

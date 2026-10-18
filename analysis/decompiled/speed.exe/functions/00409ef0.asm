@@ -1,0 +1,11 @@
+00409ef0  MOV EAX,dword ptr [ECX + 0x1c]
+00409ef3  TEST EAX,EAX
+00409ef5  JZ 0x00409f05
+00409ef7  MOV ECX,EAX
+00409ef9  MOV EAX,dword ptr [ECX]
+00409efb  CALL dword ptr [EAX + 0x54]
+00409efe  MOV EDX,dword ptr [EAX]
+00409f00  MOV ECX,EAX
+00409f02  JMP dword ptr [EDX + 0x24]
+00409f05  MOV EAX,0x8a2fb4
+00409f0a  RET

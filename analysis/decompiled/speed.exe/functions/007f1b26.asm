@@ -1,0 +1,10 @@
+007f1b26  MOV EAX,dword ptr [ECX + 0xb4]
+007f1b2c  MOV EDX,dword ptr [EAX]
+007f1b2e  PUSH 0x1
+007f1b30  PUSH ECX
+007f1b31  PUSH 0x7f1a6b
+007f1b36  PUSH 0x0
+007f1b38  PUSH EAX
+007f1b39  CALL dword ptr [EDX + 0x10]
+007f1b3c  XOR EAX,EAX
+007f1b3e  RET

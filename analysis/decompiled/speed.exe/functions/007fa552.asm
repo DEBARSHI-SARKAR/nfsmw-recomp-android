@@ -1,0 +1,33 @@
+007fa552  LEA EAX,[ECX + 0x28]
+007fa555  CMP dword ptr [EAX],EAX
+007fa557  JZ 0x007fa595
+007fa559  MOV EAX,dword ptr [EAX]
+007fa55b  MOV EDX,dword ptr [EAX]
+007fa55d  PUSH ESI
+007fa55e  MOV ESI,dword ptr [EAX + 0x4]
+007fa561  MOV dword ptr [ESI],EDX
+007fa563  MOV dword ptr [EDX + 0x4],ESI
+007fa566  PUSH 0xb
+007fa568  POP EDX
+007fa569  MOV dword ptr [EAX],EDX
+007fa56b  MOV dword ptr [EAX + 0x4],EDX
+007fa56e  ADD EAX,-0x8
+007fa571  MOV EDX,EAX
+007fa573  NEG EDX
+007fa575  LEA ESI,[EAX + 0x8]
+007fa578  SBB EDX,EDX
+007fa57a  AND EDX,ESI
+007fa57c  MOV ESI,dword ptr [ECX + 0x24]
+007fa57f  ADD ECX,0x20
+007fa582  MOV dword ptr [ESI],EDX
+007fa584  MOV dword ptr [ECX + 0x4],EDX
+007fa587  MOV dword ptr [EDX + 0x4],ESI
+007fa58a  MOV dword ptr [EDX],ECX
+007fa58c  MOV dword ptr [EAX + 0x10],0x2
+007fa593  POP ESI
+007fa594  RET
+007fa595  PUSH 0x8c2868
+007fa59a  CALL 0x00862d36
+007fa59f  POP ECX
+007fa5a0  XOR EAX,EAX
+007fa5a2  RET

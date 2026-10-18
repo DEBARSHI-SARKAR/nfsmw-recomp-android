@@ -1,0 +1,3 @@
+006eec10  MOV EAX,dword ptr [ECX + 0x8]
+006eec13  OR EAX,0x4000000
+006eec18  RET

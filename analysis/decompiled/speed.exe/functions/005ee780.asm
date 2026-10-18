@@ -1,0 +1,32 @@
+005ee780  PUSH ESI
+005ee781  MOV ESI,dword ptr [ESP + 0xc]
+005ee785  PUSH EDI
+005ee786  MOV EDI,dword ptr [ESP + 0xc]
+005ee78a  SUB ESI,EDI
+005ee78c  MOV EAX,ESI
+005ee78e  SAR EAX,0x3
+005ee791  CMP EAX,0x1
+005ee794  JLE 0x005ee7cc
+005ee796  MOV ECX,dword ptr [EDI + ESI*0x1 + -0x4]
+005ee79a  MOV EAX,dword ptr [EDI + ESI*0x1 + -0x8]
+005ee79e  MOV EDX,dword ptr [EDI]
+005ee7a0  PUSH ECX
+005ee7a1  PUSH EAX
+005ee7a2  LEA EAX,[ESI + -0x8]
+005ee7a5  SAR EAX,0x3
+005ee7a8  PUSH EAX
+005ee7a9  MOV dword ptr [EDI + ESI*0x1 + -0x8],EDX
+005ee7ad  MOV EDX,dword ptr [EDI + 0x4]
+005ee7b0  PUSH 0x0
+005ee7b2  PUSH EDI
+005ee7b3  MOV dword ptr [EDI + ESI*0x1 + -0x4],EDX
+005ee7b7  CALL 0x005e7d60
+005ee7bc  SUB ESI,0x8
+005ee7bf  MOV EAX,ESI
+005ee7c1  SAR EAX,0x3
+005ee7c4  ADD ESP,0x14
+005ee7c7  CMP EAX,0x1
+005ee7ca  JG 0x005ee796
+005ee7cc  POP EDI
+005ee7cd  POP ESI
+005ee7ce  RET

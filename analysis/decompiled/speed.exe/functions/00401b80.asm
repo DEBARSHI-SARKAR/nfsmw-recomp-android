@@ -1,0 +1,12 @@
+00401b80  MOV EAX,dword ptr [ESP + 0x4]
+00401b84  FLD float ptr [ESP + 0x8]
+00401b88  FMUL float ptr [EAX]
+00401b8a  MOV ECX,dword ptr [ESP + 0xc]
+00401b8e  FSTP float ptr [ECX]
+00401b90  FLD float ptr [ESP + 0x8]
+00401b94  FMUL float ptr [EAX + 0x4]
+00401b97  FSTP float ptr [ECX + 0x4]
+00401b9a  FLD float ptr [ESP + 0x8]
+00401b9e  FMUL float ptr [EAX + 0x8]
+00401ba1  FSTP float ptr [ECX + 0x8]
+00401ba4  RET

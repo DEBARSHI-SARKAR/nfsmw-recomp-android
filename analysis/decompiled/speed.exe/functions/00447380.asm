@@ -1,0 +1,2 @@
+00447380  MOV EAX,dword ptr [ECX + 0xc]
+00447383  RET

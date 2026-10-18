@@ -1,0 +1,2 @@
+00532880  MOV dword ptr [ECX],0x89b8c8
+00532886  RET

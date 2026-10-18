@@ -1,0 +1,16 @@
+00866cd0  SUB ESP,0x8
+00866cd3  PUSH EBX
+00866cd4  RDTSC
+00866cd6  LEA EBX,[ESP + 0x4]
+00866cda  MOV dword ptr [EBX],EAX
+00866cdc  MOV dword ptr [EBX + 0x4],EDX
+00866cdf  MOV EAX,dword ptr [ESP + 0x8]
+00866ce3  MOV EDX,dword ptr [ESP + 0x4]
+00866ce7  MOV ECX,EAX
+00866ce9  SAR ECX,0x1f
+00866cec  MOV ECX,dword ptr [ESP + 0x10]
+00866cf0  MOV dword ptr [ECX],EAX
+00866cf2  MOV dword ptr [ECX + 0x4],EDX
+00866cf5  POP EBX
+00866cf6  ADD ESP,0x8
+00866cf9  RET

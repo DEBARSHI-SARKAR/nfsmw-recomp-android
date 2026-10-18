@@ -1,0 +1,25 @@
+00515bb0  PUSH ESI
+00515bb1  MOV ESI,dword ptr [ESP + 0x8]
+00515bb5  TEST ESI,ESI
+00515bb7  JZ 0x00515bfd
+00515bb9  MOV EAX,dword ptr [ESP + 0xc]
+00515bbd  CMP EAX,0x1bb3c514
+00515bc2  JNZ 0x00515bee
+00515bc4  CALL 0x0056bb20
+00515bc9  DEC EAX
+00515bca  JZ 0x00515be9
+00515bcc  CMP dword ptr [ESI + 0x24],0x1bb3c514
+00515bd3  JZ 0x00515bfd
+00515bd5  MOV EAX,dword ptr [ESI + 0x1c]
+00515bd8  OR EAX,0x2400000
+00515bdd  MOV dword ptr [ESI + 0x24],0x1bb3c514
+00515be4  MOV dword ptr [ESI + 0x1c],EAX
+00515be7  POP ESI
+00515be8  RET
+00515be9  MOV EAX,0xec617269
+00515bee  CMP dword ptr [ESI + 0x24],EAX
+00515bf1  JZ 0x00515bfd
+00515bf3  MOV dword ptr [ESI + 0x24],EAX
+00515bf6  OR dword ptr [ESI + 0x1c],0x2400000
+00515bfd  POP ESI
+00515bfe  RET

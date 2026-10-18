@@ -1,0 +1,19 @@
+007c5f30  MOV EAX,dword ptr [ESP + 0x8]
+007c5f34  MOV ECX,dword ptr [ESP + 0x10]
+007c5f38  OR ECX,EAX
+007c5f3a  MOV ECX,dword ptr [ESP + 0xc]
+007c5f3e  JNZ 0x007c5f49
+007c5f40  MOV EAX,dword ptr [ESP + 0x4]
+007c5f44  MUL ECX
+007c5f46  RET 0x10
+007c5f49  PUSH EBX
+007c5f4a  MUL ECX
+007c5f4c  MOV EBX,EAX
+007c5f4e  MOV EAX,dword ptr [ESP + 0x8]
+007c5f52  MUL dword ptr [ESP + 0x14]
+007c5f56  ADD EBX,EAX
+007c5f58  MOV EAX,dword ptr [ESP + 0x8]
+007c5f5c  MUL ECX
+007c5f5e  ADD EDX,EBX
+007c5f60  POP EBX
+007c5f61  RET 0x10

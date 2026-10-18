@@ -1,0 +1,21 @@
+0081ebf9  PUSH EBP
+0081ebfa  MOV EBP,ESP
+0081ebfc  FLD float ptr [EBP + 0x8]
+0081ebff  FCOMP float ptr [EBP + 0xc]
+0081ec02  FNSTSW AX
+0081ec04  TEST AH,0x5
+0081ec07  JP 0x0081ec0e
+0081ec09  FLD float ptr [EBP + 0xc]
+0081ec0c  POP EBP
+0081ec0d  RET
+0081ec0e  FLD float ptr [EBP + 0x8]
+0081ec11  FCOMP float ptr [EBP + 0x10]
+0081ec14  FNSTSW AX
+0081ec16  TEST AH,0x41
+0081ec19  JNZ 0x0081ec20
+0081ec1b  FLD float ptr [EBP + 0x10]
+0081ec1e  POP EBP
+0081ec1f  RET
+0081ec20  FLD float ptr [EBP + 0x8]
+0081ec23  POP EBP
+0081ec24  RET

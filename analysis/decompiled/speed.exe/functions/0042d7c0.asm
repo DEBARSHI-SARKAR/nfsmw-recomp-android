@@ -1,0 +1,14 @@
+0042d7c0  PUSH ECX
+0042d7c1  MOV EDX,dword ptr [ESP + 0xc]
+0042d7c5  MOV byte ptr [ESP],0x0
+0042d7c9  MOV EAX,dword ptr [ESP]
+0042d7cc  PUSH EAX
+0042d7cd  MOV EAX,dword ptr [ESP + 0xc]
+0042d7d1  PUSH ECX
+0042d7d2  MOV ECX,dword ptr [ESP + 0x18]
+0042d7d6  PUSH ECX
+0042d7d7  PUSH EDX
+0042d7d8  PUSH EAX
+0042d7d9  CALL 0x0040fac0
+0042d7de  ADD ESP,0x18
+0042d7e1  RET 0xc

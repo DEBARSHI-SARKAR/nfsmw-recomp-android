@@ -1,0 +1,5 @@
+00832d4b  MOV EAX,dword ptr [ESP + 0x4]
+00832d4f  MOV [0x009c2bf8],EAX
+00832d54  MOV EAX,dword ptr [ESP + 0x8]
+00832d58  MOV [0x009c2bfc],EAX
+00832d5d  RET

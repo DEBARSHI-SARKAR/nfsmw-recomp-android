@@ -1,0 +1,2 @@
+00628ce0  MOV AL,[0x0091f1dc]
+00628ce5  RET

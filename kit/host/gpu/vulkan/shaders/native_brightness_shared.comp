@@ -1,0 +1,27 @@
+#version 450
+// Chosen when arithmetic subgroup operations are missing; thread_execution_width
+// then reports 256 so the host passes simdgroups = 1.
+layout(local_size_x = 16, local_size_y = 16) in;
+layout(set = 0, binding = 8) uniform sampler2D color;
+layout(std430, set = 0, binding = 0) buffer Out { uint output_words[]; };
+layout(std430, set = 0, binding = 1) readonly buffer Params { uvec4 p[2]; };
+shared uint partial[256];
+void main() {
+    uvec2 pos = p[0].xy + gl_GlobalInvocationID.xy * 2u;
+    uint lit = 0u;
+    for (uint y = 0u; y < 2u; ++y)
+        for (uint x = 0u; x < 2u; ++x) {
+            uvec2 q = pos + uvec2(x, y);
+            if (all(lessThan(q, p[0].zw)))
+                lit += any(greaterThan(round(texelFetch(color, ivec2(q), 0).rgb * 255.0), vec3(8.0))) ? 1u : 0u;
+        }
+    partial[gl_LocalInvocationIndex] = lit;
+    barrier();
+    for (uint stride = 128u; stride > 0u; stride >>= 1u) {
+        if (gl_LocalInvocationIndex < stride)
+            partial[gl_LocalInvocationIndex] += partial[gl_LocalInvocationIndex + stride];
+        barrier();
+    }
+    if (gl_LocalInvocationIndex == 0u)
+        output_words[p[1].x + (gl_WorkGroupID.y * p[1].y + gl_WorkGroupID.x) * p[1].z] = partial[0];
+}

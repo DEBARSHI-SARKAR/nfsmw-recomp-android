@@ -1,0 +1,29 @@
+/* speed.exe 0075c2b0 FUN_0075c2b0; analysis pseudocode, not buildable source.
+ * calls 0075a5e0 FUN_0075a5e0
+ * calls 00652b00 thunk_FUN_007c7250
+ * calls 0075c1e0 FUN_0075c1e0
+ */
+
+void __fastcall FUN_0075c2b0(int *param_1)
+
+{
+  int *piVar1;
+  int *piVar2;
+  int iVar3;
+  
+  for (piVar1 = (int *)*param_1; piVar1 != param_1; piVar1 = (int *)*piVar1) {
+    FUN_0075a5e0();
+  }
+  piVar1 = (int *)*param_1;
+  while (piVar1 != param_1) {
+    piVar2 = (int *)piVar1[1];
+    iVar3 = *piVar1;
+    *piVar2 = iVar3;
+    *(int **)(iVar3 + 4) = piVar2;
+    FUN_0075c1e0();
+    thunk_FUN_007c7250(piVar1);
+    piVar1 = (int *)*param_1;
+  }
+  return;
+}
+

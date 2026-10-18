@@ -1,0 +1,23 @@
+00653570  MOV EAX,dword ptr [ESP + 0x8]
+00653574  FLD float ptr [EAX + 0x4]
+00653577  PUSH ECX
+00653578  FLD float ptr [EAX + 0x8]
+0065357b  MOV ECX,dword ptr [ESP + 0x10]
+0065357f  FLD float ptr [ESP + 0x14]
+00653583  FMUL float ptr [EAX]
+00653585  MOV EAX,dword ptr [ESP + 0x8]
+00653589  FSTP float ptr [EAX]
+0065358b  FXCH
+0065358d  FMUL float ptr [ESP + 0x14]
+00653591  FSTP float ptr [EAX + 0x4]
+00653594  FMUL float ptr [ESP + 0x14]
+00653598  FSTP float ptr [EAX + 0x8]
+0065359b  FLD float ptr [0x0089096c]
+006535a1  FSUB float ptr [ESP + 0x14]
+006535a5  FSTP float ptr [ESP]
+006535a8  PUSH ECX
+006535a9  PUSH EAX
+006535aa  PUSH EAX
+006535ab  CALL 0x0045f640
+006535b0  ADD ESP,0x10
+006535b3  RET 0x10

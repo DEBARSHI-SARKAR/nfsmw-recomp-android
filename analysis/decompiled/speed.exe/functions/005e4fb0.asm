@@ -1,0 +1,8 @@
+005e4fb0  PUSH ESI
+005e4fb1  MOV ESI,ECX
+005e4fb3  MOV dword ptr [ESI + 0x4],0x0
+005e4fba  CALL 0x006e8de0
+005e4fbf  FSTP float ptr [ESI]
+005e4fc1  MOV EAX,ESI
+005e4fc3  POP ESI
+005e4fc4  RET

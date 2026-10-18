@@ -1,0 +1,78 @@
+0075db90  PUSH ECX
+0075db91  PUSH EBP
+0075db92  MOV EBP,dword ptr [ESP + 0x10]
+0075db96  PUSH ESI
+0075db97  PUSH EDI
+0075db98  MOV EDI,ECX
+0075db9a  MOV ESI,dword ptr [EDI + 0x4]
+0075db9d  MOV EAX,dword ptr [ESI + 0x4]
+0075dba0  MOV DL,byte ptr [EAX + 0x15]
+0075dba3  TEST DL,DL
+0075dba5  MOV CL,0x1
+0075dba7  MOV byte ptr [ESP + 0xc],CL
+0075dbab  JNZ 0x0075dbcd
+0075dbad  MOV EDX,dword ptr [EBP]
+0075dbb0  CMP EDX,dword ptr [EAX + 0xc]
+0075dbb3  SETC CL
+0075dbb6  TEST CL,CL
+0075dbb8  MOV ESI,EAX
+0075dbba  MOV byte ptr [ESP + 0xc],CL
+0075dbbe  JZ 0x0075dbc4
+0075dbc0  MOV EAX,dword ptr [EAX]
+0075dbc2  JMP 0x0075dbc7
+0075dbc4  MOV EAX,dword ptr [EAX + 0x8]
+0075dbc7  CMP byte ptr [EAX + 0x15],0x0
+0075dbcb  JZ 0x0075dbb0
+0075dbcd  TEST CL,CL
+0075dbcf  MOV EDX,ESI
+0075dbd1  MOV dword ptr [ESP + 0x18],EDX
+0075dbd5  JZ 0x0075dc0a
+0075dbd7  MOV EAX,dword ptr [EDI + 0x4]
+0075dbda  CMP ESI,dword ptr [EAX]
+0075dbdc  LEA ECX,[ESP + 0x18]
+0075dbe0  JNZ 0x0075dc01
+0075dbe2  PUSH EBP
+0075dbe3  PUSH ESI
+0075dbe4  PUSH 0x1
+0075dbe6  PUSH ECX
+0075dbe7  MOV ECX,EDI
+0075dbe9  CALL 0x0075c9c0
+0075dbee  MOV EDX,dword ptr [EAX]
+0075dbf0  MOV EAX,dword ptr [ESP + 0x14]
+0075dbf4  POP EDI
+0075dbf5  POP ESI
+0075dbf6  MOV byte ptr [EAX + 0x4],0x1
+0075dbfa  MOV dword ptr [EAX],EDX
+0075dbfc  POP EBP
+0075dbfd  POP ECX
+0075dbfe  RET 0x8
+0075dc01  CALL 0x0073fcb0
+0075dc06  MOV EDX,dword ptr [ESP + 0x18]
+0075dc0a  MOV EAX,dword ptr [EDX + 0xc]
+0075dc0d  CMP EAX,dword ptr [EBP]
+0075dc10  JNC 0x0075dc38
+0075dc12  MOV ECX,dword ptr [ESP + 0xc]
+0075dc16  PUSH EBP
+0075dc17  PUSH ESI
+0075dc18  PUSH ECX
+0075dc19  LEA EDX,[ESP + 0x24]
+0075dc1d  PUSH EDX
+0075dc1e  MOV ECX,EDI
+0075dc20  CALL 0x0075c9c0
+0075dc25  MOV ECX,dword ptr [EAX]
+0075dc27  MOV EAX,dword ptr [ESP + 0x14]
+0075dc2b  POP EDI
+0075dc2c  POP ESI
+0075dc2d  MOV dword ptr [EAX],ECX
+0075dc2f  MOV byte ptr [EAX + 0x4],0x1
+0075dc33  POP EBP
+0075dc34  POP ECX
+0075dc35  RET 0x8
+0075dc38  MOV EAX,dword ptr [ESP + 0x14]
+0075dc3c  POP EDI
+0075dc3d  POP ESI
+0075dc3e  MOV byte ptr [EAX + 0x4],0x0
+0075dc42  MOV dword ptr [EAX],EDX
+0075dc44  POP EBP
+0075dc45  POP ECX
+0075dc46  RET 0x8

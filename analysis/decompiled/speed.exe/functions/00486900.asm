@@ -1,0 +1,13 @@
+00486900  MOV EAX,dword ptr [ESP + 0x4]
+00486904  FLD float ptr [EAX]
+00486906  MOV ECX,dword ptr [ESP + 0x8]
+0048690a  FMUL float ptr [ECX]
+0048690c  MOV EDX,dword ptr [ESP + 0xc]
+00486910  FSTP float ptr [EDX]
+00486912  FLD float ptr [EAX + 0x4]
+00486915  FMUL float ptr [ECX + 0x4]
+00486918  FSTP float ptr [EDX + 0x4]
+0048691b  FLD float ptr [EAX + 0x8]
+0048691e  FMUL float ptr [ECX + 0x8]
+00486921  FSTP float ptr [EDX + 0x8]
+00486924  RET

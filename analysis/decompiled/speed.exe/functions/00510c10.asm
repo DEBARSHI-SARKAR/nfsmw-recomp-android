@@ -1,0 +1,25 @@
+00510c10  MOV ECX,dword ptr [ECX + 0xc]
+00510c13  SUB ESP,0x10
+00510c16  TEST ECX,ECX
+00510c18  JZ 0x00510c62
+00510c1a  LEA EAX,[ESP + 0x8]
+00510c1e  PUSH EAX
+00510c1f  LEA EDX,[ESP + 0x4]
+00510c23  PUSH EDX
+00510c24  CALL 0x005fcea0
+00510c29  FLD float ptr [ESP]
+00510c2c  FSUB float ptr [0x00899e64]
+00510c32  MOV EAX,dword ptr [ESP + 0x14]
+00510c36  FSTP float ptr [EAX]
+00510c38  FLD float ptr [ESP + 0x4]
+00510c3c  FADD float ptr [0x00899e64]
+00510c42  FSTP float ptr [EAX + 0x4]
+00510c45  MOV EAX,dword ptr [ESP + 0x18]
+00510c49  FLD float ptr [ESP + 0x8]
+00510c4d  FADD float ptr [0x00899e64]
+00510c53  FSTP float ptr [EAX]
+00510c55  FLD float ptr [ESP + 0xc]
+00510c59  FSUB float ptr [0x00899e64]
+00510c5f  FSTP float ptr [EAX + 0x4]
+00510c62  ADD ESP,0x10
+00510c65  RET 0x8

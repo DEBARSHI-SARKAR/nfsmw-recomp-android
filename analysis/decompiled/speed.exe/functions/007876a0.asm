@@ -1,0 +1,15 @@
+007876a0  PUSH ESI
+007876a1  MOV ESI,ECX
+007876a3  CALL 0x00771eb0
+007876a8  MOV dword ptr [ESI + 0x4],EAX
+007876ab  MOV byte ptr [EAX + 0x15],0x1
+007876af  MOV EAX,dword ptr [ESI + 0x4]
+007876b2  MOV dword ptr [EAX + 0x4],EAX
+007876b5  MOV EAX,dword ptr [ESI + 0x4]
+007876b8  MOV dword ptr [EAX],EAX
+007876ba  MOV EAX,dword ptr [ESI + 0x4]
+007876bd  MOV dword ptr [EAX + 0x8],EAX
+007876c0  MOV dword ptr [ESI + 0x8],0x0
+007876c7  MOV EAX,ESI
+007876c9  POP ESI
+007876ca  RET

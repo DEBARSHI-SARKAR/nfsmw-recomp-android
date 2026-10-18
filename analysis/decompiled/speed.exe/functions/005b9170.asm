@@ -1,0 +1,4 @@
+005b9170  MOV EAX,ECX
+005b9172  MOV dword ptr [EAX],0x0
+005b9178  MOV dword ptr [EAX + 0x4],0x0
+005b917f  RET

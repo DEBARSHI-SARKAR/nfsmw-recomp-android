@@ -1,0 +1,10 @@
+006a0b60  PUSH ESI
+006a0b61  MOV ESI,ECX
+006a0b63  CALL 0x006a0760
+006a0b68  XOR EAX,EAX
+006a0b6a  MOV dword ptr [ESI + 0x1bc],EAX
+006a0b70  MOV dword ptr [ESI + 0x1c0],EAX
+006a0b76  MOV dword ptr [ESI + 0x1c4],EAX
+006a0b7c  MOV dword ptr [ESI + 0x1c8],EAX
+006a0b82  POP ESI
+006a0b83  RET

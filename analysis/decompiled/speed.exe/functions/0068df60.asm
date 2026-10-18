@@ -1,0 +1,24 @@
+0068df60  PUSH ESI
+0068df61  MOV ESI,ECX
+0068df63  PUSH EDI
+0068df64  XOR EDI,EDI
+0068df66  MOV EAX,0x42340000
+0068df6b  PUSH EDI
+0068df6c  LEA ECX,[ESI + 0x18]
+0068df6f  MOV dword ptr [ESI],EDI
+0068df71  MOV dword ptr [ESI + 0x8],EDI
+0068df74  MOV dword ptr [ESI + 0x4],EDI
+0068df77  MOV dword ptr [ESI + 0xc],EAX
+0068df7a  MOV dword ptr [ESI + 0x10],EAX
+0068df7d  MOV dword ptr [ESI + 0x14],EDI
+0068df80  CALL 0x00653ca0
+0068df85  PUSH EDI
+0068df86  LEA ECX,[ESI + 0x50]
+0068df89  CALL 0x00653ca0
+0068df8e  MOV dword ptr [ESI + 0x88],EDI
+0068df94  MOV dword ptr [ESI + 0x8c],EDI
+0068df9a  MOV dword ptr [ESI + 0x90],EDI
+0068dfa0  POP EDI
+0068dfa1  MOV dword ptr [ESI + 0x94],0x3f800000
+0068dfab  POP ESI
+0068dfac  RET

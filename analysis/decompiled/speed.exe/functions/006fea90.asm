@@ -1,0 +1,13 @@
+006fea90  PUSH ESI
+006fea91  MOV ESI,ECX
+006fea93  MOV EAX,dword ptr [ESI + 0x4c]
+006fea96  PUSH 0x3dcccccd
+006fea9b  PUSH EAX
+006fea9c  CALL 0x006e9c60
+006feaa1  MOV ECX,dword ptr [ESI + 0x50]
+006feaa4  PUSH 0x3e800000
+006feaa9  PUSH ECX
+006feaaa  MOV ECX,ESI
+006feaac  CALL 0x006e9c60
+006feab1  POP ESI
+006feab2  RET

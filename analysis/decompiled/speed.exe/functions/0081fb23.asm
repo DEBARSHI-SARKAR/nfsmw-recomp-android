@@ -1,0 +1,8 @@
+0081fb23  PUSH EBP
+0081fb24  MOV EBP,ESP
+0081fb26  MOVZX EAX,word ptr [EBP + 0x8]
+0081fb2a  MOV dword ptr [EBP + 0x8],EAX
+0081fb2d  FILD dword ptr [EBP + 0x8]
+0081fb30  FMUL float ptr [0x00894958]
+0081fb36  POP EBP
+0081fb37  RET

@@ -1,0 +1,10 @@
+004abec0  MOV EAX,dword ptr [ESP + 0x4]
+004abec4  PUSH EAX
+004abec5  PUSH 0xc243117c
+004abeca  CALL 0x00454810
+004abecf  TEST EAX,EAX
+004abed1  JNZ 0x004abedd
+004abed3  PUSH 0xc
+004abed5  CALL 0x006269b0
+004abeda  ADD ESP,0x4
+004abedd  RET 0x4

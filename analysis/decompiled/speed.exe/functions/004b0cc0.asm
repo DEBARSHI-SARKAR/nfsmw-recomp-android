@@ -1,0 +1,5 @@
+004b0cc0  MOV ECX,dword ptr [0x009120c8]
+004b0cc6  PUSH 0x0
+004b0cc8  PUSH 0x1
+004b0cca  CALL 0x00465fd0
+004b0ccf  RET

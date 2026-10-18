@@ -1,0 +1,36 @@
+00852cf0  MOV ECX,dword ptr [ESP + 0x4]
+00852cf4  CMP dword ptr [ECX],0x0
+00852cf7  JNZ 0x00852cfc
+00852cf9  XOR EAX,EAX
+00852cfb  RET
+00852cfc  MOV EAX,dword ptr [ECX + 0x4]
+00852cff  PUSH ESI
+00852d00  PUSH EDI
+00852d01  MOV EDI,dword ptr [ECX + 0x14]
+00852d04  CMP dword ptr [EDI + EAX*0x4],0x0
+00852d08  JNZ 0x00852d23
+00852d0a  MOV ESI,dword ptr [ECX + 0x10]
+00852d0d  LEA ECX,[ECX]
+00852d10  MOV EAX,dword ptr [ECX + 0x4]
+00852d13  INC EAX
+00852d14  CDQ
+00852d15  IDIV ESI
+00852d17  MOV dword ptr [ECX + 0x4],EDX
+00852d1a  MOV EAX,dword ptr [ECX + 0x14]
+00852d1d  CMP dword ptr [EAX + EDX*0x4],0x0
+00852d21  JZ 0x00852d10
+00852d23  MOV EDX,dword ptr [ECX + 0x4]
+00852d26  MOV EAX,dword ptr [EDI + EDX*0x4]
+00852d29  MOV ESI,dword ptr [EAX]
+00852d2b  LEA EDX,[EDI + EDX*0x4]
+00852d2e  MOV dword ptr [EDX],ESI
+00852d30  MOV EDX,dword ptr [ECX + 0x1c]
+00852d33  MOV dword ptr [EAX],EDX
+00852d35  MOV EDX,dword ptr [ECX]
+00852d37  DEC EDX
+00852d38  POP EDI
+00852d39  MOV dword ptr [ECX + 0x1c],EAX
+00852d3c  MOV dword ptr [ECX],EDX
+00852d3e  MOV EAX,dword ptr [EAX + 0x4]
+00852d41  POP ESI
+00852d42  RET

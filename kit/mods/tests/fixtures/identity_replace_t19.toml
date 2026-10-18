@@ -1,0 +1,11 @@
+# Copy alongside identity_replace_t19.dylib as mod.toml in an isolated mod root.
+id = "test.identity-replace-t19"
+name = "Task 19 identity replacement"
+version = "1.0.0"
+api = 1
+game = "815ba8a550f571c3"
+requires = ["core.hooks >= 1.0.0"]
+affects_simulation = false
+
+[plugin]
+path = "identity_replace_t19.dylib"

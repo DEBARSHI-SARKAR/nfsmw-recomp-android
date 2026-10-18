@@ -1,0 +1,8 @@
+00464a30  MOV EAX,dword ptr [ESP + 0xc]
+00464a34  MOV ECX,dword ptr [ESP + 0x8]
+00464a38  MOV EDX,dword ptr [ESP + 0x4]
+00464a3c  PUSH EAX
+00464a3d  PUSH ECX
+00464a3e  MOV ECX,dword ptr [EDX*0x4 + 0x90df10]
+00464a45  CALL 0x00464960
+00464a4a  RET

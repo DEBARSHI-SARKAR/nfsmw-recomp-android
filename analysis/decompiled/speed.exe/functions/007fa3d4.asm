@@ -1,0 +1,11 @@
+007fa3d4  PUSH EBP
+007fa3d5  MOV EBP,ESP
+007fa3d7  PUSH dword ptr [0x00909e5c]
+007fa3dd  PUSH 0x0
+007fa3df  PUSH 0x0
+007fa3e1  PUSH dword ptr [EBP + 0x8]
+007fa3e4  PUSH 0x890978
+007fa3e9  CALL dword ptr [0x00909e54]
+007fa3ef  ADD ESP,0x14
+007fa3f2  POP EBP
+007fa3f3  RET

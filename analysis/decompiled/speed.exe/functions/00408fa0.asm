@@ -1,0 +1,10 @@
+00408fa0  FLD float ptr [ECX + 0x4]
+00408fa3  FCOMP float ptr [0x00890968]
+00408fa9  FNSTSW AX
+00408fab  TEST AH,0x41
+00408fae  JNZ 0x00408fb6
+00408fb0  FLD float ptr [ECX]
+00408fb2  FDIV float ptr [ECX + 0x4]
+00408fb5  RET
+00408fb6  FLD float ptr [0x00890968]
+00408fbc  RET

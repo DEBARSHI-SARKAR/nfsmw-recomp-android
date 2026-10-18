@@ -1,0 +1,38 @@
+0041e4d0  MOV ECX,dword ptr [ESP + 0x4]
+0041e4d4  MOV EDX,dword ptr [ESP + 0x8]
+0041e4d8  CMP ECX,EDX
+0041e4da  MOV EAX,dword ptr [ESP + 0xc]
+0041e4de  JZ 0x0041e52a
+0041e4e0  PUSH EBX
+0041e4e1  PUSH ESI
+0041e4e2  PUSH EDI
+0041e4e3  TEST EAX,EAX
+0041e4e5  JZ 0x0041e51d
+0041e4e7  MOV ESI,ECX
+0041e4e9  MOV EBX,dword ptr [ESI]
+0041e4eb  MOV EDI,EAX
+0041e4ed  MOV dword ptr [EDI],EBX
+0041e4ef  MOV EBX,dword ptr [ESI + 0x4]
+0041e4f2  MOV dword ptr [EDI + 0x4],EBX
+0041e4f5  MOV ESI,dword ptr [ESI + 0x8]
+0041e4f8  MOV dword ptr [EDI + 0x8],ESI
+0041e4fb  LEA ESI,[ECX + 0xc]
+0041e4fe  MOV EBX,dword ptr [ESI]
+0041e500  LEA EDI,[EAX + 0xc]
+0041e503  MOV dword ptr [EDI],EBX
+0041e505  MOV EBX,dword ptr [ESI + 0x4]
+0041e508  MOV dword ptr [EDI + 0x4],EBX
+0041e50b  MOV ESI,dword ptr [ESI + 0x8]
+0041e50e  MOV dword ptr [EDI + 0x8],ESI
+0041e511  MOV ESI,dword ptr [ECX + 0x18]
+0041e514  MOV dword ptr [EAX + 0x18],ESI
+0041e517  MOV ESI,dword ptr [ECX + 0x1c]
+0041e51a  MOV dword ptr [EAX + 0x1c],ESI
+0041e51d  ADD ECX,0x20
+0041e520  ADD EAX,0x20
+0041e523  CMP ECX,EDX
+0041e525  JNZ 0x0041e4e3
+0041e527  POP EDI
+0041e528  POP ESI
+0041e529  POP EBX
+0041e52a  RET

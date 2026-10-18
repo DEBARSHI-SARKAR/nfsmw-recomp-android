@@ -1,0 +1,8 @@
+0076e320  MOV EAX,dword ptr [ECX + 0x8]
+0076e323  XOR EDX,EDX
+0076e325  CMP EAX,EDX
+0076e327  JZ 0x0076e332
+0076e329  MOV dword ptr [EAX],EDX
+0076e32b  MOV dword ptr [EAX + 0x4],0xffffffff
+0076e332  MOV dword ptr [ECX + 0x4],EDX
+0076e335  RET

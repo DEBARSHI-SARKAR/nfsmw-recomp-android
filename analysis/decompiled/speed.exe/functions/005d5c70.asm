@@ -1,0 +1,19 @@
+005d5c70  SUB ESP,0x8
+005d5c73  MOV EAX,dword ptr [ESP + 0xc]
+005d5c77  MOV EDX,dword ptr [0x0091de30]
+005d5c7d  PUSH 0x0
+005d5c7f  LEA ECX,[ESP + 0x4]
+005d5c83  PUSH ECX
+005d5c84  MOV dword ptr [ESP + 0x8],EAX
+005d5c88  MOV EAX,[0x0091de2c]
+005d5c8d  PUSH EDX
+005d5c8e  PUSH EAX
+005d5c8f  LEA ECX,[ESP + 0x1c]
+005d5c93  PUSH ECX
+005d5c94  CALL 0x005d4a90
+005d5c99  MOV EDX,dword ptr [ESP + 0x24]
+005d5c9d  MOV EAX,dword ptr [ESP + 0x20]
+005d5ca1  PUSH EDX
+005d5ca2  CALL dword ptr [EAX + 0x4]
+005d5ca5  ADD ESP,0x20
+005d5ca8  RET

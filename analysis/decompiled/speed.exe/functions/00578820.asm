@@ -1,0 +1,132 @@
+00578820  PUSH EBP
+00578821  MOV EBP,ESP
+00578823  SUB ESP,0x28
+00578826  PUSH ESI
+00578827  PUSH EAX
+00578828  MOV EAX,0xcfcecdcc
+0057882d  MOV EAX,0x57882d
+00578832  MOV EAX,0x1
+00578837  MOV EAX,0x0
+0057883c  MOV EAX,0xcfcecdcc
+00578841  POP EAX
+00578842  MOV EAX,dword ptr [EBP + 0x8]
+00578845  MOV ECX,dword ptr [EAX + 0x14]
+00578848  MOV dword ptr [EBP + -0x20],ECX
+0057884b  MOV EDX,dword ptr [EBP + 0x8]
+0057884e  MOV EAX,dword ptr [EDX + 0x18]
+00578851  MOV dword ptr [EBP + -0x1c],EAX
+00578854  MOV ECX,dword ptr [EBP + 0x8]
+00578857  MOV EDX,dword ptr [ECX + 0x1c]
+0057885a  MOV dword ptr [EBP + -0x18],EDX
+0057885d  MOV EAX,dword ptr [EBP + 0x8]
+00578860  MOV ECX,dword ptr [EAX + 0x20]
+00578863  MOV dword ptr [EBP + -0x14],ECX
+00578866  MOV EDX,dword ptr [EBP + 0x8]
+00578869  MOV EAX,dword ptr [EDX + 0x24]
+0057886c  MOV dword ptr [EBP + -0xc],EAX
+0057886f  MOV ECX,dword ptr [EBP + 0x8]
+00578872  MOV EDX,dword ptr [ECX + 0x28]
+00578875  MOV dword ptr [EBP + -0x4],EDX
+00578878  MOV EAX,dword ptr [EBP + 0x8]
+0057887b  MOV ECX,dword ptr [EAX + 0x2c]
+0057887e  MOV dword ptr [EBP + -0x28],ECX
+00578881  MOV EDX,dword ptr [EBP + 0x8]
+00578884  MOV EAX,dword ptr [EDX + 0x30]
+00578887  MOV dword ptr [EBP + -0x24],EAX
+0057888a  MOV ECX,dword ptr [EBP + 0x8]
+0057888d  MOV EDX,dword ptr [ECX + 0x34]
+00578890  MOV dword ptr [EBP + -0x8],EDX
+00578893  MOV EAX,dword ptr [EBP + -0x20]
+00578896  NOT EAX
+00578898  AND EAX,dword ptr [EBP + 0xc]
+0057889b  MOV ECX,dword ptr [EBP + -0x20]
+0057889e  NOT ECX
+005788a0  AND ECX,dword ptr [EBP + 0xc]
+005788a3  ADD ECX,dword ptr [EBP + -0x18]
+005788a6  IMUL ECX,dword ptr [EBP + -0x1c]
+005788aa  XOR EAX,ECX
+005788ac  MOV EDX,dword ptr [EBP + -0x20]
+005788af  NOT EDX
+005788b1  AND EDX,dword ptr [EBP + 0xc]
+005788b4  ADD EDX,dword ptr [EBP + -0xc]
+005788b7  IMUL EDX,dword ptr [EBP + -0x14]
+005788bb  XOR EAX,EDX
+005788bd  AND EAX,dword ptr [EBP + -0x20]
+005788c0  XOR EAX,dword ptr [EBP + 0xc]
+005788c3  MOV ECX,dword ptr [EBP + -0x20]
+005788c6  NOT ECX
+005788c8  AND ECX,dword ptr [EBP + 0xc]
+005788cb  MOV EDX,dword ptr [EBP + -0x20]
+005788ce  NOT EDX
+005788d0  AND EDX,dword ptr [EBP + 0xc]
+005788d3  ADD EDX,dword ptr [EBP + -0x18]
+005788d6  IMUL EDX,dword ptr [EBP + -0x1c]
+005788da  XOR ECX,EDX
+005788dc  MOV EDX,dword ptr [EBP + -0x20]
+005788df  NOT EDX
+005788e1  AND EDX,dword ptr [EBP + 0xc]
+005788e4  ADD EDX,dword ptr [EBP + -0xc]
+005788e7  IMUL EDX,dword ptr [EBP + -0x14]
+005788eb  XOR ECX,EDX
+005788ed  AND ECX,dword ptr [EBP + -0x20]
+005788f0  XOR ECX,dword ptr [EBP + 0xc]
+005788f3  AND ECX,dword ptr [EBP + -0x20]
+005788f6  MOV EDX,dword ptr [EBP + -0x20]
+005788f9  NOT EDX
+005788fb  AND EDX,dword ptr [EBP + 0xc]
+005788fe  MOV ESI,dword ptr [EBP + -0x20]
+00578901  NOT ESI
+00578903  AND ESI,dword ptr [EBP + 0xc]
+00578906  ADD ESI,dword ptr [EBP + -0x18]
+00578909  IMUL ESI,dword ptr [EBP + -0x1c]
+0057890d  XOR EDX,ESI
+0057890f  MOV ESI,dword ptr [EBP + -0x20]
+00578912  NOT ESI
+00578914  AND ESI,dword ptr [EBP + 0xc]
+00578917  ADD ESI,dword ptr [EBP + -0xc]
+0057891a  IMUL ESI,dword ptr [EBP + -0x14]
+0057891e  XOR EDX,ESI
+00578920  AND EDX,dword ptr [EBP + -0x20]
+00578923  XOR EDX,dword ptr [EBP + 0xc]
+00578926  AND EDX,dword ptr [EBP + -0x20]
+00578929  ADD EDX,dword ptr [EBP + -0x4]
+0057892c  IMUL EDX,dword ptr [EBP + -0x28]
+00578930  XOR ECX,EDX
+00578932  MOV EDX,dword ptr [EBP + -0x20]
+00578935  NOT EDX
+00578937  AND EDX,dword ptr [EBP + 0xc]
+0057893a  MOV ESI,dword ptr [EBP + -0x20]
+0057893d  NOT ESI
+0057893f  AND ESI,dword ptr [EBP + 0xc]
+00578942  ADD ESI,dword ptr [EBP + -0x18]
+00578945  IMUL ESI,dword ptr [EBP + -0x1c]
+00578949  XOR EDX,ESI
+0057894b  MOV ESI,dword ptr [EBP + -0x20]
+0057894e  NOT ESI
+00578950  AND ESI,dword ptr [EBP + 0xc]
+00578953  ADD ESI,dword ptr [EBP + -0xc]
+00578956  IMUL ESI,dword ptr [EBP + -0x14]
+0057895a  XOR EDX,ESI
+0057895c  AND EDX,dword ptr [EBP + -0x20]
+0057895f  XOR EDX,dword ptr [EBP + 0xc]
+00578962  AND EDX,dword ptr [EBP + -0x20]
+00578965  ADD EDX,dword ptr [EBP + -0x24]
+00578968  IMUL EDX,dword ptr [EBP + -0x8]
+0057896c  XOR ECX,EDX
+0057896e  MOV EDX,dword ptr [EBP + -0x20]
+00578971  NOT EDX
+00578973  AND ECX,EDX
+00578975  XOR EAX,ECX
+00578977  MOV dword ptr [EBP + -0x10],EAX
+0057897a  PUSH EAX
+0057897b  MOV EAX,0xcfcecdcc
+00578980  MOV EAX,0x57882d
+00578985  MOV EAX,0x0
+0057898a  MOV EAX,0x0
+0057898f  MOV EAX,0xcecdcccb
+00578994  POP EAX
+00578995  MOV EAX,dword ptr [EBP + -0x10]
+00578998  POP ESI
+00578999  MOV ESP,EBP
+0057899b  POP EBP
+0057899c  RET

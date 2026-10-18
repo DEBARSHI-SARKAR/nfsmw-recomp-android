@@ -1,0 +1,9 @@
+00515960  FILD dword ptr [0x00987f54]
+00515966  MOV EAX,dword ptr [ESP + 0x4]
+0051596a  MOV ECX,dword ptr [ESP + 0x8]
+0051596e  FSUB float ptr [0x00894b40]
+00515974  FSTP float ptr [EAX]
+00515976  FILD dword ptr [0x00987f58]
+0051597c  FSUB float ptr [0x00894b38]
+00515982  FSTP float ptr [ECX]
+00515984  RET

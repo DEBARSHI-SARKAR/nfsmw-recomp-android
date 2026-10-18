@@ -1,0 +1,73 @@
+007ed17b  PUSH EBP
+007ed17c  MOV EBP,ESP
+007ed17e  MOV EAX,[0x009bb13c]
+007ed183  PUSH ESI
+007ed184  PUSH EDI
+007ed185  PUSH dword ptr [0x009076ec]
+007ed18b  PUSH dword ptr [EAX + 0x8c]
+007ed191  CALL 0x007f0df9
+007ed196  MOV EAX,[0x009076e8]
+007ed19b  SHL EAX,0x2
+007ed19e  PUSH EAX
+007ed19f  MOV EAX,[0x009bb13c]
+007ed1a4  PUSH dword ptr [EAX + 0x88]
+007ed1aa  CALL 0x007f0df9
+007ed1af  MOV EAX,[0x009bb13c]
+007ed1b4  MOV ESI,dword ptr [EBP + 0x8]
+007ed1b7  LEA ECX,[EAX + 0x8c]
+007ed1bd  MOV EDI,dword ptr [ECX]
+007ed1bf  ADD ESP,0x10
+007ed1c2  MOV DL,byte ptr [ESI]
+007ed1c4  INC ESI
+007ed1c5  MOV byte ptr [EDI],DL
+007ed1c7  INC EDI
+007ed1c8  TEST DL,DL
+007ed1ca  JNZ 0x007ed1c2
+007ed1cc  MOV ECX,dword ptr [ECX]
+007ed1ce  MOV EAX,dword ptr [EAX + 0x88]
+007ed1d4  XOR ESI,ESI
+007ed1d6  PUSH 0x3b
+007ed1d8  MOV dword ptr [EAX],ECX
+007ed1da  INC ESI
+007ed1db  PUSH ECX
+007ed1dc  JMP 0x007ed206
+007ed1de  MOV CL,byte ptr [EAX + -0x1]
+007ed1e1  CMP CL,0x2f
+007ed1e4  MOV byte ptr [EAX],0x0
+007ed1e7  JZ 0x007ed1ee
+007ed1e9  CMP CL,0x5c
+007ed1ec  JNZ 0x007ed1f2
+007ed1ee  MOV byte ptr [EAX + -0x1],0x0
+007ed1f2  MOV ECX,dword ptr [0x009bb13c]
+007ed1f8  MOV ECX,dword ptr [ECX + 0x88]
+007ed1fe  INC EAX
+007ed1ff  PUSH 0x3b
+007ed201  MOV dword ptr [ECX + ESI*0x4],EAX
+007ed204  INC ESI
+007ed205  PUSH EAX
+007ed206  CALL 0x007c97c0
+007ed20b  TEST EAX,EAX
+007ed20d  POP ECX
+007ed20e  POP ECX
+007ed20f  JNZ 0x007ed1de
+007ed211  MOV EAX,[0x009bb13c]
+007ed216  MOV EAX,dword ptr [EAX + 0x88]
+007ed21c  MOV ECX,dword ptr [EAX + ESI*0x4 + -0x4]
+007ed220  MOV EAX,ECX
+007ed222  LEA ESI,[EAX + 0x1]
+007ed225  MOV DL,byte ptr [EAX]
+007ed227  INC EAX
+007ed228  TEST DL,DL
+007ed22a  JNZ 0x007ed225
+007ed22c  SUB EAX,ESI
+007ed22e  ADD ECX,EAX
+007ed230  MOV AL,byte ptr [ECX + -0x1]
+007ed233  CMP AL,0x2f
+007ed235  POP EDI
+007ed236  POP ESI
+007ed237  JZ 0x007ed23d
+007ed239  CMP AL,0x5c
+007ed23b  JNZ 0x007ed241
+007ed23d  MOV byte ptr [ECX + -0x1],0x0
+007ed241  POP EBP
+007ed242  RET

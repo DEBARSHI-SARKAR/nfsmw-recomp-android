@@ -1,0 +1,5 @@
+0078e720  MOV EAX,dword ptr [ESP + 0x4]
+0078e724  LEA EAX,[EAX + EAX*0x2]
+0078e727  SHL EAX,0x4
+0078e72a  MOV EAX,dword ptr [EAX + ECX*0x1 + 0x50]
+0078e72e  RET 0x4

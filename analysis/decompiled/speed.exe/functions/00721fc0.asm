@@ -1,0 +1,34 @@
+00721fc0  PUSH EBX
+00721fc1  PUSH EBP
+00721fc2  MOV EBP,dword ptr [ESP + 0x10]
+00721fc6  PUSH ESI
+00721fc7  PUSH EDI
+00721fc8  MOV EDI,dword ptr [ESP + 0x14]
+00721fcc  FLD float ptr [EDI + 0x4]
+00721fcf  MOV ESI,ECX
+00721fd1  FLD float ptr [EDI + 0x8]
+00721fd4  FLD float ptr [EBP]
+00721fd7  FMUL float ptr [0x008b2a04]
+00721fdd  CALL 0x007c4b80
+00721fe2  FLD float ptr [EBP + 0x4]
+00721fe5  FMUL float ptr [0x008b2a04]
+00721feb  MOV EBX,EAX
+00721fed  CALL 0x007c4b80
+00721ff2  FLD float ptr [EBP + 0x8]
+00721ff5  FMUL float ptr [0x008b2a04]
+00721ffb  MOV dword ptr [ESP + 0x14],EAX
+00721fff  CALL 0x007c4b80
+00722004  FXCH
+00722006  MOV ECX,dword ptr [EDI]
+00722008  FSTP float ptr [ESI + 0x4]
+0072200b  MOV DL,byte ptr [ESP + 0x14]
+0072200f  POP EDI
+00722010  FSTP float ptr [ESI + 0x8]
+00722013  MOV byte ptr [ESI + 0xc],BL
+00722016  MOV dword ptr [ESI],ECX
+00722018  MOV byte ptr [ESI + 0xd],DL
+0072201b  MOV byte ptr [ESI + 0xe],AL
+0072201e  POP ESI
+0072201f  POP EBP
+00722020  POP EBX
+00722021  RET 0x8

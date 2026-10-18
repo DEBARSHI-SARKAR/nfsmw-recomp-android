@@ -1,0 +1,23 @@
+0067fe10  PUSH -0x1
+0067fe12  PUSH 0x87b3c8
+0067fe17  MOV EAX,FS:[0x0]
+0067fe1d  PUSH EAX
+0067fe1e  MOV dword ptr FS:[0x0],ESP
+0067fe25  PUSH ECX
+0067fe26  XOR EAX,EAX
+0067fe28  PUSH ESI
+0067fe29  MOV ESI,ECX
+0067fe2b  MOV dword ptr [ESP + 0x4],ESI
+0067fe2f  MOV dword ptr [ESI + 0x4],EAX
+0067fe32  MOV dword ptr [ESI + 0x8],EAX
+0067fe35  MOV dword ptr [ESI + 0xc],EAX
+0067fe38  PUSH 0xa0
+0067fe3d  MOV dword ptr [ESP + 0x14],EAX
+0067fe41  MOV dword ptr [ESI],0x8aa424
+0067fe47  CALL 0x00674890
+0067fe4c  MOV ECX,dword ptr [ESP + 0x8]
+0067fe50  MOV EAX,ESI
+0067fe52  POP ESI
+0067fe53  MOV dword ptr FS:[0x0],ECX
+0067fe5a  ADD ESP,0x10
+0067fe5d  RET

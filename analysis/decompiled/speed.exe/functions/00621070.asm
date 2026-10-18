@@ -1,0 +1,8 @@
+00621070  MOV EDX,dword ptr [ESP + 0x8]
+00621074  MOV EAX,ECX
+00621076  MOV ECX,dword ptr [ESP + 0x4]
+0062107a  MOV dword ptr [EAX + 0x4],0x10
+00621081  MOV dword ptr [EAX],0x8a6940
+00621087  MOV dword ptr [EAX + 0x8],ECX
+0062108a  MOV dword ptr [EAX + 0xc],EDX
+0062108d  RET 0x8

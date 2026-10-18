@@ -1,0 +1,18 @@
+0084bdf0  MOV EAX,dword ptr [ESP + 0x4]
+0084bdf4  XOR EDX,EDX
+0084bdf6  CMP EAX,EDX
+0084bdf8  JNZ 0x0084bdff
+0084bdfa  MOV EAX,0x9c3718
+0084bdff  MOV ECX,dword ptr [EAX + 0x4]
+0084be02  CMP ECX,0x1
+0084be05  JBE 0x0084be0c
+0084be07  DEC ECX
+0084be08  MOV dword ptr [EAX + 0x4],ECX
+0084be0b  RET
+0084be0c  MOV dword ptr [EAX],EDX
+0084be0e  MOV dword ptr [EAX + 0x4],EDX
+0084be11  MOV dword ptr [EAX + 0x8],EDX
+0084be14  ADD EAX,0xc
+0084be17  PUSH EAX
+0084be18  CALL dword ptr [0x008901bc]
+0084be1e  RET

@@ -1,0 +1,37 @@
+0066af60  PUSH ESI
+0066af61  MOV ESI,ECX
+0066af63  FLD float ptr [ESI + 0xd4]
+0066af69  FCOMP float ptr [0x00890968]
+0066af6f  FNSTSW AX
+0066af71  TEST AH,0x41
+0066af74  JNZ 0x0066afd8
+0066af76  MOV EAX,dword ptr [ESI + 0x34]
+0066af79  LEA ECX,[ESI + 0x34]
+0066af7c  CALL dword ptr [EAX + 0x2c]
+0066af7f  TEST AL,AL
+0066af81  JNZ 0x0066afb0
+0066af83  FLD float ptr [ESI + 0xd4]
+0066af89  FSUB float ptr [ESP + 0x8]
+0066af8d  FST float ptr [ESI + 0xd4]
+0066af93  FCOMP float ptr [0x00890968]
+0066af99  FNSTSW AX
+0066af9b  TEST AH,0x5
+0066af9e  JP 0x0066afd8
+0066afa0  MOV dword ptr [ESI + 0xd4],0x0
+0066afaa  MOV AL,0x1
+0066afac  POP ESI
+0066afad  RET 0x4
+0066afb0  PUSH 0x0
+0066afb2  PUSH 0xc141f7f8
+0066afb7  LEA ECX,[ESI + 0xa4]
+0066afbd  CALL 0x00454810
+0066afc2  TEST EAX,EAX
+0066afc4  JNZ 0x0066afd0
+0066afc6  PUSH 0x4
+0066afc8  CALL 0x006269b0
+0066afcd  ADD ESP,0x4
+0066afd0  MOV ECX,dword ptr [EAX]
+0066afd2  MOV dword ptr [ESI + 0xd4],ECX
+0066afd8  XOR AL,AL
+0066afda  POP ESI
+0066afdb  RET 0x4

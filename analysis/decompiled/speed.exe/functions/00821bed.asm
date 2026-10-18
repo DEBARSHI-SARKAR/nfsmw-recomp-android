@@ -1,0 +1,13 @@
+00821bed  MOV EDX,dword ptr [ESP + 0x4]
+00821bf1  MOV EAX,dword ptr [EDX]
+00821bf3  TEST EAX,EAX
+00821bf5  JZ 0x00821c0b
+00821bf7  MOV ECX,dword ptr [EAX]
+00821bf9  TEST ECX,ECX
+00821bfb  MOV dword ptr [EDX],ECX
+00821bfd  JNZ 0x00821c04
+00821bff  AND dword ptr [EDX + 0x4],ECX
+00821c02  JMP 0x00821c08
+00821c04  AND dword ptr [ECX + 0x4],0x0
+00821c08  DEC dword ptr [EDX + 0x8]
+00821c0b  RET

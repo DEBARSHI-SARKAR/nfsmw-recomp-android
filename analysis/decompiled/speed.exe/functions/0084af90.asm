@@ -1,0 +1,9 @@
+0084af90  MOV ECX,dword ptr [ESP + 0x8]
+0084af94  MOV EAX,dword ptr [ESP + 0x4]
+0084af98  OR word ptr [EAX + 0x16],CX
+0084af9c  MOV EAX,dword ptr [EAX + 0x18]
+0084af9f  PUSH ECX
+0084afa0  PUSH EAX
+0084afa1  CALL 0x00862164
+0084afa6  XOR EAX,EAX
+0084afa8  RET

@@ -1,0 +1,45 @@
+007eed65  PUSH EBP
+007eed66  MOV EBP,ESP
+007eed68  SUB ESP,0x104
+007eed6e  LEA EDX,[EBP + 0xfffffefc]
+007eed74  SUB EDX,EAX
+007eed76  MOV CL,byte ptr [EAX]
+007eed78  MOV byte ptr [EDX + EAX*0x1],CL
+007eed7b  INC EAX
+007eed7c  TEST CL,CL
+007eed7e  JNZ 0x007eed76
+007eed80  PUSH ESI
+007eed81  PUSH 0x5c
+007eed83  LEA EAX,[EBP + 0xfffffefc]
+007eed89  PUSH EAX
+007eed8a  JMP 0x007eedaf
+007eed8c  PUSH 0x0
+007eed8e  LEA EAX,[EBP + 0xfffffefc]
+007eed94  PUSH EAX
+007eed95  MOV byte ptr [ESI],0x0
+007eed98  CALL dword ptr [0x00890088]
+007eed9e  TEST EAX,EAX
+007eeda0  JNZ 0x007eeda8
+007eeda2  CALL dword ptr [0x00890188]
+007eeda8  MOV byte ptr [ESI],0x5c
+007eedab  PUSH 0x5c
+007eedad  INC ESI
+007eedae  PUSH ESI
+007eedaf  CALL 0x007c97c0
+007eedb4  MOV ESI,EAX
+007eedb6  TEST ESI,ESI
+007eedb8  POP ECX
+007eedb9  POP ECX
+007eedba  JNZ 0x007eed8c
+007eedbc  LEA EAX,[EBP + 0xfffffefc]
+007eedc2  PUSH 0x2f
+007eedc4  PUSH EAX
+007eedc5  CALL 0x007c97c0
+007eedca  MOV ESI,EAX
+007eedcc  TEST ESI,ESI
+007eedce  POP ECX
+007eedcf  POP ECX
+007eedd0  JNZ 0x007eed8c
+007eedd2  POP ESI
+007eedd3  LEAVE
+007eedd4  RET

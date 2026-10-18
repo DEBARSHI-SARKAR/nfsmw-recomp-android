@@ -1,0 +1,22 @@
+006d9980  PUSH ESI
+006d9981  MOV ESI,ECX
+006d9983  CALL 0x00466410
+006d9988  TEST EAX,EAX
+006d998a  JZ 0x006d99a4
+006d998c  MOV ECX,dword ptr [ESP + 0x8]
+006d9990  MOV dword ptr [EAX + 0x8],ECX
+006d9993  MOV ECX,dword ptr [ESI + 0x4]
+006d9996  MOV dword ptr [ECX],EAX
+006d9998  MOV dword ptr [ESI + 0x4],EAX
+006d999b  MOV dword ptr [EAX],ESI
+006d999d  MOV dword ptr [EAX + 0x4],ECX
+006d99a0  POP ESI
+006d99a1  RET 0x4
+006d99a4  MOV ECX,dword ptr [ESI + 0x4]
+006d99a7  XOR EAX,EAX
+006d99a9  MOV dword ptr [ECX],EAX
+006d99ab  MOV dword ptr [ESI + 0x4],EAX
+006d99ae  MOV dword ptr [EAX],ESI
+006d99b0  MOV dword ptr [EAX + 0x4],ECX
+006d99b3  POP ESI
+006d99b4  RET 0x4

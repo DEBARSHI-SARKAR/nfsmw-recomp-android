@@ -1,0 +1,43 @@
+004afed0  MOV EAX,dword ptr [ESP + 0x4]
+004afed4  MOV EAX,dword ptr [EAX + 0x8]
+004afed7  CMP EAX,0x3e275e32
+004afedc  JA 0x004aff1c
+004afede  JZ 0x004aff16
+004afee0  CMP EAX,0x32cce9f5
+004afee5  JA 0x004aff09
+004afee7  JZ 0x004aff03
+004afee9  CMP EAX,0x47645fb
+004afeee  JZ 0x004afefd
+004afef0  CMP EAX,0x15562639
+004afef5  JNZ 0x004aff4c
+004afef7  MOV EAX,0x100
+004afefc  RET
+004afefd  MOV EAX,0x400
+004aff02  RET
+004aff03  MOV EAX,0x20
+004aff08  RET
+004aff09  CMP EAX,0x336fcacf
+004aff0e  JNZ 0x004aff4c
+004aff10  MOV EAX,0x10
+004aff15  RET
+004aff16  MOV EAX,0x4
+004aff1b  RET
+004aff1c  CMP EAX,0xd5add1aa
+004aff21  JA 0x004aff45
+004aff23  JZ 0x004aff3f
+004aff25  CMP EAX,0x57f6e227
+004aff2a  JZ 0x004aff39
+004aff2c  CMP EAX,0x8fe44dfe
+004aff31  JNZ 0x004aff4c
+004aff33  MOV EAX,0x40
+004aff38  RET
+004aff39  MOV EAX,0x2
+004aff3e  RET
+004aff3f  MOV EAX,0x80
+004aff44  RET
+004aff45  CMP EAX,0xfdc476a6
+004aff4a  JZ 0x004aff4f
+004aff4c  XOR EAX,EAX
+004aff4e  RET
+004aff4f  MOV EAX,0x8
+004aff54  RET

@@ -1,0 +1,22 @@
+006ea1c0  PUSH ESI
+006ea1c1  MOV ESI,dword ptr [ECX + 0x18]
+006ea1c4  XOR EAX,EAX
+006ea1c6  TEST ESI,ESI
+006ea1c8  PUSH EDI
+006ea1c9  JLE 0x006ea1e1
+006ea1cb  MOV EDI,dword ptr [ESP + 0xc]
+006ea1cf  LEA EDX,[ECX + 0xe9c]
+006ea1d5  CMP EDI,dword ptr [EDX]
+006ea1d7  JZ 0x006ea1e9
+006ea1d9  INC EAX
+006ea1da  ADD EDX,0x8
+006ea1dd  CMP EAX,ESI
+006ea1df  JL 0x006ea1d5
+006ea1e1  POP EDI
+006ea1e2  POP ESI
+006ea1e3  OR EAX,0xffffffff
+006ea1e6  RET 0x4
+006ea1e9  MOV EAX,dword ptr [ECX + EAX*0x8 + 0xea0]
+006ea1f0  POP EDI
+006ea1f1  POP ESI
+006ea1f2  RET 0x4

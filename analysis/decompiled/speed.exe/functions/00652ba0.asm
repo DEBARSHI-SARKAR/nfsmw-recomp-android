@@ -1,0 +1,66 @@
+00652ba0  MOV EAX,dword ptr [ECX]
+00652ba2  CMP EAX,0x6
+00652ba5  JA 0x00652c57
+00652bab  JMP dword ptr [EAX*0x4 + 0x652c60]
+00652bb2  MOV EAX,dword ptr [ECX + 0x4]
+00652bb5  MOV DL,byte ptr [EAX]
+00652bb7  MOV EAX,dword ptr [ESP + 0x4]
+00652bbb  MOV byte ptr [EAX],DL
+00652bbd  MOV EDX,dword ptr [ECX + 0x4]
+00652bc0  MOV CL,byte ptr [ECX + 0x8]
+00652bc3  MOV byte ptr [EDX],CL
+00652bc5  ADD EAX,0x4
+00652bc8  RET 0x4
+00652bcb  MOV EDX,dword ptr [ECX + 0x4]
+00652bce  MOV DX,word ptr [EDX]
+00652bd1  MOV EAX,dword ptr [ESP + 0x4]
+00652bd5  MOV word ptr [EAX],DX
+00652bd8  MOV EDX,dword ptr [ECX + 0x4]
+00652bdb  MOV CX,word ptr [ECX + 0x8]
+00652bdf  MOV word ptr [EDX],CX
+00652be2  ADD EAX,0x4
+00652be5  RET 0x4
+00652be8  MOV EDX,dword ptr [ECX + 0x4]
+00652beb  MOV EDX,dword ptr [EDX]
+00652bed  MOV EAX,dword ptr [ESP + 0x4]
+00652bf1  MOV dword ptr [EAX],EDX
+00652bf3  MOV EDX,dword ptr [ECX + 0x4]
+00652bf6  MOV ECX,dword ptr [ECX + 0x8]
+00652bf9  MOV dword ptr [EDX],ECX
+00652bfb  ADD EAX,0x4
+00652bfe  RET 0x4
+00652c01  MOV EDX,dword ptr [ECX + 0x8]
+00652c04  PUSH EDX
+00652c05  PUSH 0x1
+00652c07  CALL dword ptr [ECX + 0x4]
+00652c0a  MOV ECX,dword ptr [ESP + 0xc]
+00652c0e  MOV dword ptr [ECX],EAX
+00652c10  ADD ESP,0x8
+00652c13  LEA EAX,[ECX + 0x4]
+00652c16  RET 0x4
+00652c19  MOV EAX,dword ptr [ECX + 0x8]
+00652c1c  PUSH EAX
+00652c1d  PUSH 0x1
+00652c1f  CALL dword ptr [ECX + 0x4]
+00652c22  MOV EAX,dword ptr [ESP + 0xc]
+00652c26  FSTP float ptr [EAX]
+00652c28  ADD ESP,0x8
+00652c2b  ADD EAX,0x4
+00652c2e  RET 0x4
+00652c31  MOV EAX,dword ptr [ESP + 0x4]
+00652c35  PUSH ESI
+00652c36  MOV ESI,dword ptr [ECX + 0x4]
+00652c39  CMP dword ptr [ESI],0x7
+00652c3c  JZ 0x00652c53
+00652c3e  MOV EDI,EDI
+00652c40  PUSH EAX
+00652c41  MOV ECX,ESI
+00652c43  CALL 0x00652ba0
+00652c48  MOV ECX,dword ptr [ESI + 0xc]
+00652c4b  ADD ESI,0xc
+00652c4e  CMP ECX,0x7
+00652c51  JNZ 0x00652c40
+00652c53  POP ESI
+00652c54  RET 0x4
+00652c57  MOV EAX,dword ptr [ESP + 0x4]
+00652c5b  RET 0x4

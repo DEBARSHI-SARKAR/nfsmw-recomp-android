@@ -1,0 +1,41 @@
+006c9c80  PUSH ESI
+006c9c81  MOV ESI,ECX
+006c9c83  CALL 0x006c9b60
+006c9c88  CALL 0x00628d00
+006c9c8d  MOV dword ptr [ESI + 0x1c],EAX
+006c9c90  CALL 0x00628cd0
+006c9c95  MOV CL,byte ptr [ESI + 0x20]
+006c9c98  TEST CL,CL
+006c9c9a  SETZ DL
+006c9c9d  AND DL,AL
+006c9c9f  MOV byte ptr [ESI + 0x21],DL
+006c9ca2  TEST AL,AL
+006c9ca4  SETZ DL
+006c9ca7  AND DL,CL
+006c9ca9  MOV byte ptr [ESI + 0x22],DL
+006c9cac  MOV byte ptr [ESI + 0x20],AL
+006c9caf  CALL 0x00628ce0
+006c9cb4  MOV CL,byte ptr [ESI + 0x23]
+006c9cb7  TEST CL,CL
+006c9cb9  SETZ DL
+006c9cbc  AND DL,AL
+006c9cbe  MOV byte ptr [ESI + 0x24],DL
+006c9cc1  TEST AL,AL
+006c9cc3  SETZ DL
+006c9cc6  AND DL,CL
+006c9cc8  MOV byte ptr [ESI + 0x25],DL
+006c9ccb  MOV byte ptr [ESI + 0x23],AL
+006c9cce  CALL 0x00628cf0
+006c9cd3  MOV CL,byte ptr [ESI + 0x26]
+006c9cd6  TEST CL,CL
+006c9cd8  SETZ DL
+006c9cdb  AND DL,AL
+006c9cdd  MOV byte ptr [ESI + 0x27],DL
+006c9ce0  TEST AL,AL
+006c9ce2  SETZ DL
+006c9ce5  AND DL,CL
+006c9ce7  MOV byte ptr [ESI + 0x26],AL
+006c9cea  MOV byte ptr [ESI + 0x28],DL
+006c9ced  XOR EAX,EAX
+006c9cef  POP ESI
+006c9cf0  RET

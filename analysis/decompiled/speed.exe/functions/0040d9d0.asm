@@ -1,0 +1,12 @@
+0040d9d0  MOV EAX,dword ptr [ESP + 0x4]
+0040d9d4  MOV ECX,dword ptr [EAX]
+0040d9d6  MOV DL,byte ptr [ECX + 0xf]
+0040d9d9  TEST DL,DL
+0040d9db  JNZ 0x0040d9eb
+0040d9dd  LEA ECX,[ECX]
+0040d9e0  MOV EAX,ECX
+0040d9e2  MOV ECX,dword ptr [EAX]
+0040d9e4  MOV DL,byte ptr [ECX + 0xf]
+0040d9e7  TEST DL,DL
+0040d9e9  JZ 0x0040d9e0
+0040d9eb  RET

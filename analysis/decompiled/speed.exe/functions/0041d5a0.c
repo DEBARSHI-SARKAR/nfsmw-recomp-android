@@ -1,0 +1,14 @@
+/* speed.exe 0041d5a0 FUN_0041d5a0; analysis pseudocode, not buildable source.
+ * calls 007c4840 FID_conflict:_memcpy
+ */
+
+void FUN_0041d5a0(void *param_1,int param_2,int param_3)
+
+{
+  int iVar1;
+  
+  iVar1 = param_2 - (int)param_1 >> 2;
+  FID_conflict__memcpy((void *)(param_3 + iVar1 * -4),param_1,iVar1 * 4);
+  return;
+}
+

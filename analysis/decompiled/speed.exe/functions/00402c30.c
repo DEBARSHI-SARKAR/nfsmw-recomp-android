@@ -1,0 +1,17 @@
+/* speed.exe 00402c30 FUN_00402c30; analysis pseudocode, not buildable source.
+ * calls 006269b0 FUN_006269b0
+ * calls 00454810 FUN_00454810
+ */
+
+void FUN_00402c30(void)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_00454810(0xcc320329,0);
+  if (iVar1 == 0) {
+    FUN_006269b0(4);
+  }
+  return;
+}
+

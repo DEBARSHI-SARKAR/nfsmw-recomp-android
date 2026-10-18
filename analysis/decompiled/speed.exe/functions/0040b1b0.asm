@@ -1,0 +1,70 @@
+0040b1b0  FLD float ptr [ESP + 0x4]
+0040b1b4  FMUL float ptr [0x00890cd4]
+0040b1ba  FCOM float ptr [0x00890cd4]
+0040b1c0  FNSTSW AX
+0040b1c2  TEST AH,0x41
+0040b1c5  JZ 0x0040b1cf
+0040b1c7  FSTP ST0
+0040b1c9  FLD float ptr [0x00890cd4]
+0040b1cf  MOV EAX,dword ptr [ESP + 0x8]
+0040b1d3  MOV ECX,dword ptr [ESP + 0x1c]
+0040b1d7  PUSH ESI
+0040b1d8  MOV ESI,dword ptr [EAX]
+0040b1da  MOV EDX,ECX
+0040b1dc  MOV dword ptr [EDX],ESI
+0040b1de  MOV ESI,dword ptr [EAX + 0x4]
+0040b1e1  MOV dword ptr [EDX + 0x4],ESI
+0040b1e4  MOV EAX,dword ptr [EAX + 0x8]
+0040b1e7  MOV dword ptr [EDX + 0x8],EAX
+0040b1ea  MOV EAX,dword ptr [ESP + 0x10]
+0040b1ee  MOV EDX,dword ptr [ESP + 0x18]
+0040b1f2  FLD float ptr [EAX + 0x8]
+0040b1f5  FMUL float ptr [EDX + 0x8]
+0040b1f8  POP ESI
+0040b1f9  FLD float ptr [EAX + 0x4]
+0040b1fc  FMUL float ptr [EDX + 0x4]
+0040b1ff  FADDP
+0040b201  FLD float ptr [EAX]
+0040b203  FMUL float ptr [EDX]
+0040b205  FADDP
+0040b207  FSTP float ptr [ESP + 0x8]
+0040b20b  FLD float ptr [ESP + 0x10]
+0040b20f  FLD ST1
+0040b211  FLD ST2
+0040b213  FCOMP float ptr [ESP + 0x4]
+0040b217  FNSTSW AX
+0040b219  TEST AH,0x5
+0040b21c  JP 0x0040b26a
+0040b21e  FLD ST2
+0040b220  FMUL float ptr [ESP + 0x18]
+0040b224  FLD ST0
+0040b226  FADDP ST3,ST0
+0040b228  FLD ST2
+0040b22a  FMUL float ptr [0x0089096c]
+0040b230  FLD ST0
+0040b232  FSIN
+0040b234  FMUL float ptr [ESP + 0x8]
+0040b238  FMUL ST5
+0040b23a  FADD float ptr [ECX]
+0040b23c  FSTP float ptr [ECX]
+0040b23e  FCOS
+0040b240  FMUL float ptr [ESP + 0x8]
+0040b244  FMUL ST4
+0040b246  FADD float ptr [ECX + 0x8]
+0040b249  FSTP float ptr [ECX + 0x8]
+0040b24c  FLD ST3
+0040b24e  FMUL float ptr [EDX + 0x4]
+0040b251  FADD float ptr [ECX + 0x4]
+0040b254  FSTP float ptr [ECX + 0x4]
+0040b257  FLD ST3
+0040b259  FADDP ST2,ST0
+0040b25b  FLD ST1
+0040b25d  FCOMP float ptr [ESP + 0x4]
+0040b261  FNSTSW AX
+0040b263  TEST AH,0x5
+0040b266  JNP 0x0040b224
+0040b268  FSTP ST0
+0040b26a  FSTP ST0
+0040b26c  FSTP ST0
+0040b26e  FSTP ST0
+0040b270  RET

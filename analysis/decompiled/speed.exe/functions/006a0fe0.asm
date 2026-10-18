@@ -1,0 +1,64 @@
+006a0fe0  PUSH -0x1
+006a0fe2  PUSH 0x87c7b5
+006a0fe7  MOV EAX,FS:[0x0]
+006a0fed  PUSH EAX
+006a0fee  MOV dword ptr FS:[0x0],ESP
+006a0ff5  SUB ESP,0x10
+006a0ff8  PUSH EBX
+006a0ff9  PUSH EBP
+006a0ffa  PUSH ESI
+006a0ffb  MOV ESI,ECX
+006a0ffd  PUSH EDI
+006a0ffe  LEA EDI,[ESI + 0x4c]
+006a1001  LEA EBX,[ESI + 0x54]
+006a1004  LEA EBP,[ESI + 0x60]
+006a1007  MOV dword ptr [ESP + 0x1c],ESI
+006a100b  MOV dword ptr [ESI],0x8ab838
+006a1011  MOV dword ptr [ESI + 0x8],0x8ab830
+006a1018  MOV dword ptr [EDI],0x8ab800
+006a101e  MOV dword ptr [EBX],0x8ab7c0
+006a1024  MOV dword ptr [ESI + 0x5c],0x8ab7bc
+006a102b  MOV dword ptr [EBP],0x8ab7ac
+006a1032  LEA ECX,[ESI + 0x128]
+006a1038  MOV dword ptr [ESP + 0x28],0x7
+006a1040  CALL 0x0045a430
+006a1045  LEA ECX,[ESI + 0x114]
+006a104b  MOV byte ptr [ESP + 0x28],0x6
+006a1050  CALL 0x0045a430
+006a1055  LEA ECX,[ESI + 0x100]
+006a105b  MOV byte ptr [ESP + 0x28],0x5
+006a1060  CALL 0x0045a430
+006a1065  LEA ECX,[ESI + 0xec]
+006a106b  MOV byte ptr [ESP + 0x28],0x4
+006a1070  CALL 0x0045a430
+006a1075  LEA ECX,[ESI + 0xd8]
+006a107b  MOV byte ptr [ESP + 0x28],0x3
+006a1080  CALL 0x0045a430
+006a1085  MOV dword ptr [EBP],0x890970
+006a108c  MOV ECX,dword ptr [EBP + 0x4]
+006a108f  PUSH EBP
+006a1090  MOV byte ptr [ESP + 0x2c],0x2
+006a1095  CALL 0x005d5a50
+006a109a  MOV dword ptr [EBX],0x890970
+006a10a0  MOV ECX,dword ptr [EBX + 0x4]
+006a10a3  PUSH EBX
+006a10a4  MOV byte ptr [ESP + 0x2c],0x1
+006a10a9  CALL 0x005d5a50
+006a10ae  MOV dword ptr [EDI],0x890970
+006a10b4  MOV ECX,dword ptr [EDI + 0x4]
+006a10b7  PUSH EDI
+006a10b8  MOV byte ptr [ESP + 0x2c],0x0
+006a10bd  CALL 0x005d5a50
+006a10c2  MOV ECX,ESI
+006a10c4  MOV dword ptr [ESP + 0x28],0xffffffff
+006a10cc  MOV dword ptr [ESI],0x890f28
+006a10d2  MOV dword ptr [ESI + 0x8],0x890f20
+006a10d9  CALL 0x006ee930
+006a10de  MOV ECX,dword ptr [ESP + 0x20]
+006a10e2  POP EDI
+006a10e3  POP ESI
+006a10e4  POP EBP
+006a10e5  POP EBX
+006a10e6  MOV dword ptr FS:[0x0],ECX
+006a10ed  ADD ESP,0x1c
+006a10f0  RET

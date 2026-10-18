@@ -1,0 +1,6 @@
+005f089a  MOV EDX,dword ptr [EBP + 0x10]
+005f089d  MOV EAX,dword ptr [EBP + -0x14]
+005f08a0  MOV ECX,dword ptr [EBP + -0x20]
+005f08a3  PUSH EDX
+005f08a4  PUSH EAX
+005f08a5  CALL 0x005defa0

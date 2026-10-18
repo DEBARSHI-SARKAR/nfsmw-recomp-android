@@ -1,0 +1,2 @@
+00625110  MOV dword ptr [ECX],0x8a66f8
+00625116  RET

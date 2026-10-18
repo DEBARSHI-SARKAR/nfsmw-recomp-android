@@ -1,0 +1,11 @@
+004dd690  PUSH ESI
+004dd691  MOV ESI,ECX
+004dd693  MOV ECX,dword ptr [ESI + 0x44]
+004dd696  TEST ECX,ECX
+004dd698  JZ 0x004dd6a0
+004dd69a  MOV EAX,dword ptr [ECX]
+004dd69c  PUSH 0x1
+004dd69e  CALL dword ptr [EAX]
+004dd6a0  MOV dword ptr [ESI + 0x44],0x0
+004dd6a7  POP ESI
+004dd6a8  RET

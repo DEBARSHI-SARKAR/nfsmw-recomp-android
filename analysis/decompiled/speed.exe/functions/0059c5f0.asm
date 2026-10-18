@@ -1,0 +1,16 @@
+0059c5f0  PUSH ESI
+0059c5f1  MOV ESI,ECX
+0059c5f3  MOV EAX,dword ptr [ESI + 0x4]
+0059c5f6  MOV ECX,dword ptr [EAX + 0x4]
+0059c5f9  PUSH ECX
+0059c5fa  MOV ECX,ESI
+0059c5fc  CALL 0x00594610
+0059c601  MOV EAX,dword ptr [ESI + 0x4]
+0059c604  MOV dword ptr [EAX + 0x4],EAX
+0059c607  MOV EAX,dword ptr [ESI + 0x4]
+0059c60a  MOV dword ptr [ESI + 0x8],0x0
+0059c611  MOV dword ptr [EAX],EAX
+0059c613  MOV ESI,dword ptr [ESI + 0x4]
+0059c616  MOV dword ptr [ESI + 0x8],ESI
+0059c619  POP ESI
+0059c61a  RET

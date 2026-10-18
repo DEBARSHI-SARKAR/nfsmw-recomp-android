@@ -1,0 +1,4 @@
+007cd2e8  PUSH 0xd
+007cd2ea  CALL 0x007d1010
+007cd2ef  ADD ESP,0x4
+007cd2f2  RET

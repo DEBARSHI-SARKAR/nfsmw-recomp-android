@@ -1,0 +1,7 @@
+004faa90  MOV EAX,dword ptr [ESP + 0x4]
+004faa94  MOV ECX,dword ptr [0x00916044]
+004faa9a  PUSH EAX
+004faa9b  PUSH ECX
+004faa9c  CALL 0x00463ca0
+004faaa1  ADD ESP,0x8
+004faaa4  RET

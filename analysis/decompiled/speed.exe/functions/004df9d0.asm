@@ -1,0 +1,11 @@
+004df9d0  MOV EAX,dword ptr [ECX + 0x11c]
+004df9d6  CMP EAX,0x3
+004df9d9  JZ 0x004df9e8
+004df9db  CMP EAX,0x4
+004df9de  JZ 0x004df9e8
+004df9e0  CMP EAX,0x5
+004df9e3  JZ 0x004df9e8
+004df9e5  XOR EAX,EAX
+004df9e7  RET
+004df9e8  MOV EAX,0x1
+004df9ed  RET

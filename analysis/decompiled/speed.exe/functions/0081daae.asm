@@ -1,0 +1,3 @@
+0081daae  CALL 0x0081d9ac
+0081dab3  XOR EAX,EAX
+0081dab5  RET

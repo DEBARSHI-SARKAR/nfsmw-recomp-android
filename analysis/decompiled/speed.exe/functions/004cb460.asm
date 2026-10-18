@@ -1,0 +1,9 @@
+004cb460  MOV EAX,dword ptr [ESP + 0x4]
+004cb464  PUSH EAX
+004cb465  CALL 0x004cb3f0
+004cb46a  TEST EAX,EAX
+004cb46c  JZ 0x004cb475
+004cb46e  MOVZX EAX,word ptr [EAX + 0x4]
+004cb472  RET 0x4
+004cb475  OR EAX,0xffffffff
+004cb478  RET 0x4

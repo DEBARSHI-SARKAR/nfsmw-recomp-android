@@ -1,0 +1,5 @@
+008311aa  MOV EAX,dword ptr [ECX + 0x4]
+008311ad  MOV ECX,dword ptr [ESP + 0x4]
+008311b1  MOV dword ptr [ECX],EAX
+008311b3  XOR EAX,EAX
+008311b5  RET 0x4

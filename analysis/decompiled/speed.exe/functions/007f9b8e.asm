@@ -1,0 +1,23 @@
+007f9b8e  PUSH EBP
+007f9b8f  MOV EBP,ESP
+007f9b91  PUSH ESI
+007f9b92  MOV ESI,dword ptr [EBP + 0x8]
+007f9b95  PUSH EDI
+007f9b96  MOV EAX,ECX
+007f9b98  MOV dword ptr [EAX],0x8c27a4
+007f9b9e  LEA EDI,[EAX + 0x8]
+007f9ba1  MOV dword ptr [EDI + 0xc],0x2
+007f9ba8  XOR ECX,ECX
+007f9baa  MOV dword ptr [EDI],ECX
+007f9bac  MOV dword ptr [EDI + 0x4],ECX
+007f9baf  MOV dword ptr [EDI + 0x8],ECX
+007f9bb2  MOVSD ES:EDI,ESI
+007f9bb3  MOVSD ES:EDI,ESI
+007f9bb4  MOVSD ES:EDI,ESI
+007f9bb5  MOVSD ES:EDI,ESI
+007f9bb6  POP EDI
+007f9bb7  MOV dword ptr [EAX + 0x18],ECX
+007f9bba  MOV dword ptr [EAX + 0x4],ECX
+007f9bbd  POP ESI
+007f9bbe  POP EBP
+007f9bbf  RET 0x4

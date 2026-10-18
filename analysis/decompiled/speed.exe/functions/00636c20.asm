@@ -1,0 +1,33 @@
+00636c20  SUB ESP,0x24
+00636c23  MOV ECX,dword ptr [ESP + 0x28]
+00636c27  XOR EAX,EAX
+00636c29  MOV dword ptr [ESP],EAX
+00636c2c  MOV dword ptr [ESP + 0x4],EAX
+00636c30  MOV dword ptr [ESP + 0x8],EAX
+00636c34  MOV dword ptr [ESP + 0xc],EAX
+00636c38  MOV dword ptr [ESP + 0x10],EAX
+00636c3c  MOV dword ptr [ESP + 0x14],0x0
+00636c44  MOV dword ptr [ESP + 0x14],EAX
+00636c48  MOV dword ptr [ESP + 0x18],EAX
+00636c4c  LEA EDX,[ESP + 0x28]
+00636c50  MOV dword ptr [ESP + 0x1c],EAX
+00636c54  PUSH EDX
+00636c55  MOV dword ptr [ESP + 0x24],EAX
+00636c59  MOV dword ptr [ESP + 0x4],ECX
+00636c5d  MOV dword ptr [ESP + 0x14],0x62a0a0
+00636c65  CALL 0x00625c90
+00636c6a  MOV EAX,dword ptr [EAX]
+00636c6c  MOV ECX,dword ptr [ESP + 0x34]
+00636c70  MOV EDX,dword ptr [ESP + 0x30]
+00636c74  MOV dword ptr [ESP + 0x18],EAX
+00636c78  MOV EAX,[0x008f831c]
+00636c7d  MOV dword ptr [ESP + 0x1c],EAX
+00636c81  INC EAX
+00636c82  MOV [0x008f831c],EAX
+00636c87  MOV dword ptr [ESP + 0x20],ECX
+00636c8b  MOV EAX,ESP
+00636c8d  LEA ECX,[ESP + 0x4]
+00636c91  MOV dword ptr [EAX],EDX
+00636c93  CALL 0x00665390
+00636c98  ADD ESP,0x24
+00636c9b  RET

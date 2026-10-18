@@ -1,0 +1,26 @@
+0056c5e0  MOV EDX,ECX
+0056c5e2  XOR EAX,EAX
+0056c5e4  PUSH EDI
+0056c5e5  MOV ECX,0x80
+0056c5ea  MOV EDI,EDX
+0056c5ec  STOSD.REP ES:EDI
+0056c5ee  MOV dword ptr [EDX + 0x204],EAX
+0056c5f4  MOV dword ptr [EDX + 0x208],EAX
+0056c5fa  MOV dword ptr [EDX + 0x20c],EAX
+0056c600  MOV dword ptr [EDX + 0x210],EAX
+0056c606  MOV dword ptr [EDX + 0x214],EAX
+0056c60c  MOV dword ptr [EDX + 0x218],EAX
+0056c612  MOV dword ptr [EDX + 0x21c],EAX
+0056c618  MOV dword ptr [EDX + 0x220],EAX
+0056c61e  MOV dword ptr [EDX + 0x224],EAX
+0056c624  MOV dword ptr [EDX + 0x228],EAX
+0056c62a  MOV dword ptr [EDX + 0x22c],EAX
+0056c630  MOV byte ptr [EDX + 0x230],AL
+0056c636  MOV byte ptr [EDX + 0x231],AL
+0056c63c  MOV byte ptr [EDX + 0x232],AL
+0056c642  MOV dword ptr [EDX + 0x238],EAX
+0056c648  MOV dword ptr [EDX + 0x23c],EAX
+0056c64e  MOV dword ptr [EDX + 0x200],0x2
+0056c658  MOV EAX,EDX
+0056c65a  POP EDI
+0056c65b  RET

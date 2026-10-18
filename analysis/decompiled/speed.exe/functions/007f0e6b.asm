@@ -1,0 +1,31 @@
+007f0e6b  PUSH EBP
+007f0e6c  MOV EBP,ESP
+007f0e6e  MOV EAX,dword ptr [EBP + 0xc]
+007f0e71  CMP EAX,0x1
+007f0e74  JNZ 0x007f0e7e
+007f0e76  MOV EAX,dword ptr [EBP + 0x8]
+007f0e79  MOVZX EAX,byte ptr [EAX]
+007f0e7c  POP EBP
+007f0e7d  RET
+007f0e7e  CMP EAX,0x2
+007f0e81  JNZ 0x007f0e8b
+007f0e83  MOV EAX,dword ptr [EBP + 0x8]
+007f0e86  MOVZX EAX,word ptr [EAX]
+007f0e89  POP EBP
+007f0e8a  RET
+007f0e8b  CMP EAX,0x3
+007f0e8e  JNZ 0x007f0e9c
+007f0e90  MOV EAX,dword ptr [EBP + 0x8]
+007f0e93  MOV EAX,dword ptr [EAX]
+007f0e95  AND EAX,0xffffff
+007f0e9a  POP EBP
+007f0e9b  RET
+007f0e9c  CMP EAX,0x4
+007f0e9f  JNZ 0x007f0ea8
+007f0ea1  MOV EAX,dword ptr [EBP + 0x8]
+007f0ea4  MOV EAX,dword ptr [EAX]
+007f0ea6  POP EBP
+007f0ea7  RET
+007f0ea8  XOR EAX,EAX
+007f0eaa  POP EBP
+007f0eab  RET

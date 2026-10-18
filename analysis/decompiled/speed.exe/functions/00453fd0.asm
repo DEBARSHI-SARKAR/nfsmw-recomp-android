@@ -1,0 +1,2 @@
+00453fd0  MOV EAX,0xc
+00453fd5  RET

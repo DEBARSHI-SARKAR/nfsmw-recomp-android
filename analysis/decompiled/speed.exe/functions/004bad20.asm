@@ -1,0 +1,54 @@
+004bad20  CMP byte ptr [ESP + 0x8],0x1
+004bad25  PUSH ESI
+004bad26  MOV ESI,ECX
+004bad28  JNZ 0x004bad87
+004bad2a  MOV EAX,dword ptr [ESP + 0x8]
+004bad2e  TEST EAX,EAX
+004bad30  JGE 0x004bad36
+004bad32  XOR EAX,EAX
+004bad34  JMP 0x004bad40
+004bad36  CMP EAX,0x64
+004bad39  JLE 0x004bad40
+004bad3b  MOV EAX,0x64
+004bad40  MOV dword ptr [ESI + 0x18],EAX
+004bad43  CALL 0x0081bccb
+004bad48  MOV ECX,dword ptr [ESI + 0x18]
+004bad4b  IMUL ECX,ECX,0x7f
+004bad4e  MOV EAX,0x51eb851f
+004bad53  IMUL ECX
+004bad55  MOV ECX,dword ptr [ESI + 0x14]
+004bad58  SAR EDX,0x5
+004bad5b  MOV EAX,EDX
+004bad5d  SHR EAX,0x1f
+004bad60  ADD EAX,EDX
+004bad62  PUSH EAX
+004bad63  PUSH 0xfa
+004bad68  PUSH ECX
+004bad69  CALL 0x0081bdb2
+004bad6e  ADD ESP,0xc
+004bad71  MOV ESI,EAX
+004bad73  CALL 0x0081bcd9
+004bad78  XOR EAX,EAX
+004bad7a  TEST ESI,ESI
+004bad7c  SETGE AL
+004bad7f  POP ESI
+004bad80  DEC EAX
+004bad81  AND EAX,0xfffffffd
+004bad84  RET 0x8
+004bad87  MOV EDX,dword ptr [ESP + 0x8]
+004bad8b  MOV dword ptr [ESI + 0x18],EDX
+004bad8e  CALL 0x0081bccb
+004bad93  FILD dword ptr [ESI + 0x18]
+004bad96  MOV EAX,dword ptr [ESI + 0x14]
+004bad99  PUSH ECX
+004bad9a  FMUL float ptr [0x00890bf0]
+004bada0  FSTP float ptr [ESP]
+004bada3  PUSH -0x1
+004bada5  PUSH EAX
+004bada6  CALL 0x0081d5f2
+004badab  ADD ESP,0xc
+004badae  MOV ESI,EAX
+004badb0  CALL 0x0081bcd9
+004badb5  MOV EAX,ESI
+004badb7  POP ESI
+004badb8  RET 0x8

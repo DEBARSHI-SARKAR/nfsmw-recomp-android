@@ -1,0 +1,26 @@
+004105e0  PUSH ESI
+004105e1  MOV ESI,ECX
+004105e3  PUSH ESI
+004105e4  CALL 0x004040f0
+004105e9  MOV EAX,dword ptr [ESP + 0x10]
+004105ed  MOV ECX,dword ptr [ESP + 0x14]
+004105f1  MOV EDX,dword ptr [ESP + 0x18]
+004105f5  MOV dword ptr [ESI + 0x4],0xa6b47fac
+004105fc  MOV dword ptr [ESI + 0x10],EAX
+004105ff  MOV EAX,dword ptr [ESP + 0x1c]
+00410603  MOV dword ptr [ESI + 0x14],ECX
+00410606  MOV ECX,dword ptr [ESP + 0x24]
+0041060a  MOV dword ptr [ESI + 0x1c],EAX
+0041060d  MOV EAX,dword ptr [ESP + 0x28]
+00410611  MOV dword ptr [ESI + 0x18],EDX
+00410614  MOV EDX,dword ptr [ESP + 0xc]
+00410618  MOV dword ptr [ESI + 0x20],ECX
+0041061b  MOV ECX,dword ptr [ESP + 0x20]
+0041061f  MOV dword ptr [ESI + 0x28],EAX
+00410622  ADD ESP,0x4
+00410625  MOV dword ptr [ESI + 0x8],ESI
+00410628  MOV dword ptr [ESI + 0x24],EDX
+0041062b  MOV dword ptr [ESI + 0x2c],ECX
+0041062e  MOV EAX,ESI
+00410630  POP ESI
+00410631  RET 0x20

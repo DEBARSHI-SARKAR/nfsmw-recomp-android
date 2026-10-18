@@ -1,0 +1,36 @@
+00643fc0  PUSH EBX
+00643fc1  PUSH ESI
+00643fc2  MOV ESI,ECX
+00643fc4  CALL 0x00635650
+00643fc9  LEA EAX,[ESI + 0x10]
+00643fcc  MOV ECX,0x32
+00643fd1  XOR EBX,EBX
+00643fd3  MOV dword ptr [EAX],EBX
+00643fd5  MOV dword ptr [EAX + 0x8],EBX
+00643fd8  MOV dword ptr [EAX + 0x4],EBX
+00643fdb  ADD EAX,0xc
+00643fde  DEC ECX
+00643fdf  JNZ 0x00643fd3
+00643fe1  MOV AL,byte ptr [ESP + 0xc]
+00643fe5  MOV dword ptr [ESI],EBX
+00643fe7  MOV dword ptr [ESI + 0x4],0xffffffff
+00643fee  MOV dword ptr [ESI + 0x8],EBX
+00643ff1  MOV dword ptr [ESI + 0xc],0x32
+00643ff8  MOV dword ptr [ESI + 0x268],0xffffffff
+00644002  MOV dword ptr [ESI + 0x26c],0x1
+0064400c  MOV dword ptr [ESI + 0x270],EBX
+00644012  MOV dword ptr [ESI + 0x274],EBX
+00644018  MOV byte ptr [ESI + 0x281],AL
+0064401e  MOV dword ptr [ESI + 0x284],EBX
+00644024  MOV dword ptr [ESI + 0x288],EBX
+0064402a  CALL 0x00633cd0
+0064402f  MOV dword ptr [ESI + 0x27c],EAX
+00644035  MOV byte ptr [ESI + 0x280],BL
+0064403b  MOV dword ptr [ESI],EBX
+0064403d  MOV dword ptr [ESI + 0x8],EBX
+00644040  MOV dword ptr [ESI + 0x278],0x8a7e78
+0064404a  MOV dword ptr [ESI + 0x4],0xffffffff
+00644051  MOV EAX,ESI
+00644053  POP ESI
+00644054  POP EBX
+00644055  RET 0x4

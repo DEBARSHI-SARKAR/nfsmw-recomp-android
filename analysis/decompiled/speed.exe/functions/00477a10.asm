@@ -1,0 +1,29 @@
+00477a10  FLD float ptr [ECX + 0x90]
+00477a16  MOV EAX,dword ptr [ESP + 0x4]
+00477a1a  FLD float ptr [ESP + 0x4]
+00477a1e  MOV dword ptr [ECX + 0x88],EAX
+00477a24  FUCOMPP
+00477a26  MOV EDX,0x2
+00477a2b  FNSTSW AX
+00477a2d  TEST AH,0x44
+00477a30  JNP 0x00477a39
+00477a32  MOV word ptr [ECX + 0xb0],DX
+00477a39  FLD float ptr [ECX + 0xbc]
+00477a3f  MOV EAX,dword ptr [ESP + 0x8]
+00477a43  FLD float ptr [ESP + 0x8]
+00477a47  MOV dword ptr [ECX + 0xb4],EAX
+00477a4d  FUCOMPP
+00477a4f  FNSTSW AX
+00477a51  TEST AH,0x44
+00477a54  JNP 0x00477a5d
+00477a56  MOV word ptr [ECX + 0xdc],DX
+00477a5d  FLD float ptr [ECX + 0xe8]
+00477a63  MOV EAX,dword ptr [ESP + 0xc]
+00477a67  FLD float ptr [ESP + 0xc]
+00477a6b  MOV dword ptr [ECX + 0xe0],EAX
+00477a71  FUCOMPP
+00477a73  FNSTSW AX
+00477a75  TEST AH,0x44
+00477a78  JNP 0x00477a81
+00477a7a  MOV word ptr [ECX + 0x108],DX
+00477a81  RET 0xc

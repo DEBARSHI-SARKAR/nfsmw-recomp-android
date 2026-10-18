@@ -1,0 +1,69 @@
+005b7780  PUSH ESI
+005b7781  PUSH EDI
+005b7782  PUSH 0x20
+005b7784  MOV EDI,ECX
+005b7786  CALL 0x00652ac0
+005b778b  ADD ESP,0x4
+005b778e  TEST EAX,EAX
+005b7790  JZ 0x005b77a7
+005b7792  MOV ECX,0xabadcafe
+005b7797  MOV dword ptr [EAX + 0x4],ECX
+005b779a  MOV dword ptr [EAX + 0x8],ECX
+005b779d  MOV dword ptr [EAX],0x8a2c90
+005b77a3  MOV ESI,EAX
+005b77a5  JMP 0x005b77a9
+005b77a7  XOR ESI,ESI
+005b77a9  MOV ECX,dword ptr [ESP + 0x14]
+005b77ad  MOV EAX,dword ptr [ESP + 0xc]
+005b77b1  MOV EDX,dword ptr [ESP + 0x10]
+005b77b5  MOV dword ptr [ESI + 0x14],ECX
+005b77b8  MOV ECX,dword ptr [ESP + 0x18]
+005b77bc  PUSH EBX
+005b77bd  MOV EBX,dword ptr [ESP + 0x20]
+005b77c1  MOV dword ptr [ESI + 0x18],EAX
+005b77c4  MOV dword ptr [ESI + 0xc],EDX
+005b77c7  MOV dword ptr [ESI + 0x10],ECX
+005b77ca  MOV dword ptr [ESI + 0x1c],EBX
+005b77cd  MOV CL,byte ptr [EDI + 0x524e]
+005b77d3  TEST CL,CL
+005b77d5  JZ 0x005b77f1
+005b77d7  MOV ECX,dword ptr [EDI + 0x108]
+005b77dd  PUSH EBP
+005b77de  MOV EBP,dword ptr [ECX]
+005b77e0  PUSH EBX
+005b77e1  MOV EBX,dword ptr [ESP + 0x24]
+005b77e5  PUSH EBX
+005b77e6  MOV EBX,dword ptr [ESP + 0x24]
+005b77ea  PUSH EBX
+005b77eb  PUSH EDX
+005b77ec  PUSH EAX
+005b77ed  CALL dword ptr [EBP + 0x54]
+005b77f0  POP EBP
+005b77f1  MOV ECX,dword ptr [EDI + 0x411c]
+005b77f7  TEST ECX,ECX
+005b77f9  POP EBX
+005b77fa  JZ 0x005b7811
+005b77fc  MOV EAX,dword ptr [ECX + 0x4]
+005b77ff  TEST EAX,EAX
+005b7801  MOV dword ptr [ESI + 0x4],EAX
+005b7804  JZ 0x005b7809
+005b7806  MOV dword ptr [EAX + 0x8],ESI
+005b7809  MOV dword ptr [ESI + 0x8],ECX
+005b780c  MOV dword ptr [ECX + 0x4],ESI
+005b780f  JMP 0x005b782e
+005b7811  MOV EAX,dword ptr [EDI + 0x4118]
+005b7817  TEST EAX,EAX
+005b7819  MOV dword ptr [ESI + 0x4],EAX
+005b781c  JZ 0x005b7821
+005b781e  MOV dword ptr [EAX + 0x8],ESI
+005b7821  MOV dword ptr [ESI + 0x8],0x0
+005b7828  MOV dword ptr [EDI + 0x4118],ESI
+005b782e  CMP dword ptr [EDI + 0x411c],ECX
+005b7834  MOV EAX,dword ptr [EDI + 0x4114]
+005b783a  JNZ 0x005b7842
+005b783c  MOV dword ptr [EDI + 0x411c],ESI
+005b7842  INC EAX
+005b7843  MOV dword ptr [EDI + 0x4114],EAX
+005b7849  POP EDI
+005b784a  POP ESI
+005b784b  RET 0x14

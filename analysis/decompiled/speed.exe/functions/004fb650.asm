@@ -1,0 +1,15 @@
+004fb650  MOV ECX,dword ptr [ESP + 0x4]
+004fb654  MOV EAX,0x914b60
+004fb659  LEA ESP,[ESP]
+004fb660  CMP dword ptr [EAX],ECX
+004fb662  JZ 0x004fb66f
+004fb664  ADD EAX,0x8
+004fb667  CMP EAX,0x915110
+004fb66c  JL 0x004fb660
+004fb66e  RET
+004fb66f  DEC word ptr [EAX + 0x6]
+004fb673  MOV CX,word ptr [EAX + 0x6]
+004fb677  JNZ 0x004fb685
+004fb679  MOV dword ptr [EAX],0x0
+004fb67f  DEC dword ptr [0x00915fb8]
+004fb685  RET

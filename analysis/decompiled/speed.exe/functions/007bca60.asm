@@ -1,0 +1,79 @@
+007bca60  PUSH ESI
+007bca61  MOV ESI,ECX
+007bca63  PUSH 0x501
+007bca68  MOV dword ptr [ESI + 0x1b0],0x9de6e6e1
+007bca72  MOV EAX,[0x00905ea8]
+007bca77  PUSH 0x301dedd3
+007bca7c  MOV dword ptr [ESI + 0x14c],EAX
+007bca82  MOV ECX,dword ptr [0x00905eb8]
+007bca88  PUSH 0x52ded91d
+007bca8d  PUSH ECX
+007bca8e  MOV ECX,ESI
+007bca90  CALL 0x007bb560
+007bca95  MOV EDX,dword ptr [0x00905eb8]
+007bca9b  PUSH 0x502
+007bcaa0  PUSH 0x48e6ca49
+007bcaa5  PUSH 0xac7937b4
+007bcaaa  PUSH EDX
+007bcaab  MOV ECX,ESI
+007bcaad  CALL 0x007bb560
+007bcab2  MOV EAX,[0x00905eac]
+007bcab7  PUSH 0x503
+007bcabc  PUSH 0x34367c86
+007bcac1  PUSH 0xda88b711
+007bcac6  PUSH EAX
+007bcac7  MOV ECX,ESI
+007bcac9  CALL 0x007bb560
+007bcace  MOV ECX,dword ptr [0x00905eac]
+007bcad4  PUSH 0x504
+007bcad9  PUSH 0xddf80259
+007bcade  PUSH 0xc9a967c4
+007bcae3  PUSH ECX
+007bcae4  MOV ECX,ESI
+007bcae6  CALL 0x007bb560
+007bcaeb  MOV EDX,dword ptr [0x00905eb8]
+007bcaf1  PUSH 0x505
+007bcaf6  PUSH 0x8a7697d6
+007bcafb  PUSH 0x2c710c4d
+007bcb00  PUSH EDX
+007bcb01  MOV ECX,ESI
+007bcb03  CALL 0x007bb560
+007bcb08  MOV EAX,[0x00905eb8]
+007bcb0d  PUSH 0x506
+007bcb12  PUSH 0xb1f9b0c9
+007bcb17  PUSH 0xffa7d360
+007bcb1c  PUSH EAX
+007bcb1d  MOV ECX,ESI
+007bcb1f  CALL 0x007bb560
+007bcb24  MOV EAX,dword ptr [ESI + 0x154]
+007bcb2a  XOR ECX,ECX
+007bcb2c  CMP EAX,0x803
+007bcb31  JNZ 0x007bcb58
+007bcb33  CMP byte ptr [ESI + 0x129],CL
+007bcb39  JZ 0x007bcb54
+007bcb3b  MOV byte ptr [ESI + 0x11c],CL
+007bcb41  MOV byte ptr [ESI + 0x119],0x1
+007bcb48  MOV byte ptr [ESI + 0x11a],CL
+007bcb4e  MOV dword ptr [ESI + 0x110],ECX
+007bcb54  PUSH 0x1
+007bcb56  JMP 0x007bcb81
+007bcb58  MOV DL,byte ptr [ESI + 0x129]
+007bcb5e  AND EAX,0xffff00ff
+007bcb63  CMP DL,CL
+007bcb65  JZ 0x007bcb80
+007bcb67  MOV byte ptr [ESI + 0x11c],CL
+007bcb6d  MOV byte ptr [ESI + 0x119],0x1
+007bcb74  MOV byte ptr [ESI + 0x11a],CL
+007bcb7a  MOV dword ptr [ESI + 0x110],ECX
+007bcb80  PUSH EAX
+007bcb81  MOV EDX,dword ptr [ESI + 0x2c]
+007bcb84  LEA ECX,[ESI + 0x2c]
+007bcb87  CALL dword ptr [EDX + 0x40]
+007bcb8a  MOV EAX,dword ptr [ESI + 0x154]
+007bcb90  CMP EAX,0x501
+007bcb95  JC 0x007bcba8
+007bcb97  CMP EAX,0x506
+007bcb9c  JA 0x007bcba8
+007bcb9e  MOV dword ptr [ESI + 0x154],0x803
+007bcba8  POP ESI
+007bcba9  RET

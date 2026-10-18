@@ -1,0 +1,54 @@
+00819a32  PUSH ESI
+00819a33  MOV ESI,dword ptr [ESP + 0x8]
+00819a37  MOVZX EAX,word ptr [ESI]
+00819a3a  CMP dword ptr [EAX + ESI*0x1],0x0
+00819a3e  JNZ 0x00819a45
+00819a40  MOV EAX,dword ptr [ESI + 0xc]
+00819a43  POP ESI
+00819a44  RET
+00819a45  PUSH EBX
+00819a46  PUSH EDI
+00819a47  MOVZX EDI,word ptr [ESI + 0x8]
+00819a4b  CALL 0x0081eb58
+00819a50  MOVSX ECX,byte ptr [ESI + 0x3]
+00819a54  MOVZX EBX,word ptr [ESI + 0xa]
+00819a58  SUB EBX,ECX
+00819a5a  XOR EDX,EDX
+00819a5c  SUB EBX,EDI
+00819a5e  DIV EBX
+00819a60  ADD EDX,EDI
+00819a62  CMP byte ptr [ESI + 0x2],0x1
+00819a66  JNZ 0x00819a85
+00819a68  LEA EAX,[EDX + ESI*0x1 + 0x10]
+00819a6c  MOVZX ECX,byte ptr [EAX]
+00819a6f  MOV dword ptr [ESI + 0xc],ECX
+00819a72  MOV CL,byte ptr [EDI + ESI*0x1 + 0x10]
+00819a76  MOV byte ptr [EAX],CL
+00819a78  MOVZX EAX,word ptr [ESI + 0x8]
+00819a7c  MOV CL,byte ptr [ESI + 0xc]
+00819a7f  MOV byte ptr [EAX + ESI*0x1 + 0x10],CL
+00819a83  JMP 0x00819aa4
+00819a85  LEA EAX,[ESI + EDX*0x2 + 0x10]
+00819a89  MOVZX ECX,word ptr [EAX]
+00819a8c  MOV dword ptr [ESI + 0xc],ECX
+00819a8f  MOV CX,word ptr [ESI + EDI*0x2 + 0x10]
+00819a94  MOV word ptr [EAX],CX
+00819a97  MOVZX EAX,word ptr [ESI + 0x8]
+00819a9b  MOV CX,word ptr [ESI + 0xc]
+00819a9f  MOV word ptr [ESI + EAX*0x2 + 0x10],CX
+00819aa4  MOV EAX,dword ptr [ESI + 0x4]
+00819aa7  ADD dword ptr [ESI + 0xc],EAX
+00819aaa  INC word ptr [ESI + 0x8]
+00819aae  MOV CX,word ptr [ESI + 0x8]
+00819ab2  CMP CX,word ptr [ESI + 0xa]
+00819ab6  MOV EAX,dword ptr [ESI + 0xc]
+00819ab9  POP EDI
+00819aba  POP EBX
+00819abb  JC 0x00819ac8
+00819abd  AND word ptr [ESI + 0x8],0x0
+00819ac2  MOV byte ptr [ESI + 0x3],0x1
+00819ac6  POP ESI
+00819ac7  RET
+00819ac8  MOV byte ptr [ESI + 0x3],0x0
+00819acc  POP ESI
+00819acd  RET

@@ -1,0 +1,3 @@
+006502f0  MOV EAX,dword ptr [ESP + 0x4]
+006502f4  LEA EAX,[EAX + EAX*0x1 + 0x12]
+006502f8  RET

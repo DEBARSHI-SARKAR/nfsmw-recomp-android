@@ -1,0 +1,27 @@
+0057baf0  PUSH ESI
+0057baf1  PUSH EDI
+0057baf2  MOV EDI,ECX
+0057baf4  MOV ECX,dword ptr [ESP + 0xc]
+0057baf8  MOV EAX,dword ptr [ECX]
+0057bafa  CALL dword ptr [EAX + 0x20]
+0057bafd  MOV ECX,dword ptr [EAX + 0x4]
+0057bb00  PUSH 0x5650b0
+0057bb05  CALL 0x005d59f0
+0057bb0a  MOV ESI,EAX
+0057bb0c  TEST ESI,ESI
+0057bb0e  JZ 0x0057bb27
+0057bb10  MOV EDX,dword ptr [ESI]
+0057bb12  MOV ECX,ESI
+0057bb14  CALL dword ptr [EDX + 0xc]
+0057bb17  TEST AL,AL
+0057bb19  JZ 0x0057bb27
+0057bb1b  MOV EAX,dword ptr [ESI]
+0057bb1d  PUSH 0xe1c034fc
+0057bb22  MOV ECX,ESI
+0057bb24  CALL dword ptr [EAX + 0x8]
+0057bb27  MOV ECX,dword ptr [ESP + 0x10]
+0057bb2b  MOV dword ptr [EDI + 0x10],ECX
+0057bb2e  MOV dword ptr [EDI + 0x14],0x0
+0057bb35  POP EDI
+0057bb36  POP ESI
+0057bb37  RET 0x8

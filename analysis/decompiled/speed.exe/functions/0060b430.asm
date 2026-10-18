@@ -1,0 +1,19 @@
+0060b430  MOV EAX,0x890978
+0060b435  MOV dword ptr [ESI + 0x8],EAX
+0060b438  MOV dword ptr [ESI + 0x4],EAX
+0060b43b  OR EAX,0xffffffff
+0060b43e  PUSH 0x3c
+0060b440  MOV dword ptr [ESI + 0x14],EAX
+0060b443  MOV dword ptr [ESI + 0x1c],EAX
+0060b446  LEA EAX,[ESI + 0x20]
+0060b449  PUSH 0x8a4168
+0060b44e  PUSH EAX
+0060b44f  MOV dword ptr [ESI + 0xc],0x8a4160
+0060b456  MOV dword ptr [ESI + 0x10],0x8a4168
+0060b45d  CALL 0x00607630
+0060b462  MOV ECX,dword ptr [ESP + 0x10]
+0060b466  MOV dword ptr [ESI + 0x18],0x0
+0060b46d  MOV EDX,dword ptr [ECX + 0x8]
+0060b470  ADD ESP,0xc
+0060b473  MOV dword ptr [EDX],0x0
+0060b479  RET

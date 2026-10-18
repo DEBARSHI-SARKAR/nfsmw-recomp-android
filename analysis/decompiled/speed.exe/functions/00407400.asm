@@ -1,0 +1,27 @@
+00407400  PUSH ESI
+00407401  MOV ESI,ECX
+00407403  MOV ECX,dword ptr [ESI + 0x4c]
+00407406  MOV EAX,dword ptr [ECX]
+00407408  PUSH 0x0
+0040740a  CALL dword ptr [EAX + 0x18]
+0040740d  MOV ECX,dword ptr [ESI + 0x4c]
+00407410  MOV EDX,dword ptr [ECX]
+00407412  PUSH 0x3f800000
+00407417  CALL dword ptr [EDX + 0x1c]
+0040741a  MOV ECX,dword ptr [ESI + 0x4c]
+0040741d  MOV EAX,dword ptr [ECX]
+0040741f  PUSH 0x0
+00407421  CALL dword ptr [EAX + 0x14]
+00407424  MOV ECX,dword ptr [ESI + 0x4c]
+00407427  MOV EDX,dword ptr [ECX]
+00407429  PUSH 0x0
+0040742b  CALL dword ptr [EDX + 0x2c]
+0040742e  MOV ECX,dword ptr [ESI + 0x4c]
+00407431  MOV EAX,dword ptr [ECX]
+00407433  PUSH 0x0
+00407435  CALL dword ptr [EAX + 0x24]
+00407438  MOV ECX,dword ptr [ESI + 0x4c]
+0040743b  MOV EDX,dword ptr [ECX]
+0040743d  POP ESI
+0040743e  MOV dword ptr [ESP + 0x4],0x0
+00407446  JMP dword ptr [EDX + 0x20]

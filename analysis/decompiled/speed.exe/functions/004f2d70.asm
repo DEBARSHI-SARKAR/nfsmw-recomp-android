@@ -1,0 +1,4 @@
+004f2d70  MOV EAX,ECX
+004f2d72  MOV dword ptr [EAX],EAX
+004f2d74  MOV dword ptr [EAX + 0x4],EAX
+004f2d77  RET

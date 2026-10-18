@@ -1,0 +1,12 @@
+0081a42f  MOV ECX,dword ptr [ESP + 0x4]
+0081a433  XOR EDX,EDX
+0081a435  CMP byte ptr [ECX + 0xf],DL
+0081a438  MOV byte ptr [ECX + 0x10],0xff
+0081a43c  JZ 0x0081a44e
+0081a43e  MOVZX EAX,byte ptr [ECX + 0xe]
+0081a442  LEA EAX,[EAX + EAX*0x2]
+0081a445  LEA EAX,[ECX + EAX*0x4 + 0x1c]
+0081a449  MOV dword ptr [EAX + 0x4],EDX
+0081a44c  MOV dword ptr [EAX],EDX
+0081a44e  XOR EAX,EAX
+0081a450  RET

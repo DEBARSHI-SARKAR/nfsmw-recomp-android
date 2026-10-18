@@ -1,0 +1,4 @@
+006be9e0  MOV EAX,dword ptr [ESP + 0x4]
+006be9e4  IMUL EAX,EAX,0x1a0
+006be9ea  ADD EAX,0x984130
+006be9ef  RET

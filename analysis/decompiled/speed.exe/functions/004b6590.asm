@@ -1,0 +1,10 @@
+004b6590  MOV EAX,dword ptr [ESP + 0x4]
+004b6594  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x28]
+004b6598  TEST EDX,EDX
+004b659a  JZ 0x004b65a6
+004b659c  MOV ECX,EDX
+004b659e  MOV EAX,dword ptr [ECX]
+004b65a0  CALL dword ptr [EAX + 0x54]
+004b65a3  RET 0x4
+004b65a6  OR EAX,0xffffffff
+004b65a9  RET 0x4

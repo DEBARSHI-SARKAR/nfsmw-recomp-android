@@ -1,0 +1,16 @@
+005e7be0  MOV EAX,dword ptr [ESP + 0x8]
+005e7be4  TEST EAX,EAX
+005e7be6  JBE 0x005e7c02
+005e7be8  MOV EDX,dword ptr [ESP + 0xc]
+005e7bec  MOV ECX,EAX
+005e7bee  MOV EAX,dword ptr [ESP + 0x4]
+005e7bf2  PUSH ESI
+005e7bf3  TEST EAX,EAX
+005e7bf5  JZ 0x005e7bfb
+005e7bf7  MOV ESI,dword ptr [EDX]
+005e7bf9  MOV dword ptr [EAX],ESI
+005e7bfb  ADD EAX,0x4
+005e7bfe  DEC ECX
+005e7bff  JNZ 0x005e7bf3
+005e7c01  POP ESI
+005e7c02  RET

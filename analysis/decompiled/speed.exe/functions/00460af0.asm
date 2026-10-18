@@ -1,0 +1,7 @@
+00460af0  MOV EAX,dword ptr [ESP + 0x4]
+00460af4  TEST EAX,EAX
+00460af6  JZ 0x00460afc
+00460af8  MOV EAX,dword ptr [EAX + -0x4]
+00460afb  RET
+00460afc  XOR EAX,EAX
+00460afe  RET

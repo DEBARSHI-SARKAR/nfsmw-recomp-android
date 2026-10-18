@@ -1,0 +1,43 @@
+0051baf0  PUSH ESI
+0051baf1  PUSH EDI
+0051baf2  MOV EDI,ECX
+0051baf4  MOV ESI,dword ptr [EDI + 0x2c]
+0051baf7  TEST ESI,ESI
+0051baf9  JZ 0x0051bb27
+0051bafb  OR dword ptr [ESI + 0x1c],0x400000
+0051bb02  MOV dword ptr [ESI + 0x60],0x5f560d76
+0051bb09  MOV ECX,dword ptr [0x0091dd08]
+0051bb0f  TEST ECX,ECX
+0051bb11  JZ 0x0051bb18
+0051bb13  MOV EAX,dword ptr [ECX]
+0051bb15  PUSH ESI
+0051bb16  CALL dword ptr [EAX]
+0051bb18  MOV ECX,dword ptr [ESI + 0x1c]
+0051bb1b  AND ECX,0xfffffffd
+0051bb1e  OR ECX,0x400000
+0051bb24  MOV dword ptr [ESI + 0x1c],ECX
+0051bb27  MOV EDX,dword ptr [0x0091ca20]
+0051bb2d  MOV EAX,dword ptr [EDX]
+0051bb2f  MOV EAX,dword ptr [EAX + 0x48]
+0051bb32  MOV ESI,dword ptr [EDI + 0x30]
+0051bb35  NEG EAX
+0051bb37  SBB EAX,EAX
+0051bb39  AND EAX,0xd776e88e
+0051bb3e  ADD EAX,0xf6bbc9ab
+0051bb43  TEST ESI,ESI
+0051bb45  JZ 0x0051bb6e
+0051bb47  OR dword ptr [ESI + 0x1c],0x400000
+0051bb4e  MOV dword ptr [ESI + 0x60],EAX
+0051bb51  MOV ECX,dword ptr [0x0091dd08]
+0051bb57  TEST ECX,ECX
+0051bb59  JZ 0x0051bb60
+0051bb5b  MOV EDX,dword ptr [ECX]
+0051bb5d  PUSH ESI
+0051bb5e  CALL dword ptr [EDX]
+0051bb60  MOV EAX,dword ptr [ESI + 0x1c]
+0051bb63  AND EAX,0xfffffffd
+0051bb66  OR EAX,0x400000
+0051bb6b  MOV dword ptr [ESI + 0x1c],EAX
+0051bb6e  POP EDI
+0051bb6f  POP ESI
+0051bb70  RET

@@ -1,0 +1,5 @@
+0087eb82  MOV EAX,dword ptr [EBP + 0xffffff0c]
+0087eb88  PUSH EAX
+0087eb89  CALL 0x00652b00
+0087eb8e  POP ECX
+0087eb8f  RET

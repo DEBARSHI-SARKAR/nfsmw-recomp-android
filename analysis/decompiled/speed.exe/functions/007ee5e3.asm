@@ -1,0 +1,49 @@
+007ee5e3  PUSH EBP
+007ee5e4  MOV EBP,ESP
+007ee5e6  MOV EDX,dword ptr [ECX]
+007ee5e8  PUSH EBX
+007ee5e9  PUSH ESI
+007ee5ea  MOV ESI,dword ptr [EBP + 0x8]
+007ee5ed  XOR EBX,EBX
+007ee5ef  XOR AL,AL
+007ee5f1  CMP ESI,EDX
+007ee5f3  PUSH EDI
+007ee5f4  JNZ 0x007ee60d
+007ee5f6  INC AL
+007ee5f8  DEC dword ptr [ECX + 0x8]
+007ee5fb  CMP ESI,dword ptr [ECX + 0x4]
+007ee5fe  JNZ 0x007ee607
+007ee600  MOV dword ptr [ECX],EBX
+007ee602  MOV dword ptr [ECX + 0x4],EBX
+007ee605  JMP 0x007ee63c
+007ee607  MOV EDX,dword ptr [ESI]
+007ee609  MOV dword ptr [ECX],EDX
+007ee60b  JMP 0x007ee63c
+007ee60d  CMP EDX,EBX
+007ee60f  JZ 0x007ee63e
+007ee611  CMP dword ptr [EDX],EBX
+007ee613  JZ 0x007ee63e
+007ee615  MOV EDI,dword ptr [EDX]
+007ee617  CMP EDI,ESI
+007ee619  JZ 0x007ee621
+007ee61b  MOV EDX,EDI
+007ee61d  CMP dword ptr [EDX],EBX
+007ee61f  JNZ 0x007ee615
+007ee621  MOV EDI,dword ptr [EDX]
+007ee623  CMP EDI,EBX
+007ee625  JZ 0x007ee63e
+007ee627  CMP EDI,ESI
+007ee629  JNZ 0x007ee63e
+007ee62b  DEC dword ptr [ECX + 0x8]
+007ee62e  MOV EDI,dword ptr [ESI]
+007ee630  MOV dword ptr [EDX],EDI
+007ee632  CMP ESI,dword ptr [ECX + 0x4]
+007ee635  MOV AL,0x1
+007ee637  JNZ 0x007ee63c
+007ee639  MOV dword ptr [ECX + 0x4],EDX
+007ee63c  MOV dword ptr [ESI],EBX
+007ee63e  POP EDI
+007ee63f  POP ESI
+007ee640  POP EBX
+007ee641  POP EBP
+007ee642  RET 0x8

@@ -1,0 +1,40 @@
+0065cab0  PUSH ESI
+0065cab1  PUSH EDI
+0065cab2  MOV EDI,dword ptr [ESP + 0xc]
+0065cab6  TEST EDI,EDI
+0065cab8  MOV ESI,ECX
+0065caba  JZ 0x0065cb06
+0065cabc  MOV EAX,dword ptr [ESI + 0xc]
+0065cabf  PUSH EBX
+0065cac0  DEC EDI
+0065cac1  PUSH EBP
+0065cac2  MOV EBP,dword ptr [ESI + 0x4]
+0065cac5  MOV EBX,dword ptr [ESI]
+0065cac7  INC EDI
+0065cac8  AND EAX,0x1
+0065cacb  MOV dword ptr [ESI + 0x4],EDI
+0065cace  MOV dword ptr [ESI + 0x8],0x0
+0065cad5  MOV dword ptr [ESI + 0xc],EAX
+0065cad8  MOV ECX,dword ptr [0x008f7ea8]
+0065cade  MOV EAX,dword ptr [ECX]
+0065cae0  MOV EDX,EDI
+0065cae2  PUSH 0x0
+0065cae4  SHL EDX,0x4
+0065cae7  PUSH EDX
+0065cae8  CALL dword ptr [EAX]
+0065caea  PUSH 0x1
+0065caec  PUSH EBP
+0065caed  PUSH EBX
+0065caee  MOV ECX,ESI
+0065caf0  MOV dword ptr [ESI],EAX
+0065caf2  CALL 0x0065e080
+0065caf7  MOV EAX,dword ptr [ESI + 0xc]
+0065cafa  MOV ECX,EAX
+0065cafc  AND ECX,0xfffffffe
+0065caff  CMP ECX,0x20
+0065cb02  JA 0x0065cac2
+0065cb04  POP EBP
+0065cb05  POP EBX
+0065cb06  POP EDI
+0065cb07  POP ESI
+0065cb08  RET 0x4

@@ -1,0 +1,91 @@
+00819cc6  PUSH EBP
+00819cc7  MOV EBP,ESP
+00819cc9  PUSH ECX
+00819cca  PUSH ECX
+00819ccb  PUSH ESI
+00819ccc  MOV ESI,dword ptr [EBP + 0x8]
+00819ccf  MOV EAX,dword ptr [ESI + 0xc]
+00819cd2  CMP EAX,dword ptr [ESI + 0x4]
+00819cd5  JZ 0x00819dc0
+00819cdb  MOV ECX,dword ptr [ESI]
+00819cdd  MOV dword ptr [ESI + 0x4],EAX
+00819ce0  MOV EDX,dword ptr [ECX + 0x8]
+00819ce3  PUSH EDI
+00819ce4  MOV EDI,dword ptr [ECX + 0x4]
+00819ce7  CMP EAX,EDI
+00819ce9  JGE 0x00819cef
+00819ceb  MOV EDX,EDI
+00819ced  JMP 0x00819cf5
+00819cef  CMP EAX,EDX
+00819cf1  JG 0x00819cf5
+00819cf3  MOV EDX,EAX
+00819cf5  FLD float ptr [0x0089096c]
+00819cfb  SUB EDX,EDI
+00819cfd  FLD float ptr [ECX + 0xc]
+00819d00  MOV dword ptr [EBP + 0x8],EDX
+00819d03  FUCOMPP
+00819d05  FNSTSW AX
+00819d07  TEST AH,0x44
+00819d0a  JP 0x00819d33
+00819d0c  MOV AL,byte ptr [ECX]
+00819d0e  CMP AL,0x2
+00819d10  JNZ 0x00819d1c
+00819d12  MOVSX EAX,word ptr [ECX + EDX*0x2 + 0x10]
+00819d17  JMP 0x00819dbc
+00819d1c  CMP AL,0x1
+00819d1e  JNZ 0x00819d2a
+00819d20  MOVSX EAX,byte ptr [EDX + ECX*0x1 + 0x10]
+00819d25  JMP 0x00819dbc
+00819d2a  MOV EAX,dword ptr [ECX + EDX*0x4 + 0x10]
+00819d2e  JMP 0x00819dbc
+00819d33  FILD dword ptr [EBP + 0x8]
+00819d36  FMUL float ptr [ECX + 0xc]
+00819d39  FST float ptr [EBP + -0x4]
+00819d3c  FSUB float ptr [0x008933d4]
+00819d42  FSTP float ptr [EBP + -0x8]
+00819d45  FLD float ptr [EBP + -0x8]
+00819d48  FISTP dword ptr [EBP + 0x8]
+00819d4b  MOV EDI,dword ptr [EBP + 0x8]
+00819d4e  FILD dword ptr [EBP + 0x8]
+00819d51  MOVZX EDX,word ptr [ECX + 0x2]
+00819d55  LEA EAX,[EDI + 0x1]
+00819d58  CMP EAX,EDX
+00819d5a  FSUBR float ptr [EBP + -0x4]
+00819d5d  JL 0x00819d62
+00819d5f  LEA EAX,[EDX + -0x1]
+00819d62  MOV DL,byte ptr [ECX]
+00819d64  CMP DL,0x2
+00819d67  JNZ 0x00819d81
+00819d69  MOVSX EDX,word ptr [ECX + EDI*0x2 + 0x10]
+00819d6e  MOVSX EAX,word ptr [ECX + EAX*0x2 + 0x10]
+00819d73  MOV dword ptr [EBP + 0x8],EDX
+00819d76  FILD dword ptr [EBP + 0x8]
+00819d79  MOV dword ptr [EBP + 0x8],EAX
+00819d7c  FILD dword ptr [EBP + 0x8]
+00819d7f  JMP 0x00819da6
+00819d81  CMP DL,0x1
+00819d84  JNZ 0x00819d9e
+00819d86  MOVSX EDX,byte ptr [EDI + ECX*0x1 + 0x10]
+00819d8b  MOVSX EAX,byte ptr [EAX + ECX*0x1 + 0x10]
+00819d90  MOV dword ptr [EBP + 0x8],EDX
+00819d93  FILD dword ptr [EBP + 0x8]
+00819d96  MOV dword ptr [EBP + 0x8],EAX
+00819d99  FILD dword ptr [EBP + 0x8]
+00819d9c  JMP 0x00819da6
+00819d9e  FILD dword ptr [ECX + EDI*0x4 + 0x10]
+00819da2  FILD dword ptr [ECX + EAX*0x4 + 0x10]
+00819da6  FSUB ST0,ST1
+00819da8  FMUL ST2
+00819daa  FADD ST0,ST1
+00819dac  FSTP float ptr [EBP + 0x8]
+00819daf  FSTP ST0
+00819db1  FSTP ST0
+00819db3  FLD float ptr [EBP + 0x8]
+00819db6  FISTP dword ptr [EBP + -0x8]
+00819db9  MOV EAX,dword ptr [EBP + -0x8]
+00819dbc  MOV dword ptr [ESI + 0x8],EAX
+00819dbf  POP EDI
+00819dc0  MOV EAX,dword ptr [ESI + 0x8]
+00819dc3  POP ESI
+00819dc4  LEAVE
+00819dc5  RET

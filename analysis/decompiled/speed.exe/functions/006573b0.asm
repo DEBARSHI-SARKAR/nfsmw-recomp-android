@@ -1,0 +1,2 @@
+006573b0  MOV EAX,dword ptr [ESP + 0x4]
+006573b4  RET 0x8

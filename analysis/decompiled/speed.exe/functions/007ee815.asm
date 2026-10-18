@@ -1,0 +1,21 @@
+007ee815  PUSH EBP
+007ee816  MOV EBP,ESP
+007ee818  PUSH ESI
+007ee819  PUSH dword ptr [EBP + 0x18]
+007ee81c  MOV ESI,ECX
+007ee81e  PUSH dword ptr [EBP + 0x14]
+007ee821  PUSH dword ptr [EBP + 0x10]
+007ee824  CALL 0x007ed7df
+007ee829  PUSH dword ptr [EBP + 0x8]
+007ee82c  MOV ECX,ESI
+007ee82e  MOV dword ptr [ESI],0x8c2048
+007ee834  CALL 0x007ed087
+007ee839  MOV EAX,dword ptr [EBP + 0xc]
+007ee83c  AND dword ptr [ESI + 0x24],0x0
+007ee840  MOV ECX,ESI
+007ee842  MOV dword ptr [ESI + 0x20],EAX
+007ee845  CALL 0x007ed884
+007ee84a  MOV EAX,ESI
+007ee84c  POP ESI
+007ee84d  POP EBP
+007ee84e  RET 0x14

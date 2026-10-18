@@ -1,0 +1,2 @@
+0040b910  MOV dword ptr [ECX],0x890ee0
+0040b916  RET

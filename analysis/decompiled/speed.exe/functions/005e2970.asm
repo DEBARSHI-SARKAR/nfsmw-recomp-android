@@ -1,0 +1,33 @@
+005e2970  PUSH ESI
+005e2971  MOV ESI,ECX
+005e2973  MOV EAX,dword ptr [ESI]
+005e2975  CALL dword ptr [EAX + 0x4]
+005e2978  SUB EAX,0x3
+005e297b  JZ 0x005e29a5
+005e297d  SUB EAX,0x2
+005e2980  JZ 0x005e2988
+005e2982  XOR AL,AL
+005e2984  POP ESI
+005e2985  RET 0x4
+005e2988  MOV ECX,dword ptr [ESP + 0x8]
+005e298c  ADD ESI,0x58
+005e298f  MOV EDX,dword ptr [ESI]
+005e2991  MOV dword ptr [ECX],EDX
+005e2993  MOV EAX,dword ptr [ESI + 0x4]
+005e2996  MOV dword ptr [ECX + 0x4],EAX
+005e2999  MOV EDX,dword ptr [ESI + 0x8]
+005e299c  MOV dword ptr [ECX + 0x8],EDX
+005e299f  MOV AL,0x1
+005e29a1  POP ESI
+005e29a2  RET 0x4
+005e29a5  MOV EAX,dword ptr [ESP + 0x8]
+005e29a9  ADD ESI,0x28
+005e29ac  MOV ECX,dword ptr [ESI]
+005e29ae  MOV dword ptr [EAX],ECX
+005e29b0  MOV EDX,dword ptr [ESI + 0x4]
+005e29b3  MOV dword ptr [EAX + 0x4],EDX
+005e29b6  MOV ECX,dword ptr [ESI + 0x8]
+005e29b9  MOV dword ptr [EAX + 0x8],ECX
+005e29bc  MOV AL,0x1
+005e29be  POP ESI
+005e29bf  RET 0x4

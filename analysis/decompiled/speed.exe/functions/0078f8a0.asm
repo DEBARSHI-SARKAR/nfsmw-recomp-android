@@ -1,0 +1,7 @@
+0078f8a0  MOV EAX,ECX
+0078f8a2  XOR ECX,ECX
+0078f8a4  MOV byte ptr [EAX],CL
+0078f8a6  MOV dword ptr [EAX + 0x400],ECX
+0078f8ac  MOV dword ptr [EAX + 0x404],ECX
+0078f8b2  MOV byte ptr [EAX + 0x408],0x1
+0078f8b9  RET

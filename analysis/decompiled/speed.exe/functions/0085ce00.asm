@@ -1,0 +1,3 @@
+0085ce00  MOV EAX,dword ptr [ESP + 0x4]
+0085ce04  ADD EAX,0x190
+0085ce09  RET

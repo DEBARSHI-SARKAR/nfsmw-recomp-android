@@ -1,0 +1,22 @@
+005fdd60  PUSH ESI
+005fdd61  PUSH EDI
+005fdd62  MOV EDI,ECX
+005fdd64  MOV ESI,dword ptr [EDI + 0x80]
+005fdd6a  CMP ESI,dword ptr [EDI + 0x84]
+005fdd70  JZ 0x005fdd95
+005fdd72  MOV ECX,dword ptr [ESI]
+005fdd74  MOV AL,byte ptr [ECX + 0x4c]
+005fdd77  CMP AL,0x2
+005fdd79  JZ 0x005fdd7f
+005fdd7b  CMP AL,0x3
+005fdd7d  JNZ 0x005fdd88
+005fdd7f  CALL 0x005fd820
+005fdd84  TEST AL,AL
+005fdd86  JNZ 0x005fdd95
+005fdd88  MOV EAX,dword ptr [EDI + 0x84]
+005fdd8e  ADD ESI,0x4
+005fdd91  CMP ESI,EAX
+005fdd93  JNZ 0x005fdd72
+005fdd95  POP EDI
+005fdd96  POP ESI
+005fdd97  RET

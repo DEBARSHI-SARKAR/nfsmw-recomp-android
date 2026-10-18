@@ -1,0 +1,16 @@
+00700c80  PUSH ESI
+00700c81  MOV ESI,ECX
+00700c83  MOV EAX,dword ptr [ESI]
+00700c85  PUSH EDI
+00700c86  XOR EDI,EDI
+00700c88  PUSH -0x1
+00700c8a  MOV dword ptr [ESI + 0xc],EDI
+00700c8d  MOV dword ptr [ESI + 0x24],EDI
+00700c90  MOV dword ptr [ESI + 0x20],0x46fffe00
+00700c97  MOV dword ptr [ESI + 0x28],EDI
+00700c9a  MOV dword ptr [ESI + 0x2c],EDI
+00700c9d  CALL dword ptr [EAX + 0xc]
+00700ca0  MOV dword ptr [ESI + 0xc],EDI
+00700ca3  POP EDI
+00700ca4  POP ESI
+00700ca5  RET

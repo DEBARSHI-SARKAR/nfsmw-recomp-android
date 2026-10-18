@@ -1,0 +1,15 @@
+006ea2b0  PUSH ESI
+006ea2b1  MOV ESI,ECX
+006ea2b3  CMP dword ptr [ESI],0x0
+006ea2b6  JZ 0x006ea2be
+006ea2b8  MOV dword ptr [ESI],0x0
+006ea2be  TEST byte ptr [ESP + 0x8],0x1
+006ea2c3  JZ 0x006ea2d4
+006ea2c5  PUSH 0x0
+006ea2c7  PUSH 0x8
+006ea2c9  PUSH ESI
+006ea2ca  MOV ECX,0x925b30
+006ea2cf  CALL 0x005d0370
+006ea2d4  MOV EAX,ESI
+006ea2d6  POP ESI
+006ea2d7  RET 0x4

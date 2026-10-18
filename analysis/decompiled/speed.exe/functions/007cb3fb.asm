@@ -1,0 +1,5 @@
+007cb3fb  MOV ECX,dword ptr [EBP + 0xc]
+007cb3fe  PUSH ECX
+007cb3ff  CALL 0x007c9400
+007cb404  ADD ESP,0x4
+007cb407  RET

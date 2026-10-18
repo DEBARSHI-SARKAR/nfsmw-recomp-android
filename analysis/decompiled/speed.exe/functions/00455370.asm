@@ -1,0 +1,27 @@
+00455370  PUSH 0x890f10
+00455375  PUSH 0x24
+00455377  MOV ECX,0x925b30
+0045537c  CALL 0x005d29d0
+00455381  TEST EAX,EAX
+00455383  JZ 0x004553c5
+00455385  MOV ECX,dword ptr [ESP + 0x4]
+00455389  MOV EDX,dword ptr [ESP + 0x8]
+0045538d  MOV dword ptr [EAX],ECX
+0045538f  MOV ECX,dword ptr [ESP + 0xc]
+00455393  MOV dword ptr [EAX + 0x8],ECX
+00455396  MOV ECX,dword ptr [ESP + 0x10]
+0045539a  MOV dword ptr [EAX + 0x4],EDX
+0045539d  MOV EDX,dword ptr [ECX]
+0045539f  MOV dword ptr [EAX + 0xc],EDX
+004553a2  MOV EDX,dword ptr [ECX + 0x4]
+004553a5  MOV dword ptr [EAX + 0x10],EDX
+004553a8  MOV EDX,dword ptr [ECX + 0x8]
+004553ab  MOV dword ptr [EAX + 0x14],EDX
+004553ae  MOV EDX,dword ptr [ECX + 0xc]
+004553b1  MOV dword ptr [EAX + 0x18],EDX
+004553b4  MOV ECX,dword ptr [ECX + 0x10]
+004553b7  MOV DL,byte ptr [ESP + 0x14]
+004553bb  MOV dword ptr [EAX + 0x1c],ECX
+004553be  MOV byte ptr [EAX + 0x20],DL
+004553c1  MOV byte ptr [EAX + 0x21],0x0
+004553c5  RET 0x14

@@ -1,0 +1,10 @@
+007fa435  PUSH EBP
+007fa436  MOV EBP,ESP
+007fa438  MOV EAX,dword ptr [EBP + 0x8]
+007fa43b  AND dword ptr [ECX + 0x1c],0x0
+007fa43f  AND dword ptr [ECX + 0x18],0x0
+007fa443  PUSH 0x2
+007fa445  MOV dword ptr [ECX + 0x30],EAX
+007fa448  POP EAX
+007fa449  POP EBP
+007fa44a  RET 0x8

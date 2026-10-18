@@ -1,0 +1,63 @@
+0068e090  PUSH ECX
+0068e091  FLD float ptr [ESP + 0xc]
+0068e095  PUSH ESI
+0068e096  FMUL float ptr [0x00890960]
+0068e09c  PUSH EDI
+0068e09d  MOV ESI,ECX
+0068e09f  FMUL float ptr [0x008933d4]
+0068e0a5  FST float ptr [ESP + 0x14]
+0068e0a9  CALL 0x007c4b80
+0068e0ae  FLD float ptr [ESP + 0x10]
+0068e0b2  FMUL float ptr [0x00890d60]
+0068e0b8  MOV EDI,EAX
+0068e0ba  CMP EDI,0x6
+0068e0bd  MOV dword ptr [ESP + 0x8],EDI
+0068e0c1  FMUL float ptr [0x0089119c]
+0068e0c7  FSTP float ptr [ESP + 0x10]
+0068e0cb  JL 0x0068e113
+0068e0cd  MOV ECX,dword ptr [ESI + 0x100]
+0068e0d3  MOV EAX,dword ptr [ESI + 0x10c]
+0068e0d9  MOV EDX,dword ptr [ECX + 0x8]
+0068e0dc  FLD float ptr [EDX + EAX*0x4 + 0x18]
+0068e0e0  MOV EAX,dword ptr [ESP + 0x10]
+0068e0e4  MOV ECX,dword ptr [0x008f8a88]
+0068e0ea  FSTP float ptr [ESP + 0x14]
+0068e0ee  PUSH EAX
+0068e0ef  CALL 0x006533b0
+0068e0f4  MOV ECX,dword ptr [0x008f8aa8]
+0068e0fa  FIMUL dword ptr [ECX + 0x8]
+0068e0fd  POP EDI
+0068e0fe  FMUL float ptr [ESI + 0x128]
+0068e104  POP ESI
+0068e105  FMUL float ptr [ESP + 0xc]
+0068e109  FMUL float ptr [0x008ab228]
+0068e10f  POP ECX
+0068e110  RET 0x8
+0068e113  MOV ECX,dword ptr [EDI*0x4 + 0x8f8a70]
+0068e11a  PUSH EBX
+0068e11b  MOV EBX,dword ptr [ESP + 0x14]
+0068e11f  PUSH EBX
+0068e120  CALL 0x006533b0
+0068e125  FSTP float ptr [ESP + 0x14]
+0068e129  MOV ECX,dword ptr [EDI*0x4 + 0x8f8a74]
+0068e130  PUSH EBX
+0068e131  CALL 0x006533b0
+0068e136  FILD dword ptr [ESP + 0xc]
+0068e13a  MOV EAX,dword ptr [ESI + 0x100]
+0068e140  MOV EDX,dword ptr [ESI + 0x10c]
+0068e146  FSUBR float ptr [ESP + 0x18]
+0068e14a  MOV ECX,dword ptr [EAX + 0x8]
+0068e14d  FXCH
+0068e14f  POP EBX
+0068e150  FSUB float ptr [ESP + 0x10]
+0068e154  POP EDI
+0068e155  FMULP
+0068e157  FADD float ptr [ESP + 0xc]
+0068e15b  FMUL float ptr [ECX + EDX*0x4 + 0x18]
+0068e15f  MOV EDX,dword ptr [0x008f8aa8]
+0068e165  FIMUL dword ptr [EDX + 0x8]
+0068e168  FMUL float ptr [ESI + 0x128]
+0068e16e  POP ESI
+0068e16f  FMUL float ptr [0x008ab228]
+0068e175  POP ECX
+0068e176  RET 0x8

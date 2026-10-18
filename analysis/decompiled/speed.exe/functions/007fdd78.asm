@@ -1,0 +1,19 @@
+007fdd78  PUSH EBP
+007fdd79  MOV EBP,ESP
+007fdd7b  PUSH ECX
+007fdd7c  PUSH EBX
+007fdd7d  PUSH ESI
+007fdd7e  PUSH EDI
+007fdd7f  PUSHAD
+007fdd80  CPUID
+007fdd82  RDTSC
+007fdd84  MOV dword ptr [EBP + -0x4],EAX
+007fdd87  POPAD
+007fdd88  MOV EAX,dword ptr [EBP + 0x8]
+007fdd8b  MOV ECX,dword ptr [EBP + -0x4]
+007fdd8e  POP EDI
+007fdd8f  POP ESI
+007fdd90  MOV dword ptr [EAX],ECX
+007fdd92  POP EBX
+007fdd93  LEAVE
+007fdd94  RET

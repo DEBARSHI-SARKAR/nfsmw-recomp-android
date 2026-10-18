@@ -1,0 +1,19 @@
+0076ded0  SUB ESP,0x8
+0076ded3  MOV ECX,dword ptr [ESP + 0xc]
+0076ded7  MOV EAX,[0x009b38c0]
+0076dedc  IMUL ECX,ECX,0x16
+0076dedf  MOV EDX,dword ptr [0x009b38bc]
+0076dee5  ADD ECX,EAX
+0076dee7  MOVZX EAX,word ptr [ECX]
+0076deea  MOVZX ECX,word ptr [ECX + 0x2]
+0076deee  SHL ECX,0x5
+0076def1  ADD ECX,EDX
+0076def3  SHL EAX,0x5
+0076def6  MOV dword ptr [ESP + 0x4],ECX
+0076defa  MOV ECX,dword ptr [ESP + 0x10]
+0076defe  ADD EAX,EDX
+0076df00  CMP ECX,EAX
+0076df02  JNZ 0x0076df08
+0076df04  MOV EAX,dword ptr [ESP + 0x4]
+0076df08  ADD ESP,0x8
+0076df0b  RET 0x8

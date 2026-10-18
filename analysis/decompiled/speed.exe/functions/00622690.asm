@@ -1,0 +1,2 @@
+00622690  MOV dword ptr [ECX],0x8a66f8
+00622696  RET

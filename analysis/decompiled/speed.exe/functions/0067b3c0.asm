@@ -1,0 +1,17 @@
+0067b3c0  PUSH ESI
+0067b3c1  PUSH EDI
+0067b3c2  MOV EDI,ECX
+0067b3c4  MOV EAX,dword ptr [EDI + 0x4]
+0067b3c7  MOV ESI,dword ptr [EAX]
+0067b3c9  CMP ESI,EAX
+0067b3cb  JZ 0x0067b3df
+0067b3cd  LEA ECX,[ECX]
+0067b3d0  MOV ECX,dword ptr [ESI + 0x8]
+0067b3d3  MOV EAX,dword ptr [ECX]
+0067b3d5  CALL dword ptr [EAX + 0x8]
+0067b3d8  MOV ESI,dword ptr [ESI]
+0067b3da  CMP ESI,dword ptr [EDI + 0x4]
+0067b3dd  JNZ 0x0067b3d0
+0067b3df  POP EDI
+0067b3e0  POP ESI
+0067b3e1  RET

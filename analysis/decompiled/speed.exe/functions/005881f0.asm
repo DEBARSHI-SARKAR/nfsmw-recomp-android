@@ -1,0 +1,11 @@
+005881f0  MOV EAX,dword ptr [ESP + 0x4]
+005881f4  LEA EDX,[ECX + 0x98]
+005881fa  MOV dword ptr [EAX + 0x10],EDX
+005881fd  MOV EDX,dword ptr [ECX + 0xc]
+00588200  ADD ECX,0x8
+00588203  ADD EAX,0x4
+00588206  MOV dword ptr [EDX],EAX
+00588208  MOV dword ptr [ECX + 0x4],EAX
+0058820b  MOV dword ptr [EAX + 0x4],EDX
+0058820e  MOV dword ptr [EAX],ECX
+00588210  RET 0x4

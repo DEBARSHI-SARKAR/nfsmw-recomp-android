@@ -1,0 +1,16 @@
+007e99f0  PUSH EBP
+007e99f1  MOV EBP,ESP
+007e99f3  MOV EAX,dword ptr [EBP + 0x8]
+007e99f6  XOR EDX,EDX
+007e99f8  CMP EAX,EDX
+007e99fa  JNZ 0x007e9a06
+007e99fc  MOV dword ptr [ECX + 0x8],EDX
+007e99ff  MOV dword ptr [ECX + 0xc],EDX
+007e9a02  POP EBP
+007e9a03  RET 0x8
+007e9a06  SUB EAX,ECX
+007e9a08  MOV dword ptr [ECX + 0x8],EAX
+007e9a0b  MOV EAX,dword ptr [EBP + 0xc]
+007e9a0e  MOV dword ptr [ECX + 0xc],EAX
+007e9a11  POP EBP
+007e9a12  RET 0x8

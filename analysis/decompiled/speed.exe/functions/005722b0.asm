@@ -1,0 +1,2 @@
+005722b0  FLD float ptr [ECX + 0x24]
+005722b3  RET

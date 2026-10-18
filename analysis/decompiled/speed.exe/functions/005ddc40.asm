@@ -1,0 +1,15 @@
+005ddc40  PUSH ESI
+005ddc41  MOV ESI,ECX
+005ddc43  MOV EAX,dword ptr [ESI + 0xb0]
+005ddc49  PUSH EDI
+005ddc4a  XOR EDI,EDI
+005ddc4c  CMP EAX,EDI
+005ddc4e  JZ 0x005ddc59
+005ddc50  PUSH EAX
+005ddc51  CALL 0x00652b10
+005ddc56  ADD ESP,0x4
+005ddc59  MOV dword ptr [ESI + 0xb0],EDI
+005ddc5f  MOV dword ptr [ESI + 0xac],EDI
+005ddc65  POP EDI
+005ddc66  POP ESI
+005ddc67  RET

@@ -1,0 +1,7 @@
+00621590  MOV EAX,dword ptr [ECX + 0x8]
+00621593  TEST EAX,EAX
+00621595  MOV dword ptr [ECX],0x8a6a5c
+0062159b  JZ 0x006215a4
+0062159d  AND dword ptr [EAX + 0x10],0xfffffeff
+006215a4  MOV dword ptr [ECX],0x8a66f8
+006215aa  RET

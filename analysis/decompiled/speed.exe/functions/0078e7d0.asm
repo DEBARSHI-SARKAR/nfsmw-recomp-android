@@ -1,0 +1,46 @@
+0078e7d0  XOR EAX,EAX
+0078e7d2  MOV dword ptr [ECX + 0xc],EAX
+0078e7d5  MOV dword ptr [ECX + 0x8],EAX
+0078e7d8  MOV dword ptr [ECX + 0x4],EAX
+0078e7db  MOV dword ptr [ECX],EAX
+0078e7dd  MOV dword ptr [ECX + 0x1c],EAX
+0078e7e0  MOV dword ptr [ECX + 0x18],EAX
+0078e7e3  MOV dword ptr [ECX + 0x14],EAX
+0078e7e6  MOV dword ptr [ECX + 0x10],EAX
+0078e7e9  MOV dword ptr [ECX + 0x4c],EAX
+0078e7ec  MOV dword ptr [ECX + 0x48],EAX
+0078e7ef  MOV dword ptr [ECX + 0x44],EAX
+0078e7f2  MOV dword ptr [ECX + 0x40],EAX
+0078e7f5  MOV dword ptr [ECX + 0x3c],EAX
+0078e7f8  MOV dword ptr [ECX + 0x38],EAX
+0078e7fb  MOV dword ptr [ECX + 0x34],EAX
+0078e7fe  MOV dword ptr [ECX + 0x30],EAX
+0078e801  MOV dword ptr [ECX + 0x2c],EAX
+0078e804  MOV dword ptr [ECX + 0x28],EAX
+0078e807  MOV dword ptr [ECX + 0x24],EAX
+0078e80a  MOV dword ptr [ECX + 0x20],EAX
+0078e80d  MOV dword ptr [ECX + 0x7c],EAX
+0078e810  MOV dword ptr [ECX + 0x78],EAX
+0078e813  MOV dword ptr [ECX + 0x74],EAX
+0078e816  MOV dword ptr [ECX + 0x70],EAX
+0078e819  MOV dword ptr [ECX + 0x6c],EAX
+0078e81c  MOV dword ptr [ECX + 0x68],EAX
+0078e81f  MOV dword ptr [ECX + 0x64],EAX
+0078e822  MOV dword ptr [ECX + 0x60],EAX
+0078e825  MOV dword ptr [ECX + 0x5c],EAX
+0078e828  MOV dword ptr [ECX + 0x58],EAX
+0078e82b  MOV dword ptr [ECX + 0x54],EAX
+0078e82e  MOV dword ptr [ECX + 0x50],EAX
+0078e831  MOV dword ptr [ECX + 0xac],EAX
+0078e837  MOV dword ptr [ECX + 0xa8],EAX
+0078e83d  MOV dword ptr [ECX + 0xa4],EAX
+0078e843  MOV dword ptr [ECX + 0xa0],EAX
+0078e849  MOV dword ptr [ECX + 0x9c],EAX
+0078e84f  MOV dword ptr [ECX + 0x98],EAX
+0078e855  MOV dword ptr [ECX + 0x94],EAX
+0078e85b  MOV dword ptr [ECX + 0x90],EAX
+0078e861  MOV dword ptr [ECX + 0x8c],EAX
+0078e867  MOV dword ptr [ECX + 0x88],EAX
+0078e86d  MOV dword ptr [ECX + 0x84],EAX
+0078e873  MOV dword ptr [ECX + 0x80],EAX
+0078e879  RET

@@ -1,0 +1,51 @@
+00762de0  MOV ECX,dword ptr [ESP + 0x8]
+00762de4  MOV EDX,dword ptr [ESP + 0x4]
+00762de8  FLD float ptr [EDX + 0x8]
+00762deb  FSUB float ptr [ECX + 0x18]
+00762dee  FLD float ptr [ECX]
+00762df0  FSUB float ptr [ECX + 0x10]
+00762df3  FMULP
+00762df5  FLD float ptr [EDX]
+00762df7  FSUB float ptr [ECX + 0x10]
+00762dfa  FLD float ptr [ECX + 0x8]
+00762dfd  FSUB float ptr [ECX + 0x18]
+00762e00  FMULP
+00762e02  FSUBP
+00762e04  FCOMP float ptr [0x00890968]
+00762e0a  FNSTSW AX
+00762e0c  TEST AH,0x41
+00762e0f  JP 0x00762e66
+00762e11  FLD float ptr [ECX + 0x10]
+00762e14  FSUB float ptr [ECX + 0x20]
+00762e17  FLD float ptr [EDX + 0x8]
+00762e1a  FSUB float ptr [ECX + 0x28]
+00762e1d  FMULP
+00762e1f  FLD float ptr [ECX + 0x18]
+00762e22  FSUB float ptr [ECX + 0x28]
+00762e25  FLD float ptr [EDX]
+00762e27  FSUB float ptr [ECX + 0x20]
+00762e2a  FMULP
+00762e2c  FSUBP
+00762e2e  FCOMP float ptr [0x00890968]
+00762e34  FNSTSW AX
+00762e36  TEST AH,0x41
+00762e39  JP 0x00762e66
+00762e3b  FLD float ptr [EDX + 0x8]
+00762e3e  FSUB float ptr [ECX + 0x8]
+00762e41  FLD float ptr [ECX + 0x20]
+00762e44  FSUB float ptr [ECX]
+00762e46  FMULP
+00762e48  FLD float ptr [ECX + 0x28]
+00762e4b  FSUB float ptr [ECX + 0x8]
+00762e4e  FLD float ptr [EDX]
+00762e50  FSUB float ptr [ECX]
+00762e52  FMULP
+00762e54  FSUBP
+00762e56  FCOMP float ptr [0x00890968]
+00762e5c  FNSTSW AX
+00762e5e  TEST AH,0x41
+00762e61  JP 0x00762e66
+00762e63  MOV AL,0x1
+00762e65  RET
+00762e66  XOR AL,AL
+00762e68  RET

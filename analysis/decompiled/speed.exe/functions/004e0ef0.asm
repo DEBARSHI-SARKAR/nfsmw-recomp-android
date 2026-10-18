@@ -1,0 +1,15 @@
+004e0ef0  PUSH ESI
+004e0ef1  MOV ESI,dword ptr [ESP + 0x8]
+004e0ef5  MOV EAX,dword ptr [ESI]
+004e0ef7  PUSH EDI
+004e0ef8  MOV EDI,ECX
+004e0efa  MOV ECX,ESI
+004e0efc  CALL dword ptr [EAX + 0x4]
+004e0eff  MOV ECX,dword ptr [EAX]
+004e0f01  AND ECX,0xfff0
+004e0f07  CMP ECX,0xf0
+004e0f0d  JNZ 0x004e0f12
+004e0f0f  MOV dword ptr [EDI + 0x30],ESI
+004e0f12  POP EDI
+004e0f13  POP ESI
+004e0f14  RET 0x4

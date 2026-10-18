@@ -1,0 +1,31 @@
+0064a590  SUB ESP,0x20
+0064a593  MOV ECX,dword ptr [ESP + 0x24]
+0064a597  MOV EAX,0x20202020
+0064a59c  MOV dword ptr [ESP],EAX
+0064a59f  MOV dword ptr [ESP + 0x4],EAX
+0064a5a3  MOV dword ptr [ESP + 0x8],EAX
+0064a5a7  MOV dword ptr [ESP + 0xc],EAX
+0064a5ab  MOV dword ptr [ESP + 0x10],EAX
+0064a5af  MOV dword ptr [ESP + 0x14],EAX
+0064a5b3  MOV dword ptr [ESP + 0x18],EAX
+0064a5b7  MOV word ptr [ESP + 0x1c],AX
+0064a5bc  PUSH ECX
+0064a5bd  MOV byte ptr [ESP + 0x22],AL
+0064a5c1  CALL 0x00460c50
+0064a5c6  MOV ECX,dword ptr [ESP + 0x2c]
+0064a5ca  LEA EDX,[ESP + 0x22]
+0064a5ce  SUB EDX,EAX
+0064a5d0  MOV EAX,dword ptr [ESP + 0x30]
+0064a5d4  ADD ESP,0x4
+0064a5d7  TEST EAX,EAX
+0064a5d9  MOV byte ptr [EDX],0x0
+0064a5dc  JNZ 0x0064a5e1
+0064a5de  LEA EAX,[ECX + -0x4]
+0064a5e1  MOV ECX,dword ptr [ECX]
+0064a5e3  MOV EDX,dword ptr [EAX]
+0064a5e5  PUSH ECX
+0064a5e6  PUSH EDX
+0064a5e7  CALL 0x0045ce70
+0064a5ec  FSTP ST0
+0064a5ee  ADD ESP,0x28
+0064a5f1  RET

@@ -1,0 +1,8 @@
+007ddd30  PUSH EBP
+007ddd31  MOV EBP,ESP
+007ddd33  MOV EAX,dword ptr [EBP + 0x8]
+007ddd36  PUSH EAX
+007ddd37  CALL dword ptr [0x00890260]
+007ddd3d  MOV EAX,0x1
+007ddd42  POP EBP
+007ddd43  RET 0x8

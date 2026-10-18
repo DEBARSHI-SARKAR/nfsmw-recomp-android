@@ -1,0 +1,33 @@
+006fc330  PUSH -0x1
+006fc332  PUSH 0x87f5ab
+006fc337  MOV EAX,FS:[0x0]
+006fc33d  PUSH EAX
+006fc33e  MOV dword ptr FS:[0x0],ESP
+006fc345  PUSH ECX
+006fc346  PUSH ESI
+006fc347  MOV ESI,ECX
+006fc349  PUSH EDI
+006fc34a  MOV dword ptr [ESP + 0x8],ESI
+006fc34e  MOV dword ptr [0x00988ecc],ESI
+006fc354  XOR EAX,EAX
+006fc356  MOV dword ptr [ESP + 0x14],EAX
+006fc35a  MOV dword ptr [ESI + 0x4],EAX
+006fc35d  MOV dword ptr [ESI + 0x8],EAX
+006fc360  MOV dword ptr [ESI + 0xc],EAX
+006fc363  LEA EDI,[ESI + 0x10]
+006fc366  MOV dword ptr [EDI + 0x4],EAX
+006fc369  MOV dword ptr [EDI + 0x8],EAX
+006fc36c  MOV dword ptr [EDI + 0xc],EAX
+006fc36f  PUSH 0xa0
+006fc374  MOV byte ptr [ESP + 0x18],0x2
+006fc379  CALL 0x006fb050
+006fc37e  PUSH 0x100
+006fc383  MOV ECX,EDI
+006fc385  CALL 0x006fb150
+006fc38a  MOV ECX,dword ptr [ESP + 0xc]
+006fc38e  POP EDI
+006fc38f  MOV EAX,ESI
+006fc391  POP ESI
+006fc392  MOV dword ptr FS:[0x0],ECX
+006fc399  ADD ESP,0x10
+006fc39c  RET

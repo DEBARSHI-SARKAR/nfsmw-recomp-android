@@ -1,0 +1,29 @@
+006bb9f0  PUSH EBX
+006bb9f1  MOV EBX,dword ptr [ESP + 0x8]
+006bb9f5  PUSH ESI
+006bb9f6  PUSH EDI
+006bb9f7  MOV ESI,ECX
+006bb9f9  PUSH EBX
+006bb9fa  LEA EAX,[ESP + 0x14]
+006bb9fe  LEA EDI,[ESI + 0x50]
+006bba01  PUSH EAX
+006bba02  MOV ECX,EDI
+006bba04  CALL 0x006b4df0
+006bba09  MOV EAX,dword ptr [ESP + 0x10]
+006bba0d  CMP EAX,dword ptr [ESI + 0x54]
+006bba10  JNZ 0x006bba26
+006bba12  PUSH EBX
+006bba13  MOV ECX,EDI
+006bba15  CALL 0x006bb8f0
+006bba1a  POP EDI
+006bba1b  POP ESI
+006bba1c  MOV dword ptr [EAX],0x1
+006bba22  POP EBX
+006bba23  RET 0x4
+006bba26  MOV ECX,dword ptr [EAX + 0x10]
+006bba29  POP EDI
+006bba2a  INC ECX
+006bba2b  POP ESI
+006bba2c  MOV dword ptr [EAX + 0x10],ECX
+006bba2f  POP EBX
+006bba30  RET 0x4

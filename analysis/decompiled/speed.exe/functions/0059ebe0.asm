@@ -1,0 +1,39 @@
+0059ebe0  PUSH -0x1
+0059ebe2  PUSH 0x873208
+0059ebe7  MOV EAX,FS:[0x0]
+0059ebed  PUSH EAX
+0059ebee  MOV dword ptr FS:[0x0],ESP
+0059ebf5  PUSH ECX
+0059ebf6  PUSH ESI
+0059ebf7  MOV ESI,ECX
+0059ebf9  LEA EAX,[ESI + 0x30]
+0059ebfc  MOV dword ptr [ESP + 0x4],ESI
+0059ec00  MOV dword ptr [ESI],0x8a2260
+0059ec06  MOV dword ptr [EAX],0x8a2248
+0059ec0c  MOV ECX,dword ptr [EAX + 0x4]
+0059ec0f  PUSH EAX
+0059ec10  MOV dword ptr [ESP + 0x14],0x0
+0059ec18  MOV dword ptr [EAX],0x890970
+0059ec1e  CALL 0x005d5a50
+0059ec23  MOV dword ptr [ESI],0x8a1e80
+0059ec29  MOV EAX,dword ptr [ESI + 0x8]
+0059ec2c  ADD ESI,0x8
+0059ec2f  CMP EAX,ESI
+0059ec31  MOV dword ptr [ESP + 0x10],0xffffffff
+0059ec39  JZ 0x0059ec59
+0059ec3b  JMP 0x0059ec40
+0059ec40  MOV ECX,dword ptr [EAX]
+0059ec42  MOV EDX,dword ptr [EAX + 0x4]
+0059ec45  MOV dword ptr [EDX],ECX
+0059ec47  PUSH EAX
+0059ec48  MOV dword ptr [ECX + 0x4],EDX
+0059ec4b  CALL 0x00466440
+0059ec50  MOV EAX,dword ptr [ESI]
+0059ec52  ADD ESP,0x4
+0059ec55  CMP EAX,ESI
+0059ec57  JNZ 0x0059ec40
+0059ec59  MOV ECX,dword ptr [ESP + 0x8]
+0059ec5d  POP ESI
+0059ec5e  MOV dword ptr FS:[0x0],ECX
+0059ec65  ADD ESP,0x10
+0059ec68  RET

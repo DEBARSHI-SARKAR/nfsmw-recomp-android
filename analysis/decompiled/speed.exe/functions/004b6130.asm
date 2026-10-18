@@ -1,0 +1,4 @@
+004b6130  MOV EAX,ECX
+004b6132  MOV dword ptr [EAX],0x896e30
+004b6138  MOV dword ptr [EAX + 0x4],0x1
+004b613f  RET

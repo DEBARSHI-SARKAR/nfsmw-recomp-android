@@ -1,0 +1,3 @@
+004cdad1  PUSH 0x0
+004cdad3  PUSH 0x0
+004cdad5  CALL 0x007c56b0

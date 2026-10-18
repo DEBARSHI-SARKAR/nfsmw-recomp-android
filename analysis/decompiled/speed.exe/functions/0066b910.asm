@@ -1,0 +1,2 @@
+0066b910  MOV ECX,dword ptr [0x0090dcbc]
+0066b916  JMP 0x0045c030

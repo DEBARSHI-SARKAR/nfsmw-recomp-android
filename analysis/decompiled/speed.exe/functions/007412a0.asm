@@ -1,0 +1,4 @@
+007412a0  CMP dword ptr [ECX],0x0
+007412a3  JNZ 0x007412ab
+007412a5  MOV dword ptr [ECX],0x1
+007412ab  RET

@@ -1,0 +1,11 @@
+004e1020  SUB ESP,0x8
+004e1023  FLD float ptr [ESP + 0xc]
+004e1027  FIST dword ptr [ESP]
+004e102a  FISUB dword ptr [ESP]
+004e102d  FSTP float ptr [ESP + 0x4]
+004e1031  MOV EAX,dword ptr [ESP + 0x4]
+004e1035  MOV ECX,dword ptr [ESP]
+004e1038  SAR EAX,0x1f
+004e103b  ADD EAX,ECX
+004e103d  ADD ESP,0x8
+004e1040  RET

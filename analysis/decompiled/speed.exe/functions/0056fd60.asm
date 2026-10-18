@@ -1,0 +1,4 @@
+0056fd60  MOVZX EAX,word ptr [ESP + 0x4]
+0056fd65  IMUL EAX,EAX,0xb0
+0056fd6b  LEA EAX,[EAX + ECX*0x1 + 0x10]
+0056fd6f  RET 0x4

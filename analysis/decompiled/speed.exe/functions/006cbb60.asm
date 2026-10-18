@@ -1,0 +1,2 @@
+006cbb60  MOV AL,[0x00982c30]
+006cbb65  RET

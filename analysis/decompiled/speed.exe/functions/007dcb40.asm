@@ -1,0 +1,43 @@
+007dcb40  PUSH EBX
+007dcb41  PUSH ESI
+007dcb42  MOV EAX,dword ptr [ESP + 0x18]
+007dcb46  OR EAX,EAX
+007dcb48  JNZ 0x007dcb62
+007dcb4a  MOV ECX,dword ptr [ESP + 0x14]
+007dcb4e  MOV EAX,dword ptr [ESP + 0x10]
+007dcb52  XOR EDX,EDX
+007dcb54  DIV ECX
+007dcb56  MOV EBX,EAX
+007dcb58  MOV EAX,dword ptr [ESP + 0xc]
+007dcb5c  DIV ECX
+007dcb5e  MOV EDX,EBX
+007dcb60  JMP 0x007dcba3
+007dcb62  MOV ECX,EAX
+007dcb64  MOV EBX,dword ptr [ESP + 0x14]
+007dcb68  MOV EDX,dword ptr [ESP + 0x10]
+007dcb6c  MOV EAX,dword ptr [ESP + 0xc]
+007dcb70  SHR ECX,0x1
+007dcb72  RCR EBX,0x1
+007dcb74  SHR EDX,0x1
+007dcb76  RCR EAX,0x1
+007dcb78  OR ECX,ECX
+007dcb7a  JNZ 0x007dcb70
+007dcb7c  DIV EBX
+007dcb7e  MOV ESI,EAX
+007dcb80  MUL dword ptr [ESP + 0x18]
+007dcb84  MOV ECX,EAX
+007dcb86  MOV EAX,dword ptr [ESP + 0x14]
+007dcb8a  MUL ESI
+007dcb8c  ADD EDX,ECX
+007dcb8e  JC 0x007dcb9e
+007dcb90  CMP EDX,dword ptr [ESP + 0x10]
+007dcb94  JA 0x007dcb9e
+007dcb96  JC 0x007dcb9f
+007dcb98  CMP EAX,dword ptr [ESP + 0xc]
+007dcb9c  JBE 0x007dcb9f
+007dcb9e  DEC ESI
+007dcb9f  XOR EDX,EDX
+007dcba1  MOV EAX,ESI
+007dcba3  POP ESI
+007dcba4  POP EBX
+007dcba5  RET 0x10

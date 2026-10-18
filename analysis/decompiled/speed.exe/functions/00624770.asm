@@ -1,0 +1,6 @@
+00624770  MOV EAX,ECX
+00624772  MOV ECX,dword ptr [ESP + 0x4]
+00624776  MOV dword ptr [EAX + 0x4],0x10
+0062477d  MOV dword ptr [EAX],0x8a72f8
+00624783  MOV dword ptr [EAX + 0x8],ECX
+00624786  RET 0x4

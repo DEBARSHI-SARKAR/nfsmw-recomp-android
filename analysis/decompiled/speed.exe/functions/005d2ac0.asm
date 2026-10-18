@@ -1,0 +1,73 @@
+005d2ac0  PUSH EBX
+005d2ac1  MOV EBX,dword ptr [ESP + 0x8]
+005d2ac5  PUSH ESI
+005d2ac6  LEA EAX,[EBX + 0x4]
+005d2ac9  MOV ESI,ECX
+005d2acb  MOV ECX,dword ptr [EAX]
+005d2acd  PUSH EDI
+005d2ace  XOR EDI,EDI
+005d2ad0  TEST ECX,ECX
+005d2ad2  JZ 0x005d2adf
+005d2ad4  MOV ECX,dword ptr [EAX + 0x8]
+005d2ad7  ADD EAX,0x8
+005d2ada  INC EDI
+005d2adb  TEST ECX,ECX
+005d2add  JNZ 0x005d2ad4
+005d2adf  CMP EDI,0x1e
+005d2ae2  MOV dword ptr [ESI],EDI
+005d2ae4  MOV dword ptr [ESI + 0x4],EBX
+005d2ae7  JLE 0x005d2b6d
+005d2aed  MOV EAX,EDI
+005d2aef  PUSH 0x8a354c
+005d2af4  SHL EAX,0x4
+005d2af7  PUSH EAX
+005d2af8  MOV ECX,0x925b30
+005d2afd  CALL 0x005d29d0
+005d2b02  LEA ECX,[EAX + EDI*0x8]
+005d2b05  MOV dword ptr [ESI + 0xc],ECX
+005d2b08  MOV ECX,dword ptr [ESI]
+005d2b0a  MOV dword ptr [ESI + 0x8],EAX
+005d2b0d  XOR EAX,EAX
+005d2b0f  TEST ECX,ECX
+005d2b11  JLE 0x005d2b3c
+005d2b13  MOV ECX,dword ptr [EBX + EAX*0x8]
+005d2b16  MOV EDX,dword ptr [ESI + 0x8]
+005d2b19  MOV dword ptr [EDX + EAX*0x8],ECX
+005d2b1c  MOV ECX,dword ptr [EBX + EAX*0x8 + 0x4]
+005d2b20  MOV dword ptr [EDX + EAX*0x8 + 0x4],ECX
+005d2b24  MOV ECX,dword ptr [EBX + EAX*0x8]
+005d2b27  MOV EDX,dword ptr [ESI + 0xc]
+005d2b2a  MOV dword ptr [EDX + EAX*0x8],ECX
+005d2b2d  MOV ECX,dword ptr [EBX + EAX*0x8 + 0x4]
+005d2b31  MOV dword ptr [EDX + EAX*0x8 + 0x4],ECX
+005d2b35  MOV ECX,dword ptr [ESI]
+005d2b37  INC EAX
+005d2b38  CMP EAX,ECX
+005d2b3a  JL 0x005d2b13
+005d2b3c  MOV EDX,dword ptr [ESI]
+005d2b3e  MOV EAX,dword ptr [ESI + 0x8]
+005d2b41  PUSH 0x5ca570
+005d2b46  PUSH 0x8
+005d2b48  PUSH EDX
+005d2b49  PUSH EAX
+005d2b4a  CALL 0x007c5250
+005d2b4f  MOV ECX,dword ptr [ESI]
+005d2b51  MOV EDX,dword ptr [ESI + 0xc]
+005d2b54  PUSH 0x5ca5c0
+005d2b59  PUSH 0x8
+005d2b5b  PUSH ECX
+005d2b5c  PUSH EDX
+005d2b5d  CALL 0x007c5250
+005d2b62  ADD ESP,0x20
+005d2b65  POP EDI
+005d2b66  MOV EAX,ESI
+005d2b68  POP ESI
+005d2b69  POP EBX
+005d2b6a  RET 0x4
+005d2b6d  POP EDI
+005d2b6e  MOV dword ptr [ESI + 0x8],0x0
+005d2b75  MOV dword ptr [ESI + 0xc],0x0
+005d2b7c  MOV EAX,ESI
+005d2b7e  POP ESI
+005d2b7f  POP EBX
+005d2b80  RET 0x4

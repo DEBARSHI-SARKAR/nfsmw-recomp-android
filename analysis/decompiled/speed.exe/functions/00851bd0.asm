@@ -1,0 +1,7 @@
+00851bd0  MOV ECX,dword ptr [ESP + 0x8]
+00851bd4  XOR EAX,EAX
+00851bd6  CMP ECX,0x1
+00851bd9  MOV ECX,dword ptr [ESP + 0x4]
+00851bdd  SETZ AL
+00851be0  MOV word ptr [ECX + 0x8c],AX
+00851be7  RET

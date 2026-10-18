@@ -1,0 +1,4 @@
+005926f0  MOV EAX,dword ptr [ESP + 0x4]
+005926f4  MOV dword ptr [ECX + 0xb0],EAX
+005926fa  CALL 0x00586dc0
+005926ff  RET 0x4

@@ -1,0 +1,2 @@
+00700360  MOV dword ptr [ECX],0x8967fc
+00700366  RET

@@ -1,0 +1,11 @@
+007e3f20  PUSH EBP
+007e3f21  MOV EBP,ESP
+007e3f23  PUSH ECX
+007e3f24  MOV EAX,[0x009baf48]
+007e3f29  MOV dword ptr [EBP + -0x4],EAX
+007e3f2c  MOV ECX,dword ptr [EBP + 0x8]
+007e3f2f  MOV dword ptr [0x009baf48],ECX
+007e3f35  MOV EAX,dword ptr [EBP + -0x4]
+007e3f38  MOV ESP,EBP
+007e3f3a  POP EBP
+007e3f3b  RET

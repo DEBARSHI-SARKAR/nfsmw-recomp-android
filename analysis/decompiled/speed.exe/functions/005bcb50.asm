@@ -1,0 +1,11 @@
+005bcb50  PUSH ESI
+005bcb51  MOV ESI,dword ptr [ESP + 0x8]
+005bcb55  MOV EAX,dword ptr [ESI]
+005bcb57  PUSH 0x0
+005bcb59  MOV ECX,ESI
+005bcb5b  CALL dword ptr [EAX]
+005bcb5d  PUSH ESI
+005bcb5e  MOV ECX,0x91dd0c
+005bcb63  CALL 0x005b9470
+005bcb68  POP ESI
+005bcb69  RET

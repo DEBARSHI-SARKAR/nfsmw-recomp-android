@@ -1,0 +1,33 @@
+006ff740  MOV EAX,dword ptr [ESP + 0x4]
+006ff744  XOR EDX,EDX
+006ff746  CMP EAX,EDX
+006ff748  MOV byte ptr [ECX + 0x4],0x1
+006ff74c  JZ 0x006ff778
+006ff74e  CMP byte ptr [EAX + 0x22],DL
+006ff751  JNZ 0x006ff796
+006ff753  MOV EDX,dword ptr [ESP + 0x8]
+006ff757  CMP EDX,0x1
+006ff75a  JNZ 0x006ff762
+006ff75c  MOV dword ptr [ECX + 0x44],EAX
+006ff75f  RET 0x8
+006ff762  CMP EDX,0x5
+006ff765  JNZ 0x006ff76d
+006ff767  MOV dword ptr [ECX + 0x4c],EAX
+006ff76a  RET 0x8
+006ff76d  CMP EDX,0x6
+006ff770  JNZ 0x006ff796
+006ff772  MOV dword ptr [ECX + 0x48],EAX
+006ff775  RET 0x8
+006ff778  MOV EAX,dword ptr [ESP + 0x8]
+006ff77c  DEC EAX
+006ff77d  JZ 0x006ff793
+006ff77f  SUB EAX,0x4
+006ff782  JZ 0x006ff78d
+006ff784  DEC EAX
+006ff785  JNZ 0x006ff796
+006ff787  MOV dword ptr [ECX + 0x48],EDX
+006ff78a  RET 0x8
+006ff78d  MOV dword ptr [ECX + 0x4c],EDX
+006ff790  RET 0x8
+006ff793  MOV dword ptr [ECX + 0x44],EDX
+006ff796  RET 0x8

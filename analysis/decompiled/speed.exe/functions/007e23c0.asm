@@ -1,0 +1,16 @@
+007e23c0  PUSH EBP
+007e23c1  MOV EBP,ESP
+007e23c3  PUSH ECX
+007e23c4  CALL 0x007cd100
+007e23c9  MOV EAX,dword ptr [EAX + 0x64]
+007e23cc  MOV dword ptr [EBP + -0x4],EAX
+007e23cf  MOV ECX,dword ptr [EBP + -0x4]
+007e23d2  CMP ECX,dword ptr [0x00906b3c]
+007e23d8  JZ 0x007e23e2
+007e23da  CALL 0x007d2f80
+007e23df  MOV dword ptr [EBP + -0x4],EAX
+007e23e2  MOV EDX,dword ptr [EBP + -0x4]
+007e23e5  MOV EAX,dword ptr [EDX + 0x4]
+007e23e8  MOV ESP,EBP
+007e23ea  POP EBP
+007e23eb  RET

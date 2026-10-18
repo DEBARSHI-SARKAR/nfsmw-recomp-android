@@ -1,0 +1,26 @@
+007d6cb0  CMP ECX,dword ptr [0x00906980]
+007d6cb6  JNZ 0x007d6cb9
+007d6cb8  RET
+007d6cb9  JMP 0x007d6cc0
+007d6cc0  PUSH EBP
+007d6cc1  MOV EBP,ESP
+007d6cc3  PUSH -0x1
+007d6cc5  PUSH 0x8bd1d8
+007d6cca  PUSH 0x7cd5e4
+007d6ccf  MOV EAX,FS:[0x0]
+007d6cd5  PUSH EAX
+007d6cd6  MOV dword ptr FS:[0x0],ESP
+007d6cdd  SUB ESP,0x8
+007d6ce0  PUSH EBX
+007d6ce1  PUSH ESI
+007d6ce2  PUSH EDI
+007d6ce3  MOV dword ptr [EBP + -0x18],ESP
+007d6ce6  MOV dword ptr [EBP + -0x4],0x0
+007d6ced  PUSH 0x0
+007d6cef  PUSH 0x1
+007d6cf1  CALL 0x007e3cf0
+007d6cf6  ADD ESP,0x8
+007d6cf9  MOV dword ptr [EBP + -0x4],0xffffffff
+007d6d00  JMP 0x007d6d12
+007d6d12  PUSH 0x3
+007d6d14  CALL dword ptr [0x008901c4]

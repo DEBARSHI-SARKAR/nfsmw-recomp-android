@@ -1,0 +1,22 @@
+0044c090  PUSH ESI
+0044c091  MOV ESI,ECX
+0044c093  CALL 0x00466410
+0044c098  TEST EAX,EAX
+0044c09a  JZ 0x0044c0b4
+0044c09c  MOV ECX,dword ptr [ESP + 0x8]
+0044c0a0  MOV dword ptr [EAX + 0x8],ECX
+0044c0a3  MOV ECX,dword ptr [ESI + 0x4]
+0044c0a6  MOV dword ptr [ECX],EAX
+0044c0a8  MOV dword ptr [ESI + 0x4],EAX
+0044c0ab  MOV dword ptr [EAX],ESI
+0044c0ad  MOV dword ptr [EAX + 0x4],ECX
+0044c0b0  POP ESI
+0044c0b1  RET 0x4
+0044c0b4  MOV ECX,dword ptr [ESI + 0x4]
+0044c0b7  XOR EAX,EAX
+0044c0b9  MOV dword ptr [ECX],EAX
+0044c0bb  MOV dword ptr [ESI + 0x4],EAX
+0044c0be  MOV dword ptr [EAX],ESI
+0044c0c0  MOV dword ptr [EAX + 0x4],ECX
+0044c0c3  POP ESI
+0044c0c4  RET 0x4

@@ -1,0 +1,75 @@
+004badf0  PUSH EBX
+004badf1  PUSH ESI
+004badf2  MOV ESI,dword ptr [ESP + 0x14]
+004badf6  MOV EAX,0x1
+004badfb  MOV [0x00911f94],AL
+004bae00  PUSH EDI
+004bae01  MOV EDI,dword ptr [ESI + 0x6c]
+004bae04  CMP dword ptr [EDI + 0x10],EAX
+004bae07  JNZ 0x004bae26
+004bae09  MOV EAX,dword ptr [ESI + 0x188]
+004bae0f  MOV ECX,dword ptr [ESI + 0x180]
+004bae15  MOV EDX,dword ptr [EDI + 0x11c]
+004bae1b  ADD ECX,EAX
+004bae1d  XOR EBX,EBX
+004bae1f  CMP ECX,EDX
+004bae21  SETGE BL
+004bae24  JMP 0x004bae42
+004bae26  MOV EDX,dword ptr [ESI + 0x184]
+004bae2c  PUSH EDX
+004bae2d  CALL 0x007eda45
+004bae32  MOV ECX,dword ptr [ESI + 0x188]
+004bae38  XOR EBX,EBX
+004bae3a  ADD ESP,0x4
+004bae3d  CMP EAX,ECX
+004bae3f  SETL BL
+004bae42  MOV ECX,dword ptr [ESI + 0x180]
+004bae48  MOV EDX,dword ptr [ESI + 0x64]
+004bae4b  ADD ECX,EAX
+004bae4d  ADD EDX,EAX
+004bae4f  MOV EAX,ESI
+004bae51  MOV dword ptr [ESI + 0x180],ECX
+004bae57  MOV dword ptr [ESI + 0x64],EDX
+004bae5a  CALL 0x004b27d0
+004bae5f  CMP dword ptr [EDI + 0x4],0x4
+004bae63  JNZ 0x004bae76
+004bae65  MOV EAX,dword ptr [ESI + 0x4c]
+004bae68  PUSH EAX
+004bae69  PUSH ESI
+004bae6a  CALL 0x004b2a30
+004bae6f  ADD ESP,0x8
+004bae72  POP EDI
+004bae73  POP ESI
+004bae74  POP EBX
+004bae75  RET
+004bae76  TEST EBX,EBX
+004bae78  JNZ 0x004bae90
+004bae7a  TEST EAX,EAX
+004bae7c  JNZ 0x004bae90
+004bae7e  MOV ECX,dword ptr [ESI + 0x4c]
+004bae81  DEC ECX
+004bae82  PUSH ECX
+004bae83  PUSH ESI
+004bae84  CALL 0x004baec0
+004bae89  ADD ESP,0x8
+004bae8c  POP EDI
+004bae8d  POP ESI
+004bae8e  POP EBX
+004bae8f  RET
+004bae90  LEA EBX,[ESI + 0x4]
+004bae93  MOV ECX,EBX
+004bae95  CALL 0x007ec1bd
+004bae9a  CMP dword ptr [EDI + 0x4],0x4
+004bae9e  JZ 0x004baea7
+004baea0  MOV dword ptr [EDI + 0x4],0x3
+004baea7  MOV ECX,EBX
+004baea9  CALL 0x007ec1c8
+004baeae  MOV EDX,dword ptr [ESI + 0x4c]
+004baeb1  PUSH EDX
+004baeb2  PUSH ESI
+004baeb3  CALL 0x004b2a30
+004baeb8  ADD ESP,0x8
+004baebb  POP EDI
+004baebc  POP ESI
+004baebd  POP EBX
+004baebe  RET

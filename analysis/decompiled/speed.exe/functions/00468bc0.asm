@@ -1,0 +1,8 @@
+00468bc0  MOV EAX,dword ptr [ECX]
+00468bc2  CALL dword ptr [EAX + 0x10]
+00468bc5  TEST EAX,EAX
+00468bc7  JZ 0x00468bd0
+00468bc9  MOV EAX,dword ptr [EAX + 0x94]
+00468bcf  RET
+00468bd0  XOR EAX,EAX
+00468bd2  RET

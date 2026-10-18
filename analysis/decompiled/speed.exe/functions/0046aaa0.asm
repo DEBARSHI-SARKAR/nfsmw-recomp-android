@@ -1,0 +1,8 @@
+0046aaa0  MOV EAX,dword ptr [ECX + 0x34]
+0046aaa3  TEST EAX,EAX
+0046aaa5  JZ 0x0046aab8
+0046aaa7  MOV dword ptr [ECX + 0x50],0x0
+0046aaae  PUSH 0x0
+0046aab0  ADD ECX,0x30
+0046aab3  CALL 0x007869c0
+0046aab8  RET

@@ -1,0 +1,73 @@
+006bd3b0  SUB ESP,0x18
+006bd3b3  PUSH ESI
+006bd3b4  CALL 0x006e2f50
+006bd3b9  MOV ESI,dword ptr [ESP + 0x20]
+006bd3bd  MOV EDX,dword ptr [ESI + 0x8]
+006bd3c0  MOV EAX,[0x00982bdc]
+006bd3c5  MOV ECX,dword ptr [EAX]
+006bd3c7  PUSH EDX
+006bd3c8  PUSH 0x0
+006bd3ca  PUSH EAX
+006bd3cb  CALL dword ptr [ECX + 0x94]
+006bd3d1  MOV EDX,dword ptr [ESI + 0xc]
+006bd3d4  MOV EAX,[0x00982bdc]
+006bd3d9  MOV ECX,dword ptr [EAX]
+006bd3db  PUSH EDX
+006bd3dc  PUSH EAX
+006bd3dd  CALL dword ptr [ECX + 0x9c]
+006bd3e3  MOV EAX,dword ptr [ESP + 0x24]
+006bd3e7  TEST EAX,EAX
+006bd3e9  JZ 0x006bd44c
+006bd3eb  MOV EAX,dword ptr [ESI]
+006bd3ed  CMP EAX,0x5
+006bd3f0  JL 0x006bd3f7
+006bd3f2  CMP EAX,0xa
+006bd3f5  JLE 0x006bd42c
+006bd3f7  CMP EAX,0x1
+006bd3fa  JZ 0x006bd42c
+006bd3fc  CMP EAX,0x3
+006bd3ff  JZ 0x006bd42c
+006bd401  PUSH 0x0
+006bd403  PUSH 0x3f800000
+006bd408  CMP EAX,0x2
+006bd40b  MOV EAX,[0x00982bdc]
+006bd410  PUSH 0xff000000
+006bd415  JNZ 0x006bd41b
+006bd417  PUSH 0x1
+006bd419  JMP 0x006bd43f
+006bd41b  MOV EDX,dword ptr [EAX]
+006bd41d  PUSH 0x7
+006bd41f  PUSH 0x0
+006bd421  PUSH 0x0
+006bd423  PUSH EAX
+006bd424  CALL dword ptr [EDX + 0xac]
+006bd42a  JMP 0x006bd44c
+006bd42c  MOV EAX,[0x00982bdc]
+006bd431  PUSH 0x0
+006bd433  PUSH 0x3f800000
+006bd438  PUSH 0xff000000
+006bd43d  PUSH 0x3
+006bd43f  MOV ECX,dword ptr [EAX]
+006bd441  PUSH 0x0
+006bd443  PUSH 0x0
+006bd445  PUSH EAX
+006bd446  CALL dword ptr [ECX + 0xac]
+006bd44c  MOV EDX,dword ptr [ESI + 0x14]
+006bd44f  MOV EAX,dword ptr [ESI + 0x18]
+006bd452  MOV dword ptr [ESP + 0xc],EDX
+006bd456  MOV dword ptr [ESP + 0x10],EAX
+006bd45a  MOV EAX,[0x00982bdc]
+006bd45f  LEA EDX,[ESP + 0x4]
+006bd463  PUSH EDX
+006bd464  MOV dword ptr [ESP + 0x8],0x0
+006bd46c  MOV dword ptr [ESP + 0xc],0x0
+006bd474  MOV dword ptr [ESP + 0x18],0x0
+006bd47c  MOV dword ptr [ESP + 0x1c],0x3f800000
+006bd484  MOV ECX,dword ptr [EAX]
+006bd486  PUSH EAX
+006bd487  CALL dword ptr [ECX + 0xbc]
+006bd48d  MOV dword ptr [0x00982a20],ESI
+006bd493  MOV dword ptr [0x00982c80],0x0
+006bd49d  POP ESI
+006bd49e  ADD ESP,0x18
+006bd4a1  RET

@@ -1,0 +1,5 @@
+007ce45e  CMP word ptr [ESP],0x27f
+007ce464  JZ 0x007ce469
+007ce466  FLDCW word ptr [ESP]
+007ce469  POP EDX
+007ce46a  RET

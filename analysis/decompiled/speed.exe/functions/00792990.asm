@@ -1,0 +1,11 @@
+00792990  MOV EAX,ECX
+00792992  XOR DL,DL
+00792994  LEA ECX,[EAX + 0x8]
+00792997  MOV dword ptr [EAX],0x8b6cfc
+0079299d  MOV byte ptr [EAX + 0x4],DL
+007929a0  MOV dword ptr [ECX],ECX
+007929a2  MOV dword ptr [ECX + 0x4],ECX
+007929a5  MOV byte ptr [EAX + 0x10],DL
+007929a8  MOV byte ptr [EAX + 0x11],DL
+007929ab  MOV byte ptr [EAX + 0x12],DL
+007929ae  RET

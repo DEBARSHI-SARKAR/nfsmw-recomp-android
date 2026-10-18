@@ -1,0 +1,2 @@
+0066cb40  MOV dword ptr [ECX],0x8a9564
+0066cb46  RET

@@ -1,0 +1,5 @@
+007f0fd8  PUSH EBP
+007f0fd9  MOV EBP,ESP
+007f0fdb  MOV EAX,dword ptr [EBP + 0x8]
+007f0fde  POP EBP
+007f0fdf  RET

@@ -1,0 +1,22 @@
+0049ab70  SUB ESP,0x10
+0049ab73  PUSH ESI
+0049ab74  MOV ESI,dword ptr [ESP + 0x18]
+0049ab78  LEA EAX,[ESP + 0x4]
+0049ab7c  PUSH EAX
+0049ab7d  ADD ECX,0x58
+0049ab80  PUSH ECX
+0049ab81  ADD ESI,0x10
+0049ab84  PUSH ESI
+0049ab85  CALL 0x0048ddf0
+0049ab8a  MOV ECX,dword ptr [ESP + 0x10]
+0049ab8e  MOV EDX,dword ptr [ESP + 0x14]
+0049ab92  MOV EAX,dword ptr [ESP + 0x18]
+0049ab96  MOV dword ptr [ESI],ECX
+0049ab98  MOV ECX,dword ptr [ESP + 0x1c]
+0049ab9c  MOV dword ptr [ESI + 0x4],EDX
+0049ab9f  MOV dword ptr [ESI + 0x8],EAX
+0049aba2  ADD ESP,0xc
+0049aba5  MOV dword ptr [ESI + 0xc],ECX
+0049aba8  POP ESI
+0049aba9  ADD ESP,0x10
+0049abac  RET 0x4

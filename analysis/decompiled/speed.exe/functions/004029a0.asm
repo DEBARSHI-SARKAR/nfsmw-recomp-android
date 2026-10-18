@@ -1,0 +1,4 @@
+004029a0  MOV EAX,ECX
+004029a2  MOV dword ptr [EAX],EAX
+004029a4  MOV dword ptr [EAX + 0x4],EAX
+004029a7  RET

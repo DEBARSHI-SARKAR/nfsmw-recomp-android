@@ -1,0 +1,49 @@
+006caec0  MOV EAX,[0x00982d18]
+006caec5  SUB ESP,0x8
+006caec8  TEST EAX,EAX
+006caeca  PUSH ESI
+006caecb  MOV ESI,ECX
+006caecd  JZ 0x006caf3a
+006caecf  MOV EAX,[0x00983e58]
+006caed4  MOV ECX,dword ptr [EAX]
+006caed6  PUSH 0x0
+006caed8  PUSH 0x0
+006caeda  LEA EDX,[ESP + 0xc]
+006caede  PUSH EDX
+006caedf  PUSH 0x0
+006caee1  PUSH EAX
+006caee2  CALL dword ptr [ECX + 0x4c]
+006caee5  MOV EAX,[0x008faf18]
+006caeea  MOV ECX,dword ptr [0x00982d18]
+006caef0  MOV EDX,dword ptr [ESP + 0x18]
+006caef4  PUSH EAX
+006caef5  PUSH ECX
+006caef6  PUSH EDX
+006caef7  MOV ECX,ESI
+006caef9  CALL 0x005176d0
+006caefe  MOV ECX,dword ptr [0x00982d18]
+006caf04  MOV EAX,dword ptr [ECX + 0x8]
+006caf07  TEST EAX,EAX
+006caf09  JNZ 0x006caf0f
+006caf0b  XOR ESI,ESI
+006caf0d  JMP 0x006caf12
+006caf0f  LEA ESI,[EAX + ECX*0x1]
+006caf12  MOV EAX,dword ptr [ESP + 0x14]
+006caf16  MOV ECX,dword ptr [EAX + 0x40]
+006caf19  MOV EDX,ECX
+006caf1b  PUSH EDI
+006caf1c  MOV EDI,dword ptr [ESP + 0xc]
+006caf20  SHR ECX,0x2
+006caf23  MOVSD.REP ES:EDI,ESI
+006caf25  MOV ECX,EDX
+006caf27  AND ECX,0x3
+006caf2a  MOVSB.REP ES:EDI,ESI
+006caf2c  MOV EAX,[0x00983e58]
+006caf31  MOV ECX,dword ptr [EAX]
+006caf33  PUSH 0x0
+006caf35  PUSH EAX
+006caf36  CALL dword ptr [ECX + 0x50]
+006caf39  POP EDI
+006caf3a  POP ESI
+006caf3b  ADD ESP,0x8
+006caf3e  RET 0xc

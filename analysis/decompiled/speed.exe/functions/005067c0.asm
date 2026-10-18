@@ -1,0 +1,16 @@
+005067c0  PUSH ESI
+005067c1  MOV ESI,ECX
+005067c3  MOV EAX,dword ptr [ESI + 0x4]
+005067c6  MOV ECX,dword ptr [EAX + 0x4]
+005067c9  PUSH ECX
+005067ca  MOV ECX,ESI
+005067cc  CALL 0x00504a20
+005067d1  MOV EAX,dword ptr [ESI + 0x4]
+005067d4  MOV dword ptr [EAX + 0x4],EAX
+005067d7  MOV EAX,dword ptr [ESI + 0x4]
+005067da  MOV dword ptr [ESI + 0x8],0x0
+005067e1  MOV dword ptr [EAX],EAX
+005067e3  MOV ESI,dword ptr [ESI + 0x4]
+005067e6  MOV dword ptr [ESI + 0x8],ESI
+005067e9  POP ESI
+005067ea  RET

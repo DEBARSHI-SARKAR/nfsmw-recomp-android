@@ -1,0 +1,123 @@
+0081e092  PUSH EBP
+0081e093  MOV EBP,ESP
+0081e095  PUSH ECX
+0081e096  PUSH ECX
+0081e097  PUSH EBX
+0081e098  PUSH ESI
+0081e099  MOV ESI,dword ptr [EBP + 0x8]
+0081e09c  MOV EAX,dword ptr [ESI*0x4 + 0x9c1f44]
+0081e0a3  PUSH EDI
+0081e0a4  XOR EDI,EDI
+0081e0a6  INC EDI
+0081e0a7  XOR EBX,EBX
+0081e0a9  CMP byte ptr [EAX + 0x62],BL
+0081e0ac  MOV dword ptr [EBP + -0x8],EDI
+0081e0af  MOV dword ptr [EBP + -0x4],EDI
+0081e0b2  JBE 0x0081e0d3
+0081e0b4  MOVZX EDX,byte ptr [EAX + 0x62]
+0081e0b8  LEA ECX,[EAX + 0x10]
+0081e0bb  MOV EBX,dword ptr [ECX]
+0081e0bd  CMP EBX,dword ptr [EAX + 0x8]
+0081e0c0  JA 0x0081e0c6
+0081e0c2  AND dword ptr [EBP + -0x8],0x0
+0081e0c6  ADD ECX,0x4
+0081e0c9  DEC EDX
+0081e0ca  JNZ 0x0081e0bb
+0081e0cc  XOR EBX,EBX
+0081e0ce  CMP dword ptr [EBP + -0x8],EBX
+0081e0d1  JZ 0x0081e11f
+0081e0d3  MOVSX ECX,word ptr [EAX + 0x44]
+0081e0d7  SHL ECX,0x5
+0081e0da  CMP dword ptr [EAX + 0x54],EBX
+0081e0dd  LEA EDX,[ECX + EAX*0x1 + 0x7c]
+0081e0e1  JZ 0x0081e103
+0081e0e3  MOV ECX,dword ptr [0x009c1c40]
+0081e0e9  LEA ECX,[ECX*0x8 + 0x9c1c44]
+0081e0f0  MOV word ptr [ECX],DI
+0081e0f3  MOV word ptr [ECX + 0x2],SI
+0081e0f7  MOV EDX,dword ptr [EDX + 0x8]
+0081e0fa  MOV dword ptr [ECX + 0x4],EDX
+0081e0fd  INC dword ptr [0x009c1c40]
+0081e103  XOR ECX,ECX
+0081e105  MOV CX,word ptr [EAX + 0x44]
+0081e109  INC ECX
+0081e10a  MOV word ptr [EAX + 0x44],CX
+0081e10e  ADD dword ptr [EAX + 0x8],EDI
+0081e111  MOV CX,word ptr [EAX + 0x40]
+0081e115  CMP word ptr [EAX + 0x44],CX
+0081e119  JL 0x0081e11f
+0081e11b  MOV word ptr [EAX + 0x44],BX
+0081e11f  MOV ESI,dword ptr [EBP + 0xc]
+0081e122  LEA ECX,[EAX + ESI*0x2 + 0x34]
+0081e126  CMP word ptr [ECX],BX
+0081e129  MOV dword ptr [EBP + -0x8],ECX
+0081e12c  JNZ 0x0081e135
+0081e12e  XOR EAX,EAX
+0081e130  JMP 0x0081e1e3
+0081e135  MOV EBX,dword ptr [EBP + 0x10]
+0081e138  LEA ECX,[EAX + ESI*0x2 + 0x28]
+0081e13c  MOVSX EDX,word ptr [ECX]
+0081e13f  SHL EDX,0x5
+0081e142  LEA EDX,[EDX + EAX*0x1 + 0x7c]
+0081e146  MOV EDI,dword ptr [EDX + 0x4]
+0081e149  SHL EDI,0x1
+0081e14b  SAR EDI,0x1
+0081e14d  MOV dword ptr [EBX],EDI
+0081e14f  MOV EDI,dword ptr [EDX + 0x4]
+0081e152  MOV EBX,dword ptr [EBP + 0x14]
+0081e155  SAR EDI,0x1f
+0081e158  MOV dword ptr [EBX],EDI
+0081e15a  XOR EDI,EDI
+0081e15c  MOV DI,word ptr [ECX]
+0081e15f  INC EDI
+0081e160  MOV word ptr [ECX],DI
+0081e163  ADD dword ptr [EAX + ESI*0x4 + 0x10],0x1
+0081e168  AND dword ptr [EBP + 0x8],0x0
+0081e16c  LEA EDI,[EAX + 0x10]
+0081e16f  JMP 0x0081e174
+0081e171  MOV EDI,dword ptr [EBP + 0xc]
+0081e174  MOV EBX,dword ptr [EDI]
+0081e176  CMP EBX,dword ptr [EAX + 0xc]
+0081e179  JA 0x0081e17f
+0081e17b  AND dword ptr [EBP + -0x4],0x0
+0081e17f  INC dword ptr [EBP + 0x8]
+0081e182  ADD EDI,0x4
+0081e185  CMP dword ptr [EBP + -0x4],0x1
+0081e189  MOV dword ptr [EBP + 0xc],EDI
+0081e18c  JNZ 0x0081e197
+0081e18e  MOVZX EDI,byte ptr [EAX + 0x62]
+0081e192  CMP dword ptr [EBP + 0x8],EDI
+0081e195  JL 0x0081e171
+0081e197  CMP dword ptr [EBP + -0x4],0x0
+0081e19b  JZ 0x0081e1ba
+0081e19d  ADD dword ptr [EAX + 0xc],0x1
+0081e1a1  MOV EDI,dword ptr [EDX + 0x4]
+0081e1a4  SHL EDI,0x1
+0081e1a6  SAR EDI,0x1
+0081e1a8  SUB dword ptr [EAX + 0x48],EDI
+0081e1ab  MOV EDI,dword ptr [EDX + 0x4]
+0081e1ae  MOV EBX,dword ptr [EAX + 0x4c]
+0081e1b1  SHL EDI,0x1
+0081e1b3  SAR EDI,0x1
+0081e1b5  ADD EDI,EBX
+0081e1b7  MOV dword ptr [EAX + 0x4c],EDI
+0081e1ba  MOV AX,word ptr [EAX + 0x40]
+0081e1be  CMP word ptr [ECX],AX
+0081e1c1  JL 0x0081e1c8
+0081e1c3  MOV word ptr [ECX],0x0
+0081e1c8  MOV EAX,dword ptr [EBP + -0x8]
+0081e1cb  XOR ECX,ECX
+0081e1cd  MOV CX,word ptr [EAX]
+0081e1d0  DEC ECX
+0081e1d1  MOV word ptr [EAX],CX
+0081e1d4  MOV EDX,dword ptr [EDX + ESI*0x4 + 0x8]
+0081e1d8  TEST EDX,EDX
+0081e1da  JNZ 0x0081e1e1
+0081e1dc  OR EAX,0xffffffff
+0081e1df  JMP 0x0081e1e3
+0081e1e1  MOV EAX,EDX
+0081e1e3  POP EDI
+0081e1e4  POP ESI
+0081e1e5  POP EBX
+0081e1e6  LEAVE
+0081e1e7  RET

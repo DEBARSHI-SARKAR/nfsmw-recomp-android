@@ -1,0 +1,19 @@
+004ab150  PUSH EBX
+004ab151  PUSH ESI
+004ab152  MOV ESI,ECX
+004ab154  XOR EBX,EBX
+004ab156  MOV dword ptr [ESI + 0x10],0x1
+004ab15d  MOV dword ptr [ESI + 0x8],EBX
+004ab160  MOV dword ptr [ESI],EBX
+004ab162  MOV dword ptr [ESI + 0x4],EBX
+004ab165  MOV EAX,[0x00988e84]
+004ab16a  PUSH EAX
+004ab16b  LEA ECX,[ESI + 0x14]
+004ab16e  CALL 0x0045a760
+004ab173  MOV dword ptr [ESI + 0xc],EBX
+004ab176  MOV dword ptr [ESI + 0x3c],EBX
+004ab179  MOV byte ptr [ESI + 0x40],BL
+004ab17c  MOV byte ptr [ESI + 0x41],BL
+004ab17f  POP ESI
+004ab180  POP EBX
+004ab181  RET

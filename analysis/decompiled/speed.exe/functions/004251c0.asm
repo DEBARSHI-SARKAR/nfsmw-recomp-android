@@ -1,0 +1,16 @@
+004251c0  PUSH ESI
+004251c1  MOV ESI,ECX
+004251c3  MOV EAX,dword ptr [ESI + 0x4]
+004251c6  MOV ECX,dword ptr [EAX + 0x4]
+004251c9  PUSH ECX
+004251ca  MOV ECX,ESI
+004251cc  CALL 0x0041cab0
+004251d1  MOV EAX,dword ptr [ESI + 0x4]
+004251d4  MOV dword ptr [EAX + 0x4],EAX
+004251d7  MOV EAX,dword ptr [ESI + 0x4]
+004251da  MOV dword ptr [ESI + 0x8],0x0
+004251e1  MOV dword ptr [EAX],EAX
+004251e3  MOV ESI,dword ptr [ESI + 0x4]
+004251e6  MOV dword ptr [ESI + 0x8],ESI
+004251e9  POP ESI
+004251ea  RET

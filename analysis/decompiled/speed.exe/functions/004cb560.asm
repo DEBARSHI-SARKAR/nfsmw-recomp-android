@@ -1,0 +1,24 @@
+004cb560  PUSH ESI
+004cb561  MOV ESI,dword ptr [ECX + 0x8]
+004cb564  PUSH EDI
+004cb565  MOV EDI,dword ptr [ESP + 0x10]
+004cb569  LEA EAX,[EDI + 0x8]
+004cb56c  CMP EAX,ESI
+004cb56e  JZ 0x004cb589
+004cb570  LEA EDX,[EAX + -0x8]
+004cb573  PUSH EBX
+004cb574  MOV EBX,dword ptr [EAX]
+004cb576  MOV dword ptr [EDX],EBX
+004cb578  MOV EBX,dword ptr [EAX + 0x4]
+004cb57b  MOV dword ptr [EDX + 0x4],EBX
+004cb57e  ADD EAX,0x8
+004cb581  ADD EDX,0x8
+004cb584  CMP EAX,ESI
+004cb586  JNZ 0x004cb574
+004cb588  POP EBX
+004cb589  ADD dword ptr [ECX + 0x8],-0x8
+004cb58d  MOV EAX,dword ptr [ESP + 0xc]
+004cb591  MOV dword ptr [EAX],EDI
+004cb593  POP EDI
+004cb594  POP ESI
+004cb595  RET 0x8

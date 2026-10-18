@@ -1,0 +1,15 @@
+004e0800  MOV EAX,dword ptr [ECX + 0xc]
+004e0803  MOV dword ptr [EAX + 0x18],0x0
+004e080a  MOV EDX,dword ptr [ECX + 0xc]
+004e080d  MOV dword ptr [EDX + 0x1c],0x0
+004e0814  MOV dword ptr [ECX + 0x30],0x0
+004e081b  MOV ECX,dword ptr [0x00911fa8]
+004e0821  OR EAX,0xffffffff
+004e0824  PUSH 0x40010010
+004e0829  MOV [0x008efd7c],EAX
+004e082e  MOV [0x008efd78],EAX
+004e0833  CALL 0x004aeaa0
+004e0838  TEST EAX,EAX
+004e083a  JZ 0x004e0846
+004e083c  AND dword ptr [EAX + 0x114],0xfffffdff
+004e0846  RET

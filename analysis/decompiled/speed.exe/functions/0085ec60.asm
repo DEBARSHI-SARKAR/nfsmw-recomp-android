@@ -1,0 +1,25 @@
+0085ec60  PUSH EBP
+0085ec61  MOV EBP,ESP
+0085ec63  SUB ESP,0xc
+0085ec66  LEA EAX,[EBP + -0x8]
+0085ec69  PUSH EAX
+0085ec6a  CALL dword ptr [0x008901cc]
+0085ec70  MOV ECX,dword ptr [EBP + -0x8]
+0085ec73  SUB ECX,0xd53e8000
+0085ec79  MOV EDX,dword ptr [EBP + -0x4]
+0085ec7c  SBB EDX,0x19db1de
+0085ec82  PUSH 0x0
+0085ec84  PUSH 0x989680
+0085ec89  PUSH EDX
+0085ec8a  PUSH ECX
+0085ec8b  CALL 0x007dcb40
+0085ec90  MOV dword ptr [EBP + -0xc],EAX
+0085ec93  CMP dword ptr [EBP + 0x8],0x0
+0085ec97  JZ 0x0085eca1
+0085ec99  MOV EAX,dword ptr [EBP + 0x8]
+0085ec9c  MOV ECX,dword ptr [EBP + -0xc]
+0085ec9f  MOV dword ptr [EAX],ECX
+0085eca1  MOV EAX,dword ptr [EBP + -0xc]
+0085eca4  MOV ESP,EBP
+0085eca6  POP EBP
+0085eca7  RET

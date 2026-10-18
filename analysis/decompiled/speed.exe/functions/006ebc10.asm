@@ -1,0 +1,8 @@
+006ebc10  MOV ECX,dword ptr [ECX + 0x4]
+006ebc13  PUSH 0x5658f0
+006ebc18  CALL 0x005d59f0
+006ebc1d  MOV ECX,dword ptr [ESP + 0x4]
+006ebc21  TEST EAX,EAX
+006ebc23  MOV dword ptr [ECX],EAX
+006ebc25  SETNZ AL
+006ebc28  RET 0x4

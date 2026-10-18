@@ -1,0 +1,134 @@
+005c60e0  MOV ECX,dword ptr [ESP + 0x4]
+005c60e4  FLD float ptr [ECX + 0x20]
+005c60e7  FADD float ptr [ECX + 0x10]
+005c60ea  FST float ptr [ESP + 0x4]
+005c60ee  FADD float ptr [ECX]
+005c60f0  FCOM float ptr [0x00890968]
+005c60f6  FNSTSW AX
+005c60f8  TEST AH,0x41
+005c60fb  JNZ 0x005c613d
+005c60fd  FADD float ptr [0x0089096c]
+005c6103  MOV EAX,dword ptr [ESP + 0x8]
+005c6107  FSQRT
+005c6109  FLD float ptr [0x008933d4]
+005c610f  FMUL ST1
+005c6111  FSTP float ptr [EAX + 0xc]
+005c6114  FDIVR float ptr [0x008933d4]
+005c611a  FLD float ptr [ECX + 0x1c]
+005c611d  FSUB float ptr [ECX + 0x14]
+005c6120  FMUL ST1
+005c6122  FSTP float ptr [EAX]
+005c6124  FLD float ptr [ECX + 0x8]
+005c6127  FSUB float ptr [ECX + 0x18]
+005c612a  FMUL ST1
+005c612c  FSTP float ptr [EAX + 0x4]
+005c612f  FLD float ptr [ECX + 0xc]
+005c6132  FSUB float ptr [ECX + 0x4]
+005c6135  FMUL ST1
+005c6137  FSTP float ptr [EAX + 0x8]
+005c613a  FSTP ST0
+005c613c  RET
+005c613d  FSTP ST0
+005c613f  FLD float ptr [ECX + 0x10]
+005c6142  FCOMP float ptr [ECX]
+005c6144  FNSTSW AX
+005c6146  TEST AH,0x41
+005c6149  JNZ 0x005c6152
+005c614b  MOV EDX,0x4
+005c6150  JMP 0x005c6154
+005c6152  XOR EDX,EDX
+005c6154  FLD float ptr [ECX + 0x20]
+005c6157  FCOMP float ptr [ECX + EDX*0x4]
+005c615a  FNSTSW AX
+005c615c  TEST AH,0x41
+005c615f  JNZ 0x005c61ba
+005c6161  FLD float ptr [ECX + 0x10]
+005c6164  MOV EDX,dword ptr [ESP + 0x8]
+005c6168  FADD float ptr [ECX]
+005c616a  FSUBR float ptr [ECX + 0x20]
+005c616d  FADD float ptr [0x0089096c]
+005c6173  FSQRT
+005c6175  FLD float ptr [0x008933d4]
+005c617b  FMUL ST1
+005c617d  FSTP float ptr [EDX + 0x8]
+005c6180  FLD float ptr [0x00890968]
+005c6186  FLD ST1
+005c6188  FUCOMPP
+005c618a  FNSTSW AX
+005c618c  TEST AH,0x44
+005c618f  JNP 0x005c6197
+005c6191  FDIVR float ptr [0x008933d4]
+005c6197  FLD float ptr [ECX + 0xc]
+005c619a  FSUB float ptr [ECX + 0x4]
+005c619d  FMUL ST1
+005c619f  FSTP float ptr [EDX + 0xc]
+005c61a2  FLD float ptr [ECX + 0x18]
+005c61a5  FADD float ptr [ECX + 0x8]
+005c61a8  FMUL ST1
+005c61aa  FSTP float ptr [EDX]
+005c61ac  FLD float ptr [ECX + 0x1c]
+005c61af  FADD float ptr [ECX + 0x14]
+005c61b2  FMUL ST1
+005c61b4  FSTP float ptr [EDX + 0x4]
+005c61b7  FSTP ST0
+005c61b9  RET
+005c61ba  TEST EDX,EDX
+005c61bc  MOV EDX,dword ptr [ESP + 0x8]
+005c61c0  JZ 0x005c6217
+005c61c2  FLD float ptr [ECX + 0x20]
+005c61c5  FADD float ptr [ECX]
+005c61c7  FSUBR float ptr [ECX + 0x10]
+005c61ca  FADD float ptr [0x0089096c]
+005c61d0  FSQRT
+005c61d2  FLD float ptr [0x008933d4]
+005c61d8  FMUL ST1
+005c61da  FSTP float ptr [EDX + 0x4]
+005c61dd  FLD float ptr [0x00890968]
+005c61e3  FLD ST1
+005c61e5  FUCOMPP
+005c61e7  FNSTSW AX
+005c61e9  TEST AH,0x44
+005c61ec  JNP 0x005c61f4
+005c61ee  FDIVR float ptr [0x008933d4]
+005c61f4  FLD float ptr [ECX + 0x8]
+005c61f7  FSUB float ptr [ECX + 0x18]
+005c61fa  FMUL ST1
+005c61fc  FSTP float ptr [EDX + 0xc]
+005c61ff  FLD float ptr [ECX + 0x1c]
+005c6202  FADD float ptr [ECX + 0x14]
+005c6205  FMUL ST1
+005c6207  FSTP float ptr [EDX + 0x8]
+005c620a  FLD float ptr [ECX + 0xc]
+005c620d  FADD float ptr [ECX + 0x4]
+005c6210  FMUL ST1
+005c6212  FSTP float ptr [EDX]
+005c6214  FSTP ST0
+005c6216  RET
+005c6217  FLD float ptr [ECX]
+005c6219  FSUB float ptr [ESP + 0x4]
+005c621d  FADD float ptr [0x0089096c]
+005c6223  FSQRT
+005c6225  FLD float ptr [0x008933d4]
+005c622b  FMUL ST1
+005c622d  FSTP float ptr [EDX]
+005c622f  FLD float ptr [0x00890968]
+005c6235  FLD ST1
+005c6237  FUCOMPP
+005c6239  FNSTSW AX
+005c623b  TEST AH,0x44
+005c623e  JNP 0x005c6246
+005c6240  FDIVR float ptr [0x008933d4]
+005c6246  FLD float ptr [ECX + 0x1c]
+005c6249  FSUB float ptr [ECX + 0x14]
+005c624c  FMUL ST1
+005c624e  FSTP float ptr [EDX + 0xc]
+005c6251  FLD float ptr [ECX + 0xc]
+005c6254  FADD float ptr [ECX + 0x4]
+005c6257  FMUL ST1
+005c6259  FSTP float ptr [EDX + 0x4]
+005c625c  FLD float ptr [ECX + 0x18]
+005c625f  FADD float ptr [ECX + 0x8]
+005c6262  FMUL ST1
+005c6264  FSTP float ptr [EDX + 0x8]
+005c6267  FSTP ST0
+005c6269  RET

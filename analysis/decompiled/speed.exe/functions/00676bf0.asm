@@ -1,0 +1,47 @@
+00676bf0  MOV ECX,dword ptr [ESP + 0xc]
+00676bf4  PUSH ESI
+00676bf5  MOV ESI,dword ptr [ESP + 0x8]
+00676bf9  MOV EAX,ESI
+00676bfb  MOV EDX,dword ptr [EAX]
+00676bfd  MOV dword ptr [ECX],EDX
+00676bff  MOV EDX,dword ptr [EAX + 0x4]
+00676c02  MOV dword ptr [ECX + 0x4],EDX
+00676c05  MOV EDX,dword ptr [EAX + 0x8]
+00676c08  MOV dword ptr [ECX + 0x8],EDX
+00676c0b  MOV EDX,dword ptr [EAX + 0xc]
+00676c0e  MOV dword ptr [ECX + 0xc],EDX
+00676c11  MOV EDX,dword ptr [EAX + 0x10]
+00676c14  MOV dword ptr [ECX + 0x10],EDX
+00676c17  MOV EAX,dword ptr [EAX + 0x14]
+00676c1a  MOV dword ptr [ECX + 0x14],EAX
+00676c1d  MOV ECX,dword ptr [ESP + 0x2c]
+00676c21  MOV EAX,dword ptr [ESP + 0x14]
+00676c25  PUSH ECX
+00676c26  MOV ECX,dword ptr [ESP + 0x1c]
+00676c2a  SUB ESP,0x18
+00676c2d  MOV EDX,ESP
+00676c2f  MOV dword ptr [EDX],EAX
+00676c31  MOV EAX,dword ptr [ESP + 0x38]
+00676c35  MOV dword ptr [EDX + 0x4],ECX
+00676c38  MOV ECX,dword ptr [ESP + 0x3c]
+00676c3c  MOV dword ptr [EDX + 0x8],EAX
+00676c3f  MOV EAX,dword ptr [ESP + 0x40]
+00676c43  MOV dword ptr [EDX + 0xc],ECX
+00676c46  MOV ECX,dword ptr [ESP + 0x44]
+00676c4a  MOV dword ptr [EDX + 0x10],EAX
+00676c4d  MOV dword ptr [EDX + 0x14],ECX
+00676c50  MOV ECX,dword ptr [ESP + 0x28]
+00676c54  SUB ECX,ESI
+00676c56  MOV EAX,0x2aaaaaab
+00676c5b  IMUL ECX
+00676c5d  SAR EDX,0x2
+00676c60  MOV EAX,EDX
+00676c62  SHR EAX,0x1f
+00676c65  ADD EAX,EDX
+00676c67  PUSH EAX
+00676c68  PUSH 0x0
+00676c6a  PUSH ESI
+00676c6b  CALL 0x00676ac0
+00676c70  ADD ESP,0x28
+00676c73  POP ESI
+00676c74  RET

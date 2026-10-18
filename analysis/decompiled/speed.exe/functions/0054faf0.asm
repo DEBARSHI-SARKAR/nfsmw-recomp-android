@@ -1,0 +1,6 @@
+0054faf0  PUSH ESI
+0054faf1  MOV ESI,ECX
+0054faf3  CALL 0x0054f9a0
+0054faf8  MOV byte ptr [ESI + 0x68],0x0
+0054fafc  POP ESI
+0054fafd  RET

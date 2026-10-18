@@ -1,0 +1,27 @@
+/* speed.exe 006c0b60 FUN_006c0b60; analysis pseudocode, not buildable source.
+ * calls 00460bf0 FUN_00460bf0
+ */
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_006c0b60(void)
+
+{
+  if (DAT_00982bd4 == '\0') {
+    DAT_00982bd4 = '\x01';
+    DAT_0093e864 = FUN_00460bf0("SKY_MIDDAY_A_CLOUDS_A");
+    DAT_0093e868 = FUN_00460bf0("SKY_MIDDAY_A_CAP_A");
+    _DAT_00982878 = FUN_00460bf0("SKY_MIDDAY_A_GRADIENT_A");
+    _DAT_0098287c = FUN_00460bf0("SKY_MIDDAY_A_CAP_A");
+    _DAT_00982880 = FUN_00460bf0("SKY_MIDDAY_A_CLOUDS_A");
+    _DAT_00982884 = FUN_00460bf0("SKY_MIDDAY_A_CAP_A");
+    _DAT_00982888 = FUN_00460bf0("SKY_MIDDAY_A_CLOUDS_B");
+    _DAT_0098288c = FUN_00460bf0("SKY_MIDDAY_A_CAP_B");
+    _DAT_00982890 = FUN_00460bf0("SKY_MIDDAY_A_ENVIRONMENT_A");
+    _DAT_00982894 = FUN_00460bf0("SKY_MIDDAY_A_ENVIRONMENT_CAP_A");
+    _DAT_00982898 = FUN_00460bf0("SKY_MIDDAY_A_REFLECTION");
+    _DAT_0098289c = FUN_00460bf0("SKY_MIDDAY_A_REFLECTION");
+  }
+  return;
+}
+

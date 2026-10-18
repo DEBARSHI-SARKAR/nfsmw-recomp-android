@@ -1,0 +1,52 @@
+00819dc6  PUSH EBP
+00819dc7  MOV EBP,ESP
+00819dc9  PUSH ECX
+00819dca  MOV ECX,dword ptr [EBP + 0x8]
+00819dcd  MOVZX EDX,word ptr [ECX]
+00819dd0  ADD EDX,ECX
+00819dd2  LEA EAX,[EDX + 0x4]
+00819dd5  PUSH ESI
+00819dd6  MOV ESI,dword ptr [EAX]
+00819dd8  CMP ESI,dword ptr [ECX + 0x8]
+00819ddb  JZ 0x00819e12
+00819ddd  MOV dword ptr [ECX + 0x8],ESI
+00819de0  CMP dword ptr [EAX],0x0
+00819de3  JGE 0x00819de8
+00819de5  AND dword ptr [EAX],0x0
+00819de8  FILD dword ptr [EAX]
+00819dea  FDIV float ptr [0x009c1b54]
+00819df0  FSTP float ptr [EBP + 0x8]
+00819df3  FLD float ptr [EBP + 0x8]
+00819df6  FISTP dword ptr [EBP + -0x4]
+00819df9  MOVZX EAX,word ptr [ECX + 0x2]
+00819dfd  MOV ESI,dword ptr [EBP + -0x4]
+00819e00  CMP ESI,EAX
+00819e02  JL 0x00819e07
+00819e04  LEA ESI,[EAX + -0x1]
+00819e07  MOV AX,word ptr [ECX + 0x6]
+00819e0b  ADD AX,SI
+00819e0e  MOV word ptr [ECX + 0x4],AX
+00819e12  XOR EAX,EAX
+00819e14  MOV AX,word ptr [ECX + 0x4]
+00819e18  XOR ESI,ESI
+00819e1a  MOV SI,word ptr [ECX + 0x2]
+00819e1e  CMP AX,SI
+00819e21  JC 0x00819e29
+00819e23  SUB EAX,ESI
+00819e25  MOV word ptr [ECX + 0x4],AX
+00819e29  CMP word ptr [ECX + 0x6],SI
+00819e2d  POP ESI
+00819e2e  JC 0x00819e35
+00819e30  AND word ptr [ECX + 0x6],0x0
+00819e35  MOV EDX,dword ptr [EDX]
+00819e37  MOVZX EAX,word ptr [ECX + 0x4]
+00819e3b  MOV dword ptr [ECX + EAX*0x4 + 0xc],EDX
+00819e3f  XOR EDX,EDX
+00819e41  MOV DX,word ptr [ECX + 0x6]
+00819e45  MOVZX EAX,DX
+00819e48  MOV EAX,dword ptr [ECX + EAX*0x4 + 0xc]
+00819e4c  INC word ptr [ECX + 0x4]
+00819e50  INC EDX
+00819e51  MOV word ptr [ECX + 0x6],DX
+00819e55  LEAVE
+00819e56  RET

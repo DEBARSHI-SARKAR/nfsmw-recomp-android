@@ -1,0 +1,24 @@
+0045ce70  PUSH ECX
+0045ce71  FLD float ptr [0x00890968]
+0045ce77  FLD float ptr [0x0090dd40]
+0045ce7d  FUCOMPP
+0045ce7f  FNSTSW AX
+0045ce81  TEST AH,0x44
+0045ce84  JP 0x0045ce9b
+0045ce86  PUSH 0x476a6000
+0045ce8b  CALL 0x0045cdd0
+0045ce90  FLD float ptr [0x00890968]
+0045ce96  ADD ESP,0x4
+0045ce99  POP ECX
+0045ce9a  RET
+0045ce9b  MOV ECX,dword ptr [ESP + 0x8]
+0045ce9f  MOV EAX,dword ptr [ESP + 0xc]
+0045cea3  SUB EAX,ECX
+0045cea5  TEST EAX,EAX
+0045cea7  MOV dword ptr [ESP],EAX
+0045ceaa  FILD dword ptr [ESP]
+0045cead  JGE 0x0045ceb5
+0045ceaf  FADD float ptr [0x00891214]
+0045ceb5  FMUL float ptr [0x0090dd40]
+0045cebb  POP ECX
+0045cebc  RET

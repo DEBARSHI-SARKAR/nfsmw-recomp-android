@@ -1,0 +1,9 @@
+007fab0e  PUSH EBP
+007fab0f  MOV EBP,ESP
+007fab11  MOV EAX,dword ptr [EBP + 0x8]
+007fab14  IMUL dword ptr [EBP + 0xc]
+007fab17  SHL EDX,0x10
+007fab1a  SHR EAX,0x10
+007fab1d  ADC EAX,EDX
+007fab1f  POP EBP
+007fab20  RET

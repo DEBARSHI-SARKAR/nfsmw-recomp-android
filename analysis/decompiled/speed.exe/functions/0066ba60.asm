@@ -1,0 +1,31 @@
+0066ba60  PUSH -0x1
+0066ba62  PUSH 0x87a6b8
+0066ba67  MOV EAX,FS:[0x0]
+0066ba6d  PUSH EAX
+0066ba6e  MOV dword ptr FS:[0x0],ESP
+0066ba75  PUSH ECX
+0066ba76  MOV EAX,dword ptr [ESP + 0x1c]
+0066ba7a  MOV EDX,dword ptr [ESP + 0x14]
+0066ba7e  PUSH ESI
+0066ba7f  MOV ESI,ECX
+0066ba81  MOV ECX,dword ptr [ESP + 0x1c]
+0066ba85  PUSH EAX
+0066ba86  PUSH ECX
+0066ba87  PUSH EDX
+0066ba88  MOV ECX,ESI
+0066ba8a  MOV dword ptr [ESP + 0x10],ESI
+0066ba8e  CALL 0x00456cb0
+0066ba93  MOV EAX,dword ptr [ESI + 0x8]
+0066ba96  TEST EAX,EAX
+0066ba98  MOV dword ptr [ESP + 0x10],0x0
+0066baa0  JNZ 0x0066baaf
+0066baa2  PUSH 0x14
+0066baa4  CALL 0x006269b0
+0066baa9  ADD ESP,0x4
+0066baac  MOV dword ptr [ESI + 0x8],EAX
+0066baaf  MOV ECX,dword ptr [ESP + 0x8]
+0066bab3  MOV EAX,ESI
+0066bab5  POP ESI
+0066bab6  MOV dword ptr FS:[0x0],ECX
+0066babd  ADD ESP,0x10
+0066bac0  RET 0xc

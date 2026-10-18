@@ -1,0 +1,17 @@
+007fca30  PUSH EBP
+007fca31  MOV EBP,ESP
+007fca33  PUSH ESI
+007fca34  MOV ESI,dword ptr [EBP + 0x8]
+007fca37  MOV EAX,dword ptr [ESI]
+007fca39  TEST EAX,EAX
+007fca3b  JZ 0x007fca4f
+007fca3d  PUSH EAX
+007fca3e  CALL 0x007fc779
+007fca43  PUSH dword ptr [ESI]
+007fca45  CALL 0x007fc603
+007fca4a  AND dword ptr [ESI],0x0
+007fca4d  POP ECX
+007fca4e  POP ECX
+007fca4f  POP ESI
+007fca50  POP EBP
+007fca51  RET

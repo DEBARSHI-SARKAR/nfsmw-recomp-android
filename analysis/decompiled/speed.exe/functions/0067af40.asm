@@ -1,0 +1,29 @@
+0067af40  MOV ECX,dword ptr [ESP + 0x8]
+0067af44  PUSH EBX
+0067af45  MOV EBX,dword ptr [ESP + 0x10]
+0067af49  CMP ECX,EBX
+0067af4b  JZ 0x0067af75
+0067af4d  MOV EDX,dword ptr [ESP + 0x14]
+0067af51  PUSH ESI
+0067af52  PUSH EDI
+0067af53  MOV EDI,dword ptr [ESP + 0x20]
+0067af57  MOV EAX,dword ptr [ECX + 0x8]
+0067af5a  CMP EAX,dword ptr [EDI]
+0067af5c  JZ 0x0067af65
+0067af5e  MOV ESI,EDX
+0067af60  MOV EDX,dword ptr [EDX]
+0067af62  MOV dword ptr [ESI + 0x8],EAX
+0067af65  MOV ECX,dword ptr [ECX]
+0067af67  CMP ECX,EBX
+0067af69  JNZ 0x0067af57
+0067af6b  MOV EAX,dword ptr [ESP + 0x10]
+0067af6f  POP EDI
+0067af70  POP ESI
+0067af71  MOV dword ptr [EAX],EDX
+0067af73  POP EBX
+0067af74  RET
+0067af75  MOV EAX,dword ptr [ESP + 0x8]
+0067af79  MOV ECX,dword ptr [ESP + 0x14]
+0067af7d  MOV dword ptr [EAX],ECX
+0067af7f  POP EBX
+0067af80  RET

@@ -1,0 +1,15 @@
+0072da70  PUSH ESI
+0072da71  MOV ESI,ECX
+0072da73  MOV EAX,dword ptr [ESI + 0x844]
+0072da79  MOV CL,byte ptr [EAX + 0xd]
+0072da7c  TEST CL,CL
+0072da7e  MOV byte ptr [EAX + 0xd],0x0
+0072da82  JZ 0x0072da93
+0072da84  PUSH 0x0
+0072da86  MOV ECX,ESI
+0072da88  CALL 0x0072bf80
+0072da8d  MOV dword ptr [ESI + 0x840],EAX
+0072da93  MOV EAX,dword ptr [ESI + 0x83c]
+0072da99  SUB EAX,dword ptr [ESI + 0x840]
+0072da9f  POP ESI
+0072daa0  RET

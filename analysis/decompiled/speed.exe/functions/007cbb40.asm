@@ -1,0 +1,11 @@
+007cbb40  PUSH EBP
+007cbb41  MOV EBP,ESP
+007cbb43  PUSH ECX
+007cbb44  FSTSW word ptr [EBP + -0x4]
+007cbb48  MOV AX,word ptr [EBP + -0x4]
+007cbb4c  PUSH EAX
+007cbb4d  CALL 0x007cbef0
+007cbb52  ADD ESP,0x4
+007cbb55  MOV ESP,EBP
+007cbb57  POP EBP
+007cbb58  RET

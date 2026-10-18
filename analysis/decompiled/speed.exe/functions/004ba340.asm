@@ -1,0 +1,15 @@
+004ba340  MOV EAX,dword ptr [ESP + 0x8]
+004ba344  PUSH ESI
+004ba345  MOV ESI,ECX
+004ba347  MOV ECX,dword ptr [ESP + 0x8]
+004ba34b  PUSH ECX
+004ba34c  MOV ECX,ESI
+004ba34e  MOV dword ptr [ESI + 0xc],EAX
+004ba351  CALL 0x004b0320
+004ba356  MOV AL,byte ptr [ESI + 0x18]
+004ba359  TEST AL,AL
+004ba35b  JZ 0x004ba364
+004ba35d  MOV EDX,dword ptr [ESP + 0xc]
+004ba361  MOV dword ptr [ESI + 0x14],EDX
+004ba364  POP ESI
+004ba365  RET 0x8

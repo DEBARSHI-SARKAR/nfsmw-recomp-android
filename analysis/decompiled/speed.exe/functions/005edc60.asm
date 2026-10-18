@@ -1,0 +1,11 @@
+005edc60  PUSH ECX
+005edc61  LEA EAX,[ESP + 0x8]
+005edc65  PUSH EAX
+005edc66  LEA EDX,[ESP + 0x4]
+005edc6a  PUSH EDX
+005edc6b  ADD ECX,0x98
+005edc71  CALL 0x005ec420
+005edc76  MOV EAX,dword ptr [ESP]
+005edc79  FLD float ptr [EAX + 0x18]
+005edc7c  POP ECX
+005edc7d  RET 0x4

@@ -1,0 +1,38 @@
+005c6780  SUB ESP,0x24
+005c6783  FLD float ptr [ESP + 0x28]
+005c6787  PUSH ESI
+005c6788  FMUL float ptr [0x008a2f94]
+005c678e  MOV ESI,dword ptr [ESP + 0x38]
+005c6792  XOR EAX,EAX
+005c6794  LEA EDX,[ESP + 0x4]
+005c6798  FLD ST0
+005c679a  MOV dword ptr [ESI + 0x4],EAX
+005c679d  FSIN
+005c679f  MOV dword ptr [ESI + 0x8],EAX
+005c67a2  MOV dword ptr [ESI + 0xc],EAX
+005c67a5  MOV dword ptr [ESI + 0x18],EAX
+005c67a8  MOV EAX,dword ptr [ESP + 0x30]
+005c67ac  PUSH EDX
+005c67ad  PUSH EAX
+005c67ae  PUSH ESI
+005c67af  MOV dword ptr [ESI],0x3f800000
+005c67b5  FSTP float ptr [ESP + 0x38]
+005c67b9  MOV ECX,dword ptr [ESP + 0x38]
+005c67bd  FCOS
+005c67bf  MOV dword ptr [ESI + 0x14],ECX
+005c67c2  FST float ptr [ESI + 0x10]
+005c67c5  FLD float ptr [ESP + 0x38]
+005c67c9  FCHS
+005c67cb  FSTP float ptr [ESI + 0x1c]
+005c67ce  FSTP float ptr [ESI + 0x20]
+005c67d1  CALL 0x005c6620
+005c67d6  MOV ECX,dword ptr [ESP + 0x40]
+005c67da  PUSH ESI
+005c67db  PUSH ECX
+005c67dc  LEA EDX,[ESP + 0x18]
+005c67e0  PUSH EDX
+005c67e1  CALL 0x005c66d0
+005c67e6  ADD ESP,0x18
+005c67e9  POP ESI
+005c67ea  ADD ESP,0x24
+005c67ed  RET

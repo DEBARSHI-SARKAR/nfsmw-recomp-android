@@ -1,0 +1,15 @@
+0083fed0  PUSH ESI
+0083fed1  MOV ESI,0x9c3640
+0083fed6  CMP dword ptr [ESI],0x0
+0083fed9  JZ 0x0083feea
+0083fedb  CALL 0x0084bcb0
+0083fee0  PUSH EAX
+0083fee1  MOV EAX,dword ptr [ESI + 0x4]
+0083fee4  PUSH EAX
+0083fee5  CALL dword ptr [ESI]
+0083fee7  ADD ESP,0x8
+0083feea  ADD ESI,0x8
+0083feed  CMP ESI,0x9c36c0
+0083fef3  JL 0x0083fed6
+0083fef5  POP ESI
+0083fef6  RET

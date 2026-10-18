@@ -1,0 +1,29 @@
+005db010  MOV EAX,FS:[0x0]
+005db016  MOV CL,byte ptr [0x0091e020]
+005db01c  PUSH -0x1
+005db01e  PUSH 0x874d3e
+005db023  PUSH EAX
+005db024  MOV EAX,0x1
+005db029  TEST AL,CL
+005db02b  MOV dword ptr FS:[0x0],ESP
+005db032  JNZ 0x005db06a
+005db034  OR dword ptr [0x0091e020],EAX
+005db03a  PUSH 0x8a3844
+005db03f  MOV dword ptr [ESP + 0xc],0x0
+005db047  CALL 0x005cc240
+005db04c  MOV ECX,dword ptr [ESP + 0x14]
+005db050  MOV [0x0091e01c],EAX
+005db055  MOV dword ptr [ECX],EAX
+005db057  ADD ESP,0x4
+005db05a  MOV EAX,ECX
+005db05c  MOV ECX,dword ptr [ESP]
+005db05f  MOV dword ptr FS:[0x0],ECX
+005db066  ADD ESP,0xc
+005db069  RET
+005db06a  MOV ECX,dword ptr [0x0091e01c]
+005db070  MOV EAX,dword ptr [ESP + 0x10]
+005db074  MOV dword ptr [EAX],ECX
+005db076  MOV ECX,dword ptr [ESP]
+005db079  MOV dword ptr FS:[0x0],ECX
+005db080  ADD ESP,0xc
+005db083  RET

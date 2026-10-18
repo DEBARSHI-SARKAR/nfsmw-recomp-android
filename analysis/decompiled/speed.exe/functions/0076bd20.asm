@@ -1,0 +1,13 @@
+0076bd20  MOV EAX,dword ptr [ESP + 0x4]
+0076bd24  MOV ECX,dword ptr [ESP + 0x8]
+0076bd28  CMP EAX,ECX
+0076bd2a  JZ 0x0076bd3d
+0076bd2c  MOV EDX,dword ptr [ESP + 0xc]
+0076bd30  PUSH ESI
+0076bd31  MOV ESI,dword ptr [EDX]
+0076bd33  MOV dword ptr [EAX],ESI
+0076bd35  ADD EAX,0x4
+0076bd38  CMP EAX,ECX
+0076bd3a  JNZ 0x0076bd31
+0076bd3c  POP ESI
+0076bd3d  RET

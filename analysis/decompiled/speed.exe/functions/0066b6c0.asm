@@ -1,0 +1,11 @@
+0066b6c0  PUSH ESI
+0066b6c1  MOV ESI,ECX
+0066b6c3  MOV ECX,dword ptr [ESI + 0x38]
+0066b6c6  TEST ECX,ECX
+0066b6c8  JZ 0x0066b6d7
+0066b6ca  MOV EAX,dword ptr [ECX]
+0066b6cc  PUSH 0x1
+0066b6ce  CALL dword ptr [EAX]
+0066b6d0  MOV dword ptr [ESI + 0x38],0x0
+0066b6d7  POP ESI
+0066b6d8  RET

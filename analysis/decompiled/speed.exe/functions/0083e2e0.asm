@@ -1,0 +1,7 @@
+0083e2e0  MOV EAX,dword ptr [ESP + 0x8]
+0083e2e4  TEST EAX,EAX
+0083e2e6  JZ 0x0083e2eb
+0083e2e8  MOV EAX,dword ptr [EAX]
+0083e2ea  RET
+0083e2eb  XOR EAX,EAX
+0083e2ed  RET

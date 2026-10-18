@@ -1,0 +1,15 @@
+004df460  MOV EAX,[0x0091cf90]
+004df465  MOV ECX,dword ptr [EAX + 0x10]
+004df468  FLD float ptr [ECX + 0x4c]
+004df46b  FCOMP float ptr [0x00890968]
+004df471  FNSTSW AX
+004df473  TEST AH,0x41
+004df476  JP 0x004df47e
+004df478  MOV EAX,0xffffffff
+004df47d  RET
+004df47e  MOV EDX,dword ptr [0x00911fa8]
+004df484  MOV ECX,dword ptr [EDX + 0x70]
+004df487  XOR EAX,EAX
+004df489  CMP ECX,0x1
+004df48c  SETNZ AL
+004df48f  RET

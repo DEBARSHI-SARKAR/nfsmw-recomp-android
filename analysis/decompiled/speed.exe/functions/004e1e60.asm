@@ -1,0 +1,25 @@
+004e1e60  MOV EAX,ECX
+004e1e62  MOV ECX,dword ptr [0x0091429c]
+004e1e68  XOR EDX,EDX
+004e1e6a  CMP ECX,EDX
+004e1e6c  JLE 0x004e1eab
+004e1e6e  MOV byte ptr [EAX + 0x4],0x1
+004e1e72  MOV ECX,dword ptr [0x009142a0]
+004e1e78  PUSH ESI
+004e1e79  MOV dword ptr [EAX + 0x14],ECX
+004e1e7c  MOV ECX,dword ptr [0x009142a4]
+004e1e82  PUSH EDI
+004e1e83  MOV dword ptr [EAX + 0x10],ECX
+004e1e86  LEA EDI,[EAX + 0x18]
+004e1e89  MOV ECX,0x20
+004e1e8e  MOV ESI,0x9142a8
+004e1e93  MOVSD.REP ES:EDI,ESI
+004e1e95  MOV dword ptr [EAX],0x914298
+004e1e9b  MOV dword ptr [0x00914298],EDX
+004e1ea1  POP EDI
+004e1ea2  MOV dword ptr [EAX + 0x8],EDX
+004e1ea5  MOV byte ptr [EAX + 0xc],0x1
+004e1ea9  POP ESI
+004e1eaa  RET
+004e1eab  MOV byte ptr [EAX + 0x4],DL
+004e1eae  RET

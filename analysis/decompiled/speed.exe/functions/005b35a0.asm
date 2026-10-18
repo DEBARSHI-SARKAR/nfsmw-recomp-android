@@ -1,0 +1,7 @@
+005b35a0  MOV EAX,dword ptr [ESP + 0x4]
+005b35a4  CMP EAX,0x3
+005b35a7  JNC 0x005b35b0
+005b35a9  MOV EAX,dword ptr [ECX + EAX*0x4 + 0x60]
+005b35ad  RET 0x4
+005b35b0  OR EAX,0xffffffff
+005b35b3  RET 0x4

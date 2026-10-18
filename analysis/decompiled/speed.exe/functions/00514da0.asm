@@ -1,0 +1,13 @@
+00514da0  MOV EAX,dword ptr [ESP + 0x4]
+00514da4  TEST EAX,EAX
+00514da6  JZ 0x00514dbb
+00514da8  MOV EAX,dword ptr [EAX + 0x54]
+00514dab  TEST EAX,EAX
+00514dad  JZ 0x00514dbb
+00514daf  MOV EAX,dword ptr [EAX + 0x30]
+00514db2  CMP EAX,dword ptr [ESP + 0x8]
+00514db6  JNZ 0x00514dbb
+00514db8  MOV AL,0x1
+00514dba  RET
+00514dbb  XOR AL,AL
+00514dbd  RET

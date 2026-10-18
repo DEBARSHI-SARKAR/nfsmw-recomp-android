@@ -1,0 +1,7 @@
+00627860  MOV EDX,dword ptr [ESP + 0x4]
+00627864  XOR EAX,EAX
+00627866  MOV dword ptr [ECX + 0x18],EAX
+00627869  MOV dword ptr [ECX + 0x28],EAX
+0062786c  MOV dword ptr [ECX + 0x14],EDX
+0062786f  MOV dword ptr [ECX + 0x1c],EAX
+00627872  RET 0x4

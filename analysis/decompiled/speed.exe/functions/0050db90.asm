@@ -1,0 +1,7 @@
+0050db90  MOV EAX,dword ptr [ESP + 0x4]
+0050db94  MOV EDX,dword ptr [ECX + 0x50]
+0050db97  ADD ECX,0x44
+0050db9a  PUSH EAX
+0050db9b  PUSH EDX
+0050db9c  CALL 0x005aee90
+0050dba1  RET 0x4

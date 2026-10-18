@@ -1,0 +1,17 @@
+005c5e90  MOV EAX,dword ptr [ESP + 0x4]
+005c5e94  FLD float ptr [EAX + 0x8]
+005c5e97  FLD float ptr [EAX + 0x4]
+005c5e9a  FLD float ptr [EAX]
+005c5e9c  FLD ST0
+005c5e9e  FMUL ST1
+005c5ea0  FLD ST2
+005c5ea2  FMUL ST3
+005c5ea4  FADDP
+005c5ea6  FLD ST3
+005c5ea8  FMUL ST4
+005c5eaa  FADDP
+005c5eac  FSQRT
+005c5eae  FSTP ST3
+005c5eb0  FSTP ST0
+005c5eb2  FSTP ST0
+005c5eb4  RET

@@ -1,0 +1,28 @@
+00824ed1  PUSH EBP
+00824ed2  MOV EBP,ESP
+00824ed4  PUSH ESI
+00824ed5  MOV ESI,dword ptr [EBP + 0x8]
+00824ed8  CMP dword ptr [ESI + 0x8],0x0
+00824edc  JZ 0x00824ef9
+00824ede  MOVZX ECX,byte ptr [ESI + 0x1a]
+00824ee2  MOV EAX,dword ptr [ESI + 0x8]
+00824ee5  PUSH ECX
+00824ee6  PUSH dword ptr [EBP + 0x10]
+00824ee9  PUSH dword ptr [EBP + 0x14]
+00824eec  PUSH dword ptr [EBP + 0xc]
+00824eef  PUSH EAX
+00824ef0  CALL dword ptr [EAX]
+00824ef2  ADD ESP,0x14
+00824ef5  TEST EAX,EAX
+00824ef7  JLE 0x00824f11
+00824ef9  PUSH dword ptr [EBP + 0x14]
+00824efc  ADD ESI,0x1c
+00824eff  PUSH dword ptr [EBP + 0x10]
+00824f02  PUSH dword ptr [EBP + 0xc]
+00824f05  PUSH ESI
+00824f06  CALL 0x00826710
+00824f0b  MOV EAX,dword ptr [EBP + 0xc]
+00824f0e  ADD ESP,0x10
+00824f11  POP ESI
+00824f12  POP EBP
+00824f13  RET

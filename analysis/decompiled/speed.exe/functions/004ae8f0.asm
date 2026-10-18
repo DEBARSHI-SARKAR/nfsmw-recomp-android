@@ -1,0 +1,24 @@
+004ae8f0  MOV EAX,[0x008f86f8]
+004ae8f5  TEST EAX,EAX
+004ae8f7  JZ 0x004ae930
+004ae8f9  MOV EAX,dword ptr [ESP + 0x4]
+004ae8fd  CMP EAX,0x17
+004ae900  JGE 0x004ae914
+004ae902  MOV EDX,dword ptr [ECX + 0x5c]
+004ae905  TEST EDX,EDX
+004ae907  JZ 0x004ae930
+004ae909  MOV ECX,EDX
+004ae90b  MOV EDX,dword ptr [ECX]
+004ae90d  MOV dword ptr [ESP + 0x4],EAX
+004ae911  JMP dword ptr [EDX + 0xc]
+004ae914  CMP EAX,0xa0
+004ae919  JGE 0x004ae930
+004ae91b  MOV EDX,dword ptr [ECX + 0x58]
+004ae91e  TEST EDX,EDX
+004ae920  JZ 0x004ae930
+004ae922  MOV ECX,EDX
+004ae924  MOV EDX,dword ptr [ECX]
+004ae926  ADD EAX,-0x17
+004ae929  MOV dword ptr [ESP + 0x4],EAX
+004ae92d  JMP dword ptr [EDX + 0xc]
+004ae930  RET 0x4

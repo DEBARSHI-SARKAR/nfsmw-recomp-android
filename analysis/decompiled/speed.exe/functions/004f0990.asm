@@ -1,0 +1,12 @@
+004f0990  MOV EAX,dword ptr [ESP + 0xc]
+004f0994  MOV EDX,dword ptr [ESP + 0x10]
+004f0998  PUSH 0x1
+004f099a  MOV dword ptr [ECX + 0x30],EAX
+004f099d  MOV EAX,dword ptr [ESP + 0xc]
+004f09a1  PUSH EDX
+004f09a2  MOV EDX,dword ptr [ESP + 0xc]
+004f09a6  PUSH EAX
+004f09a7  PUSH EDX
+004f09a8  MOV dword ptr [0x008efd78],0x0
+004f09b2  CALL 0x004e7d30
+004f09b7  RET 0x10

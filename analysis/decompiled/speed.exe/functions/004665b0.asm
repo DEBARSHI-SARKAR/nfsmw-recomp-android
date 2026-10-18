@@ -1,0 +1,76 @@
+004665b0  MOV EAX,dword ptr [ESP + 0x4]
+004665b4  MOV EDX,dword ptr [ESP + 0x8]
+004665b8  SUB ESP,0x40
+004665bb  CMP EAX,EDX
+004665bd  PUSH ESI
+004665be  JNZ 0x00466664
+004665c4  MOV ECX,dword ptr [EAX]
+004665c6  MOV dword ptr [ESP + 0x4],ECX
+004665ca  MOV ECX,dword ptr [EAX + 0x4]
+004665cd  MOV dword ptr [ESP + 0x8],ECX
+004665d1  MOV ECX,dword ptr [EAX + 0x8]
+004665d4  MOV dword ptr [ESP + 0xc],ECX
+004665d8  MOV ECX,dword ptr [EAX + 0xc]
+004665db  MOV dword ptr [ESP + 0x10],ECX
+004665df  MOV ECX,dword ptr [EAX + 0x10]
+004665e2  MOV dword ptr [ESP + 0x14],ECX
+004665e6  MOV ECX,dword ptr [EAX + 0x14]
+004665e9  MOV dword ptr [ESP + 0x18],ECX
+004665ed  MOV ECX,dword ptr [EAX + 0x18]
+004665f0  MOV dword ptr [ESP + 0x1c],ECX
+004665f4  MOV ECX,dword ptr [EAX + 0x1c]
+004665f7  MOV dword ptr [ESP + 0x20],ECX
+004665fb  MOV ECX,dword ptr [EAX + 0x20]
+004665fe  MOV dword ptr [ESP + 0x24],ECX
+00466602  MOV ECX,dword ptr [EAX + 0x24]
+00466605  MOV dword ptr [ESP + 0x28],ECX
+00466609  MOV ECX,dword ptr [EAX + 0x28]
+0046660c  MOV dword ptr [ESP + 0x2c],ECX
+00466610  MOV ECX,dword ptr [EAX + 0x2c]
+00466613  MOV dword ptr [ESP + 0x30],ECX
+00466617  MOV ECX,dword ptr [EAX + 0x30]
+0046661a  MOV dword ptr [ESP + 0x34],ECX
+0046661e  MOV ECX,dword ptr [EAX + 0x34]
+00466621  MOV dword ptr [ESP + 0x38],ECX
+00466625  MOV ECX,dword ptr [EAX + 0x38]
+00466628  MOV EAX,dword ptr [EAX + 0x3c]
+0046662b  MOV dword ptr [ESP + 0x40],EAX
+0046662f  MOV dword ptr [ESP + 0x3c],ECX
+00466633  LEA EAX,[EDX + 0x8]
+00466636  LEA ECX,[ESP + 0x24]
+0046663a  MOV EDX,0x4
+0046663f  NOP
+00466640  MOV ESI,dword ptr [ECX + -0x20]
+00466643  MOV dword ptr [EAX + -0x8],ESI
+00466646  MOV ESI,dword ptr [ECX + -0x10]
+00466649  MOV dword ptr [EAX + -0x4],ESI
+0046664c  MOV ESI,dword ptr [ECX]
+0046664e  MOV dword ptr [EAX],ESI
+00466650  MOV ESI,dword ptr [ECX + 0x10]
+00466653  MOV dword ptr [EAX + 0x4],ESI
+00466656  ADD EAX,0x10
+00466659  ADD ECX,0x4
+0046665c  DEC EDX
+0046665d  JNZ 0x00466640
+0046665f  POP ESI
+00466660  ADD ESP,0x40
+00466663  RET
+00466664  LEA ECX,[EAX + 0x20]
+00466667  LEA EAX,[EDX + 0x8]
+0046666a  MOV EDX,0x4
+0046666f  NOP
+00466670  MOV ESI,dword ptr [ECX + -0x20]
+00466673  MOV dword ptr [EAX + -0x8],ESI
+00466676  MOV ESI,dword ptr [ECX + -0x10]
+00466679  MOV dword ptr [EAX + -0x4],ESI
+0046667c  MOV ESI,dword ptr [ECX]
+0046667e  MOV dword ptr [EAX],ESI
+00466680  MOV ESI,dword ptr [ECX + 0x10]
+00466683  MOV dword ptr [EAX + 0x4],ESI
+00466686  ADD EAX,0x10
+00466689  ADD ECX,0x4
+0046668c  DEC EDX
+0046668d  JNZ 0x00466670
+0046668f  POP ESI
+00466690  ADD ESP,0x40
+00466693  RET

@@ -1,0 +1,9 @@
+004042a0  MOV AL,byte ptr [ESP + 0x4]
+004042a4  XOR AL,byte ptr [ESP + 0x8]
+004042a8  JZ 0x004042b6
+004042aa  MOVZX EDX,byte ptr [ECX + 0x1]
+004042ae  MOVZX EAX,byte ptr [ECX]
+004042b1  SUB EAX,EDX
+004042b3  RET 0x8
+004042b6  MOVZX EAX,byte ptr [ECX + 0x1]
+004042ba  RET 0x8

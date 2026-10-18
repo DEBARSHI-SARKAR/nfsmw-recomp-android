@@ -1,0 +1,14 @@
+0057e6b0  MOV EAX,[0x0091cf90]
+0057e6b5  TEST EAX,EAX
+0057e6b7  JZ 0x0057e6dc
+0057e6b9  MOV ECX,dword ptr [0x008f41c0]
+0057e6bf  TEST ECX,ECX
+0057e6c1  JZ 0x0057e6d5
+0057e6c3  MOV EAX,dword ptr [EAX + 0x10]
+0057e6c6  MOV byte ptr [EAX + 0x3b],0x1
+0057e6ca  MOV ECX,dword ptr [0x0091cadc]
+0057e6d0  JMP 0x00525a00
+0057e6d5  MOV ECX,dword ptr [EAX + 0x10]
+0057e6d8  MOV byte ptr [ECX + 0x3b],0x0
+0057e6dc  MOV ECX,dword ptr [0x0091cadc]
+0057e6e2  JMP 0x00525a00

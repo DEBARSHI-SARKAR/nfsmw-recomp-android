@@ -1,0 +1,5 @@
+006cc830  MOV CX,word ptr [ESP + 0x4]
+006cc835  XOR EAX,EAX
+006cc837  CMP CX,word ptr [ESP + 0x8]
+006cc83c  SETG AL
+006cc83f  RET 0x8

@@ -1,0 +1,15 @@
+007faaee  PUSH EBP
+007faaef  MOV EBP,ESP
+007faaf1  XOR EAX,EAX
+007faaf3  MOV ECX,dword ptr [EAX + 0x8c2948]
+007faaf9  CMP ECX,dword ptr [EBP + 0x8]
+007faafc  JZ 0x007fab0a
+007faafe  ADD EAX,0x4
+007fab01  CMP EAX,0xc
+007fab04  JC 0x007faaf3
+007fab06  XOR AL,AL
+007fab08  POP EBP
+007fab09  RET
+007fab0a  MOV AL,0x1
+007fab0c  POP EBP
+007fab0d  RET
