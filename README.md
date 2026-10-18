@@ -41,7 +41,7 @@ cd nfsmw-recomp-android
 
 ### 2. Read the build guide
 
-See **[Build your own copy](build-your-own.md)** for the detailed Android toolchain setup, linking your game installation, building the APK, installing it, and supplying game data.
+See **[Build your own copy](docs/build-your-own.md)** for the detailed Android toolchain setup, linking your game installation, building the APK, installing it, and supplying game data.
 
 The build guide currently documents an ARM64 Android debug APK workflow. Check the repository's scripts and platform documentation for the latest supported host targets and requirements.
 
