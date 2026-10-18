@@ -53,7 +53,7 @@ Do not upload your game files, executable, audio, videos, or other copyrighted g
 
 ## Build and test
 
-The full commands and prerequisites are documented in [build-your-own.md](build-your-own.md) and [testing.md](testing.md).
+The full commands and prerequisites are documented in [build-your-own.md](docs/build-your-own.md) and [testing.md](docs/testing.md).
 
 Common checks include:
 
@@ -68,10 +68,10 @@ tools/test.py
 tools/build.py --stub
 ```
 
-These commands require the relevant Python dependencies and project toolchain. Some native, graphics, gameplay, and integration tests have additional platform or game-data requirements; a command completing is not proof that every gameplay feature works. See [Testing](testing.md) for the exact prerequisites and limitations.
+These commands require the relevant Python dependencies and project toolchain. Some native, graphics, gameplay, and integration tests have additional platform or game-data requirements; a command completing is not proof that every gameplay feature works. See [Testing](docs/testing.md) for the exact prerequisites and limitations.
 
 ## Technical notes
 
-- [Port analysis](analysis.md) documents the executable, imported Windows APIs, graphics requirements, and recorded bring-up findings.
-- [Build your own copy](build-your-own.md) describes the Android build and install flow.
-- [Testing](testing.md) lists automated checks and manual bring-up verification.
+- [Port analysis](docs/analysis.md) documents the executable.
+- [Build your own copy](docs/build-your-own.md) describes the Android build flow.
+- [Testing](docs/testing.md) lists automated checks and manual bring-up verification.
