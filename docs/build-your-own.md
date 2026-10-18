@@ -18,21 +18,13 @@ It does **not** contain the game. Game data goes onto the phone separately
 ## 1. Get the code
 
 ```sh
-git clone --recurse-submodules https://github.com/veritr1x/nfsmw-recomp
-cd nfsmw-recomp
-```
-
-`--recurse-submodules` matters: the runtime and translator live in the `kit/`
-submodule (`recomp-kit`). If you cloned without it:
-
-```sh
-git submodule update --init
+git clone fixxx
+cd fixxxx
 ```
 
 ## 2. Install the toolchain
 
-You need about 10 GB of disk and one of: Linux (tested), macOS (tested), or
-Windows with WSL2. ARM64 phones are cross-compiled from any of these.
+ ARM64 only compiled.
 
 | Tool | Version | Notes |
 | --- | --- | --- |
@@ -143,11 +135,3 @@ mod loader needs it), and that your game folder really contains `speed.exe`.
 | "Game data not found" in-app | files landed a folder too deep (`speed.exe` must be directly under `game/.../speed.exe`) |
 | Black race world | the core mod did not load: `files/symbols.json` missing |
 | device offline in adb | re-plug; on some phones, enable "File transfer" mode |
-
-## Legal notes
-
-- The code here (kit + this repo) is this project's own; the game itself is not
-  included and is not distributed by anyone here.
-- You must own the game. The build refuses a mismatched `speed.exe`.
-- Don't upload your `original/`, `analysis/`, or `build/` folders anywhere —
-  the first two hold EA data or EA-derived data; the third is machine output.
