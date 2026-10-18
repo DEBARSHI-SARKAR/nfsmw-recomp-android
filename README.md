@@ -22,7 +22,7 @@ This is an active work in progress. The host and recompiled code have progressed
 | --- | --- |
 | `analysis/` | speed.exe analysis decomp |
 | `docs/` | Project documentation |
-| `kit/` | Recompilation runtime, host/platform code, and build/test infrastructure |
+| `kit/` | Recompilation runtime |
 | `mods/` | Game-specific mod/configuration resources |
 | `native/` | Native integration and project-specific code |
 | `tests/` | Tests for the game configuration and project integration |
